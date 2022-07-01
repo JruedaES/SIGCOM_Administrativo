@@ -27,7 +27,7 @@ object FViatico: TFViatico
     Align = alBottom
     TabOrder = 0
     object sbImprimir: TSpeedButton
-      Left = 16
+      Left = 248
       Top = 3
       Width = 75
       Height = 25
@@ -183,8 +183,8 @@ object FViatico: TFViatico
     end
     object sbFechaInicio: TSpeedButton
       Tag = 9
-      Left = 221
-      Top = 149
+      Left = 229
+      Top = 77
       Width = 22
       Height = 21
       Glyph.Data = {
@@ -249,8 +249,8 @@ object FViatico: TFViatico
       OnClick = sbBuscarCIGClick
     end
     object SpeedButton7: TSpeedButton
-      Left = 392
-      Top = 100
+      Left = 424
+      Top = 68
       Width = 23
       Height = 20
       Hint = 'Buscar CIG en Cartografía'
@@ -716,8 +716,8 @@ object FViatico: TFViatico
       'AND CODIGOEMPLEADO=:CODIGOEMPLEADO'
       'AND TIPOVIATICO='#39'V'#39)
     UpdateObject = updViatico
-    Left = 329
-    Top = 165
+    Left = 417
+    Top = 101
     ParamData = <
       item
         DataType = ftFloat
