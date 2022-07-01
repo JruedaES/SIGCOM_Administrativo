@@ -1,0 +1,348 @@
+object fTurnoGrupo: TfTurnoGrupo
+  Left = 323
+  Top = 180
+  BorderStyle = bsToolWindow
+  Caption = 'Turnos'
+  ClientHeight = 181
+  ClientWidth = 324
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 138
+    Width = 324
+    Height = 43
+    Align = alBottom
+    TabOrder = 0
+    object Panel3: TPanel
+      Left = 120
+      Top = 1
+      Width = 203
+      Height = 41
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 0
+      object bbCancelar: TBitBtn
+        Left = 122
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = '&Cancelar'
+        TabOrder = 0
+        OnClick = bbCancelarClick
+        Kind = bkCancel
+      end
+      object bbAceptar: TBitBtn
+        Left = 37
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = '&Aceptar'
+        ModalResult = 1
+        TabOrder = 1
+        OnClick = bbAceptarClick
+        Glyph.Data = {
+          DE010000424DDE01000000000000760000002800000024000000120000000100
+          0400000000006801000000000000000000001000000010000000000000000000
+          80000080000000808000800000008000800080800000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333333333333333333333330000333333333333333333333333F33333333333
+          00003333344333333333333333388F3333333333000033334224333333333333
+          338338F3333333330000333422224333333333333833338F3333333300003342
+          222224333333333383333338F3333333000034222A22224333333338F338F333
+          8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+          33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+          0000333333333A222433333333333338F338F33300003333333333A222433333
+          333333338F338F33000033333333333A222433333333333338F338F300003333
+          33333333A222433333333333338F338F00003333333333333A22433333333333
+          3338F38F000033333333333333A223333333333333338F830000333333333333
+          333A333333333333333338330000333333333333333333333333333333333333
+          0000}
+        NumGlyphs = 2
+      end
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 0
+    Width = 324
+    Height = 138
+    Align = alClient
+    TabOrder = 1
+    object PageControl1: TPageControl
+      Left = 1
+      Top = 1
+      Width = 322
+      Height = 136
+      ActivePage = TabSheet1
+      Align = alClient
+      TabOrder = 0
+      object TabSheet1: TTabSheet
+        Caption = 'Turnos'
+        object Label1: TLabel
+          Left = 4
+          Top = 19
+          Width = 64
+          Height = 13
+          Caption = 'Código Turno'
+          FocusControl = DBEdit1
+        end
+        object Label2: TLabel
+          Left = 139
+          Top = 19
+          Width = 37
+          Height = 13
+          Caption = 'Nombre'
+          FocusControl = DBEdit2
+        end
+        object Label3: TLabel
+          Left = 4
+          Top = 64
+          Width = 90
+          Height = 13
+          Caption = 'Horario de Trabajo'
+          FocusControl = DBLookupComboBox1
+        end
+        object DBEdit1: TDBEdit
+          Left = 96
+          Top = 17
+          Width = 32
+          Height = 21
+          Color = clSilver
+          DataField = 'CODIGOTURNOGRUPO'
+          DataSource = dsTurno
+          ReadOnly = True
+          TabOrder = 0
+          OnKeyPress = FormKeyPress
+        end
+        object DBEdit2: TDBEdit
+          Left = 185
+          Top = 17
+          Width = 110
+          Height = 21
+          DataField = 'NOMBRETURNO'
+          DataSource = dsTurno
+          TabOrder = 1
+          OnKeyPress = FormKeyPress
+        end
+        object DBLookupComboBox1: TDBLookupComboBox
+          Left = 96
+          Top = 60
+          Width = 201
+          Height = 21
+          DataField = 'NOMBREHORARIOTRABAJO'
+          DataSource = dsTurno
+          TabOrder = 2
+          OnKeyPress = FormKeyPress
+        end
+      end
+      object TabSheet2: TTabSheet
+        Caption = 'Detalle Turno'
+        ImageIndex = 1
+        object RxDBGrid1: TRxDBGrid
+          Left = 0
+          Top = 0
+          Width = 314
+          Height = 79
+          Align = alTop
+          DataSource = DataSource1
+          TabOrder = 0
+          TitleFont.Charset = ANSI_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'Tahoma'
+          TitleFont.Style = []
+          OnDblClick = RxDBGrid1DblClick
+          Columns = <
+            item
+              Color = clAqua
+              Expanded = False
+              FieldName = 'JORNADA'
+              Title.Alignment = taCenter
+              Title.Caption = 'Jornada'
+              Width = 55
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'HORAINICIO'
+              Title.Alignment = taCenter
+              Title.Caption = 'Hora Inicio'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'HORAFIN'
+              Title.Alignment = taCenter
+              Title.Caption = 'Hora Fin'
+              Visible = True
+            end>
+        end
+        object DBNavigator1: TDBNavigator
+          Left = 1
+          Top = 82
+          Width = 180
+          Height = 20
+          DataSource = DataSource1
+          VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+          TabOrder = 1
+        end
+      end
+    end
+  end
+  object qTurno: TQuery
+    CachedUpdates = True
+    AfterInsert = qTurnoAfterInsert
+    OnUpdateError = qTurnoUpdateError
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM TURNOGRUPO'
+      'WHERE CODIGOTURNOGRUPO=:CODIGOTURNOGRUPO')
+    UpdateObject = UpdSQLTurno
+    Left = 101
+    Top = 185
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOTURNOGRUPO'
+        ParamType = ptUnknown
+      end>
+    object qTurnoCODIGOTURNOGRUPO: TFloatField
+      FieldName = 'CODIGOTURNOGRUPO'
+      Origin = 'TURNOGRUPO.CODIGOTURNOGRUPO'
+    end
+    object qTurnoCODIGOHORARIOTRABAJO: TFloatField
+      FieldName = 'CODIGOHORARIOTRABAJO'
+      Origin = 'TURNOGRUPO.CODIGOHORARIOTRABAJO'
+    end
+    object qTurnoNOMBREHORARIOTRABAJO: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NOMBREHORARIOTRABAJO'
+      LookupDataSet = qHorarioTrabajo
+      LookupKeyFields = 'CODIGOHORARIOTRABAJO'
+      LookupResultField = 'NOMBREHORARIOTRABAJO'
+      KeyFields = 'CODIGOHORARIOTRABAJO'
+      Size = 30
+      Lookup = True
+    end
+    object qTurnoNOMBRETURNO: TStringField
+      FieldName = 'NOMBRETURNO'
+      Origin = 'TURNOGRUPO.NOMBRETURNO'
+      Size = 25
+    end
+  end
+  object qHorarioTrabajo: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM HORARIOTRABAJO')
+    Left = 29
+    Top = 185
+  end
+  object dsTurno: TDataSource
+    DataSet = qTurno
+    Left = 173
+    Top = 257
+  end
+  object qDetalleTurno: TQuery
+    CachedUpdates = True
+    AfterInsert = qDetalleTurnoAfterInsert
+    AfterPost = qDetalleTurnoAfterPost
+    AfterDelete = qDetalleTurnoAfterDelete
+    OnUpdateError = qDetalleTurnoUpdateError
+    DatabaseName = 'BaseDato'
+    DataSource = dsTurno
+    SQL.Strings = (
+      'SELECT * FROM DETALLETURNOGRUPO'
+      'WHERE CODIGOTURNOGRUPO=:CODIGOTURNOGRUPO')
+    UpdateObject = UpdSQLDetalleTurno
+    Left = 173
+    Top = 185
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOTURNOGRUPO'
+        ParamType = ptUnknown
+      end>
+    object qDetalleTurnoCODIGOTURNOGRUPO: TFloatField
+      FieldName = 'CODIGOTURNOGRUPO'
+      Origin = 'DETALLETURNOGRUPO.CODIGOTURNOGRUPO'
+    end
+    object qDetalleTurnoJORNADA: TFloatField
+      FieldName = 'JORNADA'
+      Origin = 'DETALLETURNOGRUPO.JORNADA'
+    end
+    object qDetalleTurnoHORAINICIO: TDateTimeField
+      FieldName = 'HORAINICIO'
+      Origin = 'DETALLETURNOGRUPO.HORAINICIO'
+      DisplayFormat = 'hh nn'
+      EditMask = '!90:00;1;_'
+    end
+    object qDetalleTurnoHORAFIN: TDateTimeField
+      FieldName = 'HORAFIN'
+      Origin = 'DETALLETURNOGRUPO.HORAFIN'
+      DisplayFormat = 'hh nn'
+      EditMask = '!90:00;1;_'
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = qDetalleTurno
+    Left = 501
+    Top = 329
+  end
+  object UpdSQLTurno: TUpdateSQL
+    ModifySQL.Strings = (
+      'update TURNOGRUPO'
+      'set'
+      '  CODIGOTURNOGRUPO = :CODIGOTURNOGRUPO,'
+      '  NOMBRETURNO = :NOMBRETURNO,'
+      '  CODIGOHORARIOTRABAJO = :CODIGOHORARIOTRABAJO'
+      'where'
+      '  CODIGOTURNOGRUPO = :OLD_CODIGOTURNOGRUPO')
+    InsertSQL.Strings = (
+      'insert into TURNOGRUPO'
+      '  (CODIGOTURNOGRUPO, NOMBRETURNO, CODIGOHORARIOTRABAJO)'
+      'values'
+      '  (:CODIGOTURNOGRUPO, :NOMBRETURNO, :CODIGOHORARIOTRABAJO)')
+    DeleteSQL.Strings = (
+      'delete from TURNOGRUPO'
+      'where'
+      '  CODIGOTURNOGRUPO = :OLD_CODIGOTURNOGRUPO')
+    Left = 101
+    Top = 257
+  end
+  object UpdSQLDetalleTurno: TUpdateSQL
+    ModifySQL.Strings = (
+      'update DETALLETURNOGRUPO'
+      'set'
+      '  CODIGOTURNOGRUPO = :CODIGOTURNOGRUPO,'
+      '  JORNADA = :JORNADA,'
+      '  HORAINICIO = :HORAINICIO,'
+      '  HORAFIN = :HORAFIN'
+      'where'
+      '  CODIGOTURNOGRUPO = :OLD_CODIGOTURNOGRUPO and'
+      '  JORNADA = :OLD_JORNADA')
+    InsertSQL.Strings = (
+      'insert into DETALLETURNOGRUPO'
+      '  (CODIGOTURNOGRUPO, JORNADA, HORAINICIO, HORAFIN)'
+      'values'
+      '  (:CODIGOTURNOGRUPO, :JORNADA, :HORAINICIO, :HORAFIN)')
+    DeleteSQL.Strings = (
+      'delete from DETALLETURNOGRUPO'
+      'where'
+      '  CODIGOTURNOGRUPO = :OLD_CODIGOTURNOGRUPO and'
+      '  JORNADA = :OLD_JORNADA')
+    Left = 277
+    Top = 185
+  end
+end

@@ -1,0 +1,775 @@
+object fReintegro: TfReintegro
+  Left = 224
+  Top = 108
+  Width = 801
+  Height = 494
+  BorderIcons = [biSystemMenu]
+  Caption = 'Reintegro'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel15: TPanel
+    Left = 0
+    Top = 0
+    Width = 785
+    Height = 455
+    Align = alClient
+    BevelOuter = bvNone
+    Caption = 'Panel15'
+    TabOrder = 0
+    object Panel16: TPanel
+      Left = 0
+      Top = 0
+      Width = 785
+      Height = 136
+      Align = alTop
+      BevelOuter = bvNone
+      TabOrder = 0
+      object Label15: TLabel
+        Left = 16
+        Top = 118
+        Width = 68
+        Height = 13
+        Caption = 'Total Items:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object lblItems: TLabel
+        Left = 107
+        Top = 118
+        Width = 8
+        Height = 13
+        Alignment = taRightJustify
+        Caption = '0'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object GroupBox15: TGroupBox
+        Left = 0
+        Top = 0
+        Width = 785
+        Height = 114
+        Align = alTop
+        Caption = 'Destino del Reintegro'
+        TabOrder = 0
+        object Label12: TLabel
+          Left = 30
+          Top = 18
+          Width = 25
+          Height = 13
+          Caption = 'Zona'
+        end
+        object Label13: TLabel
+          Left = 398
+          Top = 18
+          Width = 41
+          Height = 13
+          Caption = 'Almacén'
+        end
+        object Label16: TLabel
+          Left = 30
+          Top = 65
+          Width = 40
+          Height = 13
+          Caption = 'Bodega:'
+        end
+        object Label9: TLabel
+          Left = 398
+          Top = 61
+          Width = 54
+          Height = 13
+          Caption = 'Movimiento'
+        end
+        object DBEdit2: TDBEdit
+          Left = 1113
+          Top = 30
+          Width = 23
+          Height = 21
+          DataField = 'CIAS_CIAS'
+          DataSource = dsReintegroMaterial
+          ReadOnly = True
+          TabOrder = 8
+        end
+        object DBEdit1: TDBEdit
+          Left = 1146
+          Top = 30
+          Width = 214
+          Height = 21
+          DataField = 'nombrezona'
+          DataSource = dsReintegroMaterial
+          TabOrder = 9
+        end
+        object dbeAlmacen: TDBEdit
+          Left = 398
+          Top = 34
+          Width = 32
+          Height = 21
+          DataField = 'COD_ALMACEN'
+          DataSource = dsReintegroMaterial
+          TabOrder = 2
+        end
+        object dblcAlmacen: TDBLookupComboBox
+          Left = 438
+          Top = 34
+          Width = 307
+          Height = 21
+          DataField = 'COD_ALMACEN'
+          DataSource = dsReintegroMaterial
+          KeyField = 'COD_ALMACEN'
+          ListField = 'UPPER(ALMACEN_DESCRI)'
+          ListSource = dsAlmacen
+          TabOrder = 3
+        end
+        object dbeBodega: TDBEdit
+          Left = 30
+          Top = 81
+          Width = 32
+          Height = 21
+          DataField = 'COD_BODEGA'
+          DataSource = dsReintegroMaterial
+          TabOrder = 4
+        end
+        object dblcBodega: TDBLookupComboBox
+          Left = 66
+          Top = 81
+          Width = 307
+          Height = 21
+          DataField = 'COD_BODEGA'
+          DataSource = dsReintegroMaterial
+          KeyField = 'COD_BODEGA'
+          ListField = 'UPPER(BODEGA_DESCRI)'
+          ListSource = dsBodega
+          TabOrder = 5
+        end
+        object dbeCIAS: TDBEdit
+          Left = 1112
+          Top = 111
+          Width = 25
+          Height = 21
+          DataField = 'CIAS_CIAS'
+          TabOrder = 10
+          Visible = False
+        end
+        object dblcCIAS: TDBLookupComboBox
+          Left = 1106
+          Top = 79
+          Width = 151
+          Height = 21
+          DataField = 'CIAS_CIAS_INVEN'
+          KeyField = 'CIAS_CIAS'
+          ListField = 'CIAS_DESCRI'
+          TabOrder = 11
+          Visible = False
+        end
+        object DBEdit8: TDBEdit
+          Tag = 1
+          Left = 30
+          Top = 34
+          Width = 32
+          Height = 21
+          DataField = 'CIAS_CIAS'
+          DataSource = dsReintegroMaterial
+          TabOrder = 0
+        end
+        object dblcbNombreZona: TDBLookupComboBox
+          Tag = 2
+          Left = 66
+          Top = 34
+          Width = 307
+          Height = 21
+          DataField = 'CIAS_CIAS'
+          DataSource = dsReintegroMaterial
+          KeyField = 'CIAS_CIAS'
+          ListField = 'CIAS_DESCRI'
+          ListSource = dsCIAS
+          TabOrder = 1
+        end
+        object DBEdit7: TDBEdit
+          Left = 398
+          Top = 81
+          Width = 32
+          Height = 21
+          DataField = 'CODIGOMOVIMIENTOPRESUPUESTO'
+          DataSource = dsReintegroMaterial
+          TabOrder = 6
+        end
+        object dblcMovimiento: TDBLookupComboBox
+          Left = 440
+          Top = 81
+          Width = 307
+          Height = 21
+          DataField = 'CODIGOMOVIMIENTOPRESUPUESTO'
+          DataSource = dsReintegroMaterial
+          KeyField = 'CODIGOMOVIMIENTOPRESUPUESTO'
+          ListField = 'NOMBREMOVIMIENTOPRESUPUESTO'
+          ListSource = dsMovimiento
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 7
+        end
+      end
+    end
+    object Panel23: TPanel
+      Left = 0
+      Top = 422
+      Width = 785
+      Height = 33
+      Align = alBottom
+      TabOrder = 2
+      object bbCancelar: TBitBtn
+        Left = 699
+        Top = 4
+        Width = 75
+        Height = 25
+        Anchors = [akRight, akBottom]
+        Caption = '&Cancelar'
+        ModalResult = 2
+        TabOrder = 1
+        Glyph.Data = {
+          DE010000424DDE01000000000000760000002800000024000000120000000100
+          0400000000006801000000000000000000001000000010000000000000000000
+          80000080000000808000800000008000800080800000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          333333333333333333333333000033338833333333333333333F333333333333
+          0000333911833333983333333388F333333F3333000033391118333911833333
+          38F38F333F88F33300003339111183911118333338F338F3F8338F3300003333
+          911118111118333338F3338F833338F3000033333911111111833333338F3338
+          3333F8330000333333911111183333333338F333333F83330000333333311111
+          8333333333338F3333383333000033333339111183333333333338F333833333
+          00003333339111118333333333333833338F3333000033333911181118333333
+          33338333338F333300003333911183911183333333383338F338F33300003333
+          9118333911183333338F33838F338F33000033333913333391113333338FF833
+          38F338F300003333333333333919333333388333338FFF830000333333333333
+          3333333333333333333888330000333333333333333333333333333333333333
+          0000}
+        NumGlyphs = 2
+      end
+      object bbAceptar: TBitBtn
+        Left = 614
+        Top = 5
+        Width = 75
+        Height = 25
+        Anchors = [akRight, akBottom]
+        Caption = '&Aceptar'
+        ModalResult = 1
+        TabOrder = 0
+        Glyph.Data = {
+          DE010000424DDE01000000000000760000002800000024000000120000000100
+          0400000000006801000000000000000000001000000010000000000000000000
+          80000080000000808000800000008000800080800000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333333333333333333333330000333333333333333333333333F33333333333
+          00003333344333333333333333388F3333333333000033334224333333333333
+          338338F3333333330000333422224333333333333833338F3333333300003342
+          222224333333333383333338F3333333000034222A22224333333338F338F333
+          8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+          33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+          0000333333333A222433333333333338F338F33300003333333333A222433333
+          333333338F338F33000033333333333A222433333333333338F338F300003333
+          33333333A222433333333333338F338F00003333333333333A22433333333333
+          3338F38F000033333333333333A223333333333333338F830000333333333333
+          333A333333333333333338330000333333333333333333333333333333333333
+          0000}
+        NumGlyphs = 2
+      end
+    end
+    object Panel1: TPanel
+      Left = 0
+      Top = 136
+      Width = 785
+      Height = 286
+      Align = alClient
+      BevelOuter = bvNone
+      TabOrder = 1
+      object Panel2: TPanel
+        Left = 0
+        Top = 263
+        Width = 785
+        Height = 23
+        Align = alBottom
+        BevelOuter = bvNone
+        TabOrder = 0
+        object DBNavigator2: TDBNavigator
+          Left = 0
+          Top = 0
+          Width = 785
+          Height = 23
+          DataSource = dsReintegroMaterialDetalle
+          VisibleButtons = [nbPrior, nbNext, nbInsert, nbDelete, nbEdit, nbCancel]
+          Align = alClient
+          Hints.Strings = (
+            'Primero'
+            'Anterior'
+            'Siguiente'
+            'Ultimo'
+            'Insertar'
+            'Eliminar'
+            'Editar'
+            'Aplicar'
+            'Cancelar'
+            'Refrescar')
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 0
+        end
+      end
+      object dbgMateriales: TDBGrid
+        Left = 0
+        Top = 0
+        Width = 785
+        Height = 263
+        Align = alClient
+        DataSource = dsReintegroMaterialDetalle
+        TabOrder = 1
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+        OnEditButtonClick = dbgMaterialesEditButtonClick
+        Columns = <
+          item
+            ButtonStyle = cbsEllipsis
+            Expanded = False
+            FieldName = 'CODIGOMATERIAL'
+            Title.Caption = 'Cod Material'
+            Width = 74
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NOMBREMATERIAL'
+            Title.Caption = 'Nombre Material'
+            Width = 384
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CANTIDADNUEVAB'
+            Title.Caption = 'Nueva Buena'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CANTIDADNUEVAM'
+            Title.Caption = 'Nueva Mala'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CANTIDADDESMANB'
+            Title.Caption = 'Desman. Buena'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CANTIDADDESMANM'
+            Title.Caption = 'Desman. Mala'
+            Visible = True
+          end>
+      end
+    end
+  end
+  object qReintegroMaterialDetalle: TQuery
+    CachedUpdates = True
+    AfterOpen = qReintegroMaterialDetalleAfterOpen
+    BeforeEdit = qReintegroMaterialDetalleBeforeEdit
+    AfterPost = qReintegroMaterialDetalleAfterPost
+    AfterDelete = qReintegroMaterialDetalleAfterDelete
+    AfterScroll = qReintegroMaterialDetalleAfterScroll
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'select R.CODIGOREINTEGRO,  R.codigomaterial, R.CANTIDADNUEVAB, R' +
+        '.CANTIDADNUEVAM, R.CANTIDADDESMANB , R.CANTIDADDESMANM, m.nombre' +
+        'material  '
+      'from ODTREINTEGRODETALLE R,MATERIALESSA m'
+      'where R.codigomaterial = m.codigomaterial'
+      'and CODIGOREINTEGRO = :CODIGOREINTEGRO'
+      '')
+    UpdateObject = UpdReintegroMaterialDetalle
+    Left = 552
+    Top = 246
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOREINTEGRO'
+        ParamType = ptUnknown
+      end>
+    object qReintegroMaterialDetalleCODIGOREINTEGRO: TFloatField
+      FieldName = 'CODIGOREINTEGRO'
+      Origin = 'ODTREINTEGRODETALLE.CODIGOREINTEGRO'
+    end
+    object qReintegroMaterialDetalleCODIGOMATERIAL: TFloatField
+      FieldName = 'CODIGOMATERIAL'
+      Origin = 'ODTREINTEGRODETALLE.CODIGOMATERIAL'
+      OnValidate = qReintegroMaterialDetalleCODIGOMATERIALValidate
+    end
+    object qReintegroMaterialDetalleCANTIDADNUEVAB: TFloatField
+      FieldName = 'CANTIDADNUEVAB'
+      Origin = 'ODTREINTEGRODETALLE.CANTIDADNUEVAB'
+      OnValidate = qReintegroMaterialDetalleCANTIDADNUEVABValidate
+    end
+    object qReintegroMaterialDetalleCANTIDADNUEVAM: TFloatField
+      FieldName = 'CANTIDADNUEVAM'
+      Origin = 'ODTREINTEGRODETALLE.CANTIDADNUEVAM'
+      OnValidate = qReintegroMaterialDetalleCANTIDADNUEVAMValidate
+    end
+    object qReintegroMaterialDetalleCANTIDADDESMANB: TFloatField
+      FieldName = 'CANTIDADDESMANB'
+      Origin = 'ODTREINTEGRODETALLE.CANTIDADDESMANB'
+      OnValidate = qReintegroMaterialDetalleCANTIDADDESMANBValidate
+    end
+    object qReintegroMaterialDetalleCANTIDADDESMANM: TFloatField
+      FieldName = 'CANTIDADDESMANM'
+      Origin = 'ODTREINTEGRODETALLE.CANTIDADDESMANM'
+      OnValidate = qReintegroMaterialDetalleCANTIDADDESMANMValidate
+    end
+    object qReintegroMaterialDetalleNOMBREMATERIAL: TStringField
+      FieldName = 'NOMBREMATERIAL'
+      Origin = 'MATERIALESSA.NOMBREMATERIAL'
+      Size = 100
+    end
+  end
+  object dsReintegroMaterialDetalle: TDataSource
+    DataSet = qReintegroMaterialDetalle
+    Left = 544
+    Top = 195
+  end
+  object UpdReintegroMaterialDetalle: TUpdateSQL
+    ModifySQL.Strings = (
+      'update ODTREINTEGRODETALLE'
+      'set'
+      '  CODIGOREINTEGRO = :CODIGOREINTEGRO,'
+      '  CODIGOMATERIAL = :CODIGOMATERIAL,'
+      '  CANTIDADNUEVAB = :CANTIDADNUEVAB,'
+      '  CANTIDADNUEVAM = :CANTIDADNUEVAM,'
+      '  CANTIDADDESMANB = :CANTIDADDESMANB,'
+      '  CANTIDADDESMANM = :CANTIDADDESMANM'
+      'where'
+      '  CODIGOREINTEGRO = :OLD_CODIGOREINTEGRO and'
+      '  CODIGOMATERIAL = :OLD_CODIGOMATERIAL')
+    InsertSQL.Strings = (
+      'insert into ODTREINTEGRODETALLE'
+      
+        '  (CODIGOREINTEGRO, CODIGOMATERIAL, CANTIDADNUEVAB, CANTIDADNUEV' +
+        'AM, CANTIDADDESMANB, '
+      '   CANTIDADDESMANM)'
+      'values'
+      
+        '  (:CODIGOREINTEGRO, :CODIGOMATERIAL, :CANTIDADNUEVAB, :CANTIDAD' +
+        'NUEVAM, '
+      '   :CANTIDADDESMANB, :CANTIDADDESMANM)')
+    DeleteSQL.Strings = (
+      'delete from ODTREINTEGRODETALLE'
+      'where'
+      '  CODIGOREINTEGRO = :OLD_CODIGOREINTEGRO and'
+      '  CODIGOMATERIAL = :OLD_CODIGOMATERIAL')
+    Left = 538
+    Top = 143
+  end
+  object updReintegroMaterial: TUpdateSQL
+    ModifySQL.Strings = (
+      'update ODTREINTEGRO'
+      'set'
+      '  CODIGOODT = :CODIGOODT,'
+      '  CONSECUTIVO = :CONSECUTIVO,'
+      '  CIAS_CIAS = :CIAS_CIAS,'
+      '  COD_ALMACEN = :COD_ALMACEN,'
+      '  COD_BODEGA = :COD_BODEGA,'
+      '  CODIGOREINTEGRO = :CODIGOREINTEGRO,'
+      '  ESTADO = :ESTADO,'
+      '  FECHAREINTEGRO = :FECHAREINTEGRO,'
+      '  CODIGOMOVIMIENTOPRESUPUESTO = :CODIGOMOVIMIENTOPRESUPUESTO'
+      'where'
+      '  CODIGOREINTEGRO = :OLD_CODIGOREINTEGRO')
+    InsertSQL.Strings = (
+      'insert into ODTREINTEGRO'
+      
+        '  (CODIGOODT, CONSECUTIVO, CIAS_CIAS, COD_ALMACEN, COD_BODEGA, C' +
+        'ODIGOREINTEGRO, '
+      '   ESTADO, FECHAREINTEGRO, CODIGOMOVIMIENTOPRESUPUESTO)'
+      'values'
+      
+        '  (:CODIGOODT, :CONSECUTIVO, :CIAS_CIAS, :COD_ALMACEN, :COD_BODE' +
+        'GA, :CODIGOREINTEGRO, '
+      '   :ESTADO, :FECHAREINTEGRO, :CODIGOMOVIMIENTOPRESUPUESTO)')
+    DeleteSQL.Strings = (
+      'delete from ODTREINTEGRO'
+      'where'
+      '  CODIGOREINTEGRO = :OLD_CODIGOREINTEGRO')
+    Left = 714
+    Top = 183
+  end
+  object dsReintegroMaterial: TDataSource
+    DataSet = qReintegroMaterial
+    Left = 720
+    Top = 235
+  end
+  object qReintegroMaterial: TQuery
+    CachedUpdates = True
+    AfterInsert = qReintegroMaterialAfterInsert
+    AfterEdit = qReintegroMaterialAfterEdit
+    AfterPost = qReintegroMaterialAfterPost
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM ODTREINTEGRO'
+      'WHERE CODIGOREINTEGRO = :CODIGOREINTEGRO')
+    UpdateObject = updReintegroMaterial
+    Left = 712
+    Top = 134
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOREINTEGRO'
+        ParamType = ptUnknown
+      end>
+    object qReintegroMaterialCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'ODTREINTEGRO.CODIGOODT'
+    end
+    object qReintegroMaterialCONSECUTIVO: TFloatField
+      FieldName = 'CONSECUTIVO'
+      Origin = 'ODTREINTEGRO.CONSECUTIVO'
+    end
+    object qReintegroMaterialCIAS_CIAS: TFloatField
+      FieldName = 'CIAS_CIAS'
+      Origin = 'ODTREINTEGRO.CIAS_CIAS'
+    end
+    object qReintegroMaterialCOD_ALMACEN: TStringField
+      FieldName = 'COD_ALMACEN'
+      Origin = 'ODTREINTEGRO.COD_ALMACEN'
+      OnChange = qReintegroMaterialCOD_ALMACENChange
+      OnSetText = qReintegroMaterialCOD_ALMACENSetText
+      Size = 5
+    end
+    object qReintegroMaterialCOD_BODEGA: TStringField
+      FieldName = 'COD_BODEGA'
+      Origin = 'ODTREINTEGRO.COD_BODEGA'
+      OnChange = qReintegroMaterialCOD_ALMACENChange
+      OnSetText = qReintegroMaterialCOD_BODEGASetText
+      Size = 5
+    end
+    object qReintegroMaterialCODIGOREINTEGRO: TFloatField
+      FieldName = 'CODIGOREINTEGRO'
+      Origin = 'ODTREINTEGRO.CODIGOREINTEGRO'
+    end
+    object qReintegroMaterialESTADO: TStringField
+      FieldName = 'ESTADO'
+      Origin = 'ODTREINTEGRO.ESTADO'
+      Size = 1
+    end
+    object qReintegroMaterialnombrezona: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nombrezona'
+      LookupDataSet = qCIAS
+      LookupKeyFields = 'CIAS_CIAS'
+      LookupResultField = 'CIAS_DESCRI'
+      KeyFields = 'CIAS_CIAS'
+      Size = 40
+      Lookup = True
+    end
+    object qReintegroMaterialFECHAREINTEGRO: TDateTimeField
+      FieldName = 'FECHAREINTEGRO'
+      Origin = 'ODTREINTEGRO.FECHAREINTEGRO'
+    end
+    object qReintegroMaterialCODIGOMOVIMIENTOPRESUPUESTO: TStringField
+      FieldName = 'CODIGOMOVIMIENTOPRESUPUESTO'
+      Origin = 'ODTREINTEGRO.CODIGOMOVIMIENTOPRESUPUESTO'
+      Size = 30
+    end
+  end
+  object qReintegroMaterialdetalleInicial: TQuery
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'select R.CODIGOREINTEGRO,  R.codigomaterial, R.CANTIDADNUEVAB, R' +
+        '.CANTIDADNUEVAM, R.CANTIDADDESMANB , R.CANTIDADDESMANM, m.nombre' +
+        'material  '
+      'from ODTREINTEGRODETALLE R,MATERIALESSA m'
+      'where R.codigomaterial = m.codigomaterial'
+      'and CODIGOREINTEGRO = :CODIGOREINTEGRO')
+    Left = 392
+    Top = 190
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOREINTEGRO'
+        ParamType = ptUnknown
+      end>
+    object qReintegroMaterialdetalleInicialCODIGOREINTEGRO: TFloatField
+      FieldName = 'CODIGOREINTEGRO'
+      Origin = 'ODTREINTEGRODETALLE.CODIGOREINTEGRO'
+    end
+    object qReintegroMaterialdetalleInicialCODIGOMATERIAL: TFloatField
+      FieldName = 'CODIGOMATERIAL'
+      Origin = 'ODTREINTEGRODETALLE.CODIGOMATERIAL'
+    end
+    object qReintegroMaterialdetalleInicialCANTIDADNUEVAB: TFloatField
+      FieldName = 'CANTIDADNUEVAB'
+      Origin = 'ODTREINTEGRODETALLE.CANTIDADNUEVAB'
+    end
+    object qReintegroMaterialdetalleInicialCANTIDADNUEVAM: TFloatField
+      FieldName = 'CANTIDADNUEVAM'
+      Origin = 'ODTREINTEGRODETALLE.CANTIDADNUEVAM'
+    end
+    object qReintegroMaterialdetalleInicialCANTIDADDESMANB: TFloatField
+      FieldName = 'CANTIDADDESMANB'
+      Origin = 'ODTREINTEGRODETALLE.CANTIDADDESMANB'
+    end
+    object qReintegroMaterialdetalleInicialCANTIDADDESMANM: TFloatField
+      FieldName = 'CANTIDADDESMANM'
+      Origin = 'ODTREINTEGRODETALLE.CANTIDADDESMANM'
+    end
+    object qReintegroMaterialdetalleInicialNOMBREMATERIAL: TStringField
+      FieldName = 'NOMBREMATERIAL'
+      Origin = 'MATERIALESSA.NOMBREMATERIAL'
+      Size = 100
+    end
+  end
+  object dsBodega: TDataSource
+    DataSet = qBodega
+    Left = 223
+    Top = 253
+  end
+  object qBodega: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsAlmacen
+    SQL.Strings = (
+      
+        'SELECT COD_BODEGA, UPPER(BODEGA_DESCRI) FROM INV_S_BODEGA WHERE ' +
+        'CIAS_CIAS = :CIAS_CIAS '
+      'AND COD_ALMACEN = :COD_ALMACEN AND ESTADO = '#39'ACTIVO'#39
+      'ORDER BY BODEGA_DESCRI')
+    Left = 223
+    Top = 301
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CIAS_CIAS'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'COD_ALMACEN'
+        ParamType = ptUnknown
+      end>
+    object qBodegaCOD_BODEGA: TStringField
+      FieldName = 'COD_BODEGA'
+      Size = 5
+    end
+    object qBodegaUPPERBODEGA_DESCRI: TStringField
+      FieldName = 'UPPER(BODEGA_DESCRI)'
+      Size = 60
+    end
+  end
+  object dsAlmacen: TDataSource
+    DataSet = qAlmacen
+    Left = 161
+    Top = 253
+  end
+  object qAlmacen: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsCIAS
+    SQL.Strings = (
+      'SELECT COD_ALMACEN, UPPER(ALMACEN_DESCRI) ,CIAS_CIAS'
+      'FROM INV_S_ALMACEN'
+      'WHERE CIAS_CIAS = :CIAS_CIAS'
+      'AND ESTADO = '#39'ACTIVO'#39
+      'ORDER BY ALMACEN_DESCRI')
+    Left = 161
+    Top = 301
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CIAS_CIAS'
+        ParamType = ptUnknown
+      end>
+    object qAlmacenCOD_ALMACEN: TStringField
+      FieldName = 'COD_ALMACEN'
+      Origin = 'INV_S_ALMACEN.COD_ALMACEN'
+      Size = 5
+    end
+    object qAlmacenUPPERALMACEN_DESCRI: TStringField
+      FieldName = 'UPPER(ALMACEN_DESCRI)'
+      Origin = 'INV_S_ALMACEN.ALMACEN_DESCRI'
+      Size = 60
+    end
+    object qAlmacenCIAS_CIAS: TFloatField
+      FieldName = 'CIAS_CIAS'
+      Origin = 'INV_S_ALMACEN.CIAS_CIAS'
+    end
+  end
+  object dsCIAS: TDataSource
+    DataSet = qCIAS
+    Left = 103
+    Top = 253
+  end
+  object qCIAS: TQuery
+    AfterOpen = qCIASAfterOpen
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CIAS_CIAS, CIAS_DESCRI'
+      'FROM GE_TCIAS'
+      'WHERE CIAS_CIAS= :CIAS_CIAS')
+    Left = 103
+    Top = 301
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CIAS_CIAS'
+        ParamType = ptUnknown
+      end>
+    object qCIASCIAS_CIAS: TFloatField
+      FieldName = 'CIAS_CIAS'
+      Origin = 'GE_TCIAS.CIAS_CIAS'
+    end
+    object qCIASCIAS_DESCRI: TStringField
+      FieldName = 'CIAS_DESCRI'
+      Origin = 'GE_TCIAS.CIAS_DESCRI'
+      Size = 40
+    end
+  end
+  object dsMovimiento: TDataSource
+    DataSet = qMovimiento
+    Left = 896
+    Top = 144
+  end
+  object qMovimiento: TQuery
+    DatabaseName = 'basedato'
+    SQL.Strings = (
+      
+        'SELECT CODIGOMOVIMIENTOPRESUPUESTO,  NOMBREMOVIMIENTOPRESUPUESTO' +
+        ' FROM MOVIMIENTOPRESUPUESTO'
+      'ORDER BY 2')
+    Left = 896
+    Top = 200
+    object qMovimientoNOMBREMOVIMIENTOPRESUPUESTO: TStringField
+      FieldName = 'NOMBREMOVIMIENTOPRESUPUESTO'
+      Origin = 'MOVIMIENTOPRESUPUESTO.NOMBREMOVIMIENTOPRESUPUESTO'
+      Size = 50
+    end
+    object qMovimientoCODIGOMOVIMIENTOPRESUPUESTO: TStringField
+      FieldName = 'CODIGOMOVIMIENTOPRESUPUESTO'
+      Origin = 'MOVIMIENTOPRESUPUESTO.CODIGOMOVIMIENTOPRESUPUESTO'
+      Size = 30
+    end
+  end
+end

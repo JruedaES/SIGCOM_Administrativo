@@ -1,0 +1,329 @@
+object fListadoRespuestas: TfListadoRespuestas
+  Left = 195
+  Top = 120
+  Width = 1034
+  Height = 525
+  Caption = 'Listado de Respuestas de Consultas'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1018
+    Height = 486
+    Align = alClient
+    Caption = 'panel 1'
+    TabOrder = 0
+    object Panel2: TPanel
+      Left = 1
+      Top = 1
+      Width = 1016
+      Height = 25
+      Align = alTop
+      BevelOuter = bvNone
+      TabOrder = 0
+      object DBText1: TDBText
+        Left = 0
+        Top = 0
+        Width = 960
+        Height = 25
+        Align = alClient
+        Alignment = taCenter
+        DataField = 'CONSULTA'
+        DataSource = dsListadoGeneral
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+        WordWrap = True
+      end
+      object Panel3: TPanel
+        Left = 960
+        Top = 0
+        Width = 56
+        Height = 25
+        Align = alRight
+        Caption = 'Panel2'
+        TabOrder = 0
+        object ToolBar1: TToolBar
+          Left = 1
+          Top = 1
+          Width = 54
+          Height = 24
+          ButtonHeight = 23
+          ButtonWidth = 25
+          Caption = 'ToolBar1'
+          EdgeBorders = []
+          EdgeInner = esNone
+          EdgeOuter = esNone
+          Images = ilGeneral
+          List = True
+          TabOrder = 0
+          object tbFotografias: TToolButton
+            Left = 0
+            Top = 2
+            Hint = 'Visualizar Fotografias de la consulta seleccionada'
+            Caption = 'tbFotografias'
+            ImageIndex = 0
+            ParentShowHint = False
+            ShowHint = True
+            Style = tbsCheck
+            OnClick = tbFotografiasClick
+          end
+          object ToolButton1: TToolButton
+            Left = 25
+            Top = 2
+            Hint = 'Buscar por código de cuenta'
+            Caption = 'ToolButton1'
+            ImageIndex = 1
+            ParentShowHint = False
+            ShowHint = True
+            OnClick = ToolButton1Click
+          end
+        end
+      end
+    end
+    object RxDBGrid1: TRxDBGrid
+      Left = 1
+      Top = 26
+      Width = 734
+      Height = 459
+      Align = alClient
+      DataSource = dsListadoGeneral
+      TabOrder = 1
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      OnTitleClick = RxDBGrid1TitleClick
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'CODIGOCUENTA'
+          Title.Caption = 'Código Cuenta'
+          Width = 93
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'ENCUESTO'
+          Title.Caption = 'Encuestado'
+          Width = 112
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAENCUESTA'
+          Title.Caption = 'Fecha Encuesta'
+          Width = 114
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'RESPUESTA'
+          Title.Caption = 'Respuesta'
+          Width = 379
+          Visible = True
+        end>
+    end
+    object pfotografias: TPanel
+      Left = 735
+      Top = 26
+      Width = 282
+      Height = 459
+      Align = alRight
+      BevelOuter = bvNone
+      Caption = 'Fotos'
+      TabOrder = 2
+      Visible = False
+    end
+  end
+  object ilGeneral: TImageList
+    Left = 600
+    Top = 48
+    Bitmap = {
+      3608000002000000424D36080000000000003600000028000000200000001000
+      0000010020000000000000080000000000000000000000000000000000000000
+      00000000000000000000F0EEEBFFAB9D8DFFA49481FFA69683FFA59583FFA595
+      83FFA59583FFA59583FFA59583FFA59583FFA59683FFA49481FF9D8C79FFB7AB
+      9DFFA59784FFEDEAE8FF00000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000FDFCFCFFF4F2F0FFE3DFDAFFAEA090FFC4B8A7FFCCC0B0FFCCC0B0FFCCC0
+      B0FFCCC0B0FFCCC0B0FFCCC0B0FFCCC0B0FFCEC3B2FFCCC1B1FFA49481FFA597
+      84FFAE9F8CFFA49482FFF1EEEAFF000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000F3F1EFFFB7AB9DFFB1A494FFAC9D8CFFB1A392FFB3A593FFB3A493FFB3A4
+      93FFB3A493FFB3A493FFB3A493FFB0A190FFB0A190FFCEC3B2FFA59683FFEEEC
+      E8FFA69683FFAA9987FFA79685FFF2EFEEFF0000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000000000F0EE
+      EBFFE3DED9FFAEA090FFCEC3B5FFD8CEC1FFD7CDC0FFD7CDC0FFD7CDC0FFD7CD
+      C0FFD7CDC0FFD7CDC0FFDAD1C4FFD7CDC1FFB0A190FFCCC0B0FFA59583FF0000
+      0000F2EFEEFFA89787FFA49380FFA89887FFF5F2F1FF00000000000000000000
+      000000000000000000000000000000000000000000000000000000000000AC9E
+      8EFFB4A899FFAEA091FFB6A99AFFB8AB9CFFB8AB9CFFB8AB9CFFB8AB9CFFB8AB
+      9CFFB8AB9CFFB5A898FFB7AA99FFDAD1C4FFB3A493FFCCC0B0FFA59583FF0000
+      000000000000F3F1EFFFA79889FFA08F7BFFA99988FFF5F3F1FFD5CDC6FFB1A2
+      92FFA0907CFFA0907CFFB2A393FFD5CDC6FFFDFCFCFF0000000000000000A798
+      87FFE5E1DCFFF3F0EDFFF2EFECFFF2EFECFFF2EFECFFF2EFECFFF2EFECFFF2EF
+      ECFFF2EFECFFE3DED9FFB5A898FFD7CDC0FFB3A493FFCCC0B0FFA59583FF0000
+      00000000000000000000F5F4F1FFAC9C8CFF9C8B78FFA2927DFFBAA893FFE5D4
+      BAFFFAE9CDFFFAE9CDFFE5D4BAFFB9A793FFAEA08FFFF5F3F1FF00000000AA9B
+      8AFFEFEDECFFEDF1F7FFE8ECF3FFE9EDF4FFE9EDF4FFE9EDF4FFE9EDF4FFE9ED
+      F4FFEDF0F7FFEDEBE9FFB8AB9CFFD7CDC0FFB3A493FFCCC0B0FFA59583FF0000
+      0000000000000000000000000000F5F3F2FFA3927FFFCDBCA5FFFFEDD1FFFFED
+      D1FFFFEDD1FFFFEDD1FFFFEDD1FFFFEDD1FFCEBEA6FFAEA08FFFFDFCFCFFAB9C
+      8BFFDDDEE2FF7891BBFF617FB2FF6380B3FF6380B3FF6381B3FF627FB0FF5F7B
+      ACFF768FB8FFDADBDFFFBAAC9DFFD7CDC0FFB3A493FFCCC0B0FFA59583FF0000
+      0000000000000000000000000000D5CCC5FFB8A894FFFFEDD1FFFFEDD1FFFFED
+      D1FFFFEDD1FFFFEDD1FFFFEDD1FFFFEDD1FFFFEDD1FFB9A793FFD5CDC6FFAB9C
+      8BFFD9DBDFFF6C8ABDFF618BD4FF638ED9FF638ED9FF618AD2FF5073AEFF5475
+      ADFF6783B3FFD6D8DDFFBAAD9DFFD7CDC0FFB3A493FFCCC0B0FFA59583FF0000
+      0000000000000000000000000000B1A291FFE6D4BBFFFFEDD1FFFFEDD1FFFFED
+      D1FFFFEDD1FFFFEDD1FFFFEDD1FFFFEDD1FFFFEDD1FFE5D4BAFFB1A292FFAB9C
+      8BFFD9DBDFFF6F8DBEFF6B95DDFF6793E1FF6E9AE4FF6286C5FF5B7DB5FF7FA5
+      DFFF6D8ABBFFD6D8DDFFBAAC9DFFD7CDC0FFB3A593FFCCC0B0FFA69683FF0000
+      0000000000000000000000000000A0907CFFFAE9CDFFFFEDD1FFFFEDD1FFFFED
+      D1FFFFEDD1FFFFEDD1FFFFEDD1FFFFEDD1FFFFEDD1FFFAE8CDFFA1907EFFAB9C
+      8BFFD9DBE0FF708DBDFF84ADEBFF7CA6ECFF8CB6F6FF8FB5EEFF95B9EFFF92B9
+      F3FF6D8ABAFFD6D8DDFFBAAC9DFFD7CDC0FFB1A392FFC4B8A7FFA49481FF0000
+      0000000000000000000000000000A18E7DFFFAE9CDFFFFEDD1FFFFEDD1FFFFED
+      D1FFFFEDD1FFFFEDD1FFFFEDD1FFFFEDD1FFFFEDD1FFFAE8CCFFA0907CFFAB9C
+      8BFFD9DBE0FF708DBDFF8FB6F0FF9CC4FFFF9CC5FFFFA5CAFFFFC7DFFFFF98BC
+      F3FF6D8ABAFFD6D8DDFFBAAD9DFFD8CEC1FFAC9D8CFFAEA090FFAB9D8DFF0000
+      0000000000000000000000000000B1A291FFE6D5BBFFFFEDD1FFFFEDD1FFFFED
+      D1FFFFEDD1FFFFEDD1FFFFEDD1FFFFEDD1FFFFEDD1FFE5D4BAFFB1A292FFAB9C
+      8BFFD9DBE0FF6C8ABAFF82A9E3FF8FB6F1FF8EB5F0FF8FB6F0FF95BAF1FF85AB
+      E6FF6A87B8FFD6D8DDFFB8AA9BFFCEC3B5FFB2A595FFE3DFDAFFF0EEEBFF0000
+      0000000000000000000000000000D4CCC4FFBAA994FFFFEDD1FFFFEDD1FFFFED
+      D1FFFFEDD1FFFFEDD1FFFFEDD1FFFFEDD1FFFFEDD1FFBAA893FFD5CDC6FFAB9C
+      8BFFDDDFE2FF7C95BEFF6C8ABAFF708DBDFF708DBDFF708DBDFF6F8DBDFF6D8A
+      BAFF7B93BDFFDBDCE0FFB0A191FFAD9F8FFFB7AB9DFFF3F1EFFF000000000000
+      0000000000000000000000000000FCFCFAFFAE9F8FFFCFBFA8FFFFEDD1FFFFED
+      D1FFFFEDD1FFFFEDD1FFFFEDD1FFFFEDD1FFCEBEA7FFAEA08FFFFCFCFAFFA899
+      88FFE3E0DCFFDEDFE3FFD9DBE0FFD9DBE0FFD9DBE0FFD9DBE0FFD9DBE0FFD9DB
+      E0FFDEDFE3FFE2DEDAFFB4A89AFFE3DED9FFF4F2F0FFFDFCFCFF000000000000
+      000000000000000000000000000000000000F5F3F1FFAE9F8FFFBAA994FFE6D5
+      BBFFFBE9CDFFFBE9CDFFE6D4BBFFBAA893FFAEA08FFFF5F3F1FF000000009E8D
+      7A00A89988FFAB9C8BFFAB9C8BFFAB9C8BFFAB9C8BFFAB9C8BFFAB9C8BFFAB9C
+      8BFFAB9C8BFFA89988FFAC9E8EFFF0EEEBFF0000000000000000000000000000
+      00000000000000000000000000000000000000000000FCFCFAFFD4CCC4FFB0A3
+      92FFA08F7DFFA08F7DFFB0A392FFD5CCC5FFFCFCFAFF0000000000000000424D
+      7E000000000000003E0000002800000020000000100000000100010000000000
+      400000000000000000000000020000000200000000000000FFFFFF00E0001FFF
+      80000FFF800007FF000083FF0000C0030000E0010000F0000000F0000000F000
+      0000F0000000F0000000F0000000F0000001F0000001F8010007FC03}
+  end
+  object qListadoGeneral: TQuery
+    AfterScroll = qListadoGeneralAfterScroll
+    OnCalcFields = qListadoGeneralCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT'
+      '    c.codigoconsulta,'
+      '    codigocuenta,'
+      '    periodo,'
+      '    fechaencuesta,'
+      '    codigoaministrativo,'
+      '    codigogrupotrabajo,'
+      '    encuesto,'
+      '    version_name,'
+      '    version_code,'
+      '    respuesta,'
+      '    c.nombreconsulta'
+      'FROM'
+      '    enc_resultado   e,'
+      '    enc_consulta    c'
+      'WHERE'
+      '    c.codigoconsulta = :codigoconsulta'
+      '    AND periodo = :periodo'
+      '    AND e.codigoconsulta = c.codigoconsulta'
+      ''
+      ''
+      '')
+    Left = 616
+    Top = 120
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'CODIGOCONSULTA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'PERIODO'
+        ParamType = ptUnknown
+      end>
+    object qListadoGeneralCODIGOCONSULTA: TFloatField
+      FieldName = 'CODIGOCONSULTA'
+      Origin = 'ENC_CONSULTA.CODIGOCONSULTA'
+    end
+    object qListadoGeneralCODIGOCUENTA: TFloatField
+      FieldName = 'CODIGOCUENTA'
+      Origin = 'ENC_RESULTADO.CODIGOCUENTA'
+    end
+    object qListadoGeneralPERIODO: TFloatField
+      FieldName = 'PERIODO'
+      Origin = 'ENC_RESULTADO.PERIODO'
+    end
+    object qListadoGeneralFECHAENCUESTA: TDateTimeField
+      FieldName = 'FECHAENCUESTA'
+      Origin = 'ENC_RESULTADO.FECHAENCUESTA'
+    end
+    object qListadoGeneralCODIGOAMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOAMINISTRATIVO'
+      Origin = 'ENC_RESULTADO.CODIGOAMINISTRATIVO'
+    end
+    object qListadoGeneralCODIGOGRUPOTRABAJO: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJO'
+      Origin = 'ENC_RESULTADO.CODIGOGRUPOTRABAJO'
+    end
+    object qListadoGeneralENCUESTO: TStringField
+      FieldName = 'ENCUESTO'
+      Origin = 'ENC_RESULTADO.ENCUESTO'
+      Size = 2
+    end
+    object qListadoGeneralVERSION_NAME: TStringField
+      FieldName = 'VERSION_NAME'
+      Origin = 'ENC_RESULTADO.VERSION_NAME'
+      Size = 100
+    end
+    object qListadoGeneralVERSION_CODE: TStringField
+      FieldName = 'VERSION_CODE'
+      Origin = 'ENC_RESULTADO.VERSION_CODE'
+      Size = 100
+    end
+    object qListadoGeneralRESPUESTA: TStringField
+      FieldName = 'RESPUESTA'
+      Origin = 'ENC_RESULTADO.RESPUESTA'
+      Size = 200
+    end
+    object qListadoGeneralNOMBRECONSULTA: TMemoField
+      FieldName = 'NOMBRECONSULTA'
+      Origin = 'ENC_CONSULTA.NOMBRECONSULTA'
+      BlobType = ftMemo
+      Size = 300
+    end
+    object qListadoGeneralCONSULTA: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'CONSULTA'
+      Size = 200
+      Calculated = True
+    end
+  end
+  object dsListadoGeneral: TDataSource
+    DataSet = qListadoGeneral
+    Left = 552
+    Top = 200
+  end
+end

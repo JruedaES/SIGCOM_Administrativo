@@ -1,0 +1,522 @@
+object fGaleriaPreliminar: TfGaleriaPreliminar
+  Left = 1040
+  Top = 183
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsToolWindow
+  Caption = 'Vista Galeria '
+  ClientHeight = 496
+  ClientWidth = 307
+  Color = clBtnFace
+  DragKind = dkDock
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  Position = poDefault
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ScrollBox1: TScrollBox
+    Left = 0
+    Top = 0
+    Width = 307
+    Height = 496
+    Align = alClient
+    TabOrder = 0
+    object basefoto: TPanel
+      Left = 0
+      Top = 0
+      Width = 303
+      Height = 492
+      Align = alClient
+      Caption = 'basefoto'
+      TabOrder = 0
+      object CoolBar3: TCoolBar
+        Left = 1
+        Top = 1
+        Width = 301
+        Height = 490
+        Align = alNone
+        Bands = <
+          item
+            Break = False
+            Control = Panelfoto
+            ImageIndex = -1
+            MinHeight = 297
+            Text = 'Fotos Lecturas'
+            Width = 486
+          end>
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clTeal
+        Font.Height = -13
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        Vertical = True
+        object Panelfoto: TPanel
+          Left = 0
+          Top = 29
+          Width = 297
+          Height = 457
+          Align = alClient
+          BevelOuter = bvNone
+          Caption = 'Panelfoto'
+          Color = clWhite
+          TabOrder = 0
+          object bi_ScrollBox: Tbi_ScrollBox
+            Left = 0
+            Top = 0
+            Width = 297
+            Height = 438
+            Align = alClient
+            Color = clWhite
+            ParentColor = False
+            TabOrder = 0
+            OnClick = bi_ScrollBoxClick
+            OnMouseMove = bi_ScrollBoxMouseMove
+            ThumbHeight = 120
+            ThumbWidth = 120
+            OffSetX = 10
+            OffSetY = 10
+            Orientacion = toVertical
+            object Image1: TImage
+              Left = 125
+              Top = 72
+              Width = 105
+              Height = 105
+              PopupMenu = PopupMenu1
+            end
+          end
+          object StatusBar1: TStatusBar
+            Left = 0
+            Top = 438
+            Width = 297
+            Height = 19
+            Panels = <
+              item
+                Width = 100
+              end
+              item
+                Width = 100
+              end>
+            SimplePanel = False
+          end
+          object mArriba: TMemo
+            Left = 264
+            Top = 208
+            Width = 9
+            Height = 9
+            Lines.Strings = (
+              
+                'SELECT TI.NIVEL,A.CODIGOAPOYO, A.PINTADOAPOYO, A.X, A.Y,'#39'INTERRU' +
+                'PTOR'#39' AS TIPO,DIR_APOYO(A.CODIGOAPOYO) AS DIR'
+              '            FROM INTERRUPTORDIS I, APOYO A,'
+              '            ('
+              
+                '                SELECT  to_number(substr(papa.Nombre,5,200)) as ' +
+                'codigointerruptor, papa.nivel                                   ' +
+                '                                 '
+              
+                '                FROM TREENODES Papa, TREENODES Hijo WHERE Hijo.I' +
+                'zquierda > Papa.Izquierda                '
+              '                AND Hijo.derecha < Papa.Derecha'
+              '                AND Papa.CodigoCircuito ='
+              '                  ('
+              
+                '                    SELECT N.CODIGOCIRCUITO FROM NODOMT N, TRAMO' +
+                'MT T'
+              
+                '                    WHERE N.CODIGOAPOYO=  :codigoapoyo --PARAMET' +
+                'RO  NODO '
+              
+                '                    AND N.CODIGONODOMT=  :codigonodomt    --PARA' +
+                'METRO NODO'
+              '                    AND N.CODIGOAPOYO=T.CODIGOAPOYO2'
+              '                    AND N.CODIGONODOMT=T.CODIGONODOMT2'
+              '                    AND ROWNUM=1'
+              '                  )'
+              '                AND Papa.Tipo = '#39'TF'#39'   '
+              '                AND Hijo.CodigoCircuito ='
+              '                 ('
+              
+                '                    SELECT N.CODIGOCIRCUITO FROM NODOMT N, TRAMO' +
+                'MT T'
+              
+                '                    WHERE N.CODIGOAPOYO=  :codigoapoyo --PARAMET' +
+                'RO  NODO'
+              
+                '                    AND N.CODIGONODOMT=  :codigonodomt    --PARA' +
+                'METRO  NODO'
+              '                    AND N.CODIGOAPOYO=T.CODIGOAPOYO2'
+              '                    AND N.CODIGONODOMT=T.CODIGONODOMT2'
+              '                    AND ROWNUM=1'
+              '                 )'
+              '                AND Hijo.Tipo = '#39'TF'#39
+              '                AND HIJO.Nombre ='
+              '                 ('
+              
+                '                   SELECT '#39'TR: '#39'||T.CODIGOTRAMOMT FROM NODOMT N,' +
+                ' TRAMOMT T'
+              
+                '                    WHERE N.CODIGOAPOYO=  :codigoapoyo --PARAMET' +
+                'RO  NODO'
+              
+                '                    AND N.CODIGONODOMT=  :codigonodomt    --PARA' +
+                'METRO  NODO'
+              '                    AND N.CODIGOAPOYO=T.CODIGOAPOYO2'
+              '                    AND N.CODIGONODOMT=T.CODIGONODOMT2'
+              '                    AND ROWNUM=1'
+              '                 )'
+              '                and substr(papa.nombre,1,3)='#39'SW:'#39
+              '             ) TI'
+              '            WHERE'
+              '            I.CODIGOINTERRUPTORDIS=TI.CODIGOINTERRUPTOR'
+              '            AND I.CODIGOAPOYO1=A.CODIGOAPOYO'
+              '            UNION ALL'
+              
+                '            SELECT TI.NIVEL,A.CODIGOAPOYO, A.PINTADOAPOYO, A.X, ' +
+                'A.Y,'#39'PUENTE'#39' AS TIPO,DIR_APOYO(A.CODIGOAPOYO) AS DIR'
+              '            FROM TRAMOMT T, APOYO A,'
+              '            ('
+              
+                '                SELECT  to_number(substr(papa.Nombre,5,200)) as ' +
+                'codigotramoMT, papa.nivel                                       ' +
+                '                             '
+              
+                '                FROM TREENODES Papa, TREENODES Hijo WHERE Hijo.I' +
+                'zquierda > Papa.Izquierda                '
+              '                AND Hijo.derecha < Papa.Derecha'
+              '                AND Papa.CodigoCircuito ='
+              '                ('
+              
+                '                    SELECT N.CODIGOCIRCUITO FROM NODOMT N, TRAMO' +
+                'MT T'
+              
+                '                    WHERE N.CODIGOAPOYO=  :codigoapoyo --PARAMET' +
+                'RO  NODO'
+              
+                '                    AND N.CODIGONODOMT=  :codigonodomt    --PARA' +
+                'METRO  NODO'
+              '                    AND N.CODIGOAPOYO=T.CODIGOAPOYO2'
+              '                    AND N.CODIGONODOMT=T.CODIGONODOMT2'
+              '                    AND ROWNUM=1'
+              '                  ) '
+              '                AND Papa.Tipo = '#39'TF'#39'   '
+              '                AND Hijo.CodigoCircuito ='
+              '                ('
+              
+                '                    SELECT N.CODIGOCIRCUITO FROM NODOMT N, TRAMO' +
+                'MT T'
+              
+                '                    WHERE N.CODIGOAPOYO=  :codigoapoyo --PARAMET' +
+                'RO  NODO'
+              
+                '                    AND N.CODIGONODOMT=  :codigonodomt    --PARA' +
+                'METRO  NODO'
+              '                    AND N.CODIGOAPOYO=T.CODIGOAPOYO2'
+              '                    AND N.CODIGONODOMT=T.CODIGONODOMT2'
+              '                    AND ROWNUM=1'
+              '                  ) '
+              '                AND Hijo.Tipo = '#39'TF'#39
+              '                AND HIJO.Nombre ='
+              '                 ('
+              
+                '                   SELECT '#39'TR: '#39'||T.CODIGOTRAMOMT FROM NODOMT N,' +
+                ' TRAMOMT T'
+              
+                '                    WHERE N.CODIGOAPOYO=  :codigoapoyo --PARAMET' +
+                'RO  NODO'
+              
+                '                    AND N.CODIGONODOMT=  :codigonodomt    --PARA' +
+                'METRO  NODO'
+              '                    AND N.CODIGOAPOYO=T.CODIGOAPOYO2'
+              '                    AND N.CODIGONODOMT=T.CODIGONODOMT2'
+              '                    AND ROWNUM=1'
+              '                 )'
+              '                and substr(papa.nombre,1,3)='#39'TR:'#39
+              '             ) TI'
+              '            WHERE'
+              '            T.CODIGOTRAMOMT=TI.CODIGOTRAMOMT'
+              '            AND T.CODIGOAPOYO1=CODIGOAPOYO2'
+              '            AND T.CODIGOAPOYO1=A.CODIGOAPOYO'
+              '            ORDER BY NIVEL DESC')
+            TabOrder = 2
+            WordWrap = False
+          end
+          object mAbajo: TMemo
+            Left = 264
+            Top = 224
+            Width = 9
+            Height = 9
+            Lines.Strings = (
+              
+                'SELECT A.CODIGOAPOYO, A.PINTADOAPOYO, A.X, A.Y,C.NOMBRECIRCUITO ' +
+                'as TIPO,DIR_APOYO(A.CODIGOAPOYO) AS DIR'
+              
+                '   FROM INTERRUPTORDIS I, APOYO A,NODOMT NA, NODOMT NB,CIRCUITO ' +
+                'C,'
+              
+                '    (SELECT  TO_NUMBER(SUBSTR(HIJO.NOMBRE,5,200)) AS CODIGOINTER' +
+                'RUPTOR, HIJO.NIVEL                                              ' +
+                '                      '
+              
+                '    FROM TREENODES PAPA, TREENODES HIJO WHERE HIJO.IZQUIERDA > P' +
+                'APA.IZQUIERDA                '
+              '    AND HIJO.DERECHA < PAPA.DERECHA'
+              '    AND PAPA.CODIGOCIRCUITO ='
+              '     ('
+              '        SELECT N.CODIGOCIRCUITO FROM NODOMT N, TRAMOMT T'
+              '        WHERE N.CODIGOAPOYO=  :codigoapoyo --PARAMETRO  NODO'
+              '        AND N.CODIGONODOMT=  :codigonodomt    --PARAMETRO  NODO'
+              '        AND N.CODIGOAPOYO=T.CODIGOAPOYO2'
+              '        AND N.CODIGONODOMT=T.CODIGONODOMT2'
+              '        AND ROWNUM=1'
+              '      )  '
+              '    AND PAPA.TIPO = '#39'TF'#39'   '
+              '    AND HIJO.CODIGOCIRCUITO ='
+              '     ('
+              '        SELECT N.CODIGOCIRCUITO FROM NODOMT N, TRAMOMT T'
+              '        WHERE N.CODIGOAPOYO=  :codigoapoyo --PARAMETRO  NODO'
+              '        AND N.CODIGONODOMT=  :codigonodomt    --PARAMETRO  NODO'
+              '        AND N.CODIGOAPOYO=T.CODIGOAPOYO2'
+              '        AND N.CODIGONODOMT=T.CODIGONODOMT2'
+              '        AND ROWNUM=1'
+              '      )  '
+              '    AND HIJO.TIPO = '#39'TF'#39
+              '    AND PAPA.NOMBRE ='
+              '    ('
+              '       SELECT '#39'TR: '#39'||T.CODIGOTRAMOMT FROM NODOMT N, TRAMOMT T'
+              '        WHERE N.CODIGOAPOYO=  :codigoapoyo --PARAMETRO  NODO'
+              '        AND N.CODIGONODOMT=  :codigonodomt    --PARAMETRO  NODO'
+              '        AND N.CODIGOAPOYO=T.CODIGOAPOYO2'
+              '        AND N.CODIGONODOMT=T.CODIGONODOMT2'
+              '        AND ROWNUM=1'
+              '    )'
+              '    AND SUBSTR(hijo.NOMBRE,1,3)='#39'SW:'#39
+              '    )TI'
+              '    WHERE'
+              '    I.CODIGOINTERRUPTORDIS=TI.CODIGOINTERRUPTOR'
+              '    AND I.CODIGOAPOYO1=NA.CODIGOAPOYO'
+              '    AND I.CODIGONODOMT1=NA.CODIGONODOMT'
+              '    AND I.CODIGOAPOYO2=NB.CODIGOAPOYO'
+              '    AND I.CODIGONODOMT2=NB.CODIGONODOMT'
+              '    AND NA.CODIGOCIRCUITO <> NB.CODIGOCIRCUITO'
+              '    AND NA.CODIGOCIRCUITO=C.CODIGOCIRCUITO'
+              '    AND I.CODIGOAPOYO1=A.CODIGOAPOYO'
+              '    order by TI.nivel desc'
+              ' ')
+            TabOrder = 3
+            WordWrap = False
+          end
+        end
+      end
+    end
+  end
+  object tPerfilVL: TTable
+    DatabaseName = 'BaseDato'
+    IndexFieldNames = 'CODIGOPERFILVL'
+    TableName = 'PERFILVL'
+    Left = 336
+    Top = 48
+    object tPerfilVLCODIGOPERFILVL: TFloatField
+      FieldName = 'CODIGOPERFILVL'
+      Required = True
+    end
+    object tPerfilVLNOMBREPERFILVL: TStringField
+      FieldName = 'NOMBREPERFILVL'
+      Required = True
+      Size = 30
+    end
+    object tPerfilVLCODIGOUSUARIO: TFloatField
+      FieldName = 'CODIGOUSUARIO'
+      Required = True
+    end
+    object tPerfilVLDESCRIPCION: TBlobField
+      FieldName = 'DESCRIPCION'
+      BlobType = ftBlob
+      Size = 1
+    end
+  end
+  object dsPerfilVL: TDataSource
+    DataSet = tPerfilVL
+    Left = 344
+    Top = 96
+  end
+  object qTramos: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT codigoapoyo1, codigonodomt1, codigoapoyo2, codigonodomt2,' +
+        ' codigotipotramo'
+      'FROM tramomt'
+      'WHERE codigoapoyo1 = :Cod or codigoapoyo2 = :Cod')
+    Left = 349
+    Top = 168
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Cod'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Cod'
+        ParamType = ptUnknown
+      end>
+  end
+  object qColorCircuito: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select distinct c.codigocircuito, c.color, c.nombrecircuito'
+      'from nodomt n, circuito c'
+      'where n.codigoapoyo = :Cod'
+      '  and c.codigocircuito = n.codigocircuito')
+    Left = 344
+    Top = 232
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'Cod'
+        ParamType = ptUnknown
+        Value = 851
+      end>
+    object qColorCircuitoCODIGOCIRCUITO: TStringField
+      FieldName = 'CODIGOCIRCUITO'
+      Size = 6
+    end
+    object qColorCircuitoCOLOR: TFloatField
+      FieldName = 'COLOR'
+    end
+    object qColorCircuitoNOMBRECIRCUITO: TStringField
+      FieldName = 'NOMBRECIRCUITO'
+      Size = 30
+    end
+  end
+  object dsqColorCircuito: TDataSource
+    DataSet = qColorCircuito
+    Left = 376
+    Top = 293
+  end
+  object qApoyos: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT codigoapoyo1, codigonodomt, codigoapoyo2, codigonodobt, c' +
+        'odigotipoconexiontrafo'
+      'FROM trafodis'
+      'WHERE codigoapoyo1 = :Cod or codigoapoyo2 = :Cod')
+    Left = 360
+    Top = 368
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Cod'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Cod'
+        ParamType = ptUnknown
+      end>
+  end
+  object qNodos: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT codigoapoyo1, codigonodomt, codigoapoyo2, codigonodobt, c' +
+        'odigotipoconexiontrafo'
+      'FROM trafodis'
+      'WHERE codigoapoyo1 = :Cod or codigoapoyo2 = :Cod')
+    Left = 352
+    Top = 432
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Cod'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Cod'
+        ParamType = ptUnknown
+      end>
+  end
+  object qElementos: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT codigoapoyo1, codigonodomt, codigoapoyo2, codigonodobt, c' +
+        'odigotipoconexiontrafo'
+      'FROM trafodis'
+      'WHERE codigoapoyo1 = :Cod or codigoapoyo2 = :Cod')
+    Left = 315
+    Top = 496
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Cod'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Cod'
+        ParamType = ptUnknown
+      end>
+  end
+  object qPintado: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT PINTADOAPOYO FROM APOYO'
+      'WHERE CODIGOAPOYO=:CODIGOAPOYO')
+    Left = 240
+    Top = 504
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOAPOYO'
+        ParamType = ptUnknown
+      end>
+  end
+  object qFotos: TQuery
+    DatabaseName = 'BaseDato'
+    Left = 168
+    Top = 496
+  end
+  object NMFTP1: TNMFTP
+    Port = 21
+    TimeOut = 5000
+    ReportLevel = 0
+    Vendor = 2411
+    ParseList = False
+    ProxyPort = 0
+    Left = 104
+    Top = 498
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 183
+    Top = 220
+    object mmgirarfoto: TMenuItem
+      Caption = 'Girar Fotografia hacía la izquierda'
+      Default = True
+      Hint = 'Gira la fotografia seleccioanda'
+      OnClick = mmgirarfotoClick
+    end
+    object GirarFotografiahacaDerecha1: TMenuItem
+      Caption = 'Girar Fotografia hacía la derecha'
+      OnClick = GirarFotografiahacaDerecha1Click
+    end
+  end
+  object Zommer1: TZommer
+    ShowModal = False
+    Left = 151
+    Top = 276
+  end
+end

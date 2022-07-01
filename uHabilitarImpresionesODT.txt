@@ -1,0 +1,412 @@
+inherited fHabilitarImpresionCobros: TfHabilitarImpresionCobros
+  Left = 281
+  Top = 161
+  Caption = 'Rehabilitar Impresión de cobro viáticos y auxilios'
+  ClientHeight = 480
+  ClientWidth = 726
+  FormStyle = fsMDIChild
+  Visible = True
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel2: TPanel
+    Width = 726
+    Height = 439
+    inherited dbgActividadOdt: TRxDBGrid
+      Width = 724
+      Height = 278
+      Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit]
+      OnEditButtonClick = dbgActividadOdtEditButtonClick
+      MultiSelect = False
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'CODIGOODTHABILITARIMPRESION'
+          PickList.Strings = ()
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Id.'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 34
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGOODT'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'ODT'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 74
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'TipoCobro'
+          PickList.Strings = ()
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Tipo Cobro'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 66
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAIMPRESION'
+          PickList.Strings = ()
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Fecha Impresión'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 94
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGOEMPLEADO'
+          PickList.Strings = ()
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Cédula'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NombreEmpleado'
+          PickList.Strings = ()
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Nombre Empleado'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 125
+          Visible = True
+        end
+        item
+          ButtonStyle = cbsEllipsis
+          Expanded = False
+          FieldName = 'Usuariosolicita'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Usuario Solicita'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 111
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'UsuarioHabilita'
+          PickList.Strings = ()
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Usuario Habilita'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 110
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'MOTIVOS'
+          PickList.Strings = ()
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Motivos'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'NUMEROIMPRESION'
+          PickList.Strings = ()
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Impresión'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 94
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHA'
+          PickList.Strings = ()
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Fecha Rehabilita'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 107
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGOS'
+          PickList.Strings = ()
+          ReadOnly = True
+          Title.Caption = 'Códigos'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Visible = True
+        end>
+    end
+    inherited DBNavigator1: TDBNavigator
+      Top = 420
+      Width = 724
+      DataSource = dsDatos
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbPost, nbCancel]
+      Hints.Strings = (
+        'Primer registro'
+        'Anterior registro'
+        'Siguiente registro'
+        'Último registro'
+        'Insertar registro'
+        'Borrar registro'
+        'Editar registro'
+        'Guardar registro'
+        'Cancelar'
+        'Refrescar')
+    end
+    inherited Panel3: TPanel
+      Width = 724
+      inherited SBFiltrar: TSpeedButton
+        Left = 605
+        Top = 13
+        OnClick = SBFiltrarClick
+      end
+      inherited Label2: TLabel
+        Width = 20
+        Caption = 'CIA:'
+      end
+      inherited Label3: TLabel
+        Left = 264
+      end
+      inherited EdCodigo2: TEdit
+        Left = 154
+      end
+      inherited EdNombre: TEdit
+        Left = 335
+        Width = 266
+      end
+    end
+    object Panel4: TPanel
+      Left = 1
+      Top = 333
+      Width = 724
+      Height = 87
+      Align = alBottom
+      TabOrder = 3
+      object Label4: TLabel
+        Left = 1
+        Top = 1
+        Width = 722
+        Height = 13
+        Align = alTop
+        Caption = '   Motivos :'
+      end
+      object EdMotivos: TDBMemo
+        Left = 1
+        Top = 14
+        Width = 722
+        Height = 72
+        Align = alClient
+        DataField = 'MOTIVOS'
+        DataSource = dsDatos
+        Enabled = False
+        TabOrder = 0
+      end
+    end
+  end
+  inherited Panel1: TPanel
+    Top = 439
+    Width = 726
+    inherited bbAceptar: TBitBtn
+      Left = 420
+    end
+    inherited bbCancelar: TBitBtn
+      Left = 516
+    end
+  end
+  inherited dsDatos: TDataSource
+    DataSet = qDatos
+  end
+  inherited qDatos: TQuery
+    Active = True
+    CachedUpdates = True
+    BeforeInsert = qDatosBeforeInsert
+    AfterInsert = qDatosAfterInsert
+    BeforePost = qDatosBeforePost
+    OnCalcFields = qDatosCalcFields
+    SQL.Strings = (
+      
+        'select h.CODIGOODTHABILITARIMPRESION, H.CODIGOEMPLEADO, h.NUMERO' +
+        'IMPRESION, h.FECHA, h.CODIGOUSUARIOREALIZA, h.CODIGOUSUARIOSOLIC' +
+        'ITA, h.MOTIVOS  ,h.codigos'
+      'from odthabilitarimpresion h,odtimpresion i,odt o'
+      'where h.numeroimpresion=i.numeroimpresion'
+      'and i.codigoodt=o.codigoodt'
+      'order by 1 desc')
+    UpdateObject = updDatos
+    object qDatosCODIGOODTHABILITARIMPRESION: TFloatField
+      FieldName = 'CODIGOODTHABILITARIMPRESION'
+      Origin = 'ODTHABILITARIMPRESION.CODIGOODTHABILITARIMPRESION'
+    end
+    object qDatosNUMEROIMPRESION: TFloatField
+      FieldName = 'NUMEROIMPRESION'
+      Origin = 'ODTHABILITARIMPRESION.NUMEROIMPRESION'
+    end
+    object qDatosFECHA: TDateTimeField
+      FieldName = 'FECHA'
+      Origin = 'ODTHABILITARIMPRESION.FECHA'
+    end
+    object qDatosCODIGOUSUARIOREALIZA: TFloatField
+      FieldName = 'CODIGOUSUARIOREALIZA'
+      Origin = 'ODTHABILITARIMPRESION.CODIGOUSUARIOREALIZA'
+    end
+    object qDatosCODIGOUSUARIOSOLICITA: TFloatField
+      FieldName = 'CODIGOUSUARIOSOLICITA'
+      Origin = 'ODTHABILITARIMPRESION.CODIGOUSUARIOSOLICITA'
+    end
+    object qDatosMOTIVOS: TStringField
+      FieldName = 'MOTIVOS'
+      Origin = 'ODTHABILITARIMPRESION.MOTIVOS'
+      OnSetText = qDatosMOTIVOSSetText
+      Size = 250
+    end
+    object qDatosFECHAIMPRESION: TDateTimeField
+      FieldKind = fkCalculated
+      FieldName = 'FECHAIMPRESION'
+      Origin = 'ODTIMPRESION.FECHA'
+      Calculated = True
+    end
+    object qDatosCODIGOODT: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'CODIGOODT'
+      Origin = 'ODTIMPRESION.CODIGOODT'
+      Calculated = True
+    end
+    object qDatosVALOR: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'VALOR'
+      Origin = 'ODTIMPRESION.VALOR'
+      Calculated = True
+    end
+    object qDatosTipoCobro: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'TipoCobro'
+      Size = 10
+      Calculated = True
+    end
+    object qDatosUsuarioHabilita: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'UsuarioHabilita'
+      Size = 80
+      Calculated = True
+    end
+    object qDatosUsuariosolicita: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Usuariosolicita'
+      Size = 80
+      Calculated = True
+    end
+    object qDatosNombreEmpleado: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'NombreEmpleado'
+      Size = 80
+      Calculated = True
+    end
+    object qDatosCodigoAdministrativo: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'CodigoAdministrativo'
+      Calculated = True
+    end
+    object qDatosCODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'ODTHABILITARIMPRESION.CODIGOEMPLEADO'
+    end
+    object qDatosCODIGOS: TStringField
+      FieldName = 'CODIGOS'
+      Origin = 'ODTHABILITARIMPRESION.CODIGOS'
+      Size = 50
+    end
+  end
+  inherited updDatos: TUpdateSQL
+    ModifySQL.Strings = (
+      'update odthabilitarimpresion'
+      'set'
+      '  CODIGOODTHABILITARIMPRESION = :CODIGOODTHABILITARIMPRESION,'
+      '  CODIGOEMPLEADO = :CODIGOEMPLEADO,'
+      '  NUMEROIMPRESION = :NUMEROIMPRESION,'
+      '  FECHA = :FECHA,'
+      '  CODIGOUSUARIOREALIZA = :CODIGOUSUARIOREALIZA,'
+      '  CODIGOUSUARIOSOLICITA = :CODIGOUSUARIOSOLICITA,'
+      '  MOTIVOS = :MOTIVOS,'
+      '  CODIGOS = :CODIGOS'
+      'where'
+      '  CODIGOODTHABILITARIMPRESION = '
+      ':OLD_CODIGOODTHABILITARIMPRESION')
+    InsertSQL.Strings = (
+      'insert into odthabilitarimpresion'
+      
+        '  (CODIGOODTHABILITARIMPRESION, CODIGOEMPLEADO, NUMEROIMPRESION,' +
+        ' FECHA, '
+      
+        '   CODIGOUSUARIOREALIZA, CODIGOUSUARIOSOLICITA, MOTIVOS, CODIGOS' +
+        ')'
+      'values'
+      
+        '  (:CODIGOODTHABILITARIMPRESION, :CODIGOEMPLEADO, :NUMEROIMPRESI' +
+        'ON, :FECHA, '
+      
+        '   :CODIGOUSUARIOREALIZA, :CODIGOUSUARIOSOLICITA, :MOTIVOS, :COD' +
+        'IGOS)')
+    DeleteSQL.Strings = (
+      'delete from odthabilitarimpresion'
+      'where'
+      '  CODIGOODTHABILITARIMPRESION = :OLD_CODIGOODTHABILITARIMPRESION')
+  end
+end

@@ -1,0 +1,1838 @@
+object fSolicitudSoporte: TfSolicitudSoporte
+  Left = 392
+  Top = 162
+  BorderStyle = bsToolWindow
+  Caption = 'Solicitud Soporte EnerGis'
+  ClientHeight = 471
+  ClientWidth = 403
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label3: TLabel
+    Left = 40
+    Top = 592
+    Width = 31
+    Height = 13
+    Caption = 'Label3'
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 403
+    Height = 471
+    Align = alClient
+    TabOrder = 0
+    object Panel4: TPanel
+      Left = 1
+      Top = 1
+      Width = 401
+      Height = 32
+      Align = alTop
+      TabOrder = 0
+      object lbCodigo: TLabel
+        Left = 9
+        Top = 6
+        Width = 64
+        Height = 13
+        Caption = 'Solicitud N°'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clNavy
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold, fsUnderline]
+        ParentFont = False
+        OnDblClick = lbCodigoDblClick
+      end
+      object Label2: TLabel
+        Left = 148
+        Top = 8
+        Width = 91
+        Height = 13
+        Caption = 'Fecha de Registro:'
+      end
+      object dbeCodigoReporte: TDBText
+        Left = 76
+        Top = 6
+        Width = 43
+        Height = 17
+        DataField = 'CODIGOSOLICITUD'
+        DataSource = dsSolicitud
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clNavy
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object dbEdFechaHora: TDBEdit
+        Tag = 9
+        Left = 242
+        Top = 3
+        Width = 152
+        Height = 21
+        DataField = 'FECHAHORAREGISTRO'
+        DataSource = dsSolicitud
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -8
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+      end
+    end
+    object pcDatos: TPageControl
+      Left = 1
+      Top = 33
+      Width = 401
+      Height = 399
+      ActivePage = tsInformante
+      Align = alClient
+      HotTrack = True
+      TabOrder = 1
+      object tsInformante: TTabSheet
+        Caption = 'General'
+        object gbInformante: TGroupBox
+          Left = 20
+          Top = 10
+          Width = 353
+          Height = 153
+          Caption = 'Solicitante'
+          TabOrder = 0
+          object lbUsuarioSolicitante: TLabel
+            Left = 10
+            Top = 92
+            Width = 49
+            Height = 13
+            Caption = 'Solicitante'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = []
+            ParentFont = False
+          end
+          object lbCIAInformante: TLabel
+            Left = 10
+            Top = 33
+            Width = 18
+            Height = 13
+            Caption = 'CIA'
+          end
+          object lbTelefono: TLabel
+            Left = 10
+            Top = 122
+            Width = 42
+            Height = 13
+            Caption = 'Teléfono'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = []
+            ParentFont = False
+          end
+          object lbExtension: TLabel
+            Left = 189
+            Top = 122
+            Width = 47
+            Height = 13
+            Caption = 'Extensión'
+            FocusControl = dbeExtension
+          end
+          object lbUsuarioInformante: TLabel
+            Left = 10
+            Top = 64
+            Width = 50
+            Height = 13
+            Caption = 'Informante'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = []
+            ParentFont = False
+          end
+          object sbtnCiaInformante: TSpeedButton
+            Left = 70
+            Top = 11
+            Width = 37
+            Height = 17
+            Caption = 'CIA'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clNavy
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            NumGlyphs = 2
+            ParentFont = False
+            OnClick = sbtnCiaInformanteClick
+          end
+          object DBTECIA: TDBText
+            Left = 113
+            Top = 28
+            Width = 233
+            Height = 25
+            Color = clSilver
+            DataField = 'NombreCIA'
+            DataSource = dsSolicitud
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -9
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentColor = False
+            ParentFont = False
+          end
+          object dbeTelefonoCia: TDBEdit
+            Left = 70
+            Top = 119
+            Width = 106
+            Height = 21
+            CharCase = ecUpperCase
+            DataField = 'TELEFONOCIASOLICITA'
+            DataSource = dsSolicitud
+            TabOrder = 3
+            OnKeyPress = FormKeyPress
+          end
+          object dbeExtension: TDBEdit
+            Left = 244
+            Top = 119
+            Width = 57
+            Height = 21
+            DataField = 'EXTENSIONCIASOLICITA'
+            DataSource = dsSolicitud
+            TabOrder = 4
+            OnKeyPress = FormKeyPress
+          end
+          object dbeUsuarioInformante: TDBEdit
+            Left = 70
+            Top = 60
+            Width = 270
+            Height = 21
+            CharCase = ecUpperCase
+            Color = clBtnFace
+            DataField = 'NombreUsuario'
+            DataSource = dsSolicitud
+            TabOrder = 1
+            OnKeyPress = FormKeyPress
+          end
+          object dbeCIAInformante: TDBEdit
+            Tag = 1
+            Left = 70
+            Top = 31
+            Width = 40
+            Height = 21
+            DataField = 'CODIGOCIASOLICITA'
+            DataSource = dsSolicitud
+            TabOrder = 0
+          end
+          object DBLCBUsuarioSolicitante: TDBLookupComboBox
+            Left = 70
+            Top = 88
+            Width = 270
+            Height = 21
+            DataField = 'CODIGOUSUARIOSOLICITA'
+            DataSource = dsSolicitud
+            KeyField = 'CODIGOEMPLEADO'
+            ListField = 'NOMBREEMPLEADO'
+            ListSource = dsEmpleado
+            TabOrder = 2
+          end
+        end
+        object gbDireccion: TGroupBox
+          Left = 20
+          Top = 173
+          Width = 353
+          Height = 187
+          Caption = 'Descripción Solicitud'
+          TabOrder = 1
+          object lbDescripcion: TLabel
+            Left = 10
+            Top = 155
+            Width = 33
+            Height = 13
+            Caption = 'Estado'
+          end
+          object lbPrioridad: TLabel
+            Left = 10
+            Top = 130
+            Width = 48
+            Height = 13
+            Caption = 'Severidad'
+          end
+          object lbTipoSolicitud: TLabel
+            Left = 10
+            Top = 68
+            Width = 39
+            Height = 26
+            Caption = 'Tipo'#13#10'Solicitud'
+          end
+          object lbFechaHoraSolicitud: TLabel
+            Left = 10
+            Top = 22
+            Width = 121
+            Height = 13
+            Caption = 'Fecha y Hora de Solicitud'
+          end
+          object Label1: TLabel
+            Left = 10
+            Top = 45
+            Width = 40
+            Height = 13
+            Caption = 'Nombre '
+          end
+          object sbFechaSolicitud: TSpeedButton
+            Left = 315
+            Top = 21
+            Width = 22
+            Height = 21
+            Glyph.Data = {
+              4E010000424D4E01000000000000760000002800000012000000120000000100
+              040000000000D800000000000000000000001000000010000000000000000000
+              BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              3333330000003333333333333333330000003338888888888888330000003304
+              0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+              000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+              FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+              F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+              000033F7777777777F4833000000330000000000003333000000333333333333
+              333333000000333333333333333333000000}
+            OnClick = sbFechaDictadoClick
+          end
+          object Label6: TLabel
+            Left = 10
+            Top = 94
+            Width = 38
+            Height = 26
+            Caption = 'Tipo'#13#10'Soporte'
+          end
+          object DBETipoPrioridad: TDBLookupComboBox
+            Left = 70
+            Top = 124
+            Width = 270
+            Height = 21
+            DataField = 'CODIGOPRIORIDADSOLICITUD'
+            DataSource = dsSolicitud
+            KeyField = 'CODIGOPRIORIDADSOLICITUD'
+            ListField = 'NOMBREPRIORIDADSOLICITUD'
+            ListSource = dsTipoPrioridad
+            TabOrder = 4
+          end
+          object DBLCBEstadoSolicitud: TDBLookupComboBox
+            Left = 70
+            Top = 151
+            Width = 270
+            Height = 21
+            DataField = 'CODIGOESTADOSOLICITUD'
+            DataSource = dsSolicitud
+            Enabled = False
+            KeyField = 'CODIGOESTADOSOLICITUD'
+            ListField = 'NOMBREESTADOSOLICITUD'
+            ListSource = dsEstado
+            ReadOnly = True
+            TabOrder = 5
+          end
+          object DBLCBTipoSolicitud: TDBLookupComboBox
+            Left = 70
+            Top = 70
+            Width = 270
+            Height = 21
+            DataField = 'CODIGOTIPOSOLICITUD'
+            DataSource = dsSolicitud
+            KeyField = 'CODIGOTIPOSOLICITUD'
+            ListField = 'NOMBRETIPOSOLICITUD'
+            ListSource = dsTipoSolicitud
+            TabOrder = 3
+          end
+          object DBENombreSolicitud: TDBEdit
+            Left = 125
+            Top = 45
+            Width = 212
+            Height = 21
+            DataField = 'NOMBRESOLICITUD'
+            DataSource = dsSolicitud
+            TabOrder = 2
+          end
+          object DBECodigoSolicitud: TDBEdit
+            Left = 70
+            Top = 45
+            Width = 50
+            Height = 21
+            DataField = 'CODIGOSOLICITUD'
+            DataSource = dsSolicitud
+            Enabled = False
+            TabOrder = 1
+          end
+          object dbeFechaHoraSolicitud: TDBEdit
+            Left = 136
+            Top = 21
+            Width = 178
+            Height = 21
+            DataField = 'FECHAHORASOLICITUD'
+            DataSource = dsSolicitud
+            TabOrder = 0
+            OnKeyPress = FormKeyPress
+          end
+          object DBLookupComboBox2: TDBLookupComboBox
+            Left = 70
+            Top = 96
+            Width = 270
+            Height = 21
+            DataField = 'CODIGOTIPOSOPORTE'
+            DataSource = dsSolicitud
+            KeyField = 'CODIGOTIPOSOPORTE'
+            ListField = 'NOMBRETIPOSOPORTE'
+            ListSource = dsTipoSoporte
+            TabOrder = 6
+          end
+        end
+      end
+      object tsObservaciones: TTabSheet
+        Caption = 'Descripción y Observaciones'
+        ImageIndex = 2
+        object GroupBox1: TGroupBox
+          Left = 20
+          Top = 10
+          Width = 353
+          Height = 360
+          Caption = 'Descripción Solicitud'
+          TabOrder = 0
+          object lbAplicativo: TLabel
+            Left = 10
+            Top = 89
+            Width = 46
+            Height = 13
+            Caption = 'Aplicativo'
+            FocusControl = dbeCodigoAplicativo
+          end
+          object lbAreaFuncional: TLabel
+            Left = 10
+            Top = 61
+            Width = 71
+            Height = 13
+            Caption = 'Área Funcional'
+          end
+          object lbObsevaciones: TLabel
+            Left = 8
+            Top = 277
+            Width = 71
+            Height = 13
+            Caption = 'Observaciones'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+          end
+          object lbDescripcionSolicitud: TLabel
+            Left = 10
+            Top = 166
+            Width = 54
+            Height = 13
+            Caption = 'Descripción'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+          end
+          object DBCIA: TDBText
+            Left = 10
+            Top = 17
+            Width = 333
+            Height = 33
+            Color = clSilver
+            DataField = 'NombreCIA'
+            DataSource = dsSolicitud
+            ParentColor = False
+          end
+          object Label5: TLabel
+            Left = 10
+            Top = 116
+            Width = 42
+            Height = 13
+            Caption = 'Atención'
+            FocusControl = DBEdit1
+          end
+          object dbeCodigoAplicativo: TDBEdit
+            Left = 85
+            Top = 85
+            Width = 35
+            Height = 21
+            DataField = 'CODIGOAPLICATIVO'
+            DataSource = dsSolicitud
+            TabOrder = 0
+          end
+          object DBENombreAplicativo: TDBLookupComboBox
+            Left = 125
+            Top = 85
+            Width = 220
+            Height = 21
+            DataField = 'CODIGOAPLICATIVO'
+            DataSource = dsSolicitud
+            KeyField = 'CODIGOAPLICATIVO'
+            ListField = 'NOMBREAPLICATIVO'
+            ListSource = dsAplicativo
+            TabOrder = 2
+          end
+          object DBEAreaFuncional: TDBEdit
+            Left = 85
+            Top = 57
+            Width = 35
+            Height = 21
+            DataField = 'CODIGOAREAFUNCIONAL'
+            DataSource = dsAreaFuncional
+            TabOrder = 5
+          end
+          object DBLCBAreaFuncional: TDBLookupComboBox
+            Left = 125
+            Top = 57
+            Width = 220
+            Height = 21
+            DataField = 'CODIGOAREAFUNCIONAL'
+            DataSource = dsSolicitud
+            KeyField = 'CODIGOAREAFUNCIONAL'
+            ListField = 'NOMBREAREAFUNCIONAL'
+            ListSource = dsAreaFuncional
+            TabOrder = 1
+          end
+          object dbmDescripcionSolicitud: TDBMemo
+            Left = 10
+            Top = 180
+            Width = 333
+            Height = 92
+            DataField = 'DESCRIPCIONSOLICITUD'
+            DataSource = dsSolicitud
+            TabOrder = 3
+          end
+          object DBMObservaciones: TDBMemo
+            Left = 10
+            Top = 290
+            Width = 333
+            Height = 60
+            DataField = 'OBSERVACIONES'
+            DataSource = dsSolicitud
+            TabOrder = 4
+          end
+          object DBEdit1: TDBEdit
+            Left = 85
+            Top = 112
+            Width = 35
+            Height = 21
+            DataField = 'CODIGOTIPOATENCION'
+            DataSource = dsSolicitud
+            TabOrder = 6
+          end
+          object DBLookupComboBox1: TDBLookupComboBox
+            Left = 125
+            Top = 112
+            Width = 220
+            Height = 21
+            DataField = 'CODIGOTIPOATENCION'
+            DataSource = dsSolicitud
+            KeyField = 'CODIGOTIPOATENCION'
+            ListField = 'NOMBRETIPOATENCION'
+            ListSource = dsTipoAtencion
+            TabOrder = 7
+          end
+        end
+      end
+      object tsFechas: TTabSheet
+        Caption = 'Fechas y Asignación'
+        ImageIndex = 1
+        object gbFechas: TGroupBox
+          Left = 20
+          Top = 10
+          Width = 353
+          Height = 319
+          Caption = 'Fechas Solicitud'
+          TabOrder = 0
+          object lbFechaInicialAsignada: TLabel
+            Left = 10
+            Top = 172
+            Width = 106
+            Height = 13
+            Caption = 'Fecha Inicial Asignada'
+            FocusControl = dbeFechaInicialAsignada
+          end
+          object lbFechaFinalAsignada: TLabel
+            Left = 10
+            Top = 207
+            Width = 104
+            Height = 13
+            Caption = 'Fecha  Final Asignada'
+            FocusControl = dbeFechaFinalAsignada
+          end
+          object lbFechaInicialAtencion: TLabel
+            Left = 10
+            Top = 242
+            Width = 119
+            Height = 13
+            Caption = 'Fecha Inicial de Atención'
+            FocusControl = dbeFechaInicialAtencion
+          end
+          object sbFechaInicialAsignada: TSpeedButton
+            Left = 322
+            Top = 170
+            Width = 22
+            Height = 21
+            Enabled = False
+            Glyph.Data = {
+              4E010000424D4E01000000000000760000002800000012000000120000000100
+              040000000000D800000000000000000000001000000010000000000000000000
+              BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              3333330000003333333333333333330000003338888888888888330000003304
+              0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+              000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+              FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+              F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+              000033F7777777777F4833000000330000000000003333000000333333333333
+              333333000000333333333333333333000000}
+            OnClick = sbFechaInicialAsignadaClick
+          end
+          object sbFechaFinalAsignada: TSpeedButton
+            Left = 322
+            Top = 205
+            Width = 22
+            Height = 21
+            Enabled = False
+            Glyph.Data = {
+              4E010000424D4E01000000000000760000002800000012000000120000000100
+              040000000000D800000000000000000000001000000010000000000000000000
+              BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              3333330000003333333333333333330000003338888888888888330000003304
+              0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+              000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+              FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+              F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+              000033F7777777777F4833000000330000000000003333000000333333333333
+              333333000000333333333333333333000000}
+            OnClick = sbFechaFinalAsignadaClick
+          end
+          object sbFechaInicialAtencion: TSpeedButton
+            Left = 322
+            Top = 240
+            Width = 22
+            Height = 21
+            Enabled = False
+            Glyph.Data = {
+              4E010000424D4E01000000000000760000002800000012000000120000000100
+              040000000000D800000000000000000000001000000010000000000000000000
+              BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              3333330000003333333333333333330000003338888888888888330000003304
+              0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+              000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+              FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+              F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+              000033F7777777777F4833000000330000000000003333000000333333333333
+              333333000000333333333333333333000000}
+            OnClick = sbFechaInicialAtencionClick
+          end
+          object lbFechaFinalAtencion: TLabel
+            Left = 10
+            Top = 277
+            Width = 114
+            Height = 13
+            Caption = 'Fecha Final de Atención'
+            FocusControl = dbeFechaFinalAtencion
+          end
+          object sbFechaFinalAtencion: TSpeedButton
+            Left = 322
+            Top = 275
+            Width = 22
+            Height = 21
+            Enabled = False
+            Glyph.Data = {
+              4E010000424D4E01000000000000760000002800000012000000120000000100
+              040000000000D800000000000000000000001000000010000000000000000000
+              BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              3333330000003333333333333333330000003338888888888888330000003304
+              0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+              000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+              FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+              F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+              000033F7777777777F4833000000330000000000003333000000333333333333
+              333333000000333333333333333333000000}
+            OnClick = sbFechaFinalAtencionClick
+          end
+          object lbFechaSolicitud: TLabel
+            Left = 10
+            Top = 107
+            Width = 121
+            Height = 13
+            Caption = 'Fecha y Hora de Solicitud'
+            FocusControl = dbeFechaInicialAsignada
+          end
+          object lbUsuarioSoporte: TLabel
+            Left = 10
+            Top = 137
+            Width = 101
+            Height = 13
+            Caption = 'Ingeniero(a) Soporte'
+          end
+          object DBTCIA: TDBText
+            Left = 10
+            Top = 20
+            Width = 333
+            Height = 33
+            Color = clSilver
+            DataField = 'NombreCIA'
+            DataSource = dsSolicitud
+            ParentColor = False
+          end
+          object DBTNombreSolicitud: TDBText
+            Left = 60
+            Top = 63
+            Width = 281
+            Height = 25
+            Color = clSilver
+            DataField = 'NOMBRESOLICITUD'
+            DataSource = dsSolicitud
+            ParentColor = False
+          end
+          object Label4: TLabel
+            Left = 10
+            Top = 65
+            Width = 39
+            Height = 13
+            Caption = 'Solicitud'
+          end
+          object dbeFechaInicialAtencion: TDBEdit
+            Left = 132
+            Top = 240
+            Width = 187
+            Height = 21
+            DataField = 'FECHAINICIALEJECUTADA'
+            DataSource = dsSolicitud
+            Enabled = False
+            TabOrder = 4
+            OnKeyPress = FormKeyPress
+          end
+          object dbeFechaFinalAsignada: TDBEdit
+            Left = 132
+            Top = 205
+            Width = 187
+            Height = 21
+            DataField = 'FECHAFINALASIGNADA'
+            DataSource = dsSolicitud
+            Enabled = False
+            TabOrder = 3
+            OnKeyPress = FormKeyPress
+          end
+          object dbeFechaInicialAsignada: TDBEdit
+            Left = 132
+            Top = 170
+            Width = 187
+            Height = 21
+            DataField = 'FECHAINICIALASIGNADA'
+            DataSource = dsSolicitud
+            Enabled = False
+            TabOrder = 2
+            OnKeyPress = FormKeyPress
+          end
+          object dbeFechaFinalAtencion: TDBEdit
+            Left = 132
+            Top = 275
+            Width = 187
+            Height = 21
+            DataField = 'FECHAFINALEJECUTADA'
+            DataSource = dsSolicitud
+            Enabled = False
+            TabOrder = 5
+            OnKeyPress = FormKeyPress
+          end
+          object DBLCBUsuarioSoporte: TDBLookupComboBox
+            Left = 132
+            Top = 135
+            Width = 213
+            Height = 21
+            DataField = 'CODIGOUSUARIOSOPORTE'
+            DataSource = dsSolicitud
+            Enabled = False
+            KeyField = 'CODIGOUSUARIO'
+            ListField = 'NOMBREUSUARIO'
+            ListSource = dsUsuarioSoporte
+            TabOrder = 1
+          end
+          object DBEFechaSolicitud: TDBEdit
+            Left = 135
+            Top = 105
+            Width = 207
+            Height = 21
+            DataField = 'FECHAHORASOLICITUD'
+            DataSource = dsSolicitud
+            Enabled = False
+            TabOrder = 0
+          end
+        end
+      end
+    end
+    object Panel2: TPanel
+      Left = 1
+      Top = 432
+      Width = 401
+      Height = 38
+      Align = alBottom
+      TabOrder = 2
+      object Panel3: TPanel
+        Left = 206
+        Top = 1
+        Width = 194
+        Height = 36
+        Align = alRight
+        BevelOuter = bvNone
+        TabOrder = 0
+        object bbCancelar: TBitBtn
+          Left = 90
+          Top = 7
+          Width = 75
+          Height = 25
+          Caption = '&Cancelar'
+          TabOrder = 1
+          OnClick = bbCancelarClick
+          Kind = bkCancel
+        end
+        object bbAceptar: TBitBtn
+          Left = 6
+          Top = 7
+          Width = 75
+          Height = 25
+          Caption = '&Aceptar'
+          ModalResult = 1
+          TabOrder = 0
+          OnClick = bbAceptarClick
+          Glyph.Data = {
+            DE010000424DDE01000000000000760000002800000024000000120000000100
+            0400000000006801000000000000000000001000000010000000000000000000
+            80000080000000808000800000008000800080800000C0C0C000808080000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+            3333333333333333333333330000333333333333333333333333F33333333333
+            00003333344333333333333333388F3333333333000033334224333333333333
+            338338F3333333330000333422224333333333333833338F3333333300003342
+            222224333333333383333338F3333333000034222A22224333333338F338F333
+            8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+            33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+            0000333333333A222433333333333338F338F33300003333333333A222433333
+            333333338F338F33000033333333333A222433333333333338F338F300003333
+            33333333A222433333333333338F338F00003333333333333A22433333333333
+            3338F38F000033333333333333A223333333333333338F830000333333333333
+            333A333333333333333338330000333333333333333333333333333333333333
+            0000}
+          NumGlyphs = 2
+        end
+      end
+      object bbImprimir: TBitBtn
+        Left = 9
+        Top = 7
+        Width = 73
+        Height = 25
+        Caption = '&Imprimir'
+        TabOrder = 1
+        Visible = False
+        OnClick = bbImprimirClick
+        Glyph.Data = {
+          36010000424D3601000000000000760000002800000011000000100000000100
+          040000000000C000000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+          0003300000000888888888888880700000000888888888888880700000000000
+          000000000000700000000F8F8F8F8F8F8F807000000008F8F8F8F8F8F9F07000
+          00000F8F8F8F8F8F8F80700000000000000000000000700000003330FFFFFFFF
+          0333300000003330F0000F0F0333300000003330FFFFFFFF0333300000003330
+          F00F00000333300000003330FFFF0FF03333300000003330F08F0F0333333000
+          00003330FFFF0033333330000000333000000333333330000000}
+      end
+    end
+  end
+  object qReporte1: TQuery
+    CachedUpdates = True
+    AfterClose = qReporte1AfterClose
+    AfterInsert = qReporte1AfterInsert
+    OnUpdateError = qReporte1UpdateError
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM REPORTE')
+    UpdateObject = UpdSQLReporte
+    Left = 681
+    Top = 247
+    object qReporte1CODIGOREPORTE: TFloatField
+      FieldName = 'CODIGOREPORTE'
+      Origin = 'REPORTE.CODIGOREPORTE'
+    end
+    object qReporte1CODIGOINFORMANTE: TStringField
+      FieldName = 'CODIGOINFORMANTE'
+      Origin = 'REPORTE.CODIGOINFORMANTE'
+      OnChange = qReporte1CODIGOINFORMANTEChange
+      Size = 2
+    end
+    object qReporte1DIRECCIONINFORMANTE: TStringField
+      FieldName = 'DIRECCIONINFORMANTE'
+      Origin = 'REPORTE.DIRECCIONINFORMANTE'
+      Size = 40
+    end
+    object qReporte1NOMBREINFORMANTE: TStringField
+      FieldName = 'NOMBREINFORMANTE'
+      Origin = 'REPORTE.NOMBREINFORMANTE'
+      Size = 40
+    end
+    object qReporte1TELEFONO: TStringField
+      FieldName = 'TELEFONO'
+      Origin = 'REPORTE.TELEFONO'
+      Size = 10
+    end
+    object qReporte1CODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'REPORTE.CODIGOADMINISTRATIVO'
+      OnValidate = qReporte1CODIGOADMINISTRATIVOValidate
+    end
+    object qReporte1CODIGOTIPOREPORTE: TStringField
+      FieldName = 'CODIGOTIPOREPORTE'
+      Origin = 'REPORTE.CODIGOTIPOREPORTE'
+      Size = 1
+    end
+    object qReporte1CODIGOCLASEREPORTE: TStringField
+      FieldName = 'CODIGOCLASEREPORTE'
+      Origin = 'REPORTE.CODIGOCLASEREPORTE'
+      Size = 1
+    end
+    object qReporte1CODIGOTIPODANO: TFloatField
+      FieldName = 'CODIGOTIPODANO'
+      Origin = 'REPORTE.CODIGOTIPODANO'
+    end
+    object qReporte1CODIGOPRIORIDAD: TStringField
+      FieldName = 'CODIGOPRIORIDAD'
+      Origin = 'REPORTE.CODIGOPRIORIDAD'
+      Size = 1
+    end
+    object qReporte1CODIGOESTADOREPORTE: TStringField
+      FieldName = 'CODIGOESTADOREPORTE'
+      Origin = 'REPORTE.CODIGOESTADOREPORTE'
+      OnValidate = qReporte1CODIGOESTADOREPORTEValidate
+      Size = 1
+    end
+    object qReporte1NUMEROCARTA: TStringField
+      FieldName = 'NUMEROCARTA'
+      Origin = 'REPORTE.NUMEROCARTA'
+      Size = 6
+    end
+    object qReporte1CODIGOESTADOCARTA: TFloatField
+      FieldName = 'CODIGOESTADOCARTA'
+      Origin = 'REPORTE.CODIGOESTADOCARTA'
+    end
+    object qReporte1REGISTROS: TFloatField
+      FieldName = 'REGISTROS'
+      Origin = 'REPORTE.REGISTROS'
+    end
+    object qReporte1DESCRIPCION: TStringField
+      FieldName = 'DESCRIPCION'
+      Origin = 'REPORTE.DESCRIPCION'
+      Size = 250
+    end
+    object qReporte1OBSERVACION: TStringField
+      FieldName = 'OBSERVACION'
+      Origin = 'REPORTE.OBSERVACION'
+      Size = 250
+    end
+    object qReporte1FECHAHORA: TDateTimeField
+      FieldName = 'FECHAHORA'
+      Origin = 'REPORTE.FECHAHORA'
+      OnValidate = qReporte1FECHAHORAValidate
+    end
+    object qReporte1FECHAULTIMOREGISTRO: TDateTimeField
+      FieldName = 'FECHAULTIMOREGISTRO'
+      Origin = 'REPORTE.FECHAULTIMOREGISTRO'
+    end
+    object qReporte1FECHAHORADICTADO: TDateTimeField
+      FieldName = 'FECHAHORADICTADO'
+      Origin = 'REPORTE.FECHAHORADICTADO'
+      OnValidate = qReporte1FECHAHORADICTADOValidate
+    end
+    object qReporte1FECHAHORALLEGADA: TDateTimeField
+      FieldName = 'FECHAHORALLEGADA'
+      Origin = 'REPORTE.FECHAHORALLEGADA'
+      OnValidate = qReporte1FECHAHORALLEGADAValidate
+    end
+    object qReporte1FECHAHORAATENCION: TDateTimeField
+      FieldName = 'FECHAHORAATENCION'
+      Origin = 'REPORTE.FECHAHORAATENCION'
+      OnValidate = qReporte1FECHAHORAATENCIONValidate
+    end
+    object qReporte1X: TFloatField
+      FieldName = 'X'
+      Origin = 'REPORTE.X'
+    end
+    object qReporte1Y: TFloatField
+      FieldName = 'Y'
+      Origin = 'REPORTE.Y'
+    end
+    object qReporte1ORIGENREPORTE: TStringField
+      FieldName = 'ORIGENREPORTE'
+      Origin = 'REPORTE.ORIGENREPORTE'
+      Size = 1
+    end
+    object qReporte1CODIGOTIPOELEMENTO: TStringField
+      FieldName = 'CODIGOTIPOELEMENTO'
+      Origin = 'REPORTE.CODIGOTIPOELEMENTO'
+      Size = 2
+    end
+    object qReporte1CODIGOELEMENTO: TStringField
+      FieldName = 'CODIGOELEMENTO'
+      Origin = 'REPORTE.CODIGOELEMENTO'
+      Size = 12
+    end
+    object qReporte1CODIGOSUBESTACION: TStringField
+      FieldName = 'CODIGOSUBESTACION'
+      Origin = 'REPORTE.CODIGOSUBESTACION'
+      Size = 3
+    end
+    object qReporte1CODIGOCIRCUITO: TStringField
+      FieldName = 'CODIGOCIRCUITO'
+      Origin = 'REPORTE.CODIGOCIRCUITO'
+      Size = 6
+    end
+    object qReporte1CODIGOTRAFODIS: TFloatField
+      FieldName = 'CODIGOTRAFODIS'
+      Origin = 'REPORTE.CODIGOTRAFODIS'
+    end
+    object qReporte1CODIGOAPOYO: TFloatField
+      FieldName = 'CODIGOAPOYO'
+      Origin = 'REPORTE.CODIGOAPOYO'
+    end
+    object qReporte1CODIGOCLIENTESGD: TFloatField
+      FieldName = 'CODIGOCLIENTESGD'
+      Origin = 'REPORTE.CODIGOCLIENTESGD'
+    end
+    object qReporte1CODIGOCLIENTECOM: TFloatField
+      FieldName = 'CODIGOCLIENTECOM'
+      Origin = 'REPORTE.CODIGOCLIENTECOM'
+    end
+    object qReporte1REPORTEPADRE: TFloatField
+      FieldName = 'REPORTEPADRE'
+      Origin = 'REPORTE.REPORTEPADRE'
+    end
+    object qReporte1PINTADOAPOYO: TStringField
+      FieldName = 'PINTADOAPOYO'
+      Origin = 'REPORTE.PINTADOAPOYO'
+      Size = 7
+    end
+    object qReporte1CODIGOTIPOVIA: TFloatField
+      FieldName = 'CODIGOTIPOVIA'
+      Origin = 'REPORTE.CODIGOTIPOVIA'
+    end
+    object qReporte1CODIGONOMBREVIA: TFloatField
+      FieldName = 'CODIGONOMBREVIA'
+      Origin = 'REPORTE.CODIGONOMBREVIA'
+    end
+    object qReporte1MODIFICADORVIA: TStringField
+      FieldName = 'MODIFICADORVIA'
+      Origin = 'REPORTE.MODIFICADORVIA'
+      Size = 5
+    end
+    object qReporte1DUPLICADOR: TFloatField
+      FieldName = 'DUPLICADOR'
+      Origin = 'REPORTE.DUPLICADOR'
+    end
+    object qReporte1MODIFICADORDUPLICADOR: TStringField
+      FieldName = 'MODIFICADORDUPLICADOR'
+      Origin = 'REPORTE.MODIFICADORDUPLICADOR'
+      Size = 5
+    end
+    object qReporte1NUMEROPUERTA: TFloatField
+      FieldName = 'NUMEROPUERTA'
+      Origin = 'REPORTE.NUMEROPUERTA'
+    end
+    object qReporte1CODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'REPORTE.CODIGOODT'
+    end
+    object qReporte1CONSECUTIVO: TFloatField
+      FieldName = 'CONSECUTIVO'
+      Origin = 'REPORTE.CONSECUTIVO'
+    end
+    object qReporte1CIAINFORMANTE: TFloatField
+      FieldName = 'CIAINFORMANTE'
+      Origin = 'REPORTE.CIAINFORMANTE'
+    end
+    object qReporte1CODIGOCONTADOR: TStringField
+      FieldName = 'CODIGOCONTADOR'
+      Origin = 'REPORTE.CODIGOCONTADOR'
+      Size = 25
+    end
+    object qReporte1PRIORIDADDANO: TFloatField
+      FieldName = 'PRIORIDADDANO'
+      Origin = 'REPORTE.PRIORIDADDANO'
+    end
+    object qReporte1NUMEROSAT: TFloatField
+      FieldName = 'NUMEROSAT'
+      Origin = 'REPORTE.NUMEROSAT'
+    end
+    object qReporte1FECHALIMITERESPUESTA: TDateTimeField
+      FieldName = 'FECHALIMITERESPUESTA'
+      Origin = 'REPORTE.FECHALIMITERESPUESTA'
+      OnValidate = qReporte1FECHALIMITERESPUESTAValidate
+    end
+    object qReporte1NOMBREFUNCIONARIO: TStringField
+      FieldName = 'NOMBREFUNCIONARIO'
+      Origin = 'REPORTE.NOMBREFUNCIONARIO'
+      Size = 40
+    end
+    object qReporte1CODIGOGRUPOTRABAJO: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJO'
+      Origin = 'REPORTE.CODIGOGRUPOTRABAJO'
+    end
+    object qReporte1CODIGONODOBT: TStringField
+      FieldName = 'CODIGONODOBT'
+      Origin = 'REPORTE.CODIGONODOBT'
+      Size = 1
+    end
+    object qReporte1CODIGOINTERRUPTORDIS: TFloatField
+      FieldName = 'CODIGOINTERRUPTORDIS'
+      Origin = 'REPORTE.CODIGOINTERRUPTORDIS'
+    end
+    object qReporte1CODIGOTIPOPREDIO: TStringField
+      FieldName = 'CODIGOTIPOPREDIO'
+      Origin = 'REPORTE.CODIGOTIPOPREDIO'
+      Size = 3
+    end
+    object qReporte1DESCRIPCIONTIPOPREDIO: TStringField
+      FieldName = 'DESCRIPCIONTIPOPREDIO'
+      Origin = 'REPORTE.DESCRIPCIONTIPOPREDIO'
+      Size = 50
+    end
+    object qReporte1FECHAHORASAD: TDateTimeField
+      FieldName = 'FECHAHORASAD'
+      Origin = 'REPORTE.FECHAHORASAD'
+    end
+    object qReporte1CODIGOUSUARIOCREACION: TFloatField
+      FieldName = 'CODIGOUSUARIOCREACION'
+      Origin = 'REPORTE.CODIGOUSUARIOCREACION'
+    end
+  end
+  object UpdSQLReporte: TUpdateSQL
+    ModifySQL.Strings = (
+      'update REPORTE'
+      'set'
+      '  CODIGOREPORTE = :CODIGOREPORTE,'
+      '  CODIGOINFORMANTE = :CODIGOINFORMANTE,'
+      '  DIRECCIONINFORMANTE = :DIRECCIONINFORMANTE,'
+      '  NOMBREINFORMANTE = :NOMBREINFORMANTE,'
+      '  CIGINFORMANTE = :CIGINFORMANTE,'
+      '  TELEFONO = :TELEFONO,'
+      '  CIGDANO = :CIGDANO,'
+      '  DIRECCIONDANO = :DIRECCIONDANO,'
+      '  CODIGOADMINISTRATIVO = :CODIGOADMINISTRATIVO,'
+      '  CODIGOTIPOREPORTE = :CODIGOTIPOREPORTE,'
+      '  CODIGOCLASEREPORTE = :CODIGOCLASEREPORTE,'
+      '  CODIGOTIPODANO = :CODIGOTIPODANO,'
+      '  CODIGOPRIORIDAD = :CODIGOPRIORIDAD,'
+      '  CODIGOESTADOREPORTE = :CODIGOESTADOREPORTE,'
+      '  NUMEROCARTA = :NUMEROCARTA,'
+      '  CODIGOESTADOCARTA = :CODIGOESTADOCARTA,'
+      '  REGISTROS = :REGISTROS,'
+      '  DESCRIPCION = :DESCRIPCION,'
+      '  OBSERVACION = :OBSERVACION,'
+      '  FECHAHORA = :FECHAHORA,'
+      '  FECHAULTIMOREGISTRO = :FECHAULTIMOREGISTRO,'
+      '  FECHAHORADICTADO = :FECHAHORADICTADO,'
+      '  FECHAHORALLEGADA = :FECHAHORALLEGADA,'
+      '  FECHAHORAATENCION = :FECHAHORAATENCION,'
+      '  X = :X,'
+      '  Y = :Y,'
+      '  ORIGENREPORTE = :ORIGENREPORTE,'
+      '  CODIGOTIPOELEMENTO = :CODIGOTIPOELEMENTO,'
+      '  CODIGOELEMENTO = :CODIGOELEMENTO,'
+      '  CODIGOSUBESTACION = :CODIGOSUBESTACION,'
+      '  CODIGOCIRCUITO = :CODIGOCIRCUITO,'
+      '  CODIGOTRAFODIS = :CODIGOTRAFODIS,'
+      '  CODIGOAPOYO = :CODIGOAPOYO,'
+      '  CODIGOCLIENTESGD = :CODIGOCLIENTESGD,'
+      '  CODIGOCLIENTECOM = :CODIGOCLIENTECOM,'
+      '  REPORTEPADRE = :REPORTEPADRE,'
+      '  PINTADOAPOYO = :PINTADOAPOYO,'
+      '  CODIGOTIPOVIA = :CODIGOTIPOVIA,'
+      '  CODIGONOMBREVIA = :CODIGONOMBREVIA,'
+      '  MODIFICADORVIA = :MODIFICADORVIA,'
+      '  DUPLICADOR = :DUPLICADOR,'
+      '  MODIFICADORDUPLICADOR = :MODIFICADORDUPLICADOR,'
+      '  NUMEROPUERTA = :NUMEROPUERTA,'
+      '  CODIGOODT = :CODIGOODT,'
+      '  CONSECUTIVO = :CONSECUTIVO,'
+      '  CIAINFORMANTE = :CIAINFORMANTE,'
+      '  CODIGOCONTADOR = :CODIGOCONTADOR,'
+      '  PRIORIDADDANO = :PRIORIDADDANO,'
+      '  NUMEROSAT = :NUMEROSAT,'
+      '  FECHALIMITERESPUESTA = :FECHALIMITERESPUESTA,'
+      '  NOMBREFUNCIONARIO = :NOMBREFUNCIONARIO,'
+      '  CODIGOGRUPOTRABAJO = :CODIGOGRUPOTRABAJO,'
+      '  CODIGONODOBT = :CODIGONODOBT,'
+      '  CODIGOINTERRUPTORDIS = :CODIGOINTERRUPTORDIS,'
+      '  CODIGOTIPOPREDIO = :CODIGOTIPOPREDIO,'
+      '  DESCRIPCIONTIPOPREDIO = :DESCRIPCIONTIPOPREDIO,'
+      '  FECHAHORASAD = :FECHAHORASAD'
+      'where'
+      '  CODIGOREPORTE = :OLD_CODIGOREPORTE')
+    InsertSQL.Strings = (
+      'insert into REPORTE'
+      
+        '  (CODIGOREPORTE, CODIGOINFORMANTE, DIRECCIONINFORMANTE, NOMBREI' +
+        'NFORMANTE, '
+      
+        '   CIGINFORMANTE, TELEFONO, CIGDANO, DIRECCIONDANO, CODIGOADMINI' +
+        'STRATIVO, '
+      
+        '   CODIGOTIPOREPORTE, CODIGOCLASEREPORTE, CODIGOTIPODANO, CODIGO' +
+        'PRIORIDAD, '
+      
+        '   CODIGOESTADOREPORTE, NUMEROCARTA, CODIGOESTADOCARTA, REGISTRO' +
+        'S, DESCRIPCION, '
+      
+        '   OBSERVACION, FECHAHORA, FECHAULTIMOREGISTRO, FECHAHORADICTADO' +
+        ', FECHAHORALLEGADA, '
+      
+        '   FECHAHORAATENCION, X, Y, ORIGENREPORTE, CODIGOTIPOELEMENTO, C' +
+        'ODIGOELEMENTO, '
+      
+        '   CODIGOSUBESTACION, CODIGOCIRCUITO, CODIGOTRAFODIS, CODIGOAPOY' +
+        'O, CODIGOCLIENTESGD, '
+      
+        '   CODIGOCLIENTECOM, REPORTEPADRE, PINTADOAPOYO, CODIGOTIPOVIA, ' +
+        'CODIGONOMBREVIA, '
+      
+        '   MODIFICADORVIA, DUPLICADOR, MODIFICADORDUPLICADOR, NUMEROPUER' +
+        'TA, CODIGOODT, '
+      
+        '   CONSECUTIVO, CIAINFORMANTE, CODIGOCONTADOR, PRIORIDADDANO, NU' +
+        'MEROSAT, '
+      
+        '   FECHALIMITERESPUESTA, NOMBREFUNCIONARIO, CODIGOGRUPOTRABAJO, ' +
+        'CODIGONODOBT, '
+      
+        '   CODIGOINTERRUPTORDIS, CODIGOTIPOPREDIO, DESCRIPCIONTIPOPREDIO' +
+        ', FECHAHORASAD)'
+      'values'
+      
+        '  (:CODIGOREPORTE, :CODIGOINFORMANTE, :DIRECCIONINFORMANTE, :NOM' +
+        'BREINFORMANTE, '
+      
+        '   :CIGINFORMANTE, :TELEFONO, :CIGDANO, :DIRECCIONDANO, :CODIGOA' +
+        'DMINISTRATIVO, '
+      
+        '   :CODIGOTIPOREPORTE, :CODIGOCLASEREPORTE, :CODIGOTIPODANO, :CO' +
+        'DIGOPRIORIDAD, '
+      
+        '   :CODIGOESTADOREPORTE, :NUMEROCARTA, :CODIGOESTADOCARTA, :REGI' +
+        'STROS, '
+      
+        '   :DESCRIPCION, :OBSERVACION, :FECHAHORA, :FECHAULTIMOREGISTRO,' +
+        ' :FECHAHORADICTADO, '
+      
+        '   :FECHAHORALLEGADA, :FECHAHORAATENCION, :X, :Y, :ORIGENREPORTE' +
+        ', :CODIGOTIPOELEMENTO, '
+      
+        '   :CODIGOELEMENTO, :CODIGOSUBESTACION, :CODIGOCIRCUITO, :CODIGO' +
+        'TRAFODIS, '
+      
+        '   :CODIGOAPOYO, :CODIGOCLIENTESGD, :CODIGOCLIENTECOM, :REPORTEP' +
+        'ADRE, :PINTADOAPOYO, '
+      
+        '   :CODIGOTIPOVIA, :CODIGONOMBREVIA, :MODIFICADORVIA, :DUPLICADO' +
+        'R, :MODIFICADORDUPLICADOR, '
+      
+        '   :NUMEROPUERTA, :CODIGOODT, :CONSECUTIVO, :CIAINFORMANTE, :COD' +
+        'IGOCONTADOR, '
+      
+        '   :PRIORIDADDANO, :NUMEROSAT, :FECHALIMITERESPUESTA, :NOMBREFUN' +
+        'CIONARIO, '
+      
+        '   :CODIGOGRUPOTRABAJO, :CODIGONODOBT, :CODIGOINTERRUPTORDIS, :C' +
+        'ODIGOTIPOPREDIO, '
+      '   :DESCRIPCIONTIPOPREDIO, :FECHAHORASAD)')
+    DeleteSQL.Strings = (
+      'delete from REPORTE'
+      'where'
+      '  CODIGOREPORTE = :OLD_CODIGOREPORTE')
+    Left = 683
+    Top = 344
+  end
+  object dsReporte: TDataSource
+    DataSet = qReporte1
+    Left = 680
+    Top = 297
+  end
+  object qTipoInformante: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM INFORMANTE')
+    Left = 475
+    Top = 509
+  end
+  object qCIA: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    DataSource = dsSolicitud
+    SQL.Strings = (
+      'SELECT CODIGOADMINISTRATIVO, NOMBREADMINISTRATIVO'
+      'FROM ADMINISTRATIVO ')
+    Left = 886
+    Top = 61
+  end
+  object qAdministrativo: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOADMINISTRATIVO, NOMBREADMINISTRATIVO'
+      'FROM ADMINISTRATIVO')
+    Left = 685
+    Top = 200
+  end
+  object qTipoDano: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    DataSource = dsReporte
+    SQL.Strings = (
+      'SELECT CODIGOTIPODANO, NOMBRETIPODANO'
+      'FROM TIPODANO'
+      'ORDER BY NOMBRETIPODANO')
+    Left = 468
+    Top = 566
+  end
+  object dsTipoDano: TDataSource
+    DataSet = qTipoDano
+    Left = 471
+    Top = 622
+  end
+  object qSolicitud: TQuery
+    CachedUpdates = True
+    AfterInsert = qSolicitudAfterInsert
+    AfterPost = qSolicitudAfterPost
+    AfterDelete = qSolicitudAfterDelete
+    OnCalcFields = qSolicitudCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM SE_SOLICITUD')
+    UpdateObject = updSolicitud
+    Left = 431
+    Top = 63
+    object qSolicitudCODIGOSOLICITUD: TFloatField
+      FieldName = 'CODIGOSOLICITUD'
+      Origin = 'SE_SOLICITUD.CODIGOSOLICITUD'
+      OnChange = qSolicitudCODIGOSOLICITUDChange
+    end
+    object qSolicitudCODIGOCIASOLICITA: TFloatField
+      FieldName = 'CODIGOCIASOLICITA'
+      Origin = 'SE_SOLICITUD.CODIGOCIASOLICITA'
+      OnChange = qSolicitudCODIGOCIASOLICITAChange
+      OnValidate = qSolicitudCODIGOCIASOLICITAValidate
+    end
+    object qSolicitudCODIGOUSUARIOINFORMANTE: TFloatField
+      FieldName = 'CODIGOUSUARIOINFORMANTE'
+      Origin = 'SE_SOLICITUD.CODIGOUSUARIOINFORMANTE'
+      OnValidate = qSolicitudCODIGOUSUARIOINFORMANTEValidate
+    end
+    object qSolicitudCODIGOUSUARIOSOLICITA: TFloatField
+      FieldName = 'CODIGOUSUARIOSOLICITA'
+      Origin = 'SE_SOLICITUD.CODIGOUSUARIOSOLICITA'
+    end
+    object qSolicitudCODIGOUSUARIOSOPORTE: TFloatField
+      FieldName = 'CODIGOUSUARIOSOPORTE'
+      Origin = 'SE_SOLICITUD.CODIGOUSUARIOSOPORTE'
+    end
+    object qSolicitudFECHAHORASOLICITUD: TDateTimeField
+      FieldName = 'FECHAHORASOLICITUD'
+      Origin = 'SE_SOLICITUD.FECHAHORASOLICITUD'
+    end
+    object qSolicitudCODIGOTIPOSOLICITUD: TFloatField
+      FieldName = 'CODIGOTIPOSOLICITUD'
+      Origin = 'SE_SOLICITUD.CODIGOTIPOSOLICITUD'
+    end
+    object qSolicitudCODIGOPRIORIDADSOLICITUD: TFloatField
+      FieldName = 'CODIGOPRIORIDADSOLICITUD'
+      Origin = 'SE_SOLICITUD.CODIGOPRIORIDADSOLICITUD'
+    end
+    object qSolicitudCODIGOESTADOSOLICITUD: TFloatField
+      FieldName = 'CODIGOESTADOSOLICITUD'
+      Origin = 'SE_SOLICITUD.CODIGOESTADOSOLICITUD'
+    end
+    object qSolicitudNOMBRESOLICITUD: TStringField
+      FieldName = 'NOMBRESOLICITUD'
+      Origin = 'SE_SOLICITUD.NOMBRESOLICITUD'
+      Size = 250
+    end
+    object qSolicitudDESCRIPCIONSOLICITUD: TBlobField
+      FieldName = 'DESCRIPCIONSOLICITUD'
+      Origin = 'SE_SOLICITUD.DESCRIPCIONSOLICITUD'
+      BlobType = ftBlob
+      Size = 1
+    end
+    object qSolicitudTELEFONOCIASOLICITA: TFloatField
+      FieldName = 'TELEFONOCIASOLICITA'
+      Origin = 'SE_SOLICITUD.TELEFONOCIASOLICITA'
+    end
+    object qSolicitudEXTENSIONCIASOLICITA: TFloatField
+      FieldName = 'EXTENSIONCIASOLICITA'
+      Origin = 'SE_SOLICITUD.EXTENSIONCIASOLICITA'
+    end
+    object qSolicitudFECHAINICIALASIGNADA: TDateTimeField
+      FieldName = 'FECHAINICIALASIGNADA'
+      Origin = 'SE_SOLICITUD.FECHAINICIALASIGNADA'
+    end
+    object qSolicitudFECHAFINALASIGNADA: TDateTimeField
+      FieldName = 'FECHAFINALASIGNADA'
+      Origin = 'SE_SOLICITUD.FECHAFINALASIGNADA'
+    end
+    object qSolicitudFECHAINICIALEJECUTADA: TDateTimeField
+      FieldName = 'FECHAINICIALEJECUTADA'
+      Origin = 'SE_SOLICITUD.FECHAINICIALEJECUTADA'
+    end
+    object qSolicitudFECHAFINALEJECUTADA: TDateTimeField
+      FieldName = 'FECHAFINALEJECUTADA'
+      Origin = 'SE_SOLICITUD.FECHAFINALEJECUTADA'
+    end
+    object qSolicitudCODIGOAPLICATIVO: TFloatField
+      FieldName = 'CODIGOAPLICATIVO'
+      Origin = 'SE_SOLICITUD.CODIGOAPLICATIVO'
+    end
+    object qSolicitudOBSERVACIONES: TStringField
+      FieldName = 'OBSERVACIONES'
+      Origin = 'SE_SOLICITUD.OBSERVACIONES'
+      Size = 250
+    end
+    object qSolicitudFECHAHORAREGISTRO: TDateTimeField
+      FieldName = 'FECHAHORAREGISTRO'
+      Origin = 'SE_SOLICITUD.FECHAHORAREGISTRO'
+    end
+    object qSolicitudCODIGOUSUARIOCREACION: TFloatField
+      FieldName = 'CODIGOUSUARIOCREACION'
+      Origin = 'SE_SOLICITUD.CODIGOUSUARIOCREACION'
+    end
+    object qSolicitudCODIGOAREAFUNCIONAL: TFloatField
+      FieldName = 'CODIGOAREAFUNCIONAL'
+      Origin = 'SE_SOLICITUD.CODIGOAREAFUNCIONAL'
+      OnChange = qSolicitudCODIGOAREAFUNCIONALChange
+      OnValidate = qSolicitudCODIGOAREAFUNCIONALValidate
+    end
+    object qSolicitudNombreUsuario11: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NombreUsuario'
+      LookupDataSet = qUsuario
+      LookupKeyFields = 'CODIGOUSUARIO'
+      LookupResultField = 'NOMBREUSUARIO'
+      KeyFields = 'CODIGOUSUARIOINFORMANTE'
+      Size = 40
+      Lookup = True
+    end
+    object qSolicitudNombreCIA: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NombreCIA'
+      LookupDataSet = qCIA
+      LookupKeyFields = 'CODIGOADMINISTRATIVO'
+      LookupResultField = 'NOMBREADMINISTRATIVO'
+      KeyFields = 'CODIGOCIASOLICITA'
+      Size = 250
+      Lookup = True
+    end
+    object qSolicitudCODIGOUSUARIOMODIFICACION: TFloatField
+      FieldName = 'CODIGOUSUARIOMODIFICACION'
+      Origin = 'SE_SOLICITUD.CODIGOUSUARIOMODIFICACION'
+    end
+    object qSolicitudFECHAHORAMODIFICACION: TDateTimeField
+      FieldName = 'FECHAHORAMODIFICACION'
+      Origin = 'SE_SOLICITUD.FECHAMODIFICACIONSOLICITUD'
+    end
+    object qSolicitudNombreUsuarioInformante: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'NombreUsuarioInformante'
+      Size = 40
+      Calculated = True
+    end
+    object qSolicitudCODIGOTIPOATENCION: TFloatField
+      FieldName = 'CODIGOTIPOATENCION'
+      Origin = 'SE_SOLICITUD.CODIGOTIPOATENCION'
+    end
+    object qSolicitudCODIGOTIPOSOPORTE: TFloatField
+      FieldName = 'CODIGOTIPOSOPORTE'
+      Origin = 'SE_SOLICITUD.CODIGOTIPOSOPORTE'
+    end
+  end
+  object dsSolicitud: TDataSource
+    DataSet = qSolicitud
+    Left = 429
+    Top = 110
+  end
+  object qTipoPrioridad: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM SE_PRIORIDADSOLICITUD'
+      'ORDER BY NOMBREPRIORIDADSOLICITUD')
+    Left = 827
+    Top = 62
+  end
+  object dsTipoPrioridad: TDataSource
+    DataSet = qTipoPrioridad
+    Left = 824
+    Top = 110
+  end
+  object updSolicitud: TUpdateSQL
+    ModifySQL.Strings = (
+      'update SE_SOLICITUD'
+      'set'
+      '  CODIGOSOLICITUD = :CODIGOSOLICITUD,'
+      '  CODIGOCIASOLICITA = :CODIGOCIASOLICITA,'
+      '  CODIGOUSUARIOINFORMANTE = :CODIGOUSUARIOINFORMANTE,'
+      '  CODIGOUSUARIOSOLICITA = :CODIGOUSUARIOSOLICITA,'
+      '  CODIGOUSUARIOSOPORTE = :CODIGOUSUARIOSOPORTE,'
+      '  FECHAHORASOLICITUD = :FECHAHORASOLICITUD,'
+      '  CODIGOTIPOSOLICITUD = :CODIGOTIPOSOLICITUD,'
+      '  CODIGOPRIORIDADSOLICITUD = :CODIGOPRIORIDADSOLICITUD,'
+      '  CODIGOESTADOSOLICITUD = :CODIGOESTADOSOLICITUD,'
+      '  NOMBRESOLICITUD = :NOMBRESOLICITUD,'
+      '  DESCRIPCIONSOLICITUD = :DESCRIPCIONSOLICITUD,'
+      '  TELEFONOCIASOLICITA = :TELEFONOCIASOLICITA,'
+      '  EXTENSIONCIASOLICITA = :EXTENSIONCIASOLICITA,'
+      '  FECHAINICIALASIGNADA = :FECHAINICIALASIGNADA,'
+      '  FECHAFINALASIGNADA = :FECHAFINALASIGNADA,'
+      '  FECHAINICIALEJECUTADA = :FECHAINICIALEJECUTADA,'
+      '  FECHAFINALEJECUTADA = :FECHAFINALEJECUTADA,'
+      '  FECHAHORAMODIFICACION = :FECHAHORAMODIFICACION,'
+      '  CODIGOUSUARIOMODIFICACION = :CODIGOUSUARIOMODIFICACION,'
+      '  CODIGOAPLICATIVO = :CODIGOAPLICATIVO,'
+      '  OBSERVACIONES = :OBSERVACIONES,'
+      '  FECHAHORAREGISTRO = :FECHAHORAREGISTRO,'
+      '  CODIGOUSUARIOCREACION = :CODIGOUSUARIOCREACION,'
+      '  CODIGOAREAFUNCIONAL = :CODIGOAREAFUNCIONAL,'
+      '  CODIGOTIPOATENCION = :CODIGOTIPOATENCION,'
+      '  CODIGOTIPOSOPORTE = :CODIGOTIPOSOPORTE'
+      'where'
+      '  CODIGOSOLICITUD = :OLD_CODIGOSOLICITUD')
+    InsertSQL.Strings = (
+      'insert into SE_SOLICITUD'
+      
+        '  (CODIGOSOLICITUD, CODIGOCIASOLICITA, CODIGOUSUARIOINFORMANTE, ' +
+        'CODIGOUSUARIOSOLICITA, '
+      
+        '   CODIGOUSUARIOSOPORTE, FECHAHORASOLICITUD, CODIGOTIPOSOLICITUD' +
+        ', CODIGOPRIORIDADSOLICITUD, '
+      
+        '   CODIGOESTADOSOLICITUD, NOMBRESOLICITUD, DESCRIPCIONSOLICITUD,' +
+        ' TELEFONOCIASOLICITA, '
+      
+        '   EXTENSIONCIASOLICITA, FECHAINICIALASIGNADA, FECHAFINALASIGNAD' +
+        'A, FECHAINICIALEJECUTADA, '
+      
+        '   FECHAFINALEJECUTADA, FECHAHORAMODIFICACION, CODIGOUSUARIOMODI' +
+        'FICACION, '
+      
+        '   CODIGOAPLICATIVO, OBSERVACIONES, FECHAHORAREGISTRO, CODIGOUSU' +
+        'ARIOCREACION, '
+      '   CODIGOAREAFUNCIONAL, CODIGOTIPOATENCION, CODIGOTIPOSOPORTE)'
+      'values'
+      
+        '  (:CODIGOSOLICITUD, :CODIGOCIASOLICITA, :CODIGOUSUARIOINFORMANT' +
+        'E, :CODIGOUSUARIOSOLICITA, '
+      
+        '   :CODIGOUSUARIOSOPORTE, :FECHAHORASOLICITUD, :CODIGOTIPOSOLICI' +
+        'TUD, :CODIGOPRIORIDADSOLICITUD, '
+      
+        '   :CODIGOESTADOSOLICITUD, :NOMBRESOLICITUD, :DESCRIPCIONSOLICIT' +
+        'UD, :TELEFONOCIASOLICITA, '
+      
+        '   :EXTENSIONCIASOLICITA, :FECHAINICIALASIGNADA, :FECHAFINALASIG' +
+        'NADA, :FECHAINICIALEJECUTADA, '
+      
+        '   :FECHAFINALEJECUTADA, :FECHAHORAMODIFICACION, :CODIGOUSUARIOM' +
+        'ODIFICACION, '
+      
+        '   :CODIGOAPLICATIVO, :OBSERVACIONES, :FECHAHORAREGISTRO, :CODIG' +
+        'OUSUARIOCREACION, '
+      
+        '   :CODIGOAREAFUNCIONAL, :CODIGOTIPOATENCION, :CODIGOTIPOSOPORTE' +
+        ')')
+    DeleteSQL.Strings = (
+      'delete from SE_SOLICITUD'
+      'where'
+      '  CODIGOSOLICITUD = :OLD_CODIGOSOLICITUD')
+    Left = 431
+    Top = 160
+  end
+  object qAplicativo: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT A.CODIGOAPLICATIVO,A.NOMBREAPLICATIVO '
+      'FROM SE_APLICATIVO A, SE_AREAAPLICATIVO AA '
+      'WHERE AA.CODIGOAREAFUNCIONAL=:CODIGOAREAFUNCIONAL'
+      'AND A.CODIGOAPLICATIVO=AA.CODIGOAPLICATIVO'
+      'ORDER BY NOMBREAPLICATIVO')
+    Left = 573
+    Top = 62
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOAREAFUNCIONAL'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsAplicativo: TDataSource
+    DataSet = qAplicativo
+    Left = 573
+    Top = 110
+  end
+  object qEstado: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM SE_ESTADOSOLICITUD'
+      'ORDER BY NOMBREESTADOSOLICITUD')
+    Left = 632
+    Top = 62
+  end
+  object dsEstado: TDataSource
+    DataSet = qEstado
+    Left = 632
+    Top = 110
+  end
+  object qTipoSolicitud: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM SE_TIPOSOLICITUD'
+      'ORDER BY NOMBRETIPOSOLICITUD')
+    Left = 696
+    Top = 62
+  end
+  object dsTipoSolicitud: TDataSource
+    DataSet = qTipoSolicitud
+    Left = 696
+    Top = 110
+  end
+  object qUsuario: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOUSUARIO,NOMBREUSUARIO,CODIGOTIPOUSUARIO'
+      'FROM USUARIO'
+      'WHERE CODIGOUSUARIO=:CODIGOUSUARIO'
+      'ORDER BY NOMBREUSUARIO')
+    Left = 760
+    Top = 62
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOUSUARIO'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsUsuario: TDataSource
+    DataSet = qUsuario
+    Left = 760
+    Top = 110
+  end
+  object qAreaFuncional: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM SE_AREAFUNCIONAL'
+      'ORDER BY NOMBREAREAFUNCIONAL')
+    Left = 501
+    Top = 62
+  end
+  object dsAreaFuncional: TDataSource
+    DataSet = qAreaFuncional
+    Left = 501
+    Top = 110
+  end
+  object qEmpleado: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsSolicitud
+    SQL.Strings = (
+      'SELECT * FROM EMPLEADO'
+      'WHERE CODIGOADMINISTRATIVO=:CODIGOCIASOLICITA'
+      'ORDER BY NOMBREEMPLEADO')
+    Left = 429
+    Top = 230
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOCIASOLICITA'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsEmpleado: TDataSource
+    DataSet = qEmpleado
+    Left = 429
+    Top = 278
+  end
+  object qTipoUsuario: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOTIPOUSUARIO'
+      'FROM USUARIO'
+      'WHERE CODIGOUSUARIO=:CODIGOUSUARIO')
+    Left = 941
+    Top = 62
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'CODIGOUSUARIO'
+        ParamType = ptUnknown
+      end>
+    object qTipoUsuarioCODIGOTIPOUSUARIO: TStringField
+      FieldName = 'CODIGOTIPOUSUARIO'
+      Origin = 'USUARIO.CODIGOTIPOUSUARIO'
+      Size = 2
+    end
+  end
+  object dsTipoUsuario: TDataSource
+    DataSet = qTipoUsuario
+    Left = 941
+    Top = 110
+  end
+  object qProgramacionUsuarioSoporte: TQuery
+    CachedUpdates = True
+    AfterInsert = qProgramacionUsuarioSoporteAfterInsert
+    BeforePost = qProgramacionUsuarioSoporteBeforePost
+    AfterPost = qProgramacionUsuarioSoporteAfterPost
+    AfterDelete = qProgramacionUsuarioSoporteAfterDelete
+    DatabaseName = 'BaseDato'
+    DataSource = dsSolicitud
+    SQL.Strings = (
+      'SELECT * FROM SE_PROGRAMACIONUSUARIOSOPORTE'
+      'WHERE CODIGOSOLICITUD=:CODIGOSOLICITUD'
+      'ORDER BY CODIGOPROGRAMACIONUSUARIO')
+    UpdateObject = updProgramacionUsuarioSoporte
+    Left = 541
+    Top = 230
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOSOLICITUD'
+        ParamType = ptUnknown
+      end>
+    object qProgramacionUsuarioSoporteCODIGOPROGRAMACIONUSUARIO: TFloatField
+      FieldName = 'CODIGOPROGRAMACIONUSUARIO'
+      Origin = 'SE_PROGRAMACIONUSUARIOSOPORTE.CODIGOPROGRAMACIONUSUARIO'
+    end
+    object qProgramacionUsuarioSoporteCODIGOUSUARIOSOPORTE: TFloatField
+      FieldName = 'CODIGOUSUARIOSOPORTE'
+      Origin = 'SE_PROGRAMACIONUSUARIOSOPORTE.CODIGOUSUARIOSOPORTE'
+    end
+    object qProgramacionUsuarioSoporteCODIGOSOLICITUD: TFloatField
+      FieldName = 'CODIGOSOLICITUD'
+      Origin = 'SE_PROGRAMACIONUSUARIOSOPORTE.CODIGOSOLICITUD'
+    end
+    object qProgramacionUsuarioSoporteFECHAINICIOASIGNADA: TDateTimeField
+      FieldName = 'FECHAINICIOASIGNADA'
+      Origin = 'SE_PROGRAMACIONUSUARIOSOPORTE.FECHAINICIOASIGNADA'
+    end
+    object qProgramacionUsuarioSoporteFECHAFINALASIGNADA: TDateTimeField
+      FieldName = 'FECHAFINALASIGNADA'
+      Origin = 'SE_PROGRAMACIONUSUARIOSOPORTE.FECHAFINALASIGNADA'
+    end
+    object qProgramacionUsuarioSoporteCODIGOESTADOSOLICITUD: TFloatField
+      FieldName = 'CODIGOESTADOSOLICITUD'
+      Origin = 'SE_PROGRAMACIONUSUARIOSOPORTE.CODIGOESTADOSOLICITUD'
+    end
+  end
+  object dsProgramacionUsuarioSoporte: TDataSource
+    DataSet = qProgramacionUsuarioSoporte
+    Left = 541
+    Top = 278
+  end
+  object updProgramacionUsuarioSoporte: TUpdateSQL
+    ModifySQL.Strings = (
+      'update SE_PROGRAMACIONUSUARIOSOPORTE'
+      'set'
+      '  CODIGOPROGRAMACIONUSUARIO = :CODIGOPROGRAMACIONUSUARIO,'
+      '  CODIGOUSUARIOSOPORTE = :CODIGOUSUARIOSOPORTE,'
+      '  CODIGOSOLICITUD = :CODIGOSOLICITUD,'
+      '  FECHAINICIOASIGNADA = :FECHAINICIOASIGNADA,'
+      '  FECHAFINALASIGNADA = :FECHAFINALASIGNADA,'
+      '  CODIGOESTADOSOLICITUD = :CODIGOESTADOSOLICITUD'
+      'where'
+      '  CODIGOPROGRAMACIONUSUARIO = :OLD_CODIGOPROGRAMACIONUSUARIO')
+    InsertSQL.Strings = (
+      'insert into SE_PROGRAMACIONUSUARIOSOPORTE'
+      
+        '  (CODIGOPROGRAMACIONUSUARIO, CODIGOUSUARIOSOPORTE, CODIGOSOLICI' +
+        'TUD, FECHAINICIOASIGNADA, '
+      '   FECHAFINALASIGNADA, CODIGOESTADOSOLICITUD)'
+      'values'
+      
+        '  (:CODIGOPROGRAMACIONUSUARIO, :CODIGOUSUARIOSOPORTE, :CODIGOSOL' +
+        'ICITUD, '
+      
+        '   :FECHAINICIOASIGNADA, :FECHAFINALASIGNADA, :CODIGOESTADOSOLIC' +
+        'ITUD)')
+    DeleteSQL.Strings = (
+      'delete from SE_PROGRAMACIONUSUARIOSOPORTE'
+      'where'
+      '  CODIGOPROGRAMACIONUSUARIO = :OLD_CODIGOPROGRAMACIONUSUARIO')
+    Left = 541
+    Top = 326
+  end
+  object qUsuarioSoporte: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOUSUARIO,NOMBREUSUARIO,CODIGOTIPOUSUARIO'
+      'FROM USUARIO'
+      'WHERE CODIGOTIPOUSUARIO IN(0,1)'
+      'ORDER BY NOMBREUSUARIO')
+    Left = 973
+    Top = 54
+  end
+  object dsUsuarioSoporte: TDataSource
+    DataSet = qUsuarioSoporte
+    Left = 1013
+    Top = 110
+  end
+  object dsCIA: TDataSource
+    DataSet = qCIA
+    Left = 885
+    Top = 110
+  end
+  object dsTipoAtencion: TDataSource
+    DataSet = qTipoAtencion
+    Left = 824
+    Top = 238
+  end
+  object qTipoAtencion: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM SE_TIPOATENCION'
+      'ORDER BY NOMBRETIPOATENCION')
+    Left = 827
+    Top = 190
+  end
+  object qTipoSoporte: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM SE_TIPOSOPORTE'
+      'ORDER BY NOMBRETIPOSOPORTE')
+    Left = 800
+    Top = 302
+  end
+  object dsTipoSoporte: TDataSource
+    DataSet = qTipoSoporte
+    Left = 800
+    Top = 350
+  end
+end

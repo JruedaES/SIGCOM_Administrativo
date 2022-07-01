@@ -1,0 +1,281 @@
+inherited fEstadisticaAdministrativo: TfEstadisticaAdministrativo
+  Left = 239
+  Top = 138
+  Caption = 'fEstadisticaAdministrativo'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited DecisionGraph1: TDecisionGraph
+    object Series1: TBarSeries
+      Active = False
+      Marks.ArrowLength = 20
+      Marks.Visible = False
+      Title = 'Template: CODIGOSUELDO'
+      SeriesColor = clRed
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Bar'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      Identifier = 'Template: CODIGOSUELDO'
+      Style = 61
+    end
+    object Series2: TBarSeries
+      Active = False
+      Marks.ArrowLength = 20
+      Marks.Visible = False
+      Title = 'Template: TIPOSUELDO'
+      SeriesColor = clRed
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Bar'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      Identifier = 'Template: TIPOSUELDO'
+      Style = 61
+    end
+    object Series3: TBarSeries
+      Active = False
+      Marks.ArrowLength = 20
+      Marks.Visible = False
+      Title = 'Template: SUELDO'
+      SeriesColor = clRed
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Bar'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      Identifier = 'Template: SUELDO'
+      Style = 61
+    end
+    object TBarSeries
+      Active = False
+      Marks.ArrowLength = 20
+      Marks.Visible = True
+      SeriesColor = clGreen
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Bar'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      Identifier = '::CODIGOSUELDO+TIPOSUELDO'
+      Style = 16
+    end
+    object Series5: TBarSeries
+      Active = False
+      Marks.ArrowLength = 20
+      Marks.Visible = False
+      Title = 'NP'
+      SeriesColor = clRed
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Bar'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      Identifier = 'NP'
+      Style = 40
+    end
+    object Series6: TBarSeries
+      Active = False
+      Marks.ArrowLength = 20
+      Marks.Visible = False
+      Title = 'PF'
+      SeriesColor = clGreen
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Bar'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      Identifier = 'PF'
+      Style = 40
+    end
+    object Series7: TBarSeries
+      Active = False
+      Marks.ArrowLength = 20
+      Marks.Visible = False
+      Title = 'SI'
+      SeriesColor = clYellow
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Bar'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      Identifier = 'SI'
+      Style = 40
+    end
+  end
+  inherited DecisionPivot1: TDecisionPivot
+    inherited DecisionGrid1: TDecisionGrid
+      Dimensions = <
+        item
+          FieldName = 'CODIGOSUELDO'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          FieldName = 'TIPOSUELDO'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          FieldName = 'SUELDO'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          FieldName = 'TOTAL'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          FieldName = 'SUMA'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end>
+    end
+  end
+  inherited DecisionCube1: TDecisionCube
+    DataSet = qEstadistica
+    DimensionMap = <
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftString
+        Fieldname = 'CODIGOSUELDO'
+        BaseName = 'E.CODIGOSUELDO'
+        Name = 'CODIGOSUELDO'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = 9
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftString
+        Fieldname = 'TIPOSUELDO'
+        BaseName = 'E.TIPOSUELDO'
+        Name = 'TIPOSUELDO'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = 3
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftFloat
+        Fieldname = 'SUELDO'
+        BaseName = 'S.SUELDO'
+        Name = 'SUELDO'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = 9
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftFloat
+        Fieldname = 'TOTAL'
+        BaseName = 'E.CODIGOEMPLEADO'
+        Name = 'TOTAL'
+        DerivedFrom = -1
+        DimensionType = dimCount
+        BinType = binNone
+        ValueCount = -1
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftFloat
+        Fieldname = 'SUMA'
+        BaseName = 'S.SUELDO'
+        Name = 'SUMA'
+        DerivedFrom = -1
+        DimensionType = dimSum
+        BinType = binNone
+        ValueCount = -1
+        Active = True
+      end>
+  end
+  inherited DecisionQuery1: TDecisionQuery
+    SQL.Strings = (
+      
+        'SELECT Empleado.CODIGOSUELDO, Empleado.TIPOSUELDO, Sueldo.SUELDO' +
+        ', count(*) as Total'
+      
+        'FROM EMPLEADO Empleado, SUELDO Sueldo, ADMINISTRATIVO Administra' +
+        'tivo'
+      'WHERE   (Empleado.CODIGOSUELDO = Sueldo.CODIGOSUELDO)'
+      '   AND  (Empleado.TIPOSUELDO = Sueldo.TIPOSUELDO)'
+      
+        '   AND  (Administrativo.CODIGOADMINISTRATIVO = Empleado.CODIGOAD' +
+        'MINISTRATIVO)'
+      '   AND  (Administrativo.CODIGOADMINISTRATIVO > 0)'
+      '   AND  (Administrativo.CODIGOARBOL LIKE '#39'001016%'#39')  '
+      
+        'GROUP BY Empleado.CODIGOSUELDO, Empleado.TIPOSUELDO, Sueldo.SUEL' +
+        'DO')
+  end
+  inherited DecisionSource1: TDecisionSource
+    DimensionCount = 3
+    SummaryCount = 2
+    CurrentSummary = 0
+    SparseRows = False
+    SparseCols = False
+    DimensionInfo = (
+      2
+      0
+      1
+      0
+      -1
+      1
+      0
+      1
+      0
+      0
+      1
+      -1
+      2
+      1
+      0)
+  end
+  object qEstadistica: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT E.CODIGOSUELDO, E.TIPOSUELDO, S.SUELDO, COUNT(*) AS TOTAL' +
+        ', SUM(SUELDO) AS SUMA FROM'
+      'EMPLEADO E, ADMINISTRATIVO A, SUELDO S'
+      'WHERE (E.CODIGOADMINISTRATIVO = A.CODIGOADMINISTRATIVO)'
+      'AND (S.CODIGOSUELDO=E.CODIGOSUELDO)'
+      'AND (S.TIPOSUELDO = E.TIPOSUELDO)')
+    Left = 304
+    Top = 272
+  end
+end

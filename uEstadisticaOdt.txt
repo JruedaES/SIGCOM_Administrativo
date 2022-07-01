@@ -1,0 +1,263 @@
+inherited FEstadisticaOdt: TFEstadisticaOdt
+  Left = -4
+  Top = -4
+  Width = 1032
+  Height = 732
+  Caption = 'FEstadisticaOdt'
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Splitter1: TSplitter
+    Left = 553
+    Height = 580
+  end
+  inherited ToolPanel1: TToolPanel
+    Width = 1024
+  end
+  inherited DecisionGraph1: TDecisionGraph
+    Left = 555
+    Width = 469
+    Height = 580
+    object Series2: TBarSeries
+      Active = False
+      Marks.ArrowLength = 20
+      Marks.Visible = False
+      Title = 'Template: TENSION'
+      SeriesColor = clRed
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Bar'
+      YValues.Multiplier = 1
+      YValues.Order = loNone
+      Identifier = 'Template: TENSION'
+      Style = 61
+    end
+    object Series6: TBarSeries
+      Active = False
+      Marks.ArrowLength = 20
+      Marks.Visible = False
+      Title = 'Template: NOMBREODTOPERA'
+      SeriesColor = clRed
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Bar'
+      YValues.Multiplier = 1
+      YValues.Order = loNone
+      Identifier = 'Template: NOMBREODTOPERA'
+      Style = 61
+    end
+    object Series7: TBarSeries
+      Active = False
+      Marks.ArrowLength = 20
+      Marks.Visible = False
+      Title = 'Template: NOMBREODTACTIVIDAD'
+      SeriesColor = clRed
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Bar'
+      YValues.Multiplier = 1
+      YValues.Order = loNone
+      Identifier = 'Template: NOMBREODTACTIVIDAD'
+      Style = 61
+    end
+    object Series12: TBarSeries
+      Active = False
+      ColorEachPoint = True
+      Marks.ArrowLength = 20
+      Marks.Visible = False
+      Title = '1D Template: TENSION'
+      SeriesColor = clRed
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Bar'
+      YValues.Multiplier = 1
+      YValues.Order = loNone
+      Identifier = '1D Template: TENSION'
+      Style = 40
+    end
+  end
+  inherited PanelFiltro: TPanel
+    Width = 1024
+    inherited pDer: TPanel
+      Width = 682
+      inherited MemoDatos2: TMemo
+        Width = 517
+      end
+    end
+    inherited Panel4: TPanel
+      Width = 1022
+    end
+  end
+  inherited DecisionPivot1: TDecisionPivot
+    Width = 553
+    Height = 580
+    inherited DecisionGrid1: TDecisionGrid
+      Width = 432
+      Height = 545
+      DefaultColWidth = 74
+      Dimensions = <
+        item
+          FieldName = 'TENSION'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          FieldName = 'NOMBREODTOPERA'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          FieldName = 'NOMBREODTACTIVIDAD'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          FieldName = 'TOTAL'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end>
+    end
+  end
+  inherited DecisionCube1: TDecisionCube
+    DimensionMap = <
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftFloat
+        Fieldname = 'TOTAL'
+        BaseName = 'TEMP_ODTACTIVIDAD1.CODIGOODT'
+        Name = 'TOTAL'
+        DerivedFrom = -1
+        DimensionType = dimCount
+        BinType = binNone
+        ValueCount = -1
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftFloat
+        Fieldname = 'TENSION'
+        BaseName = 'TEMP_ODTACTIVIDAD1.TENSION'
+        Name = 'TENSION'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = 5
+        Active = True
+      end
+      item
+        ActiveFlag = diInactive
+        FieldType = ftFloat
+        Fieldname = 'CODIGOODTOPERA'
+        BaseName = 'TEMP_ODTACTIVIDAD1.CODIGOODTOPERA'
+        Name = 'CODIGOODTOPERA'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = 8
+        Active = False
+      end
+      item
+        ActiveFlag = diInactive
+        FieldType = ftFloat
+        Fieldname = 'CODIGOODTACTIVIDAD'
+        BaseName = 'TEMP_ODTACTIVIDAD1.CODIGOODTACTIVIDAD'
+        Name = 'CODIGOODTACTIVIDAD'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = 9
+        Active = False
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftString
+        Fieldname = 'NOMBREODTOPERA'
+        BaseName = 'TEMP_ODTACTIVIDAD1.NOMBREODTOPERA'
+        Name = 'NOMBREODTOPERA'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = 8
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftString
+        Fieldname = 'NOMBREODTACTIVIDAD'
+        BaseName = 'TEMP_ODTACTIVIDAD1.NOMBREODTACTIVIDAD'
+        Name = 'NOMBREODTACTIVIDAD'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = 51
+        Active = True
+      end>
+    Left = 528
+    Top = 76
+  end
+  inherited DecisionSource1: TDecisionSource
+    Left = 628
+    Top = 80
+    DimensionCount = 3
+    SummaryCount = 1
+    CurrentSummary = 0
+    SparseRows = False
+    SparseCols = False
+    DimensionInfo = (
+      2
+      0
+      1
+      0
+      0
+      1
+      -1
+      2
+      0
+      0
+      1
+      -1
+      2
+      1
+      0)
+  end
+  inherited pmExportar: TPopupMenu
+    Left = 642
+    Top = 14
+  end
+  inherited qEstadistica: TQuery
+    SQL.Strings = (
+      'SELECT COUNT(*) TOTAL,TENSION,CODIGOODTOPERA,CODIGOODTACTIVIDAD,'
+      'NOMBREODTOPERA,NOMBREODTACTIVIDAD'
+      'FROM ESTADISTICAODTACTIVIDAD'
+      'GROUP BY TENSION,CODIGOODTOPERA,CODIGOODTACTIVIDAD,'
+      'NOMBREODTOPERA,NOMBREODTACTIVIDAD'
+      '')
+  end
+  inherited DecisionQuery1: TDecisionQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT COUNT(*) REGISTROS,CODIGONIVELTENSION,TENSION,CODIGOODTOP' +
+        'ERA,'
+      'NOMBREODTOPERA,CODIGOODTACTIVIDAD,NOMBREODTACTIVIDAD'
+      'FROM ESTADISTICAODTACTIVIDAD'
+      'GROUP BY CODIGONIVELTENSION,TENSION,CODIGOODTOPERA,'
+      'NOMBREODTOPERA,CODIGOODTACTIVIDAD,NOMBREODTACTIVIDAD')
+  end
+end

@@ -1,0 +1,1219 @@
+inherited fHojaVidaEquipoSerial: TfHojaVidaEquipoSerial
+  Left = 154
+  Top = 12
+  Width = 1022
+  Height = 726
+  Caption = 'Hoja de Vida del Equipo Serial'
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel [0]
+    Left = 26
+    Top = 25
+    Width = 33
+    Height = 14
+    Caption = 'Ámbito'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  inherited Panel1: TPanel
+    Top = 49
+    Width = 1006
+    Height = 32
+    Alignment = taRightJustify
+    BevelOuter = bvNone
+    inherited Panel2: TPanel
+      Left = 682
+      Top = 0
+      Width = 324
+      Height = 32
+      inherited SBSalir: TSpeedButton
+        Left = 290
+      end
+      inherited SBImprimir: TSpeedButton
+        Left = 266
+        OnClick = SBImprimirClick
+      end
+      inherited SBFiltrar: TSpeedButton
+        Left = 19
+        Visible = False
+      end
+      inherited SBBuscar: TSpeedButton
+        Left = 107
+        Visible = False
+      end
+      inherited SBOrdenar: TSpeedButton
+        Left = 131
+        Visible = False
+      end
+      inherited Bevel2: TBevel
+        Left = 158
+        Visible = False
+      end
+      inherited SBEstadistica: TSpeedButton
+        Left = -2
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          33333333333333333333333333C3333333333333337F3333333333333C0C3333
+          333333333777F33333333333C0F0C3333333333377377F333333333C0FFF0C33
+          3333333777F377F3333333CCC0FFF0C333333373377F377F33333CCCCC0FFF0C
+          333337333377F377F3334CCCCCC0FFF0C3337F3333377F377F33C4CCCCCC0FFF
+          0C3377F333F377F377F33C4CC0CCC0FFF0C3377F3733F77F377333C4CCC0CC0F
+          0C333377F337F3777733333C4C00CCC0333333377F773337F3333333C4CCCCCC
+          3333333377F333F7333333333C4CCCC333333333377F37733333333333C4C333
+          3333333333777333333333333333333333333333333333333333}
+        NumGlyphs = 2
+        Visible = False
+      end
+      inherited Bevel3: TBevel
+        Left = 99
+        Visible = False
+      end
+      inherited Bevel1: TBevel
+        Left = 237
+      end
+      inherited SBBuscaElementoCartografia: TSpeedButton
+        Left = 73
+        Visible = False
+      end
+      inherited SBFiltroCarografico: TSpeedButton
+        Left = 47
+        Visible = False
+      end
+      inherited sbExportar: TSpeedButton
+        Left = 242
+      end
+      object sbRefrescar: TSpeedButton
+        Left = 211
+        Top = 2
+        Width = 23
+        Height = 23
+        Hint = 'Refrescar Lista'
+        Flat = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333333333FFFFF3333333333999993333333333F77777FFF333333999999999
+          3333333777333777FF33339993707399933333773337F3777FF3399933000339
+          9933377333777F3377F3399333707333993337733337333337FF993333333333
+          399377F33333F333377F993333303333399377F33337FF333373993333707333
+          333377F333777F333333993333101333333377F333777F3FFFFF993333000399
+          999377FF33777F77777F3993330003399993373FF3777F37777F399933000333
+          99933773FF777F3F777F339993707399999333773F373F77777F333999999999
+          3393333777333777337333333999993333333333377777333333}
+        NumGlyphs = 2
+        OnClick = sbRefrescarClick
+      end
+      object SpeedButton1: TSpeedButton
+        Left = 170
+        Top = 2
+        Width = 24
+        Height = 23
+        Hint = 'Hoja de vida de Equipo'
+        Flat = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          33333333333333333333333333C3333333333333337F3333333333333C0C3333
+          333333333777F33333333333C0F0C3333333333377377F333333333C0FFF0C33
+          3333333777F377F3333333CCC0FFF0C333333373377F377F33333CCCCC0FFF0C
+          333337333377F377F3334CCCCCC0FFF0C3337F3333377F377F33C4CCCCCC0FFF
+          0C3377F333F377F377F33C4CC0CCC0FFF0C3377F3733F77F377333C4CCC0CC0F
+          0C333377F337F3777733333C4C00CCC0333333377F773337F3333333C4CCCCCC
+          3333333377F333F7333333333C4CCCC333333333377F37733333333333C4C333
+          3333333333777333333333333333333333333333333333333333}
+        NumGlyphs = 2
+        Visible = False
+        OnClick = SpeedButton1Click
+      end
+    end
+    inherited dNavigator1: TdNavigator
+      Hints.Strings = ()
+    end
+  end
+  inherited Panel3: TPanel
+    Top = 670
+    Width = 1006
+  end
+  inherited PFiltro: TPanel
+    Top = 0
+    Width = 1006
+    Height = 49
+    inherited sDatosFiltro: TShape
+      Left = 1
+      Width = 1004
+      Align = alTop
+    end
+    inherited lFiltroDatos: TLabel
+      Width = 1004
+      Height = 16
+    end
+  end
+  object Panel5: TPanel [4]
+    Left = 0
+    Top = 372
+    Width = 1006
+    Height = 298
+    Align = alBottom
+    Caption = 'Panel5'
+    TabOrder = 3
+    object Panel6: TPanel
+      Left = 1
+      Top = 1
+      Width = 1004
+      Height = 28
+      Align = alTop
+      Caption = 'SECCIONES FORMATOS '
+      Color = 16747029
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+    end
+    object dbgListaHijas: TRxDBGrid
+      Left = 1
+      Top = 29
+      Width = 1001
+      Height = 268
+      Align = alClient
+      DataSource = dsSeccionDatos
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 1
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      OnDblClick = dbgListaHijasDblClick
+      Columns = <
+        item
+          Color = 16376179
+          Expanded = False
+          FieldName = 'CODIGOFORMATOMTTODATOS'
+          Title.Alignment = taRightJustify
+          Title.Caption = 'CODIGO FORMATO MTTO DATOS'
+          Width = 183
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAPRUEBA'
+          Title.Alignment = taCenter
+          Title.Caption = 'FECHA PRUEBA'
+          Width = 127
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRESECCIONFORMATO'
+          Title.Alignment = taCenter
+          Title.Caption = 'NOMBRE SECCION FORMATO'
+          Width = 325
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAREGISTRO'
+          Title.Alignment = taCenter
+          Title.Caption = 'FECHA REGISTRO'
+          Width = 130
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAMODIFICACION'
+          Title.Alignment = taCenter
+          Title.Caption = 'FECHA MODIFICACION'
+          Width = 122
+          Visible = True
+        end>
+    end
+    object RxSplitter1: TRxSplitter
+      Left = 1002
+      Top = 29
+      Width = 3
+      Height = 268
+      Align = alRight
+    end
+  end
+  object Panel4: TPanel [5]
+    Left = 0
+    Top = 81
+    Width = 1006
+    Height = 291
+    Align = alClient
+    BevelOuter = bvNone
+    Caption = 'Panel4'
+    TabOrder = 4
+    object Panel8: TPanel
+      Left = 0
+      Top = 0
+      Width = 1006
+      Height = 147
+      Align = alTop
+      BevelOuter = bvLowered
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      object Panel7: TPanel
+        Left = 1
+        Top = 114
+        Width = 1004
+        Height = 32
+        Align = alBottom
+        Caption = 'FORMATOS MANTENIMIENTO'
+        Color = 16747029
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clNavy
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 0
+      end
+      object Panel9: TPanel
+        Left = 1
+        Top = 33
+        Width = 1004
+        Height = 81
+        Align = alClient
+        BevelOuter = bvNone
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clNavy
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 1
+        object codigo1: TListBox
+          Left = 672
+          Top = 11
+          Width = 81
+          Height = 38
+          ItemHeight = 14
+          TabOrder = 0
+          Visible = False
+        end
+        object codigo2: TListBox
+          Left = 760
+          Top = 11
+          Width = 89
+          Height = 38
+          ItemHeight = 14
+          TabOrder = 1
+          Visible = False
+        end
+        object GroupBox1: TGroupBox
+          Left = 0
+          Top = 0
+          Width = 1004
+          Height = 81
+          Align = alClient
+          TabOrder = 2
+          object Label2: TLabel
+            Left = 316
+            Top = 25
+            Width = 60
+            Height = 14
+            Caption = 'Subestación'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+          end
+          object Label3: TLabel
+            Left = 26
+            Top = 25
+            Width = 33
+            Height = 14
+            Caption = 'Ámbito'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+          end
+          object LabelCodigoCircuito: TLabel
+            Left = 316
+            Top = 50
+            Width = 26
+            Height = 14
+            Caption = 'Línea'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+          end
+          object Label6: TLabel
+            Left = 606
+            Top = 25
+            Width = 81
+            Height = 14
+            Caption = 'Tipo de Elemento'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+          end
+          object Label8: TLabel
+            Left = 26
+            Top = 52
+            Width = 43
+            Height = 14
+            Caption = 'Elemento'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+          end
+          object lbSerial: TLabel
+            Left = 690
+            Top = 80
+            Width = 27
+            Height = 14
+            Caption = 'Serial'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Visible = False
+          end
+          object DBLCBSubestacion: TDBLookupComboBox
+            Left = 383
+            Top = 20
+            Width = 178
+            Height = 22
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            KeyField = 'CODIGOSUBESTACION'
+            ListField = 'NOMBRESUBESTACION'
+            ListSource = dsSubestacion
+            ParentFont = False
+            TabOrder = 0
+            OnClick = DBLCBSubestacionClick
+          end
+          object DBLCBAmbito: TDBLookupComboBox
+            Left = 93
+            Top = 20
+            Width = 178
+            Height = 22
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            KeyField = 'CODIGOAMBITO'
+            ListField = 'NOMBREAMBITO'
+            ListSource = dsAmbito
+            ParentFont = False
+            TabOrder = 1
+            OnClick = DBLCBAmbitoClick
+          end
+          object Circuito: TDBLookupComboBox
+            Left = 383
+            Top = 47
+            Width = 178
+            Height = 22
+            Enabled = False
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            KeyField = 'CODIGOCIRCUITO'
+            ListField = 'NOMBRECIRCUITO'
+            ListSource = DSCircuito
+            ParentFont = False
+            TabOrder = 2
+            OnClick = CircuitoClick
+          end
+          object DBLCBTipoElemento: TDBLookupComboBox
+            Left = 699
+            Top = 20
+            Width = 178
+            Height = 22
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            KeyField = 'CODIGOELEMENTO'
+            ListField = 'NOMBRETIPOELEMENTO'
+            ListSource = dsTipoElemento
+            ParentFont = False
+            TabOrder = 3
+            OnClick = DBLCBTipoElementoClick
+          end
+          object cbElemento: TComboBox
+            Left = 93
+            Top = 48
+            Width = 178
+            Height = 22
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ItemHeight = 14
+            ParentFont = False
+            TabOrder = 4
+            OnChange = cbElementoChange
+            OnClick = cbElementoClick
+          end
+          object BitBtn2: TBitBtn
+            Left = 880
+            Top = 48
+            Width = 105
+            Height = 25
+            Caption = 'ImprimirFormato'
+            TabOrder = 5
+            Visible = False
+            OnClick = BitBtn2Click
+          end
+          object BitBtn1: TBitBtn
+            Left = 890
+            Top = 64
+            Width = 117
+            Height = 25
+            Caption = 'Imprimir Formato'
+            TabOrder = 6
+            Visible = False
+            OnClick = BitBtn1Click
+          end
+          object Button1: TButton
+            Left = 614
+            Top = 47
+            Width = 120
+            Height = 21
+            Caption = 'Hoja de Vida Equipo'
+            TabOrder = 7
+            Visible = False
+            OnClick = Button1Click
+          end
+          object eSerial: TEdit
+            Left = 684
+            Top = 56
+            Width = 178
+            Height = 22
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 8
+            Visible = False
+          end
+          object btnSerial: TButton
+            Left = 886
+            Top = 22
+            Width = 116
+            Height = 24
+            Caption = 'Filtrar por Serial'
+            TabOrder = 9
+            Visible = False
+            OnClick = btnSerialClick
+          end
+        end
+      end
+      object Memo1: TMemo
+        Left = 952
+        Top = 48
+        Width = 113
+        Height = 73
+        Lines.Strings = (
+          'M'
+          'e'
+          'm'
+          'o'
+          '1')
+        TabOrder = 2
+        Visible = False
+      end
+      object Panel10: TPanel
+        Left = 1
+        Top = 1
+        Width = 1004
+        Height = 32
+        Align = alTop
+        Caption = 'CONSULTA DE MANTENIMIENTOS POR ELEMENTO'
+        Color = 16747029
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 3
+      end
+    end
+    object dbgHojaVidaEquipo: TRxDBGrid
+      Left = 0
+      Top = 147
+      Width = 1006
+      Height = 144
+      Align = alClient
+      DataSource = dsFormatoDatos
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 1
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      OnDblClick = dbgHojaVidaEquipoDblClick
+      Columns = <
+        item
+          Color = 16376179
+          Expanded = False
+          FieldName = 'CODIGOFORMATOMTTODATOS'
+          Title.Alignment = taCenter
+          Title.Caption = 'CODIGO FORMATO MTTO DATOS'
+          Width = 177
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAPRUEBA'
+          Title.Alignment = taCenter
+          Title.Caption = 'FECHA PRUEBA'
+          Width = 120
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'nombreFormatoMtto'
+          Title.Alignment = taCenter
+          Title.Caption = 'NOMBRE FORMATO MTTO'
+          Width = 264
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHACREACION'
+          Title.Alignment = taCenter
+          Title.Caption = 'FECHA REGISTRO'
+          Width = 132
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAULTIMAMODIFICACION'
+          Title.Alignment = taCenter
+          Title.Caption = 'FECHA MODIFICACION'
+          Width = 137
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGOELEMENTO'
+          Title.Caption = 'PUNTO DEL ELEMENTO'
+          Width = 134
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'nombreSubestacion'
+          Title.Caption = 'NOMBRE SUBESTACION'
+          Visible = True
+        end>
+    end
+  end
+  inherited dSegControl1: TdSegControl
+    Left = 32
+    Top = 628
+  end
+  inherited dsBase: TDDataSource
+    Left = 736
+    Top = 320
+  end
+  inherited dTblBase: TDTable
+    Left = 688
+    Top = 320
+  end
+  inherited qTotales: TQuery
+    SQL.Strings = (
+      'SELECT COUNT(DISTINCT O.CODIGOODT) AS TOTAL'
+      ''
+      ''
+      ''
+      ''
+      
+        'FROM ODT O, ESTADOODT EO, PRIORIDAD P, LABOR L, TIPOTAREA TT, OD' +
+        'TTIPOMANOOBRA MO, ADMINISTRATIVO A, ODTDIA OD'
+      'WHERE (EO.CODIGOESTADOODT = O.CODIGOESTADOODT) AND'
+      '      (O.CODIGOPRIORIDAD = P.CODIGOPRIORIDAD) AND'
+      '      (L.CODIGOLABOR = O.CODIGOLABOR) AND'
+      '      (TT.CODIGOTIPOTAREA = O.CODIGOTIPOTAREA) AND'
+      '      (MO.CODIGOODTTIPOMANOOBRA = O.CODIGOODTTIPOMANOOBRA) AND'
+      
+        '      (A.CODIGOADMINISTRATIVO = O.CODIGOADMINISTRATIVO) AND (OD.' +
+        'CODIGOODT (+) = O.CODIGOODT)  '
+      ' ')
+    Left = 645
+    Top = 320
+  end
+  inherited CVS1: TCVS
+    Left = 38
+    Top = 571
+  end
+  inherited SaveDialog1: TSaveDialog
+    Left = 488
+    Top = 320
+  end
+  object qSeccionDatos: TQuery
+    Active = True
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    DataSource = dsFormatoDatos
+    SQL.Strings = (
+      'SELECT SD.*,SF.NOMBRESECCIONFORMATO '
+      'FROM HVE_SECCIONFORMATODATOS SD, HVE_SECCIONFORMATO SF'
+      'WHERE SD.CODIGOSECCIONFORMATO =SF.CODIGOSECCIONFORMATO'
+      'AND CODIGOFORMATOMTTODATOS=:CODIGOFORMATOMTTODATOS '
+      'ORDER BY 1')
+    Left = 112
+    Top = 568
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOFORMATOMTTODATOS'
+        ParamType = ptUnknown
+      end>
+    object qSeccionDatosCODIGOSECCIONFORMATODATOS: TFloatField
+      FieldName = 'CODIGOSECCIONFORMATODATOS'
+      Origin = 'HVE_SECCIONFORMATODATOS.CODIGOSECCIONFORMATODATOS'
+    end
+    object qSeccionDatosCODIGOFORMATOMTTODATOS: TFloatField
+      FieldName = 'CODIGOFORMATOMTTODATOS'
+      Origin = 'HVE_SECCIONFORMATODATOS.CODIGOFORMATOMTTODATOS'
+    end
+    object qSeccionDatosCODIGOSECCIONFORMATO: TFloatField
+      FieldName = 'CODIGOSECCIONFORMATO'
+      Origin = 'HVE_SECCIONFORMATODATOS.CODIGOSECCIONFORMATO'
+    end
+    object qSeccionDatosNOMBRESECCIONFORMATO: TStringField
+      FieldName = 'NOMBRESECCIONFORMATO'
+      Origin = 'HVE_SECCIONFORMATO.NOMBRESECCIONFORMATO'
+      Size = 80
+    end
+    object qSeccionDatosCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'HVE_SECCIONFORMATODATOS.CODIGOODT'
+    end
+    object qSeccionDatosSUBACTIVIDADODT: TFloatField
+      FieldName = 'SUBACTIVIDADODT'
+      Origin = 'HVE_SECCIONFORMATODATOS.SUBACTIVIDADODT'
+    end
+    object qSeccionDatosESTADOTERMINADO: TStringField
+      FieldName = 'ESTADOTERMINADO'
+      Origin = 'HVE_SECCIONFORMATODATOS.ESTADOTERMINADO'
+      Size = 2
+    end
+    object qSeccionDatosFECHAREGISTRO: TDateTimeField
+      FieldName = 'FECHAREGISTRO'
+      Origin = 'HVE_SECCIONFORMATO.NOMBRESECCIONFORMATO'
+    end
+    object qSeccionDatosFECHAMODIFICACION: TDateTimeField
+      FieldName = 'FECHAMODIFICACION'
+      Origin = 'HVE_SECCIONFORMATO.NOMBRESECCIONFORMATO'
+    end
+    object qSeccionDatosFECHAPRUEBA: TDateTimeField
+      FieldName = 'FECHAPRUEBA'
+      Origin = 'HVE_SECCIONFORMATO.NOMBRESECCIONFORMATO'
+    end
+  end
+  object dsSeccionDatos: TDataSource
+    DataSet = qSeccionDatos
+    Left = 112
+    Top = 616
+  end
+  object pmImprimir: TPopupMenu
+    Left = 592
+    Top = 320
+  end
+  object StoredProc1: TStoredProc
+    Left = 544
+    Top = 320
+  end
+  object qTipoElemento: TQuery
+    Active = True
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM PM_ELEMENTO '
+      'WHERE CODIGOAMBITO=:CODIGOAMBITO ORDER BY NOMBRETIPOELEMENTO')
+    Left = 724
+    Top = 529
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'CODIGOAMBITO'
+        ParamType = ptUnknown
+      end>
+    object qTipoElementoCODIGOELEMENTO: TFloatField
+      FieldName = 'CODIGOELEMENTO'
+      Origin = 'PM_ELEMENTO.CODIGOELEMENTO'
+    end
+    object qTipoElementoCODIGOTIPOELEMENTO: TStringField
+      FieldName = 'CODIGOTIPOELEMENTO'
+      Origin = 'PM_ELEMENTO.CODIGOTIPOELEMENTO'
+      Size = 3
+    end
+    object qTipoElementoCODIGOAMBITO: TFloatField
+      FieldName = 'CODIGOAMBITO'
+      Origin = 'PM_ELEMENTO.CODIGOAMBITO'
+    end
+    object qTipoElementoNOMBRETABLAELEMENTO: TStringField
+      FieldName = 'NOMBRETABLAELEMENTO'
+      Origin = 'PM_ELEMENTO.NOMBRETABLAELEMENTO'
+      Size = 30
+    end
+    object qTipoElementoNUMEROCLAVESELEMENTO: TFloatField
+      FieldName = 'NUMEROCLAVESELEMENTO'
+      Origin = 'PM_ELEMENTO.NUMEROCLAVESELEMENTO'
+    end
+    object qTipoElementoCLAVEELEMENTO1: TStringField
+      FieldName = 'CLAVEELEMENTO1'
+      Origin = 'PM_ELEMENTO.CLAVEELEMENTO1'
+      Size = 30
+    end
+    object qTipoElementoCLAVEELEMENTO2: TStringField
+      FieldName = 'CLAVEELEMENTO2'
+      Origin = 'PM_ELEMENTO.CLAVEELEMENTO2'
+      Size = 30
+    end
+    object qTipoElementoCLAVEELEMENTO3: TStringField
+      FieldName = 'CLAVEELEMENTO3'
+      Origin = 'PM_ELEMENTO.CLAVEELEMENTO3'
+      Size = 30
+    end
+    object qTipoElementoNOMBRETIPOELEMENTO: TStringField
+      FieldName = 'NOMBRETIPOELEMENTO'
+      Origin = 'PM_ELEMENTO.NOMBRETIPOELEMENTO'
+      Size = 80
+    end
+    object qTipoElementoCAMPODESCRIPTIVO: TStringField
+      FieldName = 'CAMPODESCRIPTIVO'
+      Origin = 'PM_ELEMENTO.CAMPODESCRIPTIVO'
+      Size = 80
+    end
+  end
+  object dsAmbito: TDataSource
+    DataSet = qAmbito
+    Left = 792
+    Top = 575
+  end
+  object qAmbito: TQuery
+    Active = True
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM PM_AMBITO order by NOMBREAMBITO DESC'
+      ''
+      '')
+    Left = 792
+    Top = 529
+    object qAmbitoCODIGOAMBITO: TFloatField
+      FieldName = 'CODIGOAMBITO'
+      Origin = 'PM_AMBITO.CODIGOAMBITO'
+    end
+    object qAmbitoNOMBREAMBITO: TStringField
+      FieldName = 'NOMBREAMBITO'
+      Origin = 'PM_AMBITO.NOMBREAMBITO'
+      Size = 50
+    end
+  end
+  object qElemento: TQuery
+    Active = True
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM PM_ELEMENTO '
+      'WHERE CODIGOELEMENTO=:CODIGOELEMENTO')
+    Left = 345
+    Top = 568
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'CODIGOELEMENTO'
+        ParamType = ptUnknown
+      end>
+    object FloatField1: TFloatField
+      FieldName = 'CODIGOELEMENTO'
+      Origin = 'PM_ELEMENTO.CODIGOELEMENTO'
+    end
+    object StringField1: TStringField
+      FieldName = 'CODIGOTIPOELEMENTO'
+      Origin = 'PM_ELEMENTO.CODIGOTIPOELEMENTO'
+      Size = 3
+    end
+    object FloatField2: TFloatField
+      FieldName = 'CODIGOAMBITO'
+      Origin = 'PM_ELEMENTO.CODIGOAMBITO'
+    end
+    object StringField2: TStringField
+      FieldName = 'NOMBRETABLAELEMENTO'
+      Origin = 'PM_ELEMENTO.NOMBRETABLAELEMENTO'
+      Size = 30
+    end
+    object FloatField3: TFloatField
+      FieldName = 'NUMEROCLAVESELEMENTO'
+      Origin = 'PM_ELEMENTO.NUMEROCLAVESELEMENTO'
+    end
+    object StringField3: TStringField
+      FieldName = 'CLAVEELEMENTO1'
+      Origin = 'PM_ELEMENTO.CLAVEELEMENTO1'
+      Size = 30
+    end
+    object StringField4: TStringField
+      FieldName = 'CLAVEELEMENTO2'
+      Origin = 'PM_ELEMENTO.CLAVEELEMENTO2'
+      Size = 30
+    end
+    object StringField5: TStringField
+      FieldName = 'CLAVEELEMENTO3'
+      Origin = 'PM_ELEMENTO.CLAVEELEMENTO3'
+      Size = 30
+    end
+    object StringField6: TStringField
+      FieldName = 'NOMBRETIPOELEMENTO'
+      Origin = 'PM_ELEMENTO.NOMBRETIPOELEMENTO'
+      Size = 80
+    end
+    object StringField7: TStringField
+      FieldName = 'CAMPODESCRIPTIVO'
+      Origin = 'PM_ELEMENTO.CAMPODESCRIPTIVO'
+      Size = 80
+    end
+  end
+  object dsElemento: TDataSource
+    DataSet = qElemento
+    Left = 345
+    Top = 624
+  end
+  object qSubestacion: TQuery
+    Active = True
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOSUBESTACION, NOMBRESUBESTACION '
+      'FROM SUBESTACION ORDER BY 2')
+    Left = 876
+    Top = 529
+    object qSubestacionCODIGOSUBESTACION: TStringField
+      FieldName = 'CODIGOSUBESTACION'
+      Origin = 'SUBESTACION.CODIGOSUBESTACION'
+      Size = 3
+    end
+    object qSubestacionNOMBRESUBESTACION: TStringField
+      FieldName = 'NOMBRESUBESTACION'
+      Origin = 'SUBESTACION.NOMBRESUBESTACION'
+      Size = 30
+    end
+  end
+  object dsSubestacion: TDataSource
+    DataSet = qSubestacion
+    Left = 880
+    Top = 575
+  end
+  object dsTipoElemento: TDataSource
+    DataSet = qTipoElemento
+    Left = 727
+    Top = 576
+  end
+  object qFormatoDatos: TQuery
+    OnCalcFields = qFormatoDatosCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM HVE_FORMATOMTTODATOS  '
+      'order by FECHAPRUEBA')
+    Left = 192
+    Top = 568
+    object qFormatoDatosCODIGOFORMATOMTTODATOS: TFloatField
+      FieldName = 'CODIGOFORMATOMTTODATOS'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOFORMATOMTTODATOS'
+    end
+    object qFormatoDatosCODIGOFORMATOMTTO: TFloatField
+      FieldName = 'CODIGOFORMATOMTTO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOFORMATOMTTO'
+    end
+    object qFormatoDatosCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOADMINISTRATIVO'
+    end
+    object qFormatoDatosCODIGOUSUARIOCREACION: TFloatField
+      FieldName = 'CODIGOUSUARIOCREACION'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOUSUARIOCREACION'
+    end
+    object qFormatoDatosFECHACREACION: TDateTimeField
+      FieldName = 'FECHACREACION'
+      Origin = 'HVE_FORMATOMTTODATOS.FECHACREACION'
+    end
+    object qFormatoDatosCODIGOUSUARIOMODIFICACION: TFloatField
+      FieldName = 'CODIGOUSUARIOMODIFICACION'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOUSUARIOMODIFICACION'
+    end
+    object qFormatoDatosFECHAULTIMAMODIFICACION: TDateTimeField
+      FieldName = 'FECHAULTIMAMODIFICACION'
+      Origin = 'HVE_FORMATOMTTODATOS.FECHAULTIMAMODIFICACION'
+    end
+    object qFormatoDatosCODIGOAMBITO: TFloatField
+      FieldName = 'CODIGOAMBITO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOAMBITO'
+    end
+    object qFormatoDatosCODIGOSUBESTACION: TStringField
+      FieldName = 'CODIGOSUBESTACION'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOSUBESTACION'
+      Size = 3
+    end
+    object qFormatoDatosCODIGOCOORDINACION: TFloatField
+      FieldName = 'CODIGOCOORDINACION'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOCOORDINACION'
+    end
+    object qFormatoDatosCODIGOTIPOMTTO: TFloatField
+      FieldName = 'CODIGOTIPOMTTO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOTIPOMTTO'
+    end
+    object qFormatoDatosCODIGOTIPOELEMENTO: TFloatField
+      FieldName = 'CODIGOTIPOELEMENTO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOTIPOELEMENTO'
+    end
+    object qFormatoDatosCODIGOELEMENTO: TStringField
+      FieldName = 'CODIGOELEMENTO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOELEMENTO'
+      Size = 60
+    end
+    object qFormatoDatosCODIGOCIRCUITO: TStringField
+      FieldName = 'CODIGOCIRCUITO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOCIRCUITO'
+      Size = 6
+    end
+    object qFormatoDatosFECHAPRUEBA: TDateTimeField
+      FieldName = 'FECHAPRUEBA'
+      Origin = 'HVE_FORMATOMTTODATOS.FECHAPRUEBA'
+    end
+    object qFormatoDatosCLELEMENTO1: TStringField
+      FieldName = 'CLELEMENTO1'
+      Origin = 'HVE_FORMATOMTTODATOS.CLELEMENTO1'
+      Size = 30
+    end
+    object qFormatoDatosCLELEMENTO2: TStringField
+      FieldName = 'CLELEMENTO2'
+      Origin = 'HVE_FORMATOMTTODATOS.CLELEMENTO2'
+      Size = 30
+    end
+    object qFormatoDatosCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOODT'
+    end
+    object qFormatoDatosCONSECUTIVOODT: TFloatField
+      FieldName = 'CONSECUTIVOODT'
+      Origin = 'HVE_FORMATOMTTODATOS.CONSECUTIVOODT'
+    end
+    object qFormatoDatosnombreFormatoMtto: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nombreFormatoMtto'
+      LookupDataSet = qFormatoMtto
+      LookupKeyFields = 'CODIGOFORMATOMTTO'
+      LookupResultField = 'NOMBREFORMATOMTTO'
+      KeyFields = 'CODIGOFORMATOMTTO'
+      Size = 80
+      Lookup = True
+    end
+    object qFormatoDatosnombreSubestacion: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'nombreSubestacion'
+      Size = 30
+      Calculated = True
+    end
+    object qFormatoDatosCODIGOHOJAVIDAEQUIPO: TFloatField
+      FieldName = 'CODIGOHOJAVIDAEQUIPO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOHOJAVIDAEQUIPO'
+    end
+    object qFormatoDatosCODIGOMANTENIMIENTO: TFloatField
+      FieldName = 'CODIGOMANTENIMIENTO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOMANTENIMIENTO'
+    end
+  end
+  object dsFormatoDatos: TDataSource
+    DataSet = qFormatoDatos
+    Left = 192
+    Top = 616
+  end
+  object QCircuito: TQuery
+    Active = True
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOCIRCUITO, NOMBRECIRCUITO FROM CIRCUITO '
+      'WHERE CODIGOSUBESTACION=:CODIGOSUBESTACION'
+      'ORDER BY 2')
+    Left = 400
+    Top = 513
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'CODIGOSUBESTACION'
+        ParamType = ptUnknown
+      end>
+    object QCircuitoCODIGOCIRCUITO: TStringField
+      FieldName = 'CODIGOCIRCUITO'
+      Origin = 'CIRCUITO.CODIGOCIRCUITO'
+      Size = 6
+    end
+    object QCircuitoNOMBRECIRCUITO: TStringField
+      FieldName = 'NOMBRECIRCUITO'
+      Origin = 'CIRCUITO.NOMBRECIRCUITO'
+      Size = 30
+    end
+  end
+  object DSCircuito: TDataSource
+    DataSet = QCircuito
+    Left = 383
+    Top = 624
+  end
+  object qTablaElemento: TQuery
+    DatabaseName = 'BaseDato'
+    Left = 468
+    Top = 449
+  end
+  object dsTablaElemento: TDataSource
+    Left = 467
+    Top = 497
+  end
+  object qCaracteristicasElemento: TQuery
+    Active = True
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from pm_elemento where codigoelemento =:codigoelemento')
+    Left = 563
+    Top = 521
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'codigoelemento'
+        ParamType = ptUnknown
+      end>
+    object qCaracteristicasElementoCODIGOELEMENTO: TFloatField
+      FieldName = 'CODIGOELEMENTO'
+      Origin = 'PM_ELEMENTO.CODIGOELEMENTO'
+    end
+    object qCaracteristicasElementoCODIGOTIPOELEMENTO: TStringField
+      FieldName = 'CODIGOTIPOELEMENTO'
+      Origin = 'PM_ELEMENTO.CODIGOTIPOELEMENTO'
+      Size = 3
+    end
+    object qCaracteristicasElementoCODIGOAMBITO: TFloatField
+      FieldName = 'CODIGOAMBITO'
+      Origin = 'PM_ELEMENTO.CODIGOAMBITO'
+    end
+    object qCaracteristicasElementoNOMBRETABLAELEMENTO: TStringField
+      FieldName = 'NOMBRETABLAELEMENTO'
+      Origin = 'PM_ELEMENTO.NOMBRETABLAELEMENTO'
+      Size = 30
+    end
+    object qCaracteristicasElementoNUMEROCLAVESELEMENTO: TFloatField
+      FieldName = 'NUMEROCLAVESELEMENTO'
+      Origin = 'PM_ELEMENTO.NUMEROCLAVESELEMENTO'
+    end
+    object qCaracteristicasElementoCLAVEELEMENTO1: TStringField
+      FieldName = 'CLAVEELEMENTO1'
+      Origin = 'PM_ELEMENTO.CLAVEELEMENTO1'
+      Size = 30
+    end
+    object qCaracteristicasElementoCLAVEELEMENTO2: TStringField
+      FieldName = 'CLAVEELEMENTO2'
+      Origin = 'PM_ELEMENTO.CLAVEELEMENTO2'
+      Size = 30
+    end
+    object qCaracteristicasElementoCLAVEELEMENTO3: TStringField
+      FieldName = 'CLAVEELEMENTO3'
+      Origin = 'PM_ELEMENTO.CLAVEELEMENTO3'
+      Size = 30
+    end
+    object qCaracteristicasElementoNOMBRETIPOELEMENTO: TStringField
+      FieldName = 'NOMBRETIPOELEMENTO'
+      Origin = 'PM_ELEMENTO.NOMBRETIPOELEMENTO'
+      Size = 80
+    end
+    object qCaracteristicasElementoCAMPODESCRIPTIVO: TStringField
+      FieldName = 'CAMPODESCRIPTIVO'
+      Origin = 'PM_ELEMENTO.CAMPODESCRIPTIVO'
+      Size = 80
+    end
+  end
+  object dsCaracteristicasElemento: TDataSource
+    DataSet = qCaracteristicasElemento
+    Left = 563
+    Top = 575
+  end
+  object qFormatoMtto: TQuery
+    Active = True
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM HVE_FORMATOMTTO'
+      '')
+    Left = 272
+    Top = 566
+    object qFormatoMttoCODIGOFORMATOMTTO: TFloatField
+      FieldName = 'CODIGOFORMATOMTTO'
+      Origin = 'HVE_FORMATOMTTO.CODIGOFORMATOMTTO'
+    end
+    object qFormatoMttoNOMBREFORMATOMTTO: TStringField
+      FieldName = 'NOMBREFORMATOMTTO'
+      Origin = 'HVE_FORMATOMTTO.NOMBREFORMATOMTTO'
+      Size = 80
+    end
+  end
+  object dsFormatoMtto: TDataSource
+    DataSet = qFormatoMtto
+    Left = 272
+    Top = 614
+  end
+end

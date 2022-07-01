@@ -1,0 +1,136 @@
+object FIndiceDificultad: TFIndiceDificultad
+  Left = 307
+  Top = 184
+  BorderStyle = bsToolWindow
+  Caption = 'Tipo de Daños'
+  ClientHeight = 262
+  ClientWidth = 335
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Visible = True
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel2: TPanel
+    Left = 0
+    Top = 0
+    Width = 335
+    Height = 262
+    Align = alClient
+    TabOrder = 0
+    object dbgTipoDano: TRxDBGrid
+      Left = 1
+      Top = 1
+      Width = 333
+      Height = 239
+      Align = alClient
+      DataSource = dsIndiceDificultad
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      OnTitleClick = dbgTipoDanoTitleClick
+      OnMouseMove = dbgTipoDanoMouseMove
+      Columns = <
+        item
+          Color = clInfoBk
+          Expanded = False
+          FieldName = 'CODIGOTIPODANO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Código'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRETIPODANO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Nombre'
+          Width = 262
+          Visible = True
+        end>
+    end
+    object DBNavigator1: TDBNavigator
+      Left = 1
+      Top = 240
+      Width = 333
+      Height = 21
+      DataSource = dsIndiceDificultad
+      Align = alBottom
+      Flat = True
+      TabOrder = 1
+    end
+  end
+  object qIndiceDificultad: TQuery
+    Active = True
+    CachedUpdates = True
+    AfterInsert = qIndiceDificultadAfterInsert
+    AfterPost = qIndiceDificultadAfterPost
+    OnUpdateError = qIndiceDificultadUpdateError
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM MUNICIPIODIFICULTAD'
+      'ORDER BY 1 ASC')
+    UpdateObject = UpdIndiceDificultad
+    Left = 176
+    Top = 56
+    object qIndiceDificultadCODIGOMUNICIPIODIFICULTAD: TFloatField
+      FieldName = 'CODIGOMUNICIPIODIFICULTAD'
+    end
+    object qIndiceDificultadCODIGOMUNICIPIO: TFloatField
+      FieldName = 'CODIGOMUNICIPIO'
+    end
+    object qIndiceDificultadCONSECUTIVO: TFloatField
+      FieldName = 'CONSECUTIVO'
+    end
+    object qIndiceDificultadINDICEDIFICULTAD: TFloatField
+      FieldName = 'INDICEDIFICULTAD'
+    end
+    object qIndiceDificultadDESCRIPCION: TStringField
+      FieldName = 'DESCRIPCION'
+      Size = 80
+    end
+  end
+  object dsIndiceDificultad: TDataSource
+    DataSet = qIndiceDificultad
+    Left = 248
+    Top = 56
+  end
+  object UpdIndiceDificultad: TUpdateSQL
+    ModifySQL.Strings = (
+      'update MUNICIPIODIFICULTAD'
+      'set'
+      '  CODIGOMUNICIPIODIFICULTAD = :CODIGOMUNICIPIODIFICULTAD,'
+      '  CODIGOMUNICIPIO = :CODIGOMUNICIPIO,'
+      '  CONSECUTIVO = :CONSECUTIVO,'
+      '  INDICEDIFICULTAD = :INDICEDIFICULTAD,'
+      '  DESCRIPCION = :DESCRIPCION'
+      'where'
+      '  CODIGOMUNICIPIODIFICULTAD = :OLD_CODIGOMUNICIPIODIFICULTAD')
+    InsertSQL.Strings = (
+      'insert into MUNICIPIODIFICULTAD'
+      
+        '  (CODIGOMUNICIPIODIFICULTAD, CODIGOMUNICIPIO, CONSECUTIVO, INDI' +
+        'CEDIFICULTAD, '
+      '   DESCRIPCION)'
+      'values'
+      
+        '  (:CODIGOMUNICIPIODIFICULTAD, :CODIGOMUNICIPIO, :CONSECUTIVO, :' +
+        'INDICEDIFICULTAD, '
+      '   :DESCRIPCION)')
+    DeleteSQL.Strings = (
+      'delete from MUNICIPIODIFICULTAD'
+      'where'
+      '  CODIGOMUNICIPIODIFICULTAD = :OLD_CODIGOMUNICIPIODIFICULTAD')
+    Left = 176
+    Top = 112
+  end
+end

@@ -1,0 +1,99 @@
+inherited fSeleccionarSeccionMantenimiento: TfSeleccionarSeccionMantenimiento
+  Caption = 'Seleccionar Formato Mantenimiento'
+  OldCreateOrder = True
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel2: TPanel
+    Visible = False
+  end
+  inherited Panel3: TPanel
+    inherited dbGrid1: TRxDBGrid
+      Columns = <
+        item
+          Color = clAqua
+          Expanded = False
+          FieldName = 'CODIGOFORMATOMTTO'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Código Formato'
+          Width = 96
+          Visible = True
+        end
+        item
+          Alignment = taCenter
+          Color = clInfoBk
+          Expanded = False
+          FieldName = 'CODIGOSECCIONFORMATO'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Código Sección'
+          Width = 91
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRESECCIONFORMATO'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Nombre Sección'
+          Width = 197
+          Visible = True
+        end>
+    end
+  end
+  inherited qDatos: TQuery
+    SQL.Strings = (
+      
+        'SELECT DISTINCT fm.codigoformatomtto,fm.nombreformatomtto, sf.co' +
+        'digoseccionformato,sf.nombreseccionformato'
+      '  FROM hve_seccionformato sf,'
+      '       hve_formatomtto fm,  '
+      '       subactividadprueba sp,'
+      '       pm_pruebasprogramadas pp,'
+      '       pm_mantenimientoodt pmo'
+      
+        ' WHERE SF.ACTIVO = '#39'S'#39' AND FM.ACTIVO = '#39'S'#39' AND fm.codigoformatom' +
+        'tto = sf.codigoformatomtto '
+      '   AND sp.codigosubactividadprueba = pp.codigosubactividadprueba'
+      '   AND sp.codigoseccionformato = sf.codigoseccionformato'
+      '   AND pp.codigomantenimiento = pmo.codigomantenimiento'
+      '   AND pmo.codigoodt=:codigoodt'
+      '   AND pmo.consecutivo=:consecutivo'
+      '   AND sf.codigoformatomtto=:codigoformatomtto'
+      'ORDER BY 1')
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'codigoodt'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'consecutivo'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'codigoformatomtto'
+        ParamType = ptUnknown
+      end>
+    object qDatosCODIGOFORMATOMTTO: TFloatField
+      FieldName = 'CODIGOFORMATOMTTO'
+      Origin = 'HVE_FORMATOMTTO.CODIGOFORMATOMTTO'
+    end
+    object qDatosNOMBREFORMATOMTTO: TStringField
+      FieldName = 'NOMBREFORMATOMTTO'
+      Origin = 'HVE_FORMATOMTTO.NOMBREFORMATOMTTO'
+      Size = 80
+    end
+    object qDatosCODIGOSECCIONFORMATO: TFloatField
+      FieldName = 'CODIGOSECCIONFORMATO'
+      Origin = 'HVE_SECCIONFORMATO.CODIGOSECCIONFORMATO'
+    end
+    object qDatosNOMBRESECCIONFORMATO: TStringField
+      FieldName = 'NOMBRESECCIONFORMATO'
+      Origin = 'HVE_SECCIONFORMATO.NOMBRESECCIONFORMATO'
+      Size = 80
+    end
+  end
+end

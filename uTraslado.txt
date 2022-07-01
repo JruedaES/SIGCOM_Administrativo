@@ -1,0 +1,1306 @@
+object fTraslado: TfTraslado
+  Left = 265
+  Top = 84
+  Width = 844
+  Height = 557
+  BorderIcons = [biSystemMenu]
+  Caption = 'Traslado'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel15: TPanel
+    Left = 0
+    Top = 0
+    Width = 828
+    Height = 518
+    Align = alClient
+    BevelOuter = bvNone
+    Caption = 'Panel15'
+    TabOrder = 0
+    object Panel16: TPanel
+      Left = 0
+      Top = 0
+      Width = 828
+      Height = 249
+      Align = alTop
+      BevelOuter = bvNone
+      TabOrder = 0
+      object Label1: TLabel
+        Left = 601
+        Top = 220
+        Width = 92
+        Height = 13
+        Caption = 'Fecha de Traslado:'
+      end
+      object Label15: TLabel
+        Left = 8
+        Top = 231
+        Width = 68
+        Height = 13
+        Caption = 'Total Items:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object lblItems: TLabel
+        Left = 91
+        Top = 231
+        Width = 8
+        Height = 13
+        Alignment = taRightJustify
+        Caption = '0'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label3: TLabel
+        Left = 9
+        Top = 157
+        Width = 74
+        Height = 13
+        Caption = 'Observaciones:'
+      end
+      object GroupBox16: TGroupBox
+        Left = 8
+        Top = 79
+        Width = 809
+        Height = 70
+        Caption = 'Destino'
+        TabOrder = 1
+        object Label89: TLabel
+          Left = 32
+          Top = 131
+          Width = 58
+          Height = 13
+          Caption = 'Cod Admon:'
+        end
+        object Label97: TLabel
+          Left = 460
+          Top = 29
+          Width = 29
+          Height = 13
+          Caption = 'Grupo'
+        end
+        object Label2: TLabel
+          Left = 12
+          Top = 16
+          Width = 17
+          Height = 13
+          Caption = 'CIA'
+        end
+        object SpeedButton2: TSpeedButton
+          Left = 32
+          Top = 15
+          Width = 37
+          Height = 17
+          Caption = 'CIA'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          NumGlyphs = 2
+          ParentFont = False
+        end
+        object DBText2: TDBText
+          Left = 80
+          Top = 13
+          Width = 361
+          Height = 49
+          Color = clSilver
+          DataField = 'nombreadministrativodestino'
+          DataSource = dsTrasladoMaterial
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object dbeAdministrativoDestino: TDBEdit
+          Left = 92
+          Top = 124
+          Width = 30
+          Height = 21
+          DataField = 'CODIGOADMINISTRATIVODESTINO'
+          DataSource = dsTrasladoMaterial
+          TabOrder = 3
+        end
+        object dblcbAdministrativodestino: TDBLookupComboBox
+          Left = 132
+          Top = 124
+          Width = 354
+          Height = 21
+          DataField = 'CODIGOADMINISTRATIVODESTINO'
+          DataSource = dsTrasladoMaterial
+          KeyField = 'CODIGOADMINISTRATIVO'
+          ListField = 'NOMBREADMINISTRATIVO'
+          ListSource = dsAdministrativoDestino
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 4
+        end
+        object dblcbGrupoDestino: TDBLookupComboBox
+          Left = 528
+          Top = 27
+          Width = 267
+          Height = 21
+          DataField = 'CODIGOGRUPOTRABAJODESTINO'
+          DataSource = dsTrasladoMaterial
+          KeyField = 'CODIGOGRUPOTRABAJO'
+          ListField = 'NOMBREGRUPOTRABAJO'
+          ListSource = dsGrupoDestino
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 2
+        end
+        object dbeGrupoDestino: TDBEdit
+          Left = 496
+          Top = 27
+          Width = 30
+          Height = 21
+          DataField = 'CODIGOGRUPOTRABAJODESTINO'
+          DataSource = dsTrasladoMaterial
+          TabOrder = 1
+        end
+        object DBEdit1: TDBEdit
+          Tag = 9
+          Left = 10
+          Top = 38
+          Width = 60
+          Height = 21
+          DataField = 'CODIGOADMINISTRATIVODESTINO'
+          DataSource = dsTrasladoMaterial
+          TabOrder = 0
+        end
+      end
+      object GroupBox15: TGroupBox
+        Left = 8
+        Top = 8
+        Width = 809
+        Height = 67
+        Caption = 'Origen'
+        TabOrder = 0
+        object Label88: TLabel
+          Left = 16
+          Top = 123
+          Width = 58
+          Height = 13
+          Caption = 'Cod Admon:'
+        end
+        object Label96: TLabel
+          Left = 460
+          Top = 30
+          Width = 29
+          Height = 13
+          Caption = 'Grupo'
+        end
+        object Label22: TLabel
+          Left = 12
+          Top = 16
+          Width = 17
+          Height = 13
+          Caption = 'CIA'
+        end
+        object SpeedButton1: TSpeedButton
+          Left = 32
+          Top = 15
+          Width = 37
+          Height = 17
+          Caption = 'CIA'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          NumGlyphs = 2
+          ParentFont = False
+        end
+        object DBText1: TDBText
+          Left = 80
+          Top = 13
+          Width = 361
+          Height = 46
+          Color = clSilver
+          DataField = 'nombreadministrativoorigen'
+          DataSource = dsTrasladoMaterial
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object dbeAdministrativoOrigen: TDBEdit
+          Left = 76
+          Top = 116
+          Width = 30
+          Height = 21
+          DataField = 'CODIGOADMINISTRATIVOORIGEN'
+          DataSource = dsTrasladoMaterial
+          TabOrder = 3
+        end
+        object dblcbAdministrativoOrigen: TDBLookupComboBox
+          Left = 116
+          Top = 116
+          Width = 357
+          Height = 21
+          DataField = 'CODIGOADMINISTRATIVOORIGEN'
+          DataSource = dsTrasladoMaterial
+          KeyField = 'CODIGOADMINISTRATIVO'
+          ListField = 'NOMBREADMINISTRATIVO'
+          ListSource = dsAdministrativoOrigen
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 4
+        end
+        object dbeGrupoOrigen: TDBEdit
+          Left = 496
+          Top = 27
+          Width = 30
+          Height = 21
+          DataField = 'CODIGOGRUPOTRABAJOORIGEN'
+          DataSource = dsTrasladoMaterial
+          TabOrder = 1
+        end
+        object dblcbGrupoOrigen: TDBLookupComboBox
+          Left = 528
+          Top = 27
+          Width = 267
+          Height = 21
+          DataField = 'CODIGOGRUPOTRABAJOORIGEN'
+          DataSource = dsTrasladoMaterial
+          KeyField = 'CODIGOGRUPOTRABAJO'
+          ListField = 'NOMBREGRUPOTRABAJO'
+          ListSource = dsGrupoOrigen
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 2
+        end
+        object dbeCIA: TDBEdit
+          Tag = 9
+          Left = 10
+          Top = 36
+          Width = 60
+          Height = 21
+          DataField = 'CODIGOADMINISTRATIVOORIGEN'
+          DataSource = dsTrasladoMaterial
+          TabOrder = 0
+        end
+      end
+      object dtpFechaTraslado: TDateTimePicker
+        Left = 699
+        Top = 217
+        Width = 119
+        Height = 21
+        CalAlignment = dtaLeft
+        Date = 39003.000000000000000000
+        Time = 39003.000000000000000000
+        DateFormat = dfShort
+        DateMode = dmComboBox
+        Enabled = False
+        Kind = dtkDate
+        ParseInput = False
+        TabOrder = 2
+      end
+      object DBMemoObservacion: TDBMemo
+        Left = 88
+        Top = 157
+        Width = 729
+        Height = 53
+        DataField = 'OBSERVACION'
+        DataSource = dsTrasladoMaterial
+        TabOrder = 3
+      end
+    end
+    object Panel23: TPanel
+      Left = 0
+      Top = 485
+      Width = 828
+      Height = 33
+      Align = alBottom
+      TabOrder = 2
+      object bbCancelar: TBitBtn
+        Left = 739
+        Top = 4
+        Width = 75
+        Height = 25
+        Anchors = [akRight, akBottom]
+        Caption = '&Cancelar'
+        TabOrder = 0
+        OnClick = bbCancelarClick
+        Glyph.Data = {
+          DE010000424DDE01000000000000760000002800000024000000120000000100
+          0400000000006801000000000000000000001000000010000000000000000000
+          80000080000000808000800000008000800080800000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          333333333333333333333333000033338833333333333333333F333333333333
+          0000333911833333983333333388F333333F3333000033391118333911833333
+          38F38F333F88F33300003339111183911118333338F338F3F8338F3300003333
+          911118111118333338F3338F833338F3000033333911111111833333338F3338
+          3333F8330000333333911111183333333338F333333F83330000333333311111
+          8333333333338F3333383333000033333339111183333333333338F333833333
+          00003333339111118333333333333833338F3333000033333911181118333333
+          33338333338F333300003333911183911183333333383338F338F33300003333
+          9118333911183333338F33838F338F33000033333913333391113333338FF833
+          38F338F300003333333333333919333333388333338FFF830000333333333333
+          3333333333333333333888330000333333333333333333333333333333333333
+          0000}
+        NumGlyphs = 2
+      end
+      object bbAceptar: TBitBtn
+        Left = 647
+        Top = 5
+        Width = 75
+        Height = 25
+        Anchors = [akRight, akBottom]
+        Caption = '&Aceptar'
+        TabOrder = 1
+        OnClick = bbAceptarClick
+        Glyph.Data = {
+          DE010000424DDE01000000000000760000002800000024000000120000000100
+          0400000000006801000000000000000000001000000010000000000000000000
+          80000080000000808000800000008000800080800000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333333333333333333333330000333333333333333333333333F33333333333
+          00003333344333333333333333388F3333333333000033334224333333333333
+          338338F3333333330000333422224333333333333833338F3333333300003342
+          222224333333333383333338F3333333000034222A22224333333338F338F333
+          8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+          33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+          0000333333333A222433333333333338F338F33300003333333333A222433333
+          333333338F338F33000033333333333A222433333333333338F338F300003333
+          33333333A222433333333333338F338F00003333333333333A22433333333333
+          3338F38F000033333333333333A223333333333333338F830000333333333333
+          333A333333333333333338330000333333333333333333333333333333333333
+          0000}
+        NumGlyphs = 2
+      end
+    end
+    object Panel1: TPanel
+      Left = 0
+      Top = 249
+      Width = 828
+      Height = 236
+      Align = alClient
+      BevelOuter = bvNone
+      TabOrder = 1
+      object Splitter1: TSplitter
+        Left = 616
+        Top = 0
+        Width = 4
+        Height = 213
+        Cursor = crHSplit
+        Beveled = True
+      end
+      object Panel2: TPanel
+        Left = 0
+        Top = 213
+        Width = 828
+        Height = 23
+        Align = alBottom
+        BevelOuter = bvNone
+        TabOrder = 2
+        object DBNavigator2: TDBNavigator
+          Left = 0
+          Top = 0
+          Width = 828
+          Height = 23
+          DataSource = dsTrasladoMaterialDetalle
+          VisibleButtons = [nbPrior, nbNext, nbInsert, nbDelete, nbEdit, nbCancel]
+          Align = alClient
+          Hints.Strings = (
+            'Primero'
+            'Anterior'
+            'Siguiente'
+            'Ultimo'
+            'Insertar'
+            'Eliminar'
+            'Editar'
+            'Aplicar'
+            'Cancelar'
+            'Refrescar')
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 0
+        end
+      end
+      object dbgMateriales: TDBGrid
+        Left = 0
+        Top = 0
+        Width = 616
+        Height = 213
+        Align = alLeft
+        DataSource = dsTrasladoMaterialDetalle
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+        OnEditButtonClick = dbgMaterialesEditButtonClick
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'CODIGOTRASLADO'
+            ReadOnly = True
+            Title.Caption = 'Cod Traslado'
+            Visible = False
+          end
+          item
+            ButtonStyle = cbsEllipsis
+            Expanded = False
+            FieldName = 'CODIGOMATERIAL'
+            Title.Caption = 'Cod Material'
+            Width = 66
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NOMBREMATERIAL'
+            ReadOnly = True
+            Title.Alignment = taCenter
+            Title.Caption = 'Mateial'
+            Width = 308
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CANTIDAD'
+            Title.Caption = 'Traslado Nuevo'
+            Width = 83
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CANTIDADDESMANTELADA'
+            Title.Caption = 'Traslado Desmantelado'
+            Visible = True
+          end>
+      end
+      object Panel3: TPanel
+        Left = 620
+        Top = 0
+        Width = 208
+        Height = 213
+        Align = alClient
+        BevelOuter = bvNone
+        Caption = 'Panel3'
+        TabOrder = 1
+        object dbgSerial: TRxDBGrid
+          Left = 0
+          Top = 23
+          Width = 208
+          Height = 190
+          Align = alClient
+          DataSource = dsSerial
+          Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+          ReadOnly = True
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+          OnEditButtonClick = dbgSerialEditButtonClick
+          MultiSelect = True
+          Columns = <
+            item
+              Alignment = taCenter
+              ButtonStyle = cbsEllipsis
+              Expanded = False
+              FieldName = 'SERIAL'
+              Title.Alignment = taCenter
+              Title.Caption = 'Serial'
+              Width = 179
+              Visible = True
+            end>
+        end
+        object dbnSerial: TdNavigator
+          Left = 0
+          Top = 0
+          Width = 208
+          Height = 23
+          DataSource = dsSerial
+          VisibleButtons = [nbDelete, nbEdit, nbPost, nbCancel]
+          Align = alTop
+          ConfirmDelete = False
+          TabOrder = 1
+        end
+      end
+    end
+  end
+  object qTrasladoMaterialDetalle: TQuery
+    CachedUpdates = True
+    AfterOpen = qTrasladoMaterialDetalleAfterOpen
+    BeforeEdit = qTrasladoMaterialDetalleBeforeEdit
+    BeforePost = qTrasladoMaterialDetalleBeforePost
+    AfterPost = qTrasladoMaterialDetalleAfterPost
+    BeforeDelete = qTrasladoMaterialDetalleBeforeDelete
+    AfterDelete = qTrasladoMaterialDetalleAfterDelete
+    AfterScroll = qTrasladoMaterialDetalleAfterScroll
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'select t.codigotraslado, t.cantidad, t.codigomaterial, t.cantida' +
+        'ddesmantelada,'
+      't.codigoodt, t.consecutivo, m.nombrematerial  '
+      'from trasladomaterialdetalle t,'
+      'MATERIALESSA m'
+      'where t.codigomaterial = m.codigomaterial'
+      'and codigotraslado= :codigotraslado'
+      'and codigoodt = :codigoodt'
+      'and consecutivo = :consecutivo'
+      '')
+    UpdateObject = UpdTrasladoMaterialDetalle
+    Left = 376
+    Top = 424
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'codigotraslado'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'codigoodt'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'consecutivo'
+        ParamType = ptUnknown
+      end>
+    object qTrasladoMaterialDetalleCODIGOTRASLADO: TFloatField
+      FieldName = 'CODIGOTRASLADO'
+      Origin = 'TRASLADOMATERIALDETALLE.CODIGOTRASLADO'
+    end
+    object qTrasladoMaterialDetalleCODIGOMATERIAL: TFloatField
+      FieldName = 'CODIGOMATERIAL'
+      Origin = 'TRASLADOMATERIALDETALLE.CODIGOMATERIAL'
+      OnValidate = qTrasladoMaterialDetalleCODIGOMATERIALValidate
+    end
+    object qTrasladoMaterialDetalleCANTIDAD: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'CANTIDAD'
+      Origin = 'TRASLADOMATERIALDETALLE.CANTIDAD'
+      OnValidate = qTrasladoMaterialDetalleCANTIDADValidate
+    end
+    object qTrasladoMaterialDetalleCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'TRASLADOMATERIALDETALLE.CODIGOODT'
+    end
+    object qTrasladoMaterialDetalleCONSECUTIVO: TFloatField
+      FieldName = 'CONSECUTIVO'
+      Origin = 'TRASLADOMATERIALDETALLE.CONSECUTIVO'
+    end
+    object qTrasladoMaterialDetalleNOMBREMATERIAL: TStringField
+      FieldName = 'NOMBREMATERIAL'
+      Origin = 'MATERIALESSA.NOMBREMATERIAL'
+      Size = 100
+    end
+    object qTrasladoMaterialDetalleCANTIDADDESMANTELADA: TFloatField
+      FieldName = 'CANTIDADDESMANTELADA'
+      Origin = 'TRASLADOMATERIALDETALLE.CANTIDADDESMANTELADA'
+      OnValidate = qTrasladoMaterialDetalleCANTIDADDESMANTELADAValidate
+    end
+  end
+  object dsTrasladoMaterialDetalle: TDataSource
+    DataSet = qTrasladoMaterialDetalle
+    Left = 384
+    Top = 371
+  end
+  object UpdTrasladoMaterialDetalle: TUpdateSQL
+    ModifySQL.Strings = (
+      'update TRASLADOMATERIALDETALLE'
+      'set'
+      '  CODIGOTRASLADO = :CODIGOTRASLADO,'
+      '  CANTIDAD = :CANTIDAD,'
+      '  CODIGOMATERIAL = :CODIGOMATERIAL,'
+      '  CANTIDADDESMANTELADA = :CANTIDADDESMANTELADA,'
+      '  CODIGOODT = :CODIGOODT,'
+      '  CONSECUTIVO = :CONSECUTIVO'
+      'where'
+      '  CODIGOTRASLADO = :OLD_CODIGOTRASLADO and'
+      '  CODIGOMATERIAL = :OLD_CODIGOMATERIAL and'
+      '  CODIGOODT = :OLD_CODIGOODT and'
+      '  CONSECUTIVO = :OLD_CONSECUTIVO')
+    InsertSQL.Strings = (
+      'insert into TRASLADOMATERIALDETALLE'
+      
+        '  (CODIGOTRASLADO, CANTIDAD, CODIGOMATERIAL, CANTIDADDESMANTELAD' +
+        'A, CODIGOODT, '
+      '   CONSECUTIVO)'
+      'values'
+      
+        '  (:CODIGOTRASLADO, :CANTIDAD, :CODIGOMATERIAL, :CANTIDADDESMANT' +
+        'ELADA, '
+      '   :CODIGOODT, :CONSECUTIVO)')
+    DeleteSQL.Strings = (
+      'delete from TRASLADOMATERIALDETALLE'
+      'where'
+      '  CODIGOTRASLADO = :OLD_CODIGOTRASLADO and'
+      '  CODIGOMATERIAL = :OLD_CODIGOMATERIAL and'
+      '  CODIGOODT = :OLD_CODIGOODT and'
+      '  CONSECUTIVO = :OLD_CONSECUTIVO')
+    Left = 378
+    Top = 319
+  end
+  object qAdministrativoOrigen: TQuery
+    Active = True
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from administrativo where codigoadministrativo>0'
+      'order by nombreadministrativo')
+    Left = 24
+    Top = 342
+    object qAdministrativoOrigenCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.CODIGOADMINISTRATIVO'
+    end
+    object qAdministrativoOrigenCODIGOARBOL: TStringField
+      FieldName = 'CODIGOARBOL'
+      Origin = 'ADMINISTRATIVO.CODIGOARBOL'
+      Size = 30
+    end
+    object qAdministrativoOrigenORDEN: TFloatField
+      FieldName = 'ORDEN'
+      Origin = 'ADMINISTRATIVO.ORDEN'
+    end
+    object qAdministrativoOrigenNOMBRECATEGORIA: TStringField
+      FieldName = 'NOMBRECATEGORIA'
+      Origin = 'ADMINISTRATIVO.NOMBRECATEGORIA'
+      Size = 80
+    end
+    object qAdministrativoOrigenNOMBREADMINISTRATIVO: TStringField
+      FieldName = 'NOMBREADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.NOMBREADMINISTRATIVO'
+      Size = 250
+    end
+    object qAdministrativoOrigenNIVEL: TFloatField
+      FieldName = 'NIVEL'
+      Origin = 'ADMINISTRATIVO.NIVEL'
+    end
+    object qAdministrativoOrigenNORMAL: TStringField
+      FieldName = 'NORMAL'
+      Origin = 'ADMINISTRATIVO.NORMAL'
+      Size = 1
+    end
+    object qAdministrativoOrigenREFERENCIA: TStringField
+      FieldName = 'REFERENCIA'
+      Origin = 'ADMINISTRATIVO.REFERENCIA'
+    end
+    object qAdministrativoOrigenCODIGOCENTROCOSTO: TFloatField
+      FieldName = 'CODIGOCENTROCOSTO'
+      Origin = 'ADMINISTRATIVO.CODIGOCENTROCOSTO'
+    end
+    object qAdministrativoOrigenCODIGOAREARESPONSABILIDAD: TFloatField
+      FieldName = 'CODIGOAREARESPONSABILIDAD'
+      Origin = 'ADMINISTRATIVO.CODIGOAREARESPONSABILIDAD'
+    end
+    object qAdministrativoOrigenABREVIATURA: TStringField
+      FieldName = 'ABREVIATURA'
+      Origin = 'ADMINISTRATIVO.ABREVIATURA'
+      Size = 10
+    end
+    object qAdministrativoOrigenCODIGOZONA: TFloatField
+      FieldName = 'CODIGOZONA'
+      Origin = 'ADMINISTRATIVO.CODIGOZONA'
+    end
+    object qAdministrativoOrigenCODIGOVIGENCIAADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOVIGENCIAADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.CODIGOVIGENCIAADMINISTRATIVO'
+    end
+  end
+  object dsAdministrativoOrigen: TDataSource
+    DataSet = qAdministrativoOrigen
+    Left = 24
+    Top = 395
+  end
+  object updTrasladoMaterial: TUpdateSQL
+    ModifySQL.Strings = (
+      'update TRASLADOMATERIAL'
+      'set'
+      '  CODIGOTRASLADO = :CODIGOTRASLADO,'
+      '  CODIGOADMINISTRATIVOORIGEN = :CODIGOADMINISTRATIVOORIGEN,'
+      '  CODIGOGRUPOTRABAJOORIGEN = :CODIGOGRUPOTRABAJOORIGEN,'
+      '  CODIGOADMINISTRATIVODESTINO = :CODIGOADMINISTRATIVODESTINO,'
+      '  CODIGOGRUPOTRABAJODESTINO = :CODIGOGRUPOTRABAJODESTINO,'
+      '  FECHATRASLADO = :FECHATRASLADO,'
+      '  CODIGOODT = :CODIGOODT,'
+      '  CONSECUTIVO = :CONSECUTIVO,'
+      '  OBSERVACION = :OBSERVACION'
+      'where'
+      '  CODIGOTRASLADO = :OLD_CODIGOTRASLADO and'
+      '  CODIGOODT = :OLD_CODIGOODT and'
+      '  CONSECUTIVO = :OLD_CONSECUTIVO')
+    InsertSQL.Strings = (
+      'insert into TRASLADOMATERIAL'
+      '  (CODIGOTRASLADO, CODIGOADMINISTRATIVOORIGEN, '
+      'CODIGOGRUPOTRABAJOORIGEN, '
+      '   CODIGOADMINISTRATIVODESTINO, CODIGOGRUPOTRABAJODESTINO, '
+      'FECHATRASLADO, '
+      '   CODIGOODT, CONSECUTIVO, OBSERVACION)'
+      'values'
+      '  (:CODIGOTRASLADO, :CODIGOADMINISTRATIVOORIGEN, '
+      ':CODIGOGRUPOTRABAJOORIGEN, '
+      '   :CODIGOADMINISTRATIVODESTINO, :CODIGOGRUPOTRABAJODESTINO, '
+      ':FECHATRASLADO, '
+      '   :CODIGOODT, :CONSECUTIVO, :OBSERVACION)')
+    DeleteSQL.Strings = (
+      'delete from TRASLADOMATERIAL'
+      'where'
+      '  CODIGOTRASLADO = :OLD_CODIGOTRASLADO and'
+      '  CODIGOODT = :OLD_CODIGOODT and'
+      '  CONSECUTIVO = :OLD_CONSECUTIVO')
+    Left = 610
+    Top = 383
+  end
+  object dsTrasladoMaterial: TDataSource
+    DataSet = qTrasladoMaterial
+    Left = 608
+    Top = 315
+  end
+  object qTrasladoMaterial: TQuery
+    CachedUpdates = True
+    AfterInsert = qTrasladoMaterialAfterInsert
+    AfterEdit = qTrasladoMaterialAfterEdit
+    BeforePost = qTrasladoMaterialBeforePost
+    AfterPost = qTrasladoMaterialAfterPost
+    AfterDelete = qTrasladoMaterialAfterDelete
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM TRASLADOMATERIAL'
+      'WHERE CODIGOTRASLADO = :CODIGOTRASLADO'
+      'AND CODIGOODT= :CODIGOODT'
+      'AND CONSECUTIVO = :CONSECUTIVO')
+    UpdateObject = updTrasladoMaterial
+    Left = 520
+    Top = 366
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOTRASLADO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CONSECUTIVO'
+        ParamType = ptUnknown
+      end>
+    object qTrasladoMaterialCODIGOTRASLADO: TFloatField
+      FieldName = 'CODIGOTRASLADO'
+      Origin = 'TRASLADOMATERIAL.CODIGOTRASLADO'
+    end
+    object qTrasladoMaterialCODIGOADMINISTRATIVOORIGEN: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVOORIGEN'
+      Origin = 'TRASLADOMATERIAL.CODIGOADMINISTRATIVOORIGEN'
+      OnChange = qTrasladoMaterialCODIGOGRUPOTRABAJOORIGENChange
+      OnSetText = qTrasladoMaterialCODIGOADMINISTRATIVOORIGENSetText
+    end
+    object qTrasladoMaterialCODIGOGRUPOTRABAJOORIGEN: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJOORIGEN'
+      Origin = 'TRASLADOMATERIAL.CODIGOGRUPOTRABAJOORIGEN'
+      OnChange = qTrasladoMaterialCODIGOGRUPOTRABAJOORIGENChange
+      OnSetText = qTrasladoMaterialCODIGOGRUPOTRABAJOORIGENSetText
+      OnValidate = qTrasladoMaterialCODIGOGRUPOTRABAJOORIGENValidate
+    end
+    object qTrasladoMaterialCODIGOADMINISTRATIVODESTINO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVODESTINO'
+      Origin = 'TRASLADOMATERIAL.CODIGOADMINISTRATIVODESTINO'
+      OnChange = qTrasladoMaterialCODIGOGRUPOTRABAJOORIGENChange
+      OnSetText = qTrasladoMaterialCODIGOADMINISTRATIVOORIGENSetText
+    end
+    object qTrasladoMaterialCODIGOGRUPOTRABAJODESTINO: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJODESTINO'
+      Origin = 'TRASLADOMATERIAL.CODIGOGRUPOTRABAJODESTINO'
+      OnChange = qTrasladoMaterialCODIGOGRUPOTRABAJOORIGENChange
+      OnSetText = qTrasladoMaterialCODIGOGRUPOTRABAJOORIGENSetText
+      OnValidate = qTrasladoMaterialCODIGOGRUPOTRABAJODESTINOValidate
+    end
+    object qTrasladoMaterialFECHATRASLADO: TDateTimeField
+      FieldName = 'FECHATRASLADO'
+      Origin = 'TRASLADOMATERIAL.FECHATRASLADO'
+    end
+    object qTrasladoMaterialCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'TRASLADOMATERIAL.CODIGOODT'
+    end
+    object qTrasladoMaterialCONSECUTIVO: TFloatField
+      FieldName = 'CONSECUTIVO'
+      Origin = 'TRASLADOMATERIAL.CONSECUTIVO'
+    end
+    object qTrasladoMaterialnombreadministrativoorigen: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nombreadministrativoorigen'
+      LookupDataSet = qAdministrativoOrigen
+      LookupKeyFields = 'CODIGOADMINISTRATIVO'
+      LookupResultField = 'NOMBRECATEGORIA'
+      KeyFields = 'CODIGOADMINISTRATIVOORIGEN'
+      Size = 80
+      Lookup = True
+    end
+    object qTrasladoMaterialnombreadministrativodestino: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nombreadministrativodestino'
+      LookupDataSet = qAdministrativoDestino
+      LookupKeyFields = 'CODIGOADMINISTRATIVO'
+      LookupResultField = 'NOMBRECATEGORIA'
+      KeyFields = 'CODIGOADMINISTRATIVODESTINO'
+      Size = 80
+      Lookup = True
+    end
+    object qTrasladoMaterialOBSERVACION: TMemoField
+      FieldName = 'OBSERVACION'
+      Origin = 'TRASLADOMATERIAL.OBSERVACION'
+      BlobType = ftMemo
+      Size = 4000
+    end
+  end
+  object qAdministrativoDestino: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from administrativo where codigoadministrativo>0'
+      'order by nombreadministrativo')
+    Left = 296
+    Top = 470
+    object FloatField1: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.CODIGOADMINISTRATIVO'
+    end
+    object StringField1: TStringField
+      FieldName = 'CODIGOARBOL'
+      Origin = 'ADMINISTRATIVO.CODIGOARBOL'
+      Size = 30
+    end
+    object FloatField2: TFloatField
+      FieldName = 'ORDEN'
+      Origin = 'ADMINISTRATIVO.ORDEN'
+    end
+    object StringField2: TStringField
+      FieldName = 'NOMBRECATEGORIA'
+      Origin = 'ADMINISTRATIVO.NOMBRECATEGORIA'
+      Size = 80
+    end
+    object StringField3: TStringField
+      FieldName = 'NOMBREADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.NOMBREADMINISTRATIVO'
+      Size = 250
+    end
+    object FloatField3: TFloatField
+      FieldName = 'NIVEL'
+      Origin = 'ADMINISTRATIVO.NIVEL'
+    end
+    object StringField4: TStringField
+      FieldName = 'NORMAL'
+      Origin = 'ADMINISTRATIVO.NORMAL'
+      Size = 1
+    end
+    object StringField5: TStringField
+      FieldName = 'REFERENCIA'
+      Origin = 'ADMINISTRATIVO.REFERENCIA'
+    end
+    object FloatField4: TFloatField
+      FieldName = 'CODIGOCENTROCOSTO'
+      Origin = 'ADMINISTRATIVO.CODIGOCENTROCOSTO'
+    end
+    object FloatField5: TFloatField
+      FieldName = 'CODIGOAREARESPONSABILIDAD'
+      Origin = 'ADMINISTRATIVO.CODIGOAREARESPONSABILIDAD'
+    end
+    object StringField6: TStringField
+      FieldName = 'ABREVIATURA'
+      Origin = 'ADMINISTRATIVO.ABREVIATURA'
+      Size = 10
+    end
+    object FloatField6: TFloatField
+      FieldName = 'CODIGOZONA'
+      Origin = 'ADMINISTRATIVO.CODIGOZONA'
+    end
+    object FloatField7: TFloatField
+      FieldName = 'CODIGOVIGENCIAADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.CODIGOVIGENCIAADMINISTRATIVO'
+    end
+  end
+  object dsAdministrativoDestino: TDataSource
+    DataSet = qAdministrativoDestino
+    Left = 248
+    Top = 427
+  end
+  object qGrupoOrigen: TQuery
+    Active = True
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    DataSource = dsAdministrativoOrigen
+    SQL.Strings = (
+      
+        'select * from grupotrabajo where codigoadministrativo = :Codigoa' +
+        'dministrativo'
+      '')
+    Left = 96
+    Top = 414
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end>
+    object qGrupoOrigenCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'GRUPOTRABAJO.CODIGOADMINISTRATIVO'
+    end
+    object qGrupoOrigenCODIGOGRUPOTRABAJO: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.CODIGOGRUPOTRABAJO'
+    end
+    object qGrupoOrigenNOMBREGRUPOTRABAJO: TStringField
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+    object qGrupoOrigenCODIGOHORARIOTRABAJO: TFloatField
+      FieldName = 'CODIGOHORARIOTRABAJO'
+      Origin = 'GRUPOTRABAJO.CODIGOHORARIOTRABAJO'
+    end
+    object qGrupoOrigenCODIGOCONTRATISTA: TStringField
+      FieldName = 'CODIGOCONTRATISTA'
+      Origin = 'GRUPOTRABAJO.CODIGOCONTRATISTA'
+      Size = 14
+    end
+  end
+  object dsGrupoOrigen: TDataSource
+    DataSet = qGrupoOrigen
+    Left = 120
+    Top = 347
+  end
+  object dsGrupoDestino: TDataSource
+    DataSet = qGrupoDestino
+    Left = 120
+    Top = 483
+  end
+  object qGrupoDestino: TQuery
+    Active = True
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    DataSource = dsAdministrativoDestino
+    SQL.Strings = (
+      
+        'select * from grupotrabajo where codigoadministrativo = :Codigoa' +
+        'dministrativo'
+      '')
+    Left = 128
+    Top = 438
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end>
+    object FloatField8: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'GRUPOTRABAJO.CODIGOADMINISTRATIVO'
+    end
+    object FloatField9: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.CODIGOGRUPOTRABAJO'
+    end
+    object StringField7: TStringField
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+    object FloatField10: TFloatField
+      FieldName = 'CODIGOHORARIOTRABAJO'
+      Origin = 'GRUPOTRABAJO.CODIGOHORARIOTRABAJO'
+    end
+    object StringField8: TStringField
+      FieldName = 'CODIGOCONTRATISTA'
+      Origin = 'GRUPOTRABAJO.CODIGOCONTRATISTA'
+      Size = 14
+    end
+  end
+  object qTrasladoMaterialdetalleInicial: TQuery
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'select t.codigotraslado, t.cantidad, t.codigomaterial, t.cantida' +
+        'ddesmantelada,'
+      't.codigoodt, t.consecutivo, m.nombrematerial  '
+      'from trasladomaterialdetalle t,'
+      'MATERIALESSA m'
+      'where t.codigomaterial = m.codigomaterial'
+      'and codigotraslado= :codigotraslado'
+      'and codigoodt = :codigoodt'
+      'and consecutivo = :consecutivo'
+      '')
+    Left = 520
+    Top = 430
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'codigotraslado'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'codigoodt'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'consecutivo'
+        ParamType = ptUnknown
+      end>
+    object FloatField11: TFloatField
+      FieldName = 'CODIGOTRASLADO'
+      Origin = 'TRASLADOMATERIALDETALLE.CODIGOTRASLADO'
+    end
+    object FloatField12: TFloatField
+      FieldName = 'CODIGOMATERIAL'
+      Origin = 'TRASLADOMATERIALDETALLE.CODIGOMATERIAL'
+    end
+    object FloatField13: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'CANTIDAD'
+      Origin = 'TRASLADOMATERIALDETALLE.CANTIDAD'
+      OnValidate = qTrasladoMaterialDetalleCANTIDADValidate
+    end
+    object FloatField14: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'TRASLADOMATERIALDETALLE.CODIGOODT'
+    end
+    object FloatField15: TFloatField
+      FieldName = 'CONSECUTIVO'
+      Origin = 'TRASLADOMATERIALDETALLE.CONSECUTIVO'
+    end
+    object StringField9: TStringField
+      FieldName = 'NOMBREMATERIAL'
+      Origin = 'MATERIALESSA.NOMBREMATERIAL'
+      Size = 100
+    end
+    object FloatField16: TFloatField
+      FieldName = 'CANTIDADDESMANTELADA'
+      Origin = 'TRASLADOMATERIALDETALLE.CANTIDADDESMANTELADA'
+      OnValidate = qTrasladoMaterialDetalleCANTIDADDESMANTELADAValidate
+    end
+  end
+  object qSerial: TQuery
+    CachedUpdates = True
+    AfterPost = qSerialAfterPost
+    BeforeDelete = qSerialBeforeDelete
+    AfterDelete = qSerialAfterDelete
+    DatabaseName = 'BaseDato'
+    DataSource = dsTrasladoMaterialDetalle
+    SQL.Strings = (
+      'SELECT c.* FROM  COM_TRASLADOSERIAL c'
+      'where codigotraslado=:codigotraslado'
+      'and cod_catalogo=:codigomaterial')
+    UpdateObject = usqlSerial
+    Left = 288
+    Top = 320
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOTRASLADO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOMATERIAL'
+        ParamType = ptUnknown
+      end>
+    object qSerialCOD_CATALOGO: TFloatField
+      FieldName = 'COD_CATALOGO'
+      Origin = 'COM_M_ENTREGA_MATERIAL_SERIAL.COD_CATALOGO'
+    end
+    object qSerialSERIAL: TStringField
+      FieldName = 'SERIAL'
+      Origin = 'COM_M_ENTREGA_MATERIAL_SERIAL.SERIAL'
+    end
+    object qSerialESTADO: TStringField
+      FieldName = 'ESTADO'
+      Origin = 'COM_REINTEGROSERIAL.ESTADO'
+      Size = 2
+    end
+    object qSerialCODIGOTRASLADO: TFloatField
+      FieldName = 'CODIGOTRASLADO'
+      Origin = 'COM_TRASLADOSERIAL.CODIGOTRASLADO'
+    end
+  end
+  object dsSerial: TDataSource
+    DataSet = qSerial
+    Left = 216
+    Top = 358
+  end
+  object usqlSerial: TUpdateSQL
+    ModifySQL.Strings = (
+      'update COM_TRASLADOSERIAL'
+      'set'
+      '  CODIGOTRASLADO = :CODIGOTRASLADO,'
+      '  COD_CATALOGO = :COD_CATALOGO,'
+      '  SERIAL = :SERIAL,'
+      '  ESTADO = :ESTADO'
+      'where'
+      '  CODIGOTRASLADO = :OLD_CODIGOTRASLADO and'
+      '  COD_CATALOGO = :OLD_COD_CATALOGO and'
+      '  SERIAL = :OLD_SERIAL')
+    InsertSQL.Strings = (
+      'insert into COM_TRASLADOSERIAL'
+      '  (CODIGOTRASLADO, COD_CATALOGO, SERIAL, ESTADO)'
+      'values'
+      '  (:CODIGOTRASLADO, :COD_CATALOGO, :SERIAL, :ESTADO)')
+    DeleteSQL.Strings = (
+      'delete from COM_TRASLADOSERIAL'
+      'where'
+      '  CODIGOTRASLADO = :OLD_CODIGOTRASLADO and'
+      '  COD_CATALOGO = :OLD_COD_CATALOGO and'
+      '  SERIAL = :OLD_SERIAL')
+    Left = 176
+    Top = 374
+  end
+  object qAlmSerial: TQuery
+    CachedUpdates = True
+    AfterPost = qAlmSerialAfterPost
+    DatabaseName = 'basedato'
+    DataSource = dsSerial
+    SQL.Strings = (
+      'SELECT ASM.*'
+      'FROM ALM_SERIALMATERIAL ASM'
+      'WHERE ASM.CODIGOMATERIAL=:COD_CATALOGO'
+      'AND ASM.SERIAL=:SERIAL')
+    UpdateObject = UpdAlmSerial
+    Left = 193
+    Top = 321
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'COD_CATALOGO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'SERIAL'
+        ParamType = ptUnknown
+      end>
+    object qAlmSerialCODIGOMATERIAL: TFloatField
+      FieldName = 'CODIGOMATERIAL'
+      Origin = 'ALM_SERIALMATERIAL.CODIGOMATERIAL'
+    end
+    object qAlmSerialSERIAL: TStringField
+      FieldName = 'SERIAL'
+      Origin = 'ALM_SERIALMATERIAL.SERIAL'
+    end
+    object qAlmSerialCIAS_CIAS: TFloatField
+      FieldName = 'CIAS_CIAS'
+      Origin = 'ALM_SERIALMATERIAL.CIAS_CIAS'
+    end
+    object qAlmSerialCOD_ALMACEN: TStringField
+      FieldName = 'COD_ALMACEN'
+      Origin = 'ALM_SERIALMATERIAL.COD_ALMACEN'
+      Size = 5
+    end
+    object qAlmSerialCOD_BODEGA: TStringField
+      FieldName = 'COD_BODEGA'
+      Origin = 'ALM_SERIALMATERIAL.COD_BODEGA'
+      Size = 5
+    end
+    object qAlmSerialCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'ALM_SERIALMATERIAL.CODIGOADMINISTRATIVO'
+    end
+    object qAlmSerialCODIGOGRUPOTRABAJO: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJO'
+      Origin = 'ALM_SERIALMATERIAL.CODIGOGRUPOTRABAJO'
+    end
+    object qAlmSerialCODIGOCOMPRA: TFloatField
+      FieldName = 'CODIGOCOMPRA'
+      Origin = 'ALM_SERIALMATERIAL.CODIGOCOMPRA'
+    end
+    object qAlmSerialCODIGOTIPOELEMENTO: TStringField
+      FieldName = 'CODIGOTIPOELEMENTO'
+      Origin = 'ALM_SERIALMATERIAL.CODIGOTIPOELEMENTO'
+      Size = 2
+    end
+    object qAlmSerialCODIGOAPOYO: TFloatField
+      FieldName = 'CODIGOAPOYO'
+      Origin = 'ALM_SERIALMATERIAL.CODIGOAPOYO'
+    end
+    object qAlmSerialCODIGOELEMENTO: TFloatField
+      FieldName = 'CODIGOELEMENTO'
+      Origin = 'ALM_SERIALMATERIAL.CODIGOELEMENTO'
+    end
+    object qAlmSerialACTIVO: TStringField
+      FieldName = 'ACTIVO'
+      Origin = 'ALM_SERIALMATERIAL.ACTIVO'
+      Size = 1
+    end
+    object qAlmSerialCODIGOSERIALTERCERO: TFloatField
+      FieldName = 'CODIGOSERIALTERCERO'
+      Origin = 'ALM_SERIALMATERIAL.CODIGOSERIALTERCERO'
+    end
+    object qAlmSerialESTADO: TStringField
+      FieldName = 'ESTADO'
+      Origin = 'ALM_SERIALMATERIAL.ESTADO'
+      Size = 2
+    end
+    object qAlmSerialCODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'ALM_SERIALMATERIAL.CODIGOEMPLEADO'
+    end
+    object qAlmSerialCODIGOESTADOSERIAL: TFloatField
+      FieldName = 'CODIGOESTADOSERIAL'
+      Origin = 'ALM_SERIALMATERIAL.CODIGOESTADOSERIAL'
+    end
+  end
+  object UpdAlmSerial: TUpdateSQL
+    ModifySQL.Strings = (
+      'update ALM_SERIALMATERIAL'
+      'set'
+      '  CODIGOMATERIAL = :CODIGOMATERIAL,'
+      '  SERIAL = :SERIAL,'
+      '  CODIGOADMINISTRATIVO = :CODIGOADMINISTRATIVO,'
+      '  CODIGOGRUPOTRABAJO = :CODIGOGRUPOTRABAJO'
+      'where'
+      '  CODIGOMATERIAL = :OLD_CODIGOMATERIAL and'
+      '  SERIAL = :OLD_SERIAL')
+    InsertSQL.Strings = (
+      'insert into ALM_SERIALMATERIAL'
+      '  (CODIGOMATERIAL, SERIAL, CODIGOADMINISTRATIVO, '
+      'CODIGOGRUPOTRABAJO)'
+      'values'
+      '  (:CODIGOMATERIAL, :SERIAL, :CODIGOADMINISTRATIVO, '
+      ':CODIGOGRUPOTRABAJO)')
+    DeleteSQL.Strings = (
+      'delete from ALM_SERIALMATERIAL'
+      'where'
+      '  CODIGOMATERIAL = :OLD_CODIGOMATERIAL and'
+      '  SERIAL = :OLD_SERIAL')
+    Left = 305
+    Top = 380
+  end
+end

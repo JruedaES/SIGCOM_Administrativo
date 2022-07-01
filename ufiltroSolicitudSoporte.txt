@@ -1,0 +1,741 @@
+object fFiltroSolicitudSoporte: TfFiltroSolicitudSoporte
+  Left = 421
+  Top = 199
+  Width = 360
+  Height = 427
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel2: TPanel
+    Left = 0
+    Top = 362
+    Width = 352
+    Height = 31
+    Align = alBottom
+    TabOrder = 0
+    object BitBtnAnularFiltro: TBitBtn
+      Left = 324
+      Top = 4
+      Width = 23
+      Height = 23
+      ModalResult = 2
+      TabOrder = 0
+      OnClick = BitBtnAnularFiltroClick
+      Glyph.Data = {
+        EE000000424DEE000000000000007600000028000000100000000F0000000100
+        0400000000007800000000000000000000001000000010000000000000000000
+        8000008000000080800080000000800080008080000080808000C0C0C0000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+        8889998888888888889999988800008089908899980660899988888999088099
+        9888888889988998888888888899998888888888806999088888888806999990
+        88888880699888990888880999F88889908880999FFF88869998899000000000
+        099999888888888888899888888888888889}
+    end
+    object bitBFiltrar: TBitBtn
+      Left = 299
+      Top = 5
+      Width = 23
+      Height = 22
+      ModalResult = 1
+      TabOrder = 1
+      OnClick = bitBFiltrarClick
+      Glyph.Data = {
+        EE000000424DEE000000000000007600000028000000100000000F0000000100
+        0400000000007800000000000000000000001000000010000000000000000000
+        8000008000000080800080000000800080008080000080808000C0C0C0000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+        8888888888888888888888888800008080808888880660888888888888088088
+        8888888888088088888888888808808888888888806886088888888806688860
+        8888888066888866088888066FF8888660888066FFFF88866608800000000000
+        000888888888888888888888888888888888}
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 30
+    Width = 352
+    Height = 332
+    Align = alClient
+    TabOrder = 1
+    object Label6: TLabel
+      Left = 11
+      Top = 56
+      Width = 46
+      Height = 13
+      Caption = 'Aplicativo'
+    end
+    object Label7: TLabel
+      Left = 12
+      Top = 139
+      Width = 36
+      Height = 13
+      Caption = 'Estado:'
+    end
+    object Label8: TLabel
+      Left = 133
+      Top = 139
+      Width = 44
+      Height = 13
+      Caption = 'Prioridad:'
+    end
+    object Label9: TLabel
+      Left = 248
+      Top = 139
+      Width = 24
+      Height = 13
+      Caption = 'Tipo:'
+    end
+    object Label14: TLabel
+      Left = 11
+      Top = 96
+      Width = 87
+      Height = 13
+      Caption = 'Ingeniero a Cargo.'
+    end
+    object DBEdit2: TDBEdit
+      Left = 12
+      Top = 71
+      Width = 50
+      Height = 21
+      DataField = 'CODIGOAPLICATIVO'
+      DataSource = dsAplicativo
+      Enabled = False
+      TabOrder = 0
+    end
+    object GroupBox1: TGroupBox
+      Left = 14
+      Top = 6
+      Width = 331
+      Height = 45
+      Caption = 'Código Solicitud'
+      TabOrder = 1
+      object Label1: TLabel
+        Left = 5
+        Top = 18
+        Width = 34
+        Height = 13
+        Caption = 'Desde:'
+      end
+      object Label5: TLabel
+        Left = 169
+        Top = 19
+        Width = 31
+        Height = 13
+        Caption = 'Hasta:'
+      end
+      object Edit1: TEdit
+        Left = 40
+        Top = 15
+        Width = 95
+        Height = 21
+        TabOrder = 0
+      end
+      object edit2: TEdit
+        Left = 206
+        Top = 15
+        Width = 95
+        Height = 21
+        TabOrder = 1
+      end
+    end
+    object GroupBox2: TGroupBox
+      Left = 10
+      Top = 181
+      Width = 337
+      Height = 68
+      Caption = 'Fecha Solicitud:'
+      TabOrder = 8
+      object Label3: TLabel
+        Left = 50
+        Top = 19
+        Width = 64
+        Height = 13
+        Caption = 'Fecha Desde'
+      end
+      object Label4: TLabel
+        Left = 50
+        Top = 47
+        Width = 61
+        Height = 13
+        Caption = 'Fecha Hasta'
+      end
+      object sbFechaDictado: TSpeedButton
+        Left = 288
+        Top = 13
+        Width = 22
+        Height = 21
+        Glyph.Data = {
+          4E010000424D4E01000000000000760000002800000012000000120000000100
+          040000000000D800000000000000000000001000000010000000000000000000
+          BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333330000003333333333333333330000003338888888888888330000003304
+          0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+          FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+          F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033F7777777777F4833000000330000000000003333000000333333333333
+          333333000000333333333333333333000000}
+        OnClick = sbFechaDictadoClick
+      end
+      object SpeedButton3: TSpeedButton
+        Left = 288
+        Top = 38
+        Width = 22
+        Height = 21
+        Glyph.Data = {
+          4E010000424D4E01000000000000760000002800000012000000120000000100
+          040000000000D800000000000000000000001000000010000000000000000000
+          BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333330000003333333333333333330000003338888888888888330000003304
+          0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+          FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+          F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033F7777777777F4833000000330000000000003333000000333333333333
+          333333000000333333333333333333000000}
+        OnClick = SpeedButton3Click
+      end
+      object EFechasolicitudDesde: TEdit
+        Left = 136
+        Top = 15
+        Width = 145
+        Height = 21
+        TabOrder = 0
+      end
+      object eFechaSolicitudHasta: TEdit
+        Left = 136
+        Top = 40
+        Width = 145
+        Height = 21
+        TabOrder = 1
+      end
+    end
+    object gbProgramacion: TGroupBox
+      Left = 396
+      Top = 418
+      Width = 321
+      Height = 118
+      Caption = 'Fecha'
+      TabOrder = 9
+      object Label18: TLabel
+        Left = 6
+        Top = 15
+        Width = 54
+        Height = 13
+        Caption = 'Aprobación'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+      end
+      object sbFechaAprobacion: TSpeedButton
+        Tag = 9
+        Left = 288
+        Top = 11
+        Width = 22
+        Height = 21
+        Glyph.Data = {
+          4E010000424D4E01000000000000760000002800000012000000120000000100
+          040000000000D800000000000000000000001000000010000000000000000000
+          BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333330000003333333333333333330000003338888888888888330000003304
+          0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+          FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+          F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033F7777777777F4833000000330000000000003333000000333333333333
+          333333000000333333333333333333000000}
+      end
+      object LFechaAsignacion: TLabel
+        Left = 6
+        Top = 41
+        Width = 52
+        Height = 13
+        Caption = 'Asignación'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+      end
+      object sbFechaAsignacion: TSpeedButton
+        Tag = 9
+        Left = 288
+        Top = 37
+        Width = 22
+        Height = 21
+        Glyph.Data = {
+          4E010000424D4E01000000000000760000002800000012000000120000000100
+          040000000000D800000000000000000000001000000010000000000000000000
+          BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333330000003333333333333333330000003338888888888888330000003304
+          0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+          FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+          F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033F7777777777F4833000000330000000000003333000000333333333333
+          333333000000333333333333333333000000}
+      end
+      object Label23: TLabel
+        Left = 6
+        Top = 66
+        Width = 27
+        Height = 13
+        Caption = 'Inicial'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+      end
+      object sbFechaInicial: TSpeedButton
+        Tag = 9
+        Left = 288
+        Top = 64
+        Width = 22
+        Height = 20
+        Glyph.Data = {
+          4E010000424D4E01000000000000760000002800000012000000120000000100
+          040000000000D800000000000000000000001000000010000000000000000000
+          BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333330000003333333333333333330000003338888888888888330000003304
+          0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+          FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+          F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033F7777777777F4833000000330000000000003333000000333333333333
+          333333000000333333333333333333000000}
+      end
+      object Label27: TLabel
+        Left = 6
+        Top = 92
+        Width = 22
+        Height = 13
+        Caption = 'Final'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+      end
+      object sbFechaFin: TSpeedButton
+        Tag = 9
+        Left = 288
+        Top = 89
+        Width = 22
+        Height = 21
+        Glyph.Data = {
+          4E010000424D4E01000000000000760000002800000012000000120000000100
+          040000000000D800000000000000000000001000000010000000000000000000
+          BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333330000003333333333333333330000003338888888888888330000003304
+          0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+          FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+          F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033F7777777777F4833000000330000000000003333000000333333333333
+          333333000000333333333333333333000000}
+      end
+      object dbeFechaAsignacion: TDBEdit
+        Tag = 9
+        Left = 80
+        Top = 37
+        Width = 191
+        Height = 21
+        DataField = 'FECHAASIGNACION'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -8
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 1
+      end
+      object dbeFechaAprobacion: TDBEdit
+        Tag = 9
+        Left = 80
+        Top = 11
+        Width = 191
+        Height = 21
+        DataField = 'FECHAAPROBACION'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -8
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+      end
+      object dbEdFechaInicio: TDBEdit
+        Tag = 9
+        Left = 80
+        Top = 63
+        Width = 191
+        Height = 21
+        DataField = 'FECHAINICIO'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -8
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 2
+      end
+      object dbEdFechaFin: TDBEdit
+        Tag = 9
+        Left = 80
+        Top = 89
+        Width = 191
+        Height = 21
+        DataField = 'FECHAFINAL'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -8
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 3
+      end
+    end
+    object dblcbAplicativo: TDBLookupComboBox
+      Left = 67
+      Top = 72
+      Width = 281
+      Height = 21
+      KeyField = 'CODIGOAPLICATIVO'
+      ListField = 'NOMBREAPLICATIVO'
+      ListSource = dsAplicativo
+      TabOrder = 2
+    end
+    object dblcbEstado: TDBLookupComboBox
+      Left = 11
+      Top = 152
+      Width = 107
+      Height = 21
+      KeyField = 'CODIGOESTADOSOLICITUD'
+      ListField = 'NOMBREESTADOSOLICITUD'
+      ListSource = dsEstado
+      TabOrder = 5
+    end
+    object dblcbprioridad: TDBLookupComboBox
+      Left = 133
+      Top = 152
+      Width = 104
+      Height = 21
+      KeyField = 'CODIGOPRIORIDADSOLICITUD'
+      ListField = 'NOMBREPRIORIDADSOLICITUD'
+      ListSource = dsTipoPrioridad
+      TabOrder = 6
+    end
+    object dblcbTipo: TDBLookupComboBox
+      Left = 248
+      Top = 152
+      Width = 100
+      Height = 21
+      KeyField = 'CODIGOTIPOSOLICITUD'
+      ListField = 'NOMBRETIPOSOLICITUD'
+      ListSource = dsTipoSolicitud
+      TabOrder = 7
+    end
+    object GroupBox3: TGroupBox
+      Left = 9
+      Top = 249
+      Width = 337
+      Height = 68
+      Caption = 'Fecha Asignación:'
+      TabOrder = 10
+      object Label10: TLabel
+        Left = 50
+        Top = 19
+        Width = 64
+        Height = 13
+        Caption = 'Fecha Desde'
+      end
+      object Label11: TLabel
+        Left = 52
+        Top = 47
+        Width = 61
+        Height = 13
+        Caption = 'Fecha Hasta'
+      end
+      object SpeedButton1: TSpeedButton
+        Left = 288
+        Top = 13
+        Width = 22
+        Height = 21
+        Glyph.Data = {
+          4E010000424D4E01000000000000760000002800000012000000120000000100
+          040000000000D800000000000000000000001000000010000000000000000000
+          BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333330000003333333333333333330000003338888888888888330000003304
+          0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+          FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+          F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033F7777777777F4833000000330000000000003333000000333333333333
+          333333000000333333333333333333000000}
+        OnClick = SpeedButton1Click
+      end
+      object SpeedButton2: TSpeedButton
+        Left = 289
+        Top = 38
+        Width = 22
+        Height = 21
+        Glyph.Data = {
+          4E010000424D4E01000000000000760000002800000012000000120000000100
+          040000000000D800000000000000000000001000000010000000000000000000
+          BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333330000003333333333333333330000003338888888888888330000003304
+          0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+          FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+          F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033F7777777777F4833000000330000000000003333000000333333333333
+          333333000000333333333333333333000000}
+        OnClick = SpeedButton2Click
+      end
+      object eFechaAsignacionDesde: TEdit
+        Left = 136
+        Top = 16
+        Width = 145
+        Height = 21
+        TabOrder = 0
+      end
+      object eFechaAsignacionHasta: TEdit
+        Left = 136
+        Top = 40
+        Width = 145
+        Height = 21
+        TabOrder = 1
+      end
+    end
+    object DBEdit4: TDBEdit
+      Left = 12
+      Top = 111
+      Width = 50
+      Height = 21
+      DataField = 'CODIGOUSUARIO'
+      DataSource = dsUsuario
+      Enabled = False
+      TabOrder = 3
+    end
+    object dblcbIngenieroSoporte: TDBLookupComboBox
+      Left = 67
+      Top = 112
+      Width = 281
+      Height = 21
+      KeyField = 'CODIGOUSUARIO'
+      ListField = 'NOMBREUSUARIO'
+      ListSource = dsUsuario
+      TabOrder = 4
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 0
+    Width = 352
+    Height = 30
+    Align = alTop
+    Caption = 'FILTRO SOLICITUD DE SOPORTE'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clNavy
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+  end
+  object qTipoPrioridad: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM SE_PRIORIDADSOLICITUD'
+      'ORDER BY NOMBREPRIORIDADSOLICITUD')
+    Left = 501
+    Top = 62
+    object qTipoPrioridadCODIGOPRIORIDADSOLICITUD: TFloatField
+      FieldName = 'CODIGOPRIORIDADSOLICITUD'
+      Origin = 'SE_PRIORIDADSOLICITUD.CODIGOPRIORIDADSOLICITUD'
+    end
+    object qTipoPrioridadNOMBREPRIORIDADSOLICITUD: TStringField
+      FieldName = 'NOMBREPRIORIDADSOLICITUD'
+      Origin = 'SE_PRIORIDADSOLICITUD.NOMBREPRIORIDADSOLICITUD'
+      Size = 80
+    end
+  end
+  object dsTipoPrioridad: TDataSource
+    DataSet = qTipoPrioridad
+    Left = 501
+    Top = 110
+  end
+  object qAplicativo: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM SE_APLICATIVO'
+      'ORDER BY NOMBREAPLICATIVO')
+    Left = 573
+    Top = 62
+    object qAplicativoCODIGOAPLICATIVO: TFloatField
+      FieldName = 'CODIGOAPLICATIVO'
+      Origin = 'SE_APLICATIVO.CODIGOAPLICATIVO'
+    end
+    object qAplicativoNOMBREAPLICATIVO: TStringField
+      FieldName = 'NOMBREAPLICATIVO'
+      Origin = 'SE_APLICATIVO.NOMBREAPLICATIVO'
+      Size = 250
+    end
+  end
+  object dsAplicativo: TDataSource
+    DataSet = qAplicativo
+    Left = 573
+    Top = 110
+  end
+  object qEstado: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM SE_ESTADOSOLICITUD'
+      'ORDER BY NOMBREESTADOSOLICITUD')
+    Left = 637
+    Top = 62
+    object qEstadoCODIGOESTADOSOLICITUD: TFloatField
+      FieldName = 'CODIGOESTADOSOLICITUD'
+      Origin = 'SE_ESTADOSOLICITUD.CODIGOESTADOSOLICITUD'
+    end
+    object qEstadoNOMBREESTADOSOLICITUD: TStringField
+      FieldName = 'NOMBREESTADOSOLICITUD'
+      Origin = 'SE_ESTADOSOLICITUD.NOMBREESTADOSOLICITUD'
+      Size = 80
+    end
+  end
+  object dsEstado: TDataSource
+    DataSet = qEstado
+    Left = 637
+    Top = 110
+  end
+  object qTipoSolicitud: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM SE_TIPOSOLICITUD'
+      'ORDER BY NOMBRETIPOSOLICITUD')
+    Left = 701
+    Top = 62
+    object qTipoSolicitudCODIGOTIPOSOLICITUD: TFloatField
+      FieldName = 'CODIGOTIPOSOLICITUD'
+      Origin = 'SE_TIPOSOLICITUD.CODIGOTIPOSOLICITUD'
+    end
+    object qTipoSolicitudNOMBRETIPOSOLICITUD: TStringField
+      FieldName = 'NOMBRETIPOSOLICITUD'
+      Origin = 'SE_TIPOSOLICITUD.NOMBRETIPOSOLICITUD'
+      Size = 80
+    end
+  end
+  object dsTipoSolicitud: TDataSource
+    DataSet = qTipoSolicitud
+    Left = 701
+    Top = 110
+  end
+  object qUsuario: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOUSUARIO,NOMBREUSUARIO,CODIGOTIPOUSUARIO'
+      'FROM USUARIO'
+      'ORDER BY NOMBREUSUARIO')
+    Left = 765
+    Top = 62
+    object qUsuarioCODIGOUSUARIO: TFloatField
+      FieldName = 'CODIGOUSUARIO'
+      Origin = 'USUARIO.CODIGOUSUARIO'
+    end
+    object qUsuarioNOMBREUSUARIO: TStringField
+      FieldName = 'NOMBREUSUARIO'
+      Origin = 'USUARIO.NOMBREUSUARIO'
+      Size = 40
+    end
+    object qUsuarioCODIGOTIPOUSUARIO: TStringField
+      FieldName = 'CODIGOTIPOUSUARIO'
+      Origin = 'USUARIO.CODIGOTIPOUSUARIO'
+      Size = 2
+    end
+  end
+  object dsUsuario: TDataSource
+    DataSet = qUsuario
+    Left = 765
+    Top = 110
+  end
+  object qCIA: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT NOMBREADMINISTRATIVO'
+      'FROM ADMINISTRATIVO ')
+    Left = 491
+    Top = 197
+  end
+  object qAreaFuncional: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM SE_AREAFUNCIONAL'
+      'ORDER BY NOMBREAREAFUNCIONAL')
+    Left = 877
+    Top = 62
+    object qAreaFuncionalCODIGOAREAFUNCIONAL: TFloatField
+      FieldName = 'CODIGOAREAFUNCIONAL'
+      Origin = 'SE_AREAFUNCIONAL.CODIGOAREAFUNCIONAL'
+    end
+    object qAreaFuncionalNOMBREAREAFUNCIONAL: TStringField
+      FieldName = 'NOMBREAREAFUNCIONAL'
+      Origin = 'SE_AREAFUNCIONAL.NOMBREAREAFUNCIONAL'
+      Size = 250
+    end
+  end
+  object dsAreaFuncional: TDataSource
+    DataSet = qAreaFuncional
+    Left = 877
+    Top = 110
+  end
+  object qAdministrativo: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOADMINISTRATIVO, NOMBREADMINISTRATIVO'
+      'FROM ADMINISTRATIVO')
+    Left = 581
+    Top = 200
+    object qAdministrativoCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.CODIGOADMINISTRATIVO'
+    end
+    object qAdministrativoNOMBREADMINISTRATIVO: TStringField
+      FieldName = 'NOMBREADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.NOMBREADMINISTRATIVO'
+      Size = 250
+    end
+  end
+  object dsCia: TDataSource
+    DataSet = qCIA
+    Left = 493
+    Top = 254
+  end
+  object dsAdministrativo: TDataSource
+    DataSet = qAdministrativo
+    Left = 581
+    Top = 254
+  end
+end

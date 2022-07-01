@@ -1,0 +1,91 @@
+inherited fSeleccionarUsuario: TfSeleccionarUsuario
+  Caption = 'Seleccionar Usuario'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel2: TPanel
+    inherited dbgDatos: TRxDBGrid
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'CODIGOUSUARIO'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Código'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'LOGINUSUARIO'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Login'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREUSUARIO'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Nombre'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Visible = True
+        end>
+    end
+    inherited Panel3: TPanel
+      inherited SBFiltrar: TSpeedButton
+        OnClick = SBFiltrarClick
+      end
+      inherited Label2: TLabel
+        Left = 146
+        Width = 32
+        Caption = 'Login :'
+      end
+      inherited Label3: TLabel
+        Left = 306
+        Width = 43
+        Caption = 'Nombre :'
+      end
+      inherited EdCodigo2: TEdit
+        CharCase = ecUpperCase
+      end
+      inherited EdNombre: TEdit
+        CharCase = ecUpperCase
+      end
+    end
+  end
+  inherited dsDatos: TDataSource
+    DataSet = qDatos
+  end
+  inherited qDatos: TQuery
+    Active = True
+    SQL.Strings = (
+      'select codigousuario,loginusuario,nombreusuario from usuario')
+    object qDatosCODIGOUSUARIO: TFloatField
+      FieldName = 'CODIGOUSUARIO'
+      Origin = 'USUARIO.CODIGOUSUARIO'
+    end
+    object qDatosLOGINUSUARIO: TStringField
+      FieldName = 'LOGINUSUARIO'
+      Origin = 'USUARIO.LOGINUSUARIO'
+    end
+    object qDatosNOMBREUSUARIO: TStringField
+      FieldName = 'NOMBREUSUARIO'
+      Origin = 'USUARIO.NOMBREUSUARIO'
+      Size = 40
+    end
+  end
+end

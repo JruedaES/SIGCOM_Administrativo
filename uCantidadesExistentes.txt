@@ -1,0 +1,344 @@
+object fCantidadesExistentes: TfCantidadesExistentes
+  Left = 390
+  Top = 23
+  Width = 651
+  Height = 690
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Cantidades Existentes'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 635
+    Height = 65
+    Align = alTop
+    Caption = 'Existencias del Elemento:  '
+    Color = clWhite
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+    object LNombreMaterial: TLabel
+      Left = 72
+      Top = 40
+      Width = 473
+      Height = 16
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '111'
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 610
+    Width = 635
+    Height = 41
+    Align = alBottom
+    TabOrder = 1
+    object bbCancelar: TBitBtn
+      Left = 533
+      Top = 7
+      Width = 75
+      Height = 25
+      Caption = '&Close'
+      ModalResult = 1
+      TabOrder = 0
+      Glyph.Data = {
+        DE010000424DDE01000000000000760000002800000024000000120000000100
+        0400000000006801000000000000000000001000000010000000000000000000
+        80000080000000808000800000008000800080800000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00388888888877
+        F7F787F8888888888333333F00004444400888FFF444448888888888F333FF8F
+        000033334D5007FFF4333388888888883338888F0000333345D50FFFF4333333
+        338F888F3338F33F000033334D5D0FFFF43333333388788F3338F33F00003333
+        45D50FEFE4333333338F878F3338F33F000033334D5D0FFFF43333333388788F
+        3338F33F0000333345D50FEFE4333333338F878F3338F33F000033334D5D0FFF
+        F43333333388788F3338F33F0000333345D50FEFE4333333338F878F3338F33F
+        000033334D5D0EFEF43333333388788F3338F33F0000333345D50FEFE4333333
+        338F878F3338F33F000033334D5D0EFEF43333333388788F3338F33F00003333
+        4444444444333333338F8F8FFFF8F33F00003333333333333333333333888888
+        8888333F00003333330000003333333333333FFFFFF3333F00003333330AAAA0
+        333333333333888888F3333F00003333330000003333333333338FFFF8F3333F
+        0000}
+      NumGlyphs = 2
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 65
+    Width = 635
+    Height = 545
+    Align = alClient
+    Caption = 'Panel2'
+    TabOrder = 2
+    object Label1: TLabel
+      Left = 8
+      Top = 8
+      Width = 169
+      Height = 16
+      Caption = 'Existencias en Almacen:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 9
+      Top = 200
+      Width = 240
+      Height = 16
+      Caption = 'Existencias en Grupos de Trabajo:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 8
+      Top = 392
+      Width = 139
+      Height = 16
+      Caption = 'Existencias en SAP:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object DBGrid2: TDBGrid
+      Left = 8
+      Top = 33
+      Width = 601
+      Height = 152
+      DataSource = dsAlmacen
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'ALMACEN_DESCRI'
+          Title.Caption = 'Almacen'
+          Width = 239
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'BODEGA_DESCRI'
+          Title.Caption = 'Bodega'
+          Width = 109
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'SALDO_CANTIDAD'
+          Title.Caption = 'Cantidad'
+          Width = 105
+          Visible = True
+        end>
+    end
+    object DBGrid1: TDBGrid
+      Left = 8
+      Top = 223
+      Width = 601
+      Height = 152
+      DataSource = dsGruposTrabajo
+      TabOrder = 1
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'CODIGOADMINISTRATIVO'
+          Title.Caption = 'Cod'
+          Width = 31
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRECATEGORIA'
+          Title.Caption = 'Dependencia'
+          Width = 206
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGOGRUPOTRABAJO'
+          Title.Caption = 'Cod'
+          Width = 33
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREGRUPOTRABAJO'
+          Title.Caption = 'Grupo de Trabajo'
+          Width = 156
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CANTIDADACTUAL'
+          Title.Caption = 'Nueva'
+          Width = 74
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CANTIDADACTUALDESMANTELADABUEN'
+          Title.Caption = 'Desmantelada'
+          Visible = True
+        end>
+    end
+    object sgSap: TStringGrid
+      Left = 8
+      Top = 416
+      Width = 601
+      Height = 121
+      ColCount = 4
+      DefaultColWidth = 10
+      DefaultRowHeight = 17
+      RowCount = 2
+      TabOrder = 2
+      ColWidths = (
+        10
+        250
+        121
+        91)
+    end
+  end
+  object qAlmacen: TQuery
+    BeforeOpen = qAlmacenBeforeOpen
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT alm.almacen_descri, bod.bodega_descri, (NVL(inv.SALDO_CAN' +
+        'TIDAD,0) - NVL(INV.ACUM_CANTI_RESERVA,0) ) AS SALDO_CANTIDAD'
+      
+        'FROM inv_m_inventario_real inv, com_s_catalogo cat, inv_s_bodega' +
+        ' bod, inv_s_almacen alm'
+      'WHERE inv.cod_catalogo = :catalogo'
+      'AND inv.cod_almacen = bod.cod_almacen'
+      'AND inv.cod_bodega = bod.cod_bodega'
+      'AND bod.cod_almacen = alm.COD_ALMACEN'
+      'AND inv.cod_catalogo = cat.cod_catalogo'
+      'AND (inv.SALDO_CANTIDAD - INV.ACUM_CANTI_RESERVA)> 0'
+      ' ')
+    Left = 426
+    Top = 142
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'catalogo'
+        ParamType = ptUnknown
+      end>
+    object qAlmacenALMACEN_DESCRI: TStringField
+      FieldName = 'ALMACEN_DESCRI'
+      Origin = 'INV_S_ALMACEN.ALMACEN_DESCRI'
+      Size = 60
+    end
+    object qAlmacenBODEGA_DESCRI: TStringField
+      FieldName = 'BODEGA_DESCRI'
+      Origin = 'INV_S_BODEGA.BODEGA_DESCRI'
+      Size = 60
+    end
+    object qAlmacenSALDO_CANTIDAD: TFloatField
+      FieldName = 'SALDO_CANTIDAD'
+      Origin = 'INV_M_INVENTARIO_REAL.SALDO_CANTIDAD'
+    end
+  end
+  object dsAlmacen: TDataSource
+    DataSet = qAlmacen
+    Left = 434
+    Top = 187
+  end
+  object qGruposTrabajo: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'select adm.codigoadministrativo, adm.nombreCategoria, gru.codigo' +
+        'grupotrabajo, gru.nombregrupotrabajo, NVL(stk.cantidadactual,0) ' +
+        'as cantidadactual,'
+      
+        'NVL(stk.CANTIDADACTUALDESMANTELADABUEN, 0) as CANTIDADACTUALDESM' +
+        'ANTELADABUEN from administrativo adm, '
+      'grupotrabajo gru, stockgrupotrabajo stk, materialessa mat'
+      'where stk.codigomaterial = :codigomaterial'
+      'and stk.codigoadministrativo = adm.CODIGOADMINISTRATIVO'
+      'and stk.codigogrupotrabajo = gru.CODIGOGRUPOTRABAJO'
+      'and stk.codigoadministrativo = gru.CODIGOADMINISTRATIVO'
+      
+        'and ((stk.cantidadactual >0) or (stk.cantidadactualdesmanteladab' +
+        'uen>0)) '
+      'and stk.codigomaterial = mat.CODIGOMATERIAL'
+      'AND adm.codigoadministrativo = :codigoadministrativo'
+      'order by adm.codigoadministrativo,gru.codigogrupotrabajo'
+      ' '
+      ' ')
+    Left = 74
+    Top = 350
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'codigomaterial'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'codigoadministrativo'
+        ParamType = ptUnknown
+      end>
+    object qGruposTrabajoNOMBRECATEGORIA: TStringField
+      FieldName = 'NOMBRECATEGORIA'
+      Origin = 'ADMINISTRATIVO.NOMBRECATEGORIA'
+      Size = 80
+    end
+    object qGruposTrabajoNOMBREGRUPOTRABAJO: TStringField
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+    object qGruposTrabajoCANTIDADACTUAL: TFloatField
+      FieldName = 'CANTIDADACTUAL'
+      Origin = 'STOCKGRUPOTRABAJO.CANTIDADACTUAL'
+    end
+    object qGruposTrabajoCANTIDADACTUALDESMANTELADABUEN: TFloatField
+      FieldName = 'CANTIDADACTUALDESMANTELADABUEN'
+      Origin = 'STOCKGRUPOTRABAJO.CANTIDADACTUALDESMANTELADABUEN'
+    end
+    object qGruposTrabajoCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.CODIGOADMINISTRATIVO'
+    end
+    object qGruposTrabajoCODIGOGRUPOTRABAJO: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.CODIGOGRUPOTRABAJO'
+    end
+  end
+  object dsGruposTrabajo: TDataSource
+    DataSet = qGruposTrabajo
+    Left = 74
+    Top = 387
+  end
+end

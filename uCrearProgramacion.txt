@@ -1,0 +1,1739 @@
+inherited FCrearProgramacion: TFCrearProgramacion
+  Left = 56
+  Top = 113
+  Width = 994
+  Height = 621
+  Caption = 'Crear Programaciones'
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel2: TPanel
+    Left = 0
+    Top = 0
+    Width = 986
+    Height = 242
+    Align = alTop
+    Caption = 'Panel2'
+    TabOrder = 0
+    object Panel4: TPanel
+      Left = 293
+      Top = 1
+      Width = 692
+      Height = 240
+      Align = alClient
+      Caption = 'Panel4'
+      TabOrder = 0
+      object DBGridProgramacion: TDBGrid
+        Left = 1
+        Top = 16
+        Width = 690
+        Height = 204
+        Align = alClient
+        DataSource = dsProgramacion
+        ReadOnly = True
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'CODIGOPROGRAMACION'
+            Title.Alignment = taCenter
+            Title.Caption = 'Código'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NOMBREPROGRAMACION'
+            Title.Alignment = taCenter
+            Title.Caption = 'Nombre'
+            Width = 214
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NombreTipoProgramacion'
+            Title.Alignment = taCenter
+            Title.Caption = 'Tipo'
+            Width = 86
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'ROTACION'
+            Title.Alignment = taCenter
+            Title.Caption = 'Rotación'
+            Width = 66
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'DIRECCIONROTACION'
+            Title.Alignment = taCenter
+            Title.Caption = 'Dirección Rotación'
+            Visible = True
+          end>
+      end
+      object TPanel
+        Left = 1
+        Top = 1
+        Width = 690
+        Height = 15
+        Align = alTop
+        Caption = 'Listado de Programación'
+        Color = 16744448
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 1
+      end
+      object DBNavigator1: TDBNavigator
+        Left = 1
+        Top = 220
+        Width = 690
+        Height = 19
+        DataSource = dsProgramacion
+        VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbEdit, nbPost, nbCancel]
+        Align = alBottom
+        Flat = True
+        TabOrder = 2
+      end
+    end
+    object Panel1: TPanel
+      Left = 1
+      Top = 1
+      Width = 292
+      Height = 240
+      Align = alLeft
+      TabOrder = 1
+      object Label3: TLabel
+        Left = 11
+        Top = 139
+        Width = 43
+        Height = 13
+        Caption = 'Rotación'
+        FocusControl = DBEdRotacion
+      end
+      object Label5: TLabel
+        Left = 63
+        Top = 198
+        Width = 57
+        Height = 13
+        Caption = 'Tipo Turnos'
+        FocusControl = DBLookupComboBox1
+      end
+      object Label7: TLabel
+        Left = 11
+        Top = 198
+        Width = 15
+        Height = 13
+        Caption = 'Cia'
+        FocusControl = DBLookupComboBox1
+      end
+      object dbrgTipoProgramacion: TDBRadioGroup
+        Left = 10
+        Top = 96
+        Width = 270
+        Height = 34
+        Caption = 'Tipo de Programación'
+        Columns = 2
+        DataField = 'CODIGOTIPOPROGRAMACION'
+        DataSource = dsProgramacion
+        Items.Strings = (
+          'Por persona'
+          'Por grupo trabajo')
+        TabOrder = 0
+        Values.Strings = (
+          'P'
+          'G')
+        OnChange = dbrgTipoProgramacionChange
+      end
+      object DBEdRotacion: TDBEdit
+        Left = 59
+        Top = 136
+        Width = 220
+        Height = 21
+        CharCase = ecUpperCase
+        DataField = 'ROTACION'
+        DataSource = dsProgramacion
+        TabOrder = 1
+      end
+      object dbrgTipoRotacion: TDBRadioGroup
+        Left = 10
+        Top = 162
+        Width = 270
+        Height = 34
+        Caption = 'Direccion Rotación Descanso'
+        Columns = 4
+        DataField = 'DIRECCIONROTACION'
+        DataSource = dsProgramacion
+        Items.Strings = (
+          'Adelante'
+          'Atrás'
+          'Estática'
+          'Continua')
+        TabOrder = 2
+        Values.Strings = (
+          '1'
+          '-1'
+          '0'
+          '2')
+        OnClick = dbrgTipoRotacionClick
+      end
+      object DBLookupComboBox1: TDBLookupComboBox
+        Left = 63
+        Top = 214
+        Width = 216
+        Height = 21
+        DataField = 'NombreTipoTurnoProgramacion'
+        DataSource = dsProgramacion
+        TabOrder = 3
+      end
+      object gbProgramacion: TGroupBox
+        Left = 10
+        Top = 1
+        Width = 270
+        Height = 93
+        Caption = 'Programación'
+        TabOrder = 4
+        object Label2: TLabel
+          Left = 51
+          Top = 13
+          Width = 37
+          Height = 13
+          Caption = 'Nombre'
+          FocusControl = DBEdNombreProgramacion
+        end
+        object Label1: TLabel
+          Left = 11
+          Top = 13
+          Width = 33
+          Height = 13
+          Caption = 'Código'
+        end
+        object Label6: TLabel
+          Left = 11
+          Top = 49
+          Width = 28
+          Height = 13
+          Caption = 'Título'
+          FocusControl = DBEdNombreProgramacion
+        end
+        object DBEdNombreProgramacion: TDBEdit
+          Left = 51
+          Top = 27
+          Width = 212
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'NOMBREPROGRAMACION'
+          DataSource = dsProgramacion
+          TabOrder = 0
+          OnKeyPress = FormKeyPress
+        end
+        object DBEdCodigoProgramacion: TDBEdit
+          Left = 11
+          Top = 27
+          Width = 36
+          Height = 21
+          Color = clSilver
+          DataField = 'CODIGOPROGRAMACION'
+          DataSource = dsProgramacion
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          ReadOnly = True
+          TabOrder = 1
+          OnKeyPress = FormKeyPress
+        end
+        object dbEdTituloProgramacion: TDBEdit
+          Left = 10
+          Top = 63
+          Width = 251
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'TITULOPROGRAMACION'
+          DataSource = dsProgramacion
+          TabOrder = 2
+          OnKeyPress = FormKeyPress
+        end
+      end
+      object dbEdCia: TDBEdit
+        Left = 11
+        Top = 214
+        Width = 38
+        Height = 21
+        CharCase = ecUpperCase
+        DataField = 'CODIGOADMINISTRATIVO'
+        DataSource = dsProgramacion
+        TabOrder = 5
+        OnKeyPress = FormKeyPress
+      end
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 548
+    Width = 986
+    Height = 41
+    Align = alBottom
+    TabOrder = 1
+  end
+  object Panel5: TPanel
+    Left = 0
+    Top = 242
+    Width = 986
+    Height = 306
+    Align = alClient
+    Caption = 'Panel5'
+    TabOrder = 2
+    object Notebook1: TNotebook
+      Left = 1
+      Top = 1
+      Width = 984
+      Height = 304
+      Align = alClient
+      PageIndex = 1
+      TabOrder = 0
+      object TPage
+        Left = 0
+        Top = 0
+      end
+      object TPage
+        Left = 0
+        Top = 0
+        Caption = 'Persona'
+        object Panel6: TPanel
+          Left = 0
+          Top = 0
+          Width = 371
+          Height = 304
+          Align = alLeft
+          Caption = 'Panel6'
+          TabOrder = 0
+          object TPanel
+            Left = 1
+            Top = 1
+            Width = 369
+            Height = 15
+            Align = alTop
+            Caption = 'Empleados Disponibles'
+            Color = 16744448
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 0
+          end
+          object Panel9: TPanel
+            Left = 1
+            Top = 16
+            Width = 369
+            Height = 27
+            Align = alTop
+            BevelOuter = bvNone
+            TabOrder = 1
+            object sbFiltarEmpleado: TSpeedButton
+              Left = 283
+              Top = 3
+              Width = 73
+              Height = 22
+              Caption = '&Filtrar'
+              Flat = True
+              Glyph.Data = {
+                F6030000424DF6030000000000003600000028000000100000000F0000000100
+                200000000000C003000000000000000000000000000000000000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C0000000000000000000000000000000
+                0000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C0000000000080800000808000000000
+                0000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C00000000000C0C0C000C0C0C0000000
+                0000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C00000000000C0C0C000C0C0C0000000
+                0000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C00000000000C0C0C000C0C0C0000000
+                0000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C0000000000080800000C0C0C000C0C0C0008080
+                000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000000000008080000080800000C0C0C000C0C0C000C0C0
+                C0008080000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000000000008080000080800000C0C0C000C0C0C000C0C0C000C0C0
+                C000808000008080000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000000000008080000080800000FFFFFF00FFFFFF00C0C0C000C0C0C000C0C0
+                C000C0C0C000808000008080000000000000C0C0C000C0C0C000C0C0C0000000
+                00008080000080800000FFFFFF00FFFFFF00FFFFFF00FFFFFF00C0C0C000C0C0
+                C000C0C0C00080800000808000008080000000000000C0C0C000C0C0C0000000
+                0000000000000000000000000000000000000000000000000000000000000000
+                00000000000000000000000000000000000000000000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+              OnClick = sbFiltarEmpleadoClick
+            end
+          end
+          object DBGridEmpleado: TRxDBGrid
+            Left = 1
+            Top = 43
+            Width = 369
+            Height = 260
+            Align = alClient
+            DataSource = dsEmpleado
+            TabOrder = 2
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'MS Sans Serif'
+            TitleFont.Style = []
+            OnGetCellParams = DBGridEmpleadoGetCellParams
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'CODIGOEMPLEADO'
+                Title.Alignment = taCenter
+                Title.Caption = 'Cédula No'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NOMBREEMPLEADO'
+                Title.Alignment = taCenter
+                Title.Caption = 'Nombre Empleado'
+                Width = 207
+                Visible = True
+              end
+              item
+                Alignment = taCenter
+                Expanded = False
+                FieldName = 'CODIGOADMINISTRATIVO'
+                Title.Alignment = taCenter
+                Title.Caption = 'CIA'
+                Width = 58
+                Visible = True
+              end>
+          end
+        end
+        object RxSplitter1: TRxSplitter
+          Left = 371
+          Top = 0
+          Width = 3
+          Height = 304
+          ControlFirst = Panel6
+          Align = alLeft
+        end
+        object Panel7: TPanel
+          Left = 374
+          Top = 0
+          Width = 79
+          Height = 304
+          Align = alLeft
+          TabOrder = 2
+          object sbAsignarEmpleado: TSpeedButton
+            Left = 5
+            Top = 69
+            Width = 67
+            Height = 41
+            Caption = 'Asignar'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = []
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              0400000000000001000000000000000000001000000010000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              3333333333333333333333333333333333333FFF333333333333000333333333
+              3333777FFF3FFFFF33330B000300000333337F777F777773F333000E00BFBFB0
+              3333777F773333F7F333000E0BFBF0003333777F7F3337773F33000E0FBFBFBF
+              0333777F7F3333FF7FFF000E0BFBF0000003777F7F3337777773000E0FBFBFBF
+              BFB0777F7F33FFFFFFF7000E0BF000000003777F7FF777777773000000BFB033
+              33337777773FF733333333333300033333333333337773333333333333333333
+              3333333333333333333333333333333333333333333333333333333333333333
+              3333333333333333333333333333333333333333333333333333}
+            Layout = blGlyphBottom
+            NumGlyphs = 2
+            ParentFont = False
+            OnClick = sbAsignarEmpleadoClick
+          end
+          object sbDesasignarEmpleado: TSpeedButton
+            Left = 5
+            Top = 124
+            Width = 67
+            Height = 41
+            Caption = 'Desasignar'
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              0400000000000001000000000000000000001000000010000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              33333333333333333333333333333333333333333333333333FF333333333333
+              3000333333FFFFF3F77733333000003000B033333777773777F733330BFBFB00
+              E00033337FFF3377F7773333000FBFB0E000333377733337F7773330FBFBFBF0
+              E00033F7FFFF3337F7773000000FBFB0E000377777733337F7770BFBFBFBFBF0
+              E00073FFFFFFFF37F777300000000FB0E000377777777337F7773333330BFB00
+              000033333373FF77777733333330003333333333333777333333333333333333
+              3333333333333333333333333333333333333333333333333333333333333333
+              3333333333333333333333333333333333333333333333333333}
+            Layout = blGlyphBottom
+            NumGlyphs = 2
+            OnClick = sbDesasignarEmpleadoClick
+          end
+        end
+        object RxSplitter2: TRxSplitter
+          Left = 453
+          Top = 0
+          Width = 3
+          Height = 304
+          ControlFirst = Panel7
+          Align = alLeft
+        end
+        object Panel8: TPanel
+          Left = 456
+          Top = 0
+          Width = 528
+          Height = 304
+          Align = alClient
+          Caption = 'Panel8'
+          TabOrder = 4
+          object TPanel
+            Left = 1
+            Top = 1
+            Width = 526
+            Height = 15
+            Align = alTop
+            Caption = 'Empleados Asignados'
+            Color = 16744448
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 0
+          end
+          object DBGridEmpleadoAsignado: TRxDBGrid
+            Left = 1
+            Top = 16
+            Width = 526
+            Height = 206
+            Align = alClient
+            DataSource = dsProgramacionEmpleado
+            ReadOnly = True
+            TabOrder = 1
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'MS Sans Serif'
+            TitleFont.Style = []
+            Columns = <
+              item
+                Alignment = taCenter
+                Expanded = False
+                FieldName = 'CODIGOEMPLEADO'
+                Title.Alignment = taCenter
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NOMBREEMPLEADO'
+                Title.Alignment = taCenter
+                Width = 220
+                Visible = True
+              end
+              item
+                Alignment = taCenter
+                Expanded = False
+                FieldName = 'NombreDias'
+                Title.Alignment = taCenter
+                Width = 81
+                Visible = True
+              end
+              item
+                Alignment = taCenter
+                Expanded = False
+                FieldName = 'FECHADESCANSO'
+                Title.Alignment = taCenter
+                Width = 88
+                Visible = True
+              end
+              item
+                Alignment = taCenter
+                Expanded = False
+                FieldName = 'POSICIONROTACION'
+                Title.Alignment = taCenter
+                Visible = True
+              end>
+          end
+          object DBNavigator2: TDBNavigator
+            Left = 1
+            Top = 284
+            Width = 526
+            Height = 19
+            DataSource = dsProgramacionEmpleado
+            VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbEdit, nbPost, nbCancel]
+            Align = alBottom
+            Flat = True
+            TabOrder = 2
+          end
+          object Panel10: TPanel
+            Left = 1
+            Top = 222
+            Width = 526
+            Height = 62
+            Align = alBottom
+            BevelOuter = bvSpace
+            TabOrder = 3
+            object gbDiaDescansoEmpleado: TGroupBox
+              Left = 4
+              Top = 5
+              Width = 140
+              Height = 50
+              Caption = 'Día Descanso'
+              TabOrder = 0
+              object DBLookupComboBox2: TDBLookupComboBox
+                Left = 10
+                Top = 17
+                Width = 121
+                Height = 21
+                DataField = 'DIADESCANSO'
+                DataSource = dsProgramacionEmpleado
+                KeyField = 'CODIGODIA'
+                ListField = 'NOMBREDIA'
+                ListSource = dsDiaSemana
+                TabOrder = 0
+              end
+            end
+            object gbFechaProgramacionEmpleado: TGroupBox
+              Left = 148
+              Top = 5
+              Width = 230
+              Height = 50
+              Caption = 'Fecha Programacion Empleado'
+              TabOrder = 1
+              object TitleLabel: TPanel
+                Left = 9
+                Top = 16
+                Width = 215
+                Height = 26
+                Alignment = taLeftJustify
+                Caption = 'TitleLabel'
+                Color = 16744448
+                Ctl3D = True
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWhite
+                Font.Height = -11
+                Font.Name = 'MS Sans Serif'
+                Font.Style = [fsBold]
+                ParentCtl3D = False
+                ParentFont = False
+                PopupMenu = pmMeses
+                TabOrder = 0
+                OnMouseDown = TitleLabelMouseDown
+                object seAgnos: TSpinEdit
+                  Left = 156
+                  Top = 3
+                  Width = 53
+                  Height = 22
+                  Color = 16744448
+                  Ctl3D = False
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWhite
+                  Font.Height = -11
+                  Font.Name = 'MS Sans Serif'
+                  Font.Style = [fsBold]
+                  MaxValue = 5941
+                  MinValue = 1900
+                  ParentCtl3D = False
+                  ParentFont = False
+                  TabOrder = 0
+                  Value = 1997
+                  OnChange = seAgnosChange
+                end
+              end
+              object DBDateEdit1: TDBDateEdit
+                Left = 13
+                Top = 21
+                Width = 121
+                Height = 21
+                DataField = 'FECHADESCANSO'
+                DataSource = dsProgramacionEmpleado
+                NumGlyphs = 2
+                TabOrder = 1
+                Visible = False
+                OnChange = DBDateEdit1Change
+              end
+            end
+            object gbPosicionRotacionEmpleado: TGroupBox
+              Left = 382
+              Top = 5
+              Width = 171
+              Height = 50
+              Caption = 'Posición Rotación'
+              TabOrder = 2
+              object cbPosicionRotacion: TComboBox
+                Left = 38
+                Top = 16
+                Width = 126
+                Height = 21
+                ItemHeight = 13
+                TabOrder = 0
+                OnChange = cbPosicionRotacionChange
+              end
+              object EdPosicionRotacionEmpleado: TDBEdit
+                Left = 8
+                Top = 16
+                Width = 28
+                Height = 21
+                DataField = 'POSICIONROTACION'
+                DataSource = dsProgramacionEmpleado
+                TabOrder = 1
+                OnChange = EdPosicionRotacionEmpleadoChange
+              end
+            end
+          end
+        end
+      end
+      object TPage
+        Left = 0
+        Top = 0
+        Caption = 'Grupo'
+        object Panel11: TPanel
+          Left = 0
+          Top = 0
+          Width = 369
+          Height = 304
+          HelpContext = 1
+          Align = alLeft
+          TabOrder = 0
+          object Panel12: TPanel
+            Left = 1
+            Top = 1
+            Width = 367
+            Height = 15
+            Align = alTop
+            Caption = 'Grupos Disponibles'
+            Color = 16744448
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 0
+          end
+          object Panel14: TPanel
+            Left = 1
+            Top = 16
+            Width = 367
+            Height = 26
+            Align = alTop
+            BevelOuter = bvNone
+            TabOrder = 1
+            object SpeedButton3: TSpeedButton
+              Left = 288
+              Top = 2
+              Width = 73
+              Height = 22
+              Caption = '&Filtrar'
+              Flat = True
+              Glyph.Data = {
+                F6030000424DF6030000000000003600000028000000100000000F0000000100
+                200000000000C003000000000000000000000000000000000000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C0000000000000000000000000000000
+                0000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C0000000000080800000808000000000
+                0000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C00000000000C0C0C000C0C0C0000000
+                0000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C00000000000C0C0C000C0C0C0000000
+                0000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C00000000000C0C0C000C0C0C0000000
+                0000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C0000000000080800000C0C0C000C0C0C0008080
+                000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000000000008080000080800000C0C0C000C0C0C000C0C0
+                C0008080000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000000000008080000080800000C0C0C000C0C0C000C0C0C000C0C0
+                C000808000008080000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000000000008080000080800000FFFFFF00FFFFFF00C0C0C000C0C0C000C0C0
+                C000C0C0C000808000008080000000000000C0C0C000C0C0C000C0C0C0000000
+                00008080000080800000FFFFFF00FFFFFF00FFFFFF00FFFFFF00C0C0C000C0C0
+                C000C0C0C00080800000808000008080000000000000C0C0C000C0C0C0000000
+                0000000000000000000000000000000000000000000000000000000000000000
+                00000000000000000000000000000000000000000000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+              OnClick = SpeedButton3Click
+            end
+          end
+          object DBGridGrupo: TRxDBGrid
+            Left = 1
+            Top = 42
+            Width = 367
+            Height = 261
+            Align = alClient
+            DataSource = dsGrupo
+            TabOrder = 2
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'MS Sans Serif'
+            TitleFont.Style = []
+            OnGetCellParams = DBGridGrupoGetCellParams
+            Columns = <
+              item
+                Alignment = taCenter
+                Expanded = False
+                FieldName = 'CODIGOGRUPOTRABAJO'
+                Title.Alignment = taCenter
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NOMBREGRUPOTRABAJO'
+                Title.Alignment = taCenter
+                Width = 168
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CODIGOADMINISTRATIVO'
+                Title.Alignment = taCenter
+                Visible = True
+              end>
+          end
+        end
+        object RxSplitter4: TRxSplitter
+          Left = 369
+          Top = 0
+          Width = 3
+          Height = 304
+          ControlFirst = Panel11
+          Align = alLeft
+        end
+        object Panel13: TPanel
+          Left = 372
+          Top = 0
+          Width = 79
+          Height = 304
+          Align = alLeft
+          TabOrder = 2
+          object sbAsignarGrupo: TSpeedButton
+            Left = 5
+            Top = 69
+            Width = 67
+            Height = 41
+            Caption = 'Asignar'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = []
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              0400000000000001000000000000000000001000000010000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              3333333333333333333333333333333333333FFF333333333333000333333333
+              3333777FFF3FFFFF33330B000300000333337F777F777773F333000E00BFBFB0
+              3333777F773333F7F333000E0BFBF0003333777F7F3337773F33000E0FBFBFBF
+              0333777F7F3333FF7FFF000E0BFBF0000003777F7F3337777773000E0FBFBFBF
+              BFB0777F7F33FFFFFFF7000E0BF000000003777F7FF777777773000000BFB033
+              33337777773FF733333333333300033333333333337773333333333333333333
+              3333333333333333333333333333333333333333333333333333333333333333
+              3333333333333333333333333333333333333333333333333333}
+            Layout = blGlyphBottom
+            NumGlyphs = 2
+            ParentFont = False
+            OnClick = sbAsignarGrupoClick
+          end
+          object sbDesasignarGrupo: TSpeedButton
+            Left = 5
+            Top = 125
+            Width = 67
+            Height = 41
+            Caption = 'Desasignar'
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              0400000000000001000000000000000000001000000010000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              33333333333333333333333333333333333333333333333333FF333333333333
+              3000333333FFFFF3F77733333000003000B033333777773777F733330BFBFB00
+              E00033337FFF3377F7773333000FBFB0E000333377733337F7773330FBFBFBF0
+              E00033F7FFFF3337F7773000000FBFB0E000377777733337F7770BFBFBFBFBF0
+              E00073FFFFFFFF37F777300000000FB0E000377777777337F7773333330BFB00
+              000033333373FF77777733333330003333333333333777333333333333333333
+              3333333333333333333333333333333333333333333333333333333333333333
+              3333333333333333333333333333333333333333333333333333}
+            Layout = blGlyphBottom
+            NumGlyphs = 2
+            OnClick = sbDesasignarGrupoClick
+          end
+        end
+        object Panel17: TPanel
+          Left = 451
+          Top = 0
+          Width = 533
+          Height = 304
+          Align = alClient
+          Caption = 'Panel17'
+          TabOrder = 3
+          object Panel18: TPanel
+            Left = 1
+            Top = 1
+            Width = 531
+            Height = 15
+            Align = alTop
+            Caption = 'Grupos Asignados'
+            Color = 16744448
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 0
+          end
+          object DBGridGrupoEmpleadoAsignado: TRxDBGrid
+            Left = 1
+            Top = 241
+            Width = 531
+            Height = 62
+            Align = alClient
+            DataSource = dsProgramacionEmpleadoGrupo
+            ReadOnly = True
+            TabOrder = 1
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'MS Sans Serif'
+            TitleFont.Style = []
+            OnDblClick = DBGridGrupoEmpleadoAsignadoDblClick
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'CODIGOEMPLEADO'
+                Title.Alignment = taCenter
+                Title.Caption = 'Cédula No'
+                Width = 70
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NOMBREEMPLEADO'
+                Title.Alignment = taCenter
+                Title.Caption = 'Nombre Empleado'
+                Width = 250
+                Visible = True
+              end>
+          end
+          object DBNavigator4: TDBNavigator
+            Left = 1
+            Top = 207
+            Width = 531
+            Height = 19
+            DataSource = dsProgramacionGrupo
+            VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbEdit, nbPost, nbCancel]
+            Align = alTop
+            Flat = True
+            TabOrder = 2
+          end
+          object Panel19: TPanel
+            Left = 1
+            Top = 153
+            Width = 531
+            Height = 54
+            Align = alTop
+            BevelOuter = bvSpace
+            TabOrder = 3
+            object sbEditarEmpleadoGrupo: TSpeedButton
+              Left = 434
+              Top = 12
+              Width = 110
+              Height = 27
+              Caption = 'Editar Empleados'
+              Flat = True
+              Glyph.Data = {
+                76010000424D7601000000000000760000002800000020000000100000000100
+                0400000000000001000000000000000000001000000010000000000000000000
+                800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+                FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333000000
+                000033333377777777773333330FFFFFFFF03FF3FF7FF33F3FF700300000FF0F
+                00F077F777773F737737E00BFBFB0FFFFFF07773333F7F3333F7E0BFBF000FFF
+                F0F077F3337773F3F737E0FBFBFBF0F00FF077F3333FF7F77F37E0BFBF00000B
+                0FF077F3337777737337E0FBFBFBFBF0FFF077F33FFFFFF73337E0BF0000000F
+                FFF077FF777777733FF7000BFB00B0FF00F07773FF77373377373330000B0FFF
+                FFF03337777373333FF7333330B0FFFF00003333373733FF777733330B0FF00F
+                0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
+                00333377737FFFFF773333303300000003333337337777777333}
+              NumGlyphs = 2
+              OnClick = sbEditarEmpleadoGrupoClick
+            end
+            object GroupBox1: TGroupBox
+              Left = 4
+              Top = 0
+              Width = 140
+              Height = 50
+              Caption = 'Día Descanso'
+              TabOrder = 0
+              object DBLookupComboBox3: TDBLookupComboBox
+                Left = 6
+                Top = 17
+                Width = 125
+                Height = 21
+                DataField = 'DIADESCANSO'
+                DataSource = dsProgramacionGrupo
+                KeyField = 'CODIGODIA'
+                ListField = 'NOMBREDIA'
+                ListSource = dsDiaSemana
+                TabOrder = 0
+              end
+            end
+            object GroupBox2: TGroupBox
+              Left = 148
+              Top = 0
+              Width = 230
+              Height = 50
+              Caption = 'Fecha Programacion Empleado'
+              TabOrder = 1
+              object TitleLabel2: TPanel
+                Left = 7
+                Top = 16
+                Width = 215
+                Height = 26
+                Alignment = taLeftJustify
+                Caption = 'TitleLabel'
+                Color = 16744448
+                Ctl3D = True
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWhite
+                Font.Height = -11
+                Font.Name = 'MS Sans Serif'
+                Font.Style = [fsBold]
+                ParentCtl3D = False
+                ParentFont = False
+                PopupMenu = pmMeses
+                TabOrder = 0
+                OnMouseDown = TitleLabel2MouseDown
+                object seAgnos2: TSpinEdit
+                  Left = 156
+                  Top = 3
+                  Width = 53
+                  Height = 22
+                  Color = 16744448
+                  Ctl3D = False
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWhite
+                  Font.Height = -11
+                  Font.Name = 'MS Sans Serif'
+                  Font.Style = [fsBold]
+                  MaxValue = 5941
+                  MinValue = 1900
+                  ParentCtl3D = False
+                  ParentFont = False
+                  TabOrder = 0
+                  Value = 2005
+                  OnChange = seAgnos2Change
+                end
+              end
+              object DBDateEdit2: TDBDateEdit
+                Left = 13
+                Top = 19
+                Width = 121
+                Height = 21
+                DataField = 'FECHADESCANSO'
+                DataSource = dsProgramacionGrupo
+                NumGlyphs = 2
+                TabOrder = 1
+                Visible = False
+                OnChange = DBDateEdit2Change
+              end
+            end
+          end
+          object Panel16: TPanel
+            Left = 1
+            Top = 226
+            Width = 531
+            Height = 15
+            Align = alTop
+            Caption = 'Empleados Asignados'
+            Color = 16744448
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 4
+          end
+          object DBGridGrupoAsignado: TRxDBGrid
+            Left = 1
+            Top = 16
+            Width = 531
+            Height = 137
+            Align = alTop
+            DataSource = dsProgramacionGrupo
+            TabOrder = 5
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'MS Sans Serif'
+            TitleFont.Style = []
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'CODIGOADMINISTRATIVO'
+                Title.Alignment = taCenter
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CODIGOGRUPOTRABAJO'
+                Title.Alignment = taCenter
+                Title.Caption = 'Grupo Trabajo'
+                Width = 73
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NOMBREGRUPOTRABAJO'
+                Title.Alignment = taCenter
+                Title.Caption = 'Nombre Grupo'
+                Width = 133
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NombreDias'
+                Title.Alignment = taCenter
+                Title.Caption = 'Día Descanso'
+                Width = 95
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'FECHADESCANSO'
+                Title.Alignment = taCenter
+                Width = 90
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'POSICIONROTACION'
+                Visible = False
+              end>
+          end
+        end
+      end
+    end
+  end
+  object qProgramacion: TQuery
+    CachedUpdates = True
+    AfterOpen = qProgramacionAfterOpen
+    AfterInsert = qProgramacionAfterInsert
+    AfterPost = qProgramacionAfterPost
+    AfterDelete = qProgramacionAfterDelete
+    AfterScroll = qProgramacionAfterScroll
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOPROGRAMACION,NOMBREPROGRAMACION,'
+      'CODIGOTIPOPROGRAMACION,ROTACION,DIRECCIONROTACION,'
+      'CODIGOTIPOTURNOPROGRAMACION,TITULOPROGRAMACION,'
+      'CODIGOADMINISTRATIVO'
+      'FROM PROGRAMACION'
+      'ORDER BY CODIGOPROGRAMACION ')
+    UpdateObject = UpdProgramacion
+    Left = 360
+    Top = 64
+    object qProgramacionNombreTipoProgramacion: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NombreTipoProgramacion'
+      LookupDataSet = qTipoProgramacion
+      LookupKeyFields = 'CODIGOTIPOPROGRAMACION'
+      LookupResultField = 'NOMBRETIPOPROGRAMACION'
+      KeyFields = 'CODIGOTIPOPROGRAMACION'
+      Lookup = True
+    end
+    object qProgramacionNombreTipoTurnoProgramacion: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NombreTipoTurnoProgramacion'
+      LookupDataSet = qTipoTurnoProgramacion
+      LookupKeyFields = 'CODIGOTIPOTURNO'
+      LookupResultField = 'NOMBRETIPOTURNO'
+      KeyFields = 'CODIGOTIPOTURNOPROGRAMACION'
+      Lookup = True
+    end
+    object qProgramacionCODIGOPROGRAMACION: TFloatField
+      FieldName = 'CODIGOPROGRAMACION'
+      Origin = 'PROGRAMACION.CODIGOPROGRAMACION'
+    end
+    object qProgramacionNOMBREPROGRAMACION: TStringField
+      FieldName = 'NOMBREPROGRAMACION'
+      Origin = 'PROGRAMACION.NOMBREPROGRAMACION'
+      Size = 40
+    end
+    object qProgramacionCODIGOTIPOPROGRAMACION: TStringField
+      FieldName = 'CODIGOTIPOPROGRAMACION'
+      Origin = 'PROGRAMACION.CODIGOTIPOPROGRAMACION'
+      Size = 1
+    end
+    object qProgramacionROTACION: TStringField
+      FieldName = 'ROTACION'
+      Origin = 'PROGRAMACION.ROTACION'
+      Size = 42
+    end
+    object qProgramacionDIRECCIONROTACION: TFloatField
+      FieldName = 'DIRECCIONROTACION'
+      Origin = 'PROGRAMACION.DIRECCIONROTACION'
+    end
+    object qProgramacionCODIGOTIPOTURNOPROGRAMACION: TFloatField
+      FieldName = 'CODIGOTIPOTURNOPROGRAMACION'
+      Origin = 'PROGRAMACION.CODIGOTIPOTURNOPROGRAMACION'
+    end
+    object qProgramacionTITULOPROGRAMACION: TStringField
+      FieldName = 'TITULOPROGRAMACION'
+      Origin = 'PROGRAMACION.TITULOPROGRAMACION'
+      Size = 80
+    end
+    object qProgramacionCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'PROGRAMACION.CODIGOADMINISTRATIVO'
+    end
+  end
+  object dsProgramacion: TDataSource
+    DataSet = qProgramacion
+    Left = 468
+    Top = 64
+  end
+  object qTipoProgramacion: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOTIPOPROGRAMACION, NOMBRETIPOPROGRAMACION'
+      'FROM TIPOPROGRAMACION')
+    Left = 685
+    Top = 64
+  end
+  object UpdProgramacion: TUpdateSQL
+    ModifySQL.Strings = (
+      'update PROGRAMACION'
+      'set'
+      '  CODIGOPROGRAMACION = :CODIGOPROGRAMACION,'
+      '  NOMBREPROGRAMACION = :NOMBREPROGRAMACION,'
+      '  CODIGOTIPOPROGRAMACION = :CODIGOTIPOPROGRAMACION,'
+      '  ROTACION = :ROTACION,'
+      '  DIRECCIONROTACION = :DIRECCIONROTACION,'
+      '  CODIGOTIPOTURNOPROGRAMACION = '
+      ':CODIGOTIPOTURNOPROGRAMACION,'
+      '  TITULOPROGRAMACION = :TITULOPROGRAMACION,'
+      '  CODIGOADMINISTRATIVO = :CODIGOADMINISTRATIVO'
+      'where'
+      '  CODIGOPROGRAMACION = :OLD_CODIGOPROGRAMACION')
+    InsertSQL.Strings = (
+      'insert into PROGRAMACION'
+      
+        '  (CODIGOPROGRAMACION, NOMBREPROGRAMACION, CODIGOTIPOPROGRAMACIO' +
+        'N, ROTACION, '
+      
+        '   DIRECCIONROTACION, CODIGOTIPOTURNOPROGRAMACION, TITULOPROGRAM' +
+        'ACION, '
+      '   CODIGOADMINISTRATIVO)'
+      'values'
+      
+        '  (:CODIGOPROGRAMACION, :NOMBREPROGRAMACION, :CODIGOTIPOPROGRAMA' +
+        'CION, :ROTACION, '
+      
+        '   :DIRECCIONROTACION, :CODIGOTIPOTURNOPROGRAMACION, :TITULOPROG' +
+        'RAMACION, '
+      '   :CODIGOADMINISTRATIVO)')
+    DeleteSQL.Strings = (
+      'delete from PROGRAMACION'
+      'where'
+      '  CODIGOPROGRAMACION = :OLD_CODIGOPROGRAMACION')
+    Left = 577
+    Top = 64
+  end
+  object qEmpleado: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOEMPLEADO, NOMBREEMPLEADO, CODIGOADMINISTRATIVO'
+      'FROM EMPLEADO'
+      'WHERE ((estado IN ('#39'AC'#39','#39'LC'#39')) OR (estado IS NULL))'
+      'ORDER BY NOMBREEMPLEADO')
+    Left = 65
+    Top = 315
+  end
+  object dsEmpleado: TDataSource
+    DataSet = qEmpleado
+    Left = 147
+    Top = 315
+  end
+  object dsProgramacionEmpleado: TDataSource
+    AutoEdit = False
+    DataSet = qProgramacionEmpleado
+    Left = 682
+    Top = 273
+  end
+  object UpdProgramacionEmpleado: TUpdateSQL
+    ModifySQL.Strings = (
+      'update PROGRAMACIONEMPLEADO'
+      'set'
+      '  CODIGOEMPLEADO = :CODIGOEMPLEADO,'
+      '  CODIGOPROGRAMACION = :CODIGOPROGRAMACION,'
+      '  DIADESCANSO = :DIADESCANSO,'
+      '  FECHADESCANSO = :FECHADESCANSO,'
+      '  POSICIONROTACION = :POSICIONROTACION'
+      'where'
+      '  CODIGOEMPLEADO = :OLD_CODIGOEMPLEADO and'
+      '  CODIGOPROGRAMACION = :OLD_CODIGOPROGRAMACION')
+    InsertSQL.Strings = (
+      'insert into PROGRAMACIONEMPLEADO'
+      
+        '  (CODIGOEMPLEADO, CODIGOPROGRAMACION, DIADESCANSO, FECHADESCANS' +
+        'O, POSICIONROTACION)'
+      'values'
+      
+        '  (:CODIGOEMPLEADO, :CODIGOPROGRAMACION, :DIADESCANSO, :FECHADES' +
+        'CANSO, '
+      '   :POSICIONROTACION)')
+    DeleteSQL.Strings = (
+      'delete from PROGRAMACIONEMPLEADO'
+      'where'
+      '  CODIGOEMPLEADO = :OLD_CODIGOEMPLEADO and'
+      '  CODIGOPROGRAMACION = :OLD_CODIGOPROGRAMACION')
+    Left = 819
+    Top = 273
+  end
+  object qTipoTurnoProgramacion: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOTIPOTURNO,NOMBRETIPOTURNO'
+      'FROM TIPOTURNO')
+    Left = 793
+    Top = 64
+  end
+  object qDiaSemana: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGODIA,NOMBREDIA'
+      'FROM DIASEMANA')
+    Left = 525
+    Top = 444
+    object qDiaSemanaCODIGODIA: TFloatField
+      FieldName = 'CODIGODIA'
+      Origin = 'DIASEMANA.CODIGODIA'
+    end
+    object qDiaSemanaNOMBREDIA: TStringField
+      FieldName = 'NOMBREDIA'
+      Origin = 'DIASEMANA.NOMBREDIA'
+      Size = 10
+    end
+  end
+  object pmMeses: TPopupMenu
+    Alignment = paCenter
+    Left = 394
+    Top = 406
+    object Enero1: TMenuItem
+      Tag = 1
+      Caption = 'Enero'
+      OnClick = MesClick
+    end
+    object Febrero1: TMenuItem
+      Tag = 2
+      Caption = 'Febrero'
+      OnClick = MesClick
+    end
+    object Marzo1: TMenuItem
+      Tag = 3
+      Caption = 'Marzo'
+      OnClick = MesClick
+    end
+    object Abril1: TMenuItem
+      Tag = 4
+      Caption = 'Abril'
+      OnClick = MesClick
+    end
+    object Mayo1: TMenuItem
+      Tag = 5
+      Caption = 'Mayo'
+      OnClick = MesClick
+    end
+    object Junio1: TMenuItem
+      Tag = 6
+      Caption = 'Junio'
+      OnClick = MesClick
+    end
+    object Julio1: TMenuItem
+      Tag = 7
+      Caption = 'Julio'
+      OnClick = MesClick
+    end
+    object Agosto1: TMenuItem
+      Tag = 8
+      Caption = 'Agosto'
+      OnClick = MesClick
+    end
+    object Septiembre1: TMenuItem
+      Tag = 9
+      Caption = 'Septiembre'
+      OnClick = MesClick
+    end
+    object Octubre1: TMenuItem
+      Tag = 10
+      Caption = 'Octubre'
+      OnClick = MesClick
+    end
+    object Noviembre1: TMenuItem
+      Tag = 11
+      Caption = 'Noviembre'
+      OnClick = MesClick
+    end
+    object Diciembre1: TMenuItem
+      Tag = 12
+      Caption = 'Diciembre'
+      OnClick = MesClick
+    end
+  end
+  object dsDiaSemana: TDataSource
+    DataSet = qDiaSemana
+    Left = 682
+    Top = 444
+  end
+  object qGrupo: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOADMINISTRATIVO,CODIGOGRUPOTRABAJO,'
+      'NOMBREGRUPOTRABAJO'
+      'FROM GRUPOTRABAJO'
+      ' ')
+    Left = 65
+    Top = 386
+    object qGrupoCODIGOADMINISTRATIVO: TFloatField
+      Alignment = taCenter
+      DisplayLabel = 'CIA'
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'GRUPOTRABAJO.CODIGOADMINISTRATIVO'
+    end
+    object qGrupoCODIGOGRUPOTRABAJO: TFloatField
+      Alignment = taLeftJustify
+      DisplayLabel = 'Código Grupo Trabajo'
+      FieldName = 'CODIGOGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.CODIGOGRUPOTRABAJO'
+    end
+    object qGrupoNOMBREGRUPOTRABAJO: TStringField
+      DisplayLabel = 'Nombre Grupo Trabajo'
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+  end
+  object dsGrupo: TDataSource
+    DataSet = qGrupo
+    Left = 147
+    Top = 386
+  end
+  object qHorario: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOHORARIOTRABAJO, NOMBREHORARIOTRABAJO'
+      ' FROM HORARIOTRABAJO')
+    Left = 525
+    Top = 498
+    object qHorarioCODIGOHORARIOTRABAJO: TFloatField
+      FieldName = 'CODIGOHORARIOTRABAJO'
+      Origin = 'HORARIOTRABAJO.CODIGOHORARIOTRABAJO'
+    end
+    object qHorarioNOMBREHORARIOTRABAJO: TStringField
+      FieldName = 'NOMBREHORARIOTRABAJO'
+      Origin = 'HORARIOTRABAJO.NOMBREHORARIOTRABAJO'
+      Size = 25
+    end
+  end
+  object dsHorario: TDataSource
+    DataSet = qHorario
+    Left = 682
+    Top = 498
+  end
+  object qProgramacionGrupo: TQuery
+    CachedUpdates = True
+    AfterOpen = qProgramacionGrupoAfterOpen
+    AfterInsert = qProgramacionGrupoAfterInsert
+    AfterPost = qProgramacionGrupoAfterPost
+    AfterDelete = qProgramacionGrupoAfterDelete
+    DatabaseName = 'BaseDato'
+    DataSource = dsProgramacion
+    SQL.Strings = (
+      'SELECT P.CODIGOPROGRAMACION,P.CODIGOADMINISTRATIVO,'
+      'P.CODIGOGRUPOTRABAJO,P.DIADESCANSO,P.FECHADESCANSO, '
+      'G.NOMBREGRUPOTRABAJO'
+      'FROM PROGRAMACIONGRUPO P, GRUPOTRABAJO G'
+      'WHERE G.CODIGOADMINISTRATIVO = P.CODIGOADMINISTRATIVO'
+      'AND G.CODIGOGRUPOTRABAJO = P.CODIGOGRUPOTRABAJO'
+      'AND P.CODIGOPROGRAMACION = :CODIGOPROGRAMACION')
+    UpdateObject = updProgramacionGrupo
+    Left = 525
+    Top = 327
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOPROGRAMACION'
+        ParamType = ptUnknown
+      end>
+    object qProgramacionGrupoCODIGOADMINISTRATIVO: TFloatField
+      DisplayLabel = 'CIA'
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'TEMP_PLANILLAGRUPO.CODIGOADMINISTRATIVO'
+    end
+    object qProgramacionGrupoNOMBREGRUPOTRABAJO: TStringField
+      DisplayLabel = 'Nombre Grupo Trabajo'
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+    object qProgramacionGrupoDIADESCANSO: TFloatField
+      DisplayLabel = 'Día Descanso'
+      FieldName = 'DIADESCANSO'
+      Origin = 'TEMP_PLANILLAGRUPO.DIADESCANSO'
+    end
+    object qProgramacionGrupoCODIGOGRUPOTRABAJO: TFloatField
+      DisplayLabel = 'Código Grupo Trabajo'
+      FieldName = 'CODIGOGRUPOTRABAJO'
+      Origin = 'TEMP_PLANILLAGRUPO.CODIGOGRUPOTRABAJO'
+    end
+    object qProgramacionGrupoFECHADESCANSO: TDateTimeField
+      DisplayLabel = 'Fecha Descanso'
+      FieldName = 'FECHADESCANSO'
+      Origin = 'TEMP_PLANILLAGRUPO.FECHADESCANSO'
+    end
+    object qProgramacionGrupoNombreDias: TStringField
+      DisplayLabel = 'Nombre Días'
+      FieldKind = fkLookup
+      FieldName = 'NombreDias'
+      LookupDataSet = qDiaSemana
+      LookupKeyFields = 'CODIGODIA'
+      LookupResultField = 'NOMBREDIA'
+      KeyFields = 'DIADESCANSO'
+      Size = 15
+      Lookup = True
+    end
+    object qProgramacionGrupoCODIGOPROGRAMACION: TFloatField
+      DisplayLabel = 'Código Programación'
+      FieldName = 'CODIGOPROGRAMACION'
+      Origin = 'PROGRAMACIONGRUPO.CODIGOPROGRAMACION'
+    end
+  end
+  object dsProgramacionGrupo: TDataSource
+    DataSet = qProgramacionGrupo
+    Left = 682
+    Top = 327
+  end
+  object updProgramacionGrupo: TUpdateSQL
+    ModifySQL.Strings = (
+      'update PROGRAMACIONGRUPO'
+      'set'
+      '  CODIGOPROGRAMACION = :CODIGOPROGRAMACION,'
+      '  CODIGOADMINISTRATIVO = :CODIGOADMINISTRATIVO,'
+      '  CODIGOGRUPOTRABAJO = :CODIGOGRUPOTRABAJO,'
+      '  DIADESCANSO = :DIADESCANSO,'
+      '  FECHADESCANSO = :FECHADESCANSO'
+      'where'
+      '  CODIGOPROGRAMACION = :OLD_CODIGOPROGRAMACION and'
+      '  CODIGOADMINISTRATIVO = :OLD_CODIGOADMINISTRATIVO and'
+      '  CODIGOGRUPOTRABAJO = :OLD_CODIGOGRUPOTRABAJO')
+    InsertSQL.Strings = (
+      'insert into PROGRAMACIONGRUPO'
+      
+        '  (CODIGOPROGRAMACION, CODIGOADMINISTRATIVO, CODIGOGRUPOTRABAJO,' +
+        ' DIADESCANSO, '
+      '   FECHADESCANSO)'
+      'values'
+      
+        '  (:CODIGOPROGRAMACION, :CODIGOADMINISTRATIVO, :CODIGOGRUPOTRABA' +
+        'JO, :DIADESCANSO, '
+      '   :FECHADESCANSO)')
+    DeleteSQL.Strings = (
+      'delete from PROGRAMACIONGRUPO'
+      'where'
+      '  CODIGOPROGRAMACION = :OLD_CODIGOPROGRAMACION and'
+      '  CODIGOADMINISTRATIVO = :OLD_CODIGOADMINISTRATIVO and'
+      '  CODIGOGRUPOTRABAJO = :OLD_CODIGOGRUPOTRABAJO')
+    Left = 819
+    Top = 327
+  end
+  object qProgramacionEmpleadoGrupo: TQuery
+    Active = True
+    CachedUpdates = True
+    AfterInsert = qProgramacionEmpleadoGrupoAfterInsert
+    AfterPost = qProgramacionEmpleadoGrupoAfterPost
+    AfterDelete = qProgramacionEmpleadoGrupoAfterDelete
+    DatabaseName = 'BaseDato'
+    DataSource = dsProgramacionGrupo
+    SQL.Strings = (
+      
+        'SELECT P.CODIGOPROGRAMACION,P.CODIGOADMINISTRATIVO, P.CODIGOGRUP' +
+        'OTRABAJO, P.DIADESCANSO,'
+      'P.FECHADESCANSO, P.CODIGOEMPLEADO, E.NOMBREEMPLEADO'
+      'FROM PROGRAMACIONEMPLEADO P, EMPLEADO E'
+      'WHERE E.CODIGOEMPLEADO = P.CODIGOEMPLEADO'
+      'AND P.CODIGOPROGRAMACION=:CODIGOPROGRAMACION '
+      'AND P.CODIGOADMINISTRATIVO = :CODIGOADMINISTRATIVO'
+      'AND P.CODIGOGRUPOTRABAJO =:CODIGOGRUPOTRABAJO'
+      'AND ((E.estado IN ('#39'AC'#39','#39'LC'#39')) OR (E.estado IS NULL))')
+    UpdateObject = UpdProgramacionEmpleadoGrupo
+    Left = 525
+    Top = 386
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOPROGRAMACION'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOGRUPOTRABAJO'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsProgramacionEmpleadoGrupo: TDataSource
+    DataSet = qProgramacionEmpleadoGrupo
+    Left = 682
+    Top = 387
+  end
+  object UpdProgramacionEmpleadoGrupo: TUpdateSQL
+    ModifySQL.Strings = (
+      'update PROGRAMACIONEMPLEADO'
+      'set'
+      '  CODIGOPROGRAMACION = :CODIGOPROGRAMACION,'
+      '  CODIGOEMPLEADO = :CODIGOEMPLEADO,'
+      '  DIADESCANSO = :DIADESCANSO,'
+      '  FECHADESCANSO = :FECHADESCANSO,'
+      '  CODIGOADMINISTRATIVO = :CODIGOADMINISTRATIVO,'
+      '  CODIGOGRUPOTRABAJO = :CODIGOGRUPOTRABAJO'
+      'where'
+      '  CODIGOPROGRAMACION = :OLD_CODIGOPROGRAMACION and'
+      '  CODIGOEMPLEADO = :OLD_CODIGOEMPLEADO')
+    InsertSQL.Strings = (
+      'insert into PROGRAMACIONEMPLEADO'
+      
+        '  (CODIGOPROGRAMACION, CODIGOEMPLEADO, DIADESCANSO, FECHADESCANS' +
+        'O, CODIGOADMINISTRATIVO, '
+      '   CODIGOGRUPOTRABAJO)'
+      'values'
+      
+        '  (:CODIGOPROGRAMACION, :CODIGOEMPLEADO, :DIADESCANSO, :FECHADES' +
+        'CANSO, '
+      '   :CODIGOADMINISTRATIVO, :CODIGOGRUPOTRABAJO)')
+    DeleteSQL.Strings = (
+      'delete from PROGRAMACIONEMPLEADO'
+      'where'
+      '  CODIGOPROGRAMACION = :OLD_CODIGOPROGRAMACION and'
+      '  CODIGOEMPLEADO = :OLD_CODIGOEMPLEADO')
+    Left = 967
+    Top = 327
+  end
+  object qProgramacionEmpleado: TQuery
+    CachedUpdates = True
+    AfterOpen = qProgramacionEmpleadoAfterOpen
+    AfterInsert = qProgramacionEmpleadoAfterInsert
+    AfterPost = qProgramacionEmpleadoAfterPost
+    AfterDelete = qProgramacionEmpleadoAfterDelete
+    AfterScroll = qProgramacionEmpleadoAfterScroll
+    DatabaseName = 'BaseDato'
+    DataSource = dsProgramacion
+    SQL.Strings = (
+      'SELECT P.CODIGOEMPLEADO,P.CODIGOPROGRAMACION,'
+      'P.DIADESCANSO, P.FECHADESCANSO,E.NOMBREEMPLEADO,'
+      'P.POSICIONROTACION'
+      'FROM PROGRAMACIONEMPLEADO P , EMPLEADO E'
+      'WHERE P.CODIGOEMPLEADO = E.CODIGOEMPLEADO'
+      'AND P.CODIGOPROGRAMACION = :CODIGOPROGRAMACION'
+      'AND ((E.estado IN ('#39'AC'#39','#39'LC'#39')) OR (E.estado IS NULL))')
+    UpdateObject = UpdProgramacionEmpleado
+    Left = 525
+    Top = 273
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOPROGRAMACION'
+        ParamType = ptUnknown
+      end>
+    object qProgramacionEmpleadoCODIGOEMPLEADO: TFloatField
+      DisplayLabel = 'Cédula No.'
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'PROGRAMACIONEMPLEADO.CODIGOEMPLEADO'
+    end
+    object qProgramacionEmpleadoCODIGOPROGRAMACION: TFloatField
+      DisplayLabel = 'Código Programación'
+      FieldName = 'CODIGOPROGRAMACION'
+      Origin = 'PROGRAMACIONEMPLEADO.CODIGOPROGRAMACION'
+    end
+    object qProgramacionEmpleadoDIADESCANSO: TFloatField
+      DisplayLabel = 'Día Descanso'
+      FieldName = 'DIADESCANSO'
+      Origin = 'PROGRAMACIONEMPLEADO.DIADESCANSO'
+      OnChange = qProgramacionEmpleadoDIADESCANSOChange
+    end
+    object qProgramacionEmpleadoFECHADESCANSO: TDateTimeField
+      DisplayLabel = 'Fecha Descanso'
+      FieldName = 'FECHADESCANSO'
+      Origin = 'PROGRAMACIONEMPLEADO.FECHADESCANSO'
+      OnChange = qProgramacionEmpleadoFECHADESCANSOChange
+    end
+    object qProgramacionEmpleadoNOMBREEMPLEADO: TStringField
+      DisplayLabel = 'Nombre Empleado'
+      FieldName = 'NOMBREEMPLEADO'
+      Origin = 'EMPLEADO.NOMBREEMPLEADO'
+      Size = 50
+    end
+    object qProgramacionEmpleadoPOSICIONROTACION: TFloatField
+      DisplayLabel = 'Posición Rotación'
+      FieldName = 'POSICIONROTACION'
+      Origin = 'PROGRAMACIONEMPLEADO.POSICIONROTACION'
+    end
+    object qProgramacionEmpleadoNombreDias: TStringField
+      DisplayLabel = 'Día Descanso'
+      FieldKind = fkLookup
+      FieldName = 'NombreDias'
+      LookupDataSet = qDiaSemana
+      LookupKeyFields = 'CODIGODIA'
+      LookupResultField = 'NOMBREDIA'
+      KeyFields = 'DIADESCANSO'
+      Size = 10
+      Lookup = True
+    end
+  end
+end

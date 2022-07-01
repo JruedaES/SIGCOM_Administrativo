@@ -1,0 +1,792 @@
+inherited FQRListaContrato: TFQRListaContrato
+  Left = 244
+  Top = 103
+  Width = 739
+  Caption = 'FQRListaContrato'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited QuickReport: TQuickRep
+    Left = 32
+    Top = 40
+    DataSet = FListaContratoDistribucion.qContrato
+    Functions.DATA = (
+      '0'
+      '0'
+      #39#39)
+    Page.Values = (
+      150.000000000000000000
+      2159.000000000000000000
+      150.000000000000000000
+      2794.000000000000000000
+      100.000000000000000000
+      100.000000000000000000
+      0.000000000000000000)
+    ReportTitle = 'Listado de Contratos'
+    inherited ColumnHeaderBand1: TQRBand
+      Height = 18
+      Frame.Color = clBlue
+      Color = clBlue
+      Size.Values = (
+        68.035714285714290000
+        2592.916666666667000000)
+      inherited QRShape2: TQRShape
+        Left = 167
+        Width = 1
+        Size.Values = (
+          66.145833333333330000
+          632.354166666666700000
+          0.000000000000000000
+          5.291666666666667000)
+        Shape = qrsVertLine
+      end
+      inherited QRLabel4: TQRLabel
+        Width = 63
+        Size.Values = (
+          58.208333333333330000
+          15.875000000000000000
+          5.291666666666667000
+          238.125000000000000000)
+        Caption = 'Contrato'
+        FontSize = 12
+      end
+      inherited QRLabel5: TQRLabel
+        Left = 74
+        Width = 91
+        Size.Values = (
+          58.208333333333330000
+          277.812500000000000000
+          5.291666666666667000
+          343.958333333333300000)
+        Caption = 'Fecha Inicio'
+        FontSize = 12
+      end
+      inherited QRShape3: TQRShape
+        Left = 70
+        Size.Values = (
+          66.145833333333330000
+          264.583333333333300000
+          0.000000000000000000
+          7.937500000000000000)
+      end
+      object QRLabel3: TQRLabel
+        Left = 173
+        Top = 1
+        Width = 91
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          58.208333333333330000
+          653.520833333333300000
+          5.291666666666667000
+          343.958333333333300000)
+        Alignment = taCenter
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'Fecha Entrega'
+        Color = clBlue
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWhite
+        Font.Height = -16
+        Font.Name = 'Arial Narrow'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object QRShape8: TQRShape
+        Left = 267
+        Top = 0
+        Width = 1
+        Height = 18
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          66.145833333333330000
+          1008.062500000000000000
+          0.000000000000000000
+          5.291666666666667000)
+        Brush.Color = clBlue
+        Shape = qrsVertLine
+      end
+      object QRShape9: TQRShape
+        Left = 365
+        Top = 0
+        Width = 1
+        Height = 18
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          66.145833333333330000
+          1378.479166666667000000
+          0.000000000000000000
+          5.291666666666667000)
+        Brush.Color = clBlue
+        Shape = qrsVertLine
+      end
+      object QRLabel6: TQRLabel
+        Left = 271
+        Top = 1
+        Width = 91
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          58.208333333333330000
+          1023.937500000000000000
+          5.291666666666667000
+          343.958333333333300000)
+        Alignment = taCenter
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'Fecha Asignación'
+        Color = clBlue
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWhite
+        Font.Height = -16
+        Font.Name = 'Arial Narrow'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object QRLabel7: TQRLabel
+        Left = 370
+        Top = 1
+        Width = 91
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          58.208333333333330000
+          1399.645833333333000000
+          5.291666666666667000
+          343.958333333333300000)
+        Alignment = taCenter
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'Estado'
+        Color = clBlue
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWhite
+        Font.Height = -16
+        Font.Name = 'Arial Narrow'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object QRShape10: TQRShape
+        Left = 467
+        Top = 0
+        Width = 1
+        Height = 18
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          66.145833333333330000
+          1764.770833333333000000
+          0.000000000000000000
+          5.291666666666667000)
+        Brush.Color = clBlue
+        Shape = qrsVertLine
+      end
+      object QRLabel8: TQRLabel
+        Left = 475
+        Top = 1
+        Width = 91
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          58.208333333333330000
+          1793.875000000000000000
+          5.291666666666667000
+          343.958333333333300000)
+        Alignment = taCenter
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'Tipo'
+        Color = clBlue
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWhite
+        Font.Height = -16
+        Font.Name = 'Arial Narrow'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object QRShape11: TQRShape
+        Left = 568
+        Top = 0
+        Width = 1
+        Height = 18
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          66.145833333333330000
+          2148.416666666667000000
+          0.000000000000000000
+          5.291666666666667000)
+        Brush.Color = clBlue
+        Shape = qrsVertLine
+      end
+      object QRLabel9: TQRLabel
+        Left = 575
+        Top = 1
+        Width = 105
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          58.208333333333330000
+          2174.875000000000000000
+          5.291666666666667000
+          396.875000000000000000)
+        Alignment = taCenter
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'Contratista'
+        Color = clBlue
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWhite
+        Font.Height = -16
+        Font.Name = 'Arial Narrow'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+    end
+    inherited TitleBand1: TQRBand
+      Size.Values = (
+        302.380952380952400000
+        2592.916666666667000000)
+      inherited qrsDatosFiltro: TQRShape
+        Size.Values = (
+          153.458333333333300000
+          0.000000000000000000
+          328.083333333333400000
+          1957.916666666667000000)
+      end
+      inherited qlNombreEmpresa: TQRLabel
+        Width = 508
+        Size.Values = (
+          68.791666666666670000
+          325.437500000000000000
+          26.458333333333330000
+          1918.229166666667000000)
+        FontSize = 16
+      end
+      inherited qlAreaFuncional: TQRLabel
+        Top = 31
+        Width = 508
+        Size.Values = (
+          58.208333333333330000
+          325.437500000000000000
+          116.416666666666700000
+          1918.229166666667000000)
+        FontSize = 12
+      end
+      inherited qrSysData1: TQRSysData
+        Width = 508
+        Size.Values = (
+          58.208333333333330000
+          325.437500000000000000
+          190.500000000000000000
+          1918.229166666667000000)
+        FontSize = 11
+      end
+      inherited qlOrden: TQRLabel
+        Size.Values = (
+          41.577380952380960000
+          0.000000000000000000
+          264.583333333333400000
+          83.154761904761910000)
+        FontSize = 8
+      end
+      inherited qlFecha: TQRLabel
+        Size.Values = (
+          41.577380952380950000
+          2509.761904761905000000
+          264.583333333333300000
+          83.154761904761900000)
+        FontSize = 8
+      end
+      inherited QRShape5: TQRShape
+        Size.Values = (
+          10.583333333333330000
+          2.645833333333333000
+          251.354166666666700000
+          2592.916666666667000000)
+      end
+      inherited qrmRotulos1: TQRMemo
+        Size.Values = (
+          105.833333333333300000
+          10.583333333333330000
+          346.604166666666700000
+          317.500000000000000000)
+        FontSize = 8
+      end
+      inherited qrsFiltrodatos: TQRShape
+        Size.Values = (
+          44.979166666666670000
+          809.625000000000000000
+          301.625000000000000000
+          404.812500000000000000)
+      end
+      inherited qrlFiltroDatos: TQRLabel
+        Size.Values = (
+          37.797619047619050000
+          839.107142857142900000
+          306.160714285714300000
+          332.619047619047600000)
+        FontSize = 8
+      end
+      inherited qrmDatos1: TQRMemo
+        Size.Values = (
+          105.833333333333300000
+          351.895833333333300000
+          346.604166666666700000
+          621.770833333333300000)
+        FontSize = 8
+      end
+      inherited qrmPuntos1: TQRMemo
+        Size.Values = (
+          105.833333333333300000
+          330.729166666666700000
+          346.604166666666700000
+          10.583333333333330000)
+        FontSize = 8
+      end
+      inherited qrmRotulos2: TQRMemo
+        Size.Values = (
+          105.833333333333300000
+          981.604166666666700000
+          346.604166666666700000
+          317.500000000000000000)
+        FontSize = 8
+      end
+      inherited qrmPuntos2: TQRMemo
+        Size.Values = (
+          105.833333333333300000
+          1304.395833333333000000
+          346.604166666666700000
+          10.583333333333330000)
+        FontSize = 8
+      end
+      inherited qrmDatos2: TQRMemo
+        Size.Values = (
+          105.833333333333300000
+          1325.562500000000000000
+          346.604166666666700000
+          621.770833333333300000)
+        FontSize = 8
+      end
+      inherited QRDBImage1: TQRDBImage
+        Size.Values = (
+          211.666666666666700000
+          7.937500000000000000
+          26.458333333333330000
+          312.208333333333300000)
+      end
+      inherited QRImage10: TQRImage
+        Size.Values = (
+          211.666666666666700000
+          2259.541666666667000000
+          26.458333333333330000
+          312.208333333333300000)
+      end
+    end
+    inherited SummaryBand1: TQRBand
+      Top = 160
+      Height = 18
+      Size.Values = (
+        68.035714285714290000
+        2592.916666666667000000)
+      inherited QRShape7: TQRShape
+        Size.Values = (
+          66.145833333333330000
+          2.645833333333333000
+          0.000000000000000000
+          854.604166666666700000)
+      end
+      inherited QRLabel1: TQRLabel
+        Top = 1
+        Height = 12
+        Size.Values = (
+          45.357142857142850000
+          26.458333333333340000
+          3.779761904761905000
+          109.613095238095200000)
+        FontSize = 10
+      end
+      inherited QRSysData2: TQRSysData
+        Size.Values = (
+          47.625000000000000000
+          148.166666666666700000
+          7.937500000000000000
+          105.833333333333300000)
+        FontSize = 10
+      end
+      inherited QRLabel2: TQRLabel
+        Top = 1
+        Height = 12
+        Size.Values = (
+          45.357142857142850000
+          279.702380952381000000
+          3.779761904761905000
+          154.970238095238100000)
+        FontSize = 10
+      end
+    end
+    inherited DetailBand1: TQRBand
+      Top = 142
+      Height = 18
+      Size.Values = (
+        68.035714285714290000
+        2592.916666666667000000)
+      inherited QRShape6: TQRShape
+        Left = 167
+        Width = 1
+        Size.Values = (
+          66.145833333333330000
+          632.354166666666700000
+          0.000000000000000000
+          5.291666666666667000)
+        Shape = qrsVertLine
+      end
+      inherited QRDBText1: TQRDBText
+        Width = 63
+        Size.Values = (
+          42.333333333333330000
+          18.520833333333330000
+          10.583333333333330000
+          238.125000000000000000)
+        DataSet = FListaContratoDistribucion.qContrato
+        DataField = 'NUMEROCONTRATO'
+        FontSize = 8
+      end
+      inherited QRDBText2: TQRDBText
+        Left = 74
+        Width = 91
+        Size.Values = (
+          42.333333333333330000
+          277.812500000000000000
+          10.583333333333330000
+          343.958333333333300000)
+        DataSet = FListaContratoDistribucion.qContrato
+        DataField = 'FECHAINICIO'
+        FontSize = 8
+      end
+      inherited QRShape4: TQRShape
+        Left = 70
+        Size.Values = (
+          66.145833333333330000
+          264.583333333333300000
+          0.000000000000000000
+          7.937500000000000000)
+      end
+      object QRShape12: TQRShape
+        Left = 267
+        Top = 0
+        Width = 1
+        Height = 18
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          66.145833333333330000
+          1008.062500000000000000
+          0.000000000000000000
+          5.291666666666667000)
+        Shape = qrsVertLine
+      end
+      object QRDBText3: TQRDBText
+        Left = 173
+        Top = 3
+        Width = 91
+        Height = 11
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          42.333333333333330000
+          653.520833333333300000
+          10.583333333333330000
+          343.958333333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Color = clWhite
+        DataSet = FListaContratoDistribucion.qContrato
+        DataField = 'FECHAENTREGA'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 8
+      end
+      object QRShape13: TQRShape
+        Left = 365
+        Top = 0
+        Width = 1
+        Height = 18
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          66.145833333333330000
+          1378.479166666667000000
+          0.000000000000000000
+          5.291666666666667000)
+        Shape = qrsVertLine
+      end
+      object QRDBText4: TQRDBText
+        Left = 272
+        Top = 3
+        Width = 91
+        Height = 11
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          42.333333333333330000
+          1029.229166666667000000
+          10.583333333333330000
+          343.958333333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Color = clWhite
+        DataSet = FListaContratoDistribucion.qContrato
+        DataField = 'FECHAASIGNACION'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 8
+      end
+      object QRShape14: TQRShape
+        Left = 467
+        Top = 0
+        Width = 1
+        Height = 18
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          66.145833333333330000
+          1764.770833333333000000
+          0.000000000000000000
+          5.291666666666667000)
+        Shape = qrsVertLine
+      end
+      object QRDBText5: TQRDBText
+        Left = 372
+        Top = 3
+        Width = 91
+        Height = 11
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          42.333333333333330000
+          1404.937500000000000000
+          10.583333333333330000
+          343.958333333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Color = clWhite
+        DataSet = FListaContratoDistribucion.qContrato
+        DataField = 'NOMBREESTADOCONTRATO'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 8
+      end
+      object QRShape15: TQRShape
+        Left = 568
+        Top = 0
+        Width = 1
+        Height = 18
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          66.145833333333330000
+          2148.416666666667000000
+          0.000000000000000000
+          5.291666666666667000)
+        Shape = qrsVertLine
+      end
+      object QRDBText6: TQRDBText
+        Left = 475
+        Top = 3
+        Width = 91
+        Height = 11
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          42.333333333333330000
+          1793.875000000000000000
+          10.583333333333330000
+          343.958333333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Color = clWhite
+        DataSet = FListaContratoDistribucion.qContrato
+        DataField = 'NOMBRETIPOCONTRATO'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 8
+      end
+      object QRDBText7: TQRDBText
+        Left = 575
+        Top = 3
+        Width = 105
+        Height = 11
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          42.333333333333330000
+          2174.875000000000000000
+          10.583333333333330000
+          396.875000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Color = clWhite
+        DataSet = FListaContratoDistribucion.qContrato
+        DataField = 'NOMBRECONTRATISTA'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 8
+      end
+    end
+    inherited PageFooterBand1: TQRBand
+      Top = 178
+      Size.Values = (
+        79.375000000000000000
+        2592.916666666667000000)
+      inherited qlPagina: TQRSysData
+        Size.Values = (
+          41.577380952380960000
+          2381.250000000000000000
+          22.678571428571430000
+          211.666666666666700000)
+        FontSize = 8
+      end
+      inherited QRShape1: TQRShape
+        Size.Values = (
+          10.583333333333330000
+          2.645833333333333000
+          7.937500000000000000
+          2592.916666666667000000)
+      end
+      inherited QLSGD: TQRLabel
+        Size.Values = (
+          41.577380952380960000
+          0.000000000000000000
+          22.678571428571430000
+          294.821428571428600000)
+        FontSize = 8
+      end
+    end
+    inherited PageHeaderBand1: TQRBand
+      Size.Values = (
+        15.119047619047620000
+        2592.916666666667000000)
+    end
+  end
+end

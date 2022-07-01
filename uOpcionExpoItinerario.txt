@@ -1,0 +1,213 @@
+object fOpcionExpoItinerario: TfOpcionExpoItinerario
+  Left = 493
+  Top = 212
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Cambiar Lector del Itinerario'
+  ClientHeight = 276
+  ClientWidth = 384
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 235
+    Width = 384
+    Height = 41
+    Align = alBottom
+    BevelOuter = bvSpace
+    TabOrder = 0
+    object BitBtn1: TBitBtn
+      Left = 152
+      Top = 8
+      Width = 128
+      Height = 25
+      Anchors = [akRight, akBottom]
+      Caption = 'Asignar y Exportar'
+      TabOrder = 0
+      OnClick = BitBtn1Click
+      Kind = bkOK
+    end
+    object BitBtn2: TBitBtn
+      Left = 286
+      Top = 8
+      Width = 90
+      Height = 25
+      Anchors = [akRight, akBottom]
+      Caption = 'Cancelar'
+      TabOrder = 1
+      OnClick = BitBtn2Click
+      Kind = bkCancel
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 0
+    Width = 384
+    Height = 235
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 1
+    object GroupBox1: TGroupBox
+      Left = 8
+      Top = 16
+      Width = 369
+      Height = 121
+      Caption = 'Nuevo Lector'
+      TabOrder = 0
+      object lbCIA: TLabel
+        Left = 59
+        Top = 49
+        Width = 300
+        Height = 64
+        AutoSize = False
+        Caption = 'lbCIA'
+        Color = clSilver
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clNavy
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object DBEdit2: TDBEdit
+        Left = 10
+        Top = 24
+        Width = 41
+        Height = 21
+        DataField = 'CODIGOGRUPOTRABAJO'
+        DataSource = dsGrupoTrabajo
+        TabOrder = 0
+      end
+      object dblcbGT: TDBLookupComboBox
+        Left = 58
+        Top = 24
+        Width = 303
+        Height = 21
+        KeyField = 'CODIGOGRUPOTRABAJO'
+        ListField = 'NOMBREGRUPOTRABAJO'
+        ListSource = dsGrupoTrabajo
+        TabOrder = 1
+      end
+      object dbeCIA: TDBEdit
+        Tag = 8
+        Left = 10
+        Top = 48
+        Width = 41
+        Height = 21
+        Color = clSilver
+        DataField = 'CODIGOADMINISTRATIVO'
+        DataSource = dsGrupoTrabajo
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clNavy
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 2
+      end
+    end
+    object rgOpciones: TRadioGroup
+      Left = 8
+      Top = 142
+      Width = 369
+      Height = 91
+      Caption = 'Opciones de Exportación'
+      Items.Strings = (
+        'El Itinerario total'
+        'El Itinerario faltante'
+        'El Itinerario a partir del Cliente:')
+      TabOrder = 1
+      OnClick = rgOpcionesClick
+    end
+    object edCodCliente: TEdit
+      Left = 179
+      Top = 206
+      Width = 134
+      Height = 21
+      Enabled = False
+      TabOrder = 2
+      OnKeyPress = edCodClienteKeyPress
+    end
+  end
+  object qGrupoTrabajo: TQuery
+    AfterScroll = qGrupoTrabajoAfterScroll
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT DISTINCT GT.CODIGOADMINISTRATIVO,'
+      'A.NOMBREADMINISTRATIVO,'
+      'A.NOMBRECATEGORIA,'
+      'GT.CODIGOGRUPOTRABAJO, '
+      'GT.NOMBREGRUPOTRABAJO, '
+      'CGT.CODIGOUSUARIO'
+      
+        'FROM GRUPOTRABAJO GT, COORDINACIONGRUPOTRABAJO CGT, ADMINISTRATI' +
+        'VO A'
+      
+        'WHERE GT.CODIGOCOORDINACIONGRUPOTRABAJO = CGT.CODIGOCOORDINACION' +
+        'GRUPOTRABAJO'
+      'AND GT.CODIGOADMINISTRATIVO = A.CODIGOADMINISTRATIVO'
+      
+        'AND NOT ((GT.CODIGOADMINISTRATIVO= :CIA) AND (GT.CODIGOGRUPOTRAB' +
+        'AJO= :GT))'
+      'AND GT.ACTIVO = '#39'S'#39
+      'ORDER BY GT.NOMBREGRUPOTRABAJO')
+    Left = 412
+    Top = 160
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CIA'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftFloat
+        Name = 'GT'
+        ParamType = ptInput
+      end>
+    object qGrupoTrabajoCODIGOGRUPOTRABAJO: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.CODIGOGRUPOTRABAJO'
+    end
+    object qGrupoTrabajoCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'GRUPOTRABAJO.CODIGOADMINISTRATIVO'
+    end
+    object qGrupoTrabajoNOMBREGRUPOTRABAJO: TStringField
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+    object qGrupoTrabajoCODIGOUSUARIO: TFloatField
+      FieldName = 'CODIGOUSUARIO'
+      Origin = 'COORDINACIONGRUPOTRABAJO.CODIGOUSUARIO'
+    end
+    object qGrupoTrabajoNOMBREADMINISTRATIVO: TStringField
+      FieldName = 'NOMBREADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.NOMBREADMINISTRATIVO'
+      Size = 250
+    end
+    object qGrupoTrabajoNOMBRECATEGORIA: TStringField
+      FieldName = 'NOMBRECATEGORIA'
+      Origin = 'ADMINISTRATIVO.NOMBRECATEGORIA'
+      Size = 80
+    end
+  end
+  object dsGrupoTrabajo: TDataSource
+    DataSet = qGrupoTrabajo
+    Left = 420
+    Top = 97
+  end
+end

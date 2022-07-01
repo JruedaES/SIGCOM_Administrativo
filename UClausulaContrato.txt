@@ -1,0 +1,177 @@
+object fClausulaContrato: TfClausulaContrato
+  Left = 230
+  Top = 171
+  Width = 483
+  Height = 247
+  Caption = 'Cláusulas Contrato'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object dbgClausulas: TDBGrid
+    Left = 0
+    Top = 0
+    Width = 105
+    Height = 188
+    Align = alLeft
+    DataSource = dsClausula
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Alignment = taCenter
+        Expanded = False
+        FieldName = 'CONSECUTIVO'
+        Title.Caption = 'Consecutivo'
+        Width = 66
+        Visible = True
+      end>
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 0
+    Top = 188
+    Width = 475
+    Height = 25
+    DataSource = dsClausula
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+    Align = alBottom
+    TabOrder = 1
+  end
+  object Panel1: TPanel
+    Left = 105
+    Top = 0
+    Width = 370
+    Height = 188
+    Align = alClient
+    Caption = 'Panel1'
+    TabOrder = 2
+    object Panel2: TPanel
+      Left = 1
+      Top = 1
+      Width = 368
+      Height = 38
+      Align = alTop
+      BevelOuter = bvNone
+      TabOrder = 0
+      object Label1: TLabel
+        Left = 13
+        Top = 10
+        Width = 28
+        Height = 13
+        Caption = 'Título'
+      end
+      object DBEdit1: TDBEdit
+        Left = 49
+        Top = 8
+        Width = 309
+        Height = 21
+        DataField = 'TITULO'
+        DataSource = dsClausula
+        TabOrder = 0
+      end
+    end
+    object GroupBox1: TGroupBox
+      Left = 1
+      Top = 39
+      Width = 368
+      Height = 148
+      Align = alClient
+      Caption = ' Texto'
+      TabOrder = 1
+      object dbTextoClausula: TDBMemo
+        Left = 2
+        Top = 15
+        Width = 364
+        Height = 131
+        Align = alClient
+        DataField = 'TEXTO'
+        DataSource = dsClausula
+        TabOrder = 0
+      end
+    end
+  end
+  object qClausula: TQuery
+    CachedUpdates = True
+    AfterInsert = qClausulaAfterInsert
+    AfterPost = qClausulaAfterPost
+    AfterDelete = qClausulaAfterDelete
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOCLAUSULACONTRATO,CODIGOCONTRATO,'
+      'CONSECUTIVO,TEXTO,TITULO'
+      'FROM CLAUSULACONTRATO'
+      'WHERE CODIGOCONTRATO=:CODIGOCONTRATO')
+    UpdateObject = updClausula
+    Left = 160
+    Top = 184
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOCONTRATO'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsClausula: TDataSource
+    DataSet = qClausula
+    Left = 224
+    Top = 184
+  end
+  object updClausula: TUpdateSQL
+    ModifySQL.Strings = (
+      'update CLAUSULACONTRATO'
+      'set'
+      '  CODIGOCLAUSULACONTRATO = :CODIGOCLAUSULACONTRATO,'
+      '  CODIGOCONTRATO = :CODIGOCONTRATO,'
+      '  CONSECUTIVO = :CONSECUTIVO,'
+      '  TEXTO = :TEXTO,'
+      '  TITULO = :TITULO'
+      'where'
+      '  CODIGOCLAUSULACONTRATO = :OLD_CODIGOCLAUSULACONTRATO')
+    InsertSQL.Strings = (
+      'insert into CLAUSULACONTRATO'
+      
+        '  (CODIGOCLAUSULACONTRATO, CODIGOCONTRATO, CONSECUTIVO, TEXTO, T' +
+        'ITULO)'
+      'values'
+      
+        '  (:CODIGOCLAUSULACONTRATO, :CODIGOCONTRATO, :CONSECUTIVO, :TEXT' +
+        'O, :TITULO)')
+    DeleteSQL.Strings = (
+      'delete from CLAUSULACONTRATO'
+      'where'
+      '  CODIGOCLAUSULACONTRATO = :OLD_CODIGOCLAUSULACONTRATO')
+    Left = 296
+    Top = 184
+  end
+  object qCodigo: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'Select max(codigoclausulacontrato) from clausulacontrato')
+    Left = 160
+    Top = 240
+  end
+  object qConsecutivo: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'Select max(consecutivo) from clausulacontrato'
+      'where codigocontrato=:codigocontrato')
+    Left = 160
+    Top = 288
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'codigocontrato'
+        ParamType = ptUnknown
+      end>
+  end
+end

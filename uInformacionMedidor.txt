@@ -1,0 +1,377 @@
+object fInformacionMedidor: TfInformacionMedidor
+  Left = 301
+  Top = 236
+  BorderStyle = bsToolWindow
+  Caption = 'Información del Medidor'
+  ClientHeight = 247
+  ClientWidth = 373
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label7: TLabel
+    Left = 16
+    Top = 20
+    Width = 71
+    Height = 13
+    Caption = 'Lectura Nueva'
+  end
+  object Label8: TLabel
+    Left = 24
+    Top = 28
+    Width = 71
+    Height = 13
+    Caption = 'Lectura Nueva'
+  end
+  object Label9: TLabel
+    Left = 32
+    Top = 36
+    Width = 71
+    Height = 13
+    Caption = 'Lectura Nueva'
+  end
+  object Label10: TLabel
+    Left = 40
+    Top = 44
+    Width = 71
+    Height = 13
+    Caption = 'Lectura Nueva'
+  end
+  object Label11: TLabel
+    Left = 48
+    Top = 52
+    Width = 71
+    Height = 13
+    Caption = 'Lectura Nueva'
+  end
+  object Label12: TLabel
+    Left = 56
+    Top = 60
+    Width = 71
+    Height = 13
+    Caption = 'Lectura Nueva'
+  end
+  object Label13: TLabel
+    Left = 64
+    Top = 68
+    Width = 71
+    Height = 13
+    Caption = 'Lectura Nueva'
+  end
+  object Label14: TLabel
+    Left = 72
+    Top = 76
+    Width = 71
+    Height = 13
+    Caption = 'Lectura Nueva'
+  end
+  object Label15: TLabel
+    Left = 80
+    Top = 84
+    Width = 71
+    Height = 13
+    Caption = 'Lectura Nueva'
+  end
+  object Label16: TLabel
+    Left = 88
+    Top = 92
+    Width = 71
+    Height = 13
+    Caption = 'Lectura Nueva'
+  end
+  object Label17: TLabel
+    Left = 96
+    Top = 100
+    Width = 71
+    Height = 13
+    Caption = 'Lectura Nueva'
+  end
+  object Label18: TLabel
+    Left = 104
+    Top = 108
+    Width = 71
+    Height = 13
+    Caption = 'Lectura Nueva'
+  end
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 0
+    Width = 373
+    Height = 206
+    Align = alClient
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 206
+    Width = 373
+    Height = 41
+    Align = alBottom
+    TabOrder = 1
+    object BitBtn1: TBitBtn
+      Left = 294
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'Aceptar'
+      TabOrder = 0
+      Kind = bkOK
+    end
+    object BitBtn2: TBitBtn
+      Left = 202
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'Cancelar'
+      TabOrder = 1
+      Visible = False
+      Kind = bkCancel
+    end
+  end
+  object PageControl2: TPageControl
+    Left = 0
+    Top = 0
+    Width = 373
+    Height = 206
+    ActivePage = TabSheet1
+    Align = alClient
+    TabOrder = 2
+    object TabSheet1: TTabSheet
+      Caption = 'Información Medidor'
+      object GroupBox1: TGroupBox
+        Left = 8
+        Top = 8
+        Width = 353
+        Height = 49
+        Caption = 'Medidor'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+        object Modelo: TLabel
+          Left = 16
+          Top = 20
+          Width = 35
+          Height = 13
+          Caption = 'Modelo'
+        end
+        object Label2: TLabel
+          Left = 176
+          Top = 20
+          Width = 35
+          Height = 13
+          Caption = 'Serial : '
+        end
+        object DBEdit1: TDBEdit
+          Left = 64
+          Top = 16
+          Width = 97
+          Height = 21
+          Color = clInactiveCaption
+          DataField = 'MODELOMEDIDOR'
+          DataSource = dsInformacion
+          TabOrder = 0
+        end
+        object DBEdit2: TDBEdit
+          Left = 224
+          Top = 16
+          Width = 121
+          Height = 21
+          Color = clInactiveCaption
+          DataField = 'SERIAL'
+          DataSource = dsInformacion
+          TabOrder = 1
+        end
+      end
+      object GroupBox2: TGroupBox
+        Left = 8
+        Top = 120
+        Width = 161
+        Height = 49
+        Caption = 'Reactiva'
+        TabOrder = 1
+        object Label3: TLabel
+          Left = 16
+          Top = 20
+          Width = 36
+          Height = 13
+          Caption = 'Lectura'
+        end
+        object DBEdit4: TDBEdit
+          Left = 64
+          Top = 16
+          Width = 89
+          Height = 21
+          Color = clInactiveCaption
+          DataField = 'LECTURAREACTIVA'
+          DataSource = dsInformacion
+          TabOrder = 0
+        end
+      end
+      object GroupBox3: TGroupBox
+        Left = 176
+        Top = 120
+        Width = 185
+        Height = 49
+        Caption = 'Demanda'
+        TabOrder = 2
+        object Label4: TLabel
+          Left = 8
+          Top = 20
+          Width = 36
+          Height = 13
+          Caption = 'Lectura'
+        end
+        object DBEdit5: TDBEdit
+          Left = 56
+          Top = 16
+          Width = 121
+          Height = 21
+          Color = clInactiveCaption
+          DataField = 'LECTURADEMANDA'
+          DataSource = dsInformacion
+          TabOrder = 0
+        end
+      end
+      object GroupBox4: TGroupBox
+        Left = 8
+        Top = 64
+        Width = 353
+        Height = 49
+        Caption = 'Activa'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 3
+        object Label1: TLabel
+          Left = 16
+          Top = 20
+          Width = 53
+          Height = 13
+          Caption = 'Consumo : '
+        end
+        object DBEdit3: TDBEdit
+          Left = 64
+          Top = 16
+          Width = 97
+          Height = 21
+          Color = clInactiveCaption
+          DataField = 'LECTURAACTIVA'
+          DataSource = dsInformacion
+          TabOrder = 0
+        end
+      end
+    end
+  end
+  object qInformacion: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM SIGCOM_MEDIDORNOCOINCIDE'
+      'WHERE CLAVE=:CLAVE'
+      'AND FECHA_PROGRAMADA=TO_DATE(:FECHALECTURA,'#39'DD/MM/YYYY'#39')')
+    Left = 192
+    Top = 64
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'CLAVE'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end>
+    object qInformacionCLAVE: TStringField
+      FieldName = 'CLAVE'
+      Origin = 'SIGCOM_MEDIDORNOCOINCIDE.CLAVE'
+      Size = 50
+    end
+    object qInformacionSERIAL: TStringField
+      FieldName = 'SERIAL'
+      Origin = 'SIGCOM_MEDIDORNOCOINCIDE.SERIAL'
+      Size = 50
+    end
+    object qInformacionMODELOMEDIDOR: TStringField
+      FieldName = 'MODELOMEDIDOR'
+      Origin = 'SIGCOM_MEDIDORNOCOINCIDE.MODELOMEDIDOR'
+      Size = 50
+    end
+    object qInformacionLECTURAACTIVA: TStringField
+      FieldName = 'LECTURAACTIVA'
+      Origin = 'SIGCOM_MEDIDORNOCOINCIDE.LECTURAACTIVA'
+      Size = 50
+    end
+    object qInformacionLECTURAREACTIVA: TStringField
+      FieldName = 'LECTURAREACTIVA'
+      Origin = 'SIGCOM_MEDIDORNOCOINCIDE.LECTURAREACTIVA'
+      Size = 50
+    end
+    object qInformacionLECTURADEMANDA: TStringField
+      FieldName = 'LECTURADEMANDA'
+      Origin = 'SIGCOM_MEDIDORNOCOINCIDE.LECTURADEMANDA'
+      Size = 50
+    end
+    object qInformacionCODTMEDIDA: TStringField
+      FieldName = 'CODTMEDIDA'
+      Origin = 'SIGCOM_MEDIDORNOCOINCIDE.CODTMEDIDA'
+      Size = 50
+    end
+    object qInformacionTIPOCLAVE: TStringField
+      FieldName = 'TIPOCLAVE'
+      Origin = 'SIGCOM_MEDIDORNOCOINCIDE.TIPOCLAVE'
+      Size = 50
+    end
+    object qInformacionCODIGOITINERARIO: TFloatField
+      FieldName = 'CODIGOITINERARIO'
+      Origin = 'SIGCOM_MEDIDORNOCOINCIDE.CODIGOITINERARIO'
+    end
+    object qInformacionFECHA_PROGRAMADA: TDateTimeField
+      FieldName = 'FECHA_PROGRAMADA'
+      Origin = 'SIGCOM_MEDIDORNOCOINCIDE.FECHA_PROGRAMADA'
+    end
+  end
+  object qTipoFacturacion: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      ''
+      
+        'SELECT * FROM SGC_TIPOFACTURACION WHERE CODIGOTIPOFACTURACION=:C' +
+        'ODIGO')
+    Left = 256
+    Top = 64
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'CODIGO'
+        ParamType = ptUnknown
+      end>
+    object qTipoFacturacionCODIGOTIPOFACTURACION: TFloatField
+      FieldName = 'CODIGOTIPOFACTURACION'
+      Origin = 'SGC_TIPOFACTURACION.CODIGOTIPOFACTURACION'
+    end
+    object qTipoFacturacionNOMBRETIPOFACTURACION: TStringField
+      FieldName = 'NOMBRETIPOFACTURACION'
+      Origin = 'SGC_TIPOFACTURACION.NOMBRETIPOFACTURACION'
+      Size = 50
+    end
+  end
+  object dsInformacion: TDataSource
+    DataSet = qInformacion
+    Left = 256
+    Top = 144
+  end
+end

@@ -1,0 +1,779 @@
+object FODTDetalleHorasExtras: TFODTDetalleHorasExtras
+  Left = 330
+  Top = 240
+  BorderStyle = bsToolWindow
+  Caption = 'Detalle Horas Extras: '
+  ClientHeight = 288
+  ClientWidth = 662
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 249
+    Width = 662
+    Height = 39
+    Align = alBottom
+    TabOrder = 0
+    object lbAyuda: TLabel
+      Left = 16
+      Top = 14
+      Width = 377
+      Height = 13
+      AutoSize = False
+    end
+    object Panel3: TPanel
+      Left = 379
+      Top = 1
+      Width = 282
+      Height = 37
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 0
+      object bbAceptar: TBitBtn
+        Left = 120
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = '&Aceptar'
+        ModalResult = 1
+        TabOrder = 0
+        OnClick = bbAceptarClick
+        Glyph.Data = {
+          DE010000424DDE01000000000000760000002800000024000000120000000100
+          0400000000006801000000000000000000001000000010000000000000000000
+          80000080000000808000800000008000800080800000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333333333333333333333330000333333333333333333333333F33333333333
+          00003333344333333333333333388F3333333333000033334224333333333333
+          338338F3333333330000333422224333333333333833338F3333333300003342
+          222224333333333383333338F3333333000034222A22224333333338F338F333
+          8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+          33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+          0000333333333A222433333333333338F338F33300003333333333A222433333
+          333333338F338F33000033333333333A222433333333333338F338F300003333
+          33333333A222433333333333338F338F00003333333333333A22433333333333
+          3338F38F000033333333333333A223333333333333338F830000333333333333
+          333A333333333333333338330000333333333333333333333333333333333333
+          0000}
+        NumGlyphs = 2
+      end
+      object bbCancelar: TBitBtn
+        Left = 200
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = '&Cancelar'
+        TabOrder = 1
+        OnClick = bbCancelarClick
+        Kind = bkCancel
+      end
+    end
+  end
+  object PanelExtras: TPanel
+    Left = 0
+    Top = 0
+    Width = 662
+    Height = 249
+    Align = alClient
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 160
+      Top = 14
+      Width = 31
+      Height = 13
+      Caption = 'CC No'
+    end
+    object Label2: TLabel
+      Left = 300
+      Top = 14
+      Width = 37
+      Height = 13
+      Caption = 'Nombre'
+    end
+    object Label5: TLabel
+      Left = 8
+      Top = 14
+      Width = 23
+      Height = 13
+      Caption = 'ODT'
+    end
+    object Label3: TLabel
+      Left = 8
+      Top = 86
+      Width = 60
+      Height = 13
+      Caption = 'Observación'
+    end
+    object Bevel1: TBevel
+      Left = 3
+      Top = 112
+      Width = 575
+      Height = 6
+      Shape = bsTopLine
+    end
+    object Label4: TLabel
+      Left = 8
+      Top = 49
+      Width = 68
+      Height = 13
+      Caption = 'Extras Diurnas'
+      FocusControl = DBEdit4
+    end
+    object Label6: TLabel
+      Left = 160
+      Top = 49
+      Width = 81
+      Height = 13
+      Caption = 'Extras Nocturnas'
+      FocusControl = DBEdit4
+    end
+    object DBEdit1: TDBEdit
+      Left = 199
+      Top = 11
+      Width = 93
+      Height = 21
+      Color = clBtnFace
+      DataField = 'CODIGOEMPLEADO'
+      DataSource = dsODTSobreTiempo
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 0
+      OnKeyPress = FormKeyPress
+    end
+    object DBEdit2: TDBEdit
+      Left = 347
+      Top = 11
+      Width = 232
+      Height = 21
+      Color = clBtnFace
+      DataField = 'Nombre'
+      DataSource = dsODTSobreTiempo
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 1
+      OnKeyPress = FormKeyPress
+    end
+    object DBEdit3: TDBEdit
+      Left = 84
+      Top = 11
+      Width = 67
+      Height = 21
+      Color = clBtnFace
+      DataField = 'CODIGOODT'
+      DataSource = dsODTSobreTiempo
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 2
+      OnKeyPress = FormKeyPress
+    end
+    object DBEdit5: TDBEdit
+      Left = 84
+      Top = 83
+      Width = 484
+      Height = 21
+      CharCase = ecUpperCase
+      DataField = 'OBSERVACION'
+      DataSource = dsODTSobreTiempoDetalle
+      TabOrder = 3
+      OnKeyPress = FormKeyPress
+      OnKeyUp = DBEdit5KeyUp
+    end
+    object DBNavigator1: TDBNavigator
+      Left = 1
+      Top = 230
+      Width = 660
+      Height = 18
+      DataSource = dsODTSobreTiempoDetalle
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+      Align = alBottom
+      Flat = True
+      TabOrder = 4
+    end
+    object dbgHoras: TDBGrid
+      Left = 1
+      Top = 117
+      Width = 660
+      Height = 113
+      Hint = 'F3 para desplegar Formulario de fecha'
+      Align = alBottom
+      DataSource = dsODTSobreTiempoDetalle
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 5
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      OnEditButtonClick = dbgHorasEditButtonClick
+      OnKeyPress = FormKeyPress
+      OnKeyUp = dbgHorasKeyUp
+      Columns = <
+        item
+          ButtonStyle = cbsEllipsis
+          Expanded = False
+          FieldName = 'FECHAHORADESDE'
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Fecha Desde'
+          Width = 150
+          Visible = True
+        end
+        item
+          ButtonStyle = cbsEllipsis
+          Expanded = False
+          FieldName = 'FECHAHORAHASTA'
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Fecha Hasta'
+          Width = 150
+          Visible = True
+        end
+        item
+          Color = clBtnFace
+          Expanded = False
+          FieldName = 'CANTIDADDIURNA'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          Title.Alignment = taCenter
+          Title.Caption = 'Extras Diurnas'
+          Width = 127
+          Visible = True
+        end
+        item
+          Color = clBtnFace
+          Expanded = False
+          FieldName = 'CANTIDADNOCTURNA'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          Title.Caption = 'Extras Nocturnas'
+          Width = 128
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CONVENCIONAL'
+          PickList.Strings = (
+            'S'
+            'N')
+          Title.Caption = 'Convencional'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'DISPONIBILIDAD'
+          PickList.Strings = (
+            'S'
+            'N')
+          Title.Caption = 'Disponibilidad'
+          Visible = False
+        end>
+    end
+    object DBEdit4: TDBEdit
+      Left = 84
+      Top = 47
+      Width = 64
+      Height = 21
+      Color = clBtnFace
+      DataField = 'CANTIDADDIURNA'
+      DataSource = dsODTSobreTiempo
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 6
+    end
+    object DBEdit6: TDBEdit
+      Left = 252
+      Top = 47
+      Width = 64
+      Height = 21
+      Color = clBtnFace
+      DataField = 'CANTIDADNOCTURNA'
+      DataSource = dsODTSobreTiempo
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 7
+    end
+  end
+  object qODTSobreTiempoDetalle: TQuery
+    CachedUpdates = True
+    AfterInsert = qODTSobreTiempoDetalleAfterInsert
+    BeforePost = qODTSobreTiempoDetalleBeforePost
+    AfterPost = qODTSobreTiempoDetalleAfterPost
+    BeforeDelete = qODTSobreTiempoDetalleBeforeDelete
+    AfterDelete = qODTSobreTiempoDetalleAfterDelete
+    OnCalcFields = qODTSobreTiempoDetalleCalcFields
+    OnUpdateRecord = qODTSobreTiempoDetalleUpdateRecord
+    DatabaseName = 'BaseDato'
+    DataSource = dsODTSobreTiempo
+    SQL.Strings = (
+      'SELECT CODIGOODTSOBRETIEMPODETALLE,'
+      'CODIGOODTSOBRETIEMPO,'
+      'CODIGOODT,CODIGOEMPLEADO,'
+      'FECHAHORADESDE, FECHAHORAHASTA,'
+      'CANTIDADDIURNA, CANTIDADNOCTURNA,CONVENCIONAL,'
+      'OBSERVACION,DISPONIBILIDAD,ESTADO'
+      'FROM ODTSOBRETIEMPODETALLE'
+      'WHERE CODIGOODTSOBRETIEMPO = :CODIGOODTSOBRETIEMPO'
+      'ORDER BY FECHAHORADESDE ASC')
+    UpdateObject = UpdODTSobreTiempoDetalle
+    Left = 748
+    Top = 40
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODTSOBRETIEMPO'
+        ParamType = ptUnknown
+      end>
+    object qODTSobreTiempoDetalleCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'ODTSOBRETIEMPODETALLE.CODIGOODT'
+      OnChange = qODTSobreTiempoDetalleMODIFICADOChange
+    end
+    object qODTSobreTiempoDetalleCODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'ODTSOBRETIEMPODETALLE.CODIGOEMPLEADO'
+      OnChange = qODTSobreTiempoDetalleMODIFICADOChange
+    end
+    object qODTSobreTiempoDetalleFECHAHORADESDE: TDateTimeField
+      FieldName = 'FECHAHORADESDE'
+      Origin = 'ODTSOBRETIEMPODETALLE.FECHAHORADESDE'
+      OnChange = qODTSobreTiempoDetalleMODIFICADOChange
+      OnValidate = qODTSobreTiempoDetalleFECHAHORADESDEValidate
+      DisplayFormat = 'dd/mm/yyyy hh:nn:ss '
+    end
+    object qODTSobreTiempoDetalleFECHAHORAHASTA: TDateTimeField
+      FieldName = 'FECHAHORAHASTA'
+      Origin = 'ODTSOBRETIEMPODETALLE.FECHAHORAHASTA'
+      OnChange = qODTSobreTiempoDetalleMODIFICADOChange
+      OnValidate = qODTSobreTiempoDetalleFECHAHORAHASTAValidate
+      DisplayFormat = 'dd/mm/yyyy hh:nn:ss'
+    end
+    object qODTSobreTiempoDetalleCantidad: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'Cantidad'
+      OnChange = qODTSobreTiempoDetalleMODIFICADOChange
+      Calculated = True
+    end
+    object qODTSobreTiempoDetalleCODIGOODTSOBRETIEMPODETALLE: TFloatField
+      FieldName = 'CODIGOODTSOBRETIEMPODETALLE'
+      Origin = 'ODTSOBRETIEMPODETALLE.CODIGOODTSOBRETIEMPODETALLE'
+    end
+    object qODTSobreTiempoDetalleCODIGOODTSOBRETIEMPO: TFloatField
+      FieldName = 'CODIGOODTSOBRETIEMPO'
+      Origin = 'ODTSOBRETIEMPODETALLE.CODIGOODTSOBRETIEMPO'
+    end
+    object qODTSobreTiempoDetalleCANTIDADDIURNA: TFloatField
+      FieldName = 'CANTIDADDIURNA'
+      Origin = 'ODTSOBRETIEMPODETALLE.CANTIDADDIURNA'
+      OnChange = qODTSobreTiempoDetalleMODIFICADOChange
+      OnValidate = qODTSobreTiempoDetalleCANTIDADDIURNAValidate
+    end
+    object qODTSobreTiempoDetalleCANTIDADNOCTURNA: TFloatField
+      FieldName = 'CANTIDADNOCTURNA'
+      Origin = 'ODTSOBRETIEMPODETALLE.CANTIDADNOCTURNA'
+      OnChange = qODTSobreTiempoDetalleMODIFICADOChange
+      OnValidate = qODTSobreTiempoDetalleCANTIDADNOCTURNAValidate
+    end
+    object qODTSobreTiempoDetalleCONVENCIONAL: TStringField
+      FieldName = 'CONVENCIONAL'
+      Origin = 'ODTSOBRETIEMPODETALLE.CONVENCIONAL'
+      OnChange = qODTSobreTiempoDetalleMODIFICADOChange
+      OnSetText = qODTSobreTiempoDetalleCONVENCIONALSetText
+      OnValidate = qODTSobreTiempoDetalleCONVENCIONALValidate
+      Size = 1
+    end
+    object qODTSobreTiempoDetalleOBSERVACION: TStringField
+      FieldName = 'OBSERVACION'
+      Origin = 'ODTSOBRETIEMPODETALLE.OBSERVACION'
+      OnChange = qODTSobreTiempoDetalleOBSERVACIONChange
+      Size = 50
+    end
+    object qODTSobreTiempoDetalleDISPONIBILIDAD: TStringField
+      FieldName = 'DISPONIBILIDAD'
+      Origin = 'ODTSOBRETIEMPODETALLE.DISPONIBILIDAD'
+      OnSetText = qODTSobreTiempoDetalleDISPONIBILIDADSetText
+      OnValidate = qODTSobreTiempoDetalleDISPONIBILIDADValidate
+      Size = 1
+    end
+    object qODTSobreTiempoDetalleESTADO: TStringField
+      FieldName = 'ESTADO'
+      Origin = 'ODTSOBRETIEMPODETALLE.ESTADO'
+      Size = 3
+    end
+  end
+  object dsODTSobreTiempoDetalle: TDataSource
+    DataSet = qODTSobreTiempoDetalle
+    Left = 745
+    Top = 86
+  end
+  object UpdODTSobreTiempoDetalle: TUpdateSQL
+    ModifySQL.Strings = (
+      'update ODTSOBRETIEMPODETALLE'
+      'set'
+      '  CODIGOODTSOBRETIEMPODETALLE = :CODIGOODTSOBRETIEMPODETALLE,'
+      '  CODIGOODTSOBRETIEMPO = :CODIGOODTSOBRETIEMPO,'
+      '  CODIGOODT = :CODIGOODT,'
+      '  CODIGOEMPLEADO = :CODIGOEMPLEADO,'
+      '  FECHAHORADESDE = :FECHAHORADESDE,'
+      '  FECHAHORAHASTA = :FECHAHORAHASTA,'
+      '  CANTIDADDIURNA = :CANTIDADDIURNA,'
+      '  CANTIDADNOCTURNA = :CANTIDADNOCTURNA,'
+      '  CONVENCIONAL = :CONVENCIONAL,'
+      '  OBSERVACION = :OBSERVACION,'
+      '  DISPONIBILIDAD = :DISPONIBILIDAD'
+      'where'
+      '  CODIGOODTSOBRETIEMPODETALLE = '
+      ':OLD_CODIGOODTSOBRETIEMPODETALLE and'
+      '  CODIGOODTSOBRETIEMPO = :OLD_CODIGOODTSOBRETIEMPO')
+    InsertSQL.Strings = (
+      'insert into ODTSOBRETIEMPODETALLE'
+      
+        '  (CODIGOODTSOBRETIEMPODETALLE, CODIGOODTSOBRETIEMPO, CODIGOODT,' +
+        ' CODIGOEMPLEADO, '
+      
+        '   FECHAHORADESDE, FECHAHORAHASTA, CANTIDADDIURNA, CANTIDADNOCTU' +
+        'RNA, CONVENCIONAL, '
+      '   OBSERVACION, DISPONIBILIDAD)'
+      'values'
+      
+        '  (:CODIGOODTSOBRETIEMPODETALLE, :CODIGOODTSOBRETIEMPO, :CODIGOO' +
+        'DT, :CODIGOEMPLEADO, '
+      
+        '   :FECHAHORADESDE, :FECHAHORAHASTA, :CANTIDADDIURNA, :CANTIDADN' +
+        'OCTURNA, '
+      '   :CONVENCIONAL, :OBSERVACION, :DISPONIBILIDAD)')
+    DeleteSQL.Strings = (
+      'delete from ODTSOBRETIEMPODETALLE'
+      'where'
+      
+        '  CODIGOODTSOBRETIEMPODETALLE = :OLD_CODIGOODTSOBRETIEMPODETALLE' +
+        ' and'
+      '  CODIGOODTSOBRETIEMPO = :OLD_CODIGOODTSOBRETIEMPO')
+    Left = 745
+    Top = 136
+  end
+  object qODTSobreTiempo: TQuery
+    CachedUpdates = True
+    AfterInsert = qODTSobreTiempoAfterInsert
+    AfterPost = qODTSobreTiempoAfterPost
+    OnCalcFields = qODTSobreTiempoCalcFields
+    OnUpdateError = qODTSobreTiempoUpdateError
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOODTSOBRETIEMPO,'
+      'CODIGOODT, CODIGOEMPLEADO,'
+      'CANTIDADDIURNA, CANTIDADNOCTURNA, OBSERVACION, FECHAASIGNACION'
+      'FROM ODTSOBRETIEMPO'
+      'WHERE CODIGOODTSOBRETIEMPO =:CODIGOODTSOBRETIEMPO')
+    UpdateObject = UpdODTSobreTiempo
+    Left = 881
+    Top = 30
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODTSOBRETIEMPO'
+        ParamType = ptUnknown
+      end>
+    object qODTSobreTiempoCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'ODTSOBRETIEMPO.CODIGOODT'
+    end
+    object qODTSobreTiempoCODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'ODTSOBRETIEMPO.CODIGOEMPLEADO'
+    end
+    object qODTSobreTiempoOBSERVACION: TStringField
+      FieldName = 'OBSERVACION'
+      Origin = 'ODTSOBRETIEMPO.OBSERVACION'
+      Required = True
+      Size = 50
+    end
+    object qODTSobreTiempoFECHAASIGNACION: TDateTimeField
+      FieldName = 'FECHAASIGNACION'
+      Origin = 'ODTSOBRETIEMPO.FECHAASIGNACION'
+    end
+    object qODTSobreTiempoCODIGOODTSOBRETIEMPO: TFloatField
+      FieldName = 'CODIGOODTSOBRETIEMPO'
+      Origin = 'ODTSOBRETIEMPO.CODIGOODTSOBRETIEMPO'
+    end
+    object qODTSobreTiempoCANTIDADDIURNA: TFloatField
+      FieldName = 'CANTIDADDIURNA'
+      Origin = 'ODTSOBRETIEMPO.CANTIDADDIURNA'
+    end
+    object qODTSobreTiempoCANTIDADNOCTURNA: TFloatField
+      FieldName = 'CANTIDADNOCTURNA'
+      Origin = 'ODTSOBRETIEMPO.CANTIDADNOCTURNA'
+    end
+    object qODTSobreTiempoNombre: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Nombre'
+      Size = 100
+      Calculated = True
+    end
+  end
+  object dsODTSobreTiempo: TDataSource
+    DataSet = qODTSobreTiempo
+    Left = 880
+    Top = 86
+  end
+  object qEmpleado2: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsODTSobreTiempo
+    SQL.Strings = (
+      'SELECT E.CODIGOEMPLEADO, E.NOMBREEMPLEADO, E.CODIGOSUELDO,'
+      'S.SUELDO AS SUELDOEMPLEADO'
+      'FROM EMPLEADO E, SUELDO S'
+      'WHERE E.CODIGOSUELDO = S.CODIGOSUELDO'
+      ' and e.codigoempleado=:codigoempleado')
+    Left = 116
+    Top = 262
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOEMPLEADO'
+        ParamType = ptUnknown
+      end>
+    object qEmpleado2CODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'EMPLEADO.CODIGOEMPLEADO'
+    end
+    object qEmpleado2NOMBREEMPLEADO: TStringField
+      FieldName = 'NOMBREEMPLEADO'
+      Origin = 'EMPLEADO.NOMBREEMPLEADO'
+      Size = 50
+    end
+    object qEmpleado2CODIGOSUELDO: TStringField
+      FieldName = 'CODIGOSUELDO'
+      Origin = 'EMPLEADO.CODIGOSUELDO'
+      Size = 15
+    end
+    object qEmpleado2SUELDOEMPLEADO: TFloatField
+      FieldName = 'SUELDOEMPLEADO'
+      Origin = 'SUELDO.SUELDO'
+    end
+  end
+  object UpdODTSobreTiempo: TUpdateSQL
+    ModifySQL.Strings = (
+      'update ODTSOBRETIEMPO'
+      'set'
+      '  CODIGOODTSOBRETIEMPO = :CODIGOODTSOBRETIEMPO,'
+      '  CODIGOODT = :CODIGOODT,'
+      '  CODIGOEMPLEADO = :CODIGOEMPLEADO,'
+      '  CANTIDADDIURNA = :CANTIDADDIURNA,'
+      '  CANTIDADNOCTURNA = :CANTIDADNOCTURNA,'
+      '  OBSERVACION = :OBSERVACION,'
+      '  FECHAASIGNACION = :FECHAASIGNACION'
+      'where'
+      '  CODIGOODTSOBRETIEMPO = :OLD_CODIGOODTSOBRETIEMPO')
+    InsertSQL.Strings = (
+      'insert into ODTSOBRETIEMPO'
+      
+        '  (CODIGOODTSOBRETIEMPO, CODIGOODT, CODIGOEMPLEADO, CANTIDADDIUR' +
+        'NA, CANTIDADNOCTURNA, '
+      '   OBSERVACION, FECHAASIGNACION)'
+      'values'
+      
+        '  (:CODIGOODTSOBRETIEMPO, :CODIGOODT, :CODIGOEMPLEADO, :CANTIDAD' +
+        'DIURNA, '
+      '   :CANTIDADNOCTURNA, :OBSERVACION, :FECHAASIGNACION)')
+    DeleteSQL.Strings = (
+      'delete from ODTSOBRETIEMPO'
+      'where'
+      '  CODIGOODTSOBRETIEMPO = :OLD_CODIGOODTSOBRETIEMPO')
+    Left = 884
+    Top = 144
+  end
+  object tTempFecha: TTable
+    Exclusive = True
+    TableName = 'TempFecha'
+    TableType = ttParadox
+    Left = 748
+    Top = 198
+  end
+  object dsTempFecha: TDataSource
+    DataSet = tTempFecha
+    Left = 40
+    Top = 136
+  end
+  object qTurno: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsODTSobreTiempo
+    SQL.Strings = (
+      'SELECT O.CODIGOTIPOTURNO,T.TIPOHORARIO '
+      'FROM ODT O,TIPOTURNO T'
+      'WHERE CODIGOODT=:CODIGOODT'
+      'AND O.CODIGOTIPOTURNO=T.CODIGOTIPOTURNO')
+    Left = 48
+    Top = 264
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end>
+    object qTurnoCODIGOTIPOTURNO: TFloatField
+      FieldName = 'CODIGOTIPOTURNO'
+      Origin = 'ODT.CODIGOTIPOTURNO'
+    end
+    object qTurnoTIPOHORARIO: TStringField
+      FieldName = 'TIPOHORARIO'
+      Origin = 'TIPOTURNO.TIPOHORARIO'
+      Size = 1
+    end
+  end
+  object qDisponibilidad: TQuery
+    DatabaseName = 'BaseDato'
+    Left = 192
+    Top = 264
+  end
+  object qOdt: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsODTSobreTiempo
+    SQL.Strings = (
+      'SELECT CODIGOODT,  FECHAINICIO,FECHAFINAL'
+      'FROM ODT'
+      'WHERE CODIGOODT=:CODIGOODT')
+    Left = 888
+    Top = 200
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end>
+    object qOdtCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'ODT.CODIGOODT'
+    end
+    object qOdtFECHAINICIO: TDateTimeField
+      FieldName = 'FECHAINICIO'
+      Origin = 'ODT.FECHAINICIO'
+    end
+    object qOdtFECHAFINAL: TDateTimeField
+      FieldName = 'FECHAFINAL'
+      Origin = 'ODT.FECHAFINAL'
+    end
+  end
+  object qInterseccionOdts: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOODT FROM ODTSOBRETIEMPODETALLE'
+      'WHERE CODIGOEMPLEADO=:CODIGOEMPLEADO'
+      'AND CODIGOODT<>:CODIGOODT'
+      'AND(   (FECHAHORADESDE>=:DESDE AND FECHAHORADESDE<:HASTA) '
+      '    OR (FECHAHORAHASTA>:DESDE AND FECHAHORAHASTA<=:HASTA)'
+      #9'OR (FECHAHORADESDE<=:DESDE AND FECHAHORAHASTA>=:HASTA))')
+    Left = 362
+    Top = 264
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOEMPLEADO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'DESDE'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'HASTA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'DESDE'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'HASTA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'DESDE'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'HASTA'
+        ParamType = ptUnknown
+      end>
+  end
+  object qTurnoDetalle: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsTurno
+    SQL.Strings = (
+      'SELECT fechadesde,fechahasta FROM TIPOTURNODETALLE'
+      'WHERE CODIGOTIPOTURNO=:CODIGOTIPOTURNO')
+    Left = 280
+    Top = 264
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOTIPOTURNO'
+        ParamType = ptUnknown
+      end>
+    object qTurnoDetalleFECHADESDE: TDateTimeField
+      FieldName = 'FECHADESDE'
+      Origin = 'TIPOTURNODETALLE.FECHADESDE'
+    end
+    object qTurnoDetalleFECHAHASTA: TDateTimeField
+      FieldName = 'FECHAHASTA'
+      Origin = 'TIPOTURNODETALLE.FECHAHASTA'
+    end
+  end
+  object dsTurno: TDataSource
+    DataSet = qTurno
+    Left = 48
+    Top = 312
+  end
+end

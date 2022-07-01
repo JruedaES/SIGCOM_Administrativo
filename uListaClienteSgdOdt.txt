@@ -1,0 +1,250 @@
+inherited fListaClienteSgdOdt: TfListaClienteSgdOdt
+  Left = 352
+  Caption = 'fListaClienteSgdOdt'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel2: TPanel
+    inherited dbgDatos: TRxDBGrid
+      Font.Color = clBlack
+      ParentFont = False
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'CODIGOCLIENTESGD'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Código ClienteSgd'
+          Title.Color = 15724527
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGO_CUENTA'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Cuenta'
+          Title.Color = 15724527
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRESUSCRIPTOR'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Nombre'
+          Title.Color = 15724527
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 180
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGOCONTADOR'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Medidor'
+          Title.Color = 15724527
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 80
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DIRCLIENTE'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clMaroon
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Dirección'
+          Title.Color = 15724527
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 100
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREOBSERVACION'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clMaroon
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          PickList.Strings = ()
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 100
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'ESTRATO'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clMaroon
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          PickList.Strings = ()
+          Title.Caption = 'Estrato'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 40
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FACTURACION'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clMaroon
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          PickList.Strings = ()
+          Title.Caption = 'Facturación'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'ULTIMOCONSUMO'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clMaroon
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          PickList.Strings = ()
+          Title.Caption = 'Último Consumo'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Visible = True
+        end>
+    end
+    inherited Panel3: TPanel
+      inherited SBFiltrar: TSpeedButton
+        Left = 502
+        Top = 14
+        Width = 22
+        Height = 23
+      end
+      inherited Label2: TLabel
+        Left = 121
+      end
+      inherited Label3: TLabel
+        Left = 288
+      end
+      inherited EdBaremo: TEdit
+        Left = 167
+      end
+      inherited EdNombre: TEdit
+        Left = 352
+        Width = 141
+      end
+    end
+  end
+  inherited qDatos: TQuery
+    SQL.Strings = (
+      
+        'select nbt.codigotrafodis,c.codigoclientesgd,NOMBRESUSCRIPTOR,c.' +
+        'codigo_cuenta,c.CODIGOCONTADOR,c.CODIGOCOMERCIALIZADOR,'
+      
+        'o.nombreOBSERVACION,c.ESTRATO,c.FACTURACION,c.ULTIMOCONSUMO,dir_' +
+        'cliente(c.codigoclientesgd)dircliente'
+      'from clientesgd c,nodobt nbt,observacion o'
+      'where c.codigoapoyo=nbt.codigoapoyo'
+      'and c.codigonodobt=nbt.codigonodobt'
+      
+        'and nbt.codigotrafodis in (select t.codigotrafodis from trafodis' +
+        ' t,odttrafodis ot'
+      'where t.pintadotrafodis=ot.pintadotrafodis'
+      'and ot.codigoodt=:codigoodt'
+      'and ot.consecutivo=:consecutivo)'
+      'and o.codigoobservacion=c.codigoobservacion'
+      'order by codigo_cuenta')
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'codigoodt'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'consecutivo'
+        ParamType = ptUnknown
+      end>
+    object qDatosCODIGOCLIENTESGD: TFloatField
+      FieldName = 'CODIGOCLIENTESGD'
+    end
+    object qDatosCODIGO_CUENTA: TFloatField
+      FieldName = 'CODIGO_CUENTA'
+    end
+    object qDatosCODIGOCONTADOR: TStringField
+      FieldName = 'CODIGOCONTADOR'
+      Size = 25
+    end
+    object qDatosCODIGOCOMERCIALIZADOR: TStringField
+      FieldName = 'CODIGOCOMERCIALIZADOR'
+      Size = 3
+    end
+    object qDatosESTRATO: TStringField
+      FieldName = 'ESTRATO'
+      Size = 2
+    end
+    object qDatosFACTURACION: TStringField
+      FieldName = 'FACTURACION'
+      Size = 1
+    end
+    object qDatosULTIMOCONSUMO: TFloatField
+      FieldName = 'ULTIMOCONSUMO'
+    end
+    object qDatosDIRCLIENTE: TMemoField
+      FieldName = 'DIRCLIENTE'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qDatosNOMBRESUSCRIPTOR: TStringField
+      FieldName = 'NOMBRESUSCRIPTOR'
+      Size = 24
+    end
+    object qDatosNOMBREOBSERVACION: TStringField
+      FieldName = 'NOMBREOBSERVACION'
+      Size = 100
+    end
+  end
+end

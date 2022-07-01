@@ -1,0 +1,1871 @@
+inherited FGenerarProgramacion: TFGenerarProgramacion
+  Left = 98
+  Top = 99
+  Width = 1027
+  Height = 611
+  Caption = 'Generar Programación de Turnos Mensual'
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pSuperior: TPanel
+    Left = 0
+    Top = 0
+    Width = 1019
+    Height = 57
+    Align = alTop
+    TabOrder = 0
+    object Bevel2: TBevel
+      Left = 546
+      Top = 3
+      Width = 10
+      Height = 51
+      Shape = bsLeftLine
+    end
+    object sbtGenerarProgramacion: TSpeedButton
+      Left = 561
+      Top = 15
+      Width = 135
+      Height = 30
+      Caption = 'Generar Programación'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+        003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
+        F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
+        F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
+        F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
+        F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
+        F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
+        F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
+        333337FFFFFFFF77333330000000000333333777777777733333}
+      NumGlyphs = 2
+      OnClick = sbtGenerarProgramacionClick
+    end
+    object sbtImprimirProgramacion: TSpeedButton
+      Left = 711
+      Top = 15
+      Width = 135
+      Height = 30
+      Caption = 'Imprimir Programación'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+        00033FFFFFFFFFFFFFFF0888888888888880777777777777777F088888888888
+        8880777777777777777F0000000000000000FFFFFFFFFFFFFFFF0F8F8F8F8F8F
+        8F80777777777777777F08F8F8F8F8F8F9F0777777777777777F0F8F8F8F8F8F
+        8F807777777777777F7F0000000000000000777777777777777F3330FFFFFFFF
+        03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+        03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+        33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
+        33333337FFFF7733333333300000033333333337777773333333}
+      NumGlyphs = 2
+      OnClick = sbtImprimirProgramacionClick
+    end
+    object GroupBox1: TGroupBox
+      Left = 8
+      Top = 4
+      Width = 250
+      Height = 49
+      Caption = ' Seleccione una Programación'
+      TabOrder = 0
+      object DBLookupComboBox1: TDBLookupComboBox
+        Left = 15
+        Top = 18
+        Width = 220
+        Height = 21
+        DataField = 'NOMBREPROGRAMACION'
+        DataSource = dsMemFiltro
+        TabOrder = 0
+      end
+    end
+    object GroupBox2: TGroupBox
+      Left = 277
+      Top = 4
+      Width = 250
+      Height = 49
+      Caption = 'Seleccione una Fecha'
+      TabOrder = 1
+      object TitleLabel: TPanel
+        Left = 15
+        Top = 14
+        Width = 220
+        Height = 27
+        Alignment = taLeftJustify
+        Caption = 'TitleLabel'
+        Color = 16744448
+        Ctl3D = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentCtl3D = False
+        ParentFont = False
+        PopupMenu = pmMeses
+        TabOrder = 0
+        OnMouseDown = TitleLabelMouseDown
+        object seAgnos: TSpinEdit
+          Left = 159
+          Top = 3
+          Width = 53
+          Height = 22
+          Color = 16744448
+          Ctl3D = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWhite
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          MaxValue = 5941
+          MinValue = 1900
+          ParentCtl3D = False
+          ParentFont = False
+          TabOrder = 0
+          Value = 1997
+          OnChange = seAgnosChange
+        end
+        object DBDateEdit1: TDBDateEdit
+          Left = 5
+          Top = 5
+          Width = 113
+          Height = 18
+          DataField = 'Fecha'
+          DataSource = dsMemFiltro
+          NumGlyphs = 2
+          TabOrder = 1
+          Visible = False
+          OnChange = DBDateEdit1Change
+        end
+      end
+    end
+    object chbBloquearProgramacion: TCheckBox
+      Left = 864
+      Top = 24
+      Width = 137
+      Height = 17
+      Caption = 'Bloquear Programación'
+      TabOrder = 2
+      OnMouseUp = chbBloquearProgramacionMouseUp
+    end
+  end
+  object Notebook1: TNotebook
+    Left = 0
+    Top = 57
+    Width = 1019
+    Height = 522
+    Align = alClient
+    TabOrder = 1
+    object TPage
+      Left = 0
+      Top = 0
+      Caption = 'Empleado'
+      object Panel2: TPanel
+        Left = 0
+        Top = 0
+        Width = 1019
+        Height = 522
+        Align = alClient
+        Caption = 'Panel2'
+        TabOrder = 0
+        object HeaderControl1: THeaderControl
+          Left = 1
+          Top = 1
+          Width = 1017
+          Height = 17
+          Sections = <
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end>
+          OnDrawSection = HeaderControl1DrawSection
+        end
+        object dbgCalendarioEmpleado: TRxDBGrid
+          Left = 1
+          Top = 18
+          Width = 1017
+          Height = 377
+          Align = alClient
+          DataSource = dsCalendarioProgramacion
+          Options = [dgEditing, dgTitles, dgIndicator, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit]
+          TabOrder = 1
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+          OnGetCellParams = dbgCalendarioEmpleadoGetCellParams
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'CODIGOEMPLEADO'
+              Width = 60
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'NOMBREEMPLEADO'
+              Width = 200
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D1'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D2'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D3'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D4'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D5'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D6'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D7'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D8'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D9'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D10'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D11'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D12'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D13'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D14'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D15'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D16'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D17'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D18'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D19'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D20'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D21'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D22'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D23'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D24'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D25'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D26'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D27'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D28'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D29'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D30'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D31'
+              Visible = True
+            end>
+        end
+        object Panel3: TPanel
+          Left = 1
+          Top = 395
+          Width = 1017
+          Height = 126
+          Align = alBottom
+          Caption = 'Panel3'
+          TabOrder = 2
+          object Panel6: TPanel
+            Left = 1
+            Top = 19
+            Width = 1015
+            Height = 106
+            Align = alClient
+            TabOrder = 0
+            object DBGridEmpleado: TDBGrid
+              Left = 1
+              Top = 1
+              Width = 1013
+              Height = 104
+              Align = alClient
+              DataSource = dsProgramacionEmpleado
+              ReadOnly = True
+              TabOrder = 0
+              TitleFont.Charset = DEFAULT_CHARSET
+              TitleFont.Color = clWindowText
+              TitleFont.Height = -11
+              TitleFont.Name = 'MS Sans Serif'
+              TitleFont.Style = []
+              Columns = <
+                item
+                  Expanded = False
+                  FieldName = 'CODIGOEMPLEADO'
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'NOMBREEMPLEADO'
+                  Width = 344
+                  Visible = True
+                end>
+            end
+          end
+          object Panel9: TPanel
+            Left = 1
+            Top = 1
+            Width = 1015
+            Height = 18
+            Align = alTop
+            Caption = 'Información Empleados Asignados a la Programación'
+            Color = 16744448
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 1
+          end
+        end
+      end
+    end
+    object TPage
+      Left = 0
+      Top = 0
+      Caption = 'Grupo'
+      object Panel1: TPanel
+        Left = 0
+        Top = 0
+        Width = 1019
+        Height = 527
+        Align = alClient
+        Caption = 'Panel2'
+        TabOrder = 0
+        object HeaderControl2: THeaderControl
+          Left = 1
+          Top = 1
+          Width = 1017
+          Height = 17
+          Sections = <
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end>
+          OnDrawSection = HeaderControl1DrawSection
+        end
+        object dbgCalendarioGrupo: TRxDBGrid
+          Left = 1
+          Top = 18
+          Width = 1017
+          Height = 353
+          Align = alClient
+          DataSource = dsCalendarioProgramacionGrupo
+          Options = [dgEditing, dgTitles, dgIndicator, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit]
+          TabOrder = 1
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+          OnGetCellParams = dbgCalendarioGrupoGetCellParams
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'CODIGOADMINISTRATIVO'
+              Width = 60
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'NOMBREGRUPOTRABAJO'
+              Width = 200
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D1'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D2'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D3'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D4'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D5'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D6'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D7'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D8'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D9'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D10'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D11'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D12'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D13'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D14'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D15'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D16'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D17'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D18'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D19'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D20'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D21'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D22'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D23'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D24'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D25'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D26'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D27'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D28'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D29'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D30'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D31'
+              Visible = True
+            end>
+        end
+        object Panelinferior: TPanel
+          Left = 1
+          Top = 371
+          Width = 1017
+          Height = 155
+          Align = alBottom
+          TabOrder = 2
+          object PanelGrupoEmpleados: TPanel
+            Left = 1
+            Top = 19
+            Width = 1015
+            Height = 135
+            Align = alClient
+            Caption = 'PanelGrupoEmpleados'
+            TabOrder = 0
+            object DBGridGrupoEmpleado: TDBGrid
+              Left = 495
+              Top = 1
+              Width = 519
+              Height = 133
+              Align = alClient
+              DataSource = dsProgramacionGrupoEmpleado
+              ReadOnly = True
+              TabOrder = 0
+              TitleFont.Charset = DEFAULT_CHARSET
+              TitleFont.Color = clWindowText
+              TitleFont.Height = -11
+              TitleFont.Name = 'MS Sans Serif'
+              TitleFont.Style = []
+              Columns = <
+                item
+                  Expanded = False
+                  FieldName = 'NOMBREGRUPOTRABAJO'
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Grupo de Trabajo'
+                  Width = 173
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'CODIGOEMPLEADO'
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Cédula No'
+                  Width = 80
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'NOMBREEMPLEADO'
+                  Title.Alignment = taCenter
+                  Width = 254
+                  Visible = True
+                end>
+            end
+            object DBGridGrupo: TDBGrid
+              Left = 1
+              Top = 1
+              Width = 472
+              Height = 133
+              Align = alLeft
+              DataSource = dsProgramacionGrupo
+              ReadOnly = True
+              TabOrder = 1
+              TitleFont.Charset = DEFAULT_CHARSET
+              TitleFont.Color = clWindowText
+              TitleFont.Height = -11
+              TitleFont.Name = 'MS Sans Serif'
+              TitleFont.Style = []
+              Columns = <
+                item
+                  Expanded = False
+                  FieldName = 'CODIGOADMINISTRATIVO'
+                  Title.Alignment = taCenter
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'NOMBREGRUPOTRABAJO'
+                  Title.Alignment = taCenter
+                  Width = 275
+                  Visible = True
+                end>
+            end
+            object Panel5: TPanel
+              Left = 473
+              Top = 1
+              Width = 22
+              Height = 133
+              Align = alLeft
+              BevelOuter = bvNone
+              TabOrder = 2
+            end
+          end
+          object Panel8: TPanel
+            Left = 1
+            Top = 1
+            Width = 1015
+            Height = 18
+            Align = alTop
+            Caption = 'Información Grupos Asignados a la Programación'
+            Color = 16744448
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 1
+          end
+        end
+      end
+    end
+  end
+  object dsMemFiltro: TDataSource
+    DataSet = tdMemFiltro
+    Left = 115
+    Top = 104
+  end
+  object qProgramacion: TQuery
+    AfterScroll = qProgramacionAfterScroll
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT P.CODIGOPROGRAMACION,P.NOMBREPROGRAMACION,P.CODIGOTIPOPRO' +
+        'GRAMACION,'
+      
+        'P.ROTACION,P.DIRECCIONROTACION,P.CODIGOTIPOTURNOPROGRAMACION,P.C' +
+        'ODIGOADMINISTRATIVO,'
+      'P.TITULOPROGRAMACION,A.NOMBREADMINISTRATIVO'
+      'FROM PROGRAMACION P, ADMINISTRATIVO A'
+      'WHERE A.CODIGOADMINISTRATIVO(+)=P.CODIGOADMINISTRATIVO')
+    Left = 307
+    Top = 166
+    object qProgramacionCODIGOPROGRAMACION: TFloatField
+      FieldName = 'CODIGOPROGRAMACION'
+      Origin = 'PROGRAMACION.CODIGOPROGRAMACION'
+    end
+    object qProgramacionNOMBREPROGRAMACION: TStringField
+      FieldName = 'NOMBREPROGRAMACION'
+      Origin = 'PROGRAMACION.NOMBREPROGRAMACION'
+      Size = 40
+    end
+    object qProgramacionCODIGOTIPOPROGRAMACION: TStringField
+      FieldName = 'CODIGOTIPOPROGRAMACION'
+      Origin = 'PROGRAMACION.CODIGOTIPOPROGRAMACION'
+      Size = 1
+    end
+    object qProgramacionDIRECCIONROTACION: TFloatField
+      FieldName = 'DIRECCIONROTACION'
+      Origin = 'PROGRAMACION.DIRECCIONROTACION'
+    end
+    object qProgramacionCODIGOTIPOTURNOPROGRAMACION: TFloatField
+      FieldName = 'CODIGOTIPOTURNOPROGRAMACION'
+      Origin = 'PROGRAMACION.CODIGOTIPOTURNOPROGRAMACION'
+    end
+    object qProgramacionTITULOPROGRAMACION: TStringField
+      FieldName = 'TITULOPROGRAMACION'
+      Origin = 'PROGRAMACION.TITULOPROGRAMACION'
+      Size = 80
+    end
+    object qProgramacionNOMBREADMINISTRATIVO: TStringField
+      FieldName = 'NOMBREADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.NOMBREADMINISTRATIVO'
+      Size = 250
+    end
+    object qProgramacionCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'PROGRAMACION.CODIGOADMINISTRATIVO'
+    end
+    object qProgramacionREABRIR: TStringField
+      FieldKind = fkLookup
+      FieldName = 'REABRIR'
+      LookupDataSet = qOdtPermisos
+      LookupKeyFields = 'CODIGOADMINISTRATIVO'
+      LookupResultField = 'REABRIR'
+      KeyFields = 'CODIGOADMINISTRATIVO'
+      Size = 1
+      Lookup = True
+    end
+    object qProgramacionROTACION: TStringField
+      FieldName = 'ROTACION'
+      Size = 42
+    end
+  end
+  object dsProgramacion: TDataSource
+    DataSet = qProgramacion
+    Left = 115
+    Top = 166
+  end
+  object pmMeses: TPopupMenu
+    Alignment = paCenter
+    Left = 906
+    Top = 104
+    object Enero1: TMenuItem
+      Tag = 1
+      Caption = 'Enero'
+      OnClick = MesClick
+    end
+    object Febrero1: TMenuItem
+      Tag = 2
+      Caption = 'Febrero'
+      OnClick = MesClick
+    end
+    object Marzo1: TMenuItem
+      Tag = 3
+      Caption = 'Marzo'
+      OnClick = MesClick
+    end
+    object Abril1: TMenuItem
+      Tag = 4
+      Caption = 'Abril'
+      OnClick = MesClick
+    end
+    object Mayo1: TMenuItem
+      Tag = 5
+      Caption = 'Mayo'
+      OnClick = MesClick
+    end
+    object Junio1: TMenuItem
+      Tag = 6
+      Caption = 'Junio'
+      OnClick = MesClick
+    end
+    object Julio1: TMenuItem
+      Tag = 7
+      Caption = 'Julio'
+      OnClick = MesClick
+    end
+    object Agosto1: TMenuItem
+      Tag = 8
+      Caption = 'Agosto'
+      OnClick = MesClick
+    end
+    object Septiembre1: TMenuItem
+      Tag = 9
+      Caption = 'Septiembre'
+      OnClick = MesClick
+    end
+    object Octubre1: TMenuItem
+      Tag = 10
+      Caption = 'Octubre'
+      OnClick = MesClick
+    end
+    object Noviembre1: TMenuItem
+      Tag = 11
+      Caption = 'Noviembre'
+      OnClick = MesClick
+    end
+    object Diciembre1: TMenuItem
+      Tag = 12
+      Caption = 'Diciembre'
+      OnClick = MesClick
+    end
+  end
+  object qCalendarioProgramacion: TQuery
+    AfterOpen = qCalendarioProgramacionAfterOpen
+    AfterClose = qCalendarioProgramacionAfterClose
+    DatabaseName = 'BaseDato'
+    DataSource = dsMemFiltro
+    RequestLive = True
+    SQL.Strings = (
+      'SELECT C.*  FROM '
+      'CALENDARIOPROGRAMACION C'
+      'WHERE'
+      'C.CODIGOPROGRAMACION=:CODIGOPROGRAMACION'
+      'AND C.FECHA =:FECHA'
+      'ORDER BY C.CODIGOEMPLEADO')
+    Left = 307
+    Top = 228
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'CODIGOPROGRAMACION'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'Fecha'
+        ParamType = ptUnknown
+      end>
+    object qCalendarioProgramacionCODIGOEMPLEADO: TFloatField
+      DisplayLabel = 'Cédula No.'
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'CALENDARIOPROGRAMACION.CODIGOEMPLEADO'
+    end
+    object qCalendarioProgramacionNOMBREEMPLEADO: TStringField
+      DisplayLabel = 'Nombre Empleado'
+      FieldKind = fkLookup
+      FieldName = 'NOMBREEMPLEADO'
+      LookupDataSet = qEmpleado
+      LookupKeyFields = 'CODIGOEMPLEADO'
+      LookupResultField = 'NOMBREEMPLEADO'
+      KeyFields = 'CODIGOEMPLEADO'
+      Size = 50
+      Lookup = True
+    end
+    object qCalendarioProgramacionCODIGOPROGRAMACION: TFloatField
+      DisplayLabel = 'Código Programación'
+      FieldName = 'CODIGOPROGRAMACION'
+      Origin = 'CALENDARIOPROGRAMACION.CODIGOPLANILLA'
+    end
+    object qCalendarioProgramacionFECHA: TDateTimeField
+      FieldName = 'FECHA'
+      Origin = 'CALENDARIOPROGRAMACION.FECHA'
+    end
+    object qCalendarioProgramacionD1: TFloatField
+      FieldName = 'D1'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D1'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD2: TFloatField
+      FieldName = 'D2'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D2'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD3: TFloatField
+      FieldName = 'D3'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D3'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD4: TFloatField
+      FieldName = 'D4'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D4'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD5: TFloatField
+      FieldName = 'D5'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D5'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD6: TFloatField
+      FieldName = 'D6'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D6'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD7: TFloatField
+      FieldName = 'D7'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D7'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD8: TFloatField
+      FieldName = 'D8'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D8'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD9: TFloatField
+      FieldName = 'D9'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D9'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD10: TFloatField
+      FieldName = 'D10'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D10'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD11: TFloatField
+      FieldName = 'D11'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D11'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD12: TFloatField
+      FieldName = 'D12'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D12'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD13: TFloatField
+      FieldName = 'D13'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D13'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD14: TFloatField
+      FieldName = 'D14'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D14'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD15: TFloatField
+      FieldName = 'D15'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D15'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD16: TFloatField
+      FieldName = 'D16'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D16'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD17: TFloatField
+      FieldName = 'D17'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D17'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD18: TFloatField
+      FieldName = 'D18'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D18'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD19: TFloatField
+      FieldName = 'D19'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D19'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD20: TFloatField
+      FieldName = 'D20'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D20'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD21: TFloatField
+      FieldName = 'D21'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D21'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD22: TFloatField
+      FieldName = 'D22'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D22'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD23: TFloatField
+      FieldName = 'D23'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D23'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD24: TFloatField
+      FieldName = 'D24'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D24'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD25: TFloatField
+      FieldName = 'D25'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D25'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD26: TFloatField
+      FieldName = 'D26'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D26'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD27: TFloatField
+      FieldName = 'D27'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D27'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD28: TFloatField
+      FieldName = 'D28'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D28'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD29: TFloatField
+      FieldName = 'D29'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D29'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD30: TFloatField
+      FieldName = 'D30'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D30'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionD31: TFloatField
+      FieldName = 'D31'
+      Origin = 'TEMP_CALENDARIOPLANILLA.D31'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionCODIGOESTADOPROGRAMACION: TStringField
+      DisplayLabel = 'Código Estado Programación'
+      FieldName = 'CODIGOESTADOPROGRAMACION'
+      Origin = 'CALENDARIOPROGRAMACION.CODIGOESTADOPLANILLA'
+      Size = 3
+    end
+    object qCalendarioProgramacionDIADESCANSO: TFloatField
+      FieldName = 'DIADESCANSO'
+      Origin = 'TEMP_CALENDARIOPLANILLA.DIADESCANSO'
+    end
+  end
+  object dsCalendarioProgramacion: TDataSource
+    DataSet = qCalendarioProgramacion
+    Left = 115
+    Top = 228
+  end
+  object qProgramacionEmpleado: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsMemFiltro
+    SQL.Strings = (
+      
+        'SELECT P.CODIGOEMPLEADO,P.CODIGOPROGRAMACION, P.DIADESCANSO, P.F' +
+        'ECHADESCANSO,'
+      'E.NOMBREEMPLEADO,P.POSICIONROTACION'
+      'FROM PROGRAMACIONEMPLEADO P , EMPLEADO E'
+      'WHERE P.CODIGOEMPLEADO = E.CODIGOEMPLEADO'
+      'AND P.CODIGOPROGRAMACION = :CODIGOPROGRAMACION'
+      'AND ((E.estado IN ('#39'AC'#39','#39'LC'#39')) OR (E.estado IS NULL))'
+      '')
+    Left = 568
+    Top = 166
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'CODIGOPROGRAMACION'
+        ParamType = ptUnknown
+      end>
+    object qProgramacionEmpleadoCODIGOEMPLEADO: TFloatField
+      Alignment = taCenter
+      DisplayLabel = 'Cédula No.'
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'PROGRAMACIONEMPLEADO.CODIGOEMPLEADO'
+    end
+    object qProgramacionEmpleadoCODIGOPROGRAMACION: TFloatField
+      Alignment = taCenter
+      DisplayLabel = 'Código Programación'
+      FieldName = 'CODIGOPROGRAMACION'
+      Origin = 'PROGRAMACIONEMPLEADO.CODIGOPROGRAMACION'
+    end
+    object qProgramacionEmpleadoDIADESCANSO: TFloatField
+      Alignment = taCenter
+      DisplayLabel = 'Día Descanso'
+      FieldName = 'DIADESCANSO'
+      Origin = 'PROGRAMACIONEMPLEADO.DIADESCANSO'
+    end
+    object qProgramacionEmpleadoFECHADESCANSO: TDateTimeField
+      Alignment = taCenter
+      DisplayLabel = 'Fecha Descanso'
+      FieldName = 'FECHADESCANSO'
+      Origin = 'PROGRAMACIONEMPLEADO.FECHADESCANSO'
+    end
+    object qProgramacionEmpleadoNOMBREEMPLEADO: TStringField
+      DisplayLabel = 'Nombre Empleado'
+      FieldName = 'NOMBREEMPLEADO'
+      Origin = 'EMPLEADO.NOMBREEMPLEADO'
+      Size = 50
+    end
+    object qProgramacionEmpleadoPOSICIONROTACION: TFloatField
+      DisplayLabel = 'Posición Rotación'
+      FieldName = 'POSICIONROTACION'
+      Origin = 'PROGRAMACIONEMPLEADO.POSICIONROTACION'
+    end
+  end
+  object dsCalendarioProgramacionGrupo: TDataSource
+    DataSet = qCalendarioProgramacionGrupo
+    Left = 115
+    Top = 289
+  end
+  object qCalendarioProgramacionGrupo: TQuery
+    AfterOpen = qCalendarioProgramacionAfterOpen
+    AfterClose = qCalendarioProgramacionAfterClose
+    AfterPost = qCalendarioProgramacionGrupoAfterPost
+    DatabaseName = 'BaseDato'
+    DataSource = dsMemFiltro
+    RequestLive = True
+    SQL.Strings = (
+      'SELECT C.*  FROM '
+      'CALENDARIOPROGRAMACIONGRUPO C'
+      'WHERE'
+      'C.CODIGOPROGRAMACION =:CODIGOPROGRAMACION'
+      'AND C.FECHA =:FECHA'
+      'ORDER BY CODIGOADMINISTRATIVO,CODIGOGRUPOTRABAJO')
+    Left = 307
+    Top = 289
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'CODIGOPROGRAMACION'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'Fecha'
+        ParamType = ptUnknown
+      end>
+    object qCalendarioProgramacionGrupoCODIGOADMINISTRATIVO: TFloatField
+      DisplayLabel = 'CIA'
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'CALENDARIOPROGRAMACIONGRUPO.CODIGOADMINISTRATIVO'
+    end
+    object qCalendarioProgramacionGrupoCODIGOGRUPOTRABAJO: TFloatField
+      DisplayLabel = 'Código Grupo Trabajo'
+      FieldName = 'CODIGOGRUPOTRABAJO'
+      Origin = 'CALENDARIOPROGRAMACIONGRUPO.CODIGOGRUPOTRABAJO'
+    end
+    object qCalendarioProgramacionGrupoNOMBREGRUPOTRABAJO: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      LookupDataSet = qGrupo
+      LookupKeyFields = 'CODIGOADMINISTRATIVO;CODIGOGRUPOTRABAJO'
+      LookupResultField = 'NOMBREGRUPOTRABAJO'
+      KeyFields = 'CODIGOADMINISTRATIVO;CODIGOGRUPOTRABAJO'
+      Size = 30
+      Lookup = True
+    end
+    object qCalendarioProgramacionGrupoCODIGOPROGRAMACION: TFloatField
+      DisplayLabel = 'Código Programación'
+      FieldName = 'CODIGOPROGRAMACION'
+      Origin = 'CALENDARIOPROGRAMACIONGRUPO.CODIGOPROGRAMACION'
+    end
+    object qCalendarioProgramacionGrupoFECHA: TDateTimeField
+      FieldName = 'FECHA'
+      Origin = 'CALENDARIOPROGRAMACIONGRUPO.FECHA'
+    end
+    object qCalendarioProgramacionGrupoD1: TFloatField
+      FieldName = 'D1'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D1'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD2: TFloatField
+      FieldName = 'D2'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D2'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD3: TFloatField
+      FieldName = 'D3'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D3'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD4: TFloatField
+      FieldName = 'D4'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D4'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD5: TFloatField
+      FieldName = 'D5'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D5'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD6: TFloatField
+      FieldName = 'D6'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D6'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD7: TFloatField
+      FieldName = 'D7'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D7'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD8: TFloatField
+      FieldName = 'D8'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D8'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD9: TFloatField
+      FieldName = 'D9'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D9'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD10: TFloatField
+      FieldName = 'D10'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D10'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD11: TFloatField
+      FieldName = 'D11'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D11'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD12: TFloatField
+      FieldName = 'D12'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D12'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD13: TFloatField
+      FieldName = 'D13'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D13'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD14: TFloatField
+      FieldName = 'D14'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D14'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD15: TFloatField
+      FieldName = 'D15'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D15'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD16: TFloatField
+      FieldName = 'D16'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D16'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD17: TFloatField
+      FieldName = 'D17'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D17'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD18: TFloatField
+      FieldName = 'D18'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D18'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD19: TFloatField
+      FieldName = 'D19'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D19'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD20: TFloatField
+      FieldName = 'D20'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D20'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD21: TFloatField
+      FieldName = 'D21'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D21'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD22: TFloatField
+      FieldName = 'D22'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D22'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD23: TFloatField
+      FieldName = 'D23'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D23'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD24: TFloatField
+      FieldName = 'D24'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D24'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD25: TFloatField
+      FieldName = 'D25'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D25'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD26: TFloatField
+      FieldName = 'D26'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D26'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD27: TFloatField
+      FieldName = 'D27'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D27'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD28: TFloatField
+      FieldName = 'D28'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D28'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD29: TFloatField
+      FieldName = 'D29'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D29'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD30: TFloatField
+      FieldName = 'D30'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D30'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoD31: TFloatField
+      FieldName = 'D31'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.D31'
+      OnSetText = qCalendarioProgramacionDiaSetText
+    end
+    object qCalendarioProgramacionGrupoCODIGOESTADOPROGRAMACION: TStringField
+      DisplayLabel = 'Código Estado Programación'
+      FieldName = 'CODIGOESTADOPROGRAMACION'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.CODIGOESTADOPROGRAMACION'
+      Size = 3
+    end
+    object qCalendarioProgramacionGrupoDIADESCANSO: TFloatField
+      FieldName = 'DIADESCANSO'
+      Origin = 'TEMP_CALENDARIOPLANILLAGRUPO.DIADESCANSO'
+    end
+  end
+  object dsProgramacionGrupoEmpleado: TDataSource
+    DataSet = qProgramacionGrupoEmpleado
+    Left = 115
+    Top = 351
+  end
+  object qProgramacionGrupo: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsMemFiltro
+    SQL.Strings = (
+      'SELECT P.CODIGOPROGRAMACION,P.CODIGOADMINISTRATIVO,'
+      'P.CODIGOGRUPOTRABAJO,P.DIADESCANSO,P.FECHADESCANSO,'
+      'G.NOMBREGRUPOTRABAJO,P.POSICIONROTACION'
+      'FROM PROGRAMACIONGRUPO P, GRUPOTRABAJO G'
+      'WHERE G.CODIGOADMINISTRATIVO = P.CODIGOADMINISTRATIVO'
+      'AND G.CODIGOGRUPOTRABAJO = P.CODIGOGRUPOTRABAJO'
+      'AND P.CODIGOPROGRAMACION = :CODIGOPROGRAMACION')
+    Left = 568
+    Top = 228
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'CODIGOPROGRAMACION'
+        ParamType = ptUnknown
+      end>
+    object qProgramacionGrupoCODIGOPROGRAMACION: TFloatField
+      Alignment = taCenter
+      DisplayLabel = 'Código Programación'
+      FieldName = 'CODIGOPROGRAMACION'
+      Origin = 'PROGRAMACIONGRUPO.CODIGOPROGRAMACION'
+    end
+    object qProgramacionGrupoCODIGOADMINISTRATIVO: TFloatField
+      Alignment = taCenter
+      DisplayLabel = 'CIA'
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'PROGRAMACIONGRUPO.CODIGOADMINISTRATIVO'
+    end
+    object qProgramacionGrupoCODIGOGRUPOTRABAJO: TFloatField
+      Alignment = taCenter
+      DisplayLabel = 'Código Grupo Trabajo'
+      FieldName = 'CODIGOGRUPOTRABAJO'
+      Origin = 'PROGRAMACIONGRUPO.CODIGOGRUPOTRABAJO'
+    end
+    object qProgramacionGrupoDIADESCANSO: TFloatField
+      Alignment = taCenter
+      DisplayLabel = 'Día Descanso'
+      FieldName = 'DIADESCANSO'
+      Origin = 'PROGRAMACIONGRUPO.DIADESCANSO'
+    end
+    object qProgramacionGrupoFECHADESCANSO: TDateTimeField
+      Alignment = taCenter
+      DisplayLabel = 'Fecha Descanso'
+      FieldName = 'FECHADESCANSO'
+      Origin = 'PROGRAMACIONGRUPO.FECHADESCANSO'
+    end
+    object qProgramacionGrupoNOMBREGRUPOTRABAJO: TStringField
+      DisplayLabel = 'Nombre Grupo Trabajo'
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+    object qProgramacionGrupoPOSICIONROTACION: TFloatField
+      FieldName = 'POSICIONROTACION'
+      Origin = 'PROGRAMACIONGRUPO.POSICIONROTACION'
+    end
+  end
+  object tdMemFiltro: tdMemTable
+    AfterInsert = tdMemFiltroAfterInsert
+    TableName = 'temp'
+    Left = 307
+    Top = 104
+    object tdMemFiltrocodigoprogramacion: TIntegerField
+      DisplayLabel = 'Código Programación'
+      FieldName = 'CODIGOPROGRAMACION'
+      OnChange = tdMemFiltroCodigoProgramacionChange
+    end
+    object tdMemFiltronombreprogramacion: TStringField
+      DisplayLabel = 'Nombre Programación'
+      FieldKind = fkLookup
+      FieldName = 'NOMBREPROGRAMACION'
+      LookupDataSet = qProgramacion
+      LookupKeyFields = 'CODIGOPROGRAMACION'
+      LookupResultField = 'NOMBREPROGRAMACION'
+      KeyFields = 'CODIGOPROGRAMACION'
+      Size = 30
+      Lookup = True
+    end
+    object tdMemFiltroFecha: TDateTimeField
+      FieldName = 'Fecha'
+      OnChange = tdMemFiltroFechaChange
+    end
+    object tdMemFiltroTipoProgramacion: TStringField
+      DisplayLabel = 'Tipo Programación'
+      FieldKind = fkLookup
+      FieldName = 'TIPOPROGRAMACION'
+      LookupDataSet = qProgramacion
+      LookupKeyFields = 'CODIGOPROGRAMACION'
+      LookupResultField = 'CODIGOTIPOPROGRAMACION'
+      KeyFields = 'CODIGOPROGRAMACION'
+      Size = 1
+      Lookup = True
+    end
+    object tdMemFiltroRotacion: TStringField
+      FieldKind = fkLookup
+      FieldName = 'Rotacion'
+      LookupDataSet = qProgramacion
+      LookupKeyFields = 'CODIGOPROGRAMACION'
+      LookupResultField = 'ROTACION'
+      KeyFields = 'CODIGOPROGRAMACION'
+      Size = 19
+      Lookup = True
+    end
+    object tdMemFiltroCodigoAdministrativo: TIntegerField
+      FieldKind = fkLookup
+      FieldName = 'CodigoAdministrativo'
+      LookupDataSet = qProgramacion
+      LookupKeyFields = 'CODIGOPROGRAMACION'
+      LookupResultField = 'CODIGOADMINISTRATIVO'
+      KeyFields = 'CODIGOPROGRAMACION'
+      Lookup = True
+    end
+    object tdMemFiltroREABRIR: TStringField
+      FieldKind = fkLookup
+      FieldName = 'REABRIR'
+      LookupDataSet = qProgramacion
+      LookupKeyFields = 'CODIGOPROGRAMACION'
+      LookupResultField = 'REABRIR'
+      KeyFields = 'CODIGOPROGRAMACION'
+      Size = 1
+      Lookup = True
+    end
+  end
+  object qProgramacionGrupoEmpleado: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsProgramacionGrupo
+    SQL.Strings = (
+      
+        'SELECT T.CODIGOPROGRAMACION,T.CODIGOADMINISTRATIVO, T.CODIGOGRUP' +
+        'OTRABAJO, T.DIADESCANSO,'
+      
+        'T.FECHADESCANSO, T.CODIGOEMPLEADO, E.NOMBREEMPLEADO, G.NOMBREGRU' +
+        'POTRABAJO'
+      'FROM PROGRAMACIONEMPLEADO T, EMPLEADO E, GRUPOTRABAJO G'
+      'WHERE E.CODIGOEMPLEADO = T.CODIGOEMPLEADO'
+      'AND G.CODIGOADMINISTRATIVO = T.CODIGOADMINISTRATIVO'
+      'AND G.CODIGOGRUPOTRABAJO = T.CODIGOGRUPOTRABAJO'
+      'AND T.CODIGOPROGRAMACION=:CODIGOPROGRAMACION'
+      'AND T.CODIGOADMINISTRATIVO = :CODIGOADMINISTRATIVO'
+      'AND T.CODIGOGRUPOTRABAJO =:CODIGOGRUPOTRABAJO'
+      'AND ((E.estado IN ('#39'AC'#39','#39'LC'#39')) OR (E.estado IS NULL))')
+    Left = 307
+    Top = 351
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOPROGRAMACION'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOGRUPOTRABAJO'
+        ParamType = ptUnknown
+      end>
+    object qProgramacionGrupoEmpleadoCODIGOPROGRAMACION: TFloatField
+      DisplayLabel = 'Código Programación'
+      FieldName = 'CODIGOPROGRAMACION'
+      Origin = 'PROGRAMACIONEMPLEADO.CODIGOPROGRAMACION'
+    end
+    object qProgramacionGrupoEmpleadoCODIGOADMINISTRATIVO: TFloatField
+      DisplayLabel = 'CIA'
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'PROGRAMACIONEMPLEADO.CODIGOADMINISTRATIVO'
+    end
+    object qProgramacionGrupoEmpleadoCODIGOGRUPOTRABAJO: TFloatField
+      DisplayLabel = 'Código Grupo Trabajo'
+      FieldName = 'CODIGOGRUPOTRABAJO'
+      Origin = 'PROGRAMACIONEMPLEADO.CODIGOGRUPOTRABAJO'
+    end
+    object qProgramacionGrupoEmpleadoDIADESCANSO: TFloatField
+      DisplayLabel = 'Día Descanso'
+      FieldName = 'DIADESCANSO'
+      Origin = 'PROGRAMACIONEMPLEADO.DIADESCANSO'
+    end
+    object qProgramacionGrupoEmpleadoFECHADESCANSO: TDateTimeField
+      DisplayLabel = 'Fecha Descanso'
+      FieldName = 'FECHADESCANSO'
+      Origin = 'PROGRAMACIONEMPLEADO.FECHADESCANSO'
+    end
+    object qProgramacionGrupoEmpleadoCODIGOEMPLEADO: TFloatField
+      Alignment = taCenter
+      DisplayLabel = 'Cédula No.'
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'PROGRAMACIONEMPLEADO.CODIGOEMPLEADO'
+    end
+    object qProgramacionGrupoEmpleadoNOMBREEMPLEADO: TStringField
+      DisplayLabel = 'Nombre Empleado'
+      FieldName = 'NOMBREEMPLEADO'
+      Origin = 'EMPLEADO.NOMBREEMPLEADO'
+      Size = 50
+    end
+    object qProgramacionGrupoEmpleadoNOMBREGRUPOTRABAJO: TStringField
+      DisplayLabel = 'Nombre Grupo Trabajo'
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+  end
+  object qEmpleado: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOEMPLEADO, NOMBREEMPLEADO'
+      'FROM EMPLEADO'
+      'WHERE ((estado IN ('#39'AC'#39','#39'LC'#39')) OR (estado IS NULL))')
+    Left = 456
+    Top = 165
+  end
+  object qGrupo: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOADMINISTRATIVO,CODIGOGRUPOTRABAJO,'
+      'NOMBREGRUPOTRABAJO FROM GRUPOTRABAJO')
+    Left = 456
+    Top = 228
+  end
+  object QRCompositeReport1: TQRCompositeReport
+    OnAddReports = QRCompositeReport1AddReports
+    Options = []
+    PrinterSettings.Copies = 1
+    PrinterSettings.Duplex = False
+    PrinterSettings.FirstPage = 0
+    PrinterSettings.LastPage = 0
+    PrinterSettings.OutputBin = Auto
+    PrinterSettings.Orientation = poLandscape
+    PrinterSettings.PaperSize = Letter
+    Left = 720
+    Top = 104
+  end
+  object dsProgramacionGrupo: TDataSource
+    DataSet = qProgramacionGrupo
+    Left = 712
+    Top = 228
+  end
+  object dsProgramacionEmpleado: TDataSource
+    DataSet = qProgramacionEmpleado
+    Left = 712
+    Top = 166
+  end
+  object qOdtPermisos: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOUSUARIO, CODIGOADMINISTRATIVO,REABRIR '
+      'FROM ODTPERMISOS'
+      'WHERE NOMBRETABLA='#39'PROGRAMACION'#39
+      'AND EDITAR='#39'S'#39
+      'AND CODIGOUSUARIO=:CODIGOUSUARIO'
+      ' '
+      '')
+    Left = 459
+    Top = 287
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOUSUARIO'
+        ParamType = ptUnknown
+      end>
+    object qOdtPermisosCODIGOUSUARIO: TFloatField
+      FieldName = 'CODIGOUSUARIO'
+      Origin = 'ODTPERMISOS.CODIGOUSUARIO'
+    end
+    object qOdtPermisosCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'ODTPERMISOS.CODIGOADMINISTRATIVO'
+    end
+    object qOdtPermisosREABRIR: TStringField
+      FieldName = 'REABRIR'
+      Origin = 'ODTPERMISOS.REABRIR'
+      Size = 1
+    end
+  end
+end

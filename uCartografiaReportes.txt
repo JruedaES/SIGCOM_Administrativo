@@ -1,0 +1,42 @@
+object fCartografiaReportes: TfCartografiaReportes
+  Left = 338
+  Top = 194
+  BorderStyle = bsToolWindow
+  ClientHeight = 36
+  ClientWidth = 196
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object dbNAvigator: TDBNavigator
+    Left = 0
+    Top = 0
+    Width = 196
+    Height = 18
+    DataSource = dsBusqueda
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+    Align = alTop
+    TabOrder = 0
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 18
+    Width = 196
+    Height = 18
+    Align = alClient
+    Panels = <>
+    SimplePanel = False
+  end
+  object dsBusqueda: TDataSource
+    Left = 336
+    Top = 256
+  end
+end

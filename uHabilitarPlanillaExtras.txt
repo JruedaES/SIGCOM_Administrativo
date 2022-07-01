@@ -1,0 +1,356 @@
+inherited fHabilitarPlanillaExtras: TfHabilitarPlanillaExtras
+  Left = 281
+  Top = 161
+  Caption = 'Reabrir Planilla Extras y Recargos'
+  ClientHeight = 480
+  ClientWidth = 749
+  FormStyle = fsMDIChild
+  Visible = True
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel2: TPanel
+    Width = 749
+    Height = 439
+    inherited dbgDatos: TRxDBGrid
+      Width = 747
+      Height = 278
+      Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit]
+      OnEditButtonClick = dbgActividadOdtEditButtonClick
+      MultiSelect = False
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'CODIGOEMPLEADO'
+          PickList.Strings = ()
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Cédula'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAPLANILLA'
+          PickList.Strings = ()
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Fecha Planilla'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 89
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NombreEmpleado'
+          PickList.Strings = ()
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Nombre Empleado'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 133
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHA'
+          PickList.Strings = ()
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Fecha Rehabilita'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 136
+          Visible = True
+        end
+        item
+          ButtonStyle = cbsEllipsis
+          Expanded = False
+          FieldName = 'Usuariosolicita'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Usuario Solicita'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 149
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'UsuarioHabilita'
+          PickList.Strings = ()
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Usuario Habilita'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 130
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'MOTIVOS'
+          PickList.Strings = ()
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Motivos'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'EstadoPlanilla'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Estado'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Visible = True
+        end>
+    end
+    inherited DBNavigator1: TDBNavigator
+      Top = 420
+      Width = 747
+      DataSource = dsDatos
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbPost, nbCancel]
+      Hints.Strings = (
+        'Primer registro'
+        'Anterior registro'
+        'Siguiente registro'
+        'Último registro'
+        'Insertar registro'
+        'Borrar registro'
+        'Editar registro'
+        'Guardar registro'
+        'Cancelar'
+        'Refrescar')
+    end
+    inherited Panel3: TPanel
+      Width = 747
+      inherited SBFiltrar: TSpeedButton
+        Left = 708
+        Top = 13
+        OnClick = SBFiltrarClick
+      end
+      inherited Label1: TLabel
+        Caption = 'Cédula :'
+      end
+      inherited Label2: TLabel
+        Left = 179
+        Width = 20
+        Caption = 'CIA:'
+      end
+      inherited Label3: TLabel
+        Left = 311
+      end
+      object SpeedButton1: TSpeedButton [4]
+        Left = 180
+        Top = 17
+        Width = 29
+        Height = 19
+        Caption = 'CIA'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clNavy
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        NumGlyphs = 2
+        ParentFont = False
+        OnClick = SpeedButton1Click
+      end
+      inherited EdCodigo: TEdit
+        Width = 88
+        OnKeyPress = EdCodigoKeyPress
+      end
+      inherited EdCodigo2: TEdit
+        Left = 211
+        Width = 62
+        OnKeyPress = EdCodigo2KeyPress
+      end
+      inherited EdNombre: TEdit
+        Left = 382
+        Width = 266
+      end
+    end
+    object Panel4: TPanel
+      Left = 1
+      Top = 333
+      Width = 747
+      Height = 87
+      Align = alBottom
+      TabOrder = 3
+      object Label4: TLabel
+        Left = 1
+        Top = 1
+        Width = 745
+        Height = 13
+        Align = alTop
+        Caption = '   Motivos :'
+      end
+      object EdMotivos: TDBMemo
+        Left = 1
+        Top = 14
+        Width = 745
+        Height = 72
+        Align = alClient
+        DataField = 'MOTIVOS'
+        DataSource = dsDatos
+        Enabled = False
+        TabOrder = 0
+      end
+    end
+  end
+  inherited Panel1: TPanel
+    Top = 439
+    Width = 749
+    inherited bbAceptar: TBitBtn
+      Left = 420
+    end
+    inherited bbCancelar: TBitBtn
+      Left = 516
+    end
+  end
+  inherited dsDatos: TDataSource
+    DataSet = qDatos
+  end
+  inherited qDatos: TQuery
+    Active = True
+    CachedUpdates = True
+    BeforeInsert = qDatosBeforeInsert
+    AfterInsert = qDatosAfterInsert
+    BeforePost = qDatosBeforePost
+    OnCalcFields = qDatosCalcFields
+    SQL.Strings = (
+      
+        'select CODIGOHABILITARPLANILLAEXTRAS,CODIGOEMPLEADO, FECHAPLANIL' +
+        'LA,'
+      'FECHA,CODIGOUSUARIOREALIZA,CODIGOUSUARIOSOLICITA,MOTIVOS'
+      'from HABILITARPLANILLAEXTRAS H'
+      'order by FECHA  desc')
+    UpdateObject = updDatos
+    object qDatosUsuarioHabilita: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'UsuarioHabilita'
+      Size = 80
+      Calculated = True
+    end
+    object qDatosUsuariosolicita: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Usuariosolicita'
+      Size = 80
+      Calculated = True
+    end
+    object qDatosNombreEmpleado: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'NombreEmpleado'
+      Size = 80
+      Calculated = True
+    end
+    object qDatosCodigoAdministrativo: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'CodigoAdministrativo'
+      Calculated = True
+    end
+    object qDatosCODIGOHABILITARPLANILLAEXTRAS: TFloatField
+      FieldName = 'CODIGOHABILITARPLANILLAEXTRAS'
+      Origin = 'HABILITARPLANILLAEXTRAS.CODIGOHABILITARPLANILLAEXTRAS'
+    end
+    object qDatosCODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'HABILITARPLANILLAEXTRAS.CODIGOEMPLEADO'
+    end
+    object qDatosFECHAPLANILLA: TDateTimeField
+      FieldName = 'FECHAPLANILLA'
+      Origin = 'HABILITARPLANILLAEXTRAS.FECHAPLANILLA'
+    end
+    object qDatosFECHA: TDateTimeField
+      FieldName = 'FECHA'
+      Origin = 'HABILITARPLANILLAEXTRAS.FECHA'
+    end
+    object qDatosCODIGOUSUARIOREALIZA: TFloatField
+      FieldName = 'CODIGOUSUARIOREALIZA'
+      Origin = 'HABILITARPLANILLAEXTRAS.CODIGOUSUARIOREALIZA'
+    end
+    object qDatosCODIGOUSUARIOSOLICITA: TFloatField
+      FieldName = 'CODIGOUSUARIOSOLICITA'
+      Origin = 'HABILITARPLANILLAEXTRAS.CODIGOUSUARIOSOLICITA'
+    end
+    object qDatosMOTIVOS: TStringField
+      FieldName = 'MOTIVOS'
+      Origin = 'HABILITARPLANILLAEXTRAS.MOTIVOS'
+      Size = 250
+    end
+    object qDatosEstadoPlanilla: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'EstadoPlanilla'
+      Size = 12
+      Calculated = True
+    end
+    object qDatosFinMes: TDateField
+      FieldKind = fkCalculated
+      FieldName = 'FinMes'
+      Calculated = True
+    end
+  end
+  inherited updDatos: TUpdateSQL
+    ModifySQL.Strings = (
+      'update HABILITARPLANILLAEXTRAS'
+      'set'
+      
+        '  CODIGOHABILITARPLANILLAEXTRAS = :CODIGOHABILITARPLANILLAEXTRAS' +
+        ','
+      '  CODIGOEMPLEADO = :CODIGOEMPLEADO,'
+      '  FECHAPLANILLA = :FECHAPLANILLA,'
+      '  FECHA = :FECHA,'
+      '  CODIGOUSUARIOREALIZA = :CODIGOUSUARIOREALIZA,'
+      '  CODIGOUSUARIOSOLICITA = :CODIGOUSUARIOSOLICITA,'
+      '  MOTIVOS = :MOTIVOS'
+      'where'
+      '  CODIGOHABILITARPLANILLAEXTRAS = '
+      ':OLD_CODIGOHABILITARPLANILLAEXTRAS')
+    InsertSQL.Strings = (
+      'insert into HABILITARPLANILLAEXTRAS'
+      
+        '  (CODIGOHABILITARPLANILLAEXTRAS, CODIGOEMPLEADO, FECHAPLANILLA,' +
+        ' FECHA, '
+      '   CODIGOUSUARIOREALIZA, CODIGOUSUARIOSOLICITA, MOTIVOS)'
+      'values'
+      
+        '  (:CODIGOHABILITARPLANILLAEXTRAS, :CODIGOEMPLEADO, :FECHAPLANIL' +
+        'LA, :FECHA, '
+      '   :CODIGOUSUARIOREALIZA, :CODIGOUSUARIOSOLICITA, :MOTIVOS)')
+    DeleteSQL.Strings = (
+      'delete from HABILITARPLANILLAEXTRAS'
+      'where'
+      
+        '  CODIGOHABILITARPLANILLAEXTRAS = :OLD_CODIGOHABILITARPLANILLAEX' +
+        'TRAS')
+  end
+end

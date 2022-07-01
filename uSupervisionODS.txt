@@ -1,0 +1,4112 @@
+inherited fSupervisionODS: TfSupervisionODS
+  Left = 19
+  Top = 109
+  Width = 1327
+  Height = 609
+  Caption = 'Listado de Supervisión Online Ordenes de Servicio'
+  Font.Charset = ANSI_CHARSET
+  Font.Name = 'Tahoma'
+  OnKeyUp = FormKeyUp
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lFecha: TLabel [0]
+    Left = 97
+    Top = 2
+    Width = 63
+    Height = 13
+    Caption = 'FechaHora'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object SpeedButton1: TSpeedButton [1]
+    Left = 194
+    Top = 2
+    Width = 23
+    Height = 23
+    Hint = 'Exportación de la Lista'
+    Flat = True
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      0400000000000001000000000000000000001000000010000000000000000000
+      8000008000000080800080000000800080008080000080808000C0C0C0000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333303
+      333333333333337FF3333333333333903333333333333377FF33333333333399
+      03333FFFFFFFFF777FF3000000999999903377777777777777FF0FFFF0999999
+      99037F3337777777777F0FFFF099999999907F3FF777777777770F00F0999999
+      99037F773777777777730FFFF099999990337F3FF777777777330F00FFFFF099
+      03337F773333377773330FFFFFFFF09033337F3FF3FFF77733330F00F0000003
+      33337F773777777333330FFFF0FF033333337F3FF7F3733333330F08F0F03333
+      33337F7737F7333333330FFFF003333333337FFFF77333333333000000333333
+      3333777777333333333333333333333333333333333333333333}
+    NumGlyphs = 2
+    OnClick = sbExportarClick
+  end
+  inherited Panel1: TPanel
+    Width = 1311
+    inherited Panel2: TPanel
+      Left = 1048
+      Width = 262
+      inherited SBBuscaElementoCartografia: TSpeedButton [0]
+        Left = 287
+        Visible = False
+      end
+      inherited SBSalir: TSpeedButton [1]
+        Left = 240
+      end
+      inherited SBImprimir: TSpeedButton [2]
+        Left = 219
+        Visible = False
+      end
+      inherited SBFiltrar: TSpeedButton [3]
+        Left = 168
+      end
+      inherited SBBuscar: TSpeedButton [4]
+        Left = 328
+        Width = 24
+        OnClick = SBBuscarClick
+      end
+      inherited SBOrdenar: TSpeedButton [5]
+        Left = 345
+        Hint = 'Refrescar Lista'
+        Glyph.Data = {
+          DE010000424DDE01000000000000760000002800000024000000120000000100
+          0400000000006801000000000000000000001000000010000000000000000000
+          80000080000000808000800000008000800080800000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333444444
+          33333333333F8888883F33330000324334222222443333388F3833333388F333
+          000032244222222222433338F8833FFFFF338F3300003222222AAAAA22243338
+          F333F88888F338F30000322222A33333A2224338F33F8333338F338F00003222
+          223333333A224338F33833333338F38F00003222222333333A444338FFFF8F33
+          3338888300003AAAAAAA33333333333888888833333333330000333333333333
+          333333333333333333FFFFFF000033333333333344444433FFFF333333888888
+          00003A444333333A22222438888F333338F3333800003A2243333333A2222438
+          F38F333333833338000033A224333334422224338338FFFFF8833338000033A2
+          22444442222224338F3388888333FF380000333A2222222222AA243338FF3333
+          33FF88F800003333AA222222AA33A3333388FFFFFF8833830000333333AAAAAA
+          3333333333338888883333330000333333333333333333333333333333333333
+          0000}
+        NumGlyphs = 2
+        OnClick = SBOrdenarClick
+      end
+      inherited Bevel2: TBevel [6]
+        Left = 164
+        Width = 5
+      end
+      inherited SBEstadistica: TSpeedButton [7]
+        Left = 308
+        Visible = False
+      end
+      inherited Bevel3: TBevel [8]
+        Left = 193
+      end
+      inherited Bevel1: TBevel [9]
+        Left = 214
+        Width = 2
+      end
+      inherited SBFiltroCarografico: TSpeedButton
+        Left = 265
+        OnClick = SBFiltroCarograficoClick
+      end
+      inherited sbExportar: TSpeedButton
+        Left = 194
+      end
+      object sbVistaPreliminarVL: TSpeedButton
+        Left = 140
+        Top = 0
+        Width = 23
+        Height = 25
+        Hint = 'Mostrar Fotos de ODS'
+        AllowAllUp = True
+        GroupIndex = 2
+        Flat = True
+        Glyph.Data = {
+          42040000424D4204000000000000420000002800000010000000100000000100
+          20000300000000040000000000000000000000000000000000000000FF0000FF
+          0000FF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFA2A19EFF36342EFF36342EFF36342EFF36342EFF36342EFF3634
+          2EFF36342EFF36342EFF36342EFF36342EFF36342EFF36342EFF36342EFF3634
+          2EFF82817EFF36342EFF828785FF7F8482FF777C7AFF727674FF696D6BFF6165
+          63FF4E514FFF4D504EFF464948FF424544FF696D6BFF767977FF8A8F8DFF878D
+          8AFF36342EFF36342EFFA2A9A6FF666A68FF666A68FF525654FF595E5CFF7176
+          75FF818684FF818684FF5A5E5DFF343736FF282A29FF525654FF666A68FF767A
+          78FF36342EFF36342EFFA5ABA8FF5D615FFF555957FF767B79FF868A88FF4647
+          45FF282724FF2D2C27FF4D4F4CFF828785FF3B3D3CFF292B2AFF626664FF767A
+          78FF36342EFF36342EFFA5ACA9FF5E6260FF555957FF898C8BFF424442FF1D1B
+          18FF262520FF302D29FF949390FF4D4E4CFF7A7F7DFF363837FF636765FF868B
+          89FF36342EFF36342EFFA7ADAAFF5F6361FF686C6AFF868B89FF1A1A18FF1C1B
+          18FFA8A7A6FF2F2D28FF2E2C28FF2D2C27FF848886FF3F4140FF6E7270FF878C
+          8AFF36342EFF36342EFFA7ADAAFF5D615FFF5F6361FF878C8AFF181716FF1817
+          15FFDBDBDAFFA8A7A5FF262420FF272624FF858A88FF545856FF767A78FF868B
+          89FF36342EFF36342EFFA7ADAAFF5E6260FF4E5250FF8E9290FF3D3F3DFF1211
+          0FFF181715FF1C1B18FF1C1A17FF454744FF858987FF515553FF828684FF868B
+          89FF36342EFF36342EFFA7ADAAFF5F6361FF565A58FF696C6BFF888D8BFF3D3F
+          3EFF171816FF1A1A18FF424341FF868A88FF666B69FF535755FF848886FF878C
+          8AFF36342EFF36342EFFAEB4B1FFABB1AFFFABB1AFFF878B89FF8B8F8DFFA4A7
+          A5FFA3A5A4FFA3A5A3FFA3A4A3FF7A7E7CFF797D7BFF9DA3A0FFA0A6A4FFA0A6
+          A4FF36342EFF6C6A66FF36342EFF36342EFF6A6E6CFFAAB0ADFF7D817FFF7377
+          75FF717573FF707472FF6E7270FF6C706EFF9FA5A2FF36342EFF36342EFF3634
+          2EFF6C6A66FFFFFFFFFFFDFDFDFF888783FF585651FF36342EFF858A88FFFDFD
+          FDFFFDFDFDFFFDFDFDFFFFFFFFFF858A88FF36342EFFBAB9B7FFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFF1F1F1FFEFEFEFFFC0C0C0FF858A88FFECEC
+          ECFFEBEBEBFFEBEBEBFFF9F9F9FF858A88FFAFAEABFFE9E9E9FFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFEFEFFC1C4C3FF858A
+          88FF858A88FF858A88FF858A88FFB9BCBBFFECECECFFFFFFFFFFFEFEFEFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFF}
+        OnClick = sbVistaPreliminarVLClick
+      end
+      object sbRefrescar: TSpeedButton
+        Left = 116
+        Top = 3
+        Width = 23
+        Height = 23
+        Hint = 'Refrescar Lista'
+        Flat = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333333333FFFFF3333333333999993333333333F77777FFF333333999999999
+          3333333777333777FF33339993707399933333773337F3777FF3399933000339
+          9933377333777F3377F3399333707333993337733337333337FF993333333333
+          399377F33333F333377F993333303333399377F33337FF333373993333707333
+          333377F333777F333333993333101333333377F333777F3FFFFF993333000399
+          999377FF33777F77777F3993330003399993373FF3777F37777F399933000333
+          99933773FF777F3F777F339993707399999333773F373F77777F333999999999
+          3393333777333777337333333999993333333333377777333333}
+        NumGlyphs = 2
+        OnClick = sbRefrescarClick
+      end
+    end
+    inherited dNavigator1: TdNavigator
+      Hints.Strings = ()
+    end
+    object Panel9: TPanel
+      Left = 360
+      Top = 1
+      Width = 688
+      Height = 26
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 2
+    end
+  end
+  inherited Panel3: TPanel
+    Top = 552
+    Width = 1311
+    Visible = False
+  end
+  inherited PFiltro: TPanel
+    Width = 1311
+    inherited sDatosFiltro: TShape
+      Left = 1
+      Top = 18
+      Width = 1309
+      Align = alTop
+    end
+    inherited lFiltroDatos: TLabel
+      Width = 1309
+    end
+  end
+  object StatusBar1: TStatusBar [5]
+    Left = 0
+    Top = 526
+    Width = 1311
+    Height = 26
+    Panels = <
+      item
+        Width = 300
+      end>
+    SimplePanel = False
+    OnClick = StatusBar1Click
+  end
+  object Panel4: TPanel [6]
+    Left = 997
+    Top = 78
+    Width = 314
+    Height = 448
+    Align = alRight
+    Caption = 'Panel4'
+    TabOrder = 4
+    Visible = False
+  end
+  object Panel14: TPanel [7]
+    Left = 0
+    Top = 78
+    Width = 997
+    Height = 448
+    Align = alClient
+    Caption = 'Panel14'
+    TabOrder = 5
+    object pcInformacionReporte: TPageControl
+      Left = 1
+      Top = 190
+      Width = 995
+      Height = 257
+      ActivePage = tbFuncionamiento
+      Align = alBottom
+      PopupMenu = pmEnergis
+      TabOrder = 0
+      object tsGestion: TTabSheet
+        Caption = 'Gestión'
+        object Panel5: TPanel
+          Left = 0
+          Top = 0
+          Width = 987
+          Height = 229
+          Align = alClient
+          Caption = 'Panel5'
+          TabOrder = 0
+          object RxDBGrid1: TRxDBGrid
+            Left = 1
+            Top = 1
+            Width = 985
+            Height = 227
+            Align = alClient
+            DataSource = dsGestion
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+            PopupMenu = pmGestion
+            TabOrder = 0
+            TitleFont.Charset = ANSI_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            TitleFont.Style = []
+            MultiSelect = True
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'CODIGOREPORTE'
+                Title.Caption = 'Código de Reporte'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CODIGOCUENTA'
+                Title.Caption = 'Cuenta'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CODIGOODT'
+                Title.Caption = 'Código ODT'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'ODTDESCRIPCION'
+                Title.Caption = 'Descripción ODT'
+                Width = 269
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CONSECUTIVO'
+                Title.Caption = 'Consecutivo'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'GESTIONTIPO'
+                Title.Caption = 'Tipo de Gestión'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'TIPOCAUSALVACIO'
+                Title.Caption = 'Causal No Gestión'
+                Width = 110
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'OBSERVACIONESGESTION'
+                Title.Caption = 'Observaciones'
+                Width = 241
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'FECHAHORAINI'
+                Title.Caption = 'Fecha Inicio'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'FECHAHORAFIN'
+                Title.Caption = 'Fecha Finalización'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NUEVALECTURA'
+                Title.Caption = 'Nueva lectura'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CORTERECONEXIONTIPO'
+                Title.Caption = 'Tipo corte/Reconexión'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CORTERECONEXIONOBSERVACION'
+                Title.Caption = 'Observacion Corte/ Reconexión'
+                Width = 199
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NOMBREATIENDE'
+                Title.Caption = 'Nombre Atiende'
+                Width = 190
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'DOCUMENTOATIENDE'
+                Title.Caption = 'Documento'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'TELEFONOATIENDE'
+                Title.Caption = 'Teléfono'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'TESTIGO'
+                Title.Caption = 'Testigo'
+                Width = 209
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'ANOMALIAOBSERVACION'
+                Title.Caption = 'Observacion Anomalía'
+                Width = 191
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'FECHAHORADESCARGADO'
+                Title.Caption = 'Fecha descargue'
+                Width = 151
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NOMBREEMPLEADO'
+                Title.Caption = 'Empleado'
+                Width = 203
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NOMBREGRUPOTRABAJO'
+                Title.Caption = 'Grupo trabajo'
+                Width = 171
+                Visible = True
+              end>
+          end
+        end
+      end
+      object tbFinca: TTabSheet
+        Caption = 'Finca'
+        ImageIndex = 1
+        object Panel6: TPanel
+          Left = 0
+          Top = 0
+          Width = 987
+          Height = 229
+          Align = alClient
+          Caption = 'Panel5'
+          TabOrder = 0
+          object RxDBGrid2: TRxDBGrid
+            Left = 1
+            Top = 1
+            Width = 985
+            Height = 227
+            Align = alClient
+            DataSource = dsFinca
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+            PopupMenu = pmFinca
+            TabOrder = 0
+            TitleFont.Charset = ANSI_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            TitleFont.Style = []
+            MultiSelect = True
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'NOMBREFINCA'
+                Title.Caption = 'Nombre'
+                Width = 187
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'FINCATIPO'
+                Title.Caption = 'Tipo'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'FINCAESTADO'
+                Title.Caption = 'Estado '
+                Width = 93
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'PROVINCIA'
+                Title.Caption = 'Provincia'
+                Width = 173
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'MUNICIPIO'
+                Title.Caption = 'Municipio'
+                Width = 203
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'OFICINA'
+                Title.Caption = 'Oficina'
+                Width = 159
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'BARRIO'
+                Title.Caption = 'Barrio'
+                Width = 101
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'VIATIPO'
+                Title.Caption = 'Tipo de vía'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CALLE'
+                Title.Caption = 'Calle'
+                Width = 161
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NUMEROPUERTA'
+                Title.Caption = 'Número de Puerta'
+                Width = 100
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'REFERENCIA'
+                Title.Caption = 'Referencia'
+                Width = 226
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'FINCADESVIACION'
+                Title.Caption = 'Desviación'
+                Width = 100
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'OBSERVACIONFINCA'
+                Title.Caption = 'Observacion'
+                Width = 245
+                Visible = True
+              end>
+          end
+        end
+      end
+      object tbMedidor: TTabSheet
+        Caption = 'Medidor'
+        ImageIndex = 2
+        object Panel7: TPanel
+          Left = 0
+          Top = 0
+          Width = 987
+          Height = 229
+          Align = alClient
+          Caption = 'Panel5'
+          TabOrder = 0
+          object RxDBGrid3: TRxDBGrid
+            Left = 1
+            Top = 1
+            Width = 985
+            Height = 227
+            Align = alClient
+            DataSource = dsMedidor
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+            PopupMenu = pmMedidor
+            TabOrder = 0
+            TitleFont.Charset = ANSI_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            TitleFont.Style = []
+            MultiSelect = True
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'CONEXIONTIPO'
+                Title.Caption = 'Tipo de conexión'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'DESCRIPCION'
+                Title.Caption = 'Descripción'
+                Width = 346
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'LECTURA'
+                Title.Caption = 'Lectura'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'TENSIONNOMINAL'
+                Title.Caption = 'Tensión (V)'
+                Width = 70
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'DIGITOS'
+                Title.Caption = 'Dígitos'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'MULTIPLO'
+                Title.Caption = 'Múltiplo'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'VUELTAS'
+                Title.Caption = 'Vueltas'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'KH'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'KD'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'MEDIDORDESVIACION'
+                Title.Caption = 'Desviación'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'MEDIDORIRREGULARIDAD'
+                Title.Caption = 'Irregularidad'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'OBSERVACIONMEDIDOR'
+                Title.Caption = 'Observación'
+                Width = 464
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'SERIAL'
+                Title.Caption = 'Serial'
+                Width = 133
+                Visible = True
+              end>
+          end
+        end
+      end
+      object tbPuntoMedida: TTabSheet
+        Caption = 'Punto Medida'
+        ImageIndex = 4
+        object Panel10: TPanel
+          Left = 0
+          Top = 0
+          Width = 987
+          Height = 229
+          Align = alClient
+          Caption = 'Panel5'
+          TabOrder = 0
+          object RxDBGrid4: TRxDBGrid
+            Left = 1
+            Top = 1
+            Width = 985
+            Height = 227
+            Align = alClient
+            DataSource = dsPuntoMedida
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+            PopupMenu = pmPuntoMedida
+            TabOrder = 0
+            TitleFont.Charset = ANSI_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            TitleFont.Style = []
+            MultiSelect = True
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'INFRAESTRUCTURA'
+                Title.Caption = 'Infraestructura'
+                Width = 203
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NUMEROFILAS'
+                Title.Caption = 'Número de filas'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NUMEROCOLUMNAS'
+                Title.Caption = 'Número de Columnas'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'IRREGULARIDADPM'
+                Title.Caption = 'Irregularidad'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'OBSERVACIONESPM'
+                Title.Caption = 'Observaciones'
+                Width = 331
+                Visible = True
+              end>
+          end
+        end
+      end
+      object tbEnergis: TTabSheet
+        Caption = 'Energis'
+        ImageIndex = 5
+        object Panel11: TPanel
+          Left = 0
+          Top = 0
+          Width = 987
+          Height = 229
+          Align = alClient
+          Caption = 'Panel5'
+          TabOrder = 0
+          object RxDBGrid5: TRxDBGrid
+            Left = 1
+            Top = 1
+            Width = 985
+            Height = 227
+            Align = alClient
+            DataSource = dsEnergis
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+            PopupMenu = pmEnergis
+            TabOrder = 0
+            TitleFont.Charset = ANSI_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            TitleFont.Style = []
+            MultiSelect = True
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'PINTADOVACIO'
+                Title.Caption = 'Código Pintado'
+                Width = 99
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NOMBRETIPOAPOYO'
+                Title.Caption = 'Tipo de Apoyo'
+                Width = 154
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'ACOMETIDATIPO'
+                Title.Caption = 'Tipo de Acometida'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'OBSERVACIONENERGIS'
+                Title.Caption = 'Observaciones'
+                Width = 387
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NOMBRECIRCUITO'
+                Title.Caption = 'Circuito'
+                Width = 122
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CODIGOCTRANS'
+                Title.Caption = 'Transformador'
+                Width = 98
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'TIPOCTRANS'
+                Title.Caption = 'Código Tipo Transformador'
+                Width = 138
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'POTENCIACTRANS'
+                Title.Caption = 'Potencia transformador'
+                Width = 134
+                Visible = True
+              end>
+          end
+        end
+      end
+      object tbSuministro: TTabSheet
+        Caption = 'Suministro'
+        ImageIndex = 5
+        object Panel8: TPanel
+          Left = 0
+          Top = 0
+          Width = 987
+          Height = 229
+          Align = alClient
+          Caption = 'Panel5'
+          TabOrder = 0
+          object RxDBGrid6: TRxDBGrid
+            Left = 1
+            Top = 1
+            Width = 985
+            Height = 227
+            Align = alClient
+            DataSource = dsSuministro
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+            PopupMenu = pmSuministro
+            TabOrder = 0
+            TitleFont.Charset = ANSI_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            TitleFont.Style = []
+            MultiSelect = True
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'CODIGOVACIO'
+                Title.Caption = 'Código'
+                Width = 62
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NOMBRES'
+                Title.Caption = 'Nombres'
+                Width = 166
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'APELLIDOS'
+                Title.Caption = 'Apellidos'
+                Width = 204
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'ENTRADA'
+                Title.Caption = 'Entrada'
+                Width = 123
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'ENTRADATIPO'
+                Title.Caption = 'Tipo de Entrada'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'PISO'
+                Title.Caption = 'Piso'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'PISOTIPO'
+                Title.Caption = 'Tipo de piso'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'APARTAMENTO'
+                Title.Caption = 'Apartamento'
+                Width = 189
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'APARTAMENTOTIPO'
+                Title.Caption = 'Tipo de Apartamento'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NOMBRECOMERCIAL'
+                Title.Caption = 'Nombre Comercial'
+                Width = 300
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'SUMINISTROIRREGULARIDAD'
+                Title.Caption = 'Irregularidad'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'RUBROSUMINISTRO'
+                Title.Caption = 'Rubro'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'OBSERVACIONSUMINISTRO'
+                Title.Caption = 'Observacion'
+                Width = 352
+                Visible = True
+              end>
+          end
+        end
+      end
+      object tbFuncionamiento: TTabSheet
+        Caption = 'Funcionamiento'
+        ImageIndex = 7
+      end
+      object tbDetalles: TTabSheet
+        Caption = 'Detalles'
+        ImageIndex = 6
+        object gbArtefactos: TGroupBox
+          Left = 8
+          Top = 8
+          Width = 545
+          Height = 209
+          Caption = 'Artefactos eléctricos'
+          TabOrder = 0
+          object Panel12: TPanel
+            Left = 8
+            Top = 16
+            Width = 513
+            Height = 185
+            Caption = 'Panel12'
+            TabOrder = 0
+            object RxDBGrid7: TRxDBGrid
+              Left = 1
+              Top = 1
+              Width = 511
+              Height = 183
+              Align = alClient
+              DataSource = dsArtefactos
+              Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+              PopupMenu = pmArtefacto
+              TabOrder = 0
+              TitleFont.Charset = ANSI_CHARSET
+              TitleFont.Color = clWindowText
+              TitleFont.Height = -11
+              TitleFont.Name = 'Tahoma'
+              TitleFont.Style = []
+              MultiSelect = True
+              Columns = <
+                item
+                  Expanded = False
+                  FieldName = 'ARTEFACTOSNOMBRE'
+                  Title.Caption = 'Nombre'
+                  Width = 255
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'CANTIDAD'
+                  Title.Caption = 'Cantidad'
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'TOTALCARGAARTEFACTO'
+                  Title.Caption = 'Total'
+                  Width = 156
+                  Visible = True
+                end>
+            end
+          end
+        end
+        object GroupBox1: TGroupBox
+          Left = 560
+          Top = 8
+          Width = 209
+          Height = 73
+          Caption = 'Anomalia'
+          TabOrder = 1
+          object DBMemo1: TDBMemo
+            Left = 8
+            Top = 16
+            Width = 185
+            Height = 49
+            DataField = 'NOMBRE'
+            DataSource = dsAnomalia
+            PopupMenu = pmAnomalia
+            TabOrder = 0
+          end
+        end
+        object GroupBox2: TGroupBox
+          Left = 784
+          Top = 8
+          Width = 513
+          Height = 209
+          Caption = 'Materiales'
+          TabOrder = 2
+          object Panel13: TPanel
+            Left = 8
+            Top = 16
+            Width = 497
+            Height = 185
+            Caption = 'Panel13'
+            TabOrder = 0
+            object RxDBGrid8: TRxDBGrid
+              Left = 1
+              Top = 1
+              Width = 495
+              Height = 183
+              Align = alClient
+              DataSource = dsMaterial
+              Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+              PopupMenu = pmMateriales
+              TabOrder = 0
+              TitleFont.Charset = ANSI_CHARSET
+              TitleFont.Color = clWindowText
+              TitleFont.Height = -11
+              TitleFont.Name = 'Tahoma'
+              TitleFont.Style = []
+              MultiSelect = True
+              Columns = <
+                item
+                  Expanded = False
+                  FieldName = 'NOMBREMATERIAL'
+                  Title.Caption = 'Nombre'
+                  Width = 201
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'SERIAL'
+                  Title.Caption = 'Serial'
+                  Width = 91
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'ESTADO'
+                  Title.Caption = 'Estado'
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'CODIGOESTADOSERIAL'
+                  Title.Caption = 'Estado Serial'
+                  Visible = True
+                end>
+            end
+          end
+        end
+        object GroupBox3: TGroupBox
+          Left = 560
+          Top = 96
+          Width = 209
+          Height = 73
+          Caption = 'Mano de obra'
+          TabOrder = 3
+          object DBMemo2: TDBMemo
+            Left = 8
+            Top = 16
+            Width = 185
+            Height = 41
+            DataField = 'MANOOBRA'
+            DataSource = dsManoObra
+            PopupMenu = pmManoObra
+            TabOrder = 0
+          end
+        end
+      end
+    end
+    object dbgListaReportes: TRxDBGrid
+      Left = 1
+      Top = 1
+      Width = 995
+      Height = 189
+      Align = alClient
+      DataSource = dsBase
+      Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+      TabOrder = 1
+      TitleFont.Charset = ANSI_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      OnTitleClick = dbgListaReportesTitleClick
+      MultiSelect = True
+      OnGetCellProps = dbgListaReportesGetCellProps
+      Columns = <
+        item
+          Alignment = taCenter
+          Color = clAqua
+          Expanded = False
+          FieldName = 'CODIGOREPORTE'
+          Title.Alignment = taCenter
+          Title.Caption = 'Código'
+          Width = 45
+          Visible = True
+        end
+        item
+          Alignment = taCenter
+          Expanded = False
+          FieldName = 'CODIGOGESTION'
+          Title.Alignment = taCenter
+          Title.Caption = 'Codigo Gestión'
+          Width = 90
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREESTADOREPORTE'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          Title.Alignment = taCenter
+          Title.Caption = 'Estado Reporte'
+          Width = 82
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRETIPODANO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Tipo'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREDEPARTAMENTO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Departamento'
+          Width = 142
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREMUNICIPIO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Municipio'
+          Width = 146
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRECATEGORIA'
+          Title.Alignment = taCenter
+          Title.Caption = 'Colonia / Barrio'
+          Width = 137
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'SEDEOPERATIVA'
+          Title.Alignment = taCenter
+          Title.Caption = 'Sector'
+          Width = 137
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAHORA'
+          Title.Alignment = taCenter
+          Title.Caption = 'Fecha de Registro'
+          Width = 129
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAHORAFIN'
+          Title.Caption = 'Fecha Finalización'
+          Width = 125
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGOODT'
+          Title.Alignment = taCenter
+          Title.Caption = 'Rep. Padre'
+          Width = 91
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREGRUPOTRABAJO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Grupo de Trabajo'
+          Width = 140
+          Visible = True
+        end>
+    end
+  end
+  object Panel15: TPanel [8]
+    Left = 0
+    Top = 78
+    Width = 997
+    Height = 448
+    Align = alClient
+    Caption = 'Panel14'
+    TabOrder = 6
+    object PageControl1: TPageControl
+      Left = 1
+      Top = 190
+      Width = 995
+      Height = 257
+      ActivePage = TabSheet1
+      Align = alBottom
+      PopupMenu = pmEnergis
+      TabOrder = 0
+      object TabSheet1: TTabSheet
+        Caption = 'Gestión'
+        object Panel16: TPanel
+          Left = 0
+          Top = 0
+          Width = 987
+          Height = 229
+          Align = alClient
+          Caption = 'Panel5'
+          TabOrder = 0
+          object RxDBGrid9: TRxDBGrid
+            Left = 1
+            Top = 1
+            Width = 985
+            Height = 227
+            Align = alClient
+            DataSource = dsGestion
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+            PopupMenu = pmGestion
+            TabOrder = 0
+            TitleFont.Charset = ANSI_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            TitleFont.Style = []
+            MultiSelect = True
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'CODIGOREPORTE'
+                Title.Caption = 'Código de Reporte'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CODIGOCUENTA'
+                Title.Caption = 'Cuenta'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CODIGOODT'
+                Title.Caption = 'Código ODT'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'ODTDESCRIPCION'
+                Title.Caption = 'Descripción ODT'
+                Width = 269
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CONSECUTIVO'
+                Title.Caption = 'Consecutivo'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'GESTIONTIPO'
+                Title.Caption = 'Tipo de Gestión'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'TIPOCAUSALVACIO'
+                Title.Caption = 'Causal No Gestión'
+                Width = 110
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'OBSERVACIONESGESTION'
+                Title.Caption = 'Observaciones'
+                Width = 241
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'FECHAHORAINI'
+                Title.Caption = 'Fecha Inicio'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'FECHAHORAFIN'
+                Title.Caption = 'Fecha Finalización'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NUEVALECTURA'
+                Title.Caption = 'Nueva lectura'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CORTERECONEXIONTIPO'
+                Title.Caption = 'Tipo corte/Reconexión'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CORTERECONEXIONOBSERVACION'
+                Title.Caption = 'Observacion Corte/ Reconexión'
+                Width = 199
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NOMBREATIENDE'
+                Title.Caption = 'Nombre Atiende'
+                Width = 190
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'DOCUMENTOATIENDE'
+                Title.Caption = 'Documento'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'TELEFONOATIENDE'
+                Title.Caption = 'Teléfono'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'TESTIGO'
+                Title.Caption = 'Testigo'
+                Width = 209
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'ANOMALIAOBSERVACION'
+                Title.Caption = 'Observacion Anomalía'
+                Width = 191
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'FECHAHORADESCARGADO'
+                Title.Caption = 'Fecha descargue'
+                Width = 151
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NOMBREEMPLEADO'
+                Title.Caption = 'Empleado'
+                Width = 203
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NOMBREGRUPOTRABAJO'
+                Title.Caption = 'Grupo trabajo'
+                Width = 171
+                Visible = True
+              end>
+          end
+        end
+      end
+      object TabSheet2: TTabSheet
+        Caption = 'Finca'
+        ImageIndex = 1
+        object Panel17: TPanel
+          Left = 0
+          Top = 0
+          Width = 987
+          Height = 229
+          Align = alClient
+          Caption = 'Panel5'
+          TabOrder = 0
+          object RxDBGrid10: TRxDBGrid
+            Left = 1
+            Top = 1
+            Width = 985
+            Height = 227
+            Align = alClient
+            DataSource = dsFinca
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+            PopupMenu = pmFinca
+            TabOrder = 0
+            TitleFont.Charset = ANSI_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            TitleFont.Style = []
+            MultiSelect = True
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'NOMBREFINCA'
+                Title.Caption = 'Nombre'
+                Width = 187
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'FINCATIPO'
+                Title.Caption = 'Tipo'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'FINCAESTADO'
+                Title.Caption = 'Estado '
+                Width = 93
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'PROVINCIA'
+                Title.Caption = 'Provincia'
+                Width = 173
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'MUNICIPIO'
+                Title.Caption = 'Municipio'
+                Width = 203
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'OFICINA'
+                Title.Caption = 'Oficina'
+                Width = 159
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'BARRIO'
+                Title.Caption = 'Barrio'
+                Width = 101
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'VIATIPO'
+                Title.Caption = 'Tipo de vía'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CALLE'
+                Title.Caption = 'Calle'
+                Width = 161
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NUMEROPUERTA'
+                Title.Caption = 'Número de Puerta'
+                Width = 100
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'REFERENCIA'
+                Title.Caption = 'Referencia'
+                Width = 226
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'FINCADESVIACION'
+                Title.Caption = 'Desviación'
+                Width = 100
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'OBSERVACIONFINCA'
+                Title.Caption = 'Observacion'
+                Width = 245
+                Visible = True
+              end>
+          end
+        end
+      end
+      object TabSheet3: TTabSheet
+        Caption = 'Medidor'
+        ImageIndex = 2
+        object Panel18: TPanel
+          Left = 0
+          Top = 0
+          Width = 987
+          Height = 229
+          Align = alClient
+          Caption = 'Panel5'
+          TabOrder = 0
+          object RxDBGrid11: TRxDBGrid
+            Left = 1
+            Top = 1
+            Width = 985
+            Height = 227
+            Align = alClient
+            DataSource = dsMedidor
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+            PopupMenu = pmMedidor
+            TabOrder = 0
+            TitleFont.Charset = ANSI_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            TitleFont.Style = []
+            MultiSelect = True
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'CONEXIONTIPO'
+                Title.Caption = 'Tipo de conexión'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'DESCRIPCION'
+                Title.Caption = 'Descripción'
+                Width = 346
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'LECTURA'
+                Title.Caption = 'Lectura'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'TENSIONNOMINAL'
+                Title.Caption = 'Tensión (V)'
+                Width = 70
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'DIGITOS'
+                Title.Caption = 'Dígitos'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'MULTIPLO'
+                Title.Caption = 'Múltiplo'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'VUELTAS'
+                Title.Caption = 'Vueltas'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'KH'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'KD'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'MEDIDORDESVIACION'
+                Title.Caption = 'Desviación'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'MEDIDORIRREGULARIDAD'
+                Title.Caption = 'Irregularidad'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'OBSERVACIONMEDIDOR'
+                Title.Caption = 'Observación'
+                Width = 464
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'SERIAL'
+                Title.Caption = 'Serial'
+                Width = 133
+                Visible = True
+              end>
+          end
+        end
+      end
+      object TabSheet4: TTabSheet
+        Caption = 'Punto Medida'
+        ImageIndex = 4
+        object Panel19: TPanel
+          Left = 0
+          Top = 0
+          Width = 987
+          Height = 229
+          Align = alClient
+          Caption = 'Panel5'
+          TabOrder = 0
+          object RxDBGrid12: TRxDBGrid
+            Left = 1
+            Top = 1
+            Width = 985
+            Height = 227
+            Align = alClient
+            DataSource = dsPuntoMedida
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+            PopupMenu = pmPuntoMedida
+            TabOrder = 0
+            TitleFont.Charset = ANSI_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            TitleFont.Style = []
+            MultiSelect = True
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'INFRAESTRUCTURA'
+                Title.Caption = 'Infraestructura'
+                Width = 203
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NUMEROFILAS'
+                Title.Caption = 'Número de filas'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NUMEROCOLUMNAS'
+                Title.Caption = 'Número de Columnas'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'IRREGULARIDADPM'
+                Title.Caption = 'Irregularidad'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'OBSERVACIONESPM'
+                Title.Caption = 'Observaciones'
+                Width = 331
+                Visible = True
+              end>
+          end
+        end
+      end
+      object tbRegistroMedidas: TTabSheet
+        Caption = 'Registro Medidas'
+        ImageIndex = 8
+        object RxDBGrid19: TRxDBGrid
+          Left = 0
+          Top = 0
+          Width = 987
+          Height = 229
+          Align = alClient
+          DataSource = dsRegistroMedidas
+          Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+          PopupMenu = pmSuministro
+          TabOrder = 0
+          TitleFont.Charset = ANSI_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'Tahoma'
+          TitleFont.Style = []
+          MultiSelect = True
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'VOLTAJEFAN'
+              Title.Caption = 'Voltaje Fase A-Neutro (V)'
+              Width = 135
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'VOLTAJEFBN'
+              Title.Caption = 'Voltaje Fase B-Neutro (V)'
+              Width = 136
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'VOLTAJEFCN'
+              Title.Caption = 'Voltaje Fase C-Neutro(V)'
+              Width = 132
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'VOLTAJEFAB'
+              Title.Caption = 'Voltaje Fase A-B(V)'
+              Width = 116
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'VOLTAJEFBC'
+              Title.Caption = 'Voltaje Fase B-C(V)'
+              Width = 100
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'VOLTAJEFCA'
+              Title.Caption = 'Voltaje Fase C-A(V)'
+              Width = 105
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CORRIENTEIA'
+              Title.Caption = 'Intensidad Corriente A (A)'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CORRIENTEIB'
+              Title.Caption = 'Intensidad Corriente B (A)'
+              Width = 141
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CORRIENTEIC'
+              Title.Caption = 'Intensidad Corriente C (A)'
+              Width = 136
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CORRIENTEIN'
+              Title.Caption = 'Intensidad Corriente N(A)'
+              Width = 133
+              Visible = True
+            end>
+        end
+      end
+      object TabSheet5: TTabSheet
+        Caption = 'Energis'
+        ImageIndex = 5
+        object Panel20: TPanel
+          Left = 0
+          Top = 0
+          Width = 987
+          Height = 229
+          Align = alClient
+          Caption = 'Panel5'
+          TabOrder = 0
+          object RxDBGrid13: TRxDBGrid
+            Left = 1
+            Top = 1
+            Width = 985
+            Height = 227
+            Align = alClient
+            DataSource = dsEnergis
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+            PopupMenu = pmEnergis
+            TabOrder = 0
+            TitleFont.Charset = ANSI_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            TitleFont.Style = []
+            MultiSelect = True
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'PINTADOVACIO'
+                Title.Caption = 'Código Pintado'
+                Width = 99
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NOMBRETIPOAPOYO'
+                Title.Caption = 'Tipo de Apoyo'
+                Width = 154
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'ACOMETIDATIPO'
+                Title.Caption = 'Tipo de Acometida'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'OBSERVACIONENERGIS'
+                Title.Caption = 'Observaciones'
+                Width = 387
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NOMBRECIRCUITO'
+                Title.Caption = 'Circuito'
+                Width = 122
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CODIGOCTRANS'
+                Title.Caption = 'Transformador'
+                Width = 98
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'TIPOCTRANS'
+                Title.Caption = 'Código Tipo Transformador'
+                Width = 138
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'POTENCIACTRANS'
+                Title.Caption = 'Potencia transformador'
+                Width = 134
+                Visible = True
+              end>
+          end
+        end
+      end
+      object TabSheet6: TTabSheet
+        Caption = 'Suministro'
+        ImageIndex = 5
+        object Panel21: TPanel
+          Left = 0
+          Top = 0
+          Width = 987
+          Height = 229
+          Align = alClient
+          Caption = 'Panel5'
+          TabOrder = 0
+          object RxDBGrid14: TRxDBGrid
+            Left = 1
+            Top = 1
+            Width = 985
+            Height = 227
+            Align = alClient
+            DataSource = dsSuministro
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+            PopupMenu = pmSuministro
+            TabOrder = 0
+            TitleFont.Charset = ANSI_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            TitleFont.Style = []
+            MultiSelect = True
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'CODIGOVACIO'
+                Title.Caption = 'Código'
+                Width = 62
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NOMBRES'
+                Title.Caption = 'Nombres'
+                Width = 166
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'APELLIDOS'
+                Title.Caption = 'Apellidos'
+                Width = 204
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'ENTRADA'
+                Title.Caption = 'Entrada'
+                Width = 123
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'ENTRADATIPO'
+                Title.Caption = 'Tipo de Entrada'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'PISO'
+                Title.Caption = 'Piso'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'PISOTIPO'
+                Title.Caption = 'Tipo de piso'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'APARTAMENTO'
+                Title.Caption = 'Apartamento'
+                Width = 189
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'APARTAMENTOTIPO'
+                Title.Caption = 'Tipo de Apartamento'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NOMBRECOMERCIAL'
+                Title.Caption = 'Nombre Comercial'
+                Width = 300
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'SUMINISTROIRREGULARIDAD'
+                Title.Caption = 'Irregularidad'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'RUBROSUMINISTRO'
+                Title.Caption = 'Rubro'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'OBSERVACIONSUMINISTRO'
+                Title.Caption = 'Observacion'
+                Width = 352
+                Visible = True
+              end>
+          end
+        end
+      end
+      object TabSheet7: TTabSheet
+        Caption = 'Funcionamiento'
+        ImageIndex = 7
+        object RxDBGrid18: TRxDBGrid
+          Left = 0
+          Top = 0
+          Width = 987
+          Height = 229
+          Align = alClient
+          DataSource = dsFuncionamiento
+          Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+          PopupMenu = pmSuministro
+          TabOrder = 0
+          TitleFont.Charset = ANSI_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'Tahoma'
+          TitleFont.Style = []
+          MultiSelect = True
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'AOLMEDIDOR'
+              Title.Caption = 'Aol Medidor'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PRUEBACALIBRACIONSTRING'
+              Title.Caption = 'Prueba Calibración'
+              Width = 102
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PORERRORCALIBRACION'
+              Title.Caption = 'Error calibración (%)'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PRUEBAINTEGRACIONSTRING'
+              Title.Caption = 'Prueba Integración'
+              Width = 106
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PORERRORINTEGRACION'
+              Title.Caption = 'Error Integración (%)'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'REVISIONLABSTRING'
+              Title.Caption = 'Revisión Lab'
+              Width = 91
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CERTIFICADOREVISIONLABSTRING'
+              Title.Caption = 'Certificación revisión Lab'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'OBSERVACION'
+              Title.Caption = 'Observación Revision Lab'
+              Width = 360
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CONEXIONSTRING'
+              Title.Caption = 'Conexiones'
+              Width = 92
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CONTINUIDADSTRING'
+              Title.Caption = 'Continuidad'
+              Width = 87
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PRUEBASUNISTRING'
+              Title.Caption = 'Pruebas unitarias'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'DISPLAYSTRING'
+              Title.Caption = 'Display'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'ESTADOINTEGRADORSTRING'
+              Title.Caption = 'Estado Integrador'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CAMBIOMEDIDORSTRING'
+              Title.Caption = 'Cambio Medidor'
+              Visible = True
+            end>
+        end
+      end
+      object TabSheet8: TTabSheet
+        Caption = 'Detalles'
+        ImageIndex = 6
+        object GroupBox4: TGroupBox
+          Left = 8
+          Top = 8
+          Width = 545
+          Height = 209
+          Caption = 'Artefactos eléctricos'
+          TabOrder = 0
+          object Panel22: TPanel
+            Left = 8
+            Top = 16
+            Width = 513
+            Height = 185
+            Caption = 'Panel12'
+            TabOrder = 0
+            object RxDBGrid15: TRxDBGrid
+              Left = 1
+              Top = 1
+              Width = 511
+              Height = 183
+              Align = alClient
+              DataSource = dsArtefactos
+              Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+              PopupMenu = pmArtefacto
+              TabOrder = 0
+              TitleFont.Charset = ANSI_CHARSET
+              TitleFont.Color = clWindowText
+              TitleFont.Height = -11
+              TitleFont.Name = 'Tahoma'
+              TitleFont.Style = []
+              MultiSelect = True
+              Columns = <
+                item
+                  Expanded = False
+                  FieldName = 'ARTEFACTOSNOMBRE'
+                  Title.Caption = 'Nombre'
+                  Width = 255
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'CANTIDAD'
+                  Title.Caption = 'Cantidad'
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'TOTALCARGAARTEFACTO'
+                  Title.Caption = 'Total'
+                  Width = 156
+                  Visible = True
+                end>
+            end
+          end
+        end
+        object GroupBox5: TGroupBox
+          Left = 560
+          Top = 8
+          Width = 209
+          Height = 73
+          Caption = 'Anomalia'
+          TabOrder = 1
+          object DBMemo3: TDBMemo
+            Left = 8
+            Top = 16
+            Width = 185
+            Height = 49
+            DataField = 'NOMBRE'
+            DataSource = dsAnomalia
+            PopupMenu = pmAnomalia
+            TabOrder = 0
+          end
+        end
+        object GroupBox6: TGroupBox
+          Left = 784
+          Top = 8
+          Width = 513
+          Height = 209
+          Caption = 'Materiales'
+          TabOrder = 2
+          object Panel23: TPanel
+            Left = 8
+            Top = 16
+            Width = 497
+            Height = 185
+            Caption = 'Panel13'
+            TabOrder = 0
+            object RxDBGrid16: TRxDBGrid
+              Left = 1
+              Top = 1
+              Width = 495
+              Height = 183
+              Align = alClient
+              DataSource = dsMaterial
+              Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+              PopupMenu = pmMateriales
+              TabOrder = 0
+              TitleFont.Charset = ANSI_CHARSET
+              TitleFont.Color = clWindowText
+              TitleFont.Height = -11
+              TitleFont.Name = 'Tahoma'
+              TitleFont.Style = []
+              MultiSelect = True
+              Columns = <
+                item
+                  Expanded = False
+                  FieldName = 'CODIGOMATERIAL'
+                  Title.Caption = 'Código Material'
+                  Width = 90
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'NOMBREMATERIAL'
+                  Title.Caption = 'Nombre'
+                  Width = 200
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'CANTIDADCONSUMIDA'
+                  Title.Caption = 'Cantidad consumida'
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'CANTIDADRETIRADABUENA'
+                  Title.Caption = 'Cantidad retirada buena'
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'CANTIDADRETIRADAMALA'
+                  Title.Caption = 'Cantidad retirada mala'
+                  Visible = True
+                end>
+            end
+          end
+        end
+        object GroupBox7: TGroupBox
+          Left = 560
+          Top = 96
+          Width = 209
+          Height = 73
+          Caption = 'Mano de obra'
+          TabOrder = 3
+          object DBMemo4: TDBMemo
+            Left = 8
+            Top = 16
+            Width = 185
+            Height = 41
+            DataField = 'MANOOBRA'
+            DataSource = dsManoObra
+            PopupMenu = pmManoObra
+            TabOrder = 0
+          end
+        end
+      end
+    end
+    object RxDBGrid17: TRxDBGrid
+      Left = 1
+      Top = 1
+      Width = 995
+      Height = 189
+      Align = alClient
+      DataSource = dsBase
+      Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+      TabOrder = 1
+      TitleFont.Charset = ANSI_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      OnTitleClick = dbgListaReportesTitleClick
+      MultiSelect = True
+      OnGetCellProps = dbgListaReportesGetCellProps
+      Columns = <
+        item
+          Alignment = taCenter
+          Color = clAqua
+          Expanded = False
+          FieldName = 'CODIGOREPORTE'
+          Title.Alignment = taCenter
+          Title.Caption = 'Código'
+          Width = 45
+          Visible = True
+        end
+        item
+          Alignment = taCenter
+          Expanded = False
+          FieldName = 'CODIGOGESTION'
+          Title.Alignment = taCenter
+          Title.Caption = 'Codigo Gestión'
+          Width = 90
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREESTADOREPORTE'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          Title.Alignment = taCenter
+          Title.Caption = 'Estado Reporte'
+          Width = 82
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRETIPODANO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Tipo'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREDEPARTAMENTO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Departamento'
+          Width = 142
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREMUNICIPIO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Municipio'
+          Width = 146
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRECATEGORIA'
+          Title.Alignment = taCenter
+          Title.Caption = 'Colonia / Barrio'
+          Width = 137
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'SEDEOPERATIVA'
+          Title.Alignment = taCenter
+          Title.Caption = 'Sector'
+          Width = 137
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAHORA'
+          Title.Alignment = taCenter
+          Title.Caption = 'Fecha de Registro'
+          Width = 129
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAHORAFIN'
+          Title.Caption = 'Fecha Finalización'
+          Width = 125
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGOODT'
+          Title.Alignment = taCenter
+          Title.Caption = 'Rep. Padre'
+          Width = 91
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREGRUPOTRABAJO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Grupo de Trabajo'
+          Width = 140
+          Visible = True
+        end>
+    end
+  end
+  inherited dsBase: TDDataSource
+    DataSet = qListaReportes
+  end
+  inherited qTotales: TQuery
+    SQL.Strings = (
+      'SELECT'
+      'COUNT(codigoreporte) as Total'
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      
+        'FROM REPORTE R, INFORMANTE I, ADMINISTRATIVO A, TIPOREPORTE TR, ' +
+        'CLASEREPORTE CR, ESTADOREPORTE ER, SUBESTACION S, CIRCUITO C, AD' +
+        'MINISTRATIVO AD, GRUPOTRABAJO GT,GEOGRAFICO G, GEOGRAFICO G2'
+      
+        'WHERE (R.CODIGOINFORMANTE = I.CODIGOINFORMANTE) AND (A.CODIGOADM' +
+        'INISTRATIVO(+) = R.CODIGOADMINISTRATIVO) AND R.CODIGOCLASECLIENT' +
+        'E = CC.CODIGOCLASECLIENTE(+)'
+      
+        'AND (TR.CODIGOTIPOREPORTE = R.CODIGOTIPOREPORTE) AND (CR.CODIGOC' +
+        'LASEREPORTE = R.CODIGOCLASEREPORTE)'
+      
+        'AND (ER.CODIGOESTADOREPORTE = R.CODIGOESTADOREPORTE) AND (S.CODI' +
+        'GOSUBESTACION (+)= R.CODIGOSUBESTACION) AND(G.CODIGOGEOGRAFICO(+' +
+        ')=R.CIGDANO)  AND G2.CODIGOARBOL(+) = SUBSTR(G.CODIGOARBOL,1,12)' +
+        '  AND G2.NIVEL(+) = 3'
+      
+        'AND (C.CODIGOCIRCUITO (+)= R.CODIGOCIRCUITO) AND (AD.CODIGOADMIN' +
+        'ISTRATIVO (+)= R.CIAINFORMANTE) AND (GT.CODIGOGRUPOTRABAJO (+) =' +
+        ' R.CODIGOGRUPOTRABAJO) AND (GT.CODIGOADMINISTRATIVO (+) = R.CODI' +
+        'GOADMINISTRATIVO)')
+    object qTotalesTOTAL: TFloatField
+      FieldName = 'TOTAL'
+    end
+  end
+  inherited CVS1: TCVS
+    Left = 406
+    Top = 187
+  end
+  inherited SaveDialog1: TSaveDialog
+    Left = 129
+    Top = 105
+  end
+  object qListaReportes: TQuery
+    AfterScroll = qListaReportesAfterScroll
+    OnCalcFields = qListaReportesCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT'
+      '    R.CODIGOREPORTE,'
+      '    R.TIPOCLIENTE,'
+      '    PRIORIDADESTIMADA,'
+      '    R.CIGINFORMANTE,'
+      '    R.CIGDANO,'
+      '    CAST(G2.NOMBRECATEGORIA AS VARCHAR(100)) AS NOMBREMUNICIPIO,'
+      '    R.DIRECCIONDANO,'
+      '    R.CODIGOADMINISTRATIVO,'
+      '    R.CODIGOTIPOREPORTE,'
+      '    R.CODIGOCLASEREPORTE,'
+      '    R.CODIGOTIPODANO,'
+      '    R.CODIGOPRIORIDAD,'
+      '    R.CODIGOCIRCUITO,'
+      '    G.NOMBRECATEGORIA,'
+      '    G3.NOMBRECATEGORIA        AS NOMBREDEPARTAMENTO,'
+      '    ('
+      '        SELECT'
+      '            NOMBRESEDEOPERATIVA'
+      '        FROM'
+      '            SEDEOPERATIVA SO'
+      '        WHERE'
+      '            SO.CODIGOSEDEOPERATIVA = CA.CODIGOSEDEOPERATIVA'
+      '    ) AS SEDEOPERATIVA,'
+      '    R.CODIGOESTADOREPORTE,'
+      '    R.NUMEROCARTA,'
+      '    R.CODIGOESTADOCARTA,'
+      '    R.REGISTROS, R.DESCRIPCION,'
+      '    R.OBSERVACION,'
+      '    R.FECHAHORA,'
+      '    R.FECHAULTIMOREGISTRO,'
+      '    R.FECHAHORADICTADO,'
+      '    R.FECHAHORALLEGADA,'
+      '    SG.FECHAHORAFIN,'
+      '    SG.CODIGOGESTION,'
+      '    R.CODIGOAPOYO,'
+      '    R.CODIGOCLIENTESGD,'
+      '    R.CODIGOINTERRUPTORDIS,'
+      '    R.CODIGOCLIENTECOM,'
+      '    ORE.CODIGOODT,'
+      '    R.PINTADOAPOYO,'
+      '    I.NOMBREINFORMANTE        AS NOMBRETIPOINFORMANTE,'
+      '    R.CODIGOSUBESTACION,'
+      '    A.NOMBREADMINISTRATIVO,'
+      '    TR.NOMBRETIPOREPORTE,'
+      '    CR.NOMBRECLASEREPORTE,'
+      '    G.CODIGOCOMUNA,'
+      '    TD.NOMBRETIPODANO,'
+      '    ER.COLOR,'
+      '    ER.NOMBREESTADOREPORTE,'
+      '    R.PRIORIDADDANO,'
+      '    R.CIAINFORMANTE,'
+      '    GT.NOMBREGRUPOTRABAJO,'
+      '    R.CODIGOUSUARIOCREACION,'
+      '    R.CODIGOCLASECLIENTE,'
+      '    CC.NOMBRECLASECLIENTE,'
+      '    R.CODIGOGRUPOTRABAJO, SG.CONSECUTIVO'
+      'FROM'
+      '    REPORTE          R,'
+      '    APOYO            AP,'
+      '    INFORMANTE       I,'
+      '    ADMINISTRATIVO   A,'
+      '    TIPOREPORTE      TR,'
+      '    CLASEREPORTE     CR,'
+      '    CLASECLIENTE     CC,'
+      '    ESTADOREPORTE    ER,'
+      '    GRUPOTRABAJO     GT,'
+      '    GEOGRAFICO       G,'
+      '    GEOGRAFICO       G2,'
+      '    GEOGRAFICO       G3,'
+      '    SIGCOM_GESTION   SG,'
+      '    C_GRUPOAOL       CA,'
+      '    TIPODANO         TD,'
+      '    ODTREPORTE       ORE'
+      'WHERE'
+      '    1 = 1'
+      '    AND R.CODIGOAPOYO = AP.CODIGOAPOYO'
+      '    AND R.CODIGOINFORMANTE = I.CODIGOINFORMANTE'
+      '    AND A.CODIGOADMINISTRATIVO = R.CODIGOADMINISTRATIVO'
+      '    AND TR.CODIGOTIPOREPORTE = R.CODIGOTIPOREPORTE'
+      '    AND CR.CODIGOCLASEREPORTE = R.CODIGOCLASEREPORTE'
+      '    AND R.CODIGOCLASECLIENTE = CC.CODIGOCLASECLIENTE'
+      '    AND ER.CODIGOESTADOREPORTE = R.CODIGOESTADOREPORTE'
+      '    AND GT.CODIGOADMINISTRATIVO = R.CODIGOADMINISTRATIVO'
+      '    AND GT.CODIGOGRUPOTRABAJO = R.CODIGOGRUPOTRABAJO'
+      '    AND G.CODIGOGEOGRAFICO = R.CIGDANO'
+      '    AND G2.CODIGOARBOL = SUBSTR(G.CODIGOARBOL, 1, 12)'
+      '    AND G2.NIVEL = 3'
+      '    AND G3.CODIGOGEOGRAFICO IS NOT NULL'
+      '    AND G3.CODIGOARBOL = SUBSTR(G.CODIGOARBOL, 0, 9)'
+      '    AND SG.CODIGOREPORTE = R.CODIGOREPORTE'
+      '    AND ( ( SG.TIPOREGISTRO = 2'
+      '            AND R.CODIGOESTADOREPORTE = 4 )'
+      '          OR ( SG.TIPOREGISTRO = 1'
+      '               AND R.CODIGOESTADOREPORTE IN ('
+      '        '#39'2'#39','
+      '        '#39'3'#39','
+      '        '#39'5'#39
+      '    ) ) )'
+      '    AND AP.GRUPOAOL = CA.CODIGOGRUPOAOL'
+      '    AND TD.CODIGOTIPODANO = R.CODIGOTIPODANO'
+      '    AND R.CODIGOREPORTE = ORE.CODIGOREPORTE'
+      ''
+      'ORDER BY R.CODIGOREPORTE DESC')
+    Left = 152
+    Top = 192
+    object qListaReportesCODIGOREPORTE: TFloatField
+      FieldName = 'CODIGOREPORTE'
+    end
+    object qListaReportesTIPOCLIENTE: TStringField
+      FieldName = 'TIPOCLIENTE'
+      Size = 1
+    end
+    object qListaReportesPRIORIDADESTIMADA: TFloatField
+      FieldName = 'PRIORIDADESTIMADA'
+    end
+    object qListaReportesCIGINFORMANTE: TFloatField
+      FieldName = 'CIGINFORMANTE'
+    end
+    object qListaReportesCIGDANO: TFloatField
+      FieldName = 'CIGDANO'
+    end
+    object qListaReportesNOMBREMUNICIPIO: TStringField
+      FieldName = 'NOMBREMUNICIPIO'
+      Size = 100
+    end
+    object qListaReportesDIRECCIONDANO: TStringField
+      FieldName = 'DIRECCIONDANO'
+      Size = 40
+    end
+    object qListaReportesCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+    end
+    object qListaReportesCODIGOTIPOREPORTE: TStringField
+      FieldName = 'CODIGOTIPOREPORTE'
+      Size = 1
+    end
+    object qListaReportesCODIGOCLASEREPORTE: TStringField
+      FieldName = 'CODIGOCLASEREPORTE'
+      Size = 1
+    end
+    object qListaReportesCODIGOTIPODANO: TFloatField
+      FieldName = 'CODIGOTIPODANO'
+    end
+    object qListaReportesCODIGOPRIORIDAD: TStringField
+      FieldName = 'CODIGOPRIORIDAD'
+      Size = 1
+    end
+    object qListaReportesNOMBRECATEGORIA: TStringField
+      FieldName = 'NOMBRECATEGORIA'
+      Size = 80
+    end
+    object qListaReportesNOMBREDEPARTAMENTO: TStringField
+      FieldName = 'NOMBREDEPARTAMENTO'
+      Size = 80
+    end
+    object qListaReportesSEDEOPERATIVA: TStringField
+      FieldName = 'SEDEOPERATIVA'
+      Size = 100
+    end
+    object qListaReportesCODIGOESTADOREPORTE: TStringField
+      FieldName = 'CODIGOESTADOREPORTE'
+      Size = 1
+    end
+    object qListaReportesNUMEROCARTA: TStringField
+      FieldName = 'NUMEROCARTA'
+      Size = 6
+    end
+    object qListaReportesCODIGOESTADOCARTA: TFloatField
+      FieldName = 'CODIGOESTADOCARTA'
+    end
+    object qListaReportesREGISTROS: TFloatField
+      FieldName = 'REGISTROS'
+    end
+    object qListaReportesDESCRIPCION: TMemoField
+      FieldName = 'DESCRIPCION'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qListaReportesOBSERVACION: TMemoField
+      FieldName = 'OBSERVACION'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qListaReportesFECHAHORA: TDateTimeField
+      FieldName = 'FECHAHORA'
+    end
+    object qListaReportesFECHAULTIMOREGISTRO: TDateTimeField
+      FieldName = 'FECHAULTIMOREGISTRO'
+    end
+    object qListaReportesFECHAHORADICTADO: TDateTimeField
+      FieldName = 'FECHAHORADICTADO'
+    end
+    object qListaReportesFECHAHORALLEGADA: TDateTimeField
+      FieldName = 'FECHAHORALLEGADA'
+    end
+    object qListaReportesFECHAHORAFIN: TDateTimeField
+      FieldName = 'FECHAHORAFIN'
+    end
+    object qListaReportesCODIGOAPOYO: TFloatField
+      FieldName = 'CODIGOAPOYO'
+    end
+    object qListaReportesCODIGOCLIENTESGD: TFloatField
+      FieldName = 'CODIGOCLIENTESGD'
+    end
+    object qListaReportesCODIGOINTERRUPTORDIS: TFloatField
+      FieldName = 'CODIGOINTERRUPTORDIS'
+    end
+    object qListaReportesCODIGOCLIENTECOM: TFloatField
+      FieldName = 'CODIGOCLIENTECOM'
+    end
+    object qListaReportesPINTADOAPOYO: TStringField
+      FieldName = 'PINTADOAPOYO'
+      Size = 7
+    end
+    object qListaReportesCODIGOSUBESTACION: TStringField
+      FieldName = 'CODIGOSUBESTACION'
+      Size = 3
+    end
+    object qListaReportesNOMBRETIPOREPORTE: TStringField
+      FieldName = 'NOMBRETIPOREPORTE'
+      Size = 30
+    end
+    object qListaReportesNOMBRECLASEREPORTE: TStringField
+      FieldName = 'NOMBRECLASEREPORTE'
+      Size = 60
+    end
+    object qListaReportesCODIGOCOMUNA: TFloatField
+      FieldName = 'CODIGOCOMUNA'
+    end
+    object qListaReportesNOMBRETIPODANO: TStringField
+      FieldName = 'NOMBRETIPODANO'
+      Size = 30
+    end
+    object qListaReportesCOLOR: TFloatField
+      FieldName = 'COLOR'
+    end
+    object qListaReportesNOMBREESTADOREPORTE: TStringField
+      FieldName = 'NOMBREESTADOREPORTE'
+      Size = 30
+    end
+    object qListaReportesPRIORIDADDANO: TFloatField
+      FieldName = 'PRIORIDADDANO'
+    end
+    object qListaReportesCIAINFORMANTE: TFloatField
+      FieldName = 'CIAINFORMANTE'
+    end
+    object qListaReportesNOMBREGRUPOTRABAJO: TStringField
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+    object qListaReportesCODIGOUSUARIOCREACION: TFloatField
+      FieldName = 'CODIGOUSUARIOCREACION'
+    end
+    object qListaReportesCODIGOCLASECLIENTE: TFloatField
+      FieldName = 'CODIGOCLASECLIENTE'
+    end
+    object qListaReportesNOMBRECLASECLIENTE: TStringField
+      FieldName = 'NOMBRECLASECLIENTE'
+      Size = 50
+    end
+    object qListaReportesCODIGOGRUPOTRABAJO: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJO'
+    end
+    object qListaReportesCODIGOGESTION: TFloatField
+      FieldName = 'CODIGOGESTION'
+    end
+    object qListaReportesCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+    end
+    object qListaReportesCONSECUTIVO: TFloatField
+      FieldName = 'CONSECUTIVO'
+    end
+  end
+  object qTipoDano: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOTIPODANO, NOMBRETIPODANO'
+      'FROM TIPODANO')
+    Left = 224
+    Top = 192
+  end
+  object pmEstadistica: TPopupMenu
+    Left = 424
+    Top = 120
+    object Totalatencinalcliente1: TMenuItem
+      Caption = 'Índice de atención al cliente área metrop.'
+    end
+    object ndicedeatencinalclienterearural1: TMenuItem
+      Caption = 'Índice de atención al cliente área Regional'
+    end
+    object ndicedepodas1: TMenuItem
+      Caption = 'Índice de podas'
+      Visible = False
+    end
+    object Estadsticaanterior1: TMenuItem
+      Caption = 'Estadística anterior'
+      Visible = False
+    end
+  end
+  object Timer: TTimer
+    Enabled = False
+    OnTimer = TimerTimer
+    Left = 456
+    Top = 184
+  end
+  object qODTReporte: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsBase
+    SQL.Strings = (
+      'SELECT (OD.CODIGOODT ||'#39'-'#39'|| OD.CONSECUTIVO) AS IMPRESOODT'
+      'FROM ODTREPORTE ODR, ODTDIA OD'
+      'WHERE'
+      'OD.CODIGOODT = ODR.CODIGOODT'
+      'AND OD.CONSECUTIVO = ODR.CONSECUTIVO'
+      'AND ODR.CODIGOREPORTE = :CODIGOREPORTE')
+    Left = 208
+    Top = 96
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOREPORTE'
+        ParamType = ptUnknown
+      end>
+  end
+  object qReporteAsociado: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'Select r.CODIGOREPORTE,r.NOMBREINFORMANTE,r.TELEFONO,r.codigocli' +
+        'entesgd,R.DESCRIPCION,'
+      'r.cigdano,r.CODIGOTIPOVIA,r.CODIGONOMBREVIA,r.MODIFICADORVIA,'
+      'r.DUPLICADOR,r.MODIFICADORDUPLICADOR,r.NUMEROPUERTA,'
+      'r.codigotipopredio,r.DESCRIPCIONTIPOPREDIO,r.PINTADOAPOYO,'
+      'r.codigosubestacion,r.codigocircuito,r.CODIGOAPOYO,'
+      
+        'r.codigotrafodis,r.CODIGOINTERRUPTORDIS,r.codigoestadoreporte,e.' +
+        'nombreestadoreporte,e.color from reporte r,estadoreporte e'
+      
+        'where r.reportepadre is not null and r.codigoestadoreporte=e.cod' +
+        'igoestadoreporte'
+      'and r.reportepadre<>r.codigoreporte'
+      'and r.reportepadre=:codigoreportepadre'
+      'order by r.CODIGOREPORTE desc')
+    Left = 381
+    Top = 161
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'codigoreportepadre'
+        ParamType = ptUnknown
+        Value = 1
+      end>
+    object qReporteAsociadoCODIGOREPORTE: TFloatField
+      FieldName = 'CODIGOREPORTE'
+      Origin = 'REPORTE.CODIGOREPORTE'
+    end
+    object qReporteAsociadoNOMBREINFORMANTE: TStringField
+      FieldName = 'NOMBREINFORMANTE'
+      Origin = 'REPORTE.NOMBREINFORMANTE'
+      Size = 40
+    end
+    object qReporteAsociadoTELEFONO: TStringField
+      FieldName = 'TELEFONO'
+      Origin = 'REPORTE.TELEFONO'
+      Size = 10
+    end
+    object qReporteAsociadoDireccion: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Direccion'
+      Size = 500
+      Calculated = True
+    end
+    object qReporteAsociadoCIG: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'CIG'
+      Size = 100
+      Calculated = True
+    end
+    object qReporteAsociadoCIGDANO: TFloatField
+      FieldName = 'CIGDANO'
+      Origin = 'REPORTE.CIGDANO'
+    end
+    object qReporteAsociadoCODIGOTIPOVIA: TFloatField
+      FieldName = 'CODIGOTIPOVIA'
+      Origin = 'REPORTE.CODIGOTIPOVIA'
+    end
+    object qReporteAsociadoCODIGONOMBREVIA: TFloatField
+      FieldName = 'CODIGONOMBREVIA'
+      Origin = 'REPORTE.CODIGONOMBREVIA'
+    end
+    object qReporteAsociadoMODIFICADORVIA: TStringField
+      FieldName = 'MODIFICADORVIA'
+      Origin = 'REPORTE.MODIFICADORVIA'
+      Size = 5
+    end
+    object qReporteAsociadoDUPLICADOR: TFloatField
+      FieldName = 'DUPLICADOR'
+      Origin = 'REPORTE.DUPLICADOR'
+    end
+    object qReporteAsociadoMODIFICADORDUPLICADOR: TStringField
+      FieldName = 'MODIFICADORDUPLICADOR'
+      Origin = 'REPORTE.MODIFICADORDUPLICADOR'
+      Size = 5
+    end
+    object qReporteAsociadoNUMEROPUERTA: TFloatField
+      FieldName = 'NUMEROPUERTA'
+      Origin = 'REPORTE.NUMEROPUERTA'
+    end
+    object qReporteAsociadoCODIGOTIPOPREDIO: TStringField
+      FieldName = 'CODIGOTIPOPREDIO'
+      Origin = 'REPORTE.CODIGOTIPOPREDIO'
+      Size = 3
+    end
+    object qReporteAsociadoCODIGOCLIENTESGD: TFloatField
+      FieldName = 'CODIGOCLIENTESGD'
+      Origin = 'REPORTE.CODIGOCLIENTESGD'
+    end
+    object qReporteAsociadoCODIGOSUBESTACION: TStringField
+      FieldName = 'CODIGOSUBESTACION'
+      Origin = 'REPORTE.CODIGOSUBESTACION'
+      Size = 3
+    end
+    object qReporteAsociadoCODIGOCIRCUITO: TStringField
+      FieldName = 'CODIGOCIRCUITO'
+      Origin = 'REPORTE.CODIGOCIRCUITO'
+      Size = 6
+    end
+    object qReporteAsociadoCODIGOAPOYO: TFloatField
+      FieldName = 'CODIGOAPOYO'
+      Origin = 'REPORTE.CODIGOAPOYO'
+    end
+    object qReporteAsociadoCODIGOTRAFODIS: TFloatField
+      FieldName = 'CODIGOTRAFODIS'
+      Origin = 'REPORTE.CODIGOTRAFODIS'
+    end
+    object qReporteAsociadoCODIGOINTERRUPTORDIS: TFloatField
+      FieldName = 'CODIGOINTERRUPTORDIS'
+      Origin = 'REPORTE.CODIGOINTERRUPTORDIS'
+    end
+    object qReporteAsociadoPINTADOAPOYO: TStringField
+      FieldName = 'PINTADOAPOYO'
+      Origin = 'REPORTE.PINTADOAPOYO'
+      Size = 7
+    end
+    object qReporteAsociadoCODIGOESTADOREPORTE: TStringField
+      FieldName = 'CODIGOESTADOREPORTE'
+      Origin = 'REPORTE.CODIGOESTADOREPORTE'
+      Size = 1
+    end
+    object qReporteAsociadoNOMBREESTADOREPORTE: TStringField
+      FieldName = 'NOMBREESTADOREPORTE'
+      Origin = 'ESTADOREPORTE.NOMBREESTADOREPORTE'
+      Size = 30
+    end
+    object qReporteAsociadoCOLOR: TFloatField
+      FieldName = 'COLOR'
+      Origin = 'ESTADOREPORTE.COLOR'
+    end
+    object qReporteAsociadoDESCRIPCION: TMemoField
+      FieldName = 'DESCRIPCION'
+      Origin = 'REPORTE.DESCRIPCION'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qReporteAsociadoDESCRIPCIONTIPOPREDIO: TMemoField
+      FieldName = 'DESCRIPCIONTIPOPREDIO'
+      Origin = 'REPORTE.DESCRIPCIONTIPOPREDIO'
+      BlobType = ftMemo
+      Size = 500
+    end
+  end
+  object dsReporteAsociado: TDataSource
+    DataSet = qReporteAsociado
+    Left = 45
+    Top = 185
+  end
+  object qTipoElemento: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM TIPOELEMENTO'
+      'order by nombretipoelemento')
+    Left = 318
+    Top = 165
+  end
+  object dsTipoElemento: TDataSource
+    DataSet = qTipoElemento
+    Left = 223
+    Top = 149
+  end
+  object pmExportar: TPopupMenu
+    Left = 32
+    Top = 128
+    object MenuItem3: TMenuItem
+      Caption = 'Exportar listado de ODS'
+      OnClick = MenuItem3Click
+    end
+  end
+  object qGestion: TQuery
+    OnCalcFields = qGestionCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsBase
+    SQL.Strings = (
+      'SELECT'
+      '   sg.codigogestion,'
+      '    sg.codigocuenta,'
+      '    sg.codigoodt,'
+      '    sg.consecutivo,'
+      'sgc_fun_detalletipado(15,sg.codigotipogestion) as tipogestion,'
+      '    sg.codigotipogestion,'
+      '    sg.tipocausalnogestion,'
+      '    sg.observacionesgestion,'
+      '    sg.fechahoraini,'
+      '    sg.fechahorafin,'
+      '    sg.nuevalectura,'
+      
+        '    sgc_fun_detalletipado(22,sg.codigotipocortereconexion) as ti' +
+        'pocortereconexion,'
+      '    sg.nombreatiende,'
+      '    sg.documentoatiende,'
+      '    sg.telefonoatiende,'
+      '    sg.testigo,'
+      '    sg.observacionanomalias,'
+      '    sg.observacioncortereconexion,'
+      '    sg.fechahoradescargado,'
+      '    sg.codigoreporte,'
+      '    sg.descripcionodt,'
+      '    sg.nombreempleado,'
+      '    g.nombregrupotrabajo'
+      'FROM'
+      '    sigcom_gestion sg,grupotrabajo g, reporte r'
+      'WHERE '
+      '    sg.codigogrupotrabajo= g.codigogrupotrabajo '
+      '    and sg.codigoadministrativo= g.codigoadministrativo'
+      '    and r.codigoreporte= sg.codigoreporte'
+      'AND sg.codigogestion=:codigogestion'
+      ' AND ( ( sg.TIPOREGISTRO = 2'
+      '            AND r.CODIGOESTADOREPORTE = 4 )'
+      '          OR ( sg.TIPOREGISTRO = 1'
+      '               AND r.CODIGOESTADOREPORTE IN ('
+      '        '#39'2'#39','
+      '        '#39'3'#39','
+      '        '#39'5'#39
+      '    ) ) )'
+      ' ')
+    Left = 832
+    Top = 128
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOGESTION'
+        ParamType = ptUnknown
+      end>
+    object qGestionCODIGOGESTION: TFloatField
+      FieldName = 'CODIGOGESTION'
+      Origin = 'SIGCOM_GESTION.CODIGOGESTION'
+    end
+    object qGestionCODIGOCUENTA: TFloatField
+      FieldName = 'CODIGOCUENTA'
+      Origin = 'SIGCOM_GESTION.CODIGOCUENTA'
+    end
+    object qGestionCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'SIGCOM_GESTION.CODIGOODT'
+    end
+    object qGestionCONSECUTIVO: TFloatField
+      FieldName = 'CONSECUTIVO'
+      Origin = 'SIGCOM_GESTION.CONSECUTIVO'
+    end
+    object qGestionTIPOCAUSALNOGESTION: TFloatField
+      FieldName = 'TIPOCAUSALNOGESTION'
+      Origin = 'SIGCOM_GESTION.TIPOCAUSALNOGESTION'
+    end
+    object qGestionOBSERVACIONESGESTION: TStringField
+      FieldName = 'OBSERVACIONESGESTION'
+      Origin = 'SIGCOM_GESTION.OBSERVACIONESGESTION'
+      Size = 200
+    end
+    object qGestionFECHAHORAINI: TDateTimeField
+      FieldName = 'FECHAHORAINI'
+      Origin = 'SIGCOM_GESTION.FECHAHORAINI'
+    end
+    object qGestionFECHAHORAFIN: TDateTimeField
+      FieldName = 'FECHAHORAFIN'
+      Origin = 'SIGCOM_GESTION.FECHAHORAFIN'
+    end
+    object qGestionNUEVALECTURA: TFloatField
+      FieldName = 'NUEVALECTURA'
+      Origin = 'SIGCOM_GESTION.NUEVALECTURA'
+    end
+    object qGestionNOMBREATIENDE: TStringField
+      FieldName = 'NOMBREATIENDE'
+      Origin = 'SIGCOM_GESTION.NOMBREATIENDE'
+      Size = 100
+    end
+    object qGestionDOCUMENTOATIENDE: TStringField
+      FieldName = 'DOCUMENTOATIENDE'
+      Origin = 'SIGCOM_GESTION.DOCUMENTOATIENDE'
+      Size = 30
+    end
+    object qGestionTELEFONOATIENDE: TStringField
+      FieldName = 'TELEFONOATIENDE'
+      Origin = 'SIGCOM_GESTION.TELEFONOATIENDE'
+    end
+    object qGestionTESTIGO: TStringField
+      FieldName = 'TESTIGO'
+      Origin = 'SIGCOM_GESTION.TESTIGO'
+      Size = 100
+    end
+    object qGestionOBSERVACIONANOMALIAS: TMemoField
+      FieldName = 'OBSERVACIONANOMALIAS'
+      Origin = 'SIGCOM_GESTION.OBSERVACIONANOMALIAS'
+      BlobType = ftMemo
+      Size = 500
+    end
+    object qGestionOBSERVACIONCORTERECONEXION: TMemoField
+      FieldName = 'OBSERVACIONCORTERECONEXION'
+      Origin = 'SIGCOM_GESTION.OBSERVACIONCORTERECONEXION'
+      BlobType = ftMemo
+      Size = 500
+    end
+    object qGestionFECHAHORADESCARGADO: TDateTimeField
+      FieldName = 'FECHAHORADESCARGADO'
+      Origin = 'SIGCOM_GESTION.FECHAHORADESCARGADO'
+    end
+    object qGestionCODIGOREPORTE: TFloatField
+      FieldName = 'CODIGOREPORTE'
+      Origin = 'SIGCOM_GESTION.CODIGOREPORTE'
+    end
+    object qGestionDESCRIPCIONODT: TMemoField
+      FieldName = 'DESCRIPCIONODT'
+      Origin = 'SIGCOM_GESTION.DESCRIPCIONODT'
+      BlobType = ftMemo
+      Size = 500
+    end
+    object qGestionNOMBREEMPLEADO: TStringField
+      FieldName = 'NOMBREEMPLEADO'
+      Origin = 'SIGCOM_GESTION.NOMBREEMPLEADO'
+      Size = 200
+    end
+    object qGestionNOMBREGRUPOTRABAJO: TStringField
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+    object qGestionANOMALIAOBSERVACION: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'ANOMALIAOBSERVACION'
+      Calculated = True
+    end
+    object qGestionCORTERECONEXIONOBSERVACION: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'CORTERECONEXIONOBSERVACION'
+      Calculated = True
+    end
+    object qGestionODTDESCRIPCION: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'ODTDESCRIPCION'
+      Calculated = True
+    end
+    object qGestionTIPOGESTION: TMemoField
+      FieldName = 'TIPOGESTION'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qGestionTIPOCORTERECONEXION: TMemoField
+      FieldName = 'TIPOCORTERECONEXION'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qGestionGESTIONTIPO: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'GESTIONTIPO'
+      Calculated = True
+    end
+    object qGestionCORTERECONEXIONTIPO: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'CORTERECONEXIONTIPO'
+      Calculated = True
+    end
+    object qGestionTIPOCAUSALVACIO: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'TIPOCAUSALVACIO'
+      Calculated = True
+    end
+    object qGestionCODIGOTIPOGESTION: TFloatField
+      FieldName = 'CODIGOTIPOGESTION'
+    end
+  end
+  object dsGestion: TDDataSource
+    AutoEdit = False
+    DataSet = qGestion
+    Left = 836
+    Top = 180
+  end
+  object qFinca: TQuery
+    OnCalcFields = qFincaCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsBase
+    SQL.Strings = (
+      
+        ' select DISTINCT sgc_fun_detalletipado(3,F.CODIGODESVIACIONFINCA' +
+        ') AS DESVIACIONFINCA,'
+      '    F.PROVINCIA,'
+      '    F.municipio,'
+      '    F.OFICINA,'
+      '    F.SECTOR,'
+      '    F.BARRIO,'
+      '    sgc_fun_detalletipado(19,F.CODIGOTIPOVIA) AS TIPOVIA,'
+      '    F.CALLE,'
+      '    F.NUMEROPUERTA,'
+      '   sgc_fun_detalletipado(20,F.CODIGOTIPOFINCA) AS TIPOFINCA,'
+      '    F.NOMBREFINCA,'
+      '    F.REFERENCIA,'
+      '    sgc_fun_detalletipado(5,F.CODIGOESTADOFINCA) AS ESTADOFINCA,'
+      '    F.OBSERVACIONFINCA'
+      '    from sigcom_finca F, REPORTE R, sigcom_gestion sg'
+      '    WHERE F.codigogestion=:CODIGOGESTION'
+      '    AND F.CODIGOGESTION= sg.CODIGOGESTION'
+      '    AND sg.CODIGOREPORTE= R.CODIGOREPORTE'
+      '    AND ( ( F.TIPOREGISTRO = 2'
+      '            AND R.CODIGOESTADOREPORTE = 4 )'
+      '          OR ( F.TIPOREGISTRO = 1'
+      '               AND R.CODIGOESTADOREPORTE IN ('
+      '        '#39'2'#39','
+      '        '#39'3'#39','
+      '        '#39'5'#39
+      '    ) ) )')
+    Left = 888
+    Top = 128
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'CODIGOGESTION'
+        ParamType = ptUnknown
+      end>
+    object qFincaDESVIACIONFINCA: TMemoField
+      FieldName = 'DESVIACIONFINCA'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qFincaPROVINCIA: TStringField
+      FieldName = 'PROVINCIA'
+      Size = 100
+    end
+    object qFincaMUNICIPIO: TStringField
+      FieldName = 'MUNICIPIO'
+      Size = 100
+    end
+    object qFincaOFICINA: TStringField
+      FieldName = 'OFICINA'
+      Size = 100
+    end
+    object qFincaSECTOR: TStringField
+      FieldName = 'SECTOR'
+      Size = 100
+    end
+    object qFincaBARRIO: TStringField
+      FieldName = 'BARRIO'
+      Size = 100
+    end
+    object qFincaTIPOVIA: TMemoField
+      FieldName = 'TIPOVIA'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qFincaCALLE: TStringField
+      FieldName = 'CALLE'
+      Size = 100
+    end
+    object qFincaNUMEROPUERTA: TStringField
+      FieldName = 'NUMEROPUERTA'
+      Size = 100
+    end
+    object qFincaTIPOFINCA: TMemoField
+      FieldName = 'TIPOFINCA'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qFincaNOMBREFINCA: TStringField
+      FieldName = 'NOMBREFINCA'
+      Size = 100
+    end
+    object qFincaREFERENCIA: TStringField
+      FieldName = 'REFERENCIA'
+      Size = 200
+    end
+    object qFincaESTADOFINCA: TMemoField
+      FieldName = 'ESTADOFINCA'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qFincaOBSERVACIONFINCA: TStringField
+      FieldName = 'OBSERVACIONFINCA'
+      Size = 200
+    end
+    object qFincaFINCADESVIACION: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'FINCADESVIACION'
+      Calculated = True
+    end
+    object qFincaVIATIPO: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'VIATIPO'
+      Calculated = True
+    end
+    object qFincaFINCATIPO: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'FINCATIPO'
+      Calculated = True
+    end
+    object qFincaFINCAESTADO: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'FINCAESTADO'
+      Calculated = True
+    end
+  end
+  object dsFinca: TDDataSource
+    AutoEdit = False
+    DataSet = qFinca
+    Left = 892
+    Top = 180
+  end
+  object qMedidor: TQuery
+    OnCalcFields = qMedidorCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsBase
+    SQL.Strings = (
+      
+        'SELECT  DISTINCT sgc_fun_detalletipado(4,M.codigodesviacionmedid' +
+        'or) as desviacionmedidor,'
+      'sgc_fun_detalletipado(11,M.CODIGOTIPOCONEXION) as tipoconexion,'
+      'e.descripcion,'
+      'M.LECTURA,'
+      'e.TENSIONNOMINAL,'
+      'M.DIGITOS,'
+      'M.MULTIPLO,'
+      'M.VUELTAS,'
+      'M.KH,'
+      'M.KD,'
+      
+        'sgc_fun_detalletipado(6,M.codigoirregularidadmedidor) AS IRREGUL' +
+        'ARIDADMEDIDOR,'
+      'M.OBSERVACIONMEDIDOR,'
+      'M.SERIAL'
+      
+        'FROM SIGCOM_MEDIDOR M ,sigcom_modelosmedidor e, REPORTE R, SIGCO' +
+        'M_GESTION SG'
+      'WHERE  M.codigomodelomedidor= e.codigomodelomedidor'
+      'AND M.codigogestion= :CODIGOGESTION'
+      'AND M.CODIGOGESTION= sg.CODIGOGESTION'
+      '    AND sg.CODIGOREPORTE= R.CODIGOREPORTE'
+      '    AND ( ( M.TIPOREGISTRO = 2'
+      '            AND R.CODIGOESTADOREPORTE = 4 )'
+      '          OR ( M.TIPOREGISTRO = 1'
+      '               AND R.CODIGOESTADOREPORTE IN ('
+      '        '#39'2'#39','
+      '        '#39'3'#39','
+      '        '#39'5'#39
+      '    ) ) )'
+      ' ')
+    Left = 944
+    Top = 128
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOGESTION'
+        ParamType = ptUnknown
+      end>
+    object qMedidorDESVIACIONMEDIDOR: TMemoField
+      FieldName = 'DESVIACIONMEDIDOR'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qMedidorTIPOCONEXION: TMemoField
+      FieldName = 'TIPOCONEXION'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qMedidorDESCRIPCION: TStringField
+      FieldName = 'DESCRIPCION'
+      Size = 100
+    end
+    object qMedidorLECTURA: TFloatField
+      FieldName = 'LECTURA'
+    end
+    object qMedidorDIGITOS: TFloatField
+      FieldName = 'DIGITOS'
+    end
+    object qMedidorMULTIPLO: TFloatField
+      FieldName = 'MULTIPLO'
+    end
+    object qMedidorVUELTAS: TFloatField
+      FieldName = 'VUELTAS'
+    end
+    object qMedidorKH: TFloatField
+      FieldName = 'KH'
+    end
+    object qMedidorKD: TFloatField
+      FieldName = 'KD'
+    end
+    object qMedidorIRREGULARIDADMEDIDOR: TMemoField
+      FieldName = 'IRREGULARIDADMEDIDOR'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qMedidorOBSERVACIONMEDIDOR: TStringField
+      FieldName = 'OBSERVACIONMEDIDOR'
+      Size = 200
+    end
+    object qMedidorSERIAL: TStringField
+      FieldName = 'SERIAL'
+      Size = 50
+    end
+    object qMedidorMEDIDORDESVIACION: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'MEDIDORDESVIACION'
+      Calculated = True
+    end
+    object qMedidorCONEXIONTIPO: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'CONEXIONTIPO'
+      Calculated = True
+    end
+    object qMedidorMEDIDORIRREGULARIDAD: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'MEDIDORIRREGULARIDAD'
+      Calculated = True
+    end
+    object qMedidorTENSIONNOMINAL: TStringField
+      FieldName = 'TENSIONNOMINAL'
+      Size = 100
+    end
+  end
+  object dsMedidor: TDDataSource
+    AutoEdit = False
+    DataSet = qMedidor
+    Left = 940
+    Top = 180
+  end
+  object dsPuntoMedida: TDDataSource
+    AutoEdit = False
+    DataSet = qPuntoMedida
+    Left = 1012
+    Top = 172
+  end
+  object qPuntoMedida: TQuery
+    OnCalcFields = qPuntoMedidaCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsBase
+    SQL.Strings = (
+      'SELECT DISTINCT'
+      
+        'sgc_fun_detalletipado(1,P.codigoinfraestructuraelectrica) as inf' +
+        'raestructuraelectrica, '
+      'P.numerofilas,'
+      'P.numerocolumnas,'
+      'P.observacionespm, '
+      
+        'sgc_fun_detalletipado(14,I.codigoirregularidadpm) AS IRREGULARID' +
+        'AD,'
+      'P.codigoinfraestructuraelectrica'
+      
+        'FROM SIGCOM_PUNTOMEDIDA P, sigcom_irregularidadpm I, REPORTE R, ' +
+        'SIGCOM_GESTION SG'
+      'WHERE i.codigogestion(+)=p.codigogestion '
+      'AND P.codigogestion= :codigogestion '
+      'AND P.CODIGOGESTION= sg.CODIGOGESTION'
+      '    AND sg.CODIGOREPORTE= R.CODIGOREPORTE'
+      '    AND ( ( P.TIPOREGISTRO = 2'
+      '            AND R.CODIGOESTADOREPORTE = 4 )'
+      '          OR ( P.TIPOREGISTRO = 1'
+      '               AND R.CODIGOESTADOREPORTE IN ('
+      '        '#39'2'#39','
+      '        '#39'3'#39','
+      '        '#39'5'#39
+      '    ) ) )')
+    Left = 1008
+    Top = 128
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOGESTION'
+        ParamType = ptUnknown
+      end>
+    object qPuntoMedidaINFRAESTRUCTURAELECTRICA: TMemoField
+      FieldName = 'INFRAESTRUCTURAELECTRICA'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qPuntoMedidaNUMEROFILAS: TFloatField
+      FieldName = 'NUMEROFILAS'
+    end
+    object qPuntoMedidaNUMEROCOLUMNAS: TFloatField
+      FieldName = 'NUMEROCOLUMNAS'
+    end
+    object qPuntoMedidaOBSERVACIONESPM: TStringField
+      FieldName = 'OBSERVACIONESPM'
+      Size = 200
+    end
+    object qPuntoMedidaIRREGULARIDAD: TMemoField
+      FieldName = 'IRREGULARIDAD'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qPuntoMedidaINFRAESTRUCTURA: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'INFRAESTRUCTURA'
+      Calculated = True
+    end
+    object qPuntoMedidaIRREGULARIDADPM: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'IRREGULARIDADPM'
+      Calculated = True
+    end
+    object qPuntoMedidaCODIGOINFRAESTRUCTURAELECTRICA: TFloatField
+      FieldName = 'CODIGOINFRAESTRUCTURAELECTRICA'
+    end
+  end
+  object qEnergis: TQuery
+    OnCalcFields = qEnergisCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsBase
+    SQL.Strings = (
+      'select DISTINCT E.CODIGOPINTADO,'
+      't.nombretipoapoyo,'
+      'sgc_fun_detalletipado(9,E.CODIGOTIPOACOMETIDA) AS TIPOACOMETIDA,'
+      'E.OBSERVACIONENERGIS,'
+      'E.NOMBRECIRCUITO,'
+      'E.CODIGOCTRANS,'
+      'E.TIPOCTRANS,  '
+      'E.POTENCIACTRANS '
+      'from SIGCOM_ENERGIS e, tipoapoyo t, SIGCOM_GESTION SG, REPORTE R'
+      'where e.codigotipoapoyo=t.codigotipoapoyo'
+      'and e.codigogestion=:CODIGOGESTION'
+      'AND e.CODIGOGESTION= SG.CODIGOGESTION '
+      '  AND sg.CODIGOREPORTE= R.CODIGOREPORTE'
+      '    AND ( ( e.TIPOREGISTRO = 2'
+      '            AND R.CODIGOESTADOREPORTE = 4 )'
+      '          OR ( e.TIPOREGISTRO = 1'
+      '               AND R.CODIGOESTADOREPORTE IN ('
+      '        '#39'2'#39','
+      '        '#39'3'#39','
+      '        '#39'5'#39
+      '    ) ) )')
+    Left = 1080
+    Top = 128
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'CODIGOGESTION'
+        ParamType = ptUnknown
+      end>
+    object qEnergisCODIGOPINTADO: TFloatField
+      FieldName = 'CODIGOPINTADO'
+    end
+    object qEnergisNOMBRETIPOAPOYO: TStringField
+      FieldName = 'NOMBRETIPOAPOYO'
+      Size = 30
+    end
+    object qEnergisTIPOACOMETIDA: TMemoField
+      FieldName = 'TIPOACOMETIDA'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qEnergisOBSERVACIONENERGIS: TStringField
+      FieldName = 'OBSERVACIONENERGIS'
+      Size = 200
+    end
+    object qEnergisNOMBRECIRCUITO: TStringField
+      FieldName = 'NOMBRECIRCUITO'
+      Size = 100
+    end
+    object qEnergisCODIGOCTRANS: TStringField
+      FieldName = 'CODIGOCTRANS'
+      Size = 100
+    end
+    object qEnergisTIPOCTRANS: TStringField
+      FieldName = 'TIPOCTRANS'
+      Size = 100
+    end
+    object qEnergisPOTENCIACTRANS: TStringField
+      FieldName = 'POTENCIACTRANS'
+      Size = 100
+    end
+    object qEnergisACOMETIDATIPO: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'ACOMETIDATIPO'
+      Calculated = True
+    end
+    object qEnergisPINTADOVACIO: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'PINTADOVACIO'
+      Calculated = True
+    end
+  end
+  object dsEnergis: TDDataSource
+    AutoEdit = False
+    DataSet = qEnergis
+    Left = 1084
+    Top = 180
+  end
+  object qSuministro: TQuery
+    OnCalcFields = qSuministroCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsBase
+    SQL.Strings = (
+      'SELECT DISTINCT S.CODIGOSUMINSITRO,'
+      'S.APELLIDOS,'
+      'S.NOMBRES,'
+      
+        'sgc_fun_detalletipado(7,S.codigoirregularidadsuministro) as irre' +
+        'gularidadsuministro,--irregularidadessuministro'
+      
+        'sgc_fun_detalletipado(13,S.CODIGOTIPOENTRADA) as tipoentrada,--t' +
+        'ipoentrada'
+      'S.ENTRADA,'
+      
+        'sgc_fun_detalletipado(16,S.CODIGOTIPOPISO) as tipopiso,--tipopis' +
+        'o'
+      'S.PISO,'
+      
+        'sgc_fun_detalletipado(10,S.CODIGOTIPOAPARTAMENTO) as tipoapartam' +
+        'ento,--tipoapartamento'
+      'S.APARTAMENTO,'
+      'S.NOMBRECOMERCIAL,'
+      'S.observacionsuministro,'
+      'sgc_fun_detalletipado(8,S.CODIGORUBRO) as rubro--rubro'
+      ''
+      'FROM SIGCOM_SUMINISTRO S, REPORTE R, SIGCOM_GESTION SG'
+      'where S.codigogestion= :CODIGOGESTION'
+      'AND S.CODIGOGESTION= SG.CODIGOGESTION '
+      '  AND sg.CODIGOREPORTE= R.CODIGOREPORTE'
+      '    AND ( ( S.TIPOREGISTRO = 2'
+      '            AND R.CODIGOESTADOREPORTE = 4 )'
+      '          OR ( S.TIPOREGISTRO = 1'
+      '               AND R.CODIGOESTADOREPORTE IN ('
+      '        '#39'2'#39','
+      '        '#39'3'#39','
+      '        '#39'5'#39
+      '    ) ) )')
+    Left = 1144
+    Top = 128
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'CODIGOGESTION'
+        ParamType = ptUnknown
+      end>
+    object qSuministroCODIGOSUMINSITRO: TFloatField
+      FieldName = 'CODIGOSUMINSITRO'
+    end
+    object qSuministroAPELLIDOS: TStringField
+      FieldName = 'APELLIDOS'
+      Size = 100
+    end
+    object qSuministroNOMBRES: TStringField
+      FieldName = 'NOMBRES'
+      Size = 100
+    end
+    object qSuministroIRREGULARIDADSUMINISTRO: TMemoField
+      FieldName = 'IRREGULARIDADSUMINISTRO'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qSuministroTIPOENTRADA: TMemoField
+      FieldName = 'TIPOENTRADA'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qSuministroENTRADA: TStringField
+      FieldName = 'ENTRADA'
+      Size = 100
+    end
+    object qSuministroTIPOPISO: TMemoField
+      FieldName = 'TIPOPISO'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qSuministroPISO: TStringField
+      FieldName = 'PISO'
+      Size = 5
+    end
+    object qSuministroTIPOAPARTAMENTO: TMemoField
+      FieldName = 'TIPOAPARTAMENTO'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qSuministroAPARTAMENTO: TStringField
+      FieldName = 'APARTAMENTO'
+      Size = 100
+    end
+    object qSuministroNOMBRECOMERCIAL: TStringField
+      FieldName = 'NOMBRECOMERCIAL'
+      Size = 100
+    end
+    object qSuministroOBSERVACIONSUMINISTRO: TStringField
+      FieldName = 'OBSERVACIONSUMINISTRO'
+      Size = 200
+    end
+    object qSuministroRUBRO: TMemoField
+      FieldName = 'RUBRO'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qSuministroSUMINISTROIRREGULARIDAD: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'SUMINISTROIRREGULARIDAD'
+      Calculated = True
+    end
+    object qSuministroENTRADATIPO: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'ENTRADATIPO'
+      Calculated = True
+    end
+    object qSuministroPISOTIPO: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'PISOTIPO'
+      Calculated = True
+    end
+    object qSuministroAPARTAMENTOTIPO: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'APARTAMENTOTIPO'
+      Calculated = True
+    end
+    object qSuministroRUBROSUMINISTRO: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'RUBROSUMINISTRO'
+      Calculated = True
+    end
+    object qSuministroCODIGOVACIO: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'CODIGOVACIO'
+      Calculated = True
+    end
+  end
+  object dsSuministro: TDDataSource
+    AutoEdit = False
+    DataSet = qSuministro
+    Left = 1148
+    Top = 180
+  end
+  object qArtefactos: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsBase
+    SQL.Strings = (
+      'SELECT a.ARTEFACTOSNOMBRE,'
+      'c.CANTIDAD,'
+      'c.totalcargaartefacto'
+      'FROM sigcom_censocargaitem c, sigcom_artefactoselectricos a'
+      'where c.CODIGOARTEFACTO= a.codigoartefactoselectricos'
+      'and c.codigogestion= :codigogestion')
+    Left = 1208
+    Top = 128
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'codigogestion'
+        ParamType = ptUnknown
+      end>
+    object qArtefactosARTEFACTOSNOMBRE: TStringField
+      FieldName = 'ARTEFACTOSNOMBRE'
+      Origin = 'SIGCOM_ARTEFACTOSELECTRICOS.ARTEFACTOSNOMBRE'
+      Size = 30
+    end
+    object qArtefactosCANTIDAD: TFloatField
+      FieldName = 'CANTIDAD'
+      Origin = 'SIGCOM_CENSOCARGAITEM.CANTIDAD'
+    end
+    object qArtefactosTOTALCARGAARTEFACTO: TFloatField
+      FieldName = 'TOTALCARGAARTEFACTO'
+      Origin = 'SIGCOM_CENSOCARGAITEM.TOTALCARGAARTEFACTO'
+    end
+  end
+  object dsArtefactos: TDDataSource
+    AutoEdit = False
+    DataSet = qArtefactos
+    Left = 1212
+    Top = 180
+  end
+  object qAnomalia: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsBase
+    SQL.Strings = (
+      'SELECT a.nombre'
+      'FROM sigcom_detalleanomalias d,sigcom_anomalia a'
+      'where d.codigoanomalia=a.codigoanomalia'
+      'and d.codigogestion= :codigogestion')
+    Left = 1272
+    Top = 128
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'codigogestion'
+        ParamType = ptUnknown
+      end>
+    object qAnomaliaNOMBRE: TStringField
+      FieldName = 'NOMBRE'
+      Origin = 'SIGCOM_ANOMALIA.NOMBRE'
+      Size = 200
+    end
+  end
+  object dsAnomalia: TDDataSource
+    AutoEdit = False
+    DataSet = qAnomalia
+    Left = 1276
+    Top = 180
+  end
+  object qMaterial: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsBase
+    SQL.Strings = (
+      
+        'select o.codigomaterial,m.nombrematerial, NVL(o.cantidadconsumid' +
+        'a,0) AS cantidadconsumida,'
+      
+        'NVL(o.cantidadretiradabuena,0) AS cantidadretiradabuena, NVL(o.c' +
+        'antidadretiradamala,0) AS cantidadretiradamala'
+      'from odtpresmate o, materialessa m  where '
+      'o.codigomaterial= m.codigomaterial and'
+      'codigoodt= :codigoodt and consecutivo= :consecutivo'
+      ' '
+      ' ')
+    Left = 760
+    Top = 128
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CONSECUTIVO'
+        ParamType = ptUnknown
+      end>
+    object qMaterialCODIGOMATERIAL: TFloatField
+      FieldName = 'CODIGOMATERIAL'
+      Origin = 'ODTPRESMATE.CODIGOMATERIAL'
+    end
+    object qMaterialCANTIDADCONSUMIDA: TFloatField
+      FieldName = 'CANTIDADCONSUMIDA'
+      Origin = 'ODTPRESMATE.CANTIDADCONSUMIDA'
+    end
+    object qMaterialCANTIDADRETIRADABUENA: TFloatField
+      FieldName = 'CANTIDADRETIRADABUENA'
+      Origin = 'ODTPRESMATE.CANTIDADRETIRADABUENA'
+    end
+    object qMaterialCANTIDADRETIRADAMALA: TFloatField
+      FieldName = 'CANTIDADRETIRADAMALA'
+      Origin = 'ODTPRESMATE.CANTIDADRETIRADAMALA'
+    end
+    object qMaterialNOMBREMATERIAL: TStringField
+      FieldName = 'NOMBREMATERIAL'
+      Origin = 'MATERIAL.NOMBREMATERIAL'
+      Size = 100
+    end
+  end
+  object dsMaterial: TDDataSource
+    AutoEdit = False
+    DataSet = qMaterial
+    Left = 764
+    Top = 180
+  end
+  object qManoObra: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsBase
+    SQL.Strings = (
+      'select sgc_fun_detalletipado(21,codigomanoobra) as manoobra'
+      'from sigcom_detalleamanoobra'
+      'where codigogestion= :codigogestion')
+    Left = 704
+    Top = 136
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'codigogestion'
+        ParamType = ptUnknown
+      end>
+    object qManoObraMANOOBRA: TMemoField
+      FieldName = 'MANOOBRA'
+      BlobType = ftMemo
+      Size = 4000
+    end
+  end
+  object dsManoObra: TDDataSource
+    AutoEdit = False
+    DataSet = qManoObra
+    Left = 708
+    Top = 188
+  end
+  object pmGestion: TPopupMenu
+    Left = 132
+    Top = 397
+    object exportarGestion: TMenuItem
+      Caption = 'Exportar Lista'
+      OnClick = exportarGestionClick
+    end
+  end
+  object pmFinca: TPopupMenu
+    Left = 292
+    Top = 397
+    object exportarFinca: TMenuItem
+      Caption = 'Exportar Lista'
+      OnClick = exportarFincaClick
+    end
+  end
+  object pmMedidor: TPopupMenu
+    Left = 412
+    Top = 397
+    object ExportarMedidor: TMenuItem
+      Caption = 'Exportar Lista'
+      OnClick = ExportarMedidorClick
+    end
+  end
+  object pmPuntoMedida: TPopupMenu
+    Left = 548
+    Top = 397
+    object exportarPM: TMenuItem
+      Caption = 'Exportar Lista'
+      OnClick = exportarPMClick
+    end
+  end
+  object pmEnergis: TPopupMenu
+    Left = 364
+    Top = 365
+    object exportarEnergis: TMenuItem
+      Caption = 'Exportar Lista'
+      OnClick = exportarEnergisClick
+    end
+  end
+  object pmSuministro: TPopupMenu
+    Left = 692
+    Top = 373
+    object exportarSuministro: TMenuItem
+      Caption = 'Exportar Lista'
+      OnClick = exportarSuministroClick
+    end
+  end
+  object pmArtefacto: TPopupMenu
+    Left = 756
+    Top = 365
+    object exportarArtefactos: TMenuItem
+      Caption = 'Exportar Lista'
+      OnClick = exportarArtefactosClick
+    end
+  end
+  object pmMateriales: TPopupMenu
+    Left = 820
+    Top = 381
+    object exportarMateriales: TMenuItem
+      Caption = 'Exportar Lista'
+      OnClick = exportarMaterialesClick
+    end
+  end
+  object pmAnomalia: TPopupMenu
+    Left = 229
+    Top = 388
+    object exportarAnomalia: TMenuItem
+      Caption = 'Exportar Lista'
+      OnClick = exportarAnomaliaClick
+    end
+  end
+  object pmManoObra: TPopupMenu
+    Left = 469
+    Top = 460
+    object exportarManoObra: TMenuItem
+      Caption = 'Exportar Lista'
+      OnClick = exportarManoObraClick
+    end
+  end
+  object dsFuncionamiento: TDDataSource
+    AutoEdit = False
+    DataSet = qFuncionamiento
+    Left = 628
+    Top = 188
+  end
+  object qFuncionamiento: TQuery
+    OnCalcFields = qFuncionamientoCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsBase
+    SQL.Strings = (
+      'select conexiones,continuidad,pruebasunitarias,display,'
+      
+        ' estadointegrador,revisionlab,pruebacalibracion,porerrorcalibrac' +
+        'ion,'
+      ' pruebaintegracion,porerrorintegracion,cambiomedidor,aolmedidor,'
+      ' observacionesrevisionlab,certificadorevisionlab'
+      
+        ' from SIGCOM_FUNCIONAMIENTO where codigogestion = :codigogestion' +
+        ' ')
+    Left = 640
+    Top = 128
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOGESTION'
+        ParamType = ptUnknown
+      end>
+    object qFuncionamientoCONEXIONES: TStringField
+      FieldName = 'CONEXIONES'
+      Origin = 'SIGCOM_FUNCIONAMIENTO.CONEXIONES'
+      Size = 10
+    end
+    object qFuncionamientoCONTINUIDAD: TStringField
+      FieldName = 'CONTINUIDAD'
+      Origin = 'SIGCOM_FUNCIONAMIENTO.CONTINUIDAD'
+      Size = 10
+    end
+    object qFuncionamientoPRUEBASUNITARIAS: TStringField
+      FieldName = 'PRUEBASUNITARIAS'
+      Origin = 'SIGCOM_FUNCIONAMIENTO.PRUEBASUNITARIAS'
+      Size = 10
+    end
+    object qFuncionamientoDISPLAY: TStringField
+      FieldName = 'DISPLAY'
+      Origin = 'SIGCOM_FUNCIONAMIENTO.DISPLAY'
+      Size = 10
+    end
+    object qFuncionamientoESTADOINTEGRADOR: TStringField
+      FieldName = 'ESTADOINTEGRADOR'
+      Origin = 'SIGCOM_FUNCIONAMIENTO.ESTADOINTEGRADOR'
+      Size = 10
+    end
+    object qFuncionamientoREVISIONLAB: TStringField
+      FieldName = 'REVISIONLAB'
+      Origin = 'SIGCOM_FUNCIONAMIENTO.REVISIONLAB'
+      Size = 10
+    end
+    object qFuncionamientoPRUEBACALIBRACION: TStringField
+      FieldName = 'PRUEBACALIBRACION'
+      Origin = 'SIGCOM_FUNCIONAMIENTO.PRUEBACALIBRACION'
+      Size = 10
+    end
+    object qFuncionamientoPORERRORCALIBRACION: TStringField
+      FieldName = 'PORERRORCALIBRACION'
+      Origin = 'SIGCOM_FUNCIONAMIENTO.PORERRORCALIBRACION'
+      Size = 10
+    end
+    object qFuncionamientoPRUEBAINTEGRACION: TStringField
+      FieldName = 'PRUEBAINTEGRACION'
+      Origin = 'SIGCOM_FUNCIONAMIENTO.PRUEBAINTEGRACION'
+      Size = 10
+    end
+    object qFuncionamientoPORERRORINTEGRACION: TStringField
+      FieldName = 'PORERRORINTEGRACION'
+      Origin = 'SIGCOM_FUNCIONAMIENTO.PORERRORINTEGRACION'
+      Size = 10
+    end
+    object qFuncionamientoCAMBIOMEDIDOR: TStringField
+      FieldName = 'CAMBIOMEDIDOR'
+      Origin = 'SIGCOM_FUNCIONAMIENTO.CAMBIOMEDIDOR'
+      Size = 10
+    end
+    object qFuncionamientoAOLMEDIDOR: TStringField
+      FieldName = 'AOLMEDIDOR'
+      Origin = 'SIGCOM_FUNCIONAMIENTO.AOLMEDIDOR'
+      Size = 10
+    end
+    object qFuncionamientoOBSERVACIONESREVISIONLAB: TMemoField
+      FieldName = 'OBSERVACIONESREVISIONLAB'
+      Origin = 'SIGCOM_FUNCIONAMIENTO.OBSERVACIONESREVISIONLAB'
+      BlobType = ftMemo
+      Size = 300
+    end
+    object qFuncionamientoCERTIFICADOREVISIONLAB: TStringField
+      FieldName = 'CERTIFICADOREVISIONLAB'
+      Origin = 'SIGCOM_FUNCIONAMIENTO.CERTIFICADOREVISIONLAB'
+      Size = 100
+    end
+    object qFuncionamientoCONEXIONSTRING: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'CONEXIONSTRING'
+      Calculated = True
+    end
+    object qFuncionamientoCONTINUIDADSTRING: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'CONTINUIDADSTRING'
+      Calculated = True
+    end
+    object qFuncionamientoPRUEBASUNISTRING: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'PRUEBASUNISTRING'
+      Calculated = True
+    end
+    object qFuncionamientoDISPLAYSTRING: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'DISPLAYSTRING'
+      Calculated = True
+    end
+    object qFuncionamientoESTADOINTEGRADORSTRING: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'ESTADOINTEGRADORSTRING'
+      Calculated = True
+    end
+    object qFuncionamientoREVISIONLABSTRING: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'REVISIONLABSTRING'
+      Calculated = True
+    end
+    object qFuncionamientoPRUEBACALIBRACIONSTRING: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'PRUEBACALIBRACIONSTRING'
+      Calculated = True
+    end
+    object qFuncionamientoPRUEBAINTEGRACIONSTRING: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'PRUEBAINTEGRACIONSTRING'
+      Calculated = True
+    end
+    object qFuncionamientoCAMBIOMEDIDORSTRING: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'CAMBIOMEDIDORSTRING'
+      Calculated = True
+    end
+    object qFuncionamientoCERTIFICADOREVISIONLABSTRING: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'CERTIFICADOREVISIONLABSTRING'
+      Calculated = True
+    end
+    object qFuncionamientoOBSERVACION: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'OBSERVACION'
+      Calculated = True
+    end
+  end
+  object qRegistroMedidas: TQuery
+    OnCalcFields = qFuncionamientoCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsBase
+    SQL.Strings = (
+      'select '
+      ' voltajefan, voltajefbn,voltajefcn,'
+      ' voltajefab,voltajefbc,voltajefca,corrienteia,'
+      ' corrienteib,corrienteic,corrientein'
+      ' from SIGCOM_REGISTROMEDIDAS where codigogestion=:codigogestion')
+    Left = 560
+    Top = 120
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOGESTION'
+        ParamType = ptUnknown
+      end>
+    object qRegistroMedidasVOLTAJEFAN: TFloatField
+      FieldName = 'VOLTAJEFAN'
+      Origin = 'SIGCOM_REGISTROMEDIDAS.VOLTAJEFAN'
+    end
+    object qRegistroMedidasVOLTAJEFBN: TFloatField
+      FieldName = 'VOLTAJEFBN'
+      Origin = 'SIGCOM_REGISTROMEDIDAS.VOLTAJEFBN'
+    end
+    object qRegistroMedidasVOLTAJEFCN: TFloatField
+      FieldName = 'VOLTAJEFCN'
+      Origin = 'SIGCOM_REGISTROMEDIDAS.VOLTAJEFCN'
+    end
+    object qRegistroMedidasVOLTAJEFAB: TFloatField
+      FieldName = 'VOLTAJEFAB'
+      Origin = 'SIGCOM_REGISTROMEDIDAS.VOLTAJEFAB'
+    end
+    object qRegistroMedidasVOLTAJEFBC: TFloatField
+      FieldName = 'VOLTAJEFBC'
+      Origin = 'SIGCOM_REGISTROMEDIDAS.VOLTAJEFBC'
+    end
+    object qRegistroMedidasVOLTAJEFCA: TFloatField
+      FieldName = 'VOLTAJEFCA'
+      Origin = 'SIGCOM_REGISTROMEDIDAS.VOLTAJEFCA'
+    end
+    object qRegistroMedidasCORRIENTEIA: TFloatField
+      FieldName = 'CORRIENTEIA'
+      Origin = 'SIGCOM_REGISTROMEDIDAS.CORRIENTEIA'
+    end
+    object qRegistroMedidasCORRIENTEIB: TFloatField
+      FieldName = 'CORRIENTEIB'
+      Origin = 'SIGCOM_REGISTROMEDIDAS.CORRIENTEIB'
+    end
+    object qRegistroMedidasCORRIENTEIC: TFloatField
+      FieldName = 'CORRIENTEIC'
+      Origin = 'SIGCOM_REGISTROMEDIDAS.CORRIENTEIC'
+    end
+    object qRegistroMedidasCORRIENTEIN: TFloatField
+      FieldName = 'CORRIENTEIN'
+      Origin = 'SIGCOM_REGISTROMEDIDAS.CORRIENTEIN'
+    end
+  end
+  object dsRegistroMedidas: TDDataSource
+    AutoEdit = False
+    DataSet = qRegistroMedidas
+    Left = 540
+    Top = 188
+  end
+end

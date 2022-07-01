@@ -1,0 +1,478 @@
+inherited fqrEstadisticaBase: TfqrEstadisticaBase
+  Left = 189
+  Top = 37
+  Width = 853
+  Caption = 'fqrEstadisticaBase'
+  OldCreateOrder = True
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited QuickReport: TQuickRep
+    Tag = 1
+    Functions.DATA = (
+      '0'
+      '0'
+      #39#39)
+    OnNeedData = QuickReportNeedData
+    Options = [FirstPageHeader, LastPageFooter]
+    Page.Values = (
+      150.000000000000000000
+      2794.000000000000000000
+      150.000000000000000000
+      2159.000000000000000000
+      150.000000000000000000
+      100.000000000000000000
+      0.000000000000000000)
+    inherited ColumnHeaderBand1: TQRBand
+      Left = 57
+      Top = 184
+      Width = 722
+      Height = 20
+      Size.Values = (
+        52.916666666666670000
+        1910.291666666667000000)
+      inherited QRShape2: TQRShape
+        Height = 20
+        Enabled = False
+        Frame.DrawTop = True
+        Frame.DrawBottom = True
+        Frame.DrawLeft = True
+        Frame.DrawRight = True
+        Frame.Width = 10
+        Size.Values = (
+          52.916666666666670000
+          2.645833333333333000
+          0.000000000000000000
+          854.604166666666700000)
+        Pen.Width = 2
+      end
+      inherited QRShape3: TQRShape [1]
+        Left = 55
+        Width = 5
+        Height = 20
+        Enabled = False
+        Size.Values = (
+          52.916666666666670000
+          145.520833333333300000
+          0.000000000000000000
+          13.229166666666670000)
+      end
+      inherited QRLabel4: TQRLabel [2]
+        Left = 9
+        Top = 1
+        Width = 42
+        Height = 17
+        Enabled = False
+        Frame.DrawTop = True
+        Frame.DrawBottom = True
+        Frame.DrawLeft = True
+        Frame.DrawRight = True
+        Size.Values = (
+          44.979166666666670000
+          23.812500000000000000
+          2.645833333333333000
+          111.125000000000000000)
+        AutoSize = True
+        Font.Height = -13
+        Transparent = True
+        FontSize = 10
+      end
+      inherited QRLabel5: TQRLabel [3]
+        Top = 1
+        Width = 44
+        Height = 17
+        Enabled = False
+        Frame.DrawTop = True
+        Frame.DrawBottom = True
+        Frame.DrawLeft = True
+        Frame.DrawRight = True
+        Size.Values = (
+          44.979166666666670000
+          412.750000000000000000
+          2.645833333333333000
+          116.416666666666700000)
+        AutoSize = True
+        Font.Height = -13
+        Transparent = True
+        FontSize = 10
+      end
+    end
+    inherited TitleBand1: TQRBand
+      Left = 57
+      Width = 722
+      Height = 122
+      Size.Values = (
+        322.791666666666700000
+        1910.291666666667000000)
+      inherited qrsDatosFiltro: TQRShape
+        Top = 132
+        Width = 721
+        Size.Values = (
+          153.458333333333300000
+          0.000000000000000000
+          349.250000000000000000
+          1907.645833333333000000)
+      end
+      inherited qlNombreEmpresa: TQRLabel
+        Left = 125
+        Size.Values = (
+          68.791666666666670000
+          330.729166666666700000
+          26.458333333333330000
+          497.416666666666700000)
+        FontSize = 16
+      end
+      inherited qlAreaFuncional: TQRLabel
+        Left = 125
+        Top = 41
+        Size.Values = (
+          58.208333333333330000
+          330.729166666666700000
+          108.479166666666700000
+          333.375000000000000000)
+        FontSize = 12
+      end
+      inherited qrSysData1: TQRSysData
+        Left = 125
+        Width = 470
+        Height = 21
+        Size.Values = (
+          55.562500000000000000
+          330.729166666666700000
+          190.500000000000000000
+          1243.541666666667000000)
+        FontSize = 11
+      end
+      inherited qlOrden: TQRLabel
+        Top = 99
+        Enabled = False
+        Size.Values = (
+          42.333333333333330000
+          0.000000000000000000
+          261.937500000000000000
+          84.666666666666670000)
+        FontSize = 8
+      end
+      inherited qlFecha: TQRLabel
+        Left = 690
+        Top = 99
+        Size.Values = (
+          42.333333333333330000
+          1825.625000000000000000
+          261.937500000000000000
+          84.666666666666670000)
+        FontSize = 8
+      end
+      inherited QRShape5: TQRShape
+        Top = 94
+        Size.Values = (
+          10.583333333333330000
+          2.645833333333333000
+          248.708333333333300000
+          1944.687500000000000000)
+      end
+      inherited qrmRotulos1: TQRMemo
+        Left = 2
+        Top = 143
+        Width = 104
+        Size.Values = (
+          105.833333333333300000
+          5.291666666666667000
+          378.354166666666700000
+          275.166666666666700000)
+        FontSize = 8
+      end
+      inherited qrsFiltrodatos: TQRShape
+        Left = 302
+        Top = 123
+        Height = 18
+        Size.Values = (
+          46.302083333333330000
+          800.364583333333300000
+          324.114583333333300000
+          405.694444444444400000)
+      end
+      inherited qrlFiltroDatos: TQRLabel
+        Left = 313
+        Top = 125
+        Size.Values = (
+          39.687500000000000000
+          828.145833333333300000
+          330.729166666666700000
+          330.729166666666700000)
+        FontSize = 8
+      end
+      inherited qrmDatos1: TQRMemo
+        Left = 116
+        Top = 143
+        Width = 239
+        Size.Values = (
+          105.833333333333300000
+          306.916666666666700000
+          378.354166666666700000
+          632.354166666666700000)
+        FontSize = 8
+      end
+      inherited qrmPuntos1: TQRMemo
+        Left = 108
+        Top = 143
+        Width = 6
+        Size.Values = (
+          105.833333333333300000
+          285.750000000000000000
+          378.354166666666700000
+          15.875000000000000000)
+        FontSize = 8
+      end
+      inherited qrmRotulos2: TQRMemo
+        Left = 363
+        Top = 143
+        Width = 104
+        Size.Values = (
+          105.833333333333300000
+          960.437500000000000000
+          378.354166666666700000
+          275.166666666666700000)
+        FontSize = 8
+      end
+      inherited qrmPuntos2: TQRMemo
+        Left = 470
+        Top = 143
+        Width = 6
+        Size.Values = (
+          105.833333333333300000
+          1243.541666666667000000
+          378.354166666666700000
+          15.875000000000000000)
+        FontSize = 8
+      end
+      inherited qrmDatos2: TQRMemo
+        Left = 478
+        Top = 143
+        Width = 239
+        Size.Values = (
+          105.833333333333300000
+          1264.708333333333000000
+          378.354166666666700000
+          632.354166666666700000)
+        FontSize = 8
+      end
+      inherited QRDBImage1: TQRDBImage
+        Left = 3
+        Top = 10
+        Width = 118
+        Size.Values = (
+          211.666666666666700000
+          7.937500000000000000
+          26.458333333333330000
+          312.208333333333300000)
+      end
+      object qrlCubeSummary: TQRLabel
+        Left = 293
+        Top = 99
+        Width = 135
+        Height = 21
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          55.562500000000000000
+          775.229166666666700000
+          261.937500000000000000
+          357.187500000000000000)
+        Alignment = taCenter
+        AlignToBand = True
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'qrlCubeSummary'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+    end
+    inherited SummaryBand1: TQRBand
+      Left = 57
+      Top = 226
+      Width = 722
+      Size.Values = (
+        66.145833333333330000
+        1910.291666666667000000)
+      inherited QRShape7: TQRShape
+        Width = 720
+        Height = 20
+        Enabled = False
+        Size.Values = (
+          52.916666666666670000
+          2.645833333333333000
+          0.000000000000000000
+          1905.000000000000000000)
+      end
+      inherited QRLabel1: TQRLabel
+        Top = 1
+        Enabled = False
+        Size.Values = (
+          47.625000000000000000
+          26.458333333333330000
+          2.645833333333333000
+          108.479166666666700000)
+        FontSize = 10
+      end
+      inherited QRSysData2: TQRSysData
+        Top = 1
+        Enabled = False
+        Size.Values = (
+          47.625000000000000000
+          148.166666666666700000
+          2.645833333333333000
+          105.833333333333300000)
+        FontSize = 10
+      end
+      inherited QRLabel2: TQRLabel
+        Top = 1
+        Enabled = False
+        Size.Values = (
+          47.625000000000000000
+          280.458333333333300000
+          2.645833333333333000
+          156.104166666666700000)
+        FontSize = 10
+      end
+    end
+    inherited DetailBand1: TQRBand
+      Left = 57
+      Top = 204
+      Width = 722
+      Height = 21
+      Size.Values = (
+        55.562500000000000000
+        1910.291666666667000000)
+      inherited QRShape6: TQRShape
+        Width = 720
+        Height = 20
+        Size.Values = (
+          52.916666666666670000
+          2.645833333333333000
+          0.000000000000000000
+          1905.000000000000000000)
+      end
+      inherited QRShape4: TQRShape [1]
+        Left = 55
+        Width = 5
+        Height = 20
+        Enabled = False
+        Size.Values = (
+          52.916666666666670000
+          145.520833333333300000
+          0.000000000000000000
+          13.229166666666670000)
+      end
+      inherited QRDBText2: TQRDBText
+        Top = 2
+        Width = 246
+        Enabled = False
+        Size.Values = (
+          42.333333333333330000
+          177.270833333333300000
+          5.291666666666667000
+          650.875000000000000000)
+        Alignment = taCenter
+        Transparent = True
+        WordWrap = False
+        FontSize = 8
+      end
+      inherited QRDBText1: TQRDBText [3]
+        Top = 2
+        Width = 44
+        Enabled = False
+        Size.Values = (
+          42.333333333333330000
+          18.520833333333330000
+          5.291666666666667000
+          116.416666666666700000)
+        Transparent = True
+        WordWrap = False
+        FontSize = 8
+      end
+    end
+    inherited PageFooterBand1: TQRBand
+      Left = 57
+      Top = 251
+      Width = 722
+      Size.Values = (
+        79.375000000000000000
+        1910.291666666667000000)
+      inherited qlPagina: TQRSysData
+        Left = 642
+        Size.Values = (
+          42.333333333333330000
+          1698.625000000000000000
+          21.166666666666670000
+          211.666666666666700000)
+        FontSize = 8
+      end
+      inherited QRShape1: TQRShape
+        Size.Values = (
+          10.583333333333330000
+          2.645833333333333000
+          7.937500000000000000
+          1944.687500000000000000)
+      end
+      inherited QLSGD: TQRLabel
+        Size.Values = (
+          42.333333333333330000
+          0.000000000000000000
+          21.166666666666670000
+          542.395833333333300000)
+        FontSize = 8
+      end
+      inherited QRILogoElectros: TQRImage
+        Size.Values = (
+          42.333333333333330000
+          552.979166666666700000
+          21.166666666666670000
+          222.250000000000000000)
+      end
+      inherited QRILogoPrograma: TQRImage
+        Size.Values = (
+          42.333333333333330000
+          793.750000000000000000
+          21.166666666666670000
+          222.250000000000000000)
+      end
+    end
+    inherited PageHeaderBand1: TQRBand
+      Left = 57
+      Width = 722
+      Size.Values = (
+        13.229166666666670000
+        1910.291666666667000000)
+    end
+    object ChildBand1: TQRChildBand
+      Left = 57
+      Top = 225
+      Width = 722
+      Height = 1
+      Frame.Color = clBlack
+      Frame.DrawTop = True
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      AlignToBottom = False
+      Color = clWhite
+      ForceNewColumn = False
+      ForceNewPage = False
+      Size.Values = (
+        2.645833333333333000
+        1910.291666666667000000)
+      ParentBand = DetailBand1
+    end
+  end
+end

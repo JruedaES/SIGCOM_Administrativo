@@ -1,0 +1,573 @@
+inherited FListaCarta: TFListaCarta
+  Left = 164
+  Top = 102
+  Width = 812
+  Height = 612
+  Caption = 'Listado de Cartas'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    Width = 796
+    object sbInsertar: TSpeedButton [0]
+      Left = 126
+      Top = 4
+      Width = 23
+      Height = 21
+      Hint = 'Ingresar Dato en Lista'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        33333333FF33333333FF333993333333300033377F3333333777333993333333
+        300033F77FFF3333377739999993333333333777777F3333333F399999933333
+        33003777777333333377333993333333330033377F3333333377333993333333
+        3333333773333333333F333333333333330033333333F33333773333333C3333
+        330033333337FF3333773333333CC333333333FFFFF77FFF3FF33CCCCCCCCCC3
+        993337777777777F77F33CCCCCCCCCC3993337777777777377333333333CC333
+        333333333337733333FF3333333C333330003333333733333777333333333333
+        3000333333333333377733333333333333333333333333333333}
+      NumGlyphs = 2
+      OnClick = sbInsertarClick
+    end
+    object sbEditarPadre: TSpeedButton [1]
+      Left = 150
+      Top = 4
+      Width = 23
+      Height = 21
+      Hint = 'Editar Dato en Lista'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333000000
+        000033333377777777773333330FFFFFFFF03FF3FF7FF33F3FF700300000FF0F
+        00F077F777773F737737E00BFBFB0FFFFFF07773333F7F3333F7E0BFBF000FFF
+        F0F077F3337773F3F737E0FBFBFBF0F00FF077F3333FF7F77F37E0BFBF00000B
+        0FF077F3337777737337E0FBFBFBFBF0FFF077F33FFFFFF73337E0BF0000000F
+        FFF077FF777777733FF7000BFB00B0FF00F07773FF77373377373330000B0FFF
+        FFF03337777373333FF7333330B0FFFF00003333373733FF777733330B0FF00F
+        0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
+        00333377737FFFFF773333303300000003333337337777777333}
+      NumGlyphs = 2
+      OnClick = sbEditarPadreClick
+    end
+    inherited Panel2: TPanel
+      Left = 552
+      inherited SBImprimir: TSpeedButton
+        Visible = False
+        OnClick = SBImprimirClick
+      end
+      inherited SBFiltrar: TSpeedButton
+        Visible = False
+      end
+      inherited SBBuscar: TSpeedButton
+        Left = 107
+        OnClick = SBBuscarClick
+      end
+      inherited SBOrdenar: TSpeedButton
+        Left = 137
+        Visible = False
+        OnClick = SBOrdenarClick
+      end
+      inherited SBEstadistica: TSpeedButton
+        Left = 77
+        Visible = False
+        OnClick = SBEstadisticaClick
+      end
+      inherited SBBuscaElementoCartografia: TSpeedButton
+        Visible = False
+      end
+      inherited SBFiltroCarografico: TSpeedButton
+        Visible = False
+      end
+    end
+    inherited dNavigator1: TdNavigator
+      Hints.Strings = ()
+    end
+  end
+  inherited Panel3: TPanel
+    Top = 556
+    Width = 796
+  end
+  inherited PFiltro: TPanel
+    Width = 796
+    inherited lFiltroDatos: TLabel
+      Width = 794
+    end
+  end
+  object Panel4: TPanel [3]
+    Left = 0
+    Top = 333
+    Width = 796
+    Height = 223
+    Align = alBottom
+    TabOrder = 3
+    object Label1: TLabel
+      Left = 1
+      Top = 1
+      Width = 794
+      Height = 20
+      Align = alTop
+      Alignment = taCenter
+      Caption = 'Traslados de correspondencia'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object DBGrid2: TDBGrid
+      Left = 1
+      Top = 21
+      Width = 794
+      Height = 201
+      Align = alClient
+      DataSource = dsqPersonalCarta
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'NOMBREEMPLEADO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Empleado'
+          Width = 180
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREADMINISTRATIVO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Administrativo'
+          Width = 200
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAENVIO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Fecha de Envío'
+          Width = 150
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'OBSERVACION'
+          Title.Alignment = taCenter
+          Title.Caption = 'Observación'
+          Width = 400
+          Visible = True
+        end>
+    end
+  end
+  object dbgListaCartas: TRxDBGrid [4]
+    Left = 0
+    Top = 78
+    Width = 796
+    Height = 255
+    Align = alClient
+    DataSource = dsBase
+    TabOrder = 4
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    OnDblClick = dbgListaCartasDblClick
+    OnTitleClick = dbgListaCartasTitleClick
+    OnMouseMove = dbgListaCartasMouseMove
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'CODIGOCARTA'
+        Title.Alignment = taCenter
+        Title.Caption = 'Código'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'TIPORECEPCIONCARTA'
+        Title.Caption = 'Tipo Recepción'
+        Width = 86
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NUMERORADICACIONRECEPCION'
+        Title.Alignment = taCenter
+        Title.Caption = 'No.Recepción'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CODIGOARCHIVO'
+        Title.Alignment = taCenter
+        Title.Caption = 'No.Archivo'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DIRIGIDOCARTASOLICITUD'
+        Title.Alignment = taCenter
+        Title.Caption = 'Carta Solicitud dirigida a'
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'FECHARADICACION'
+        Title.Alignment = taCenter
+        Title.Caption = 'Fecha Radicación'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'FECHARECEPCION'
+        Title.Alignment = taCenter
+        Title.Caption = 'Fecha Recepción'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'FECHAATENCION'
+        Title.Alignment = taCenter
+        Title.Caption = 'Fecha Atención'
+        Visible = True
+      end
+      item
+        Color = clInfoBk
+        Expanded = False
+        FieldName = 'FECHALIMITEATENCION'
+        Title.Alignment = taCenter
+        Title.Caption = 'Fecha Límite Atención'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOMBREESTADOCARTA'
+        Title.Alignment = taCenter
+        Title.Caption = 'Estado Carta'
+        Width = 120
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CODIGOREPORTE'
+        Title.Alignment = taCenter
+        Title.Caption = 'Código Reporte'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'EMPRESA'
+        Title.Alignment = taCenter
+        Title.Caption = 'Empresa'
+        Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NUMEROANEXOS'
+        Title.Alignment = taCenter
+        Title.Caption = 'Cant. Anexos'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'TIPOENVIOCARTA'
+        Title.Caption = 'Tipo Envío'
+        Width = 95
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NUMERORADICACIONRESPUESTA'
+        Title.Alignment = taCenter
+        Title.Caption = 'No.Respuesta'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DIRIGIDOCARTARESPUESTA'
+        Title.Alignment = taCenter
+        Title.Caption = 'Carta Respuesta dirigida a'
+        Width = 200
+        Visible = True
+      end>
+  end
+  inherited dsBase: TDDataSource
+    DataSet = qCarta
+  end
+  inherited qTotales: TQuery
+    Active = True
+    SQL.Strings = (
+      'Select count(*) as Total'
+      
+        'from carta c, estadocarta e, tipoenviocarta tc1,tipoenviocarta t' +
+        'c2'
+      'where e.codigoestadocarta (+)= c.codigoestadocarta'
+      'and tc2.codigotipoenviocarta (+)= c.codigotipoenviocarta'
+      'and tc1.codigotipoenviocarta (+)= c.codigotiporecepcioncarta'
+      'Order by c.fechaRadicacion')
+  end
+  object qCarta: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'Select c.*, e.nombreestadocarta,tc1.nombretipoenviocarta as tipo' +
+        'recepcioncarta,tc2.nombretipoenviocarta as tipoenviocarta '
+      
+        'from carta c, estadocarta e, tipoenviocarta tc1,tipoenviocarta t' +
+        'c2'
+      'where e.codigoestadocarta (+)= c.codigoestadocarta'
+      'and tc2.codigotipoenviocarta (+)= c.codigotipoenviocarta'
+      'and tc1.codigotipoenviocarta (+)= c.codigotiporecepcioncarta'
+      'Order by c.codigocarta desc')
+    Left = 568
+    Top = 152
+    object qCartaCODIGOCARTA: TFloatField
+      FieldName = 'CODIGOCARTA'
+    end
+    object qCartaNUMERORADICACIONRECEPCION: TFloatField
+      FieldName = 'NUMERORADICACIONRECEPCION'
+    end
+    object qCartaNUMERORADICACIONRESPUESTA: TFloatField
+      FieldName = 'NUMERORADICACIONRESPUESTA'
+    end
+    object qCartaCODIGOARCHIVO: TFloatField
+      FieldName = 'CODIGOARCHIVO'
+    end
+    object qCartaNUMEROANEXOS: TFloatField
+      FieldName = 'NUMEROANEXOS'
+    end
+    object qCartaCODIGOREPORTE: TFloatField
+      FieldName = 'CODIGOREPORTE'
+    end
+    object qCartaFECHARADICACION: TDateTimeField
+      FieldName = 'FECHARADICACION'
+    end
+    object qCartaFECHARECEPCION: TDateTimeField
+      FieldName = 'FECHARECEPCION'
+    end
+    object qCartaFECHAATENCION: TDateTimeField
+      FieldName = 'FECHAATENCION'
+    end
+    object qCartaFECHALIMITEATENCION: TDateTimeField
+      FieldName = 'FECHALIMITEATENCION'
+    end
+    object qCartaCODIGOEMPLEADORECIBE: TFloatField
+      FieldName = 'CODIGOEMPLEADORECIBE'
+    end
+    object qCartaDIRIGIDOCARTASOLICITUD: TStringField
+      FieldName = 'DIRIGIDOCARTASOLICITUD'
+      Size = 200
+    end
+    object qCartaASUNTO: TMemoField
+      FieldName = 'ASUNTO'
+      BlobType = ftMemo
+      Size = 300
+    end
+    object qCartaDIRIGIDOCARTARESPUESTA: TStringField
+      FieldName = 'DIRIGIDOCARTARESPUESTA'
+      Size = 200
+    end
+    object qCartaFIRMANTE: TStringField
+      FieldName = 'FIRMANTE'
+      Size = 100
+    end
+    object qCartaEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Size = 100
+    end
+    object qCartaCODIGOESTADOCARTA: TFloatField
+      FieldName = 'CODIGOESTADOCARTA'
+    end
+    object qCartaCODIGOTIPORECEPCIONCARTA: TFloatField
+      FieldName = 'CODIGOTIPORECEPCIONCARTA'
+    end
+    object qCartaCODIGOTIPOENVIOCARTA: TFloatField
+      FieldName = 'CODIGOTIPOENVIOCARTA'
+    end
+    object qCartaPLAZOATENCION: TFloatField
+      FieldName = 'PLAZOATENCION'
+    end
+    object qCartaNOMBREESTADOCARTA: TStringField
+      FieldName = 'NOMBREESTADOCARTA'
+      Size = 100
+    end
+    object qCartaTIPORECEPCIONCARTA: TStringField
+      FieldName = 'TIPORECEPCIONCARTA'
+    end
+    object qCartaTIPOENVIOCARTA: TStringField
+      FieldName = 'TIPOENVIOCARTA'
+    end
+  end
+  object qPersonalCarta: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    DataSource = dsBase
+    SQL.Strings = (
+      
+        'Select ce.*, e.nombreempleado, e.codigoadministrativo, a.nombrea' +
+        'dministrativo '
+      'from cartaempleado ce, empleado e, administrativo a'
+      
+        'where e.codigoempleado=ce.codigoempleado and a.codigoadministrat' +
+        'ivo = e.codigoadministrativo'
+      'and ce.codigocarta=:codigocarta'
+      'order by ce.fechaenvio')
+    Left = 632
+    Top = 152
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOCARTA'
+        ParamType = ptUnknown
+      end>
+    object qPersonalCartaCODIGOCARTAEMPLEADO: TFloatField
+      FieldName = 'CODIGOCARTAEMPLEADO'
+      Origin = 'AP_CARTAEMPLEADO.CODIGOCARTAEMPLEADO'
+    end
+    object qPersonalCartaCODIGOCARTA: TFloatField
+      FieldName = 'CODIGOCARTA'
+      Origin = 'AP_CARTAEMPLEADO.CODIGOCARTA'
+    end
+    object qPersonalCartaCODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'AP_CARTAEMPLEADO.CODIGOEMPLEADO'
+    end
+    object qPersonalCartaFECHAENVIO: TDateTimeField
+      FieldName = 'FECHAENVIO'
+      Origin = 'AP_CARTAEMPLEADO.FECHAENVIO'
+      DisplayFormat = 'ddd dd '#39'de'#39' mmm yyyy'
+    end
+    object qPersonalCartaOBSERVACION: TStringField
+      FieldName = 'OBSERVACION'
+      Origin = 'AP_CARTAEMPLEADO.OBSERVACION'
+      Size = 250
+    end
+    object qPersonalCartaNOMBREEMPLEADO: TStringField
+      FieldName = 'NOMBREEMPLEADO'
+      Origin = 'EMPLEADO.NOMBREEMPLEADO'
+      Size = 50
+    end
+    object qPersonalCartaCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'EMPLEADO.CODIGOADMINISTRATIVO'
+    end
+    object qPersonalCartaNOMBREADMINISTRATIVO: TStringField
+      FieldName = 'NOMBREADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.NOMBREADMINISTRATIVO'
+      Size = 250
+    end
+  end
+  object dsqPersonalCarta: TDDataSource
+    AutoEdit = False
+    DataSet = qPersonalCarta
+    Left = 636
+    Top = 212
+  end
+  object PMOrdenar: TPopupMenu
+    Left = 807
+    Top = 168
+    object Codigo: TMenuItem
+      Caption = 'Código'
+      GroupIndex = 1
+      RadioItem = True
+    end
+    object FechaEmision: TMenuItem
+      Caption = 'Fecha Emision'
+      GroupIndex = 1
+      RadioItem = True
+    end
+    object Objeto: TMenuItem
+      Caption = 'Objeto'
+      GroupIndex = 1
+      RadioItem = True
+    end
+    object N3: TMenuItem
+      Caption = '-'
+      GroupIndex = 1
+    end
+    object ZonaCiudad: TMenuItem
+      Caption = 'Zona y Ciudad'
+      GroupIndex = 1
+      RadioItem = True
+      Visible = False
+    end
+    object Barrio: TMenuItem
+      Caption = 'Barrio'
+      GroupIndex = 1
+      RadioItem = True
+      Visible = False
+    end
+    object Direccion: TMenuItem
+      Caption = 'Direccion'
+      GroupIndex = 1
+      RadioItem = True
+    end
+    object N4: TMenuItem
+      Caption = '-'
+      GroupIndex = 1
+    end
+    object Prioridad: TMenuItem
+      Caption = 'Prioridad'
+      GroupIndex = 1
+      RadioItem = True
+    end
+    object Labor: TMenuItem
+      Caption = 'Labor'
+      GroupIndex = 1
+      RadioItem = True
+      Visible = False
+    end
+    object Responsable: TMenuItem
+      Caption = 'Responsable'
+      GroupIndex = 1
+      RadioItem = True
+      Visible = False
+    end
+    object Estado: TMenuItem
+      Caption = 'Estado'
+      GroupIndex = 1
+      RadioItem = True
+    end
+    object N1: TMenuItem
+      Caption = '-'
+      GroupIndex = 1
+      Visible = False
+    end
+    object DivisionSeccion: TMenuItem
+      Caption = 'División y Sección'
+      GroupIndex = 1
+      RadioItem = True
+      Visible = False
+    end
+    object Cuadrilla: TMenuItem
+      Caption = 'Cuadrilla'
+      GroupIndex = 1
+      RadioItem = True
+      Visible = False
+    end
+  end
+  object qFechaLimiteAtencion: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOCARTA,FECHALIMITEATENCION FROM CARTA'
+      'WHERE (FECHALIMITEATENCION-(SELECT SYSDATE FROM DUAL )<=3)'
+      'AND (FECHALIMITEATENCION-(SELECT SYSDATE FROM DUAL )>-1)'
+      'AND FECHAATENCION IS NULL')
+    Left = 264
+    Top = 240
+  end
+end

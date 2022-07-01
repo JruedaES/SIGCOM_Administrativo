@@ -1,0 +1,1918 @@
+object fModificacion: TfModificacion
+  Left = 219
+  Top = 47
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Paralelo de la Infraestructura Eléctrica'
+  ClientHeight = 619
+  ClientWidth = 516
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyPress = FormKeyPress
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 580
+    Width = 516
+    Height = 39
+    Align = alBottom
+    TabOrder = 0
+    object Panel3: TPanel
+      Left = 156
+      Top = 1
+      Width = 359
+      Height = 37
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 0
+      object bbAceptar: TBitBtn
+        Left = 176
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = '&Aceptar'
+        ModalResult = 1
+        TabOrder = 0
+        OnClick = bbAceptarClick
+        Glyph.Data = {
+          DE010000424DDE01000000000000760000002800000024000000120000000100
+          0400000000006801000000000000000000001000000010000000000000000000
+          80000080000000808000800000008000800080800000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333333333333333333333330000333333333333333333333333F33333333333
+          00003333344333333333333333388F3333333333000033334224333333333333
+          338338F3333333330000333422224333333333333833338F3333333300003342
+          222224333333333383333338F3333333000034222A22224333333338F338F333
+          8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+          33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+          0000333333333A222433333333333338F338F33300003333333333A222433333
+          333333338F338F33000033333333333A222433333333333338F338F300003333
+          33333333A222433333333333338F338F00003333333333333A22433333333333
+          3338F38F000033333333333333A223333333333333338F830000333333333333
+          333A333333333333333338330000333333333333333333333333333333333333
+          0000}
+        NumGlyphs = 2
+      end
+      object bbCancelar: TBitBtn
+        Left = 272
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = '&Cancelar'
+        TabOrder = 1
+        OnClick = bbCancelarClick
+        Kind = bkCancel
+      end
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 0
+    Width = 516
+    Height = 580
+    Align = alClient
+    TabOrder = 1
+    object pcModificacion: TPageControl
+      Left = 1
+      Top = 1
+      Width = 514
+      Height = 578
+      ActivePage = tsDatosGenerales
+      Align = alClient
+      Images = ImageList1
+      TabOrder = 0
+      object tsDatosGenerales: TTabSheet
+        Caption = 'Datos Generales'
+        object Label1: TLabel
+          Left = 8
+          Top = 52
+          Width = 17
+          Height = 13
+          Caption = 'CIA'
+          FocusControl = dbeCIA
+        end
+        object Label2: TLabel
+          Left = 8
+          Top = 10
+          Width = 33
+          Height = 13
+          Caption = 'Código'
+          FocusControl = dbeCodigo
+        end
+        object Label3: TLabel
+          Left = 253
+          Top = 10
+          Width = 91
+          Height = 13
+          Caption = 'Fecha Terminación'
+          FocusControl = dbeFecha
+        end
+        object sbFecha: TSpeedButton
+          Left = 481
+          Top = 7
+          Width = 22
+          Height = 21
+          Glyph.Data = {
+            4E010000424D4E01000000000000760000002800000012000000120000000100
+            040000000000D800000000000000000000001000000010000000000000000000
+            BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+            3333330000003333333333333333330000003338888888888888330000003304
+            0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+            000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+            FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+            F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+            000033F7777777777F4833000000330000000000003333000000333333333333
+            333333000000333333333333333333000000}
+          OnClick = sbFechaClick
+        end
+        object lNombreCIA: TLabel
+          Left = 129
+          Top = 47
+          Width = 372
+          Height = 44
+          AutoSize = False
+          Color = clSilver
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -9
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentColor = False
+          ParentFont = False
+          WordWrap = True
+        end
+        object Label5: TLabel
+          Left = 8
+          Top = 268
+          Width = 45
+          Height = 13
+          Caption = 'Dirección'
+          FocusControl = dbeDireccion
+        end
+        object Label9: TLabel
+          Left = 129
+          Top = 10
+          Width = 52
+          Height = 13
+          Caption = 'Referencia'
+          FocusControl = dbeCodigo
+        end
+        object dbeCIA: TDBEdit
+          Left = 59
+          Top = 47
+          Width = 59
+          Height = 21
+          DataField = 'CODIGOADMINISTRATIVO'
+          DataSource = dsModificacion
+          PopupMenu = dMenuArbol1
+          TabOrder = 2
+          OnKeyPress = FormKeyPress
+        end
+        object dbeCodigo: TDBEdit
+          Left = 59
+          Top = 7
+          Width = 59
+          Height = 21
+          Color = clSilver
+          DataField = 'CODIGOMODIFICACION'
+          DataSource = dsModificacion
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          ReadOnly = True
+          TabOrder = 0
+          OnKeyPress = FormKeyPress
+        end
+        object dbeFecha: TDBEdit
+          Left = 348
+          Top = 7
+          Width = 131
+          Height = 21
+          DataField = 'FECHATERMINACION'
+          DataSource = dsModificacion
+          TabOrder = 1
+          OnKeyPress = FormKeyPress
+        end
+        object dbeDireccion: TDBEdit
+          Left = 59
+          Top = 265
+          Width = 441
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'DIRECCION'
+          DataSource = dsModificacion
+          TabOrder = 4
+          OnKeyPress = FormKeyPress
+        end
+        object GroupBox1: TGroupBox
+          Left = 8
+          Top = 349
+          Width = 220
+          Height = 135
+          Caption = 'Circuitos'
+          TabOrder = 6
+          object DBLookupComboBox1: TDBLookupComboBox
+            Left = 58
+            Top = 14
+            Width = 155
+            Height = 21
+            DataField = 'CODIGOCIRCUITO1'
+            DataSource = dsModificacion
+            KeyField = 'CODIGOCIRCUITO'
+            ListField = 'NOMBRECIRCUITO'
+            ListSource = dsCircuito
+            TabOrder = 0
+            OnKeyPress = FormKeyPress
+          end
+          object DBEdit5: TDBEdit
+            Left = 5
+            Top = 14
+            Width = 50
+            Height = 21
+            DataField = 'CODIGOCIRCUITO1'
+            DataSource = dsModificacion
+            TabOrder = 1
+            OnKeyPress = FormKeyPress
+          end
+          object DBLookupComboBox2: TDBLookupComboBox
+            Left = 57
+            Top = 37
+            Width = 155
+            Height = 21
+            DataField = 'CODIGOCIRCUITO2'
+            DataSource = dsModificacion
+            KeyField = 'CODIGOCIRCUITO'
+            ListField = 'NOMBRECIRCUITO'
+            ListSource = dsCircuito
+            TabOrder = 2
+            OnKeyPress = FormKeyPress
+          end
+          object DBEdit2: TDBEdit
+            Left = 5
+            Top = 37
+            Width = 50
+            Height = 21
+            DataField = 'CODIGOCIRCUITO2'
+            DataSource = dsModificacion
+            TabOrder = 3
+            OnKeyPress = FormKeyPress
+          end
+          object DBEdit7: TDBEdit
+            Left = 5
+            Top = 61
+            Width = 50
+            Height = 21
+            DataField = 'CODIGOCIRCUITO3'
+            DataSource = dsModificacion
+            TabOrder = 4
+            OnKeyPress = FormKeyPress
+          end
+          object DBEdit8: TDBEdit
+            Left = 5
+            Top = 84
+            Width = 50
+            Height = 21
+            DataField = 'CODIGOCIRCUITO4'
+            DataSource = dsModificacion
+            TabOrder = 5
+            OnKeyPress = FormKeyPress
+          end
+          object DBEdit9: TDBEdit
+            Left = 5
+            Top = 107
+            Width = 50
+            Height = 21
+            DataField = 'CODIGOCIRCUITO5'
+            DataSource = dsModificacion
+            TabOrder = 6
+            OnKeyPress = FormKeyPress
+          end
+          object DBLookupComboBox5: TDBLookupComboBox
+            Left = 57
+            Top = 61
+            Width = 155
+            Height = 21
+            DataField = 'CODIGOCIRCUITO3'
+            DataSource = dsModificacion
+            KeyField = 'CODIGOCIRCUITO'
+            ListField = 'NOMBRECIRCUITO'
+            ListSource = dsCircuito
+            TabOrder = 7
+            OnKeyPress = FormKeyPress
+          end
+          object DBLookupComboBox6: TDBLookupComboBox
+            Left = 57
+            Top = 84
+            Width = 155
+            Height = 21
+            DataField = 'CODIGOCIRCUITO4'
+            DataSource = dsModificacion
+            KeyField = 'CODIGOCIRCUITO'
+            ListField = 'NOMBRECIRCUITO'
+            ListSource = dsCircuito
+            TabOrder = 8
+            OnKeyPress = FormKeyPress
+          end
+          object DBLookupComboBox7: TDBLookupComboBox
+            Left = 57
+            Top = 107
+            Width = 155
+            Height = 21
+            DataField = 'CODIGOCIRCUITO5'
+            DataSource = dsModificacion
+            KeyField = 'CODIGOCIRCUITO'
+            ListField = 'NOMBRECIRCUITO'
+            ListSource = dsCircuito
+            TabOrder = 9
+            OnKeyPress = FormKeyPress
+          end
+        end
+        object GroupBox2: TGroupBox
+          Left = 237
+          Top = 296
+          Width = 264
+          Height = 121
+          Caption = 'Transformador'
+          TabOrder = 7
+          object Label8: TLabel
+            Left = 7
+            Top = 27
+            Width = 42
+            Height = 13
+            Caption = 'Potencia'
+            FocusControl = DBEdit6
+          end
+          object Label4: TLabel
+            Left = 161
+            Top = 27
+            Width = 28
+            Height = 13
+            Caption = 'Fases'
+            FocusControl = DBEdit6
+          end
+          object Label7: TLabel
+            Left = 7
+            Top = 57
+            Width = 50
+            Height = 13
+            Caption = 'Propietario'
+            FocusControl = DBEdit6
+          end
+          object Label10: TLabel
+            Left = 7
+            Top = 91
+            Width = 19
+            Height = 13
+            Caption = 'Uso'
+            FocusControl = DBEdit6
+          end
+          object Label6: TLabel
+            Left = 116
+            Top = 27
+            Width = 22
+            Height = 14
+            Caption = 'KVA'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+          end
+          object DBEdit6: TDBEdit
+            Left = 63
+            Top = 24
+            Width = 51
+            Height = 21
+            DataField = 'POTENCIA'
+            DataSource = dsModificacion
+            TabOrder = 0
+            OnKeyPress = FormKeyPress
+          end
+          object DBEdit3: TDBEdit
+            Left = 203
+            Top = 24
+            Width = 51
+            Height = 21
+            DataField = 'CODIGOTIPOFASE'
+            DataSource = dsModificacion
+            TabOrder = 1
+            OnKeyPress = FormKeyPress
+          end
+          object DBLookupComboBox3: TDBLookupComboBox
+            Left = 104
+            Top = 54
+            Width = 150
+            Height = 21
+            DataField = 'CODIGOPROPIETARIO'
+            DataSource = dsModificacion
+            KeyField = 'CODIGOPROPIETARIO'
+            ListField = 'NOMBREPROPIETARIO'
+            ListSource = dsPropietario
+            TabOrder = 2
+          end
+          object DBLookupComboBox4: TDBLookupComboBox
+            Left = 104
+            Top = 87
+            Width = 150
+            Height = 21
+            DataField = 'CODIGOTIPODISTRIBUCION'
+            DataSource = dsModificacion
+            KeyField = 'CODIGOTIPODISTRIBUCION'
+            ListField = 'NOMBRETIPODISTRIBUCION'
+            ListSource = dsTipoDistribucion
+            TabOrder = 3
+          end
+          object DBEdit1: TDBEdit
+            Left = 62
+            Top = 54
+            Width = 38
+            Height = 21
+            DataField = 'CODIGOPROPIETARIO'
+            DataSource = dsModificacion
+            TabOrder = 4
+            OnKeyPress = FormKeyPress
+          end
+          object DBEdit4: TDBEdit
+            Left = 62
+            Top = 87
+            Width = 38
+            Height = 21
+            DataField = 'CODIGOTIPODISTRIBUCION'
+            DataSource = dsModificacion
+            TabOrder = 5
+            OnKeyPress = FormKeyPress
+          end
+        end
+        object GroupBox4: TGroupBox
+          Left = 237
+          Top = 434
+          Width = 264
+          Height = 49
+          Caption = 'Planchas'
+          TabOrder = 8
+          object sbImprimirPlanchas: TSpeedButton
+            Left = 238
+            Top = 19
+            Width = 19
+            Height = 21
+            Hint = 'Imprimir Planchas'
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              0400000000000001000000000000000000001000000010000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+              00033FFFFFFFFFFFFFFF0888888888888880777777777777777F088888888888
+              8880777777777777777F0000000000000000FFFFFFFFFFFFFFFF0F8F8F8F8F8F
+              8F80777777777777777F08F8F8F8F8F8F9F0777777777777777F0F8F8F8F8F8F
+              8F807777777777777F7F0000000000000000777777777777777F3330FFFFFFFF
+              03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+              03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+              33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
+              33333337FFFF7733333333300000033333333337777773333333}
+            NumGlyphs = 2
+            OnClick = sbImprimirPlanchasClick
+          end
+          object dbePlanchas: TDBEdit
+            Left = 8
+            Top = 19
+            Width = 226
+            Height = 21
+            CharCase = ecUpperCase
+            DataField = 'CODIGOPLANCHA'
+            DataSource = dsModificacion
+            TabOrder = 0
+            OnKeyPress = FormKeyPress
+          end
+        end
+        object GroupBox5: TGroupBox
+          Left = 8
+          Top = 95
+          Width = 493
+          Height = 159
+          Caption = 'Descripción'
+          TabOrder = 3
+          object DBMemo1: TDBMemo
+            Left = 2
+            Top = 15
+            Width = 489
+            Height = 142
+            Align = alClient
+            DataField = 'DESCRIPCION'
+            DataSource = dsModificacion
+            TabOrder = 0
+            OnKeyPress = FormKeyPress
+          end
+        end
+        object GroupBox7: TGroupBox
+          Left = 9
+          Top = 489
+          Width = 493
+          Height = 44
+          Caption = 'Digitó'
+          TabOrder = 9
+          object sbDigito: TSpeedButton
+            Left = 467
+            Top = 16
+            Width = 19
+            Height = 21
+            Glyph.Data = {
+              36080000424D3608000000000000360000002800000020000000100000000100
+              2000000000000008000000000000000000000000000000000000800080008000
+              8000800080008000800080008000800080008000800080008000800080008000
+              8000800080008000800080008000800080008000800080008000800080008000
+              8000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+              FF00FFFFFF00FFFFFF0080008000FFFFFF008000800080008000800080007F7F
+              7F007F7F7F007F7F7F007F7F7F007F7F7F007F7F7F007F7F7F007F7F7F007F7F
+              7F007F7F7F008000800000000000800080008000800080008000800080007F7F
+              7F007F7F7F007F7F7F007F7F7F007F7F7F007F7F7F007F7F7F007F7F7F007F7F
+              7F007F7F7F00800080007F7F7F00FFFFFF008000800080008000800080008000
+              8000800080008000800080008000800080008000800080008000800080008000
+              8000800080008000800000000000800080008000800080008000800080008000
+              8000800080008000800080008000800080008000800080008000FFFFFF00FFFF
+              FF0080008000800080007F7F7F0080008000FFFFFF0080008000800080008000
+              8000800080008000800080008000800080008000800000000000000000008000
+              8000800080000000000000808000000000008000800080008000800080008000
+              800080008000800080008000800080008000800080007F7F7F007F7F7F008000
+              8000FFFFFF007F7F7F00FFFFFF007F7F7F00FFFFFF0080008000800080008000
+              80008000800080008000800080008000800000000000FFFFFF0000FFFF000000
+              0000000000000000000000000000000000008000800080008000800080008000
+              8000800080008000800080008000800080007F7F7F0080008000800080007F7F
+              7F007F7F7F007F7F7F007F7F7F007F7F7F00FFFFFF0080008000800080008000
+              800080008000800080008000800000000000FFFFFF0000FFFF000000000000FF
+              FF00FFFFFF0000000000FFFFFF00000000008000800080008000800080008000
+              80008000800080008000800080007F7F7F0080008000800080007F7F7F008000
+              8000800080007F7F7F00800080007F7F7F00FFFFFF0080008000800080008000
+              8000800080008000800000000000FFFFFF0000FFFF00FFFFFF0000FFFF00FFFF
+              FF0000000000FFFFFF0000FFFF00000000008000800080008000800080008000
+              800080008000800080007F7F7F00FFFFFF008000800080008000800080008000
+              80007F7F7F0080008000800080007F7F7F00FFFFFF0080008000800080008000
+              800080008000800080000000000000FFFF00FFFFFF0000FFFF00FFFFFF000000
+              0000FFFFFF0000FFFF0000000000000000008000800080008000800080008000
+              800080008000800080007F7F7F00FFFFFF008000800080008000800080007F7F
+              7F0080008000800080007F7F7F007F7F7F00FFFFFF0080008000800080008000
+              8000800080000000000000000000FFFFFF0000FFFF00FFFFFF0000FFFF00FFFF
+              FF0000FFFF000000000000808000000000008000800080008000800080008000
+              8000800080007F7F7F007F7F7F00FFFFFF008000800080008000800080008000
+              8000800080007F7F7F00FFFFFF007F7F7F00FFFFFF0080008000800080008000
+              800000000000FFFF00000000000000FFFF00FFFFFF0000FFFF00FFFFFF0000FF
+              FF00000000000000000000808000000000008000800080008000800080008000
+              80007F7F7F00800080007F7F7F0080008000FFFFFF0080008000800080008000
+              80007F7F7F007F7F7F00FFFFFF007F7F7F00FFFFFF0080008000800080000000
+              0000FFFF0000FFFF0000FFFF00000000000000FFFF00FFFFFF0000FFFF000000
+              000000FFFF000000000000808000000000008000800080008000800080007F7F
+              7F00FFFFFF00FFFFFF00800080007F7F7F0080008000FFFFFF00800080007F7F
+              7F00800080007F7F7F00FFFFFF007F7F7F00FFFFFF0080008000000000000000
+              000000000000FFFF0000FFFF0000FFFF00000000000000FFFF00FFFFFF0000FF
+              FF00FFFFFF0000000000008080000000000080008000800080007F7F7F007F7F
+              7F007F7F7F00FFFFFF00FFFFFF00800080007F7F7F0080008000FFFFFF00FFFF
+              FF00FFFFFF007F7F7F00FFFFFF007F7F7F00FFFFFF0080008000000000000000
+              00000000000000000000FFFF0000FFFF0000FFFF000000000000000000000000
+              00000000000000000000008080000000000080008000800080007F7F7F007F7F
+              7F007F7F7F007F7F7F00FFFFFF00FFFFFF00800080007F7F7F007F7F7F007F7F
+              7F007F7F7F007F7F7F00FFFFFF007F7F7F00FFFFFF0080008000000000000000
+              0000000000000000000000000000FFFF00000000000080008000800080008000
+              80008000800000FFFF0000FFFF000000000080008000800080007F7F7F007F7F
+              7F007F7F7F007F7F7F007F7F7F00FFFFFF007F7F7F0080008000800080008000
+              8000800080007F7F7F007F7F7F007F7F7F00FFFFFF0080008000800080000000
+              0000000000000000000000000000000000008000800080008000800080008000
+              8000800080000000000000808000000000008000800080008000800080007F7F
+              7F007F7F7F007F7F7F007F7F7F007F7F7F008000800080008000800080008000
+              8000800080007F7F7F00FFFFFF007F7F7F00FFFFFF0080008000800080008000
+              8000000000000000000000000000800080008000800080008000800080008000
+              8000800080000000FF000000FF000000FF008000800080008000800080008000
+              80007F7F7F007F7F7F007F7F7F00800080008000800080008000800080008000
+              8000800080007F7F7F007F7F7F007F7F7F008000800080008000}
+            NumGlyphs = 2
+            OnClick = sbDigitoClick
+          end
+          object EdDigito: TEdit
+            Left = 8
+            Top = 16
+            Width = 454
+            Height = 21
+            Color = clSilver
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clNavy
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = []
+            ParentFont = False
+            ReadOnly = True
+            TabOrder = 0
+          end
+        end
+        object DBRadioGroup1: TDBRadioGroup
+          Left = 9
+          Top = 296
+          Width = 219
+          Height = 54
+          Caption = 'Tipo Modificación'
+          DataField = 'CODIGOTIPOMODIFICACION'
+          DataSource = dsModificacion
+          Items.Strings = (
+            'Mantenimiento'
+            'Proyecto Nuevo')
+          TabOrder = 5
+          Values.Strings = (
+            '1'
+            '2')
+        end
+        object dbeReferencia: TDBEdit
+          Left = 184
+          Top = 7
+          Width = 65
+          Height = 21
+          DataField = 'REFERENCIA'
+          DataSource = dsModificacion
+          TabOrder = 10
+          OnKeyPress = FormKeyPress
+        end
+      end
+      object tsDetalles: TTabSheet
+        Caption = 'Detalles'
+        ImageIndex = 1
+        object GroupBox8: TGroupBox
+          Left = 0
+          Top = 0
+          Width = 513
+          Height = 110
+          Align = alTop
+          Caption = 'Apoyos'
+          TabOrder = 0
+          object RxDBGrid1: TRxDBGrid
+            Left = 2
+            Top = 15
+            Width = 509
+            Height = 93
+            Align = alClient
+            DataSource = dsApoyos
+            TabOrder = 0
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'MS Sans Serif'
+            TitleFont.Style = []
+            OnKeyPress = RxDBGrid1KeyPress
+            Columns = <
+              item
+                Color = clAqua
+                Expanded = False
+                FieldName = 'PINTADOAPOYO'
+                Title.Alignment = taCenter
+                Title.Caption = 'Apoyo'
+                Width = 59
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'ACCION'
+                PickList.Strings = (
+                  'R'
+                  'N'
+                  'E')
+                Title.Caption = 'Acción (R/N/E)'
+                Width = 81
+                Visible = True
+              end
+              item
+                Alignment = taCenter
+                Expanded = False
+                FieldName = 'DESCRIPCION'
+                Title.Caption = 'Descripción'
+                Width = 300
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'DIRECCION'
+                Title.Caption = 'Dirección'
+                Visible = True
+              end>
+          end
+        end
+        object Panel4: TPanel
+          Left = 0
+          Top = 110
+          Width = 513
+          Height = 25
+          Align = alTop
+          TabOrder = 1
+          object sbCopiarApoyo: TSpeedButton
+            Left = 4
+            Top = 2
+            Width = 23
+            Height = 22
+            AllowAllUp = True
+            GroupIndex = 1
+            Flat = True
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              0400000000000001000000000000000000001000000010000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF003333330B7FFF
+              FFB0333333777F3333773333330B7FFFFFB0333333777F3333773333330B7FFF
+              FFB0333333777F3333773333330B7FFFFFB03FFFFF777FFFFF77000000000077
+              007077777777777777770FFFFFFFF00077B07F33333337FFFF770FFFFFFFF000
+              7BB07F3FF3FFF77FF7770F00F000F00090077F77377737777F770FFFFFFFF039
+              99337F3FFFF3F7F777FF0F0000F0F09999937F7777373777777F0FFFFFFFF999
+              99997F3FF3FFF77777770F00F000003999337F773777773777F30FFFF0FF0339
+              99337F3FF7F3733777F30F08F0F0337999337F7737F73F7777330FFFF0039999
+              93337FFFF7737777733300000033333333337777773333333333}
+            NumGlyphs = 2
+            OnClick = sbCopiarApoyoClick
+          end
+          object Panel5: TPanel
+            Left = 327
+            Top = 1
+            Width = 185
+            Height = 23
+            Align = alRight
+            TabOrder = 0
+            object DBNavigator1: TDBNavigator
+              Left = 1
+              Top = 1
+              Width = 183
+              Height = 21
+              DataSource = dsApoyos
+              VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+              Align = alClient
+              TabOrder = 0
+            end
+          end
+        end
+        object GroupBox9: TGroupBox
+          Left = 0
+          Top = 135
+          Width = 513
+          Height = 110
+          Align = alTop
+          Caption = 'Estructuras'
+          TabOrder = 2
+          object RxDBGrid2: TRxDBGrid
+            Left = 2
+            Top = 15
+            Width = 509
+            Height = 93
+            Align = alClient
+            DataSource = dsEstructuras
+            TabOrder = 0
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'MS Sans Serif'
+            TitleFont.Style = []
+            OnKeyPress = RxDBGrid1KeyPress
+            Columns = <
+              item
+                Color = clAqua
+                Expanded = False
+                FieldName = 'PINTADOAPOYO'
+                Title.Alignment = taCenter
+                Title.Caption = 'Apoyo'
+                Width = 59
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'ACCION'
+                PickList.Strings = (
+                  'R'
+                  'N')
+                Title.Caption = 'Acción (R/N)'
+                Width = 67
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NIVELAPOYO'
+                Title.Alignment = taCenter
+                Title.Caption = 'Nivel'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'TIPOTENSION'
+                PickList.Strings = (
+                  'MT'
+                  'BT')
+                Title.Alignment = taCenter
+                Title.Caption = 'MT/BT'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'DESCRIPCION'
+                Title.Alignment = taCenter
+                Title.Caption = 'Descripción'
+                Width = 300
+                Visible = True
+              end>
+          end
+        end
+        object Panel6: TPanel
+          Left = 0
+          Top = 245
+          Width = 513
+          Height = 26
+          Align = alTop
+          TabOrder = 3
+          object sbCopiarEstructura: TSpeedButton
+            Left = 4
+            Top = 2
+            Width = 23
+            Height = 22
+            AllowAllUp = True
+            GroupIndex = 1
+            Flat = True
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              0400000000000001000000000000000000001000000010000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF003333330B7FFF
+              FFB0333333777F3333773333330B7FFFFFB0333333777F3333773333330B7FFF
+              FFB0333333777F3333773333330B7FFFFFB03FFFFF777FFFFF77000000000077
+              007077777777777777770FFFFFFFF00077B07F33333337FFFF770FFFFFFFF000
+              7BB07F3FF3FFF77FF7770F00F000F00090077F77377737777F770FFFFFFFF039
+              99337F3FFFF3F7F777FF0F0000F0F09999937F7777373777777F0FFFFFFFF999
+              99997F3FF3FFF77777770F00F000003999337F773777773777F30FFFF0FF0339
+              99337F3FF7F3733777F30F08F0F0337999337F7737F73F7777330FFFF0039999
+              93337FFFF7737777733300000033333333337777773333333333}
+            NumGlyphs = 2
+            OnClick = sbCopiarEstructuraClick
+          end
+          object Panel7: TPanel
+            Left = 327
+            Top = 1
+            Width = 185
+            Height = 24
+            Align = alRight
+            TabOrder = 0
+            object DBNavigator2: TDBNavigator
+              Left = 1
+              Top = 1
+              Width = 200
+              Height = 22
+              DataSource = dsEstructuras
+              Align = alClient
+              TabOrder = 0
+            end
+          end
+        end
+        object GroupBox10: TGroupBox
+          Left = 0
+          Top = 271
+          Width = 513
+          Height = 110
+          Align = alTop
+          Caption = 'Tramos'
+          TabOrder = 4
+          object RxDBGrid3: TRxDBGrid
+            Left = 2
+            Top = 15
+            Width = 509
+            Height = 93
+            Align = alClient
+            DataSource = dsTramos
+            TabOrder = 0
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'MS Sans Serif'
+            TitleFont.Style = []
+            OnKeyPress = RxDBGrid1KeyPress
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'PINTADOAPOYOORIGEN'
+                Title.Caption = 'Apoyo Origen'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'PINTADOAPOYODESTINO'
+                Title.Caption = 'Apoyo Destino'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'FASES'
+                Title.Caption = 'Fases (R,S,T,N,AP)'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'ACCION'
+                PickList.Strings = (
+                  'R'
+                  'N')
+                Title.Caption = 'Acción (R/N)'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CALIBRE'
+                Title.Alignment = taCenter
+                Title.Caption = 'Calibre'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'MATERIAL'
+                Title.Alignment = taCenter
+                Title.Caption = 'Material'
+                Visible = True
+              end>
+          end
+        end
+        object Panel8: TPanel
+          Left = 0
+          Top = 381
+          Width = 513
+          Height = 26
+          Align = alTop
+          TabOrder = 5
+          object sbCopiarTramos: TSpeedButton
+            Left = 4
+            Top = 2
+            Width = 23
+            Height = 22
+            AllowAllUp = True
+            GroupIndex = 1
+            Flat = True
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              0400000000000001000000000000000000001000000010000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF003333330B7FFF
+              FFB0333333777F3333773333330B7FFFFFB0333333777F3333773333330B7FFF
+              FFB0333333777F3333773333330B7FFFFFB03FFFFF777FFFFF77000000000077
+              007077777777777777770FFFFFFFF00077B07F33333337FFFF770FFFFFFFF000
+              7BB07F3FF3FFF77FF7770F00F000F00090077F77377737777F770FFFFFFFF039
+              99337F3FFFF3F7F777FF0F0000F0F09999937F7777373777777F0FFFFFFFF999
+              99997F3FF3FFF77777770F00F000003999337F773777773777F30FFFF0FF0339
+              99337F3FF7F3733777F30F08F0F0337999337F7737F73F7777330FFFF0039999
+              93337FFFF7737777733300000033333333337777773333333333}
+            NumGlyphs = 2
+            OnClick = sbCopiarTramosClick
+          end
+          object Panel9: TPanel
+            Left = 327
+            Top = 1
+            Width = 185
+            Height = 24
+            Align = alRight
+            TabOrder = 0
+            object DBNavigator3: TDBNavigator
+              Left = 1
+              Top = 1
+              Width = 200
+              Height = 22
+              DataSource = dsTramos
+              Align = alClient
+              TabOrder = 0
+            end
+          end
+        end
+        object GroupBox11: TGroupBox
+          Left = 0
+          Top = 407
+          Width = 513
+          Height = 110
+          Align = alTop
+          Caption = 'Equipos'
+          TabOrder = 6
+          object RxDBGrid4: TRxDBGrid
+            Left = 2
+            Top = 15
+            Width = 509
+            Height = 93
+            Align = alClient
+            DataSource = dsEquipos
+            TabOrder = 0
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'MS Sans Serif'
+            TitleFont.Style = []
+            OnKeyPress = RxDBGrid1KeyPress
+            Columns = <
+              item
+                Color = clAqua
+                Expanded = False
+                FieldName = 'PINTADOAPOYO'
+                Title.Alignment = taCenter
+                Title.Caption = 'Apoyo'
+                Width = 59
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CODIGOEQUIPO'
+                PickList.Strings = (
+                  'INTERRUPTOR'
+                  'CONDENSADOR'
+                  'PARARRAYO'
+                  'TRANSFORMADOR'
+                  'ALUMBRADO PUB.')
+                Title.Alignment = taCenter
+                Title.Caption = 'Equipo'
+                Width = 115
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'ACCION'
+                PickList.Strings = (
+                  'R'
+                  'N')
+                Title.Caption = 'Accion(R/N)'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'DESCRIPCION'
+                Title.Caption = 'Descripción'
+                Width = 300
+                Visible = True
+              end>
+          end
+        end
+        object Panel10: TPanel
+          Left = 0
+          Top = 517
+          Width = 513
+          Height = 26
+          Align = alTop
+          TabOrder = 7
+          object sbCopiarEquipos: TSpeedButton
+            Left = 4
+            Top = 2
+            Width = 23
+            Height = 22
+            AllowAllUp = True
+            GroupIndex = 1
+            Flat = True
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              0400000000000001000000000000000000001000000010000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF003333330B7FFF
+              FFB0333333777F3333773333330B7FFFFFB0333333777F3333773333330B7FFF
+              FFB0333333777F3333773333330B7FFFFFB03FFFFF777FFFFF77000000000077
+              007077777777777777770FFFFFFFF00077B07F33333337FFFF770FFFFFFFF000
+              7BB07F3FF3FFF77FF7770F00F000F00090077F77377737777F770FFFFFFFF039
+              99337F3FFFF3F7F777FF0F0000F0F09999937F7777373777777F0FFFFFFFF999
+              99997F3FF3FFF77777770F00F000003999337F773777773777F30FFFF0FF0339
+              99337F3FF7F3733777F30F08F0F0337999337F7737F73F7777330FFFF0039999
+              93337FFFF7737777733300000033333333337777773333333333}
+            NumGlyphs = 2
+            OnClick = sbCopiarEquiposClick
+          end
+          object Panel11: TPanel
+            Left = 327
+            Top = 1
+            Width = 185
+            Height = 24
+            Align = alRight
+            TabOrder = 0
+            object DBNavigator4: TDBNavigator
+              Left = 1
+              Top = 1
+              Width = 200
+              Height = 22
+              DataSource = dsEquipos
+              Align = alClient
+              TabOrder = 0
+            end
+          end
+        end
+      end
+    end
+  end
+  object qModificacion: TQuery
+    CachedUpdates = True
+    AfterInsert = qModificacionAfterInsert
+    AfterPost = qModificacionAfterPost
+    OnUpdateError = qModificacionUpdateError
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM MODIFICACION'
+      'WHERE CODIGOMODIFICACION =:CODIGOMODIFICACION')
+    UpdateObject = UpdModificacion
+    Left = 644
+    Top = 342
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOMODIFICACION'
+        ParamType = ptUnknown
+      end>
+    object qModificacionCODIGOMODIFICACION: TFloatField
+      FieldName = 'CODIGOMODIFICACION'
+      Origin = 'MODIFICACION.CODIGOMODIFICACION'
+    end
+    object qModificacionFECHATERMINACION: TDateTimeField
+      FieldName = 'FECHATERMINACION'
+      Origin = 'MODIFICACION.FECHATERMINACION'
+      DisplayFormat = 'mmmm dd '#39'de'#39' yyyy'
+    end
+    object qModificacionCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'MODIFICACION.CODIGOADMINISTRATIVO'
+      OnValidate = qModificacionCODIGOADMINISTRATIVOValidate
+    end
+    object qModificacionCODIGOTIPOMODIFICACION: TFloatField
+      FieldName = 'CODIGOTIPOMODIFICACION'
+      Origin = 'MODIFICACION.CODIGOTIPOMODIFICACION'
+    end
+    object qModificacionDIRECCION: TStringField
+      FieldName = 'DIRECCION'
+      Origin = 'MODIFICACION.DIRECCION'
+      Size = 50
+    end
+    object qModificacionCODIGOCIRCUITO1: TStringField
+      FieldName = 'CODIGOCIRCUITO1'
+      Origin = 'MODIFICACION.CODIGOCIRCUITO1'
+      OnValidate = qModificacionCODIGOCIRCUITO1Validate
+      Size = 6
+    end
+    object qModificacionCODIGOCIRCUITO2: TStringField
+      FieldName = 'CODIGOCIRCUITO2'
+      Origin = 'MODIFICACION.CODIGOCIRCUITO2'
+      OnValidate = qModificacionCODIGOCIRCUITO2Validate
+      Size = 6
+    end
+    object qModificacionCODIGOTRAFODIS: TFloatField
+      FieldName = 'CODIGOTRAFODIS'
+      Origin = 'MODIFICACION.CODIGOTRAFODIS'
+    end
+    object qModificacionPOTENCIA: TFloatField
+      FieldName = 'POTENCIA'
+      Origin = 'MODIFICACION.POTENCIA'
+    end
+    object qModificacionCODIGOPROPIETARIO: TStringField
+      FieldName = 'CODIGOPROPIETARIO'
+      Origin = 'MODIFICACION.CODIGOPROPIETARIO'
+      Size = 1
+    end
+    object qModificacionCODIGOTIPOFASE: TStringField
+      FieldName = 'CODIGOTIPOFASE'
+      Origin = 'MODIFICACION.CODIGOTIPOFASE'
+      Size = 1
+    end
+    object qModificacionCODIGOTIPODISTRIBUCION: TStringField
+      FieldName = 'CODIGOTIPODISTRIBUCION'
+      Origin = 'MODIFICACION.CODIGOTIPODISTRIBUCION'
+      Size = 1
+    end
+    object qModificacionCODIGOPLANCHA: TStringField
+      FieldName = 'CODIGOPLANCHA'
+      Origin = 'MODIFICACION.CODIGOPLANCHA'
+      Size = 15
+    end
+    object qModificacionCODIGOUSUARIO: TFloatField
+      FieldName = 'CODIGOUSUARIO'
+      Origin = 'MODIFICACION.CODIGOUSUARIO'
+    end
+    object qModificacionCODIGODILIGENCIO: TFloatField
+      FieldName = 'CODIGODILIGENCIO'
+      Origin = 'MODIFICACION.CODIGODILIGENCIO'
+    end
+    object qModificacionCODIGODIGITO: TFloatField
+      FieldName = 'CODIGODIGITO'
+      Origin = 'MODIFICACION.CODIGODIGITO'
+      OnValidate = qModificacionCODIGODIGITOValidate
+    end
+    object qModificacionCODIGOESTADOMODIFICACION: TFloatField
+      FieldName = 'CODIGOESTADOMODIFICACION'
+      Origin = 'MODIFICACION.CODIGOESTADOMODIFICACION'
+    end
+    object qModificacionFECHASISTEMA: TDateTimeField
+      FieldName = 'FECHASISTEMA'
+      Origin = 'MODIFICACION.FECHASISTEMA'
+    end
+    object qModificacionREFERENCIA: TStringField
+      FieldName = 'REFERENCIA'
+      Origin = 'MODIFICACION.REFERENCIA'
+      Size = 10
+    end
+    object qModificacionCODIGOCIRCUITO3: TStringField
+      FieldName = 'CODIGOCIRCUITO3'
+      Origin = 'MODIFICACION.CODIGOCIRCUITO3'
+      OnValidate = qModificacionCODIGOCIRCUITO3Validate
+      Size = 6
+    end
+    object qModificacionCODIGOCIRCUITO4: TStringField
+      FieldName = 'CODIGOCIRCUITO4'
+      Origin = 'MODIFICACION.CODIGOCIRCUITO4'
+      OnValidate = qModificacionCODIGOCIRCUITO4Validate
+      Size = 6
+    end
+    object qModificacionCODIGOCIRCUITO5: TStringField
+      FieldName = 'CODIGOCIRCUITO5'
+      Origin = 'MODIFICACION.CODIGOCIRCUITO5'
+      OnValidate = qModificacionCODIGOCIRCUITO5Validate
+      Size = 6
+    end
+    object qModificacionDESCRIPCION: TStringField
+      FieldName = 'DESCRIPCION'
+      Origin = 'MODIFICACION.DESCRIPCION'
+      Size = 250
+    end
+  end
+  object UpdModificacion: TUpdateSQL
+    ModifySQL.Strings = (
+      'update MODIFICACION'
+      'set'
+      '  CODIGOMODIFICACION = :CODIGOMODIFICACION,'
+      '  FECHATERMINACION = :FECHATERMINACION,'
+      '  CODIGOADMINISTRATIVO = :CODIGOADMINISTRATIVO,'
+      '  CODIGOTIPOMODIFICACION = :CODIGOTIPOMODIFICACION,'
+      '  DIRECCION = :DIRECCION,'
+      '  CODIGOCIRCUITO1 = :CODIGOCIRCUITO1,'
+      '  CODIGOCIRCUITO2 = :CODIGOCIRCUITO2,'
+      '  CODIGOTRAFODIS = :CODIGOTRAFODIS,'
+      '  POTENCIA = :POTENCIA,'
+      '  CODIGOPROPIETARIO = :CODIGOPROPIETARIO,'
+      '  CODIGOTIPOFASE = :CODIGOTIPOFASE,'
+      '  CODIGOTIPODISTRIBUCION = :CODIGOTIPODISTRIBUCION,'
+      '  CODIGOPLANCHA = :CODIGOPLANCHA,'
+      '  CODIGOUSUARIO = :CODIGOUSUARIO,'
+      '  CODIGODILIGENCIO = :CODIGODILIGENCIO,'
+      '  CODIGODIGITO = :CODIGODIGITO,'
+      '  CODIGOESTADOMODIFICACION = :CODIGOESTADOMODIFICACION,'
+      '  DESCRIPCION = :DESCRIPCION,'
+      '  FECHASISTEMA = :FECHASISTEMA,'
+      '  REFERENCIA = :REFERENCIA'
+      'where'
+      '  CODIGOMODIFICACION = :OLD_CODIGOMODIFICACION')
+    InsertSQL.Strings = (
+      'insert into MODIFICACION'
+      
+        '  (CODIGOMODIFICACION, FECHATERMINACION, CODIGOADMINISTRATIVO, C' +
+        'ODIGOTIPOMODIFICACION, '
+      
+        '   DIRECCION, CODIGOCIRCUITO1, CODIGOCIRCUITO2, CODIGOTRAFODIS, ' +
+        'POTENCIA, '
+      
+        '   CODIGOPROPIETARIO, CODIGOTIPOFASE, CODIGOTIPODISTRIBUCION, CO' +
+        'DIGOPLANCHA, '
+      
+        '   CODIGOUSUARIO, CODIGODILIGENCIO, CODIGODIGITO, CODIGOESTADOMO' +
+        'DIFICACION, '
+      '   DESCRIPCION, FECHASISTEMA, REFERENCIA)'
+      'values'
+      
+        '  (:CODIGOMODIFICACION, :FECHATERMINACION, :CODIGOADMINISTRATIVO' +
+        ', :CODIGOTIPOMODIFICACION, '
+      
+        '   :DIRECCION, :CODIGOCIRCUITO1, :CODIGOCIRCUITO2, :CODIGOTRAFOD' +
+        'IS, :POTENCIA, '
+      
+        '   :CODIGOPROPIETARIO, :CODIGOTIPOFASE, :CODIGOTIPODISTRIBUCION,' +
+        ' :CODIGOPLANCHA, '
+      
+        '   :CODIGOUSUARIO, :CODIGODILIGENCIO, :CODIGODIGITO, :CODIGOESTA' +
+        'DOMODIFICACION, '
+      '   :DESCRIPCION, :FECHASISTEMA, :REFERENCIA)')
+    DeleteSQL.Strings = (
+      'delete from MODIFICACION'
+      'where'
+      '  CODIGOMODIFICACION = :OLD_CODIGOMODIFICACION')
+    Left = 644
+    Top = 455
+  end
+  object dsModificacion: TDataSource
+    DataSet = qModificacion
+    Left = 643
+    Top = 399
+  end
+  object qCIA: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT NOMBREADMINISTRATIVO'
+      'FROM ADMINISTRATIVO '
+      'WHERE CODIGOADMINISTRATIVO=:CODIGOADMINISTRATIVO')
+    Left = 953
+    Top = 169
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end>
+  end
+  object dMenuArbol1: TdMenuArbol
+    OwnerDraw = True
+    DatabaseName = 'BaseDato'
+    TableName = 'Administrativo'
+    TableTitle = 'MetadataAdministrativo'
+    FiltroInicial = '(Nivel = 3)'
+    OnSelectID = dMenuArbol1SelectID
+    FieldsTableName = 
+      'CODIGO=CODIGOARBOL, ID=CODIGOADMINISTRATIVO, CODIGONIVEL=NOMBREC' +
+      'ATEGORIA, NOMBRE=NOMBREADMINISTRATIVO, NIVEL=NIVEL'
+    FieldsTableTitle = 
+      'IDNIVEL=CODIGONIVEL, NIVEL=NIVELADMINISTRATIVO, CAMPO=CAMPOADMIN' +
+      'ISTRATIVO, DESCRIPCION=DESCRIPCIONCAMPO'
+    Left = 568
+    Top = 75
+  end
+  object qTipoModificacion: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM TIPOMODIFICACION')
+    Left = 569
+    Top = 168
+  end
+  object dsTipoModificacion: TDataSource
+    DataSet = qTipoModificacion
+    Left = 569
+    Top = 224
+  end
+  object qCircuito: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOCIRCUITO, NOMBRECIRCUITO'
+      'FROM CIRCUITO'
+      'ORDER BY NOMBRECIRCUITO')
+    Left = 648
+    Top = 168
+  end
+  object qEstadoModificacion: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM ESTADOMODIFICACION'
+      '')
+    Left = 882
+    Top = 169
+  end
+  object dsCircuito: TDataSource
+    DataSet = qCircuito
+    Left = 647
+    Top = 223
+  end
+  object qPropietario: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM PROPIETARIO')
+    Left = 800
+    Top = 169
+  end
+  object dsPropietario: TDataSource
+    DataSet = qPropietario
+    Left = 800
+    Top = 223
+  end
+  object qTipoDistribucion: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM'
+      'TIPODISTRIBUCION')
+    Left = 720
+    Top = 169
+  end
+  object dsTipoDistribucion: TDataSource
+    DataSet = qTipoDistribucion
+    Left = 720
+    Top = 223
+  end
+  object qEmpleado: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT NOMBREEMPLEADO FROM EMPLEADO '
+      'WHERE CODIGOEMPLEADO=:CODIGOEMPLEADO'
+      'AND ((estado IN ('#39'AC'#39','#39'LC'#39')) OR (estado IS NULL))')
+    Left = 647
+    Top = 74
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOEMPLEADO'
+        ParamType = ptUnknown
+      end>
+  end
+  object ImageList1: TImageList
+    Left = 718
+    Top = 73
+    Bitmap = {
+      494C010102000500040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      0000000000003600000028000000400000002000000001002000000000000020
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF0000000000000000000000000000000000000000000000
+      000000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000007F7F7F0000FFFF007F7F
+      7F00000000000000000000000000FFFFFF000000000000000000FFFFFF000000
+      000000000000FFFFFF0000000000000000000000000000000000000000000000
+      000000000000FFFFFF00000000000000000000000000FFFFFF0000000000FFFF
+      FF000000000000000000FFFFFF00000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000FFFF0000FFFF0000FF
+      FF00000000000000000000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF0000000000000000000000000000000000000000000000
+      000000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000007F7F7F0000FFFF007F7F
+      7F00000000000000000000000000FFFFFF000000000000000000000000000000
+      0000FFFFFF00FFFFFF0000000000000000000000000000000000000000000000
+      000000000000FFFFFF000000000000000000FFFFFF000000000000000000FFFF
+      FF000000000000000000FFFFFF00000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF0000000000000000000000000000000000000000000000
+      000000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000FFFFFF000000000000000000FFFFFF000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00000000000000
+      0000FFFFFF0000000000FFFFFF00000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF000000
+      0000FFFFFF00FFFFFF0000000000000000000000000000000000000000000000
+      0000FFFFFF0000FFFF000000000000000000FFFFFF0000000000FFFFFF000000
+      0000FFFFFF00FFFFFF00FFFFFF00000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000FFFFFF0000000000BFBFBF00FFFFFF000000
+      0000FFFFFF00000000000000000000000000000000000000000000000000FFFF
+      FF0000FFFF000000000000FFFF00FFFFFF0000000000FFFFFF0000FFFF000000
+      0000FFFFFF0000000000FFFFFF00000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000FF000000FF000000
+      FF00000000000000000000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF000000
+      0000000000000000000000000000000000000000000000000000FFFFFF0000FF
+      FF00FFFFFF0000FFFF00FFFFFF0000000000FFFFFF0000FFFF0000000000FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000FF000000FF000000
+      FF00000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000FFFF00FFFF
+      FF0000FFFF00FFFFFF0000000000FFFFFF0000FFFF0000000000FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000FF000000FF000000
+      FF00000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000FFFFFF0000FF
+      FF00FFFFFF0000FFFF00FFFFFF0000FFFF0000000000FFFFFF00FFFFFF00FFFF
+      FF00000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000FFFF00000000000000FFFF00FFFF
+      FF0000FFFF00FFFFFF0000FFFF00000000000000000000000000FFFFFF00FFFF
+      FF0000000000FFFFFF00FFFFFF00000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000FF000000FF000000FF00
+      000000000000000000000000000000000000FFFF0000FFFF00000000000000FF
+      FF00FFFFFF0000FFFF000000000000FFFF00FFFFFF0000FFFF0000000000FFFF
+      FF0000000000FFFFFF0000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000FF0000000000
+      000000000000000000000000000000000000FFFF0000FFFF0000FFFF00000000
+      000000FFFF00FFFFFF0000FFFF00FFFFFF000000000000000000FFFFFF00FFFF
+      FF00000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000FFFF0000FFFF0000FFFF0000FFFF
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000424D3E000000000000003E000000
+      2800000040000000200000000100010000000000000100000000000000000000
+      000000000000000000000000FFFFFF0000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000FC01F000000000008C01F00000000000
+      0401F000000000000401F000000000000401F000000000008C01F00000000000
+      FC01F00000000000FC01E000000000000403C000000000000407800000000000
+      040F80000000000007FF0000000000000603000000000000FF07000100000000
+      FF8F000300000000FFDF00070000000000000000000000000000000000000000
+      000000000000}
+  end
+  object qApoyos: TQuery
+    CachedUpdates = True
+    AfterInsert = qApoyosAfterInsert
+    AfterPost = qApoyosAfterPost
+    OnUpdateError = qApoyosUpdateError
+    DatabaseName = 'BaseDato'
+    DataSource = dsModificacion
+    SQL.Strings = (
+      'SELECT * FROM MODIFICACIONAPOYO'
+      'WHERE CODIGOMODIFICACION=:CODIGOMODIFICACION')
+    UpdateObject = UpdApoyos
+    Left = 878
+    Top = 346
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOMODIFICACION'
+        ParamType = ptInput
+      end>
+  end
+  object dsApoyos: TDataSource
+    DataSet = qApoyos
+    Left = 879
+    Top = 403
+  end
+  object UpdApoyos: TUpdateSQL
+    ModifySQL.Strings = (
+      'update MODIFICACIONAPOYO'
+      'set'
+      '  CODIGOMODIFICACIONAPOYO = :CODIGOMODIFICACIONAPOYO,'
+      '  CODIGOMODIFICACION = :CODIGOMODIFICACION,'
+      '  PINTADOAPOYO = :PINTADOAPOYO,'
+      '  ACCION = :ACCION,'
+      '  DESCRIPCION = :DESCRIPCION,'
+      '  DIRECCION = :DIRECCION'
+      'where'
+      '  CODIGOMODIFICACIONAPOYO = :OLD_CODIGOMODIFICACIONAPOYO')
+    InsertSQL.Strings = (
+      'insert into MODIFICACIONAPOYO'
+      
+        '  (CODIGOMODIFICACIONAPOYO, CODIGOMODIFICACION, PINTADOAPOYO, AC' +
+        'CION, DESCRIPCION, '
+      '   DIRECCION)'
+      'values'
+      
+        '  (:CODIGOMODIFICACIONAPOYO, :CODIGOMODIFICACION, :PINTADOAPOYO,' +
+        ' :ACCION, '
+      '   :DESCRIPCION, :DIRECCION)')
+    DeleteSQL.Strings = (
+      'delete from MODIFICACIONAPOYO'
+      'where'
+      '  CODIGOMODIFICACIONAPOYO = :OLD_CODIGOMODIFICACIONAPOYO')
+    Left = 878
+    Top = 457
+  end
+  object dsEstructuras: TDataSource
+    DataSet = qEstructuras
+    Left = 805
+    Top = 402
+  end
+  object qEstructuras: TQuery
+    CachedUpdates = True
+    AfterInsert = qEstructurasAfterInsert
+    AfterPost = qEstructurasAfterPost
+    OnUpdateError = qEstructurasUpdateError
+    DatabaseName = 'BaseDato'
+    DataSource = dsModificacion
+    SQL.Strings = (
+      'SELECT * FROM MODIFICACIONESTRUCTURA'
+      'WHERE CODIGOMODIFICACION = :CODIGOMODIFICACION')
+    UpdateObject = UpdEstructuras
+    Left = 804
+    Top = 346
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOMODIFICACION'
+        ParamType = ptUnknown
+      end>
+  end
+  object UpdEstructuras: TUpdateSQL
+    ModifySQL.Strings = (
+      'update MODIFICACIONESTRUCTURA'
+      'set'
+      '  CODIGOMODIFICACIONESTRUCTURA = :CODIGOMODIFICACIONESTRUCTURA,'
+      '  CODIGOMODIFICACION = :CODIGOMODIFICACION,'
+      '  PINTADOAPOYO = :PINTADOAPOYO,'
+      '  NIVELAPOYO = :NIVELAPOYO,'
+      '  TIPOTENSION = :TIPOTENSION,'
+      '  ACCION = :ACCION,'
+      '  DESCRIPCION = :DESCRIPCION'
+      'where'
+      '  CODIGOMODIFICACIONESTRUCTURA = '
+      ':OLD_CODIGOMODIFICACIONESTRUCTURA')
+    InsertSQL.Strings = (
+      'insert into MODIFICACIONESTRUCTURA'
+      
+        '  (CODIGOMODIFICACIONESTRUCTURA, CODIGOMODIFICACION, PINTADOAPOY' +
+        'O, NIVELAPOYO, '
+      '   TIPOTENSION, ACCION, DESCRIPCION)'
+      'values'
+      
+        '  (:CODIGOMODIFICACIONESTRUCTURA, :CODIGOMODIFICACION, :PINTADOA' +
+        'POYO, :NIVELAPOYO, '
+      '   :TIPOTENSION, :ACCION, :DESCRIPCION)')
+    DeleteSQL.Strings = (
+      'delete from MODIFICACIONESTRUCTURA'
+      'where'
+      
+        '  CODIGOMODIFICACIONESTRUCTURA = :OLD_CODIGOMODIFICACIONESTRUCTU' +
+        'RA')
+    Left = 806
+    Top = 456
+  end
+  object qTramos: TQuery
+    CachedUpdates = True
+    AfterInsert = qTramosAfterInsert
+    AfterPost = qTramosAfterPost
+    OnUpdateError = qTramosUpdateError
+    DatabaseName = 'BaseDato'
+    DataSource = dsModificacion
+    SQL.Strings = (
+      'SELECT * FROM MODIFICACIONTRAMO'
+      'WHERE CODIGOMODIFICACION=:CODIGOMODIFICACION')
+    UpdateObject = UpdTramos
+    Left = 573
+    Top = 342
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOMODIFICACION'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsTramos: TDataSource
+    DataSet = qTramos
+    Left = 573
+    Top = 398
+  end
+  object UpdTramos: TUpdateSQL
+    ModifySQL.Strings = (
+      'update MODIFICACIONTRAMO'
+      'set'
+      '  CODIGOMODIFICACIONTRAMO = :CODIGOMODIFICACIONTRAMO,'
+      '  CODIGOMODIFICACION = :CODIGOMODIFICACION,'
+      '  PINTADOAPOYOORIGEN = :PINTADOAPOYOORIGEN,'
+      '  PINTADOAPOYODESTINO = :PINTADOAPOYODESTINO,'
+      '  FASES = :FASES,'
+      '  ACCION = :ACCION,'
+      '  CALIBRE = :CALIBRE,'
+      '  MATERIAL = :MATERIAL'
+      'where'
+      '  CODIGOMODIFICACIONTRAMO = :OLD_CODIGOMODIFICACIONTRAMO')
+    InsertSQL.Strings = (
+      'insert into MODIFICACIONTRAMO'
+      
+        '  (CODIGOMODIFICACIONTRAMO, CODIGOMODIFICACION, PINTADOAPOYOORIG' +
+        'EN, PINTADOAPOYODESTINO, '
+      '   FASES, ACCION, CALIBRE, MATERIAL)'
+      'values'
+      
+        '  (:CODIGOMODIFICACIONTRAMO, :CODIGOMODIFICACION, :PINTADOAPOYOO' +
+        'RIGEN, '
+      '   :PINTADOAPOYODESTINO, :FASES, :ACCION, :CALIBRE, :MATERIAL)')
+    DeleteSQL.Strings = (
+      'delete from MODIFICACIONTRAMO'
+      'where'
+      '  CODIGOMODIFICACIONTRAMO = :OLD_CODIGOMODIFICACIONTRAMO')
+    Left = 573
+    Top = 454
+  end
+  object qEquipos: TQuery
+    CachedUpdates = True
+    AfterInsert = qEquiposAfterInsert
+    AfterPost = qEquiposAfterPost
+    OnUpdateError = qEquiposUpdateError
+    DatabaseName = 'BaseDato'
+    DataSource = dsModificacion
+    SQL.Strings = (
+      'SELECT * FROM MODIFICACIONEQUIPO'
+      'WHERE CODIGOMODIFICACION=:CODIGOMODIFICACION')
+    UpdateObject = UpdEquipos
+    Left = 733
+    Top = 344
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOMODIFICACION'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsEquipos: TDataSource
+    DataSet = qEquipos
+    Left = 733
+    Top = 400
+  end
+  object UpdEquipos: TUpdateSQL
+    ModifySQL.Strings = (
+      'update MODIFICACIONEQUIPO'
+      'set'
+      '  CODIGOMODIFICACIONEQUIPO = :CODIGOMODIFICACIONEQUIPO,'
+      '  CODIGOMODIFICACION = :CODIGOMODIFICACION,'
+      '  PINTADOAPOYO = :PINTADOAPOYO,'
+      '  CODIGOEQUIPO = :CODIGOEQUIPO,'
+      '  ACCION = :ACCION,'
+      '  DESCRIPCION = :DESCRIPCION'
+      'where'
+      '  CODIGOMODIFICACIONEQUIPO = :OLD_CODIGOMODIFICACIONEQUIPO')
+    InsertSQL.Strings = (
+      'insert into MODIFICACIONEQUIPO'
+      
+        '  (CODIGOMODIFICACIONEQUIPO, CODIGOMODIFICACION, PINTADOAPOYO, C' +
+        'ODIGOEQUIPO, '
+      '   ACCION, DESCRIPCION)'
+      'values'
+      
+        '  (:CODIGOMODIFICACIONEQUIPO, :CODIGOMODIFICACION, :PINTADOAPOYO' +
+        ', :CODIGOEQUIPO, '
+      '   :ACCION, :DESCRIPCION)')
+    DeleteSQL.Strings = (
+      'delete from MODIFICACIONEQUIPO'
+      'where'
+      '  CODIGOMODIFICACIONEQUIPO = :OLD_CODIGOMODIFICACIONEQUIPO')
+    Left = 733
+    Top = 456
+  end
+end

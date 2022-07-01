@@ -1,0 +1,3341 @@
+inherited fContrato: TfContrato
+  Left = 262
+  Top = 161
+  BorderStyle = bsToolWindow
+  Caption = 'Contrato'
+  ClientHeight = 407
+  ClientWidth = 703
+  FormStyle = fsNormal
+  Position = poScreenCenter
+  Visible = False
+  OnActivate = FormActivate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PanelBotones: TPanel
+    Left = 0
+    Top = 372
+    Width = 703
+    Height = 35
+    Align = alBottom
+    TabOrder = 0
+    object BitBtnAceptar: TBitBtn
+      Left = 453
+      Top = 5
+      Width = 73
+      Height = 25
+      Caption = '&Aceptar'
+      ModalResult = 1
+      TabOrder = 0
+      OnClick = BitBtnAceptarClick
+      Glyph.Data = {
+        BE060000424DBE06000000000000360400002800000024000000120000000100
+        0800000000008802000000000000000000000001000000010000000000000000
+        80000080000000808000800000008000800080800000C0C0C000C0DCC000F0CA
+        A600000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000F0FBFF00A4A0A000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00030303030303
+        0303030303030303030303030303030303030303030303030303030303030303
+        03030303030303030303030303030303030303030303FF030303030303030303
+        03030303030303040403030303030303030303030303030303F8F8FF03030303
+        03030303030303030303040202040303030303030303030303030303F80303F8
+        FF030303030303030303030303040202020204030303030303030303030303F8
+        03030303F8FF0303030303030303030304020202020202040303030303030303
+        0303F8030303030303F8FF030303030303030304020202FA0202020204030303
+        0303030303F8FF0303F8FF030303F8FF03030303030303020202FA03FA020202
+        040303030303030303F8FF03F803F8FF0303F8FF03030303030303FA02FA0303
+        03FA0202020403030303030303F8FFF8030303F8FF0303F8FF03030303030303
+        FA0303030303FA0202020403030303030303F80303030303F8FF0303F8FF0303
+        0303030303030303030303FA0202020403030303030303030303030303F8FF03
+        03F8FF03030303030303030303030303FA020202040303030303030303030303
+        0303F8FF0303F8FF03030303030303030303030303FA02020204030303030303
+        03030303030303F8FF0303F8FF03030303030303030303030303FA0202020403
+        030303030303030303030303F8FF0303F8FF03030303030303030303030303FA
+        0202040303030303030303030303030303F8FF03F8FF03030303030303030303
+        03030303FA0202030303030303030303030303030303F8FFF803030303030303
+        030303030303030303FA0303030303030303030303030303030303F803030303
+        0303030303030303030303030303030303030303030303030303030303030303
+        0303}
+      NumGlyphs = 2
+    end
+    object BitBtnCancelar: TBitBtn
+      Left = 539
+      Top = 5
+      Width = 73
+      Height = 25
+      Caption = '&Cancelar'
+      TabOrder = 1
+      OnClick = BitBtnCancelarClick
+      Kind = bkCancel
+    end
+    object BitBtnImprimir: TBitBtn
+      Left = 17
+      Top = 5
+      Width = 78
+      Height = 25
+      Caption = '&Imprimir'
+      TabOrder = 2
+      OnClick = BitBtnImprimirClick
+      Glyph.Data = {
+        36010000424D3601000000000000760000002800000011000000100000000100
+        040000000000C000000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+        0003300000000888888888888880700000000888888888888880700000000000
+        000000000000700000000F8F8F8F8F8F8F807000000008F8F8F8F8F8F9F07000
+        00000F8F8F8F8F8F8F80700000000000000000000000700000003330FFFFFFFF
+        0333300000003330F0000F0F0333300000003330FFFFFFFF0333300000003330
+        F00F00000333300000003330FFFF0FF03333300000003330F08F0F0333333000
+        00003330FFFF0033333330000000333000000333333330000000}
+    end
+    object BBCartografia: TBitBtn
+      Left = 104
+      Top = 5
+      Width = 85
+      Height = 25
+      Hint = 'Cartografia'
+      Caption = 'Cartografia'
+      TabOrder = 3
+      OnClick = BBCartografiaClick
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+        5555555555FFFFF555555555544C4C5555555555F777775FF5555554C444C444
+        5555555775FF55775F55554C4334444445555575577F55557FF554C4C334C4C4
+        335557F5577FF55577F554CCC3334444335557555777F555775FCCCCC333CCC4
+        C4457F55F777F555557F4CC33333CCC444C57F577777F5F5557FC4333333C3C4
+        CCC57F777777F7FF557F4CC33333333C4C457F577777777F557FCCC33CC4333C
+        C4C575F7755F777FF5755CCCCC3333334C5557F5FF777777F7F554C333333333
+        CC55575777777777F755553333CC3C33C555557777557577755555533CC4C4CC
+        5555555775FFFF77555555555C4CCC5555555555577777555555}
+      NumGlyphs = 2
+    end
+    object bbFirmas: TBitBtn
+      Left = 200
+      Top = 6
+      Width = 85
+      Height = 25
+      Hint = 'Firmas'
+      Caption = 'Firmas'
+      TabOrder = 4
+      OnClick = bbFirmasClick
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333000000
+        000033333377777777773333330FFFFFFFF03FF3FF7FF33F3FF700300000FF0F
+        00F077F777773F737737E00BFBFB0FFFFFF07773333F7F3333F7E0BFBF000FFF
+        F0F077F3337773F3F737E0FBFBFBF0F00FF077F3333FF7F77F37E0BFBF00000B
+        0FF077F3337777737337E0FBFBFBFBF0FFF077F33FFFFFF73337E0BF0000000F
+        FFF077FF777777733FF7000BFB00B0FF00F07773FF77373377373330000B0FFF
+        FFF03337777373333FF7333330B0FFFF00003333373733FF777733330B0FF00F
+        0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
+        00333377737FFFFF773333303300000003333337337777777333}
+      NumGlyphs = 2
+    end
+    object bbClausulas: TBitBtn
+      Left = 296
+      Top = 6
+      Width = 85
+      Height = 25
+      Hint = 'Firmas'
+      Caption = 'Cláusulas'
+      TabOrder = 5
+      OnClick = bbClausulasClick
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        333333333333FF3333333333333C0C333333333333F777F3333333333CC0F0C3
+        333333333777377F33333333C30F0F0C333333337F737377F333333C00FFF0F0
+        C33333F7773337377F333CC0FFFFFF0F0C3337773F33337377F3C30F0FFFFFF0
+        F0C37F7373F33337377F00FFF0FFFFFF0F0C7733373F333373770FFFFF0FFFFF
+        F0F073F33373F333373730FFFFF0FFFFFF03373F33373F333F73330FFFFF0FFF
+        00333373F33373FF77333330FFFFF000333333373F333777333333330FFF0333
+        3333333373FF7333333333333000333333333333377733333333333333333333
+        3333333333333333333333333333333333333333333333333333}
+      NumGlyphs = 2
+    end
+  end
+  object Notebook: TNotebook
+    Left = 97
+    Top = 133
+    Width = 606
+    Height = 239
+    Align = alClient
+    TabOrder = 1
+    object TPage
+      Left = 0
+      Top = 0
+      Caption = 'Informacion'
+      object gbUbicacion: TGroupBox
+        Left = 295
+        Top = 8
+        Width = 301
+        Height = 119
+        Caption = 'Ubicación'
+        TabOrder = 0
+        object Label9: TLabel
+          Left = 7
+          Top = 20
+          Width = 18
+          Height = 13
+          Caption = 'CIG'
+        end
+        object DBTGeografico: TDBText
+          Left = 88
+          Top = 14
+          Width = 205
+          Height = 53
+          Color = clSilver
+          DataField = 'NombreGeografico'
+          DataSource = dsgeografico
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+          WordWrap = True
+        end
+        object sbBuscarCIG: TSpeedButton
+          Left = 7
+          Top = 46
+          Width = 68
+          Height = 23
+          Hint = 'Editar CIG'
+          Caption = 'CIG'
+          Flat = True
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          NumGlyphs = 2
+          ParentFont = False
+          ParentShowHint = False
+          ShowHint = True
+          OnClick = sbBuscarCIGClick
+        end
+        object Opcionurbano: TDBRadioGroup
+          Left = 8
+          Top = 71
+          Width = 287
+          Height = 40
+          Caption = 'Opcion urbano'
+          Columns = 2
+          DataField = 'URBANO'
+          DataSource = dsgeografico
+          Items.Strings = (
+            '&Urbano'
+            '&Rural')
+          ReadOnly = True
+          TabOrder = 0
+          Values.Strings = (
+            'U'
+            'R')
+        end
+        object dbeCIG: TDBEdit
+          Left = 36
+          Top = 17
+          Width = 41
+          Height = 21
+          DataField = 'CODIGOGEOGRAFICO'
+          DataSource = dsContrato
+          TabOrder = 1
+        end
+      end
+      object gbAsignacion: TGroupBox
+        Left = 5
+        Top = 8
+        Width = 283
+        Height = 108
+        Caption = 'Asignación'
+        TabOrder = 1
+        object Label56: TLabel
+          Tag = 126
+          Left = 7
+          Top = 85
+          Width = 51
+          Height = 13
+          Caption = 'Interventor'
+        end
+        object lbCIA: TLabel
+          Left = 80
+          Top = 20
+          Width = 196
+          Height = 60
+          AutoSize = False
+          Color = clSilver
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -9
+          Font.Name = 'Small Fonts'
+          Font.Style = []
+          ParentColor = False
+          ParentFont = False
+          WordWrap = True
+        end
+        object Label11: TLabel
+          Left = 11
+          Top = 24
+          Width = 17
+          Height = 13
+          Caption = 'CIA'
+        end
+        object sbCia: TSpeedButton
+          Left = 35
+          Top = 22
+          Width = 41
+          Height = 21
+          Caption = 'CIA'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          NumGlyphs = 2
+          ParentFont = False
+          OnClick = sbCiaClick
+        end
+        object dblcbInterventor: TDBLookupComboBox
+          Left = 62
+          Top = 83
+          Width = 217
+          Height = 21
+          DataField = 'CODIGOINTERVENTOR'
+          DataSource = dsContrato
+          KeyField = 'CODIGOEMPLEADO'
+          ListField = 'NOMBREEMPLEADO'
+          ListSource = dsInterventor
+          TabOrder = 0
+        end
+        object dbeCIA: TDBEdit
+          Tag = 9
+          Left = 6
+          Top = 56
+          Width = 71
+          Height = 21
+          DataField = 'CODIGOADMINISTRATIVO'
+          DataSource = dsContrato
+          PopupMenu = dMenuCIA
+          TabOrder = 1
+        end
+      end
+      object GroupBox5: TGroupBox
+        Left = 293
+        Top = 185
+        Width = 301
+        Height = 42
+        TabOrder = 2
+        Visible = False
+        object Label18: TLabel
+          Left = 7
+          Top = 16
+          Width = 59
+          Height = 13
+          Caption = 'Presupuesto'
+        end
+        object SpeedButton1: TSpeedButton
+          Left = 203
+          Top = 13
+          Width = 23
+          Height = 22
+          Caption = '...'
+          OnClick = SpeedButton1Click
+        end
+        object sbCargarPresupuesto: TSpeedButton
+          Left = 231
+          Top = 13
+          Width = 61
+          Height = 22
+          Hint = 'Cargar valores desde un presupuesto existente'
+          Caption = 'Cargar'
+          Glyph.Data = {
+            F6000000424DF600000000000000760000002800000010000000100000000100
+            0400000000008000000000000000000000001000000010000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+            5555500000000005555500B8B8B8B8B000000B0B8B8B8B8B0FF00FB0B8B8B8B8
+            B0F00BFB0000000000F00FBFBF0FFFFFFFF00BFBFB0F000000F00FBFBF0FFFFF
+            FFF050FBFB0F000000F05700000FFFFFFFF05555550F00FF00005555550FFFFF
+            0F055555550FFFFF005555555500000005555555555555555555}
+          OnClick = sbCargarPresupuestoClick
+        end
+        object DBEdit4: TDBEdit
+          Left = 80
+          Top = 13
+          Width = 105
+          Height = 21
+          DataField = 'CODIGOPRESUPUESTO'
+          DataSource = dsContrato
+          TabOrder = 0
+        end
+      end
+      object GroupBox6: TGroupBox
+        Left = 6
+        Top = 118
+        Width = 283
+        Height = 107
+        Caption = 'Contratista'
+        TabOrder = 3
+        object Label19: TLabel
+          Left = 7
+          Top = 28
+          Width = 37
+          Height = 13
+          Caption = 'Nombre'
+        end
+        object Label20: TLabel
+          Left = 7
+          Top = 67
+          Width = 70
+          Height = 26
+          Caption = 'Representante'#13#10'Legal'
+        end
+        object Label21: TLabel
+          Left = 7
+          Top = 51
+          Width = 13
+          Height = 13
+          Caption = 'Nit'
+        end
+        object DBText5: TDBText
+          Left = 58
+          Top = 51
+          Width = 126
+          Height = 17
+          DataField = 'CODIGOCONTRATISTA'
+          DataSource = dsContratista
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+        end
+        object DBEdit11: TDBEdit
+          Left = 57
+          Top = 79
+          Width = 215
+          Height = 21
+          DataField = 'REPRESENTANTECONTRATISTA'
+          DataSource = dsContrato
+          TabOrder = 0
+        end
+        object dblcbContratista: TDBLookupComboBox
+          Left = 57
+          Top = 24
+          Width = 215
+          Height = 21
+          DataField = 'CODIGOCONTRATISTA'
+          DataSource = dsContrato
+          KeyField = 'CODIGOCONTRATISTA'
+          ListField = 'NOMBRECONTRATISTA'
+          ListSource = dsContratista
+          TabOrder = 1
+        end
+      end
+      object GroupBox4: TGroupBox
+        Left = 294
+        Top = 131
+        Width = 303
+        Height = 52
+        TabOrder = 4
+        object Label6: TLabel
+          Left = 6
+          Top = 24
+          Width = 24
+          Height = 13
+          Caption = 'A.I.U'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label7: TLabel
+          Left = 189
+          Top = 24
+          Width = 17
+          Height = 13
+          Caption = 'IVA'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Button1: TButton
+          Left = 97
+          Top = 16
+          Width = 62
+          Height = 25
+          Caption = 'V&alores AIU'
+          TabOrder = 0
+          OnClick = ButtonModifAIUClick
+        end
+        object DBEditAIU: TDBEdit
+          Left = 35
+          Top = 20
+          Width = 60
+          Height = 21
+          DataField = 'AIU'
+          DataSource = dsContrato
+          Enabled = False
+          TabOrder = 1
+        end
+        object DBEdit1IVA: TDBEdit
+          Left = 214
+          Top = 20
+          Width = 60
+          Height = 21
+          DataField = 'IVA'
+          DataSource = dsContrato
+          TabOrder = 2
+        end
+      end
+    end
+    object TPage
+      Left = 0
+      Top = 0
+      Caption = 'Programacion'
+      object gbCostos: TGroupBox
+        Left = 288
+        Top = 13
+        Width = 300
+        Height = 207
+        Caption = 'Costos'
+        TabOrder = 0
+        object Label53: TLabel
+          Left = 13
+          Top = 19
+          Width = 37
+          Height = 13
+          Caption = 'Material'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label64: TLabel
+          Left = 109
+          Top = 19
+          Width = 3
+          Height = 13
+          Caption = ':'
+        end
+        object Label81: TLabel
+          Left = 109
+          Top = 42
+          Width = 3
+          Height = 13
+          Caption = ':'
+        end
+        object Label82: TLabel
+          Left = 13
+          Top = 42
+          Width = 51
+          Height = 13
+          Caption = 'Transporte'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label83: TLabel
+          Left = 109
+          Top = 66
+          Width = 3
+          Height = 13
+          Caption = ':'
+        end
+        object Label84: TLabel
+          Left = 13
+          Top = 66
+          Width = 33
+          Height = 13
+          Caption = 'Equipo'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label85: TLabel
+          Left = 13
+          Top = 91
+          Width = 68
+          Height = 13
+          Caption = 'Mano de Obra'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label86: TLabel
+          Left = 109
+          Top = 91
+          Width = 3
+          Height = 13
+          Caption = ':'
+        end
+        object Bevel7: TBevel
+          Left = 1
+          Top = 165
+          Width = 296
+          Height = 2
+          Shape = bsTopLine
+        end
+        object Label68: TLabel
+          Left = 6
+          Top = 179
+          Width = 24
+          Height = 13
+          Caption = 'A.I.U'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label70: TLabel
+          Left = 197
+          Top = 179
+          Width = 17
+          Height = 13
+          Caption = 'IVA'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label91: TLabel
+          Left = 13
+          Top = 140
+          Width = 66
+          Height = 16
+          Caption = 'Valor Total'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label93: TLabel
+          Left = 109
+          Top = 142
+          Width = 3
+          Height = 13
+          Caption = ':'
+        end
+        object Label5: TLabel
+          Left = 13
+          Top = 116
+          Width = 44
+          Height = 13
+          Caption = 'Valor IVA'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label8: TLabel
+          Left = 109
+          Top = 116
+          Width = 3
+          Height = 13
+          Caption = ':'
+        end
+        object DBEdit19: TDBEdit
+          Left = 126
+          Top = 16
+          Width = 150
+          Height = 21
+          Color = clSilver
+          DataField = 'ValorMaterial'
+          DataSource = dsContrato
+          Enabled = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          ReadOnly = True
+          TabOrder = 0
+        end
+        object DBEdit20: TDBEdit
+          Left = 126
+          Top = 40
+          Width = 150
+          Height = 21
+          Color = clSilver
+          DataField = 'ValorTransporte'
+          DataSource = dsContrato
+          Enabled = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 1
+        end
+        object DBEdit21: TDBEdit
+          Left = 126
+          Top = 64
+          Width = 150
+          Height = 21
+          Color = clSilver
+          DataField = 'ValorEquipo'
+          DataSource = dsContrato
+          Enabled = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 2
+        end
+        object DBEditManoObra: TDBEdit
+          Left = 126
+          Top = 89
+          Width = 150
+          Height = 21
+          Color = clSilver
+          DataField = 'ValorManoObra'
+          DataSource = dsContrato
+          Enabled = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 3
+        end
+        object ButtonModifAIU: TButton
+          Left = 104
+          Top = 173
+          Width = 84
+          Height = 25
+          Caption = 'V&er Valores AIU'
+          TabOrder = 4
+          OnClick = ButtonModifAIUClick
+        end
+        object DBEditIVA: TDBEdit
+          Left = 38
+          Top = 175
+          Width = 60
+          Height = 21
+          DataField = 'AIU'
+          DataSource = dsContrato
+          Enabled = False
+          TabOrder = 5
+        end
+        object DBEdit7: TDBEdit
+          Left = 126
+          Top = 137
+          Width = 150
+          Height = 24
+          Color = clSilver
+          DataField = 'CostoTotal'
+          DataSource = dsContrato
+          Enabled = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          ReadOnly = True
+          TabOrder = 6
+        end
+        object DBEdit1: TDBEdit
+          Left = 218
+          Top = 175
+          Width = 60
+          Height = 21
+          DataField = 'IVA'
+          DataSource = dsContrato
+          TabOrder = 7
+        end
+        object DBEdit2: TDBEdit
+          Left = 126
+          Top = 113
+          Width = 150
+          Height = 21
+          Color = clSilver
+          DataField = 'ValorIVA'
+          DataSource = dsContrato
+          Enabled = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 8
+        end
+      end
+      object gbProgramacion: TGroupBox
+        Left = 10
+        Top = 13
+        Width = 270
+        Height = 207
+        Caption = 'Programación '
+        TabOrder = 1
+        object Label4: TLabel
+          Left = 8
+          Top = 163
+          Width = 54
+          Height = 13
+          Caption = 'Liquidación'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+        end
+        object SpeedButtonFechaLiquidacion: TSpeedButton
+          Left = 240
+          Top = 163
+          Width = 22
+          Height = 22
+          Glyph.Data = {
+            4E010000424D4E01000000000000760000002800000012000000120000000100
+            040000000000D800000000000000000000001000000010000000000000000000
+            BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+            3333330000003333333333333333330000003338888888888888330000003304
+            0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+            000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+            FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+            F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+            000033F7777777777F4833000000330000000000003333000000333333333333
+            333333000000333333333333333333000000}
+          OnClick = SpeedButtonFechaLiquidacionClick
+        end
+        object Label15: TLabel
+          Left = 8
+          Top = 26
+          Width = 52
+          Height = 13
+          Caption = 'Asignación'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+        end
+        object SpeedButtonFechaAsignacion: TSpeedButton
+          Left = 240
+          Top = 26
+          Width = 22
+          Height = 22
+          Glyph.Data = {
+            4E010000424D4E01000000000000760000002800000012000000120000000100
+            040000000000D800000000000000000000001000000010000000000000000000
+            BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+            3333330000003333333333333333330000003338888888888888330000003304
+            0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+            000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+            FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+            F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+            000033F7777777777F4833000000330000000000003333000000333333333333
+            333333000000333333333333333333000000}
+          OnClick = SpeedButtonFechaAsignacionClick
+        end
+        object SpeedButtonFechaInicio: TSpeedButton
+          Left = 240
+          Top = 60
+          Width = 22
+          Height = 22
+          Glyph.Data = {
+            4E010000424D4E01000000000000760000002800000012000000120000000100
+            040000000000D800000000000000000000001000000010000000000000000000
+            BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+            3333330000003333333333333333330000003338888888888888330000003304
+            0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+            000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+            FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+            F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+            000033F7777777777F4833000000330000000000003333000000333333333333
+            333333000000333333333333333333000000}
+          OnClick = SpeedButtonFechaInicioClick
+        end
+        object Label16: TLabel
+          Left = 8
+          Top = 60
+          Width = 64
+          Height = 13
+          Caption = 'Inicio Trabajo'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label3: TLabel
+          Left = 8
+          Top = 95
+          Width = 61
+          Height = 13
+          Caption = 'Final Trabajo'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+        end
+        object SpeedButtonFechaTerminacion: TSpeedButton
+          Left = 240
+          Top = 95
+          Width = 22
+          Height = 22
+          Glyph.Data = {
+            4E010000424D4E01000000000000760000002800000012000000120000000100
+            040000000000D800000000000000000000001000000010000000000000000000
+            BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+            3333330000003333333333333333330000003338888888888888330000003304
+            0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+            000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+            FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+            F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+            000033F7777777777F4833000000330000000000003333000000333333333333
+            333333000000333333333333333333000000}
+          OnClick = SpeedButtonFechaTerminacionClick
+        end
+        object Label10: TLabel
+          Left = 8
+          Top = 129
+          Width = 50
+          Height = 13
+          Caption = 'Certificado'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+        end
+        object SpeedButtonFechaCertificado: TSpeedButton
+          Left = 240
+          Top = 129
+          Width = 22
+          Height = 22
+          Glyph.Data = {
+            4E010000424D4E01000000000000760000002800000012000000120000000100
+            040000000000D800000000000000000000001000000010000000000000000000
+            BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+            3333330000003333333333333333330000003338888888888888330000003304
+            0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+            000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+            FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+            F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+            000033F7777777777F4833000000330000000000003333000000333333333333
+            333333000000333333333333333333000000}
+          OnClick = SpeedButtonFechaCertificadoClick
+        end
+        object DBEditFechaInicio: TDBEdit
+          Left = 75
+          Top = 60
+          Width = 162
+          Height = 21
+          DataField = 'FECHAINICIO'
+          DataSource = dsContrato
+          TabOrder = 1
+        end
+        object DBEditFechaAsignacion: TDBEdit
+          Left = 75
+          Top = 26
+          Width = 162
+          Height = 21
+          DataField = 'FECHAASIGNACION'
+          DataSource = dsContrato
+          TabOrder = 0
+        end
+        object DBEditFechaLiquidacion: TDBEdit
+          Left = 75
+          Top = 163
+          Width = 162
+          Height = 21
+          DataField = 'FECHALIQUIDACION'
+          DataSource = dsContrato
+          TabOrder = 4
+        end
+        object DBEditFechaTerminacion: TDBEdit
+          Left = 75
+          Top = 95
+          Width = 162
+          Height = 21
+          DataField = 'FECHAENTREGA'
+          DataSource = dsContrato
+          TabOrder = 2
+        end
+        object DBEditFechaCertificado: TDBEdit
+          Left = 75
+          Top = 129
+          Width = 162
+          Height = 21
+          DataField = 'FECHACERTIFICADO'
+          DataSource = dsContrato
+          TabOrder = 3
+        end
+      end
+    end
+    object TPage
+      Left = 0
+      Top = 0
+      Caption = 'Actividades'
+      object DBGridActividad: TDBGrid
+        Left = 0
+        Top = 0
+        Width = 606
+        Height = 221
+        Align = alClient
+        DataSource = dsActividadContrato
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'CODIGOACTIVIDAD'
+            Title.Alignment = taCenter
+            Title.Caption = 'Código'
+            Width = 55
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NombreActividadContrato'
+            ReadOnly = True
+            Title.Alignment = taCenter
+            Title.Caption = 'Descripción'
+            Width = 340
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CANTIDADPRESUPUESTADA'
+            Title.Alignment = taCenter
+            Title.Caption = 'Cant. Presupuestada'
+            Width = 101
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'ValorPresupuestado'
+            Title.Alignment = taCenter
+            Title.Caption = 'Valor Presupuestado'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CANTIDADEJECUTADA'
+            Title.Alignment = taCenter
+            Title.Caption = 'Cant. Ejecutada'
+            Width = 86
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'ValorEjecutado'
+            Title.Alignment = taCenter
+            Title.Caption = 'Valor Ejecutado'
+            Visible = True
+          end>
+      end
+      object DBNavigator4: TDBNavigator
+        Left = 0
+        Top = 221
+        Width = 606
+        Height = 18
+        DataSource = dsActividadContrato
+        VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+        Align = alBottom
+        TabOrder = 1
+      end
+    end
+    object TPage
+      Left = 0
+      Top = 0
+      Caption = 'Materiales'
+      object DBGridMaterial: TDBGrid
+        Left = 0
+        Top = 0
+        Width = 606
+        Height = 239
+        Align = alClient
+        DataSource = dsMaterialContrato
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'CODIGOMATERIAL'
+            Title.Alignment = taCenter
+            Title.Caption = 'Código'
+            Width = 45
+            Visible = True
+          end
+          item
+            ButtonStyle = cbsEllipsis
+            Expanded = False
+            FieldName = 'NOMBREMATERIAL'
+            Title.Alignment = taCenter
+            Title.Caption = 'Descripción'
+            Width = 246
+            Visible = True
+          end
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'CODIGOUNIDAD'
+            Title.Alignment = taCenter
+            Title.Caption = 'Und.'
+            Width = 35
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CANTIDADPRESUPUESTADO'
+            Title.Alignment = taCenter
+            Title.Caption = 'Cant.Solicitada'
+            Width = 78
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'VALORPRESUPUESTADO'
+            Title.Alignment = taCenter
+            Title.Caption = 'Vr. Solicitado'
+            Width = 82
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CANTIDADENTREGADA'
+            Title.Alignment = taCenter
+            Title.Caption = 'Cant.Entregada'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'VALORENTREGADO'
+            Title.Alignment = taCenter
+            Title.Caption = 'Vr.Entregado'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CANTIDADCONSUMIDA'
+            Title.Alignment = taCenter
+            Title.Caption = 'Cant.Consumida'
+            Width = 82
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'VALORCONSUMIDO'
+            Title.Alignment = taCenter
+            Title.Caption = 'Vr.Consumido'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CANTIDADREINTEGRADABUENA'
+            Title.Alignment = taCenter
+            Title.Caption = 'Cant.Reintegrada'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'VALORREINTEGRADO'
+            Title.Alignment = taCenter
+            Title.Caption = 'Vr.Reintegrado'
+            Visible = True
+          end>
+      end
+    end
+    object TPage
+      Left = 0
+      Top = 0
+      Caption = 'Liquidaciones'
+      object dbgLiquidacion: TDBGrid
+        Left = 0
+        Top = 22
+        Width = 606
+        Height = 91
+        Align = alTop
+        DataSource = dsLiquidacion
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+        OnDrawColumnCell = dbgLiquidacionDrawColumnCell
+        OnEditButtonClick = dbgLiquidacionEditButtonClick
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'CONSECUTIVO'
+            Title.Alignment = taCenter
+            Title.Caption = 'No.'
+            Width = 29
+            Visible = True
+          end
+          item
+            ButtonStyle = cbsEllipsis
+            Expanded = False
+            FieldName = 'FECHA'
+            Title.Alignment = taCenter
+            Title.Caption = 'Fecha'
+            Width = 105
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'ACTA'
+            Title.Alignment = taCenter
+            Title.Caption = 'Acta'
+            Width = 45
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'VALORACTIVIDADACTUAL'
+            ReadOnly = True
+            Title.Alignment = taCenter
+            Title.Caption = 'Valor Actividad Actual'
+            Width = 121
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'VALORMATERIALACTUAL'
+            ReadOnly = True
+            Title.Alignment = taCenter
+            Title.Caption = 'Valor Material Actual'
+            Width = 113
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'VALORLIQUIDACIONACTUAL'
+            ReadOnly = True
+            Title.Alignment = taCenter
+            Title.Caption = 'Valor Liquidación Actual'
+            Width = 124
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CostoConAIU'
+            Title.Caption = 'Valor Liquidación Actual con AIU'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CostoTotal'
+            Title.Caption = 'Valor Liquidación Actual con AIU e IVA'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'VALORACTIVIDADTOTAL'
+            Title.Caption = 'Valor Actividad Acumulado'
+            Width = 108
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'VALORMATERIALTOTAL'
+            Title.Caption = 'Valor Material Acumulado'
+            Width = 99
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'VALORLIQUIDACIONTOTAL'
+            Title.Caption = 'Valor Liquidación Acumulado'
+            Visible = True
+          end>
+      end
+      object Panel1: TPanel
+        Left = 0
+        Top = 0
+        Width = 606
+        Height = 22
+        Align = alTop
+        Caption = 'Liquidaciones'
+        Color = 16753736
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 1
+      end
+      object Panel2: TPanel
+        Left = 0
+        Top = 138
+        Width = 606
+        Height = 101
+        Align = alClient
+        Caption = 'Panel2'
+        TabOrder = 2
+        object GroupBox8: TGroupBox
+          Left = 1
+          Top = 1
+          Width = 289
+          Height = 99
+          Align = alLeft
+          Caption = 'Actividades'
+          TabOrder = 0
+          object Panel5: TPanel
+            Left = 2
+            Top = 15
+            Width = 284
+            Height = 82
+            Align = alLeft
+            TabOrder = 0
+            object DBGrid3: TDBGrid
+              Left = 1
+              Top = 1
+              Width = 282
+              Height = 62
+              Align = alClient
+              DataSource = dsLiquidacionActividad
+              TabOrder = 0
+              TitleFont.Charset = DEFAULT_CHARSET
+              TitleFont.Color = clWindowText
+              TitleFont.Height = -11
+              TitleFont.Name = 'MS Sans Serif'
+              TitleFont.Style = []
+              Columns = <
+                item
+                  Expanded = False
+                  FieldName = 'CONSECUTIVO'
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Obra'
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'CODIGOACTIVIDAD'
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Actividad'
+                  Width = 69
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'CANTIDADLIQUIDADAACTUAL'
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Cantidad'
+                  Visible = True
+                end>
+            end
+            object DBNavigator2: TDBNavigator
+              Left = 1
+              Top = 63
+              Width = 282
+              Height = 18
+              DataSource = dsLiquidacionActividad
+              VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+              Align = alBottom
+              TabOrder = 1
+            end
+          end
+        end
+        object GroupBox7: TGroupBox
+          Left = 290
+          Top = 1
+          Width = 315
+          Height = 99
+          Align = alClient
+          Caption = 'Materiales'
+          TabOrder = 1
+          object DBGrid2: TDBGrid
+            Left = 2
+            Top = 15
+            Width = 311
+            Height = 64
+            Align = alClient
+            DataSource = dsLiquidacionMaterial
+            TabOrder = 0
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'MS Sans Serif'
+            TitleFont.Style = []
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'CONSECUTIVO'
+                Title.Alignment = taCenter
+                Title.Caption = 'Obra'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CODIGOMATERIAL'
+                Title.Alignment = taCenter
+                Title.Caption = 'Material'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CANTIDADLIQUIDADAACTUAL'
+                Title.Alignment = taCenter
+                Title.Caption = 'Cantidad'
+                Visible = True
+              end>
+          end
+          object DBNavigator3: TDBNavigator
+            Left = 2
+            Top = 79
+            Width = 311
+            Height = 18
+            DataSource = dsLiquidacionMaterial
+            VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+            Align = alBottom
+            TabOrder = 1
+          end
+        end
+      end
+      object PanelLiquidacion: TPanel
+        Left = 0
+        Top = 113
+        Width = 606
+        Height = 25
+        Align = alTop
+        TabOrder = 3
+        object DBNavigator1: TDBNavigator
+          Left = 0
+          Top = 4
+          Width = 264
+          Height = 18
+          DataSource = dsLiquidacion
+          VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost]
+          TabOrder = 0
+        end
+        object bImprimirActaLiquidacion: TBitBtn
+          Left = 461
+          Top = 3
+          Width = 120
+          Height = 20
+          Caption = 'Acta de liquidación'
+          TabOrder = 1
+          OnClick = bImprimirActaLiquidacionClick
+          Glyph.Data = {
+            36010000424D3601000000000000760000002800000011000000100000000100
+            040000000000C000000000000000000000001000000010000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+            0003300000000888888888888880700000000888888888888880700000000000
+            000000000000700000000F8F8F8F8F8F8F807000000008F8F8F8F8F8F9F07000
+            00000F8F8F8F8F8F8F80700000000000000000000000700000003330FFFFFFFF
+            0333300000003330F0000F0F0333300000003330FFFFFFFF0333300000003330
+            F00F00000333300000003330FFFF0FF03333300000003330F08F0F0333333000
+            00003330FFFF0033333330000000333000000333333330000000}
+        end
+        object bLiquidacionFinal: TBitBtn
+          Left = 287
+          Top = 3
+          Width = 120
+          Height = 20
+          Caption = 'Liquidación Final'
+          TabOrder = 2
+          OnClick = bLiquidacionFinalClick
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            0400000000000001000000000000000000001000000010000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF0033333333B333
+            333B33F333337F3333373B33333BB33333B337FF33377F33337F3BB3333BB333
+            3BB3377FF3377F33377333BB777BB777BB333377FFF77FFF7733330000000000
+            B3333377777777777333330FFFFFFFF03333337F3FF3FFF7F333330F00F000F0
+            33333F7F77377737FFFFBB0FFF8FFFF0BBB3777F3F33FFF7777F3B0F08700000
+            000B377F73F7777777773308880FFFFFF033337F377333333733330807FFFFF8
+            033333737FFFFFFF7F33333000000000B3333337777777777FF333BB333BB333
+            BB33337733377F3377FF3BB3333BB3333BB3377333377F33377F3B33333BB333
+            33B33733333773333373B333333B3333333B7333333733333337}
+          NumGlyphs = 2
+        end
+      end
+    end
+  end
+  object Arbol: TTreeView
+    Left = 0
+    Top = 133
+    Width = 97
+    Height = 239
+    Align = alLeft
+    Color = 16772582
+    Indent = 19
+    Items.Data = {
+      05000000240000000000000001000000FFFFFFFFFFFFFFFF0000000000000000
+      0B496E666F726D616369F36E250000000000000001000000FFFFFFFFFFFFFFFF
+      00000000000000000C50726F6772616D616369F36E2400000000000000000000
+      00FFFFFFFFFFFFFFFF00000000000000000B4163746976696461646573230000
+      000000000001000000FFFFFFFFFFFFFFFF00000000000000000A4D6174657269
+      616C6573260000000000000000000000FFFFFFFFFFFFFFFF0000000000000000
+      0D4C69717569646163696F6E6573}
+    ReadOnly = True
+    TabOrder = 2
+    OnChange = ArbolChange
+  end
+  object TPanel
+    Left = 0
+    Top = 0
+    Width = 703
+    Height = 133
+    Align = alTop
+    TabOrder = 3
+    object GroupBox1: TGroupBox
+      Left = 6
+      Top = 1
+      Width = 268
+      Height = 123
+      TabOrder = 1
+      object Label13: TLabel
+        Left = 147
+        Top = 41
+        Width = 19
+        Height = 13
+        Caption = 'Año'
+      end
+      object LCodigoContrato: TLabel
+        Left = 6
+        Top = 43
+        Width = 33
+        Height = 13
+        Caption = 'Código'
+      end
+      object Label14: TLabel
+        Left = 6
+        Top = 19
+        Width = 58
+        Height = 13
+        Caption = 'Identificador'
+      end
+      object Label1: TLabel
+        Left = 76
+        Top = 42
+        Width = 3
+        Height = 13
+        Caption = ':'
+      end
+      object Label2: TLabel
+        Left = 76
+        Top = 17
+        Width = 3
+        Height = 13
+        Caption = ':'
+      end
+      object Label58: TLabel
+        Left = 174
+        Top = 41
+        Width = 3
+        Height = 13
+        Caption = ':'
+      end
+      object Label89: TLabel
+        Left = 6
+        Top = 67
+        Width = 33
+        Height = 13
+        Caption = 'Estado'
+      end
+      object Label90: TLabel
+        Left = 76
+        Top = 67
+        Width = 3
+        Height = 13
+        Caption = ':'
+      end
+      object Label29: TLabel
+        Left = 6
+        Top = 96
+        Width = 64
+        Height = 13
+        Caption = 'Tipo Contrato'
+      end
+      object Label30: TLabel
+        Left = 76
+        Top = 97
+        Width = 3
+        Height = 13
+        Caption = ':'
+      end
+      object DBENumeroPresupuesto: TDBEdit
+        Left = 85
+        Top = 39
+        Width = 52
+        Height = 21
+        DataField = 'CODIGOCONTRATO'
+        DataSource = dsContrato
+        TabOrder = 4
+      end
+      object DBEditCodAno: TDBEdit
+        Left = 193
+        Top = 39
+        Width = 64
+        Height = 21
+        DataField = 'ANO'
+        DataSource = dsContrato
+        TabOrder = 0
+      end
+      object EDNumeroContrato: TDBEdit
+        Left = 85
+        Top = 14
+        Width = 172
+        Height = 21
+        DataField = 'NUMEROCONTRATO'
+        DataSource = dsContrato
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 1
+      end
+      object DBLookupComboBoxEstado: TDBLookupComboBox
+        Left = 85
+        Top = 64
+        Width = 172
+        Height = 21
+        DataField = 'CODIGOESTADOCONTRATO'
+        DataSource = dsContrato
+        KeyField = 'CODIGOESTADOCONTRATO'
+        ListField = 'NOMBREESTADOCONTRATO'
+        ListSource = dsEstadoContrato
+        TabOrder = 2
+      end
+      object DBLCBTipoContrato: TDBLookupComboBox
+        Left = 85
+        Top = 94
+        Width = 172
+        Height = 21
+        DataField = 'CODIGOTIPOCONTRATO'
+        DataSource = dsContrato
+        KeyField = 'CODIGOTIPOCONTRATO'
+        ListField = 'NOMBRETIPOCONTRATO'
+        ListSource = dsTipoContrato
+        TabOrder = 3
+      end
+    end
+    object GroupBox2: TGroupBox
+      Left = 279
+      Top = 1
+      Width = 447
+      Height = 123
+      Caption = 'Objeto'
+      TabOrder = 0
+      object dbmObjeto: TDBMemo
+        Left = 8
+        Top = 16
+        Width = 433
+        Height = 97
+        DataField = 'OBJETO'
+        DataSource = dsContrato
+        TabOrder = 0
+      end
+    end
+  end
+  object dsContrato: TDataSource
+    DataSet = qContrato
+    Left = 630
+    Top = 54
+  end
+  object dsEstadoContrato: TDataSource
+    DataSet = qEstadoContrato
+    Left = 35
+    Top = 469
+  end
+  object dsTipoContrato: TDataSource
+    DataSet = qTipoContrato
+    Left = 104
+    Top = 469
+  end
+  object dsPrograma: TDataSource
+    DataSet = qPrograma
+    Left = 312
+    Top = 469
+  end
+  object dsContratista: TDataSource
+    DataSet = qContratista
+    Left = 382
+    Top = 469
+  end
+  object dsActividadContrato: TDataSource
+    DataSet = qActividadContrato
+    Left = 704
+    Top = 54
+  end
+  object dsTipoActividad: TDataSource
+    DataSet = qTipoActividad
+    Left = 103
+    Top = 575
+  end
+  object dsTipoPresupuesto: TDataSource
+    DataSet = qTipoPresupuesto
+    Left = 174
+    Top = 575
+  end
+  object dsMaterialContrato: TDataSource
+    DataSet = qMaterialContrato
+    Left = 797
+    Top = 54
+  end
+  object PopupMenuActividades: TPopupMenu
+    Left = 47
+    Top = 230
+    object AdicionarActividades1: TMenuItem
+      Caption = '&Adicionar Actividades'
+      OnClick = AdicionarActividades1Click
+    end
+    object BorrarActividades1: TMenuItem
+      Caption = '&Borrar Actividades'
+    end
+  end
+  object qPptoMateriales: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsContrato
+    SQL.Strings = (
+      
+        'SELECT DISTINCT M.CODIGOMATERIAL, M.NOMBREMATERIAL, SUM(D.CANTID' +
+        'AD*P.CANTIDADPRESUPUESTADA)SUM'
+      
+        'FROM ACTIVIDADCONTRATO P, ACTIVIDAD A, ESTRUCTURA E, DETALLEESTR' +
+        'UCTURA D,'
+      ' MATERIAL M'
+      'WHERE'
+      '(P.CODIGOCONTRATO = :CodigoContrato)'
+      ' AND (A.CODIGOACTIVIDAD = P.CODIGOACTIVIDAD)'
+      
+        ' AND ( (P.CODIGOTIPOPRESUPUESTO = 1) OR (P.CODIGOTIPOPRESUPUESTO' +
+        ' = 4) OR (P.CODIGOTIPOPRESUPUESTO = 7)'
+      
+        ' OR    (P.CODIGOTIPOPRESUPUESTO = 8) OR (P.CODIGOTIPOPRESUPUESTO' +
+        ' = 10) OR (P.CODIGOTIPOPRESUPUESTO = 11)'
+      
+        ' OR    (P.CODIGOTIPOPRESUPUESTO = 13) OR (P.CODIGOTIPOPRESUPUEST' +
+        'O = 14) )'
+      ' AND (E.CODIGOESTRUCTURA = A.CODIGOESTRUCTURA)'
+      ' AND (D.CODIGOESTRUCTURA = E.CODIGOESTRUCTURA)'
+      ' AND (M.CODIGOMATERIAL = D.CODIGOMATERIAL)'
+      'GROUP BY M.CODIGOMATERIAL, M.NOMBREMATERIAL'
+      'ORDER BY M.CODIGOMATERIAL, M.NOMBREMATERIAL, 3'
+      ' ')
+    Left = 384
+    Top = 527
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CodigoContrato'
+        ParamType = ptUnknown
+      end>
+    object qPptoMaterialesCODIGOMATERIAL: TFloatField
+      FieldName = 'CODIGOMATERIAL'
+    end
+    object qPptoMaterialesNOMBREMATERIAL: TStringField
+      FieldName = 'NOMBREMATERIAL'
+      Size = 100
+    end
+    object qPptoMaterialesSUM: TFloatField
+      FieldName = 'SUM'
+    end
+  end
+  object dsqPptoMateriales: TDataSource
+    DataSet = qPptoMateriales
+    Left = 386
+    Top = 575
+  end
+  object PopupMenuLiquidacion: TPopupMenu
+    Left = 44
+    Top = 136
+    object ActividadesdelContrato1: TMenuItem
+      Caption = 'Actividades del Contrato ejecutadas'
+      OnClick = ActividadesdelContrato1Click
+    end
+    object MaterialesLiquidados1: TMenuItem
+      Caption = 'Materiales Consumidos'
+      OnClick = MaterialesLiquidados1Click
+    end
+  end
+  object PopupMenuContratos: TPopupMenu
+    Left = 44
+    Top = 92
+    object ContratoObra: TMenuItem
+      Caption = 'Contrato de Obra'
+      OnClick = ContratoObraClick
+    end
+    object PresupuestoObra: TMenuItem
+      Caption = 'Presupuesto de Obra'
+      OnClick = PresupuestoObraClick
+    end
+    object ActividadesPresupuestadasdelaObra1: TMenuItem
+      Caption = 'Actividades Presupuestadas de la Obra'
+      OnClick = ActividadesPresupuestadasdelaObra1Click
+    end
+    object MaterialesPresupuestadosdelaObra1: TMenuItem
+      Caption = 'Materiales Presupuestados de la Obra'
+      OnClick = MaterialesPresupuestadosdelaObra1Click
+    end
+  end
+  object dsFirma: TDataSource
+    DataSet = qFirma
+    Left = 552
+    Top = 574
+  end
+  object DParser1: TDParser
+    DsUnidades = 'Pesos Mcte.'
+    DsDecimas = 'Centavos'
+    Funciones.Strings = (
+      'Day'
+      'Year'
+      'Month')
+    Left = 48
+    Top = 321
+  end
+  object qListaApoyo: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'Select CodigoApoyo, X, Y From Apoyo Where CodigoContrato = :Codi' +
+        'go')
+    Left = 1109
+    Top = 405
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'Codigo'
+        ParamType = ptUnknown
+      end>
+  end
+  object qGeografico: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsContrato
+    SQL.Strings = (
+      
+        'SELECT CODIGOGEOGRAFICO,NOMBREGEOGRAFICO,GETMUNICIPIO(CODIGOGEOG' +
+        'RAFICO) AS NOMBREMUNICIPIO,INDICEDIFICULTAD,URBANO'
+      'FROM GEOGRAFICO G'
+      'WHERE CODIGOGEOGRAFICO=:CODIGOGEOGRAFICO'
+      ''
+      ' ')
+    Left = 855
+    Top = 422
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOGEOGRAFICO'
+        ParamType = ptUnknown
+      end>
+    object qGeograficoCODIGOGEOGRAFICO: TFloatField
+      FieldName = 'CODIGOGEOGRAFICO'
+    end
+    object qGeograficoNOMBREGEOGRAFICO: TStringField
+      FieldName = 'NOMBREGEOGRAFICO'
+      Size = 250
+    end
+    object qGeograficoNOMBREMUNICIPIO: TMemoField
+      FieldName = 'NOMBREMUNICIPIO'
+      BlobType = ftMemo
+      Size = 4000
+    end
+    object qGeograficoINDICEDIFICULTAD: TFloatField
+      FieldName = 'INDICEDIFICULTAD'
+    end
+    object qGeograficoURBANO: TStringField
+      FieldName = 'URBANO'
+      Size = 1
+    end
+  end
+  object qEstadoContrato: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM ESTADOCONTRATO')
+    Left = 35
+    Top = 423
+  end
+  object qTipoContrato: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM TIPOCONTRATO'
+      '')
+    Left = 104
+    Top = 423
+    object qTipoContratoCODIGOTIPOCONTRATO: TStringField
+      FieldName = 'CODIGOTIPOCONTRATO'
+      Origin = 'TIPOCONTRATO.CODIGOTIPOCONTRATO'
+      Size = 1
+    end
+    object qTipoContratoNOMBRETIPOCONTRATO: TStringField
+      FieldName = 'NOMBRETIPOCONTRATO'
+      Origin = 'TIPOCONTRATO.NOMBRETIPOCONTRATO'
+      Size = 30
+    end
+    object qTipoContratoIVAADMINISTRACION: TStringField
+      FieldName = 'IVAADMINISTRACION'
+      Origin = 'TIPOCONTRATO.IVAADMINISTRACION'
+      Size = 1
+    end
+    object qTipoContratoIVAIMPREVISTOS: TStringField
+      FieldName = 'IVAIMPREVISTOS'
+      Origin = 'TIPOCONTRATO.IVAIMPREVISTOS'
+      Size = 1
+    end
+    object qTipoContratoIVAUTILIDAD: TStringField
+      FieldName = 'IVAUTILIDAD'
+      Origin = 'TIPOCONTRATO.IVAUTILIDAD'
+      Size = 1
+    end
+  end
+  object qPrograma: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM PROGRAMA')
+    Left = 312
+    Top = 423
+  end
+  object updContrato: TUpdateSQL
+    ModifySQL.Strings = (
+      'update CONTRATO'
+      'set'
+      '  CODIGOCONTRATO = :CODIGOCONTRATO,'
+      '  NUMEROCONTRATO = :NUMEROCONTRATO,'
+      '  CODIGOADMINISTRATIVO = :CODIGOADMINISTRATIVO,'
+      '  CODIGOESTADOCONTRATO = :CODIGOESTADOCONTRATO,'
+      '  CODIGOTIPOCONTRATO = :CODIGOTIPOCONTRATO,'
+      '  CODIGOCONTRATISTA = :CODIGOCONTRATISTA,'
+      '  CODIGOINTERVENTOR = :CODIGOINTERVENTOR,'
+      '  OBJETO = :OBJETO,'
+      '  FECHAASIGNACION = :FECHAASIGNACION,'
+      '  FECHAINICIO = :FECHAINICIO,'
+      '  FECHAENTREGA = :FECHAENTREGA,'
+      '  FECHACERTIFICADO = :FECHACERTIFICADO,'
+      '  FECHALIQUIDACION = :FECHALIQUIDACION,'
+      '  ADMINISTRACION = :ADMINISTRACION,'
+      '  IMPREVISTOS = :IMPREVISTOS,'
+      '  UTILIDADES = :UTILIDADES,'
+      '  IVA = :IVA,'
+      '  MATERIALPRESUPUESTADO = :MATERIALPRESUPUESTADO,'
+      '  TRANSPORTEPRESUPUESTADO = :TRANSPORTEPRESUPUESTADO,'
+      '  EQUIPOPRESUPUESTADO = :EQUIPOPRESUPUESTADO,'
+      '  MANOOBRAPRESUPUESTADO = :MANOOBRAPRESUPUESTADO,'
+      '  SECUENCIA = :SECUENCIA,'
+      '  ANO = :ANO,'
+      '  CODIGOGEOGRAFICO = :CODIGOGEOGRAFICO,'
+      '  CODIGOPRESUPUESTO = :CODIGOPRESUPUESTO,'
+      '  MONTOTOTAL = :MONTOTOTAL,'
+      '  MATERIALEJECUTADO = :MATERIALEJECUTADO,'
+      '  MANOOBRAEJECUTADO = :MANOOBRAEJECUTADO,'
+      '  EQUIPOEJECUTADO = :EQUIPOEJECUTADO,'
+      '  TRANSPORTEEJECUTADO = :TRANSPORTEEJECUTADO,'
+      '  REPRESENTANTECONTRATISTA = :REPRESENTANTECONTRATISTA'
+      'where'
+      '  CODIGOCONTRATO = :OLD_CODIGOCONTRATO')
+    InsertSQL.Strings = (
+      'insert into CONTRATO'
+      
+        '  (CODIGOCONTRATO, NUMEROCONTRATO, CODIGOADMINISTRATIVO, CODIGOE' +
+        'STADOCONTRATO, '
+      
+        '   CODIGOTIPOCONTRATO, CODIGOCONTRATISTA, CODIGOINTERVENTOR, OBJ' +
+        'ETO, FECHAASIGNACION, '
+      
+        '   FECHAINICIO, FECHAENTREGA, FECHACERTIFICADO, FECHALIQUIDACION' +
+        ', ADMINISTRACION, '
+      
+        '   IMPREVISTOS, UTILIDADES, IVA, MATERIALPRESUPUESTADO, TRANSPOR' +
+        'TEPRESUPUESTADO, '
+      
+        '   EQUIPOPRESUPUESTADO, MANOOBRAPRESUPUESTADO, SECUENCIA, ANO, C' +
+        'ODIGOGEOGRAFICO, '
+      
+        '   CODIGOPRESUPUESTO, MONTOTOTAL, MATERIALEJECUTADO, MANOOBRAEJE' +
+        'CUTADO, '
+      
+        '   EQUIPOEJECUTADO, TRANSPORTEEJECUTADO, REPRESENTANTECONTRATIST' +
+        'A)'
+      'values'
+      
+        '  (:CODIGOCONTRATO, :NUMEROCONTRATO, :CODIGOADMINISTRATIVO, :COD' +
+        'IGOESTADOCONTRATO, '
+      
+        '   :CODIGOTIPOCONTRATO, :CODIGOCONTRATISTA, :CODIGOINTERVENTOR, ' +
+        ':OBJETO, '
+      
+        '   :FECHAASIGNACION, :FECHAINICIO, :FECHAENTREGA, :FECHACERTIFIC' +
+        'ADO, :FECHALIQUIDACION, '
+      
+        '   :ADMINISTRACION, :IMPREVISTOS, :UTILIDADES, :IVA, :MATERIALPR' +
+        'ESUPUESTADO, '
+      
+        '   :TRANSPORTEPRESUPUESTADO, :EQUIPOPRESUPUESTADO, :MANOOBRAPRES' +
+        'UPUESTADO, '
+      
+        '   :SECUENCIA, :ANO, :CODIGOGEOGRAFICO, :CODIGOPRESUPUESTO, :MON' +
+        'TOTOTAL, '
+      
+        '   :MATERIALEJECUTADO, :MANOOBRAEJECUTADO, :EQUIPOEJECUTADO, :TR' +
+        'ANSPORTEEJECUTADO, '
+      '   :REPRESENTANTECONTRATISTA)')
+    DeleteSQL.Strings = (
+      'delete from CONTRATO'
+      'where'
+      '  CODIGOCONTRATO = :OLD_CODIGOCONTRATO')
+    Left = 637
+    Top = 101
+  end
+  object qContratista: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from contratista')
+    Left = 381
+    Top = 423
+    object qContratistaCODIGOCONTRATISTA: TStringField
+      FieldName = 'CODIGOCONTRATISTA'
+      Origin = 'CONTRATISTA.CODIGOCONTRATISTA'
+      Size = 14
+    end
+    object qContratistaNOMBRECONTRATISTA: TStringField
+      FieldName = 'NOMBRECONTRATISTA'
+      Origin = 'CONTRATISTA.NOMBRECONTRATISTA'
+      Size = 50
+    end
+    object qContratistaREPRESENTANTE: TStringField
+      FieldName = 'REPRESENTANTE'
+      Origin = 'CONTRATISTA.REPRESENTANTE'
+      Size = 50
+    end
+    object qContratistaDIRECCION: TStringField
+      FieldName = 'DIRECCION'
+      Origin = 'CONTRATISTA.DIRECCION'
+      Size = 40
+    end
+    object qContratistaCIUDAD: TStringField
+      FieldName = 'CIUDAD'
+      Origin = 'CONTRATISTA.CIUDAD'
+      Size = 15
+    end
+    object qContratistaTELEFONO: TStringField
+      FieldName = 'TELEFONO'
+      Origin = 'CONTRATISTA.TELEFONO'
+    end
+    object qContratistaRETENEDORIVA: TStringField
+      FieldName = 'RETENEDORIVA'
+      Origin = 'CONTRATISTA.RETENEDORIVA'
+      Size = 1
+    end
+  end
+  object qFirma: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsContrato
+    SQL.Strings = (
+      'select e.codigoempleado,e.nombreempleado,c.nombrecargo'
+      'from empleado e,cargo c,firmaContrato f'
+      'where c.codigocargo(+)= e.codigocargo'
+      'and e.codigoempleado=f.codigoempleado'
+      'and f.codigocontrato=:codigocontrato'
+      'and f.codigodocumento=:codigodocumento')
+    Left = 551
+    Top = 528
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOCONTRATO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'codigodocumento'
+        ParamType = ptUnknown
+      end>
+  end
+  object qInterventor: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select codigoempleado,nombreempleado '
+      'from empleado '
+      'where ((estado IN ('#39'AC'#39','#39'LC'#39')) OR (estado IS NULL))')
+    Left = 451
+    Top = 423
+    object qInterventorCODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'EMPLEADO.CODIGOEMPLEADO'
+    end
+    object qInterventorNOMBREEMPLEADO: TStringField
+      FieldName = 'NOMBREEMPLEADO'
+      Origin = 'EMPLEADO.NOMBREEMPLEADO'
+      Size = 50
+    end
+  end
+  object qAuxiliar: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsContrato
+    SQL.Strings = (
+      'select codigoempleado,nombreempleado from empleado'
+      'where codigoadministrativo=:codigoadministrativo'
+      '')
+    Left = 520
+    Top = 423
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end>
+  end
+  object qTipoActividad: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from tipoactividad')
+    Left = 103
+    Top = 527
+  end
+  object qTipoPresupuesto: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from tipopresupuesto')
+    Left = 173
+    Top = 527
+    object qTipoPresupuestoCODIGOTIPOPRESUPUESTO: TStringField
+      FieldName = 'CODIGOTIPOPRESUPUESTO'
+      Origin = 'TIPOPRESUPUESTO.CODIGOTIPOPRESUPUESTO'
+      Size = 2
+    end
+    object qTipoPresupuestoNOMBRETIPOPRESUPUESTO: TStringField
+      FieldName = 'NOMBRETIPOPRESUPUESTO'
+      Origin = 'TIPOPRESUPUESTO.NOMBRETIPOPRESUPUESTO'
+      Size = 150
+    end
+  end
+  object qMaterialContrato: TQuery
+    CachedUpdates = True
+    AfterPost = qMaterialContratoAfterPost
+    AfterCancel = qMaterialContratoAfterCancel
+    AfterDelete = qMaterialContratoAfterDelete
+    DatabaseName = 'BaseDato'
+    DataSource = dsContrato
+    SQL.Strings = (
+      
+        'SELECT m.codigomaterial,m.valorunitario,ma.nombrematerial,ma.cod' +
+        'igounidad, '
+      'SUM(NVL(m.cantidadsolicitada,0)) AS cantidadpresupuestado,'
+      'SUM(NVL(m.valorpresupuestado,0)) AS valorpresupuestado,'
+      'SUM(NVL(m.cantidadentregada,0)) AS cantidadentregada,'
+      'SUM(NVL(m.valorentregado,0)) AS valorentregado,'
+      'SUM(NVL(m.cantidadconsumida,0)) AS cantidadconsumida,'
+      'SUM(NVL(m.valorconsumido,0)) AS valorconsumido,'
+      'SUM(NVL(m.cantidadreintegradabuena,0)) AS cantidadreintegrada,'
+      'SUM(NVL(m.valorreintegrado,0)) AS valorreintegrado'
+      'FROM materialCONTRATOobra m,CONTRATOobra p,material ma'
+      'WHERE p.codigoCONTRATO=:codigoCONTRATO'
+      'AND p.codigoCONTRATOobra=m.codigoCONTRATOobra'
+      'AND m.codigomaterial=ma.codigomaterial'
+      
+        'GROUP BY m.codigomaterial,m.valorunitario,ma.nombrematerial,ma.c' +
+        'odigounidad'
+      'ORDER BY m.codigomaterial'
+      '')
+    Left = 796
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOCONTRATO'
+        ParamType = ptUnknown
+      end>
+    object qMaterialContratoCODIGOMATERIAL: TFloatField
+      FieldName = 'CODIGOMATERIAL'
+    end
+    object qMaterialContratoVALORUNITARIO: TFloatField
+      FieldName = 'VALORUNITARIO'
+    end
+    object qMaterialContratoNOMBREMATERIAL: TStringField
+      FieldName = 'NOMBREMATERIAL'
+      Size = 100
+    end
+    object qMaterialContratoCODIGOUNIDAD: TStringField
+      FieldName = 'CODIGOUNIDAD'
+      Size = 2
+    end
+    object qMaterialContratoCANTIDADPRESUPUESTADO: TFloatField
+      FieldName = 'CANTIDADPRESUPUESTADO'
+    end
+    object qMaterialContratoVALORPRESUPUESTADO: TFloatField
+      FieldName = 'VALORPRESUPUESTADO'
+      currency = True
+    end
+    object qMaterialContratoCANTIDADENTREGADA: TFloatField
+      FieldName = 'CANTIDADENTREGADA'
+    end
+    object qMaterialContratoVALORENTREGADO: TFloatField
+      FieldName = 'VALORENTREGADO'
+      currency = True
+    end
+    object qMaterialContratoCANTIDADCONSUMIDA: TFloatField
+      FieldName = 'CANTIDADCONSUMIDA'
+    end
+    object qMaterialContratoVALORCONSUMIDO: TFloatField
+      FieldName = 'VALORCONSUMIDO'
+      currency = True
+    end
+    object qMaterialContratoCANTIDADREINTEGRADA: TFloatField
+      FieldName = 'CANTIDADREINTEGRADA'
+    end
+    object qMaterialContratoVALORREINTEGRADO: TFloatField
+      FieldName = 'VALORREINTEGRADO'
+      currency = True
+    end
+  end
+  object qDivision: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'select codigoadministrativo,nombreadministrativo,nombrecategoria' +
+        ',abreviatura'
+      'from administrativo where nivel<=3'
+      'and codigoadministrativo>0')
+    Left = 174
+    Top = 423
+  end
+  object qDepartamento: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'select codigoadministrativo,nombreadministrativo,nombrecategoria' +
+        ',abreviatura'
+      'from administrativo')
+    Left = 243
+    Top = 423
+  end
+  object dsDivision: TDataSource
+    DataSet = qDivision
+    Left = 174
+    Top = 469
+  end
+  object dsDepartamento: TDataSource
+    DataSet = qDepartamento
+    Left = 243
+    Top = 469
+  end
+  object dsInterventor: TDataSource
+    DataSet = qInterventor
+    Left = 451
+    Top = 469
+  end
+  object dsAuxiliar: TDataSource
+    DataSet = qAuxiliar
+    Left = 520
+    Top = 469
+  end
+  object qZona: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select codigozona,nombrezona from zonaessa')
+    Left = 589
+    Top = 423
+  end
+  object dsZona: TDataSource
+    DataSet = qZona
+    Left = 589
+    Top = 469
+  end
+  object qEmpresa: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from empresa')
+    Left = 1177
+    Top = 405
+    object qEmpresaCODIGOEMPRESA: TStringField
+      FieldName = 'CODIGOEMPRESA'
+      Origin = 'EMPRESA.CODIGOEMPRESA'
+      Size = 3
+    end
+    object qEmpresaNOMBREEMPRESA: TStringField
+      FieldName = 'NOMBREEMPRESA'
+      Origin = 'EMPRESA.NOMBREEMPRESA'
+      Size = 80
+    end
+    object qEmpresaNOMBREABREVIADO: TStringField
+      FieldName = 'NOMBREABREVIADO'
+      Origin = 'EMPRESA.NOMBREABREVIADO'
+      Size = 60
+    end
+    object qEmpresaNITEMPRESA: TStringField
+      FieldName = 'NITEMPRESA'
+      Origin = 'EMPRESA.NITEMPRESA'
+    end
+    object qEmpresaCIUDAD: TStringField
+      FieldName = 'CIUDAD'
+      Origin = 'EMPRESA.CIUDAD'
+      Size = 30
+    end
+    object qEmpresaREPRESENTANTELEGAL: TStringField
+      FieldName = 'REPRESENTANTELEGAL'
+      Origin = 'EMPRESA.REPRESENTANTELEGAL'
+      Size = 50
+    end
+    object qEmpresaLICENCIA: TStringField
+      FieldName = 'LICENCIA'
+      Origin = 'EMPRESA.LICENCIA'
+    end
+    object qEmpresaDIRECCION: TStringField
+      FieldName = 'DIRECCION'
+      Origin = 'EMPRESA.DIRECCION'
+      Size = 60
+    end
+    object qEmpresaTELEFONOS: TStringField
+      FieldName = 'TELEFONOS'
+      Origin = 'EMPRESA.TELEFONOS'
+      Size = 40
+    end
+    object qEmpresaEMAIL: TStringField
+      FieldName = 'EMAIL'
+      Origin = 'EMPRESA.EMAIL'
+      Size = 30
+    end
+    object qEmpresaMISIONEMPRESA: TBlobField
+      FieldName = 'MISIONEMPRESA'
+      Origin = 'EMPRESA.MISIONEMPRESA'
+      BlobType = ftBlob
+      Size = 1
+    end
+    object qEmpresaCODIGOZONA: TStringField
+      FieldName = 'CODIGOZONA'
+      Origin = 'EMPRESA.CODIGOZONA'
+      Size = 1
+    end
+    object qEmpresaCODIGOCIUDAD: TStringField
+      FieldName = 'CODIGOCIUDAD'
+      Origin = 'EMPRESA.CODIGOCIUDAD'
+      Size = 2
+    end
+    object qEmpresaCODIGOBARRIO: TStringField
+      FieldName = 'CODIGOBARRIO'
+      Origin = 'EMPRESA.CODIGOBARRIO'
+      Size = 3
+    end
+  end
+  object qActividadContrato: TQuery
+    CachedUpdates = True
+    AfterCancel = qActividadContratoAfterCancel
+    AfterScroll = qActividadContratoAfterScroll
+    OnCalcFields = qActividadContratoCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsContrato
+    SQL.Strings = (
+      'SELECT CODIGOCONTRATO,CODIGOACTIVIDAD,CODIGOTIPOPRESUPUESTO,'
+      ' SUM(NVL(CANTIDADPRESUPUESTADA,0)) CANTIDADPRESUPUESTADA,  '
+      ' SUM(NVL(MATERIALPRESUPUESTADO,0)) MATERIALPRESUPUESTADO,'
+      ' SUM(NVL(TRANSPORTEPRESUPUESTADO,0)) TRANSPORTEPRESUPUESTADO, '
+      ' SUM(NVL(EQUIPOPRESUPUESTADO,0)) EQUIPOPRESUPUESTADO,'
+      ' SUM(NVL(MANOOBRAPRESUPUESTADO,0))MANOOBRAPRESUPUESTADO,'
+      ' SUM(NVL(CANTIDADEJECUTADA,0)) CANTIDADEJECUTADA,'
+      ' SUM(NVL(MATERIALEJECUTADO,0)) MATERIALEJECUTADO,'
+      ' SUM(NVL(TRANSPORTEEJECUTADO,0)) TRANSPORTEEJECUTADO,'
+      ' SUM(NVL(EQUIPOEJECUTADO,0)) EQUIPOEJECUTADO,'
+      ' SUM(NVL(MANOOBRAEJECUTADO,0)) MANOOBRAEJECUTADO '
+      'FROM ACTIVIDADCONTRATOOBRA a'
+      'WHERE codigocontrato=:codigocontrato'
+      'GROUP BY CODIGOCONTRATO,CODIGOACTIVIDAD,CODIGOTIPOPRESUPUESTO'
+      'ORDER BY a.CODIGOactividad')
+    Left = 705
+    Top = 4
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOCONTRATO'
+        ParamType = ptUnknown
+      end>
+    object qActividadContratoNombreActividadContrato: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'NombreActividadContrato'
+      Size = 200
+      Calculated = True
+    end
+    object qActividadContratoCODIGOCONTRATO: TFloatField
+      FieldName = 'CODIGOCONTRATO'
+    end
+    object qActividadContratoCANTIDADPRESUPUESTADA: TFloatField
+      FieldName = 'CANTIDADPRESUPUESTADA'
+    end
+    object qActividadContratoMATERIALPRESUPUESTADO: TFloatField
+      FieldName = 'MATERIALPRESUPUESTADO'
+      currency = True
+    end
+    object qActividadContratoTRANSPORTEPRESUPUESTADO: TFloatField
+      FieldName = 'TRANSPORTEPRESUPUESTADO'
+      currency = True
+    end
+    object qActividadContratoEQUIPOPRESUPUESTADO: TFloatField
+      FieldName = 'EQUIPOPRESUPUESTADO'
+      currency = True
+    end
+    object qActividadContratoMANOOBRAPRESUPUESTADO: TFloatField
+      FieldName = 'MANOOBRAPRESUPUESTADO'
+      currency = True
+    end
+    object qActividadContratoCANTIDADEJECUTADA: TFloatField
+      FieldName = 'CANTIDADEJECUTADA'
+    end
+    object qActividadContratoNombreTipoPresupuesto: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NombreTipoPresupuesto'
+      LookupDataSet = qTipoPresupuesto
+      LookupKeyFields = 'CODIGOTIPOPRESUPUESTO'
+      LookupResultField = 'NOMBRETIPOPRESUPUESTO'
+      KeyFields = 'CODIGOTIPOPRESUPUESTO'
+      Size = 100
+      Lookup = True
+    end
+    object qActividadContratoCODIGOTIPOPRESUPUESTO: TStringField
+      FieldName = 'CODIGOTIPOPRESUPUESTO'
+      Size = 2
+    end
+    object qActividadContratoValorPresupuestado: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ValorPresupuestado'
+      currency = True
+      Calculated = True
+    end
+    object qActividadContratoMATERIALEJECUTADO: TFloatField
+      FieldName = 'MATERIALEJECUTADO'
+      currency = True
+    end
+    object qActividadContratoTRANSPORTEEJECUTADO: TFloatField
+      FieldName = 'TRANSPORTEEJECUTADO'
+      currency = True
+    end
+    object qActividadContratoEQUIPOEJECUTADO: TFloatField
+      FieldName = 'EQUIPOEJECUTADO'
+      currency = True
+    end
+    object qActividadContratoMANOOBRAEJECUTADO: TFloatField
+      FieldName = 'MANOOBRAEJECUTADO'
+      currency = True
+    end
+    object qActividadContratoValorEjecutado: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ValorEjecutado'
+      Calculated = True
+    end
+    object qActividadContratoCODIGOACTIVIDAD: TFloatField
+      FieldName = 'CODIGOACTIVIDAD'
+    end
+  end
+  object PopupMenuClausulas: TPopupMenu
+    Left = 47
+    Top = 277
+    object AdicionarClausulasIniciales: TMenuItem
+      Caption = '&Adicionar Claúsulas Iniciales'
+      OnClick = AdicionarClausulasInicialesClick
+    end
+    object EditarClasulas: TMenuItem
+      Caption = 'Editar Claúsulas'
+      OnClick = EditarClasulasClick
+    end
+  end
+  object qClausula: TQuery
+    CachedUpdates = True
+    AfterPost = qClausulaAfterPost
+    DatabaseName = 'BaseDato'
+    DataSource = dsContrato
+    SQL.Strings = (
+      'SELECT CODIGOCLAUSULACONTRATO,CODIGOCONTRATO,'
+      'CONSECUTIVO,TITULO,TEXTO'
+      'FROM CLAUSULACONTRATO'
+      'WHERE CODIGOCONTRATO=:CODIGOCONTRATO'
+      'ORDER BY CONSECUTIVO')
+    UpdateObject = updClausula
+    Left = 562
+    Top = 5
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOCONTRATO'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsClausula: TDataSource
+    DataSet = qClausula
+    Left = 562
+    Top = 53
+  end
+  object updClausula: TUpdateSQL
+    ModifySQL.Strings = (
+      'update CLAUSULACONTRATO'
+      'set'
+      '  CODIGOCLAUSULACONTRATO = :CODIGOCLAUSULACONTRATO,'
+      '  CODIGOCONTRATO = :CODIGOCONTRATO,'
+      '  CONSECUTIVO = :CONSECUTIVO,'
+      '  TITULO = :TITULO,'
+      '  TEXTO = :TEXTO'
+      'where'
+      '  CODIGOCLAUSULACONTRATO = :OLD_CODIGOCLAUSULACONTRATO')
+    InsertSQL.Strings = (
+      'insert into CLAUSULACONTRATO'
+      
+        '  (CODIGOCLAUSULACONTRATO, CODIGOCONTRATO, CONSECUTIVO, TITULO, ' +
+        'TEXTO)'
+      'values'
+      
+        '  (:CODIGOCLAUSULACONTRATO, :CODIGOCONTRATO, :CONSECUTIVO, :TITU' +
+        'LO, :TEXTO)')
+    DeleteSQL.Strings = (
+      'delete from CLAUSULACONTRATO'
+      'where'
+      '  CODIGOCLAUSULACONTRATO = :OLD_CODIGOCLAUSULACONTRATO')
+    Left = 565
+    Top = 101
+  end
+  object dsgeografico: TDataSource
+    DataSet = qGeografico
+    Left = 927
+    Top = 422
+  end
+  object qImagen: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsActividadContrato
+    SQL.Strings = (
+      
+        'SELECT CODIGOIMAGEN,GRAFICO FROM IMAGENES I, ESTRUCTURA E,ACTIVI' +
+        'DAD A'
+      'WHERE I.CODIGOIMAGEN=E.REFERENCIA'
+      'AND A.CODIGOESTRUCTURA=E.CODIGOESTRUCTURA'
+      'AND A.CODIGOACTIVIDAD=:CODIGOACTIVIDAD')
+    Left = 643
+    Top = 422
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'CODIGOACTIVIDAD'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsImagen: TDataSource
+    DataSet = qImagen
+    Left = 643
+    Top = 468
+  end
+  object qLiquidacion: TQuery
+    CachedUpdates = True
+    AfterOpen = qLiquidacionAfterOpen
+    BeforeInsert = qLiquidacionBeforeInsert
+    AfterInsert = qLiquidacionAfterInsert
+    BeforePost = qLiquidacionBeforePost
+    AfterPost = qLiquidacionAfterPost
+    BeforeDelete = qLiquidacionBeforeDelete
+    AfterDelete = qLiquidacionAfterDelete
+    OnCalcFields = qLiquidacionCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsContrato
+    SQL.Strings = (
+      'select * from contratoliquidacion'
+      'where codigocontrato=:codigocontrato'
+      'order by consecutivo')
+    UpdateObject = updLiquidacion
+    Left = 875
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOCONTRATO'
+        ParamType = ptUnknown
+      end>
+    object qLiquidacionCODIGOCONTRATOLIQUIDACION: TFloatField
+      FieldName = 'CODIGOCONTRATOLIQUIDACION'
+      Origin = 'CONTRATOLIQUIDACION.CODIGOCONTRATOLIQUIDACION'
+    end
+    object qLiquidacionCODIGOCONTRATO: TFloatField
+      FieldName = 'CODIGOCONTRATO'
+      Origin = 'CONTRATOLIQUIDACION.CODIGOCONTRATO'
+    end
+    object qLiquidacionCONSECUTIVO: TFloatField
+      FieldName = 'CONSECUTIVO'
+      Origin = 'CONTRATOLIQUIDACION.CONSECUTIVO'
+    end
+    object qLiquidacionFECHA: TDateTimeField
+      FieldName = 'FECHA'
+      Origin = 'CONTRATOLIQUIDACION.FECHA'
+      OnValidate = qLiquidacionFECHAValidate
+    end
+    object qLiquidacionVALORACTIVIDADACTUAL: TFloatField
+      FieldName = 'VALORACTIVIDADACTUAL'
+      Origin = 'CONTRATOLIQUIDACION.VALORACTIVIDADACTUAL'
+      currency = True
+    end
+    object qLiquidacionVALORMATERIALACTUAL: TFloatField
+      FieldName = 'VALORMATERIALACTUAL'
+      Origin = 'CONTRATOLIQUIDACION.VALORMATERIALACTUAL'
+      currency = True
+    end
+    object qLiquidacionVALORACTIVIDADTOTAL: TFloatField
+      FieldName = 'VALORACTIVIDADTOTAL'
+      Origin = 'CONTRATOLIQUIDACION.VALORACTIVIDADTOTAL'
+      currency = True
+    end
+    object qLiquidacionVALORMATERIALTOTAL: TFloatField
+      FieldName = 'VALORMATERIALTOTAL'
+      Origin = 'CONTRATOLIQUIDACION.VALORMATERIALTOTAL'
+      currency = True
+    end
+    object qLiquidacionVALORLIQUIDACIONACTUAL: TFloatField
+      FieldName = 'VALORLIQUIDACIONACTUAL'
+      Origin = 'CONTRATOLIQUIDACION.VALORLIQUIDACIONACTUAL'
+      currency = True
+    end
+    object qLiquidacionVALORLIQUIDACIONTOTAL: TFloatField
+      FieldName = 'VALORLIQUIDACIONTOTAL'
+      Origin = 'CONTRATOLIQUIDACION.VALORLIQUIDACIONTOTAL'
+      currency = True
+    end
+    object qLiquidacionACTA: TFloatField
+      FieldName = 'ACTA'
+      Origin = 'CONTRATOLIQUIDACION.ACTA'
+    end
+    object qLiquidacionFINAL: TStringField
+      FieldName = 'FINAL'
+      Origin = 'CONTRATOLIQUIDACION.FINAL'
+      Size = 1
+    end
+    object qLiquidacionValorIva: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ValorIva'
+      currency = True
+      Calculated = True
+    end
+    object qLiquidacionValorAIU: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ValorAIU'
+      currency = True
+      Calculated = True
+    end
+    object qLiquidacionCostoConAIU: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'CostoConAIU'
+      currency = True
+      Calculated = True
+    end
+    object qLiquidacionCostoTotal: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'CostoTotal'
+      currency = True
+      Calculated = True
+    end
+  end
+  object dsLiquidacion: TDataSource
+    DataSet = qLiquidacion
+    Left = 876
+    Top = 54
+  end
+  object updLiquidacion: TUpdateSQL
+    ModifySQL.Strings = (
+      'update contratoliquidacion'
+      'set'
+      '  CODIGOCONTRATOLIQUIDACION = :CODIGOCONTRATOLIQUIDACION,'
+      '  CODIGOCONTRATO = :CODIGOCONTRATO,'
+      '  CONSECUTIVO = :CONSECUTIVO,'
+      '  FECHA = :FECHA,'
+      '  VALORACTIVIDADACTUAL = :VALORACTIVIDADACTUAL,'
+      '  VALORMATERIALACTUAL = :VALORMATERIALACTUAL,'
+      '  VALORACTIVIDADTOTAL = :VALORACTIVIDADTOTAL,'
+      '  VALORMATERIALTOTAL = :VALORMATERIALTOTAL,'
+      '  VALORLIQUIDACIONACTUAL = :VALORLIQUIDACIONACTUAL,'
+      '  VALORLIQUIDACIONTOTAL = :VALORLIQUIDACIONTOTAL,'
+      '  ACTA = :ACTA,'
+      '  FINAL = :FINAL'
+      'where'
+      '  CODIGOCONTRATOLIQUIDACION = :OLD_CODIGOCONTRATOLIQUIDACION '
+      'and'
+      '  CODIGOCONTRATO = :OLD_CODIGOCONTRATO and'
+      '  CONSECUTIVO = :OLD_CONSECUTIVO and'
+      '  FECHA = :OLD_FECHA')
+    InsertSQL.Strings = (
+      'insert into contratoliquidacion'
+      
+        '  (CODIGOCONTRATOLIQUIDACION, CODIGOCONTRATO, CONSECUTIVO, FECHA' +
+        ', VALORACTIVIDADACTUAL, '
+      
+        '   VALORMATERIALACTUAL, VALORACTIVIDADTOTAL, VALORMATERIALTOTAL,' +
+        ' VALORLIQUIDACIONACTUAL, '
+      '   VALORLIQUIDACIONTOTAL, ACTA, FINAL)'
+      'values'
+      
+        '  (:CODIGOCONTRATOLIQUIDACION, :CODIGOCONTRATO, :CONSECUTIVO, :F' +
+        'ECHA, :VALORACTIVIDADACTUAL, '
+      
+        '   :VALORMATERIALACTUAL, :VALORACTIVIDADTOTAL, :VALORMATERIALTOT' +
+        'AL, :VALORLIQUIDACIONACTUAL, '
+      '   :VALORLIQUIDACIONTOTAL, :ACTA, :FINAL)')
+    DeleteSQL.Strings = (
+      'delete from contratoliquidacion'
+      'where'
+      '  CODIGOCONTRATOLIQUIDACION = :OLD_CODIGOCONTRATOLIQUIDACION and'
+      '  CODIGOCONTRATO = :OLD_CODIGOCONTRATO and'
+      '  CONSECUTIVO = :OLD_CONSECUTIVO and'
+      '  FECHA = :OLD_FECHA')
+    Left = 878
+    Top = 99
+  end
+  object qLiquidacionMaterial: TQuery
+    CachedUpdates = True
+    AfterInsert = qLiquidacionMaterialAfterInsert
+    AfterPost = qLiquidacionMaterialAfterPost
+    OnCalcFields = qLiquidacionMaterialCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsLiquidacion
+    SQL.Strings = (
+      'select * from contratoliquidacionmaterial'
+      'where codigocontratoliquidacion=:codigocontratoliquidacion')
+    UpdateObject = updLiquidacionMaterial
+    Left = 967
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOCONTRATOLIQUIDACION'
+        ParamType = ptUnknown
+      end>
+    object qLiquidacionMaterialCODIGOCONTRATOLIQUIDACION: TFloatField
+      FieldName = 'CODIGOCONTRATOLIQUIDACION'
+      Origin = 'CONTRATOLIQUIDACIONMATERIAL.CODIGOCONTRATOLIQUIDACION'
+    end
+    object qLiquidacionMaterialCODIGOCONTRATOOBRA: TFloatField
+      FieldName = 'CODIGOCONTRATOOBRA'
+      Origin = 'CONTRATOLIQUIDACIONMATERIAL.CODIGOCONTRATOOBRA'
+    end
+    object qLiquidacionMaterialCODIGOMATERIAL: TFloatField
+      FieldName = 'CODIGOMATERIAL'
+      Origin = 'CONTRATOLIQUIDACIONMATERIAL.CANTIDADLIQUIDADA'
+    end
+    object qLiquidacionMaterialCODIGOCONTRATO: TFloatField
+      FieldName = 'CODIGOCONTRATO'
+      Origin = 'CONTRATOLIQUIDACIONMATERIAL.CODIGOCONTRATOOBRA'
+    end
+    object qLiquidacionMaterialCONSECUTIVO: TFloatField
+      FieldName = 'CONSECUTIVO'
+      Origin = 'CONTRATOLIQUIDACIONMATERIAL.CANTIDADLIQUIDADA'
+    end
+    object qLiquidacionMaterialValorUnitario: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ValorUnitario'
+      Calculated = True
+    end
+    object qLiquidacionMaterialCANTIDADLIQUIDADAACTUAL: TFloatField
+      FieldName = 'CANTIDADLIQUIDADAACTUAL'
+      Origin = 'CONTRATOLIQUIDACIONMATERIAL.CANTIDADLIQUIDADAACTUAL'
+    end
+    object qLiquidacionMaterialCANTIDADLIQUIDADATOTAL: TFloatField
+      FieldName = 'CANTIDADLIQUIDADATOTAL'
+      Origin = 'CONTRATOLIQUIDACIONMATERIAL.CANTIDADLIQUIDADATOTAL'
+    end
+    object qLiquidacionMaterialCODIGOMATERIALCONTRATOOBRA: TFloatField
+      FieldName = 'CODIGOMATERIALCONTRATOOBRA'
+      Origin = 'CONTRATOLIQUIDACIONMATERIAL.CODIGOMATERIALCONTRATOOBRA'
+    end
+  end
+  object dsLiquidacionMaterial: TDataSource
+    DataSet = qLiquidacionMaterial
+    Left = 968
+    Top = 54
+  end
+  object updLiquidacionMaterial: TUpdateSQL
+    ModifySQL.Strings = (
+      'update contratoliquidacionmaterial'
+      'set'
+      '  CODIGOCONTRATOLIQUIDACION = :CODIGOCONTRATOLIQUIDACION,'
+      '  CODIGOCONTRATO = :CODIGOCONTRATO,'
+      '  CODIGOCONTRATOOBRA = :CODIGOCONTRATOOBRA,'
+      '  CONSECUTIVO = :CONSECUTIVO,'
+      '  CODIGOMATERIALCONTRATOOBRA = :CODIGOMATERIALCONTRATOOBRA,'
+      '  CODIGOMATERIAL = :CODIGOMATERIAL,'
+      '  CANTIDADLIQUIDADAACTUAL = :CANTIDADLIQUIDADAACTUAL,'
+      '  CANTIDADLIQUIDADATOTAL = :CANTIDADLIQUIDADATOTAL'
+      'where'
+      '  CODIGOCONTRATOLIQUIDACION = :OLD_CODIGOCONTRATOLIQUIDACION '
+      'and'
+      '  CODIGOMATERIALCONTRATOOBRA = '
+      ':OLD_CODIGOMATERIALCONTRATOOBRA')
+    InsertSQL.Strings = (
+      'insert into contratoliquidacionmaterial'
+      
+        '  (CODIGOCONTRATOLIQUIDACION, CODIGOCONTRATO, CODIGOCONTRATOOBRA' +
+        ', CONSECUTIVO, '
+      
+        '   CODIGOMATERIALCONTRATOOBRA, CODIGOMATERIAL, CANTIDADLIQUIDADA' +
+        'ACTUAL, '
+      '   CANTIDADLIQUIDADATOTAL)'
+      'values'
+      
+        '  (:CODIGOCONTRATOLIQUIDACION, :CODIGOCONTRATO, :CODIGOCONTRATOO' +
+        'BRA, :CONSECUTIVO, '
+      
+        '   :CODIGOMATERIALCONTRATOOBRA, :CODIGOMATERIAL, :CANTIDADLIQUID' +
+        'ADAACTUAL, '
+      '   :CANTIDADLIQUIDADATOTAL)')
+    DeleteSQL.Strings = (
+      'delete from contratoliquidacionmaterial'
+      'where'
+      '  CODIGOCONTRATOLIQUIDACION = :OLD_CODIGOCONTRATOLIQUIDACION and'
+      '  CODIGOMATERIALCONTRATOOBRA = :OLD_CODIGOMATERIALCONTRATOOBRA')
+    Left = 970
+    Top = 99
+  end
+  object qLiquidacionActividad: TQuery
+    CachedUpdates = True
+    AfterPost = qLiquidacionActividadAfterPost
+    AfterDelete = qLiquidacionActividadAfterDelete
+    OnCalcFields = qLiquidacionActividadCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsLiquidacion
+    SQL.Strings = (
+      'select * from contratoliquidacionactividad'
+      'where codigocontratoliquidacion=:codigocontratoliquidacion')
+    UpdateObject = updLiquidacionActividad
+    Left = 1070
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOCONTRATOLIQUIDACION'
+        ParamType = ptUnknown
+      end>
+    object qLiquidacionActividadCODIGOCONTRATOLIQUIDACION: TFloatField
+      FieldName = 'CODIGOCONTRATOLIQUIDACION'
+      Origin = 'CONTRATOLIQUIDACIONACTIVIDAD.CODIGOCONTRATOLIQUIDACION'
+    end
+    object qLiquidacionActividadCODIGOCONTRATOOBRA: TFloatField
+      FieldName = 'CODIGOCONTRATOOBRA'
+      Origin = 'CONTRATOLIQUIDACIONACTIVIDAD.CODIGOCONTRATOOBRA'
+    end
+    object qLiquidacionActividadCODIGOCONTRATO: TFloatField
+      FieldName = 'CODIGOCONTRATO'
+      Origin = 'CONTRATOLIQUIDACIONACTIVIDAD.CODIGOACTIVIDADCONTRATO'
+    end
+    object qLiquidacionActividadCONSECUTIVO: TFloatField
+      FieldName = 'CONSECUTIVO'
+      Origin = 'CONTRATOLIQUIDACIONACTIVIDAD.CANTIDADLIQUIDADA'
+    end
+    object qLiquidacionActividadValorUnitario: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ValorUnitario'
+      Calculated = True
+    end
+    object qLiquidacionActividadCANTIDADLIQUIDADAACTUAL: TFloatField
+      FieldName = 'CANTIDADLIQUIDADAACTUAL'
+      Origin = 'CONTRATOLIQUIDACIONACTIVIDAD.CANTIDADLIQUIDADAACTUAL'
+    end
+    object qLiquidacionActividadCANTIDADLIQUIDADATOTAL: TFloatField
+      FieldName = 'CANTIDADLIQUIDADATOTAL'
+      Origin = 'CONTRATOLIQUIDACIONACTIVIDAD.CANTIDADLIQUIDADATOTAL'
+    end
+    object qLiquidacionActividadCODIGOACTIVIDADCONTRATOOBRA: TFloatField
+      FieldName = 'CODIGOACTIVIDADCONTRATOOBRA'
+      Origin = 'CONTRATOLIQUIDACIONACTIVIDAD.CODIGOACTIVIDADCONTRATOOBRA'
+    end
+    object qLiquidacionActividadCODIGOACTIVIDAD: TFloatField
+      FieldName = 'CODIGOACTIVIDAD'
+      Origin = 'CONTRATOLIQUIDACIONACTIVIDAD.CODIGOACTIVIDAD'
+    end
+  end
+  object dsLiquidacionActividad: TDataSource
+    DataSet = qLiquidacionActividad
+    Left = 1071
+    Top = 54
+  end
+  object updLiquidacionActividad: TUpdateSQL
+    ModifySQL.Strings = (
+      'update contratoliquidacionactividad'
+      'set'
+      '  CODIGOCONTRATOLIQUIDACION = :CODIGOCONTRATOLIQUIDACION,'
+      '  CODIGOCONTRATOOBRA = :CODIGOCONTRATOOBRA,'
+      '  CODIGOCONTRATO = :CODIGOCONTRATO,'
+      '  CONSECUTIVO = :CONSECUTIVO,'
+      '  CODIGOACTIVIDADCONTRATOOBRA = :CODIGOACTIVIDADCONTRATOOBRA,'
+      '  CODIGOACTIVIDAD = :CODIGOACTIVIDAD,'
+      '  CANTIDADLIQUIDADAACTUAL = :CANTIDADLIQUIDADAACTUAL,'
+      '  CANTIDADLIQUIDADATOTAL = :CANTIDADLIQUIDADATOTAL'
+      'where'
+      '  CODIGOCONTRATOLIQUIDACION = :OLD_CODIGOCONTRATOLIQUIDACION '
+      'and'
+      '  CODIGOACTIVIDADCONTRATOOBRA = '
+      ':OLD_CODIGOACTIVIDADCONTRATOOBRA')
+    InsertSQL.Strings = (
+      'insert into contratoliquidacionactividad'
+      
+        '  (CODIGOCONTRATOLIQUIDACION, CODIGOCONTRATOOBRA, CODIGOCONTRATO' +
+        ', CONSECUTIVO, '
+      
+        '   CODIGOACTIVIDADCONTRATOOBRA, CODIGOACTIVIDAD, CANTIDADLIQUIDA' +
+        'DAACTUAL, '
+      '   CANTIDADLIQUIDADATOTAL)'
+      'values'
+      
+        '  (:CODIGOCONTRATOLIQUIDACION, :CODIGOCONTRATOOBRA, :CODIGOCONTR' +
+        'ATO, :CONSECUTIVO, '
+      
+        '   :CODIGOACTIVIDADCONTRATOOBRA, :CODIGOACTIVIDAD, :CANTIDADLIQU' +
+        'IDADAACTUAL, '
+      '   :CANTIDADLIQUIDADATOTAL)')
+    DeleteSQL.Strings = (
+      'delete from contratoliquidacionactividad'
+      'where'
+      '  CODIGOCONTRATOLIQUIDACION = :OLD_CODIGOCONTRATOLIQUIDACION and'
+      '  CODIGOACTIVIDADCONTRATOOBRA = :OLD_CODIGOACTIVIDADCONTRATOOBRA')
+    Left = 1073
+    Top = 99
+  end
+  object PopupMenuLiquidacionParcial: TPopupMenu
+    Left = 47
+    Top = 184
+    object ActadeLiquidacinParcial1: TMenuItem
+      Caption = 'Acta de Liquidación Parcial'
+      OnClick = ActadeLiquidacinParcial1Click
+    end
+    object ActividadesLiquidadas1: TMenuItem
+      Caption = 'Actividades Liquidadas'
+      OnClick = ActividadesLiquidadas1Click
+    end
+    object MaterialesLiquidados2: TMenuItem
+      Caption = 'Materiales Liquidados'
+      OnClick = MaterialesLiquidados2Click
+    end
+  end
+  object dMenuCIA: TdMenuArbol
+    OwnerDraw = True
+    DatabaseName = 'BaseDato'
+    TableName = 'Administrativo'
+    TableTitle = 'MetadataAdministrativo'
+    FiltroInicial = '(Nivel = 3)'
+    OnSelectID = dMenuCIASelectID
+    FieldsTableName = 
+      'CODIGO=CODIGOARBOL, ID=CODIGOADMINISTRATIVO, CODIGONIVEL=NOMBREC' +
+      'ATEGORIA, NOMBRE=NOMBREADMINISTRATIVO, NIVEL=NIVEL'
+    FieldsTableTitle = 
+      'IDNIVEL=CODIGONIVEL, NIVEL=NIVELADMINISTRATIVO, CAMPO=CAMPOADMIN' +
+      'ISTRATIVO, DESCRIPCION=DESCRIPCIONCAMPO'
+    Left = 33
+    Top = 367
+  end
+  object qCIA: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsContrato
+    SQL.Strings = (
+      
+        'SELECT NOMBREADMINISTRATIVO,NOMBRECATEGORIA, CODIGOCENTROCOSTO, ' +
+        'CODIGOAREARESPONSABILIDAD'
+      'FROM ADMINISTRATIVO'
+      'WHERE CODIGOADMINISTRATIVO=:CODIGOADMINISTRATIVO'
+      '')
+    Left = 591
+    Top = 529
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end>
+    object qCIANOMBREADMINISTRATIVO: TStringField
+      FieldName = 'NOMBREADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.NOMBREADMINISTRATIVO'
+      Size = 250
+    end
+    object qCIANOMBRECATEGORIA: TStringField
+      FieldName = 'NOMBRECATEGORIA'
+      Origin = 'ADMINISTRATIVO.NOMBRECATEGORIA'
+      Size = 80
+    end
+    object qCIACODIGOCENTROCOSTO: TFloatField
+      FieldName = 'CODIGOCENTROCOSTO'
+      Origin = 'ADMINISTRATIVO.CODIGOCENTROCOSTO'
+    end
+    object qCIACODIGOAREARESPONSABILIDAD: TFloatField
+      FieldName = 'CODIGOAREARESPONSABILIDAD'
+      Origin = 'ADMINISTRATIVO.CODIGOAREARESPONSABILIDAD'
+    end
+  end
+  object qContrato: TQuery
+    CachedUpdates = True
+    AfterOpen = qContratoAfterOpen
+    AfterInsert = qContratoAfterInsert
+    AfterPost = qContratoAfterPost
+    AfterCancel = qContratoAfterCancel
+    AfterDelete = qContratoAfterDelete
+    OnCalcFields = qContratoCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT CODIGOCONTRATO, NUMEROCONTRATO, CODIGOADMINISTRATIVO, COD' +
+        'IGOESTADOCONTRATO, CODIGOTIPOCONTRATO, CODIGOCONTRATISTA,'
+      
+        'CODIGOINTERVENTOR, OBJETO, FECHAASIGNACION, FECHAINICIO, FECHAEN' +
+        'TREGA, FECHACERTIFICADO, FECHALIQUIDACION, ADMINISTRACION,'
+      
+        'IMPREVISTOS, UTILIDADES, IVA, MATERIALPRESUPUESTADO, TRANSPORTEP' +
+        'RESUPUESTADO, EQUIPOPRESUPUESTADO, MANOOBRAPRESUPUESTADO, SECUEN' +
+        'CIA, '
+      
+        'ANO, CODIGOGEOGRAFICO, CODIGOPRESUPUESTO, MONTOTOTAL, MATERIALEJ' +
+        'ECUTADO, MANOOBRAEJECUTADO, EQUIPOEJECUTADO, TRANSPORTEEJECUTADO' +
+        ','
+      'REPRESENTANTECONTRATISTA '
+      'FROM CONTRATO'
+      'WHERE CODIGOCONTRATO=:CODIGOCONTRATO')
+    UpdateObject = updContrato
+    Left = 631
+    Top = 5
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOCONTRATO'
+        ParamType = ptUnknown
+      end>
+    object qContratoValorIVA: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ValorIVA'
+      currency = True
+      Calculated = True
+    end
+    object qContratoCostoDirecto: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'CostoDirecto'
+      currency = True
+      Calculated = True
+    end
+    object qContratoCostoTotal: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'CostoTotal'
+      currency = True
+      Calculated = True
+    end
+    object qContratoValorMaterial: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ValorMaterial'
+      currency = True
+      Calculated = True
+    end
+    object qContratoValorManoObra: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ValorManoObra'
+      currency = True
+      Calculated = True
+    end
+    object qContratoValorEquipo: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ValorEquipo'
+      currency = True
+      Calculated = True
+    end
+    object qContratoValorTransporte: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ValorTransporte'
+      currency = True
+      Calculated = True
+    end
+    object qContratoAIU: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'AIU'
+      DisplayFormat = #39'%'#39' 0.00'
+      Calculated = True
+    end
+    object qContratoValorAIU: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ValorAIU'
+      Calculated = True
+    end
+    object qContratoCostoDirectoSinAIU: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'CostoDirectoSinAIU'
+      Calculated = True
+    end
+    object qContratoNombreGeografico: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'NombreGeografico'
+      Size = 100
+      Calculated = True
+    end
+    object qContratoCODIGOCONTRATO: TFloatField
+      FieldName = 'CODIGOCONTRATO'
+      Origin = 'CONTRATO.CODIGOCONTRATO'
+      OnChange = qContratoCODIGOCONTRATOChange
+    end
+    object qContratoNUMEROCONTRATO: TStringField
+      FieldName = 'NUMEROCONTRATO'
+      Origin = 'CONTRATO.NUMEROCONTRATO'
+      Size = 30
+    end
+    object qContratoCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'CONTRATO.CODIGOADMINISTRATIVO'
+      OnChange = qContratoCODIGOADMINISTRATIVOChange
+      OnValidate = qContratoCODIGOADMINISTRATIVOValidate
+    end
+    object qContratoCODIGOESTADOCONTRATO: TStringField
+      FieldName = 'CODIGOESTADOCONTRATO'
+      Origin = 'CONTRATO.CODIGOESTADOCONTRATO'
+      Size = 1
+    end
+    object qContratoCODIGOTIPOCONTRATO: TStringField
+      FieldName = 'CODIGOTIPOCONTRATO'
+      Origin = 'CONTRATO.CODIGOTIPOCONTRATO'
+      Size = 1
+    end
+    object qContratoCODIGOCONTRATISTA: TStringField
+      FieldName = 'CODIGOCONTRATISTA'
+      Origin = 'CONTRATO.CODIGOCONTRATISTA'
+      OnChange = qContratoCODIGOCONTRATISTAChange
+      Size = 14
+    end
+    object qContratoCODIGOINTERVENTOR: TFloatField
+      FieldName = 'CODIGOINTERVENTOR'
+      Origin = 'CONTRATO.CODIGOINTERVENTOR'
+    end
+    object qContratoOBJETO: TBlobField
+      FieldName = 'OBJETO'
+      Origin = 'CONTRATO.OBJETO'
+      BlobType = ftBlob
+      Size = 1
+    end
+    object qContratoFECHAASIGNACION: TDateTimeField
+      FieldName = 'FECHAASIGNACION'
+      Origin = 'CONTRATO.FECHAASIGNACION'
+    end
+    object qContratoFECHAINICIO: TDateTimeField
+      FieldName = 'FECHAINICIO'
+      Origin = 'CONTRATO.FECHAINICIO'
+    end
+    object qContratoFECHAENTREGA: TDateTimeField
+      FieldName = 'FECHAENTREGA'
+      Origin = 'CONTRATO.FECHAENTREGA'
+    end
+    object qContratoFECHACERTIFICADO: TDateTimeField
+      FieldName = 'FECHACERTIFICADO'
+      Origin = 'CONTRATO.FECHACERTIFICADO'
+    end
+    object qContratoFECHALIQUIDACION: TDateTimeField
+      FieldName = 'FECHALIQUIDACION'
+      Origin = 'CONTRATO.FECHALIQUIDACION'
+    end
+    object qContratoADMINISTRACION: TFloatField
+      FieldName = 'ADMINISTRACION'
+      Origin = 'CONTRATO.ADMINISTRACION'
+    end
+    object qContratoIMPREVISTOS: TFloatField
+      FieldName = 'IMPREVISTOS'
+      Origin = 'CONTRATO.IMPREVISTOS'
+    end
+    object qContratoUTILIDADES: TFloatField
+      FieldName = 'UTILIDADES'
+      Origin = 'CONTRATO.UTILIDADES'
+    end
+    object qContratoIVA: TFloatField
+      FieldName = 'IVA'
+      Origin = 'CONTRATO.IVA'
+      DisplayFormat = #39'%'#39' 0.00'
+    end
+    object qContratoMATERIALPRESUPUESTADO: TFloatField
+      FieldName = 'MATERIALPRESUPUESTADO'
+      Origin = 'CONTRATO.MATERIALPRESUPUESTADO'
+      currency = True
+    end
+    object qContratoTRANSPORTEPRESUPUESTADO: TFloatField
+      FieldName = 'TRANSPORTEPRESUPUESTADO'
+      Origin = 'CONTRATO.TRANSPORTEPRESUPUESTADO'
+      currency = True
+    end
+    object qContratoEQUIPOPRESUPUESTADO: TFloatField
+      FieldName = 'EQUIPOPRESUPUESTADO'
+      Origin = 'CONTRATO.EQUIPOPRESUPUESTADO'
+      currency = True
+    end
+    object qContratoMANOOBRAPRESUPUESTADO: TFloatField
+      FieldName = 'MANOOBRAPRESUPUESTADO'
+      Origin = 'CONTRATO.MANOOBRAPRESUPUESTADO'
+      currency = True
+    end
+    object qContratoSECUENCIA: TFloatField
+      FieldName = 'SECUENCIA'
+      Origin = 'CONTRATO.SECUENCIA'
+    end
+    object qContratoANO: TStringField
+      FieldName = 'ANO'
+      Origin = 'CONTRATO.ANO'
+      Size = 4
+    end
+    object qContratoCODIGOGEOGRAFICO: TFloatField
+      FieldName = 'CODIGOGEOGRAFICO'
+      Origin = 'CONTRATO.CODIGOGEOGRAFICO'
+      OnChange = qContratoCODIGOGEOGRAFICOChange
+    end
+    object qContratoCODIGOPRESUPUESTO: TFloatField
+      FieldName = 'CODIGOPRESUPUESTO'
+      Origin = 'CONTRATO.CODIGOPRESUPUESTO'
+    end
+    object qContratoMONTOTOTAL: TFloatField
+      FieldName = 'MONTOTOTAL'
+      Origin = 'CONTRATO.MONTOTOTAL'
+    end
+    object qContratoREPRESENTANTECONTRATISTA: TStringField
+      FieldName = 'REPRESENTANTECONTRATISTA'
+      Origin = 'CONTRATO.REPRESENTANTECONTRATISTA'
+      Size = 80
+    end
+    object qContratoIvaSobre: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'IvaSobre'
+      Calculated = True
+    end
+    object qContratoMATERIALEJECUTADO: TFloatField
+      FieldName = 'MATERIALEJECUTADO'
+      Origin = 'CONTRATO.MATERIALEJECUTADO'
+      currency = True
+    end
+    object qContratoMANOOBRAEJECUTADO: TFloatField
+      FieldName = 'MANOOBRAEJECUTADO'
+      Origin = 'CONTRATO.MANOOBRAEJECUTADO'
+      currency = True
+    end
+    object qContratoEQUIPOEJECUTADO: TFloatField
+      FieldName = 'EQUIPOEJECUTADO'
+      Origin = 'CONTRATO.EQUIPOEJECUTADO'
+      currency = True
+    end
+    object qContratoTRANSPORTEEJECUTADO: TFloatField
+      FieldName = 'TRANSPORTEEJECUTADO'
+      Origin = 'CONTRATO.TRANSPORTEEJECUTADO'
+      currency = True
+    end
+    object qContratoValorIvaPresupuestado: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ValorIvaPresupuestado'
+      currency = True
+      Calculated = True
+    end
+    object qContratoCostoDirectoPresupuestado: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'CostoDirectoPresupuestado'
+      currency = True
+      Calculated = True
+    end
+    object qContratoCostoTotalPresupuestado: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'CostoTotalPresupuestado'
+      currency = True
+      Calculated = True
+    end
+    object qContratoValorMaterialPresupuestado: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ValorMaterialPresupuestado'
+      currency = True
+      Calculated = True
+    end
+    object qContratoValorManoObraPresupuestado: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ValorManoObraPresupuestado'
+      currency = True
+      Calculated = True
+    end
+    object qContratoValorEquipoPresupuestado: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ValorEquipoPresupuestado'
+      currency = True
+      Calculated = True
+    end
+    object qContratoValorTransportePresupuestado: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ValorTransportePresupuestado'
+      currency = True
+      Calculated = True
+    end
+    object qContratoValorAIUPresupuestado: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ValorAIUPresupuestado'
+      currency = True
+      Calculated = True
+    end
+    object qContratoCostoDirectoSinAIUPresupuestado: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'CostoDirectoSinAIUPresupuestado'
+      currency = True
+      Calculated = True
+    end
+  end
+end

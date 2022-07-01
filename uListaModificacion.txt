@@ -1,0 +1,359 @@
+inherited fListaModificacion: TfListaModificacion
+  Left = 143
+  Top = 116
+  Caption = 'Listado de Paralelo EnerGis'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    object sbInsertar: TSpeedButton [0]
+      Left = 126
+      Top = 4
+      Width = 23
+      Height = 21
+      Hint = 'Ingresar Dato en Lista'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        33333333FF33333333FF333993333333300033377F3333333777333993333333
+        300033F77FFF3333377739999993333333333777777F3333333F399999933333
+        33003777777333333377333993333333330033377F3333333377333993333333
+        3333333773333333333F333333333333330033333333F33333773333333C3333
+        330033333337FF3333773333333CC333333333FFFFF77FFF3FF33CCCCCCCCCC3
+        993337777777777F77F33CCCCCCCCCC3993337777777777377333333333CC333
+        333333333337733333FF3333333C333330003333333733333777333333333333
+        3000333333333333377733333333333333333333333333333333}
+      NumGlyphs = 2
+      OnClick = sbInsertarClick
+    end
+    object sbEditar: TSpeedButton [1]
+      Left = 150
+      Top = 4
+      Width = 23
+      Height = 21
+      Hint = 'Editar Dato en Lista'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333000000
+        000033333377777777773333330FFFFFFFF03FF3FF7FF33F3FF700300000FF0F
+        00F077F777773F737737E00BFBFB0FFFFFF07773333F7F3333F7E0BFBF000FFF
+        F0F077F3337773F3F737E0FBFBFBF0F00FF077F3333FF7F77F37E0BFBF00000B
+        0FF077F3337777737337E0FBFBFBFBF0FFF077F33FFFFFF73337E0BF0000000F
+        FFF077FF777777733FF7000BFB00B0FF00F07773FF77373377373330000B0FFF
+        FFF03337777373333FF7333330B0FFFF00003333373733FF777733330B0FF00F
+        0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
+        00333377737FFFFF773333303300000003333337337777777333}
+      NumGlyphs = 2
+      OnClick = sbEditarClick
+    end
+    object sbTraerAlFrente: TSpeedButton [2]
+      Left = 173
+      Top = 4
+      Width = 23
+      Height = 21
+      Hint = 'Traer al Frente'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333300000000
+        0EEE333377777777777733330FF00FBFB0EE33337F37733F377733330F0BFB0B
+        FB0E33337F73FF73337733330FF000BFBFB033337F377733333733330FFF0BFB
+        FBF033337FFF733F333733300000BF0FBFB03FF77777F3733F37000FBFB0F0FB
+        0BF077733FF7F7FF7337E0FB00000000BF0077F377777777F377E0BFBFBFBFB0
+        F0F077F3333FFFF7F737E0FBFB0000000FF077F3337777777337E0BFBFBFBFB0
+        FFF077F3333FFFF73FF7E0FBFB00000F000077FF337777737777E00FBFBFB0FF
+        0FF07773FFFFF7337F37003000000FFF0F037737777773337F7333330FFFFFFF
+        003333337FFFFFFF773333330000000003333333777777777333}
+      NumGlyphs = 2
+      OnClick = sbTraerAlFrenteClick
+    end
+    inherited Panel2: TPanel
+      inherited SBBuscar: TSpeedButton
+        OnClick = SBBuscarClick
+      end
+    end
+    inherited dNavigator1: TdNavigator
+      Hints.Strings = ()
+    end
+  end
+  object Panel4: TPanel [3]
+    Left = 0
+    Top = 410
+    Width = 790
+    Height = 115
+    Align = alBottom
+    TabOrder = 3
+    object Label1: TLabel
+      Left = 16
+      Top = 11
+      Width = 56
+      Height = 13
+      Caption = 'Descripción'
+    end
+    object DBText1: TDBText
+      Left = 16
+      Top = 32
+      Width = 449
+      Height = 73
+      Color = clSilver
+      DataField = 'DESCRIPCION'
+      DataSource = dsBase
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
+    object Label2: TLabel
+      Left = 491
+      Top = 11
+      Width = 17
+      Height = 13
+      Caption = 'CIA'
+    end
+    object DBText2: TDBText
+      Left = 491
+      Top = 32
+      Width = 254
+      Height = 73
+      Color = clSilver
+      DataField = 'NOMBREADMINISTRATIVO'
+      DataSource = dsBase
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
+  end
+  object RxDBGrid1: TRxDBGrid [4]
+    Left = 0
+    Top = 78
+    Width = 790
+    Height = 332
+    Align = alClient
+    DataSource = dsBase
+    TabOrder = 4
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    OnDblClick = sbEditarClick
+    OnTitleClick = RxDBGrid1TitleClick
+    OnMouseMove = RxDBGrid1MouseMove
+    Columns = <
+      item
+        Color = clAqua
+        Expanded = False
+        FieldName = 'CODIGOMODIFICACION'
+        Title.Alignment = taCenter
+        Title.Caption = 'Código'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'FECHATERMINACION'
+        ReadOnly = True
+        Title.Alignment = taCenter
+        Title.Caption = 'Fecha Terminación'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CODIGOADMINISTRATIVO'
+        Title.Alignment = taCenter
+        Title.Caption = 'CIA'
+        Width = 65
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'REFERENCIA'
+        Title.Alignment = taCenter
+        Title.Caption = 'ODT'
+        Width = 81
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DIRECCION'
+        Title.Alignment = taCenter
+        Title.Caption = 'Dirección'
+        Width = 192
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOMBRETIPOMODIFICACION'
+        Title.Alignment = taCenter
+        Title.Caption = 'Tipo Modificación'
+        Width = 109
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CODIGOCIRCUITO1'
+        Title.Alignment = taCenter
+        Title.Caption = 'Circuito 1'
+        Width = 80
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CODIGOCIRCUITO2'
+        Title.Alignment = taCenter
+        Title.Caption = 'Circuito 2'
+        Width = 80
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CODIGOPLANCHA'
+        Title.Alignment = taCenter
+        Title.Caption = 'Plancha'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOMBREDIGITO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Digitó'
+        Width = 222
+        Visible = True
+      end>
+  end
+  inherited dSegControl1: TdSegControl
+    Top = 124
+  end
+  inherited dsBase: TDDataSource
+    DataSet = qListaModificacion
+  end
+  object qListaModificacion: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT M.CODIGOMODIFICACION, M.FECHATERMINACION, M.CODIGOADMINIS' +
+        'TRATIVO,'
+      
+        '       A.NOMBREADMINISTRATIVO,M.DIRECCION, TM.NOMBRETIPOMODIFICA' +
+        'CION,'
+      
+        '       M.CODIGOCIRCUITO1, M.CODIGOCIRCUITO2, M.CODIGOTRAFODIS, M' +
+        '.CODIGOPLANCHA,'
+      
+        '       M.DESCRIPCION, M.CODIGODIGITO, M.CODIGODILIGENCIO, M.POTE' +
+        'NCIA,'
+      
+        '       M.CODIGOTIPOFASE, M.CODIGOTIPODISTRIBUCION, E2.NOMBREEMPL' +
+        'EADO AS NOMBREDIGITO,'
+      '       M.REFERENCIA'
+      
+        'FROM MODIFICACION M, ADMINISTRATIVO A, TIPOMODIFICACION TM, EMPL' +
+        'EADO E2'
+      'WHERE (M.CODIGOADMINISTRATIVO = A.CODIGOADMINISTRATIVO)'
+      'AND (TM.CODIGOTIPOMODIFICACION = M.CODIGOTIPOMODIFICACION)'
+      'AND (E2.CODIGOEMPLEADO = M.CODIGODIGITO)'
+      'ORDER BY CODIGOMODIFICACION')
+    Left = 280
+    Top = 208
+    object qListaModificacionCODIGOMODIFICACION: TFloatField
+      FieldName = 'CODIGOMODIFICACION'
+      Origin = 'MODIFICACION.CODIGOMODIFICACION'
+    end
+    object qListaModificacionFECHATERMINACION: TDateTimeField
+      FieldName = 'FECHATERMINACION'
+      Origin = 'MODIFICACION.FECHATERMINACION'
+      DisplayFormat = 'mmmm dd '#39'de'#39' yyyy'
+    end
+    object qListaModificacionCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'MODIFICACION.CODIGOADMINISTRATIVO'
+    end
+    object qListaModificacionNOMBREADMINISTRATIVO: TStringField
+      FieldName = 'NOMBREADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.NOMBREADMINISTRATIVO'
+      Size = 250
+    end
+    object qListaModificacionDIRECCION: TStringField
+      FieldName = 'DIRECCION'
+      Origin = 'MODIFICACION.DIRECCION'
+      Size = 50
+    end
+    object qListaModificacionNOMBRETIPOMODIFICACION: TStringField
+      FieldName = 'NOMBRETIPOMODIFICACION'
+      Origin = 'TIPOMODIFICACION.NOMBRETIPOMODIFICACION'
+      Size = 30
+    end
+    object qListaModificacionCODIGOCIRCUITO1: TStringField
+      FieldName = 'CODIGOCIRCUITO1'
+      Origin = 'MODIFICACION.CODIGOCIRCUITO1'
+      Size = 6
+    end
+    object qListaModificacionCODIGOCIRCUITO2: TStringField
+      FieldName = 'CODIGOCIRCUITO2'
+      Origin = 'MODIFICACION.CODIGOCIRCUITO2'
+      Size = 6
+    end
+    object qListaModificacionCODIGOTRAFODIS: TFloatField
+      FieldName = 'CODIGOTRAFODIS'
+      Origin = 'MODIFICACION.CODIGOTRAFODIS'
+    end
+    object qListaModificacionCODIGOPLANCHA: TStringField
+      FieldName = 'CODIGOPLANCHA'
+      Origin = 'MODIFICACION.CODIGOPLANCHA'
+      Size = 15
+    end
+    object qListaModificacionCODIGODIGITO: TFloatField
+      FieldName = 'CODIGODIGITO'
+      Origin = 'MODIFICACION.CODIGODIGITO'
+    end
+    object qListaModificacionCODIGODILIGENCIO: TFloatField
+      FieldName = 'CODIGODILIGENCIO'
+      Origin = 'MODIFICACION.CODIGODILIGENCIO'
+    end
+    object qListaModificacionPOTENCIA: TFloatField
+      FieldName = 'POTENCIA'
+      Origin = 'MODIFICACION.POTENCIA'
+    end
+    object qListaModificacionCODIGOTIPOFASE: TStringField
+      FieldName = 'CODIGOTIPOFASE'
+      Origin = 'MODIFICACION.CODIGOTIPOFASE'
+      Size = 1
+    end
+    object qListaModificacionCODIGOTIPODISTRIBUCION: TStringField
+      FieldName = 'CODIGOTIPODISTRIBUCION'
+      Origin = 'MODIFICACION.CODIGOTIPODISTRIBUCION'
+      Size = 1
+    end
+    object qListaModificacionNOMBREDIGITO: TStringField
+      FieldName = 'NOMBREDIGITO'
+      Origin = 'EMPLEADO.NOMBREEMPLEADO'
+      Size = 50
+    end
+    object qListaModificacionREFERENCIA: TStringField
+      FieldName = 'REFERENCIA'
+      Origin = 'MODIFICACION.REFERENCIA'
+      Size = 10
+    end
+    object qListaModificacionDESCRIPCION: TStringField
+      FieldName = 'DESCRIPCION'
+      Origin = 'MODIFICACION.DESCRIPCION'
+      Size = 250
+    end
+  end
+end

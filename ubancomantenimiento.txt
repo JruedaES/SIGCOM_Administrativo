@@ -1,0 +1,841 @@
+object fbancomantenimiento: Tfbancomantenimiento
+  Left = 385
+  Top = 124
+  Width = 447
+  Height = 592
+  Caption = 'Banco de Mantenimientos'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object LabelTitulo: TLabel
+    Left = 0
+    Top = 0
+    Width = 439
+    Height = 13
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'CONFIGURACIÓN DE MANTENIMIENTOS'
+    Color = clBlue
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object PanelCentral: TPanel
+    Left = 0
+    Top = 13
+    Width = 439
+    Height = 236
+    Align = alTop
+    Ctl3D = False
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -9
+    Font.Name = 'MS Reference Sans Serif'
+    Font.Style = []
+    ParentCtl3D = False
+    ParentFont = False
+    TabOrder = 0
+    object LabelCodigoTarea: TLabel
+      Left = 235
+      Top = 12
+      Width = 65
+      Height = 12
+      Caption = 'Código Mtto:'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      Visible = False
+    end
+    object LabelNombreTarea: TLabel
+      Left = 15
+      Top = 32
+      Width = 39
+      Height = 12
+      Caption = 'Nombre'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object LabelFrecuencia: TLabel
+      Left = 213
+      Top = 56
+      Width = 89
+      Height = 12
+      Caption = 'Frecuencia (Días)'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object LabelCodigoTipoMantenimiento: TLabel
+      Left = 15
+      Top = 54
+      Width = 48
+      Height = 12
+      Caption = 'Tipo Mtto'
+    end
+    object Label1: TLabel
+      Left = 15
+      Top = 76
+      Width = 72
+      Height = 12
+      Caption = 'Tipo Elemento'
+    end
+    object LabelCodigoAmbito: TLabel
+      Left = 15
+      Top = 9
+      Width = 36
+      Height = 12
+      Caption = 'Ámbito'
+    end
+    object Label2: TLabel
+      Left = 15
+      Top = 99
+      Width = 40
+      Height = 12
+      Caption = 'Tensión'
+    end
+    object DBEditCodigoTarea: TDBEdit
+      Left = 305
+      Top = 11
+      Width = 118
+      Height = 17
+      Ctl3D = False
+      DataField = 'CODIGODESCRIPTIVO'
+      DataSource = bancomantenimiento
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentCtl3D = False
+      ParentFont = False
+      TabOrder = 0
+      Visible = False
+    end
+    object DBEditNombreTarea: TDBEdit
+      Left = 95
+      Top = 31
+      Width = 327
+      Height = 17
+      DataField = 'NOMBREMANTENIMIENTO'
+      DataSource = bancomantenimiento
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+    end
+    object DBEditFrecuencia: TDBEdit
+      Left = 307
+      Top = 55
+      Width = 117
+      Height = 17
+      DataField = 'FRECUENCIA'
+      DataSource = bancomantenimiento
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+    end
+    object GroupBoxDescripcion: TGroupBox
+      Left = 8
+      Top = 116
+      Width = 417
+      Height = 113
+      Caption = 'Descripción'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 3
+      object DBMemoDescripcion: TDBMemo
+        Left = 6
+        Top = 16
+        Width = 403
+        Height = 89
+        DataField = 'DESCRIPCION'
+        DataSource = bancomantenimiento
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+      end
+    end
+    object CodigoTipoMantenimiento: TDBLookupComboBox
+      Left = 95
+      Top = 53
+      Width = 114
+      Height = 17
+      DataField = 'CODIGOTIPOMANT'
+      DataSource = bancomantenimiento
+      DropDownRows = 3
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      KeyField = 'CODIGOTIPOMANT'
+      ListField = 'NOMBREMANT'
+      ListSource = DSTipoMantenimiento
+      ParentFont = False
+      TabOrder = 4
+    end
+    object CodigoAmbito: TDBLookupComboBox
+      Left = 95
+      Top = 10
+      Width = 113
+      Height = 17
+      Ctl3D = False
+      DataField = 'CODIGOAMBITO'
+      DataSource = bancomantenimiento
+      DropDownRows = 3
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      KeyField = 'CODIGOAMBITO'
+      ListField = 'NOMBREAMBITO'
+      ListSource = DSAmbito
+      ParentCtl3D = False
+      ParentFont = False
+      TabOrder = 5
+      OnClick = CodigoAmbitoClick
+    end
+    object niveltension: TDBLookupComboBox
+      Left = 95
+      Top = 99
+      Width = 117
+      Height = 17
+      DataField = 'CODIGONIVELTENSION'
+      DataSource = bancomantenimiento
+      DropDownRows = 3
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      KeyField = 'CODIGONIVELTENSION'
+      ListField = 'TENSION'
+      ListSource = Dniveltension
+      ParentFont = False
+      TabOrder = 6
+      OnClick = niveltensionClick
+    end
+    object DBEdit1: TDBEdit
+      Left = 496
+      Top = 8
+      Width = 121
+      Height = 18
+      DataField = 'CODIGOBANCOMANTENIMIENTO'
+      DataSource = bancomantenimiento
+      ReadOnly = True
+      TabOrder = 7
+      Visible = False
+    end
+    object TipoElemento: TDBLookupComboBox
+      Left = 96
+      Top = 77
+      Width = 329
+      Height = 17
+      DataField = 'CODIGOELEMENTO'
+      DataSource = bancomantenimiento
+      DropDownRows = 3
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      KeyField = 'CODIGOELEMENTO'
+      ListField = 'NOMBRETIPOELEMENTO'
+      ListSource = Dtipoelemento
+      ParentFont = False
+      TabOrder = 8
+    end
+    object EtipoElemento1: TEdit
+      Left = 95
+      Top = 77
+      Width = 329
+      Height = 18
+      Enabled = False
+      TabOrder = 9
+      Text = 'EtipoElemento1'
+      Visible = False
+    end
+  end
+  object PanelInferior: TPanel
+    Left = 0
+    Top = 249
+    Width = 439
+    Height = 288
+    Align = alClient
+    Color = 16766890
+    Ctl3D = False
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -9
+    Font.Name = 'MS Reference Sans Serif'
+    Font.Style = []
+    ParentCtl3D = False
+    ParentFont = False
+    TabOrder = 1
+    object GroupBoxFechasEjecucion: TGroupBox
+      Left = 1
+      Top = 1
+      Width = 437
+      Height = 286
+      Align = alClient
+      Caption = 'Área Operacional'
+      Color = clBtnFace
+      ParentColor = False
+      TabOrder = 0
+      object Panel1: TPanel
+        Left = 1
+        Top = 13
+        Width = 435
+        Height = 76
+        Align = alTop
+        BevelOuter = bvNone
+        ParentColor = True
+        TabOrder = 0
+        object LabelFechaInicioEjec: TLabel
+          Left = 13
+          Top = 6
+          Width = 66
+          Height = 12
+          Caption = 'Coordinación'
+        end
+        object Label3: TLabel
+          Left = 13
+          Top = 59
+          Width = 139
+          Height = 12
+          Caption = 'Subactividades Disponibles'
+        end
+        object Label5: TLabel
+          Left = 13
+          Top = 32
+          Width = 48
+          Height = 12
+          Caption = 'Actividad'
+        end
+        object dblcbAreaOperacion: TDBLookupComboBox
+          Left = 95
+          Top = 6
+          Width = 323
+          Height = 18
+          DataField = 'CODIGOAREAOPERACIONODT'
+          DataSource = bancomantenimiento
+          KeyField = 'CODIGOAREAOPERACIONODT'
+          ListField = 'NOMBREAREAOPERACIONODT'
+          ListSource = dsAreaOperacion
+          TabOrder = 0
+          OnClick = dblcbAreaOperacionClick
+        end
+        object actividadareaoperaodt: TDBLookupComboBox
+          Left = 95
+          Top = 32
+          Width = 324
+          Height = 18
+          KeyField = 'CODIGOACTIVIDADAREAODT'
+          ListField = 'NOMBREACTIVIDADAREAODT'
+          ListSource = sActividadAreaODT
+          TabOrder = 1
+          OnClick = actividadareaoperaodtClick
+        end
+      end
+      object Panel4: TPanel
+        Left = 1
+        Top = 89
+        Width = 435
+        Height = 196
+        Align = alClient
+        BevelOuter = bvNone
+        ParentColor = True
+        TabOrder = 1
+        object listaactividadestablecida: TListBox
+          Left = 0
+          Top = 106
+          Width = 435
+          Height = 90
+          Align = alClient
+          ItemHeight = 12
+          TabOrder = 0
+        end
+        object listaactividaddisponible: TListBox
+          Left = 0
+          Top = 0
+          Width = 435
+          Height = 81
+          Align = alTop
+          ItemHeight = 12
+          TabOrder = 1
+        end
+        object Panel2: TPanel
+          Left = 0
+          Top = 81
+          Width = 435
+          Height = 25
+          Align = alTop
+          BevelOuter = bvNone
+          ParentColor = True
+          TabOrder = 2
+          object Label4: TLabel
+            Left = 10
+            Top = 5
+            Width = 133
+            Height = 12
+            Caption = 'Subactividades Asociadas'
+          end
+          object SpeedButton3: TSpeedButton
+            Left = 147
+            Top = 4
+            Width = 137
+            Height = 18
+            Hint = 'Agregar'
+            Caption = 'Agregar Subactividad'
+            Flat = True
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              0400000000000001000000000000000000001000000010000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333303333
+              333333333337F33333333333333033333333333333373F333333333333090333
+              33333333337F7F33333333333309033333333333337373F33333333330999033
+              3333333337F337F33333333330999033333333333733373F3333333309999903
+              333333337F33337F33333333099999033333333373333373F333333099999990
+              33333337FFFF3FF7F33333300009000033333337777F77773333333333090333
+              33333333337F7F33333333333309033333333333337F7F333333333333090333
+              33333333337F7F33333333333309033333333333337F7F333333333333090333
+              33333333337F7F33333333333300033333333333337773333333}
+            NumGlyphs = 2
+            OnClick = SpeedButton3Click
+          end
+          object SpeedButton5: TSpeedButton
+            Left = 287
+            Top = 4
+            Width = 137
+            Height = 18
+            Hint = 'Eliminar'
+            Caption = 'Eliminar Subactividad'
+            Flat = True
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              0400000000000001000000000000000000001000000010000000000000000000
+              8000008000000080800080000000800080008080000080808000C0C0C0000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              3333333333FFFFF3333333333999993333333333F77777FFF333333999999999
+              3333333777333777FF3333993333339993333377FF3333377FF3399993333339
+              993337777FF3333377F3393999333333993337F777FF333337FF993399933333
+              399377F3777FF333377F993339993333399377F33777FF33377F993333999333
+              399377F333777FF3377F993333399933399377F3333777FF377F993333339993
+              399377FF3333777FF7733993333339993933373FF3333777F7F3399933333399
+              99333773FF3333777733339993333339933333773FFFFFF77333333999999999
+              3333333777333777333333333999993333333333377777333333}
+            NumGlyphs = 2
+            OnClick = SpeedButton5Click
+          end
+        end
+      end
+    end
+  end
+  object PanelInferiorFinal: TPanel
+    Left = 0
+    Top = 537
+    Width = 439
+    Height = 23
+    Align = alBottom
+    Color = clBlue
+    TabOrder = 2
+    object SpeedButton1: TSpeedButton
+      Left = 258
+      Top = 3
+      Width = 75
+      Height = 17
+      Caption = 'ACEPTAR'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -9
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+        555555555555555555555555555555555555555555FF55555555555559055555
+        55555555577FF5555555555599905555555555557777F5555555555599905555
+        555555557777FF5555555559999905555555555777777F555555559999990555
+        5555557777777FF5555557990599905555555777757777F55555790555599055
+        55557775555777FF5555555555599905555555555557777F5555555555559905
+        555555555555777FF5555555555559905555555555555777FF55555555555579
+        05555555555555777FF5555555555557905555555555555777FF555555555555
+        5990555555555555577755555555555555555555555555555555}
+      NumGlyphs = 2
+      ParentFont = False
+      OnClick = SpeedButton1Click
+    end
+    object SpeedButton2: TSpeedButton
+      Left = 351
+      Top = 3
+      Width = 75
+      Height = 17
+      Caption = 'CANCELAR'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -9
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        3333333333FFFFF3333333333999993333333333F77777FFF333333999999999
+        3333333777333777FF3333993333339993333377FF3333377FF3399993333339
+        993337777FF3333377F3393999333333993337F777FF333337FF993399933333
+        399377F3777FF333377F993339993333399377F33777FF33377F993333999333
+        399377F333777FF3377F993333399933399377F3333777FF377F993333339993
+        399377FF3333777FF7733993333339993933373FF3333777F7F3399933333399
+        99333773FF3333777733339993333339933333773FFFFFF77333333999999999
+        3333333777333777333333333999993333333333377777333333}
+      NumGlyphs = 2
+      ParentFont = False
+      OnClick = SpeedButton2Click
+    end
+  end
+  object Dtipoelemento: TDataSource
+    AutoEdit = False
+    DataSet = Qtipoelemento
+    Left = 640
+    Top = 110
+  end
+  object Qtipoelemento: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM PM_ELEMENTO '
+      'WHERE CODIGOAMBITO =:CODIGOAMBITO'
+      'ORDER BY NOMBRETIPOELEMENTO')
+    Left = 640
+    Top = 62
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'CODIGOAMBITO'
+        ParamType = ptUnknown
+      end>
+  end
+  object DSTipoMantenimiento: TDataSource
+    DataSet = QTipoMantenimiento
+    Left = 494
+    Top = 108
+  end
+  object QTipoMantenimiento: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOTIPOMANT, NOMBREMANT '
+      'FROM PM_TIPOMANTENIMIENTO '
+      'ORDER BY NOMBREMANT')
+    Left = 493
+    Top = 61
+  end
+  object DSAmbito: TDataSource
+    DataSet = QAmbito
+    Left = 577
+    Top = 109
+  end
+  object QAmbito: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOAMBITO, NOMBREAMBITO FROM PM_AMBITO ')
+    Left = 576
+    Top = 62
+  end
+  object qAreaOperacion: TQuery
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT *  FROM AREAOPERACIONODT'
+      'WHERE CODIGOTIPOTRABAJOODT=4'
+      'ORDER BY NOMBREAREAOPERACIONODT')
+    Left = 712
+    Top = 62
+  end
+  object dsAreaOperacion: TDataSource
+    DataSet = qAreaOperacion
+    Left = 712
+    Top = 110
+  end
+  object bancomantenimiento: TDataSource
+    DataSet = Qbancomantenimiento
+    Left = 490
+    Top = 211
+  end
+  object Qbancomantenimiento: TQuery
+    CachedUpdates = True
+    AfterPost = QbancomantenimientoAfterPost
+    AfterDelete = QbancomantenimientoAfterDelete
+    OnNewRecord = QbancomantenimientoNewRecord
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM PM_BANCOMANTENIMIENTO WHERE'
+      'codigobancomantenimiento= :CODIGO')
+    UpdateObject = Ubancomantenimiento
+    Left = 490
+    Top = 165
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGO'
+        ParamType = ptUnknown
+      end>
+    object QbancomantenimientoCODIGOBANCOMANTENIMIENTO: TFloatField
+      FieldName = 'CODIGOBANCOMANTENIMIENTO'
+      Origin = 'PM_BANCOMANTENIMIENTO.CODIGOBANCOMANTENIMIENTO'
+    end
+    object QbancomantenimientoNOMBREMANTENIMIENTO: TStringField
+      FieldName = 'NOMBREMANTENIMIENTO'
+      Origin = 'PM_BANCOMANTENIMIENTO.NOMBREMANTENIMIENTO'
+      Size = 150
+    end
+    object QbancomantenimientoCODIGONIVELTENSION: TStringField
+      FieldName = 'CODIGONIVELTENSION'
+      Origin = 'PM_BANCOMANTENIMIENTO.CODIGONIVELTENSION'
+      Size = 1
+    end
+    object QbancomantenimientoCODIGOAMBITO: TFloatField
+      FieldName = 'CODIGOAMBITO'
+      Origin = 'PM_BANCOMANTENIMIENTO.CODIGOAMBITO'
+    end
+    object QbancomantenimientoFRECUENCIA: TFloatField
+      FieldName = 'FRECUENCIA'
+      Origin = 'PM_BANCOMANTENIMIENTO.FRECUENCIA'
+    end
+    object QbancomantenimientoDESCRIPCION: TBlobField
+      FieldName = 'DESCRIPCION'
+      Origin = 'PM_BANCOMANTENIMIENTO.DESCRIPCION'
+      BlobType = ftBlob
+      Size = 1
+    end
+    object QbancomantenimientoCODIGOTIPOMANT: TFloatField
+      FieldName = 'CODIGOTIPOMANT'
+      Origin = 'PM_BANCOMANTENIMIENTO.CODIGOTIPOMANT'
+    end
+    object QbancomantenimientoCODIGODESCRIPTIVO: TStringField
+      DisplayWidth = 15
+      FieldName = 'CODIGODESCRIPTIVO'
+      Origin = 'PM_BANCOMANTENIMIENTO.CODIGODESCRIPTIVO'
+      Size = 8
+    end
+    object QbancomantenimientoCODIGOELEMENTO: TFloatField
+      FieldName = 'CODIGOELEMENTO'
+      Origin = 'PM_BANCOMANTENIMIENTO.CODIGOELEMENTO'
+    end
+    object QbancomantenimientoCODIGOAREAOPERACIONODT: TFloatField
+      FieldName = 'CODIGOAREAOPERACIONODT'
+      Origin = 'PM_BANCOMANTENIMIENTO.CODIGOAREAOPERACIONODT'
+    end
+  end
+  object Ubancomantenimiento: TUpdateSQL
+    ModifySQL.Strings = (
+      'update PM_BANCOMANTENIMIENTO'
+      'set'
+      '  CODIGOBANCOMANTENIMIENTO = :CODIGOBANCOMANTENIMIENTO,'
+      '  NOMBREMANTENIMIENTO = :NOMBREMANTENIMIENTO,'
+      '  CODIGONIVELTENSION = :CODIGONIVELTENSION,'
+      '  CODIGOAMBITO = :CODIGOAMBITO,'
+      '  FRECUENCIA = :FRECUENCIA,'
+      '  DESCRIPCION = :DESCRIPCION,'
+      '  CODIGOTIPOMANT = :CODIGOTIPOMANT,'
+      '  CODIGODESCRIPTIVO = :CODIGODESCRIPTIVO,'
+      '  CODIGOELEMENTO = :CODIGOELEMENTO,'
+      '  CODIGOAREAOPERACIONODT = :CODIGOAREAOPERACIONODT'
+      'where'
+      '  CODIGOBANCOMANTENIMIENTO = :OLD_CODIGOBANCOMANTENIMIENTO')
+    InsertSQL.Strings = (
+      'insert into PM_BANCOMANTENIMIENTO'
+      
+        '  (CODIGOBANCOMANTENIMIENTO, NOMBREMANTENIMIENTO, CODIGONIVELTEN' +
+        'SION, CODIGOAMBITO, '
+      
+        '   FRECUENCIA, DESCRIPCION, CODIGOTIPOMANT, CODIGODESCRIPTIVO, C' +
+        'ODIGOELEMENTO, '
+      '   CODIGOAREAOPERACIONODT)'
+      'values'
+      
+        '  (:CODIGOBANCOMANTENIMIENTO, :NOMBREMANTENIMIENTO, :CODIGONIVEL' +
+        'TENSION, '
+      
+        '   :CODIGOAMBITO, :FRECUENCIA, :DESCRIPCION, :CODIGOTIPOMANT, :C' +
+        'ODIGODESCRIPTIVO, '
+      '   :CODIGOELEMENTO, :CODIGOAREAOPERACIONODT)')
+    DeleteSQL.Strings = (
+      'delete from PM_BANCOMANTENIMIENTO'
+      'where'
+      '  CODIGOBANCOMANTENIMIENTO = :OLD_CODIGOBANCOMANTENIMIENTO')
+    Left = 490
+    Top = 257
+  end
+  object Dniveltension: TDataSource
+    AutoEdit = False
+    DataSet = Qniveltension
+    Left = 782
+    Top = 111
+  end
+  object Qniveltension: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from niveltension'
+      'ORDER BY TENSION')
+    Left = 783
+    Top = 62
+  end
+  object QActividadMantenimiento: TQuery
+    CachedUpdates = True
+    BeforePost = QActividadMantenimientoBeforePost
+    OnNewRecord = QActividadMantenimientoNewRecord
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from pm_actividadmantenimiento where'
+      'codigobancomantenimiento=:codigo'
+      'ORDER BY NOMBREACTIVIDADMANTENIMIENTO')
+    UpdateObject = Uactividadmantenimiento
+    Left = 982
+    Top = 62
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'codigo'
+        ParamType = ptUnknown
+      end>
+    object QActividadMantenimientoCODIGOACTIVIDADMANTENIMIENTO: TFloatField
+      FieldName = 'CODIGOACTIVIDADMANTENIMIENTO'
+      Origin = 'PM_ACTIVIDADMANTENIMIENTO.CODIGOACTIVIDADMANTENIMIENTO'
+    end
+    object QActividadMantenimientoCODIGOBANCOMANTENIMIENTO: TFloatField
+      FieldName = 'CODIGOBANCOMANTENIMIENTO'
+      Origin = 'PM_ACTIVIDADMANTENIMIENTO.CODIGOBANCOMANTENIMIENTO'
+    end
+    object QActividadMantenimientoCODIGOSUBACTIVIDADAREAODT: TFloatField
+      FieldName = 'CODIGOSUBACTIVIDADAREAODT'
+      Origin = 'PM_ACTIVIDADMANTENIMIENTO.CODIGOSUBACTIVIDADAREAODT'
+    end
+    object QActividadMantenimientoNOMBREACTIVIDADMANTENIMIENTO: TStringField
+      FieldName = 'NOMBREACTIVIDADMANTENIMIENTO'
+      Origin = 'PM_ACTIVIDADMANTENIMIENTO.NOMBREACTIVIDADMANTENIMIENTO'
+      Size = 120
+    end
+  end
+  object Uactividadmantenimiento: TUpdateSQL
+    ModifySQL.Strings = (
+      'update pm_actividadmantenimiento'
+      'set'
+      '  CODIGOACTIVIDADMANTENIMIENTO = :CODIGOACTIVIDADMANTENIMIENTO,'
+      '  CODIGOBANCOMANTENIMIENTO = :CODIGOBANCOMANTENIMIENTO,'
+      '  CODIGOSUBACTIVIDADAREAODT = :CODIGOSUBACTIVIDADAREAODT,'
+      '  NOMBREACTIVIDADMANTENIMIENTO = '
+      ':NOMBREACTIVIDADMANTENIMIENTO'
+      'where'
+      '  CODIGOACTIVIDADMANTENIMIENTO = '
+      ':OLD_CODIGOACTIVIDADMANTENIMIENTO')
+    InsertSQL.Strings = (
+      'insert into pm_actividadmantenimiento'
+      
+        '  (CODIGOACTIVIDADMANTENIMIENTO, CODIGOBANCOMANTENIMIENTO, CODIG' +
+        'OSUBACTIVIDADAREAODT, '
+      '   NOMBREACTIVIDADMANTENIMIENTO)'
+      'values'
+      
+        '  (:CODIGOACTIVIDADMANTENIMIENTO, :CODIGOBANCOMANTENIMIENTO, :CO' +
+        'DIGOSUBACTIVIDADAREAODT, '
+      '   :NOMBREACTIVIDADMANTENIMIENTO)')
+    DeleteSQL.Strings = (
+      'delete from pm_actividadmantenimiento'
+      'where'
+      
+        '  CODIGOACTIVIDADMANTENIMIENTO = :OLD_CODIGOACTIVIDADMANTENIMIEN' +
+        'TO')
+    Left = 982
+    Top = 112
+  end
+  object qTipoElemento1: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT *  FROM PM_ELEMENTO '
+      'WHERE CODIGOAMBITO=:CODIGOAMBITO'
+      'ORDER BY NOMBRETIPOELEMENTO')
+    Left = 1085
+    Top = 62
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'CODIGOAMBITO'
+        ParamType = ptUnknown
+      end>
+  end
+  object qActividadAreaODT: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from actividadareaodt '
+      'where codigoareaoperacionodt =:codigoareaoperacionodt'
+      'ORDER BY NOMBREACTIVIDADAREAODT')
+    Left = 869
+    Top = 62
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'codigoareaoperacionodt'
+        ParamType = ptUnknown
+      end>
+    object qActividadAreaODTCODIGOACTIVIDADAREAODT: TFloatField
+      FieldName = 'CODIGOACTIVIDADAREAODT'
+      Origin = 'ACTIVIDADAREAODT.CODIGOACTIVIDADAREAODT'
+    end
+    object qActividadAreaODTCODIGOAREAOPERACIONODT: TFloatField
+      FieldName = 'CODIGOAREAOPERACIONODT'
+      Origin = 'ACTIVIDADAREAODT.CODIGOAREAOPERACIONODT'
+    end
+    object qActividadAreaODTNOMBREACTIVIDADAREAODT: TStringField
+      FieldName = 'NOMBREACTIVIDADAREAODT'
+      Origin = 'ACTIVIDADAREAODT.NOMBREACTIVIDADAREAODT'
+      Size = 120
+    end
+  end
+  object sActividadAreaODT: TDataSource
+    DataSet = qActividadAreaODT
+    Left = 869
+    Top = 111
+  end
+end

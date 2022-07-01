@@ -1,0 +1,1328 @@
+inherited fHojaVidaEquipo: TfHojaVidaEquipo
+  Left = 274
+  Top = 36
+  Width = 730
+  Height = 680
+  Caption = 'Hoja de Vida de Equipo'
+  Position = poDesigned
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    Top = 50
+    Width = 714
+    object SpeedButton1: TSpeedButton [0]
+      Left = 338
+      Top = 3
+      Width = 25
+      Height = 23
+      Hint = 'Ver Historial de Mantenimientos'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        333333333333FF3333333333333C0C333333333333F777F3333333333CC0F0C3
+        333333333777377F33333333C30F0F0C333333337F737377F333333C00FFF0F0
+        C33333F7773337377F333CC0FFFFFF0F0C3337773F33337377F3C30F0FFFFFF0
+        F0C37F7373F33337377F00FFF0FFFFFF0F0C7733373F333373770FFFFF0FFFFF
+        F0F073F33373F333373730FFFFF0FFFFFF03373F33373F333F73330FFFFF0FFF
+        00333373F33373FF77333330FFFFF000333333373F333777333333330FFF0333
+        3333333373FF7333333333333000333333333333377733333333333333333333
+        3333333333333333333333333333333333333333333333333333}
+      NumGlyphs = 2
+      Visible = False
+      OnClick = SBFiltroCarograficoClick
+    end
+    inherited Panel2: TPanel
+      Left = 370
+      Width = 343
+      inherited SBSalir: TSpeedButton
+        Left = 297
+        Top = 1
+      end
+      inherited SBImprimir: TSpeedButton
+        Left = 173
+        Top = 1
+        Hint = 'Imprimir Resultados Prueba'
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555000000
+          000055555F77777777775555000FFFFFFFF0555F777F5FFFF55755000F0F0000
+          FFF05F777F7F77775557000F0F0FFFFFFFF0777F7F7F5FFFFFF70F0F0F0F0000
+          00F07F7F7F7F777777570F0F0F0FFFFFFFF07F7F7F7F5FFFFFF70F0F0F0F0000
+          00F07F7F7F7F777777570F0F0F0FFFFFFFF07F7F7F7F5FFF55570F0F0F0F000F
+          FFF07F7F7F7F77755FF70F0F0F0FFFFF00007F7F7F7F5FF577770F0F0F0F00FF
+          0F057F7F7F7F77557F750F0F0F0FFFFF00557F7F7F7FFFFF77550F0F0F000000
+          05557F7F7F77777775550F0F0000000555557F7F7777777555550F0000000555
+          55557F7777777555555500000005555555557777777555555555}
+        Visible = False
+        OnClick = SBImprimirClick
+      end
+      inherited SBFiltrar: TSpeedButton
+        Left = 225
+        Top = 1
+      end
+      inherited SBBuscar: TSpeedButton
+        Left = 248
+        Top = 1
+        OnClick = SBBuscarClick
+      end
+      inherited SBOrdenar: TSpeedButton
+        Left = 271
+        Top = 1
+        OnClick = SBOrdenarClick
+      end
+      inherited Bevel2: TBevel
+        Left = 221
+        Top = 0
+      end
+      inherited SBEstadistica: TSpeedButton
+        Left = 150
+        Top = 1
+        Hint = 'Imprimir Mantenimientos Realizados'
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+          0003377777777777777308888888888888807F33333333333337088888888888
+          88807FFFFFFFFFFFFFF7000000000000000077777777777777770F8F8F8F8F8F
+          8F807F333333333333F708F8F8F8F8F8F9F07F333333333337370F8F8F8F8F8F
+          8F807FFFFFFFFFFFFFF7000000000000000077777777777777773330FFFFFFFF
+          03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+          03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+          33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
+          33333337FFFF7733333333300000033333333337777773333333}
+        NumGlyphs = 2
+        OnClick = SBEstadisticaClick
+      end
+      inherited Bevel3: TBevel
+        Left = 123
+      end
+      inherited Bevel1: TBevel
+        Left = 89
+        Visible = False
+      end
+      inherited SBBuscaElementoCartografia: TSpeedButton
+        Left = 127
+        Top = 1
+        Hint = 'Imprimir Pruebas Realizadas'
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          333333333333FF3333333333333C0C333333333333F777F3333333333CC0F0C3
+          333333333777377F33333333C30F0F0C333333337F737377F333333C00FFF0F0
+          C33333F7773337377F333CC0FFFFFF0F0C3337773F33337377F3C30F0FFFFFF0
+          F0C37F7373F33337377F00FFF0FFFFFF0F0C7733373F333373770FFFFF0FFFFF
+          F0F073F33373F333373730FFFFF0FFFFFF03373F33373F333F73330FFFFF0FFF
+          00333373F33373FF77333330FFFFF000333333373F333777333333330FFF0333
+          3333333373FF7333333333333000333333333333377733333333333333333333
+          3333333333333333333333333333333333333333333333333333}
+        Visible = False
+        OnClick = SBBuscaElementoCartografiaClick
+      end
+      inherited SBFiltroCarografico: TSpeedButton
+        Left = 2
+        Visible = False
+        OnClick = SBFiltroCarograficoClick
+      end
+      inherited sbExportar: TSpeedButton
+        Left = 196
+        Top = 1
+      end
+      object sbRefrescar: TSpeedButton
+        Left = 34
+        Top = 2
+        Width = 23
+        Height = 23
+        Hint = 'Refrescar Lista'
+        Flat = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333333333FFFFF3333333333999993333333333F77777FFF333333999999999
+          3333333777333777FF33339993707399933333773337F3777FF3399933000339
+          9933377333777F3377F3399333707333993337733337333337FF993333333333
+          399377F33333F333377F993333303333399377F33337FF333373993333707333
+          333377F333777F333333993333101333333377F333777F3FFFFF993333000399
+          999377FF33777F77777F3993330003399993373FF3777F37777F399933000333
+          99933773FF777F3F777F339993707399999333773F373F77777F333999999999
+          3393333777333777337333333999993333333333377777333333}
+        NumGlyphs = 2
+        OnClick = sbRefrescarClick
+      end
+      object Bevel5: TBevel
+        Left = 295
+        Top = 1
+        Width = 3
+        Height = 24
+      end
+    end
+    inherited dNavigator1: TdNavigator
+      Hints.Strings = ()
+    end
+  end
+  inherited Panel3: TPanel
+    Top = 624
+    Width = 714
+  end
+  inherited PFiltro: TPanel
+    Top = 0
+    Width = 714
+    inherited sDatosFiltro: TShape
+      Width = 1281
+    end
+    inherited lFiltroDatos: TLabel
+      Width = 712
+      Caption = '<< HOJA DE VIDA DE EQUIPOS >>'
+    end
+  end
+  object Panel5: TPanel [3]
+    Left = 0
+    Top = 417
+    Width = 714
+    Height = 207
+    Align = alBottom
+    Caption = 'Panel5'
+    TabOrder = 3
+    object TSpeedButton
+      Left = 614
+      Top = 16
+      Width = 115
+      Height = 24
+      Caption = 'Imprimir Planilla'
+      Enabled = False
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+        00033FFFFFFFFFFFFFFF0888888888888880777777777777777F088888888888
+        8880777777777777777F0000000000000000FFFFFFFFFFFFFFFF0F8F8F8F8F8F
+        8F80777777777777777F08F8F8F8F8F8F9F0777777777777777F0F8F8F8F8F8F
+        8F807777777777777F7F0000000000000000777777777777777F3330FFFFFFFF
+        03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+        03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+        33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
+        33333337FFFF7733333333300000033333333337777773333333}
+      NumGlyphs = 2
+      Transparent = False
+    end
+    object dbgListaHijas: TRxDBGrid
+      Left = 1
+      Top = 29
+      Width = 709
+      Height = 177
+      Align = alClient
+      DataSource = dsSeccionDatos
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      OnDblClick = dbgListaHijasDblClick
+      Columns = <
+        item
+          Color = 8454143
+          Expanded = False
+          FieldName = 'CODIGOFORMATOMTTO'
+          Visible = True
+        end
+        item
+          Color = 10198015
+          Expanded = False
+          FieldName = 'CODIGOSECCIONFORMATO'
+          Title.Alignment = taCenter
+          Title.Caption = 'CODIGO SECCION'
+          Width = 107
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRESECCIONFORMATO'
+          Title.Alignment = taCenter
+          Title.Caption = 'NOMBRE SECCION FORMATO'
+          Width = 261
+          Visible = True
+        end>
+    end
+    object RxSplitter1: TRxSplitter
+      Left = 710
+      Top = 29
+      Width = 3
+      Height = 177
+      Align = alRight
+    end
+    object Panel6: TPanel
+      Left = 1
+      Top = 1
+      Width = 712
+      Height = 28
+      Align = alTop
+      Caption = 'SECCIONES DE PRUEBAS REALIZADAS'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+      object sbInsertarSeccion: TSpeedButton
+        Left = 126
+        Top = 4
+        Width = 23
+        Height = 21
+        Hint = 'Ingresar Dato en Lista'
+        Flat = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          33333333FF33333333FF333993333333300033377F3333333777333993333333
+          300033F77FFF3333377739999993333333333777777F3333333F399999933333
+          33003777777333333377333993333333330033377F3333333377333993333333
+          3333333773333333333F333333333333330033333333F33333773333333C3333
+          330033333337FF3333773333333CC333333333FFFFF77FFF3FF33CCCCCCCCCC3
+          993337777777777F77F33CCCCCCCCCC3993337777777777377333333333CC333
+          333333333337733333FF3333333C333330003333333733333777333333333333
+          3000333333333333377733333333333333333333333333333333}
+        NumGlyphs = 2
+        Visible = False
+        OnClick = sbInsertarSeccionClick
+      end
+      object sbEditarSeccion: TSpeedButton
+        Left = 150
+        Top = 4
+        Width = 23
+        Height = 21
+        Hint = 'Editar Dato en Lista'
+        Flat = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333000000
+          000033333377777777773333330FFFFFFFF03FF3FF7FF33F3FF700300000FF0F
+          00F077F777773F737737E00BFBFB0FFFFFF07773333F7F3333F7E0BFBF000FFF
+          F0F077F3337773F3F737E0FBFBFBF0F00FF077F3333FF7F77F37E0BFBF00000B
+          0FF077F3337777737337E0FBFBFBFBF0FFF077F33FFFFFF73337E0BF0000000F
+          FFF077FF777777733FF7000BFB00B0FF00F07773FF77373377373330000B0FFF
+          FFF03337777373333FF7333330B0FFFF00003333373733FF777733330B0FF00F
+          0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
+          00333377737FFFFF773333303300000003333337337777777333}
+        NumGlyphs = 2
+        Visible = False
+        OnClick = sbEditarSeccionClick
+      end
+      object SpeedButton4: TSpeedButton
+        Left = 195
+        Top = 4
+        Width = 23
+        Height = 21
+        Hint = 'Ubicar Reportes Asociados en Cartografía'
+        Flat = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          8000008000000080800080000000800080008080000080808000C0C0C0000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+          5555555555FFFFF555555555544C4C5555555555F777775FF5555554C444C444
+          5555555775FF55775F55554C4334444445555575577F55557FF554C4C334C4C4
+          335557F5577FF55577F554CCC3334444335557555777F555775FCCCCC333CCC4
+          C4457F55F777F555557F4CC33333CCC444C57F577777F5F5557FC4333333C3C4
+          CCC57F777777F7FF557F4CC33333333C4C457F577777777F557FCCC33CC4333C
+          C4C575F7755F777FF5755CCCCC3333334C5557F5FF777777F7F554C333333333
+          CC55575777777777F755553333CC3C33C555557777557577755555533CC4C4CC
+          5555555775FFFF77555555555C4CCC5555555555577777555555}
+        NumGlyphs = 2
+        Visible = False
+      end
+      object dNavigator3: TdNavigator
+        Left = 6
+        Top = 4
+        Width = 120
+        Height = 21
+        DataSource = dsSeccionDatos
+        VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+        Flat = True
+        ConfirmDelete = False
+        TabOrder = 0
+      end
+    end
+    object Memo2: TMemo
+      Left = 488
+      Top = 80
+      Width = 185
+      Height = 89
+      Lines.Strings = (
+        'Memo2')
+      TabOrder = 3
+      Visible = False
+    end
+  end
+  object Panel4: TPanel [4]
+    Left = 0
+    Top = 265
+    Width = 714
+    Height = 152
+    Align = alClient
+    Caption = 'Panel4'
+    TabOrder = 4
+    object Panel8: TPanel
+      Left = 1
+      Top = 1
+      Width = 712
+      Height = 28
+      Align = alTop
+      Caption = 'PRUEBAS REALIZADAS'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      object sbInsertarFormato: TSpeedButton
+        Left = 129
+        Top = 4
+        Width = 23
+        Height = 21
+        Hint = 'Ingresar Dato en Lista'
+        Flat = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          33333333FF33333333FF333993333333300033377F3333333777333993333333
+          300033F77FFF3333377739999993333333333777777F3333333F399999933333
+          33003777777333333377333993333333330033377F3333333377333993333333
+          3333333773333333333F333333333333330033333333F33333773333333C3333
+          330033333337FF3333773333333CC333333333FFFFF77FFF3FF33CCCCCCCCCC3
+          993337777777777F77F33CCCCCCCCCC3993337777777777377333333333CC333
+          333333333337733333FF3333333C333330003333333733333777333333333333
+          3000333333333333377733333333333333333333333333333333}
+        NumGlyphs = 2
+        Visible = False
+        OnClick = sbInsertarFormatoClick
+      end
+      object sbEditarFormato: TSpeedButton
+        Left = 153
+        Top = 4
+        Width = 23
+        Height = 21
+        Hint = 'Editar Dato en Lista'
+        Flat = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333000000
+          000033333377777777773333330FFFFFFFF03FF3FF7FF33F3FF700300000FF0F
+          00F077F777773F737737E00BFBFB0FFFFFF07773333F7F3333F7E0BFBF000FFF
+          F0F077F3337773F3F737E0FBFBFBF0F00FF077F3333FF7F77F37E0BFBF00000B
+          0FF077F3337777737337E0FBFBFBFBF0FFF077F33FFFFFF73337E0BF0000000F
+          FFF077FF777777733FF7000BFB00B0FF00F07773FF77373377373330000B0FFF
+          FFF03337777373333FF7333330B0FFFF00003333373733FF777733330B0FF00F
+          0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
+          00333377737FFFFF773333303300000003333337337777777333}
+        NumGlyphs = 2
+        Visible = False
+        OnClick = sbEditarFormatoClick
+      end
+      object dNavigator2: TdNavigator
+        Left = 6
+        Top = 4
+        Width = 120
+        Height = 21
+        DataSource = dsFormatoDatos
+        VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+        Flat = True
+        ConfirmDelete = False
+        TabOrder = 0
+      end
+    end
+    object dbgListaOdtPadre: TRxDBGrid
+      Left = 1
+      Top = 29
+      Width = 712
+      Height = 122
+      Align = alClient
+      DataSource = dsFormatoDatos
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      OnDblClick = dbgListaOdtPadreDblClick
+      Columns = <
+        item
+          Color = 16777088
+          Expanded = False
+          FieldName = 'CODIGOMANTENIMIENTO'
+          Title.Alignment = taCenter
+          Title.Caption = 'CODIGO MANTENIMIENTO'
+          Width = 145
+          Visible = True
+        end
+        item
+          Color = 8454143
+          Expanded = False
+          FieldName = 'CODIGOFORMATOMTTO'
+          Title.Alignment = taCenter
+          Title.Caption = 'CODIGO FORMATO'
+          Width = 115
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'nombreFormato'
+          Title.Alignment = taCenter
+          Title.Caption = 'NOMBRE FORMATO'
+          Width = 364
+          Visible = True
+        end>
+    end
+  end
+  object Panel7: TPanel [5]
+    Left = 0
+    Top = 78
+    Width = 714
+    Height = 187
+    Align = alTop
+    Caption = 'Panel7'
+    TabOrder = 5
+    object PanelSuperior: TPanel
+      Left = 1
+      Top = 1
+      Width = 712
+      Height = 25
+      Align = alTop
+      Caption = 'MANTENIMIENTOS DEL ELEMENTO'
+      Color = clBlue
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+    end
+    object RxDBGConsultaHojaVidaEquipo: TRxDBGrid
+      Left = 1
+      Top = 26
+      Width = 712
+      Height = 160
+      Align = alClient
+      DataSource = dsMantenimientos
+      TabOrder = 1
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      OnDblClick = RxDBGConsultaHojaVidaEquipoDblClick
+      Columns = <
+        item
+          Color = 16777088
+          Expanded = False
+          FieldName = 'CODIGOMANTENIMIENTO'
+          Title.Alignment = taCenter
+          Title.Caption = 'CODIGO MTTO'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRETAREA'
+          Title.Alignment = taCenter
+          Title.Caption = 'NOMBRE MANTENIMIENTO'
+          Width = 301
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREMANT'
+          Title.Alignment = taCenter
+          Title.Caption = 'TIPO MTTO'
+          Width = 130
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAINICIAL'
+          Title.Alignment = taCenter
+          Title.Caption = 'FECHA INICIAL'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAFINAL'
+          Title.Alignment = taCenter
+          Title.Caption = 'FECHA FINAL'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRESUBESTACION'
+          Title.Alignment = taCenter
+          Title.Caption = 'SUBESTACION'
+          Width = 99
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRETIPOELEMENTO'
+          Title.Alignment = taCenter
+          Title.Caption = 'TIPO ELEMENTO'
+          Width = 194
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'TENSION'
+          Title.Alignment = taCenter
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREESTADO'
+          Title.Alignment = taCenter
+          Title.Caption = 'ESTADO'
+          Width = 98
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'elemento'
+          Visible = True
+        end>
+    end
+  end
+  inherited dSegControl1: TdSegControl
+    Left = 360
+    Top = 196
+  end
+  inherited dsBase: TDDataSource
+    Left = 960
+    Top = 224
+  end
+  inherited dTblBase: TDTable
+    Left = 920
+    Top = 224
+  end
+  inherited qTotales: TQuery
+    Active = True
+    SQL.Strings = (
+      'SELECT COUNT(DISTINCT O.CODIGOODT) AS TOTAL'
+      ''
+      ''
+      ''
+      ''
+      
+        'FROM ODT O, ESTADOODT EO, PRIORIDAD P, LABOR L, TIPOTAREA TT, OD' +
+        'TTIPOMANOOBRA MO, ADMINISTRATIVO A, ODTDIA OD'
+      'WHERE (EO.CODIGOESTADOODT = O.CODIGOESTADOODT) AND'
+      '      (O.CODIGOPRIORIDAD = P.CODIGOPRIORIDAD) AND'
+      '      (L.CODIGOLABOR = O.CODIGOLABOR) AND'
+      '      (TT.CODIGOTIPOTAREA = O.CODIGOTIPOTAREA) AND'
+      '      (MO.CODIGOODTTIPOMANOOBRA = O.CODIGOODTTIPOMANOOBRA) AND'
+      
+        '      (A.CODIGOADMINISTRATIVO = O.CODIGOADMINISTRATIVO) AND (OD.' +
+        'CODIGOODT (+) = O.CODIGOODT)  '
+      ' ')
+    Left = 741
+    Top = 224
+  end
+  inherited CVS1: TCVS
+    Left = 358
+    Top = 131
+  end
+  inherited SaveDialog1: TSaveDialog
+    Left = 792
+    Top = 224
+  end
+  object qFormatoDatos: TQuery
+    CachedUpdates = True
+    OnCalcFields = qFormatoDatosCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsMantenimientos
+    SQL.Strings = (
+      'SELECT * FROM HVE_FORMATOMTTODATOS'
+      'WHERE CODIGOMANTENIMIENTO=:CODIGOMANTENIMIENTO'
+      'ORDER BY 1 DESC')
+    Left = 140
+    Top = 121
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOMANTENIMIENTO'
+        ParamType = ptUnknown
+      end>
+    object qFormatoDatosCODIGOFORMATOMTTODATOS: TFloatField
+      FieldName = 'CODIGOFORMATOMTTODATOS'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOFORMATOMTTODATOS'
+    end
+    object qFormatoDatosCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOADMINISTRATIVO'
+    end
+    object qFormatoDatosCODIGOUSUARIOCREACION: TFloatField
+      FieldName = 'CODIGOUSUARIOCREACION'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOUSUARIOCREACION'
+    end
+    object qFormatoDatosFECHACREACION: TDateTimeField
+      FieldName = 'FECHACREACION'
+      Origin = 'HVE_FORMATOMTTODATOS.FECHACREACION'
+    end
+    object qFormatoDatosCODIGOUSUARIOMODIFICACION: TFloatField
+      FieldName = 'CODIGOUSUARIOMODIFICACION'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOUSUARIOMODIFICACION'
+    end
+    object qFormatoDatosFECHAULTIMAMODIFICACION: TDateTimeField
+      FieldName = 'FECHAULTIMAMODIFICACION'
+      Origin = 'HVE_FORMATOMTTODATOS.FECHAULTIMAMODIFICACION'
+    end
+    object qFormatoDatosCODIGOFORMATOMTTO: TFloatField
+      FieldName = 'CODIGOFORMATOMTTO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOFORMATOMTTO'
+    end
+    object qFormatoDatosCODIGOAMBITO: TFloatField
+      FieldName = 'CODIGOAMBITO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOAMBITO'
+    end
+    object qFormatoDatosCODIGOSUBESTACION: TStringField
+      FieldName = 'CODIGOSUBESTACION'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOSUBESTACION'
+      Size = 3
+    end
+    object qFormatoDatosCODIGOCOORDINACION: TFloatField
+      FieldName = 'CODIGOCOORDINACION'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOCOORDINACION'
+    end
+    object qFormatoDatosCODIGOTIPOMTTO: TFloatField
+      FieldName = 'CODIGOTIPOMTTO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOTIPOMTTO'
+    end
+    object qFormatoDatosCODIGOTIPOELEMENTO: TFloatField
+      FieldName = 'CODIGOTIPOELEMENTO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOTIPOELEMENTO'
+    end
+    object qFormatoDatosCODIGOCIRCUITO: TStringField
+      FieldName = 'CODIGOCIRCUITO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOCIRCUITO'
+      Size = 6
+    end
+    object qFormatoDatosCODIGOELEMENTO: TStringField
+      FieldName = 'CODIGOELEMENTO'
+      Size = 60
+    end
+    object qFormatoDatosFECHAPRUEBA: TDateTimeField
+      FieldName = 'FECHAPRUEBA'
+    end
+    object qFormatoDatosCLELEMENTO1: TStringField
+      FieldName = 'CLELEMENTO1'
+      Size = 30
+    end
+    object qFormatoDatosCLELEMENTO2: TStringField
+      FieldName = 'CLELEMENTO2'
+      Size = 30
+    end
+    object qFormatoDatosCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+    end
+    object qFormatoDatosCONSECUTIVOODT: TFloatField
+      FieldName = 'CONSECUTIVOODT'
+    end
+    object qFormatoDatosCODIGOHOJAVIDAEQUIPO: TFloatField
+      FieldName = 'CODIGOHOJAVIDAEQUIPO'
+    end
+    object qFormatoDatosCODIGOMANTENIMIENTO: TFloatField
+      FieldName = 'CODIGOMANTENIMIENTO'
+    end
+    object qFormatoDatosnombreSubestacion: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nombreSubestacion'
+      LookupDataSet = qSubestacion
+      LookupKeyFields = 'CODIGOSUBESTACION'
+      LookupResultField = 'NOMBRESUBESTACION'
+      KeyFields = 'CODIGOSUBESTACION'
+      Size = 30
+      Lookup = True
+    end
+    object qFormatoDatosnombreFormato: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'nombreFormato'
+      Size = 80
+      Calculated = True
+    end
+  end
+  object dsFormatoDatos: TDataSource
+    DataSet = qFormatoDatos
+    Left = 138
+    Top = 169
+  end
+  object qSeccionDatos: TQuery
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    DataSource = dsFormatoDatos
+    SQL.Strings = (
+      'SELECT SD.*,SF.NOMBRESECCIONFORMATO,SF.CODIGOFORMATOMTTO '
+      'FROM HVE_SECCIONFORMATODATOS SD, HVE_SECCIONFORMATO SF'
+      'WHERE SD.CODIGOSECCIONFORMATO =SF.CODIGOSECCIONFORMATO'
+      'AND CODIGOFORMATOMTTODATOS=:CODIGOFORMATOMTTODATOS '
+      'ORDER BY 1 DESC')
+    Left = 227
+    Top = 121
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOFORMATOMTTODATOS'
+        ParamType = ptUnknown
+      end>
+    object qSeccionDatosCODIGOSECCIONFORMATODATOS: TFloatField
+      FieldName = 'CODIGOSECCIONFORMATODATOS'
+      Origin = 'HVE_SECCIONFORMATODATOS.CODIGOSECCIONFORMATODATOS'
+    end
+    object qSeccionDatosCODIGOFORMATOMTTODATOS: TFloatField
+      FieldName = 'CODIGOFORMATOMTTODATOS'
+      Origin = 'HVE_SECCIONFORMATODATOS.CODIGOFORMATOMTTODATOS'
+    end
+    object qSeccionDatosCODIGOSECCIONFORMATO: TFloatField
+      FieldName = 'CODIGOSECCIONFORMATO'
+      Origin = 'HVE_SECCIONFORMATODATOS.CODIGOSECCIONFORMATO'
+    end
+    object qSeccionDatosNOMBRESECCIONFORMATO: TStringField
+      FieldName = 'NOMBRESECCIONFORMATO'
+      Origin = 'HVE_SECCIONFORMATO.NOMBRESECCIONFORMATO'
+      Size = 80
+    end
+    object qSeccionDatosCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'HVE_SECCIONFORMATODATOS.CODIGOODT'
+    end
+    object qSeccionDatosSUBACTIVIDADODT: TFloatField
+      FieldName = 'SUBACTIVIDADODT'
+      Origin = 'HVE_SECCIONFORMATODATOS.SUBACTIVIDADODT'
+    end
+    object qSeccionDatosESTADOTERMINADO: TStringField
+      FieldName = 'ESTADOTERMINADO'
+      Origin = 'HVE_SECCIONFORMATODATOS.ESTADOTERMINADO'
+      Size = 2
+    end
+    object qSeccionDatosFECHAREGISTRO: TDateTimeField
+      FieldName = 'FECHAREGISTRO'
+      Origin = 'HVE_SECCIONFORMATODATOS.FECHAREGISTRO'
+    end
+    object qSeccionDatosFECHAMODIFICACION: TDateTimeField
+      FieldName = 'FECHAMODIFICACION'
+      Origin = 'HVE_SECCIONFORMATODATOS.FECHAMODIFICACION'
+    end
+    object qSeccionDatosFECHAPRUEBA: TDateTimeField
+      FieldName = 'FECHAPRUEBA'
+      Origin = 'HVE_SECCIONFORMATODATOS.FECHAPRUEBA'
+    end
+    object qSeccionDatosCODIGOUSUARIOCREACION: TFloatField
+      FieldName = 'CODIGOUSUARIOCREACION'
+      Origin = 'HVE_SECCIONFORMATODATOS.CODIGOUSUARIOCREACION'
+    end
+    object qSeccionDatosCODIGOUSUARIOMODIFICACION: TFloatField
+      FieldName = 'CODIGOUSUARIOMODIFICACION'
+      Origin = 'HVE_SECCIONFORMATODATOS.CODIGOUSUARIOMODIFICACION'
+    end
+    object qSeccionDatosCODIGOFORMATOMTTO: TFloatField
+      FieldName = 'CODIGOFORMATOMTTO'
+      Origin = 'HVE_SECCIONFORMATO.CODIGOFORMATOMTTO'
+    end
+  end
+  object dsSeccionDatos: TDataSource
+    DataSet = qSeccionDatos
+    Left = 233
+    Top = 169
+  end
+  object pmImprimir: TPopupMenu
+    Left = 832
+    Top = 224
+  end
+  object StoredProc1: TStoredProc
+    Left = 872
+    Top = 224
+  end
+  object qMantenimientos: TQuery
+    CachedUpdates = True
+    OnCalcFields = qMantenimientosCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT DISTINCT t.codigotarea,t.fechainicial,t.fechafinal,t.nomb' +
+        'retarea,et.Nombreestado,nt.tension,'
+      
+        'e.nombretipoelemento,s.nombresubestacion,m.codigomantenimiento,m' +
+        '.codigotipomant,tm.nombremant,'
+      'mo.codigoodt,mo.consecutivo,a.nombreareaoperacionodt'
+      
+        'FROM PM_TAREA t,PM_MANTENIMIENTO m, PM_TIPOMANTENIMIENTO tm,PM_M' +
+        'ANTENIMIENTOODT mo,AREAOPERACIONODT a,'
+      
+        'SUBESTACION s,PM_ELEMENTO e,PM_BANCOMANTENIMIENTO bm, NIVELTENSI' +
+        'ON nt,PM_ESTADOTAREA et'
+      'WHERE t.codigotarea=m.codigomantenimiento'
+      'AND bm.codigobancomantenimiento = m.codigobancomantenimiento'
+      'AND s.codigosubestacion= m.codigosubestacion '
+      'AND e.codigoelemento= bm.codigoelemento'
+      'AND nt.codigoniveltension=bm.codigoniveltension'
+      'AND et.codigoestadotarea=t.codigoestadotarea'
+      'AND tm.codigotipomant=bm.codigotipomant'
+      'AND mo.codigomantenimiento=m.codigomantenimiento'
+      'AND bm.codigoareaoperacionodt=a.codigoareaoperacionodt'
+      'and t.codigoestadotarea=2'
+      'ORDER BY fechainicial DESC')
+    Left = 36
+    Top = 121
+    object qMantenimientosCODIGOTAREA: TFloatField
+      FieldName = 'CODIGOTAREA'
+    end
+    object qMantenimientosFECHAINICIAL: TDateTimeField
+      FieldName = 'FECHAINICIAL'
+    end
+    object qMantenimientosFECHAFINAL: TDateTimeField
+      FieldName = 'FECHAFINAL'
+    end
+    object qMantenimientosNOMBRETAREA: TStringField
+      FieldName = 'NOMBRETAREA'
+      Size = 250
+    end
+    object qMantenimientosCODIGOMANTENIMIENTO: TFloatField
+      FieldName = 'CODIGOMANTENIMIENTO'
+    end
+    object qMantenimientosCODIGOTIPOMANT: TFloatField
+      FieldName = 'CODIGOTIPOMANT'
+    end
+    object qMantenimientosNOMBREMANT: TStringField
+      FieldName = 'NOMBREMANT'
+      Size = 80
+    end
+    object qMantenimientosNOMBRETIPOELEMENTO: TStringField
+      FieldName = 'NOMBRETIPOELEMENTO'
+      Origin = 'PM_ELEMENTO.NOMBRETIPOELEMENTO'
+      Size = 80
+    end
+    object qMantenimientosNOMBRESUBESTACION: TStringField
+      FieldName = 'NOMBRESUBESTACION'
+      Origin = 'SUBESTACION.NOMBRESUBESTACION'
+      Size = 30
+    end
+    object qMantenimientosTENSION: TFloatField
+      FieldName = 'TENSION'
+      Origin = 'NIVELTENSION.TENSION'
+    end
+    object qMantenimientosNOMBREESTADO: TStringField
+      FieldName = 'NOMBREESTADO'
+      Origin = 'PM_ESTADOTAREA.NOMBREESTADO'
+      Size = 80
+    end
+    object qMantenimientosCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'PM_MANTENIMIENTOODT.CODIGOODT'
+    end
+    object qMantenimientosCONSECUTIVO: TFloatField
+      FieldName = 'CONSECUTIVO'
+      Origin = 'PM_MANTENIMIENTOODT.CONSECUTIVO'
+    end
+    object qMantenimientoselemento: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'elemento'
+      Calculated = True
+    end
+  end
+  object dsMantenimientos: TDataSource
+    DataSet = qMantenimientos
+    Left = 36
+    Top = 170
+  end
+  object qFormatosPruebas: TQuery
+    Tag = 99
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    DataSource = dsFormatoDatos
+    SQL.Strings = (
+      'Select * from hve_formatomttodatos where'
+      'codigoodt=:codigoodt AND consecutivoodt=:consecutivoodt'
+      'AND codigoformatomtto=:codigoformatomtto')
+    Left = 196
+    Top = 465
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'codigoodt'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'consecutivoodt'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'codigoformatomtto'
+        ParamType = ptUnknown
+      end>
+    object qFormatosPruebasCODIGOFORMATOMTTODATOS: TFloatField
+      FieldName = 'CODIGOFORMATOMTTODATOS'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOFORMATOMTTODATOS'
+    end
+    object qFormatosPruebasCODIGOFORMATOMTTO: TFloatField
+      FieldName = 'CODIGOFORMATOMTTO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOFORMATOMTTO'
+    end
+    object qFormatosPruebasCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOADMINISTRATIVO'
+    end
+    object qFormatosPruebasCODIGOUSUARIOCREACION: TFloatField
+      FieldName = 'CODIGOUSUARIOCREACION'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOUSUARIOCREACION'
+    end
+    object qFormatosPruebasFECHACREACION: TDateTimeField
+      FieldName = 'FECHACREACION'
+      Origin = 'HVE_FORMATOMTTODATOS.FECHACREACION'
+    end
+    object qFormatosPruebasCODIGOUSUARIOMODIFICACION: TFloatField
+      FieldName = 'CODIGOUSUARIOMODIFICACION'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOUSUARIOMODIFICACION'
+    end
+    object qFormatosPruebasFECHAULTIMAMODIFICACION: TDateTimeField
+      FieldName = 'FECHAULTIMAMODIFICACION'
+      Origin = 'HVE_FORMATOMTTODATOS.FECHAULTIMAMODIFICACION'
+    end
+    object qFormatosPruebasCODIGOAMBITO: TFloatField
+      FieldName = 'CODIGOAMBITO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOAMBITO'
+    end
+    object qFormatosPruebasCODIGOSUBESTACION: TStringField
+      FieldName = 'CODIGOSUBESTACION'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOSUBESTACION'
+      Size = 3
+    end
+    object qFormatosPruebasCODIGOCOORDINACION: TFloatField
+      FieldName = 'CODIGOCOORDINACION'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOCOORDINACION'
+    end
+    object qFormatosPruebasCODIGOTIPOMTTO: TFloatField
+      FieldName = 'CODIGOTIPOMTTO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOTIPOMTTO'
+    end
+    object qFormatosPruebasCODIGOTIPOELEMENTO: TFloatField
+      FieldName = 'CODIGOTIPOELEMENTO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOTIPOELEMENTO'
+    end
+    object qFormatosPruebasCODIGOELEMENTO: TStringField
+      FieldName = 'CODIGOELEMENTO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOELEMENTO'
+      Size = 60
+    end
+    object qFormatosPruebasCODIGOCIRCUITO: TStringField
+      FieldName = 'CODIGOCIRCUITO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOCIRCUITO'
+      Size = 6
+    end
+    object qFormatosPruebasFECHAPRUEBA: TDateTimeField
+      FieldName = 'FECHAPRUEBA'
+      Origin = 'HVE_FORMATOMTTODATOS.FECHAPRUEBA'
+    end
+    object qFormatosPruebasCLELEMENTO1: TStringField
+      FieldName = 'CLELEMENTO1'
+      Origin = 'HVE_FORMATOMTTODATOS.CLELEMENTO1'
+      Size = 30
+    end
+    object qFormatosPruebasCLELEMENTO2: TStringField
+      FieldName = 'CLELEMENTO2'
+      Origin = 'HVE_FORMATOMTTODATOS.CLELEMENTO2'
+      Size = 30
+    end
+    object qFormatosPruebasCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOODT'
+    end
+    object qFormatosPruebasCONSECUTIVOODT: TFloatField
+      FieldName = 'CONSECUTIVOODT'
+      Origin = 'HVE_FORMATOMTTODATOS.CONSECUTIVOODT'
+    end
+    object qFormatosPruebasCODIGOMANTENIMIENTO: TFloatField
+      FieldName = 'CODIGOMANTENIMIENTO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOFORMATOMTTODATOS'
+    end
+  end
+  object dsFormatosPruebas: TDataSource
+    DataSet = qFormatosPruebas
+    Left = 192
+    Top = 518
+  end
+  object qMantenimientoODT: TQuery
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOMANTENIMIENTO FROM PM_MANTENIMIENTOODT'
+      'WHERE CODIGOODT=:CODIGOODT'
+      'AND CONSECUTIVO=:CONSECUTIVO')
+    Left = 581
+    Top = 130
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CONSECUTIVO'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsMantenimientoODT: TDataSource
+    DataSet = qMantenimientoODT
+    Left = 582
+    Top = 185
+  end
+  object qFormato: TQuery
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    DataSource = dsFormatoDatos
+    SQL.Strings = (
+      'SELECT CODIGOFORMATOMTTO, nombreformatomtto '
+      'FROM HVE_FORMATOMTTO'
+      'WHERE CODIGOFORMATOMTTO=:CODIGOFORMATOMTTO')
+    Left = 273
+    Top = 465
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOFORMATOMTTO'
+        ParamType = ptUnknown
+      end>
+    object qFormatoCODIGOFORMATOMTTO: TFloatField
+      FieldName = 'CODIGOFORMATOMTTO'
+      Origin = 'HVE_FORMATOMTTO.CODIGOFORMATOMTTO'
+    end
+    object qFormatoNOMBREFORMATOMTTO: TStringField
+      FieldName = 'NOMBREFORMATOMTTO'
+      Origin = 'HVE_FORMATOMTTO.NOMBREFORMATOMTTO'
+      Size = 80
+    end
+    object qFormatocodigoMantenimiento: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'codigoMantenimiento'
+      Calculated = True
+    end
+    object qFormatocodigoFormatoDatos: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = 'codigoFormatoDatos'
+      Calculated = True
+    end
+  end
+  object dsFormato: TDataSource
+    DataSet = qFormato
+    Left = 272
+    Top = 517
+  end
+  object qSubestacion: TQuery
+    Active = True
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOSUBESTACION, NOMBRESUBESTACION '
+      'FROM SUBESTACION ORDER BY 2')
+    Left = 476
+    Top = 137
+    object qSubestacionCODIGOSUBESTACION: TStringField
+      FieldName = 'CODIGOSUBESTACION'
+      Origin = 'SUBESTACION.CODIGOSUBESTACION'
+      Size = 3
+    end
+    object qSubestacionNOMBRESUBESTACION: TStringField
+      FieldName = 'NOMBRESUBESTACION'
+      Origin = 'SUBESTACION.NOMBRESUBESTACION'
+      Size = 30
+    end
+  end
+  object dsSubestacion: TDataSource
+    DataSet = qSubestacion
+    Left = 476
+    Top = 185
+  end
+  object qSubactividad: TQuery
+    Tag = 99
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOSUBACTIVIDADAREAODT '
+      'FROM SUBACTIVIDADPRUEBA'
+      'WHERE '
+      'CODIGOSUBACTIVIDADPRUEBA=:CODIGOSUBACTIVIDADPRUEBA')
+    Left = 359
+    Top = 466
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOSUBACTIVIDADPRUEBA'
+        ParamType = ptUnknown
+      end>
+    object qSubactividadCODIGOSUBACTIVIDADAREAODT: TFloatField
+      FieldName = 'CODIGOSUBACTIVIDADAREAODT'
+      Origin = 'SUBACTIVIDADPRUEBA.CODIGOSUBACTIVIDADAREAODT'
+    end
+  end
+  object dsSubactividad: TDataSource
+    DataSet = qSubactividad
+    Left = 358
+    Top = 517
+  end
+  object qSecciones: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsFormatoDatos
+    SQL.Strings = (
+      'SELECT (sf.codigoseccionformato)--,SD.*'
+      ',SF.NOMBRESECCIONFORMATO '
+      'FROM HVE_SECCIONFORMATODATOS SD, HVE_SECCIONFORMATO SF'
+      'WHERE SD.CODIGOSECCIONFORMATO =SF.CODIGOSECCIONFORMATO'
+      'AND CODIGOFORMATOMTTODATOS=:CODIGOFORMATOMTTODATOS'
+      'GROUP BY sf.codigoseccionformato,sf.nombreseccionformato '
+      'ORDER BY 1 DESC')
+    Left = 64
+    Top = 471
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOFORMATOMTTODATOS'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsSecciones: TDataSource
+    DataSet = qSecciones
+    Left = 64
+    Top = 519
+  end
+  object pmOrdenar: TPopupMenu
+    Tag = 5
+    Left = 138
+    Top = 224
+    object CodigoMtto: TMenuItem
+      Tag = 1
+      Caption = 'Código Mtto'
+      RadioItem = True
+      OnClick = CodigoMttoClick
+    end
+    object NombreMantenimiento: TMenuItem
+      Tag = 2
+      Caption = 'Nombre Mantenimiento'
+      RadioItem = True
+      OnClick = NombreMantenimientoClick
+    end
+    object TipoMantenimiento: TMenuItem
+      Tag = 3
+      Caption = 'Tipo Mantenimiento'
+      RadioItem = True
+      OnClick = TipoMantenimientoClick
+    end
+    object Coordinacion: TMenuItem
+      Tag = 7
+      Caption = 'Coordinación'
+      RadioItem = True
+    end
+    object N1: TMenuItem
+      Caption = '-'
+      RadioItem = True
+    end
+    object FechaInicialMtto: TMenuItem
+      Tag = 4
+      Caption = 'Fecha Inicial Mtto'
+      RadioItem = True
+      OnClick = FechaInicialMttoClick
+    end
+    object FechaFinalMtto: TMenuItem
+      Tag = 5
+      Caption = 'Fecha Final Mtto'
+      RadioItem = True
+      OnClick = FechaFinalMttoClick
+    end
+    object EstadoMtto: TMenuItem
+      Tag = 6
+      Caption = 'Estado Mtto'
+      RadioItem = True
+      OnClick = EstadoMttoClick
+    end
+    object N3: TMenuItem
+      Caption = '-'
+      RadioItem = True
+    end
+    object TipoElemento: TMenuItem
+      Caption = 'Tipo Elemento'
+      RadioItem = True
+      OnClick = TipoElementoClick
+    end
+    object Tension: TMenuItem
+      Caption = 'Tensión'
+      RadioItem = True
+      OnClick = TensionClick
+    end
+    object Subestacion: TMenuItem
+      Caption = 'Subestación'
+      RadioItem = True
+      OnClick = SubestacionClick
+    end
+  end
+  object qElementoMtto: TQuery
+    DatabaseName = 'Basedato'
+    SQL.Strings = (
+      'select * from pm_elementomantenimiento '
+      'where codigoelementomantenimiento =:codigoelementomantenimiento')
+    Left = 40
+    Top = 230
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'codigoelementomantenimiento'
+        ParamType = ptUnknown
+      end>
+    object qElementoMttoCODIGOELEMENTOMANTENIMIENTO: TFloatField
+      FieldName = 'CODIGOELEMENTOMANTENIMIENTO'
+      Origin = 'PM_ELEMENTOMANTENIMIENTO.CODIGOELEMENTOMANTENIMIENTO'
+    end
+    object qElementoMttoCLELEMENTO1: TStringField
+      FieldName = 'CLELEMENTO1'
+      Origin = 'PM_ELEMENTOMANTENIMIENTO.CLELEMENTO1'
+      Size = 30
+    end
+    object qElementoMttoCLELEMENTO2: TStringField
+      FieldName = 'CLELEMENTO2'
+      Origin = 'PM_ELEMENTOMANTENIMIENTO.CLELEMENTO2'
+      Size = 30
+    end
+    object qElementoMttoCODIGOELEMENTO: TFloatField
+      FieldName = 'CODIGOELEMENTO'
+      Origin = 'PM_ELEMENTOMANTENIMIENTO.CODIGOELEMENTO'
+    end
+  end
+end

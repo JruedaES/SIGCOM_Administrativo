@@ -1,0 +1,520 @@
+object fAuditoriaSupervisor: TfAuditoriaSupervisor
+  Left = 285
+  Top = 253
+  Width = 1205
+  Height = 611
+  Caption = 'Auditoria Supervisión'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel2: TPanel
+    Left = 0
+    Top = 0
+    Width = 1189
+    Height = 17
+    Align = alTop
+    Caption = '<<AUDITORIA DE SUPERVISORES>>'
+    Color = clBlue
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+  end
+  object RxDBGridAuditoria: TRxDBGrid
+    Left = 0
+    Top = 49
+    Width = 888
+    Height = 511
+    Align = alClient
+    DataSource = dsAuditoria
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Color = clInactiveCaption
+        Expanded = False
+        FieldName = 'CLAVE'
+        Title.Alignment = taCenter
+        Title.Caption = 'Clave'
+        Width = 75
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'LECTURAACTIVALECTOR'
+        Title.Alignment = taCenter
+        Title.Caption = 'Activa'
+        Width = 68
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'LECTURAACTIVASUPER'
+        Title.Alignment = taCenter
+        Title.Caption = 'Activa Auditoria'
+        Title.Color = clAqua
+        Width = 92
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'LECTURAREACTIVALECTOR'
+        Title.Alignment = taCenter
+        Title.Caption = 'Reactiva'
+        Width = 85
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'LECTURAREACTIVASUPER'
+        Title.Alignment = taCenter
+        Title.Caption = 'Reactiva Auditoria'
+        Title.Color = clAqua
+        Width = 102
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'LECTURADEMANDALECTOR'
+        Title.Alignment = taCenter
+        Title.Caption = 'Demanda'
+        Width = 81
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'LECTURADEMANDASUPER'
+        Title.Alignment = taCenter
+        Title.Caption = 'Demanda Auditoria'
+        Title.Color = clAqua
+        Width = 106
+        Visible = True
+      end
+      item
+        Alignment = taCenter
+        Expanded = False
+        FieldName = 'FACTURO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Facturado'
+        Width = 62
+        Visible = True
+      end
+      item
+        Alignment = taCenter
+        Expanded = False
+        FieldName = 'ENTREGALECTURA'
+        Title.Alignment = taCenter
+        Title.Caption = 'Factura Auditoria'
+        Width = 108
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'FECHAAUDITORIA'
+        Title.Alignment = taCenter
+        Title.Caption = 'Fecha Auditoria'
+        Width = 138
+        Visible = True
+      end>
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 17
+    Width = 1189
+    Height = 32
+    Align = alTop
+    TabOrder = 2
+    object sbExportar: TSpeedButton
+      Left = 1133
+      Top = -1
+      Width = 25
+      Height = 25
+      Hint = 'Exportar Listado en formato .CSV'
+      Anchors = [akTop, akRight]
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333303
+        333333333333337FF3333333333333903333333333333377FF33333333333399
+        03333FFFFFFFFF777FF3000000999999903377777777777777FF0FFFF0999999
+        99037F3337777777777F0FFFF099999999907F3FF777777777770F00F0999999
+        99037F773777777777730FFFF099999990337F3FF777777777330F00FFFFF099
+        03337F773333377773330FFFFFFFF09033337F3FF3FFF77733330F00F0000003
+        33337F773777777333330FFFF0FF033333337F3FF7F3733333330F08F0F03333
+        33337F7737F7333333330FFFF003333333337FFFF77333333333000000333333
+        3333777777333333333333333333333333333333333333333333}
+      NumGlyphs = 2
+      OnClick = sbExportarClick
+    end
+    object SBSalir: TSpeedButton
+      Left = 1161
+      Top = 1
+      Width = 25
+      Height = 23
+      Hint = 'Cierra esta ventana'
+      Anchors = [akTop, akRight]
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00330000000000
+        03333377777777777F333301BBBBBBBB033333773F3333337F3333011BBBBBBB
+        0333337F73F333337F33330111BBBBBB0333337F373F33337F333301110BBBBB
+        0333337F337F33337F333301110BBBBB0333337F337F33337F333301110BBBBB
+        0333337F337F33337F333301110BBBBB0333337F337F33337F333301110BBBBB
+        0333337F337F33337F333301110BBBBB0333337F337FF3337F33330111B0BBBB
+        0333337F337733337F333301110BBBBB0333337F337F33337F333301110BBBBB
+        0333337F3F7F33337F333301E10BBBBB0333337F7F7F33337F333301EE0BBBBB
+        0333337F777FFFFF7F3333000000000003333377777777777333}
+      NumGlyphs = 2
+      OnClick = SBSalirClick
+    end
+    object sbVistaPreliminarVL: TSpeedButton
+      Left = 1107
+      Top = 0
+      Width = 25
+      Height = 24
+      Hint = 'Mostrar Fotos de la Lecutra'
+      AllowAllUp = True
+      Anchors = [akTop, akRight]
+      GroupIndex = 2
+      Flat = True
+      Glyph.Data = {
+        42040000424D4204000000000000420000002800000010000000100000000100
+        20000300000000040000000000000000000000000000000000000000FF0000FF
+        0000FF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFA2A19EFF36342EFF36342EFF36342EFF36342EFF36342EFF3634
+        2EFF36342EFF36342EFF36342EFF36342EFF36342EFF36342EFF36342EFF3634
+        2EFF82817EFF36342EFF828785FF7F8482FF777C7AFF727674FF696D6BFF6165
+        63FF4E514FFF4D504EFF464948FF424544FF696D6BFF767977FF8A8F8DFF878D
+        8AFF36342EFF36342EFFA2A9A6FF666A68FF666A68FF525654FF595E5CFF7176
+        75FF818684FF818684FF5A5E5DFF343736FF282A29FF525654FF666A68FF767A
+        78FF36342EFF36342EFFA5ABA8FF5D615FFF555957FF767B79FF868A88FF4647
+        45FF282724FF2D2C27FF4D4F4CFF828785FF3B3D3CFF292B2AFF626664FF767A
+        78FF36342EFF36342EFFA5ACA9FF5E6260FF555957FF898C8BFF424442FF1D1B
+        18FF262520FF302D29FF949390FF4D4E4CFF7A7F7DFF363837FF636765FF868B
+        89FF36342EFF36342EFFA7ADAAFF5F6361FF686C6AFF868B89FF1A1A18FF1C1B
+        18FFA8A7A6FF2F2D28FF2E2C28FF2D2C27FF848886FF3F4140FF6E7270FF878C
+        8AFF36342EFF36342EFFA7ADAAFF5D615FFF5F6361FF878C8AFF181716FF1817
+        15FFDBDBDAFFA8A7A5FF262420FF272624FF858A88FF545856FF767A78FF868B
+        89FF36342EFF36342EFFA7ADAAFF5E6260FF4E5250FF8E9290FF3D3F3DFF1211
+        0FFF181715FF1C1B18FF1C1A17FF454744FF858987FF515553FF828684FF868B
+        89FF36342EFF36342EFFA7ADAAFF5F6361FF565A58FF696C6BFF888D8BFF3D3F
+        3EFF171816FF1A1A18FF424341FF868A88FF666B69FF535755FF848886FF878C
+        8AFF36342EFF36342EFFAEB4B1FFABB1AFFFABB1AFFF878B89FF8B8F8DFFA4A7
+        A5FFA3A5A4FFA3A5A3FFA3A4A3FF7A7E7CFF797D7BFF9DA3A0FFA0A6A4FFA0A6
+        A4FF36342EFF6C6A66FF36342EFF36342EFF6A6E6CFFAAB0ADFF7D817FFF7377
+        75FF717573FF707472FF6E7270FF6C706EFF9FA5A2FF36342EFF36342EFF3634
+        2EFF6C6A66FFFFFFFFFFFDFDFDFF888783FF585651FF36342EFF858A88FFFDFD
+        FDFFFDFDFDFFFDFDFDFFFFFFFFFF858A88FF36342EFFBAB9B7FFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFF1F1F1FFEFEFEFFFC0C0C0FF858A88FFECEC
+        ECFFEBEBEBFFEBEBEBFFF9F9F9FF858A88FFAFAEABFFE9E9E9FFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFEFEFFC1C4C3FF858A
+        88FF858A88FF858A88FF858A88FFB9BCBBFFECECECFFFFFFFFFFFEFEFEFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFF}
+      OnClick = sbVistaPreliminarVLClick
+    end
+    object lFechaLectura: TLabel
+      Left = 64
+      Top = 9
+      Width = 69
+      Height = 13
+      Alignment = taCenter
+      Caption = '15/01/2018'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 9
+      Top = 9
+      Width = 47
+      Height = 16
+      Alignment = taCenter
+      Caption = 'Fecha : '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 184
+      Top = 9
+      Width = 101
+      Height = 16
+      Caption = 'Codigo Itinerario:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object LblItinerario: TLabel
+      Left = 289
+      Top = 9
+      Width = 41
+      Height = 16
+      Caption = '94894'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+  end
+  object Panel1: TPanel
+    Left = 888
+    Top = 49
+    Width = 301
+    Height = 511
+    Align = alRight
+    BorderStyle = bsSingle
+    TabOrder = 3
+    Visible = False
+  end
+  object Panel4: TPanel
+    Left = 0
+    Top = 560
+    Width = 1189
+    Height = 12
+    Align = alBottom
+    TabOrder = 4
+  end
+  object qAuditoria: TQuery
+    AfterScroll = qAuditoriaAfterScroll
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT S.CLAVE,s.lecturaencontrada  AS LECTURAACTIVALECTOR,'
+      'TO_CHAR(SA.FECHALECTURA,'#39'DD/MM/YYYY'#39')  AS PERIODO,'
+      's.lecturaencontrada_reactiva AS LECTURAREACTIVALECTOR,'
+      's.lecturaencontrada_demanda AS LECTURADEMANDALECTOR,'
+      'SA.LECTURAACTIVA AS LECTURAACTIVASUPER,'
+      'SA.LECTURAREACTIVA AS LECTURAREACTIVASUPER,'
+      'SA.LECTURADEMANDA AS LECTURADEMANDASUPER,'
+      'S.FACTURO,SA.ENTREGALECTURA,SA.FECHAAUDITORIA, SA.FECHACARGUE'
+      'FROM SIGCOM_LECTURA S , SGC_SUPERAUDITORIA SA'
+      'WHERE S.FECHA_PROGRAMADA=SA.FECHALECTURA'
+      
+        'AND S.CLAVE=SA.CLAVE AND TO_CHAR(SA.FECHALECTURA,'#39'DD/MM/YYYY'#39')  ' +
+        '= :FECHAAUDITAR'
+      'AND S.CODIGOITINERARIO=:CODIGOITINERARIO'
+      ' '
+      ' ')
+    Left = 240
+    Top = 264
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'FECHAAUDITAR'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOITINERARIO'
+        ParamType = ptUnknown
+      end>
+    object qAuditoriaCLAVE: TStringField
+      FieldName = 'CLAVE'
+      Origin = 'SIGCOM_LECTURA.CLAVE'
+      Size = 50
+    end
+    object qAuditoriaLECTURAACTIVALECTOR: TStringField
+      FieldName = 'LECTURAACTIVALECTOR'
+      Origin = 'SIGCOM_LECTURA.LECTURAACTUAL'
+      Size = 50
+    end
+    object qAuditoriaLECTURAREACTIVALECTOR: TStringField
+      FieldName = 'LECTURAREACTIVALECTOR'
+      Origin = 'SIGCOM_LECTURA.LECTURAREACTIVA'
+      Size = 50
+    end
+    object qAuditoriaLECTURADEMANDALECTOR: TStringField
+      FieldName = 'LECTURADEMANDALECTOR'
+      Origin = 'SIGCOM_LECTURA.POTENCIA'
+      Size = 50
+    end
+    object qAuditoriaLECTURAACTIVASUPER: TFloatField
+      FieldName = 'LECTURAACTIVASUPER'
+      Origin = 'SGC_SUPERAUDITORIA.LECTURAACTIVA'
+    end
+    object qAuditoriaLECTURAREACTIVASUPER: TFloatField
+      FieldName = 'LECTURAREACTIVASUPER'
+      Origin = 'SGC_SUPERAUDITORIA.LECTURAREACTIVA'
+    end
+    object qAuditoriaLECTURADEMANDASUPER: TFloatField
+      FieldName = 'LECTURADEMANDASUPER'
+      Origin = 'SGC_SUPERAUDITORIA.LECTURADEMANDA'
+    end
+    object qAuditoriaFACTURO: TStringField
+      FieldName = 'FACTURO'
+      Origin = 'SIGCOM_LECTURA.FACTURO'
+      Size = 4
+    end
+    object qAuditoriaENTREGALECTURA: TStringField
+      FieldName = 'ENTREGALECTURA'
+      Origin = 'SGC_SUPERAUDITORIA.ENTREGALECTURA'
+      Size = 2
+    end
+    object qAuditoriaFECHAAUDITORIA: TDateTimeField
+      FieldName = 'FECHAAUDITORIA'
+      Origin = 'SGC_SUPERAUDITORIA.FECHAAUDITORIA'
+    end
+    object qAuditoriaFECHACARGUE: TDateTimeField
+      FieldName = 'FECHACARGUE'
+      Origin = 'SGC_SUPERAUDITORIA.FECHACARGUE'
+    end
+    object qAuditoriaPERIODO: TStringField
+      FieldName = 'PERIODO'
+      Size = 10
+    end
+  end
+  object dsAuditoria: TDataSource
+    DataSet = qAuditoria
+    Left = 136
+    Top = 248
+  end
+  object qAuditoriaxSuperv: TQuery
+    AfterScroll = qAuditoriaxSupervAfterScroll
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT S.CLAVE,TO_CHAR(SA.FECHALECTURA,'#39'DD/MM/YYYY'#39') as PERIODO,' +
+        ' S.lecturaencontrada AS LECTURAACTIVALECTOR,'
+      'S.lecturaencontrada_reactiva AS LECTURAREACTIVALECTOR,'
+      'S.lecturaencontrada_demanda AS LECTURADEMANDALECTOR,'
+      
+        'SA.LECTURAACTIVA AS LECTURAACTIVASUPER,S.CODIGOITINERARIO as ITI' +
+        'NERARIO,'
+      
+        'SA.LECTURAREACTIVA AS LECTURAREACTIVASUPER,SA.LECTURADEMANDA AS ' +
+        'LECTURADEMANDASUPER,'
+      'I.USUARIOULTIMAEXPORTACION AS USUARIO,'
+      'S.FACTURO,SA.ENTREGALECTURA,SA.FECHAAUDITORIA,SA.FECHACARGUE'
+      
+        'FROM SIGCOM_LECTURA S , SGC_SUPERAUDITORIA SA , SGC_INFOITINERAR' +
+        'IO I'
+      
+        'WHERE S.FECHA_PROGRAMADA=SA.FECHALECTURA AND I.CLAVE=S.CLAVE AND' +
+        ' I.FECHALECTURA=S.FECHA_PROGRAMADA'
+      
+        'AND S.CLAVE=SA.CLAVE AND TO_CHAR(SA.FECHALECTURA,'#39'DD/MM/YYYY'#39')=:' +
+        'FECHAAUDITAR AND S.CODIGOITINERARIO = :CODIGOITINERARIO AND I.US' +
+        'UARIOULTIMAEXPORTACION=:USUARIO'
+      ' '
+      ' ')
+    Left = 320
+    Top = 160
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'FECHAAUDITAR'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOITINERARIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'USUARIO'
+        ParamType = ptUnknown
+      end>
+    object StringField1: TStringField
+      FieldName = 'CLAVE'
+      Origin = 'SIGCOM_LECTURA.CLAVE'
+      Size = 50
+    end
+    object StringField2: TStringField
+      FieldName = 'LECTURAACTIVALECTOR'
+      Origin = 'SIGCOM_LECTURA.LECTURAACTUAL'
+      Size = 50
+    end
+    object StringField3: TStringField
+      FieldName = 'LECTURAREACTIVALECTOR'
+      Origin = 'SIGCOM_LECTURA.LECTURAREACTIVA'
+      Size = 50
+    end
+    object StringField4: TStringField
+      FieldName = 'LECTURADEMANDALECTOR'
+      Origin = 'SIGCOM_LECTURA.POTENCIA'
+      Size = 50
+    end
+    object FloatField1: TFloatField
+      FieldName = 'LECTURAACTIVASUPER'
+      Origin = 'SGC_SUPERAUDITORIA.LECTURAACTIVA'
+    end
+    object FloatField2: TFloatField
+      FieldName = 'LECTURAREACTIVASUPER'
+      Origin = 'SGC_SUPERAUDITORIA.LECTURAREACTIVA'
+    end
+    object FloatField3: TFloatField
+      FieldName = 'LECTURADEMANDASUPER'
+      Origin = 'SGC_SUPERAUDITORIA.LECTURADEMANDA'
+    end
+    object StringField5: TStringField
+      FieldName = 'FACTURO'
+      Origin = 'SIGCOM_LECTURA.FACTURO'
+      Size = 4
+    end
+    object StringField6: TStringField
+      FieldName = 'ENTREGALECTURA'
+      Origin = 'SGC_SUPERAUDITORIA.ENTREGALECTURA'
+      Size = 2
+    end
+    object DateTimeField1: TDateTimeField
+      FieldName = 'FECHAAUDITORIA'
+      Origin = 'SGC_SUPERAUDITORIA.FECHAAUDITORIA'
+    end
+    object DateTimeField2: TDateTimeField
+      FieldName = 'FECHACARGUE'
+      Origin = 'SGC_SUPERAUDITORIA.FECHACARGUE'
+    end
+  end
+  object dsAuditoriaxSuperv: TDataSource
+    DataSet = qAuditoriaxSuperv
+    Left = 112
+    Top = 152
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = 'csv'
+    Filter = 'Archivo csv|*.csv'
+    Left = 363
+    Top = 249
+  end
+  object CVS1: TCVS
+    FileFormat = ffCVS
+    Header = True
+    Left = 200
+    Top = 152
+  end
+end

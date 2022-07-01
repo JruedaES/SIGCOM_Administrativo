@@ -1,0 +1,2632 @@
+object FViatico: TFViatico
+  Left = 386
+  Top = 134
+  BorderStyle = bsDialog
+  Caption = 'Viáticos'
+  ClientHeight = 237
+  ClientWidth = 607
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pInferior: TPanel
+    Left = 0
+    Top = 203
+    Width = 607
+    Height = 34
+    Align = alBottom
+    TabOrder = 0
+    object sbImprimir: TSpeedButton
+      Left = 16
+      Top = 3
+      Width = 75
+      Height = 25
+      Caption = 'Imprimir'
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+        00033FFFFFFFFFFFFFFF0888888888888880777777777777777F088888888888
+        8880777777777777777F0000000000000000FFFFFFFFFFFFFFFF0F8F8F8F8F8F
+        8F80777777777777777F08F8F8F8F8F8F9F0777777777777777F0F8F8F8F8F8F
+        8F807777777777777F7F0000000000000000777777777777777F3330FFFFFFFF
+        03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+        03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+        33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
+        33333337FFFF7733333333300000033333333337777773333333}
+      NumGlyphs = 2
+      Visible = False
+      OnClick = sbImprimirClick
+    end
+    object bbAceptar: TBitBtn
+      Left = 445
+      Top = 3
+      Width = 75
+      Height = 25
+      Caption = '&Aceptar'
+      ModalResult = 1
+      TabOrder = 0
+      OnClick = bbAceptarClick
+      Glyph.Data = {
+        DE010000424DDE01000000000000760000002800000024000000120000000100
+        0400000000006801000000000000000000001000000010000000000000000000
+        80000080000000808000800000008000800080800000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        3333333333333333333333330000333333333333333333333333F33333333333
+        00003333344333333333333333388F3333333333000033334224333333333333
+        338338F3333333330000333422224333333333333833338F3333333300003342
+        222224333333333383333338F3333333000034222A22224333333338F338F333
+        8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+        33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+        0000333333333A222433333333333338F338F33300003333333333A222433333
+        333333338F338F33000033333333333A222433333333333338F338F300003333
+        33333333A222433333333333338F338F00003333333333333A22433333333333
+        3338F38F000033333333333333A223333333333333338F830000333333333333
+        333A333333333333333338330000333333333333333333333333333333333333
+        0000}
+      NumGlyphs = 2
+    end
+    object bbCancelar: TBitBtn
+      Left = 525
+      Top = 3
+      Width = 75
+      Height = 25
+      Caption = '&Cancelar'
+      TabOrder = 1
+      OnClick = bbCancelarClick
+      Kind = bkCancel
+    end
+  end
+  object PanelEncabezado: TPanel
+    Left = 0
+    Top = 0
+    Width = 607
+    Height = 203
+    Align = alClient
+    TabOrder = 1
+    object Label2: TLabel
+      Left = 26
+      Top = 30
+      Width = 43
+      Height = 13
+      Caption = 'Nombre :'
+      FocusControl = dbEdCedula
+    end
+    object Label1: TLabel
+      Left = 316
+      Top = 30
+      Width = 20
+      Height = 13
+      Caption = 'C.C:'
+      FocusControl = dbEdCedula
+    end
+    object Label3: TLabel
+      Left = 41
+      Top = 53
+      Width = 28
+      Height = 13
+      Caption = 'Área :'
+      FocusControl = dbEdCedula
+    end
+    object Label4: TLabel
+      Left = 472
+      Top = 79
+      Width = 29
+      Height = 13
+      Caption = 'ODT :'
+      FocusControl = dbEdCodigoODT
+    end
+    object Label7: TLabel
+      Left = 1
+      Top = 129
+      Width = 69
+      Height = 13
+      Caption = 'Mun. Destino :'
+      FocusControl = dbEdCodigoODT
+    end
+    object Label27: TLabel
+      Left = 5
+      Top = 154
+      Width = 64
+      Height = 13
+      Caption = 'Fecha Inicio :'
+      FocusControl = dbEdFechaInicio
+    end
+    object Label28: TLabel
+      Left = 16
+      Top = 178
+      Width = 53
+      Height = 13
+      Caption = 'Fecha Fin :'
+      FocusControl = dbEdFechaFin
+    end
+    object Label29: TLabel
+      Left = 260
+      Top = 153
+      Width = 22
+      Height = 13
+      Caption = 'DÍas'
+      FocusControl = dbEdDias
+    end
+    object Label8: TLabel
+      Left = 424
+      Top = 154
+      Width = 66
+      Height = 13
+      Caption = 'Viático diario :'
+    end
+    object Label10: TLabel
+      Left = 420
+      Top = 178
+      Width = 70
+      Height = 13
+      Caption = 'Valor Viáticos :'
+    end
+    object Label32: TLabel
+      Left = 5
+      Top = 77
+      Width = 65
+      Height = 13
+      Caption = 'Zona Origen :'
+      FocusControl = dbEdZonaOrigen
+    end
+    object sbFechaInicio: TSpeedButton
+      Tag = 9
+      Left = 221
+      Top = 149
+      Width = 22
+      Height = 21
+      Glyph.Data = {
+        4E010000424D4E01000000000000760000002800000012000000120000000100
+        040000000000D800000000000000000000001000000010000000000000000000
+        BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        3333330000003333333333333333330000003338888888888888330000003304
+        0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+        000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+        FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+        F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+        000033F7777777777F4833000000330000000000003333000000333333333333
+        333333000000333333333333333333000000}
+      OnClick = sbFechaInicioClick
+    end
+    object sbFechaFin: TSpeedButton
+      Tag = 9
+      Left = 221
+      Top = 173
+      Width = 22
+      Height = 21
+      Glyph.Data = {
+        4E010000424D4E01000000000000760000002800000012000000120000000100
+        040000000000D800000000000000000000001000000010000000000000000000
+        BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        3333330000003333333333333333330000003338888888888888330000003304
+        0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+        000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+        FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+        F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+        000033F7777777777F4833000000330000000000003333000000333333333333
+        333333000000333333333333333333000000}
+      OnClick = sbFechaFinClick
+    end
+    object Label16: TLabel
+      Left = 297
+      Top = 78
+      Width = 21
+      Height = 13
+      Caption = 'CIG:'
+      FocusControl = dbEdCodigoODT
+    end
+    object sbBuscarCIG: TSpeedButton
+      Left = 333
+      Top = 124
+      Width = 25
+      Height = 20
+      Hint = 'Editar CIG'
+      Caption = 'CIG'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      NumGlyphs = 2
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = sbBuscarCIGClick
+    end
+    object SpeedButton7: TSpeedButton
+      Left = 392
+      Top = 100
+      Width = 23
+      Height = 20
+      Hint = 'Buscar CIG en Cartografía'
+      Flat = True
+      Glyph.Data = {
+        F6000000424DF600000000000000760000002800000010000000100000000100
+        0400000000008000000000000000000000001000000010000000000000000000
+        8000008000000080800080000000800080008080000080808000C0C0C0000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00AAAAAAAAAAAA
+        AAAAAAAAAAAACC6CCAAAAAAAAAACCC666CAAAAAAAACC6666666A000AAA660006
+        66CA0800A660080666CC000006000006CCCC080000008006CCCC080008008006
+        CC6A08000800800CC66A00000000000CC2AAA08000080066CAAAA000000000AA
+        AAAAAA000A000AAAAAAAAA080A080AAAAAAAAA000A000AAAAAAA}
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = SpeedButton7Click
+    end
+    object Label17: TLabel
+      Left = 463
+      Top = 30
+      Width = 39
+      Height = 13
+      Caption = 'Sueldo :'
+      FocusControl = dbEdSueldo
+    end
+    object Label12: TLabel
+      Left = 486
+      Top = 129
+      Width = 70
+      Height = 13
+      Caption = 'DÍas Pagados:'
+      FocusControl = dbEdDias
+    end
+    object Label5: TLabel
+      Left = 6
+      Top = 104
+      Width = 64
+      Height = 13
+      Caption = 'Mun. Origen :'
+      FocusControl = dbEdCodigoODT
+    end
+    object lblSueldoNuevo: TLabel
+      Left = 456
+      Top = 54
+      Width = 46
+      Height = 13
+      Alignment = taRightJustify
+      Caption = 'Encargo :'
+      FocusControl = dbEdSueldo
+      Visible = False
+    end
+    object Panel6: TPanel
+      Left = 1
+      Top = 1
+      Width = 605
+      Height = 21
+      Align = alTop
+      Caption = 'Información  '
+      Color = 16544515
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 9
+      object Label19: TLabel
+        Left = 481
+        Top = 4
+        Width = 21
+        Height = 13
+        Caption = 'No.'
+      end
+      object dbEdComision: TDBEdit
+        Left = 501
+        Top = 1
+        Width = 90
+        Height = 21
+        DataField = 'CODIGOCOMISION'
+        DataSource = dsViatico
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clNavy
+        Font.Height = -9
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 0
+        OnKeyPress = FormKeyPress
+      end
+    end
+    object dbEdNombreEmpleado: TDBEdit
+      Left = 72
+      Top = 26
+      Width = 230
+      Height = 21
+      Color = 15658734
+      DataField = 'NOMBREEMPLEADO'
+      DataSource = dsEmpleado
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 0
+      OnKeyPress = FormKeyPress
+    end
+    object dbEdCedula: TDBEdit
+      Left = 339
+      Top = 26
+      Width = 100
+      Height = 21
+      Color = 15658734
+      DataField = 'CODIGOEMPLEADO'
+      DataSource = dsViatico
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 1
+      OnKeyPress = FormKeyPress
+    end
+    object dbEdCia: TDBEdit
+      Left = 72
+      Top = 50
+      Width = 367
+      Height = 21
+      Color = 15658734
+      DataField = 'NOMBRECATEGORIA'
+      DataSource = dsCia
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 2
+      OnKeyPress = FormKeyPress
+    end
+    object dbEdCodigoODT: TDBEdit
+      Left = 503
+      Top = 73
+      Width = 100
+      Height = 21
+      Color = 15658734
+      DataField = 'CODIGOODT'
+      DataSource = dsOdt
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 3
+      OnKeyPress = FormKeyPress
+    end
+    object dbEdMunicipioDestino: TDBEdit
+      Left = 72
+      Top = 125
+      Width = 246
+      Height = 21
+      CharCase = ecUpperCase
+      Color = 15658734
+      DataField = 'DESTINO'
+      DataSource = dsViatico
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 4
+      OnKeyPress = FormKeyPress
+    end
+    object dbEdFechaInicio: TDBEdit
+      Left = 72
+      Top = 151
+      Width = 148
+      Height = 21
+      Color = 15658734
+      DataField = 'FECHAINICIO'
+      DataSource = dsViatico
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 5
+      OnKeyPress = FormKeyPress
+    end
+    object dbEdFechaFin: TDBEdit
+      Left = 72
+      Top = 175
+      Width = 148
+      Height = 21
+      Color = 15658734
+      DataField = 'FECHAFIN'
+      DataSource = dsViatico
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 6
+      OnKeyPress = FormKeyPress
+    end
+    object dbEdDias: TDBEdit
+      Left = 288
+      Top = 149
+      Width = 30
+      Height = 21
+      Color = 15658734
+      DataField = 'Dias'
+      DataSource = dsViatico
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 7
+    end
+    object dbEdViaticoDiario: TDBEdit
+      Left = 491
+      Top = 150
+      Width = 110
+      Height = 21
+      Color = 15658734
+      DataField = 'VALORDIARIO'
+      DataSource = dsViatico
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 8
+      OnKeyPress = FormKeyPress
+    end
+    object dbEdValorViatico: TDBEdit
+      Left = 491
+      Top = 175
+      Width = 110
+      Height = 21
+      DataField = 'ValorViatico'
+      DataSource = dsViatico
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 10
+    end
+    object dbEdZonaOrigen: TDBEdit
+      Left = 72
+      Top = 75
+      Width = 217
+      Height = 21
+      Color = 15658734
+      DataField = 'NOMBREZONA'
+      DataSource = dsZona
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 11
+      OnKeyPress = FormKeyPress
+    end
+    object gbEscalas: TGroupBox
+      Left = 800
+      Top = 339
+      Width = 314
+      Height = 150
+      Hint = 
+        'Al incluir escalas debe tener en cuenta '#13#10'que el destino es el ú' +
+        'ltimo lugar que se '#13#10'tendrá en cuenta para el cálculo del'#13#10'viáti' +
+        'co.'
+      TabOrder = 12
+      object dbgEscalas: TDBGrid
+        Left = 2
+        Top = 15
+        Width = 310
+        Height = 115
+        Align = alClient
+        DataSource = dsViaticoEscala
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'DIA'
+            Title.Alignment = taCenter
+            Title.Caption = 'Día'
+            Width = 30
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'LUGAR'
+            Title.Alignment = taCenter
+            Title.Caption = 'Lugar'
+            Width = 160
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'VALOR'
+            Title.Alignment = taCenter
+            Title.Caption = 'Valor'
+            Width = 80
+            Visible = True
+          end>
+      end
+      object DBNavigator1: TDBNavigator
+        Left = 2
+        Top = 130
+        Width = 310
+        Height = 18
+        DataSource = dsViaticoEscala
+        VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbEdit, nbPost]
+        Align = alBottom
+        Hints.Strings = (
+          'Primer registro'
+          'Registro anterior'
+          'Siguiente registro'
+          'Ultimo registro'
+          'Insertar registro'
+          'Borrar registro'
+          'Editar registro')
+        TabOrder = 1
+      end
+    end
+    object DBEdit3: TDBEdit
+      Left = 321
+      Top = 75
+      Width = 67
+      Height = 21
+      Color = 15658734
+      DataField = 'CODIGOGEOGRAFICO'
+      DataSource = dsViatico
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 13
+      OnKeyPress = FormKeyPress
+    end
+    object DBCheckBox1: TDBCheckBox
+      Left = 806
+      Top = 336
+      Width = 65
+      Height = 17
+      Caption = 'Escalas'
+      DataField = 'ESCALAS'
+      DataSource = dsViatico
+      TabOrder = 14
+      ValueChecked = 'S'
+      ValueUnchecked = 'N'
+      OnMouseUp = dbchbCiudadCapitalMouseUp
+    end
+    object dbEdSueldo: TDBEdit
+      Left = 503
+      Top = 26
+      Width = 100
+      Height = 21
+      Color = 15658734
+      DataField = 'SUELDO'
+      DataSource = dsSueldo
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 15
+      OnKeyPress = FormKeyPress
+    end
+    object DBEdit1: TDBEdit
+      Left = 560
+      Top = 128
+      Width = 41
+      Height = 21
+      Color = 15658734
+      DataField = 'DIASPAGADOS'
+      DataSource = dsViatico
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 16
+      OnKeyPress = FormKeyPress
+    end
+    object dbEdMunicipioOrigen: TDBEdit
+      Left = 72
+      Top = 100
+      Width = 246
+      Height = 21
+      CharCase = ecUpperCase
+      Color = 15658734
+      DataField = 'ORIGEN'
+      DataSource = dsViatico
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 17
+      OnKeyPress = FormKeyPress
+    end
+    object edSueldoNuevo: TCurrencyEdit
+      Left = 503
+      Top = 50
+      Width = 100
+      Height = 21
+      AutoSize = False
+      Color = 15658734
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 18
+      Visible = False
+    end
+  end
+  object qViatico: TQuery
+    CachedUpdates = True
+    AfterOpen = qViaticoAfterOpen
+    AfterInsert = qViaticoAfterInsert
+    AfterPost = qViaticoAfterPost
+    OnCalcFields = qViaticoCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM ODTVIATICO'
+      'WHERE CODIGOODT=:CODIGOODT'
+      'AND CODIGOEMPLEADO=:CODIGOEMPLEADO'
+      'AND TIPOVIATICO='#39'V'#39)
+    UpdateObject = updViatico
+    Left = 329
+    Top = 165
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOEMPLEADO'
+        ParamType = ptUnknown
+      end>
+    object qViaticoDias: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = 'Dias'
+      Calculated = True
+    end
+    object qViaticoValorViatico: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ValorViatico'
+      currency = True
+      Calculated = True
+    end
+    object qViaticoCODIGOVIATICO: TFloatField
+      FieldName = 'CODIGOVIATICO'
+      Origin = 'ODTVIATICO.CODIGOVIATICO'
+      OnChange = qViaticoMODIFICADOChange
+    end
+    object qViaticoCODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'ODTVIATICO.CODIGOEMPLEADO'
+      OnChange = qViaticoMODIFICADOChange
+    end
+    object qViaticoCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'ODTVIATICO.CODIGOODT'
+      OnChange = qViaticoMODIFICADOChange
+    end
+    object qViaticoCODIGOCOMISION: TFloatField
+      FieldName = 'CODIGOCOMISION'
+      Origin = 'ODTVIATICO.CODIGOCOMISION'
+      DisplayFormat = '0000'
+    end
+    object qViaticoFECHAINICIO: TDateTimeField
+      FieldName = 'FECHAINICIO'
+      Origin = 'ODVIATICO.FECHAINICIO'
+      OnChange = qViaticoFECHAINICIOChange
+      OnValidate = qViaticoFECHAINICIOValidate
+    end
+    object qViaticoFECHAFIN: TDateTimeField
+      FieldName = 'FECHAFIN'
+      Origin = 'ODTVIATICO.FECHAFIN'
+      OnChange = qViaticoFECHAFINChange
+      OnValidate = qViaticoFECHAFINValidate
+    end
+    object qViaticoUSOVEHICULO: TStringField
+      FieldName = 'USOVEHICULO'
+      Origin = 'ODTVIATICO.USOVEHICULO'
+      OnChange = qViaticoMODIFICADOChange
+      Size = 1
+    end
+    object qViaticoVEHICULOOFICIAL: TStringField
+      FieldName = 'VEHICULOOFICIAL'
+      Origin = 'ODTVIATICO.VEHICULOOFICIAL'
+      OnChange = qViaticoMODIFICADOChange
+      Size = 1
+    end
+    object qViaticoAnoInicio: TDateField
+      FieldKind = fkCalculated
+      FieldName = 'AnoInicio'
+      DisplayFormat = 'YYYY'
+      Calculated = True
+    end
+    object qViaticoMesInicio: TDateField
+      FieldKind = fkCalculated
+      FieldName = 'MesInicio'
+      DisplayFormat = 'mmmm'#9
+      Calculated = True
+    end
+    object qViaticoDiaInicio: TDateField
+      FieldKind = fkCalculated
+      FieldName = 'DiaInicio'
+      DisplayFormat = 'dd'
+      Calculated = True
+    end
+    object qViaticoAnoFin: TDateField
+      FieldKind = fkCalculated
+      FieldName = 'AnoFin'
+      DisplayFormat = 'YYYY'
+      Calculated = True
+    end
+    object qViaticoMesFin: TDateField
+      FieldKind = fkCalculated
+      FieldName = 'MesFin'
+      DisplayFormat = 'mmmm'#9
+      Calculated = True
+    end
+    object qViaticoDiaFin: TDateField
+      FieldKind = fkCalculated
+      FieldName = 'DiaFin'
+      DisplayFormat = 'dd'
+      Calculated = True
+    end
+    object qViaticoCODIGOZONAORIGEN: TFloatField
+      FieldName = 'CODIGOZONAORIGEN'
+      Origin = 'ODTVIATICO.CODIGOZONAORIGEN'
+    end
+    object qViaticoCODIGOMUNICIPIODESTINO: TFloatField
+      FieldName = 'CODIGOMUNICIPIODESTINO'
+      Origin = 'ODTVIATICO.CODIGOMUNICIPIODESTINO'
+      OnChange = qViaticoCODIGOMUNICIPIODESTINOChange
+      OnValidate = qViaticoCODIGOMUNICIPIODESTINOValidate
+    end
+    object qViaticoCODIGOVEHICULO: TStringField
+      FieldName = 'CODIGOVEHICULO'
+      Origin = 'ODTVIATICO.CODIGOVEHICULO'
+      Size = 10
+    end
+    object qViaticoFECHAPAGOANTICIPO: TDateTimeField
+      FieldName = 'FECHAPAGOANTICIPO'
+      Origin = 'ODTVIATICO.FECHAPAGOANTICIPO'
+    end
+    object qViaticoFECHAPAGOVIATICO: TDateTimeField
+      FieldName = 'FECHAPAGOVIATICO'
+      Origin = 'ODTVIATICO.FECHAPAGOVIATICO'
+    end
+    object qViaticoANTICIPO: TStringField
+      FieldName = 'ANTICIPO'
+      Origin = 'ODTVIATICO.ANTICIPO'
+      Size = 1
+    end
+    object qViaticoPORCENTAJEANTICIPO: TFloatField
+      FieldName = 'PORCENTAJEANTICIPO'
+      Origin = 'ODTVIATICO.PORCENTAJEANTICIPO'
+    end
+    object qViaticoDIASPROYECTADOS: TFloatField
+      FieldName = 'DIASPROYECTADOS'
+      Origin = 'ODTVIATICO.DIASPROYECTADOS'
+    end
+    object qViaticoVALORANTICIPO: TFloatField
+      FieldName = 'VALORANTICIPO'
+      Origin = 'ODTVIATICO.VALORANTICIPO'
+      currency = True
+    end
+    object qViaticoCIUDADCAPITAL: TStringField
+      FieldName = 'CIUDADCAPITAL'
+      Origin = 'ODTVIATICO.CIUDADCAPITAL'
+      Size = 1
+    end
+    object qViaticoCodigoZonaDestino: TIntegerField
+      FieldKind = fkLookup
+      FieldName = 'CodigoZonaDestino'
+      LookupDataSet = qMunicipioDestino
+      LookupKeyFields = 'CODIGOMUNICIPIO'
+      LookupResultField = 'CODIGOZONA'
+      KeyFields = 'CODIGOMUNICIPIODESTINO'
+      Lookup = True
+    end
+    object qViaticoSueldo: TFloatField
+      FieldKind = fkLookup
+      FieldName = 'Sueldo'
+      LookupDataSet = qSueldo
+      LookupKeyFields = 'CODIGO'
+      LookupResultField = 'SUELDO'
+      KeyFields = 'CODIGOEMPLEADO'
+      currency = True
+      Lookup = True
+    end
+    object qViaticoCodigoZona: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = 'CodigoZona'
+      Calculated = True
+    end
+    object qViaticoNivel: TIntegerField
+      FieldKind = fkLookup
+      FieldName = 'Nivel'
+      LookupDataSet = qEmpleado
+      LookupKeyFields = 'CODIGOEMPLEADO'
+      LookupResultField = 'Nivel'
+      KeyFields = 'CODIGOEMPLEADO'
+      Lookup = True
+    end
+    object qViaticoDESTINO: TStringField
+      FieldName = 'DESTINO'
+      Origin = 'ODTVIATICO.DESTINO'
+      OnChange = qViaticoMODIFICADOChange
+      Size = 30
+    end
+    object qViaticoESTADO: TStringField
+      FieldName = 'ESTADO'
+      Origin = 'ODTVIATICO.ESTADO'
+      Size = 3
+    end
+    object qViaticoVALORDIARIO: TFloatField
+      FieldName = 'VALORDIARIO'
+      Origin = 'ODTVIATICO.VALORDIARIO'
+      OnChange = qViaticoVALORDIARIOChange
+      currency = True
+    end
+    object qViaticoDIFICILACCESO: TStringField
+      FieldName = 'DIFICILACCESO'
+      Origin = 'ODTVIATICO.DIFICILACCESO'
+      OnChange = qViaticoMODIFICADOChange
+      OnValidate = qViaticoDIFICILACCESOValidate
+      Size = 1
+    end
+    object qViaticoDIASPAGADOS: TFloatField
+      FieldName = 'DIASPAGADOS'
+      OnChange = qViaticoMODIFICADOChange
+      OnValidate = qViaticoDIASPAGADOSValidate
+    end
+    object qViaticoIMPRESOANTICIPO: TStringField
+      FieldName = 'IMPRESOANTICIPO'
+      Origin = 'ODTVIATICO.IMPRESOANTICIPO'
+      Size = 1
+    end
+    object qViaticoCODIGOGEOGRAFICO: TFloatField
+      FieldName = 'CODIGOGEOGRAFICO'
+      Origin = 'ODTVIATICO.CODIGOGEOGRAFICO'
+      OnChange = qViaticoCODIGOGEOGRAFICOChange
+      OnValidate = qViaticoCODIGOGEOGRAFICOValidate
+    end
+    object qViaticoDEVOLUCION: TStringField
+      FieldName = 'DEVOLUCION'
+      Origin = 'ODTVIATICO.DEVOLUCION'
+      Size = 1
+    end
+    object qViaticoIMPRESOVIATICO: TStringField
+      FieldName = 'IMPRESOVIATICO'
+      Origin = 'ODTVIATICO.IMPRESOVIATICO'
+      Size = 1
+    end
+    object qViaticoNUMEROIMPRESION: TFloatField
+      FieldName = 'NUMEROIMPRESION'
+      Origin = 'ODTVIATICO.NUMEROIMPRESION'
+    end
+    object qViaticoCodigoBarra: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'CodigoBarra'
+      Size = 30
+      Calculated = True
+    end
+    object qViaticoESCALAS: TStringField
+      FieldName = 'ESCALAS'
+      Origin = 'ODTVIATICO.ESCALAS'
+      OnChange = qViaticoESCALASChange
+      OnValidate = qViaticoESCALASValidate
+      Size = 1
+    end
+    object qViaticoAUXILIOZONA: TStringField
+      FieldName = 'AUXILIOZONA'
+      Origin = 'ODTVIATICO.AUXILIOZONA'
+      Size = 1
+    end
+    object qViaticoValorViaticoOAuxilioDiario: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ValorViaticoOAuxilioDiario'
+      currency = True
+      Calculated = True
+    end
+    object qViaticoFECHAINICIOESTIMADA: TDateTimeField
+      FieldName = 'FECHAINICIOESTIMADA'
+      Origin = 'ODTVIATICO.FECHAINICIOESTIMADA'
+    end
+    object qViaticoFECHAFINESTIMADA: TDateTimeField
+      FieldName = 'FECHAFINESTIMADA'
+      Origin = 'ODTVIATICO.FECHAFINESTIMADA'
+    end
+    object qViaticoVALORVIATICOESTIMADO: TFloatField
+      FieldName = 'VALORVIATICOESTIMADO'
+      Origin = 'ODTVIATICO.VALORVIATICOESTIMADO'
+      currency = True
+    end
+    object qViaticoTIPOVIATICO: TStringField
+      FieldName = 'TIPOVIATICO'
+      Origin = 'ODTVIATICO.TIPOVIATICO'
+      Size = 1
+    end
+    object qViaticocodigoodtletra: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'codigoodtletra'
+      Size = 16
+      Calculated = True
+    end
+    object qViaticoAnoFinEstimado: TDateField
+      FieldKind = fkCalculated
+      FieldName = 'AnoFinEstimado'
+      DisplayFormat = 'YYYY'
+      Calculated = True
+    end
+    object qViaticoMesFinEstimado: TDateField
+      FieldKind = fkCalculated
+      FieldName = 'MesFinEstimado'
+      DisplayFormat = 'mmmm'#9
+      Calculated = True
+    end
+    object qViaticoDiaFinEstimado: TDateField
+      FieldKind = fkCalculated
+      FieldName = 'DiaFinEstimado'
+      DisplayFormat = 'dd'
+      Calculated = True
+    end
+    object qViaticoDiasEstimados: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = 'DiasEstimados'
+      Calculated = True
+    end
+    object qViaticoDiasEstimadospagados: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'DiasEstimadospagados'
+      Calculated = True
+    end
+    object qViaticoORIGEN: TStringField
+      FieldName = 'ORIGEN'
+      Origin = 'ODTVIATICO.ORIGEN'
+      OnChange = qViaticoORIGENChange
+      Size = 30
+    end
+    object qViaticoCODIGOMUNICIPIOORIGEN: TFloatField
+      FieldName = 'CODIGOMUNICIPIOORIGEN'
+      Origin = 'ODTVIATICO.CODIGOMUNICIPIOORIGEN'
+      OnChange = qViaticoCODIGOMUNICIPIOORIGENChange
+      OnValidate = qViaticoCODIGOMUNICIPIOORIGENValidate
+    end
+  end
+  object qEmpleado: TQuery
+    AfterOpen = qEmpleadoAfterOpen
+    OnCalcFields = qEmpleadoCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsViatico
+    SQL.Strings = (
+      'SELECT * FROM EMPLEADO'
+      'WHERE CODIGOEMPLEADO=:CODIGOEMPLEADO'
+      'AND ((estado IN ('#39'AC'#39','#39'LC'#39')) OR (estado IS NULL))')
+    Left = 370
+    Top = 144
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOEMPLEADO'
+        ParamType = ptUnknown
+      end>
+    object qEmpleadoCODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'EMPLEADO.CODIGOEMPLEADO'
+    end
+    object qEmpleadoNOMBREEMPLEADO: TStringField
+      FieldName = 'NOMBREEMPLEADO'
+      Origin = 'EMPLEADO.NOMBREEMPLEADO'
+      Size = 50
+    end
+    object qEmpleadoDIRECCION: TStringField
+      FieldName = 'DIRECCION'
+      Origin = 'EMPLEADO.DIRECCION'
+      Size = 40
+    end
+    object qEmpleadoBARRIO: TStringField
+      FieldName = 'BARRIO'
+      Origin = 'EMPLEADO.BARRIO'
+      Size = 30
+    end
+    object qEmpleadoTELEFONO: TStringField
+      FieldName = 'TELEFONO'
+      Origin = 'EMPLEADO.TELEFONO'
+      Size = 15
+    end
+    object qEmpleadoCODIGOSUELDO: TStringField
+      FieldName = 'CODIGOSUELDO'
+      Origin = 'EMPLEADO.CODIGOSUELDO'
+      Size = 15
+    end
+    object qEmpleadoCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'EMPLEADO.CODIGOADMINISTRATIVO'
+    end
+    object qEmpleadoREFERENCIA: TStringField
+      FieldName = 'REFERENCIA'
+      Origin = 'EMPLEADO.REFERENCIA'
+      Size = 12
+    end
+    object qEmpleadoCODIGOCONTRATISTA: TStringField
+      FieldName = 'CODIGOCONTRATISTA'
+      Origin = 'EMPLEADO.CODIGOCONTRATISTA'
+      Size = 14
+    end
+    object qEmpleadoCODIGOCARGO: TFloatField
+      FieldName = 'CODIGOCARGO'
+      Origin = 'EMPLEADO.CODIGOCARGO'
+    end
+    object qEmpleadoTipoCecos: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'TipoCecos'
+      Size = 1
+      Calculated = True
+    end
+    object qEmpleadoNivel: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = 'Nivel'
+      Calculated = True
+    end
+  end
+  object dsEmpleado: TDataSource
+    DataSet = qEmpleado
+    Left = 811
+    Top = 128
+  end
+  object qSueldo: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsEmpleado
+    SQL.Strings = (
+      'SELECT TO_CHAR(E.CODIGOEMPLEADO)  AS CODIGO,S.SUELDO'
+      'FROM EMPLEADO E,SUELDO S'
+      'WHERE E.CODIGOSUELDO=S.CODIGOSUELDO'
+      'AND E.CODIGOEMPLEADO=:CODIGOEMPLEADO'
+      '')
+    Left = 746
+    Top = 182
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOEMPLEADO'
+        ParamType = ptUnknown
+      end>
+    object qSueldoCODIGO: TStringField
+      FieldName = 'CODIGO'
+      Size = 40
+    end
+    object qSueldoSUELDO: TFloatField
+      FieldName = 'SUELDO'
+      currency = True
+    end
+  end
+  object dsSueldo: TDataSource
+    DataSet = qSueldo
+    Left = 811
+    Top = 182
+  end
+  object dsViatico: TDataSource
+    DataSet = qViatico
+    Left = 156
+    Top = 421
+  end
+  object dsCia: TDataSource
+    DataSet = qCia
+    Left = 811
+    Top = 75
+  end
+  object qCia: TQuery
+    AfterOpen = qCiaAfterOpen
+    DatabaseName = 'BaseDato'
+    DataSource = dsEmpleado
+    SQL.Strings = (
+      
+        'SELECT CODIGOADMINISTRATIVO,NOMBRECATEGORIA,SUBSTR(CODIGOARBOL,1' +
+        ',12) AS CODIGOGERENCIA,'
+      'CODIGOCENTROCOSTO,CODIGOAREARESPONSABILIDAD'
+      'FROM ADMINISTRATIVO '
+      'WHERE CODIGOADMINISTRATIVO=:CODIGOADMINISTRATIVO')
+    Left = 746
+    Top = 75
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end>
+  end
+  object qOdt: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsViatico
+    SQL.Strings = (
+      'SELECT * FROM ODT'
+      'WHERE CODIGOODT=:CODIGOODT')
+    Left = 746
+    Top = 21
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end>
+    object qOdtCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'ODT.CODIGOODT'
+    end
+    object qOdtFECHAEMISION: TDateTimeField
+      FieldName = 'FECHAEMISION'
+      Origin = 'ODT.FECHAEMISION'
+    end
+    object qOdtMOTIVOS: TMemoField
+      FieldName = 'MOTIVOS'
+      Origin = 'ODT.MOTIVOS'
+      BlobType = ftMemo
+      Size = 500
+    end
+    object qOdtCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'ODT.CODIGOADMINISTRATIVO'
+    end
+    object qOdtCODIGOPRIORIDAD: TStringField
+      FieldName = 'CODIGOPRIORIDAD'
+      Origin = 'ODT.CODIGOPRIORIDAD'
+      Size = 1
+    end
+    object qOdtCODIGOLABOR: TStringField
+      FieldName = 'CODIGOLABOR'
+      Origin = 'ODT.CODIGOLABOR'
+      Size = 3
+    end
+    object qOdtCODIGOTIPOTAREA: TFloatField
+      FieldName = 'CODIGOTIPOTAREA'
+      Origin = 'ODT.CODIGOTIPOTAREA'
+    end
+    object qOdtCODIGOAPROBADO: TFloatField
+      FieldName = 'CODIGOAPROBADO'
+      Origin = 'ODT.CODIGOAPROBADO'
+    end
+    object qOdtCODIGOREVISADO: TFloatField
+      FieldName = 'CODIGOREVISADO'
+      Origin = 'ODT.CODIGOREVISADO'
+    end
+    object qOdtCODIGOODTTIPOMANOOBRA: TFloatField
+      FieldName = 'CODIGOODTTIPOMANOOBRA'
+      Origin = 'ODT.CODIGOODTTIPOMANOOBRA'
+    end
+    object qOdtCODIGOEJECUTOR: TFloatField
+      FieldName = 'CODIGOEJECUTOR'
+      Origin = 'ODT.CODIGOEJECUTOR'
+    end
+    object qOdtCODIGOFIRMANTE: TFloatField
+      FieldName = 'CODIGOFIRMANTE'
+      Origin = 'ODT.CODIGOFIRMANTE'
+    end
+    object qOdtEQUIPOENERGIZADO: TStringField
+      FieldName = 'EQUIPOENERGIZADO'
+      Origin = 'ODT.EQUIPOENERGIZADO'
+      Size = 1
+    end
+    object qOdtFECHAAPROBACION: TDateTimeField
+      FieldName = 'FECHAAPROBACION'
+      Origin = 'ODT.FECHAAPROBACION'
+    end
+    object qOdtFECHAASIGNACION: TDateTimeField
+      FieldName = 'FECHAASIGNACION'
+      Origin = 'ODT.FECHAASIGNACION'
+    end
+    object qOdtIMPUTACIONMATERIAL: TStringField
+      FieldName = 'IMPUTACIONMATERIAL'
+      Origin = 'ODT.IMPUTACIONMATERIAL'
+    end
+    object qOdtCOSTOMATERIAL: TFloatField
+      FieldName = 'COSTOMATERIAL'
+      Origin = 'ODT.COSTOMATERIAL'
+    end
+    object qOdtCOSTOMANOOBRA: TFloatField
+      FieldName = 'COSTOMANOOBRA'
+      Origin = 'ODT.COSTOMANOOBRA'
+    end
+    object qOdtCOSTOTRANSPORTE: TFloatField
+      FieldName = 'COSTOTRANSPORTE'
+      Origin = 'ODT.COSTOTRANSPORTE'
+    end
+    object qOdtCOSTOEQUIPO: TFloatField
+      FieldName = 'COSTOEQUIPO'
+      Origin = 'ODT.COSTOEQUIPO'
+    end
+    object qOdtCODIGOALMACEN: TStringField
+      FieldName = 'CODIGOALMACEN'
+      Origin = 'ODT.CODIGOALMACEN'
+      Size = 3
+    end
+    object qOdtCODIGOESTADOODT: TStringField
+      FieldName = 'CODIGOESTADOODT'
+      Origin = 'ODT.CODIGOESTADOODT'
+      Size = 1
+    end
+    object qOdtHORARIONORMALDESDE: TDateTimeField
+      FieldName = 'HORARIONORMALDESDE'
+      Origin = 'ODT.HORARIONORMALDESDE'
+    end
+    object qOdtHORARIONORMALHASTA: TDateTimeField
+      FieldName = 'HORARIONORMALHASTA'
+      Origin = 'ODT.HORARIONORMALHASTA'
+    end
+    object qOdtCODIGOTURNOGRUPO: TFloatField
+      FieldName = 'CODIGOTURNOGRUPO'
+      Origin = 'ODT.CODIGOTURNOGRUPO'
+    end
+    object qOdtCODIGOZONATRABAJO: TFloatField
+      FieldName = 'CODIGOZONATRABAJO'
+      Origin = 'ODT.CODIGOZONATRABAJO'
+    end
+    object qOdtCODIGOIMPUTACIONMATERIAL: TFloatField
+      FieldName = 'CODIGOIMPUTACIONMATERIAL'
+      Origin = 'ODT.CODIGOIMPUTACIONMATERIAL'
+    end
+    object qOdtNOTAS: TMemoField
+      FieldName = 'NOTAS'
+      Origin = 'ODT.NOTAS'
+      BlobType = ftMemo
+      Size = 500
+    end
+    object qOdtSECUENCIA: TStringField
+      FieldName = 'SECUENCIA'
+      Origin = 'ODT.SECUENCIA'
+      Size = 200
+    end
+    object qOdtCODIGOMUNICIPIO: TFloatField
+      FieldName = 'CODIGOMUNICIPIO'
+      Origin = 'ODT.CODIGOMUNICIPIO'
+    end
+    object qOdtFECHAINICIO: TDateTimeField
+      FieldName = 'FECHAINICIO'
+      Origin = 'ODT.FECHAINICIO'
+    end
+    object qOdtFECHAFINAL: TDateTimeField
+      FieldName = 'FECHAFINAL'
+      Origin = 'ODT.FECHAFINAL'
+    end
+    object qOdtCODIGOZONAORIGEN: TFloatField
+      FieldName = 'CODIGOZONAORIGEN'
+      Origin = 'ODT.CODIGOZONAORIGEN'
+    end
+    object qOdtCODIGOCONTRATISTA: TStringField
+      FieldName = 'CODIGOCONTRATISTA'
+      Origin = 'ODT.CODIGOCONTRATISTA'
+      Size = 14
+    end
+    object qOdtCODIGOAREAINFLUENCIA: TStringField
+      FieldName = 'CODIGOAREAINFLUENCIA'
+      Origin = 'ODT.CODIGOAREAINFLUENCIA'
+      Size = 1
+    end
+    object qOdtFECHAFINALESTIMADA: TDateTimeField
+      FieldName = 'FECHAFINALESTIMADA'
+      Origin = 'ODT.FECHAFINALESTIMADA'
+    end
+    object qOdtCODIGOODTLETRA: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'CODIGOODTLETRA'
+      Size = 16
+      Calculated = True
+    end
+  end
+  object dsOdt: TDataSource
+    DataSet = qOdt
+    Left = 811
+    Top = 21
+  end
+  object qViaticoDiario: TQuery
+    AfterOpen = qViaticoDiarioAfterOpen
+    DatabaseName = 'BaseDato'
+    DataSource = dsViatico
+    SQL.Strings = (
+      '(SELECT VZ.* FROM VIATICOZONA VZ, MUNICIPIO M'
+      'WHERE VZ.CODIGOZONADESTINO=M.CODIGOZONA'
+      'AND M.CODIGOMUNICIPIO=:CODIGOMUNICIPIODESTINO'
+      'AND VZ.CODIGOZONAORIGEN=:CODIGOZONAORIGEN'
+      'AND VZ.CODIGOMUNICIPIOORIGEN is NULL'
+      'AND VZ.CODIGOMUNICIPIODESTINO is null'
+      'AND VZ.VIGENCIADESDE<=:FECHAINICIO'
+      'AND VZ.VIGENCIAHASTA>=:FECHAINICIO)'
+      'UNION'
+      '(SELECT VZ.* FROM VIATICOZONA VZ'
+      'WHERE VZ.CODIGOZONAORIGEN=:CODIGOZONAORIGEN'
+      'AND VZ.CODIGOZONADESTINO=:CODIGOZONA'
+      'AND VZ.CODIGOMUNICIPIOORIGEN is NULL'
+      'AND VZ.CODIGOMUNICIPIODESTINO is null'
+      'AND VZ.VIGENCIADESDE<=:FECHAINICIO'
+      'AND VZ.VIGENCIAHASTA>=:FECHAINICIO'
+      'AND VZ.CIUDADCAPITAL=:CIUDADCAPITAL'
+      'AND VZ.SALARIODESDE<=:SUELDO'
+      'AND VZ.SALARIOHASTA>=:SUELDO'
+      'AND :NIVEL IS NULL'
+      ')'
+      'UNION'
+      '(SELECT VZ.* FROM VIATICOZONA VZ'
+      'WHERE VZ.CODIGOZONAORIGEN=:CODIGOZONAORIGEN'
+      'AND VZ.CODIGOZONADESTINO=:CODIGOZONA'
+      'AND VZ.CODIGOMUNICIPIOORIGEN is NULL'
+      'AND VZ.CODIGOMUNICIPIODESTINO is null'
+      'AND VZ.VIGENCIADESDE<=:FECHAINICIO'
+      'AND VZ.VIGENCIAHASTA>=:FECHAINICIO'
+      'AND VZ.NIVELCARGO=:NIVEL'
+      'AND VZ.CIUDADCAPITAL=:CIUDADCAPITAL'
+      ')'
+      'ORDER BY 1 DESC')
+    Left = 649
+    Top = 96
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOMUNICIPIODESTINO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOZONAORIGEN'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOZONAORIGEN'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'CodigoZona'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'CIUDADCAPITAL'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'Sueldo'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'SUELDO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Nivel'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOZONAORIGEN'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'CODIGOZONA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'NIVEL'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'CIUDADCAPITAL'
+        ParamType = ptUnknown
+      end>
+    object qViaticoDiarioCODIGOVIATICOZONA: TFloatField
+      FieldName = 'CODIGOVIATICOZONA'
+      Origin = 'VIATICOZONA.CODIGOVIATICOZONA'
+    end
+    object qViaticoDiarioCODIGOZONAORIGEN: TFloatField
+      FieldName = 'CODIGOZONAORIGEN'
+      Origin = 'VIATICOZONA.CODIGOZONAORIGEN'
+    end
+    object qViaticoDiarioCODIGOZONADESTINO: TFloatField
+      FieldName = 'CODIGOZONADESTINO'
+      Origin = 'VIATICOZONA.CODIGOZONADESTINO'
+    end
+    object qViaticoDiarioVALORVIATICO: TFloatField
+      FieldName = 'VALORVIATICO'
+      Origin = 'VIATICOZONA.VALORVIATICO'
+      currency = True
+    end
+    object qViaticoDiarioVALORAUXILIO: TFloatField
+      FieldName = 'VALORAUXILIO'
+      Origin = 'VIATICOZONA.VALORAUXILIO'
+      currency = True
+    end
+    object qViaticoDiarioPORCENTAJESALARIO: TFloatField
+      FieldName = 'PORCENTAJESALARIO'
+      Origin = 'VIATICOZONA.PORCENTAJESALARIO'
+    end
+    object qViaticoDiarioPORCENTAJEULTIMODIA: TFloatField
+      FieldName = 'PORCENTAJEULTIMODIA'
+      Origin = 'VIATICOZONA.PORCENTAJEULTIMODIA'
+    end
+    object qViaticoDiarioVIGENCIADESDE: TDateTimeField
+      FieldName = 'VIGENCIADESDE'
+    end
+    object qViaticoDiarioVIGENCIAHASTA: TDateTimeField
+      FieldName = 'VIGENCIAHASTA'
+    end
+    object qViaticoDiarioSALARIODESDE: TFloatField
+      FieldName = 'SALARIODESDE'
+    end
+    object qViaticoDiarioSALARIOHASTA: TFloatField
+      FieldName = 'SALARIOHASTA'
+    end
+    object qViaticoDiarioCIUDADCAPITAL: TStringField
+      FieldName = 'CIUDADCAPITAL'
+      Size = 1
+    end
+    object qViaticoDiarioNIVELCARGO: TFloatField
+      FieldName = 'NIVELCARGO'
+    end
+    object qViaticoDiarioSALARIOLIMITEVIATICO: TFloatField
+      FieldName = 'SALARIOLIMITEVIATICO'
+    end
+    object qViaticoDiarioVALORAUXILIOVIAJEDIRECTIVO: TFloatField
+      FieldName = 'VALORAUXILIOVIAJEDIRECTIVO'
+    end
+  end
+  object dsViaticoDiario: TDataSource
+    DataSet = qViaticoDiario
+    Left = 652
+    Top = 237
+  end
+  object qMunicipioDestino: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsViatico
+    SQL.Strings = (
+      'SELECT AM.*,AZ.NOMBREZONA FROM MUNICIPIO AM,ZONAESSA AZ '
+      'WHERE CODIGOMUNICIPIO=:CODIGOMUNICIPIODESTINO'
+      'AND AZ.CODIGOZONA=AM.CODIGOZONA')
+    Left = 970
+    Top = 69
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOMUNICIPIODESTINO'
+        ParamType = ptUnknown
+      end>
+    object qMunicipioDestinoCODIGOMUNICIPIO: TFloatField
+      FieldName = 'CODIGOMUNICIPIO'
+      Origin = 'MUNICIPIO.CODIGOMUNICIPIO'
+    end
+    object qMunicipioDestinoNOMBREMUNICIPIO: TStringField
+      FieldName = 'NOMBREMUNICIPIO'
+      Origin = 'MUNICIPIO.NOMBREMUNICIPIO'
+      Size = 200
+    end
+    object qMunicipioDestinoCODIGOZONA: TFloatField
+      FieldName = 'CODIGOZONA'
+      Origin = 'MUNICIPIO.CODIGOZONA'
+    end
+    object qMunicipioDestinoCODIGO_CUENTA: TFloatField
+      FieldName = 'CODIGO_CUENTA'
+      Origin = 'MUNICIPIO.CODIGO_CUENTA'
+    end
+    object qMunicipioDestinoZONAESPECIAL: TStringField
+      FieldName = 'ZONAESPECIAL'
+      Origin = 'MUNICIPIO.ZONAESPECIAL'
+      Size = 1
+    end
+    object qMunicipioDestinoNOMBREZONA: TStringField
+      FieldName = 'NOMBREZONA'
+      Origin = 'ZONAESSA.NOMBREZONA'
+      Size = 200
+    end
+    object qMunicipioDestinoCODIGOGEOGRAFICO: TFloatField
+      FieldName = 'CODIGOGEOGRAFICO'
+      Origin = 'MUNICIPIO.CODIGOGEOGRAFICO'
+    end
+  end
+  object dsMunicipioDestino: TDataSource
+    DataSet = qMunicipioDestino
+    Left = 1075
+    Top = 69
+  end
+  object updViatico: TUpdateSQL
+    ModifySQL.Strings = (
+      'update ODTVIATICO'
+      'set'
+      '  CODIGOVIATICO = :CODIGOVIATICO,'
+      '  CODIGOEMPLEADO = :CODIGOEMPLEADO,'
+      '  CODIGOODT = :CODIGOODT,'
+      '  CODIGOCOMISION = :CODIGOCOMISION,'
+      '  CODIGOZONAORIGEN = :CODIGOZONAORIGEN,'
+      '  CODIGOMUNICIPIODESTINO = :CODIGOMUNICIPIODESTINO,'
+      '  FECHAINICIO = :FECHAINICIO,'
+      '  FECHAFIN = :FECHAFIN,'
+      '  USOVEHICULO = :USOVEHICULO,'
+      '  CODIGOVEHICULO = :CODIGOVEHICULO,'
+      '  VEHICULOOFICIAL = :VEHICULOOFICIAL,'
+      '  VALORANTICIPO = :VALORANTICIPO,'
+      '  FECHAPAGOANTICIPO = :FECHAPAGOANTICIPO,'
+      '  FECHAPAGOVIATICO = :FECHAPAGOVIATICO,'
+      '  ANTICIPO = :ANTICIPO,'
+      '  PORCENTAJEANTICIPO = :PORCENTAJEANTICIPO,'
+      '  DIASPROYECTADOS = :DIASPROYECTADOS,'
+      '  CIUDADCAPITAL = :CIUDADCAPITAL,'
+      '  DESTINO = :DESTINO,'
+      '  ESTADO = :ESTADO,'
+      '  DIFICILACCESO = :DIFICILACCESO,'
+      '  VALORDIARIO = :VALORDIARIO,'
+      '  DIASPAGADOS = :DIASPAGADOS,'
+      '  IMPRESOANTICIPO = :IMPRESOANTICIPO,'
+      '  CODIGOGEOGRAFICO = :CODIGOGEOGRAFICO,'
+      '  DEVOLUCION = :DEVOLUCION,'
+      '  IMPRESOVIATICO = :IMPRESOVIATICO,'
+      '  NUMEROIMPRESION = :NUMEROIMPRESION,'
+      '  ESCALAS = :ESCALAS,'
+      '  AUXILIOZONA = :AUXILIOZONA,'
+      '  FECHAINICIOESTIMADA = :FECHAINICIOESTIMADA,'
+      '  FECHAFINESTIMADA = :FECHAFINESTIMADA,'
+      '  VALORVIATICOESTIMADO = :VALORVIATICOESTIMADO,'
+      '  TIPOVIATICO = :TIPOVIATICO,'
+      '  CODIGOMUNICIPIOORIGEN = :CODIGOMUNICIPIOORIGEN,'
+      '  ORIGEN = :ORIGEN'
+      'where'
+      '  CODIGOVIATICO = :OLD_CODIGOVIATICO and'
+      '  CODIGOEMPLEADO = :OLD_CODIGOEMPLEADO and'
+      '  CODIGOODT = :OLD_CODIGOODT')
+    InsertSQL.Strings = (
+      'insert into ODTVIATICO'
+      
+        '  (CODIGOVIATICO, CODIGOEMPLEADO, CODIGOODT, CODIGOCOMISION, COD' +
+        'IGOZONAORIGEN, '
+      
+        '   CODIGOMUNICIPIODESTINO, FECHAINICIO, FECHAFIN, USOVEHICULO, C' +
+        'ODIGOVEHICULO, '
+      
+        '   VEHICULOOFICIAL, VALORANTICIPO, FECHAPAGOANTICIPO, FECHAPAGOV' +
+        'IATICO, '
+      
+        '   ANTICIPO, PORCENTAJEANTICIPO, DIASPROYECTADOS, CIUDADCAPITAL,' +
+        ' DESTINO, '
+      
+        '   ESTADO, DIFICILACCESO, VALORDIARIO, DIASPAGADOS, IMPRESOANTIC' +
+        'IPO, CODIGOGEOGRAFICO, '
+      
+        '   DEVOLUCION, IMPRESOVIATICO, NUMEROIMPRESION, ESCALAS, AUXILIO' +
+        'ZONA, FECHAINICIOESTIMADA, '
+      
+        '   FECHAFINESTIMADA, VALORVIATICOESTIMADO, TIPOVIATICO, CODIGOMU' +
+        'NICIPIOORIGEN, '
+      '   ORIGEN)'
+      'values'
+      
+        '  (:CODIGOVIATICO, :CODIGOEMPLEADO, :CODIGOODT, :CODIGOCOMISION,' +
+        ' :CODIGOZONAORIGEN, '
+      
+        '   :CODIGOMUNICIPIODESTINO, :FECHAINICIO, :FECHAFIN, :USOVEHICUL' +
+        'O, :CODIGOVEHICULO, '
+      
+        '   :VEHICULOOFICIAL, :VALORANTICIPO, :FECHAPAGOANTICIPO, :FECHAP' +
+        'AGOVIATICO, '
+      
+        '   :ANTICIPO, :PORCENTAJEANTICIPO, :DIASPROYECTADOS, :CIUDADCAPI' +
+        'TAL, :DESTINO, '
+      
+        '   :ESTADO, :DIFICILACCESO, :VALORDIARIO, :DIASPAGADOS, :IMPRESO' +
+        'ANTICIPO, '
+      
+        '   :CODIGOGEOGRAFICO, :DEVOLUCION, :IMPRESOVIATICO, :NUMEROIMPRE' +
+        'SION, :ESCALAS, '
+      
+        '   :AUXILIOZONA, :FECHAINICIOESTIMADA, :FECHAFINESTIMADA, :VALOR' +
+        'VIATICOESTIMADO, '
+      '   :TIPOVIATICO, :CODIGOMUNICIPIOORIGEN, :ORIGEN)')
+    DeleteSQL.Strings = (
+      'delete from ODTVIATICO'
+      'where'
+      '  CODIGOVIATICO = :OLD_CODIGOVIATICO and'
+      '  CODIGOEMPLEADO = :OLD_CODIGOEMPLEADO and'
+      '  CODIGOODT = :OLD_CODIGOODT')
+    Left = 125
+    Top = 501
+  end
+  object updValorViatico: TUpdateSQL
+    ModifySQL.Strings = (
+      'update ODTVIATICODETALLE'
+      'set'
+      '  CODIGOVIATICODETALLE = :CODIGOVIATICODETALLE,'
+      '  CODIGOVIATICO = :CODIGOVIATICO,'
+      '  CODIGOIMPUTACIONMANOOBRA = :CODIGOIMPUTACIONMANOOBRA,'
+      '  VALORIMPUTACION = :VALORIMPUTACION'
+      'where'
+      '  CODIGOVIATICODETALLE = :OLD_CODIGOVIATICODETALLE and'
+      '  CODIGOVIATICO = :OLD_CODIGOVIATICO and'
+      '  CODIGOIMPUTACIONMANOOBRA = :OLD_CODIGOIMPUTACIONMANOOBRA')
+    InsertSQL.Strings = (
+      'insert into ODTVIATICODETALLE'
+      
+        '  (CODIGOVIATICODETALLE, CODIGOVIATICO, CODIGOIMPUTACIONMANOOBRA' +
+        ', VALORIMPUTACION)'
+      'values'
+      
+        '  (:CODIGOVIATICODETALLE, :CODIGOVIATICO, :CODIGOIMPUTACIONMANOO' +
+        'BRA, :VALORIMPUTACION)')
+    DeleteSQL.Strings = (
+      'delete from ODTVIATICODETALLE'
+      'where'
+      '  CODIGOVIATICODETALLE = :OLD_CODIGOVIATICODETALLE and'
+      '  CODIGOVIATICO = :OLD_CODIGOVIATICO and'
+      '  CODIGOIMPUTACIONMANOOBRA = :OLD_CODIGOIMPUTACIONMANOOBRA')
+    Left = 197
+    Top = 268
+  end
+  object dsValorViatico: TDataSource
+    DataSet = qValorViatico
+    Left = 140
+    Top = 244
+  end
+  object qValorViatico: TQuery
+    CachedUpdates = True
+    AfterInsert = qValorViaticoAfterInsert
+    AfterPost = qValorViaticoAfterPost
+    AfterDelete = qValorViaticoAfterDelete
+    DatabaseName = 'BaseDato'
+    DataSource = dsViatico
+    SQL.Strings = (
+      'SELECT VD.CODIGOVIATICODETALLE,VD.CODIGOVIATICO,'
+      'VD.CODIGOIMPUTACIONMANOOBRA,VD.VALORIMPUTACION,'
+      
+        'IMO.NUMEROIMPUTACION,IMO.AUXILIAR,IMO.DESCRIPCIONIMPUTACIONMANOO' +
+        'BRA'
+      'FROM ODTVIATICODETALLE VD,IMPUTACIONMANOOBRA IMO, ODTVIATICO V'
+      'WHERE VD.CODIGOIMPUTACIONMANOOBRA=IMO.CODIGOIMPUTACIONMANOOBRA'
+      'AND V.CODIGOVIATICO=VD.CODIGOVIATICO'
+      'AND IMO.VIGENCIADESDE<=V.FECHAINICIO'
+      'AND (IMO.VIGENCIAHASTA>=V.FECHAFIN OR IMO.VIGENCIAHASTA IS NULL)'
+      'AND V.CODIGOVIATICO=:CODIGOVIATICO'
+      'AND IMO.CODIGOTIPOIMPUTACIONODT='#39'V'#39
+      'AND IMO.CODIGOSUBTIPOIMPUTACIONODT='#39'VIA'#39
+      ''
+      '')
+    UpdateObject = updValorViatico
+    Left = 57
+    Top = 244
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOVIATICO'
+        ParamType = ptUnknown
+      end>
+    object qValorViaticoCODIGOVIATICODETALLE: TFloatField
+      FieldName = 'CODIGOVIATICODETALLE'
+      Origin = 'ODTVIATICODETALLE.CODIGOVIATICODETALLE'
+    end
+    object qValorViaticoCODIGOVIATICO: TFloatField
+      FieldName = 'CODIGOVIATICO'
+      Origin = 'ODTVIATICODETALLE.CODIGOVIATICO'
+    end
+    object qValorViaticoCODIGOIMPUTACIONMANOOBRA: TFloatField
+      FieldName = 'CODIGOIMPUTACIONMANOOBRA'
+      Origin = 'ODTVIATICODETALLE.CODIGOIMPUTACIONMANOOBRA'
+    end
+    object qValorViaticoVALORIMPUTACION: TFloatField
+      FieldName = 'VALORIMPUTACION'
+      Origin = 'ODTVIATICODETALLE.VALORIMPUTACION'
+      DisplayFormat = '###,###,###'
+      currency = True
+    end
+    object qValorViaticoNUMEROIMPUTACION: TFloatField
+      FieldName = 'NUMEROIMPUTACION'
+      Origin = 'ODTIMPUTACIONMANOOBRA.NUMEROIMPUTACION'
+    end
+    object qValorViaticoAUXILIAR: TFloatField
+      FieldName = 'AUXILIAR'
+      Origin = 'ODTIMPUTACIONMANOOBRA.AUXILIAR'
+    end
+    object qValorViaticoDESCRIPCIONIMPUTACIONMANOOBRA: TStringField
+      FieldName = 'DESCRIPCIONIMPUTACIONMANOOBRA'
+      Origin = 'ODTIMPUTACIONMANOOBRA.DESCRIPCIONIMPUTACIONMANOOBRA'
+      Size = 100
+    end
+  end
+  object qZonaOrigen: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsViatico
+    SQL.Strings = (
+      'SELECT * FROM ZONAESSA '
+      'WHERE CODIGOZONA=:CODIGOZONAORIGEN')
+    Left = 970
+    Top = 20
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOZONAORIGEN'
+        ParamType = ptUnknown
+      end>
+    object qZonaOrigenCODIGOZONA: TFloatField
+      FieldName = 'CODIGOZONA'
+      Origin = 'ZONAESSA.CODIGOZONA'
+    end
+    object qZonaOrigenNOMBREZONA: TStringField
+      FieldName = 'NOMBREZONA'
+      Origin = 'ZONAESSA.NOMBREZONA'
+      Size = 200
+    end
+    object qZonaOrigenCODIGOZONAESSA: TFloatField
+      FieldName = 'CODIGOZONAESSA'
+      Origin = 'ZONAESSA.CODIGOZONAESSA'
+    end
+  end
+  object dsZona: TDataSource
+    DataSet = qZonaOrigen
+    Left = 1027
+    Top = 20
+  end
+  object qGerencia: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsCia
+    SQL.Strings = (
+      'SELECT NOMBRECATEGORIA'
+      'FROM ADMINISTRATIVO '
+      'WHERE CODIGOARBOL=:CODIGOGERENCIA')
+    Left = 898
+    Top = 141
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'CODIGOGERENCIA'
+        ParamType = ptUnknown
+      end>
+    object qGerenciaNOMBRECATEGORIA: TStringField
+      FieldName = 'NOMBRECATEGORIA'
+      Origin = 'ADMINISTRATIVO.NOMBRECATEGORIA'
+      Size = 80
+    end
+  end
+  object dsGerencia: TDataSource
+    DataSet = qGerencia
+    Left = 987
+    Top = 141
+  end
+  object qCargo: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsEmpleado
+    SQL.Strings = (
+      'SELECT CODIGOCARGO,NIVEL FROM CARGO '
+      'WHERE CODIGOCARGO=:CODIGOCARGO')
+    Left = 907
+    Top = 190
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOCARGO'
+        ParamType = ptUnknown
+      end>
+    object qCargoNIVEL: TFloatField
+      FieldName = 'NIVEL'
+      Origin = 'CARGO.NIVEL'
+    end
+    object qCargoCODIGOCARGO: TFloatField
+      FieldName = 'CODIGOCARGO'
+      Origin = 'CARGO.CODIGOCARGO'
+    end
+  end
+  object dsCargo: TDataSource
+    DataSet = qCargo
+    Left = 990
+    Top = 190
+  end
+  object qViaticoEscala: TQuery
+    CachedUpdates = True
+    AfterInsert = qViaticoEscalaAfterInsert
+    BeforePost = qViaticoEscalaBeforePost
+    AfterPost = qViaticoEscalaAfterPost
+    AfterDelete = qViaticoEscalaAfterDelete
+    DatabaseName = 'BaseDato'
+    DataSource = dsViatico
+    SQL.Strings = (
+      
+        'select CODIGOODTVIATICOESCALA,CODIGOVIATICO,VALOR,DIA,LUGAR  fro' +
+        'm odtviaticoescala'
+      'where codigoviatico=:codigoviatico'
+      'order by dia')
+    UpdateObject = updViaticoEscala
+    Left = 208
+    Top = 341
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOVIATICO'
+        ParamType = ptUnknown
+      end>
+    object qViaticoEscalaCODIGOODTVIATICOESCALA: TFloatField
+      FieldName = 'CODIGOODTVIATICOESCALA'
+      Origin = 'ODTVIATICOESCALA.CODIGOODTVIATICOESCALA'
+    end
+    object qViaticoEscalaCODIGOVIATICO: TFloatField
+      FieldName = 'CODIGOVIATICO'
+      Origin = 'ODTVIATICOESCALA.CODIGOVIATICO'
+    end
+    object qViaticoEscalaVALOR: TFloatField
+      FieldName = 'VALOR'
+      Origin = 'ODTVIATICOESCALA.VALOR'
+      currency = True
+    end
+    object qViaticoEscalaDIA: TFloatField
+      FieldName = 'DIA'
+      Origin = 'ODTVIATICOESCALA.DIA'
+    end
+    object qViaticoEscalaLUGAR: TStringField
+      FieldName = 'LUGAR'
+      Origin = 'ODTVIATICOESCALA.LUGAR'
+      Size = 30
+    end
+  end
+  object dsViaticoEscala: TDataSource
+    DataSet = qViaticoEscala
+    Left = 336
+    Top = 305
+  end
+  object updViaticoEscala: TUpdateSQL
+    ModifySQL.Strings = (
+      'update odtviaticoescala'
+      'set'
+      '  CODIGOODTVIATICOESCALA = :CODIGOODTVIATICOESCALA,'
+      '  CODIGOVIATICO = :CODIGOVIATICO,'
+      '  VALOR = :VALOR,'
+      '  DIA = :DIA,'
+      '  LUGAR = :LUGAR'
+      'where'
+      '  CODIGOODTVIATICOESCALA = :OLD_CODIGOODTVIATICOESCALA')
+    InsertSQL.Strings = (
+      'insert into odtviaticoescala'
+      '  (CODIGOODTVIATICOESCALA, CODIGOVIATICO, VALOR, DIA, LUGAR)'
+      'values'
+      
+        '  (:CODIGOODTVIATICOESCALA, :CODIGOVIATICO, :VALOR, :DIA, :LUGAR' +
+        ')')
+    DeleteSQL.Strings = (
+      'delete from odtviaticoescala'
+      'where'
+      '  CODIGOODTVIATICOESCALA = :OLD_CODIGOODTVIATICOESCALA')
+    Left = 424
+    Top = 329
+  end
+  object qMunicipio: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from municipio'
+      'order by nombremunicipio')
+    Left = 880
+    Top = 80
+  end
+  object qValorViaticoEscala: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsViatico
+    SQL.Strings = (
+      '(SELECT VZ.* FROM VIATICOZONA VZ, MUNICIPIO M'
+      'WHERE VZ.CODIGOZONADESTINO=M.CODIGOZONA'
+      'AND M.CODIGOMUNICIPIO=:CODIGOMUNICIPIODESTINO'
+      'AND VZ.CODIGOZONAORIGEN=:CODIGOZONAORIGEN'
+      'AND VZ.VIGENCIADESDE<=:FECHAINICIO'
+      'AND VZ.VIGENCIAHASTA>=:FECHAINICIO)'
+      'UNION'
+      '(SELECT VZ.* FROM VIATICOZONA VZ'
+      'WHERE VZ.CODIGOZONAORIGEN=:CODIGOZONAORIGEN'
+      'AND VZ.CODIGOZONADESTINO=:CODIGOZONA'
+      'AND VZ.VIGENCIADESDE<=:FECHAINICIO'
+      'AND VZ.VIGENCIAHASTA>=:FECHAINICIO'
+      'AND VZ.CIUDADCAPITAL=:CIUDADCAPITAL'
+      'AND VZ.SALARIODESDE<=:SUELDO'
+      'AND VZ.SALARIOHASTA>=:SUELDO'
+      'AND :NIVEL IS NULL'
+      ')'
+      'UNION'
+      '(SELECT VZ.* FROM VIATICOZONA VZ'
+      'WHERE VZ.CODIGOZONAORIGEN=:CODIGOZONAORIGEN'
+      'AND VZ.CODIGOZONADESTINO=:CODIGOZONA'
+      'AND VZ.VIGENCIADESDE<=:FECHAINICIO'
+      'AND VZ.VIGENCIAHASTA>=:FECHAINICIO'
+      'AND VZ.NIVELCARGO=:NIVEL'
+      ')')
+    Left = 657
+    Top = 157
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOMUNICIPIODESTINO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOZONAORIGEN'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOZONAORIGEN'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'CodigoZona'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'CIUDADCAPITAL'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'Sueldo'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'SUELDO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Nivel'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOZONAORIGEN'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'CODIGOZONA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'NIVEL'
+        ParamType = ptUnknown
+      end>
+    object qValorViaticoEscalaCODIGOVIATICOZONA: TFloatField
+      FieldName = 'CODIGOVIATICOZONA'
+    end
+    object qValorViaticoEscalaCODIGOZONAORIGEN: TFloatField
+      FieldName = 'CODIGOZONAORIGEN'
+    end
+    object qValorViaticoEscalaCODIGOZONADESTINO: TFloatField
+      FieldName = 'CODIGOZONADESTINO'
+    end
+    object qValorViaticoEscalaVALORVIATICO: TFloatField
+      FieldName = 'VALORVIATICO'
+    end
+    object qValorViaticoEscalaVALORAUXILIO: TFloatField
+      FieldName = 'VALORAUXILIO'
+    end
+    object qValorViaticoEscalaPORCENTAJESALARIO: TFloatField
+      FieldName = 'PORCENTAJESALARIO'
+    end
+    object qValorViaticoEscalaPORCENTAJEULTIMODIA: TFloatField
+      FieldName = 'PORCENTAJEULTIMODIA'
+    end
+    object qValorViaticoEscalaVIGENCIADESDE: TDateTimeField
+      FieldName = 'VIGENCIADESDE'
+    end
+    object qValorViaticoEscalaVIGENCIAHASTA: TDateTimeField
+      FieldName = 'VIGENCIAHASTA'
+    end
+    object qValorViaticoEscalaSALARIODESDE: TFloatField
+      FieldName = 'SALARIODESDE'
+    end
+    object qValorViaticoEscalaSALARIOHASTA: TFloatField
+      FieldName = 'SALARIOHASTA'
+    end
+    object qValorViaticoEscalaCIUDADCAPITAL: TStringField
+      FieldName = 'CIUDADCAPITAL'
+      Size = 1
+    end
+    object qValorViaticoEscalaNIVELCARGO: TFloatField
+      FieldName = 'NIVELCARGO'
+    end
+  end
+  object qValorEscalaDiario: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsViatico
+    SQL.Strings = (
+      '(SELECT VZ.* FROM VIATICOZONA VZ, MUNICIPIO M'
+      'WHERE VZ.CODIGOZONADESTINO=M.CODIGOZONA'
+      'AND M.CODIGOMUNICIPIO=:CODIGOMUNICIPIODESTINO'
+      'AND VZ.CODIGOZONAORIGEN=:CODIGOZONAORIGEN'
+      'AND VZ.VIGENCIADESDE<=:FECHAINICIO'
+      'AND VZ.VIGENCIAHASTA>=:FECHAINICIO)'
+      'UNION'
+      '(SELECT VZ.* FROM VIATICOZONA VZ'
+      'WHERE VZ.CODIGOZONAORIGEN=:CODIGOZONAORIGEN'
+      'AND VZ.CODIGOZONADESTINO=:CODIGOZONA'
+      'AND VZ.VIGENCIADESDE<=:FECHAINICIO'
+      'AND VZ.VIGENCIAHASTA>=:FECHAINICIO'
+      'AND VZ.CIUDADCAPITAL=:CIUDADCAPITAL'
+      'AND VZ.SALARIODESDE<=:SUELDO'
+      'AND VZ.SALARIOHASTA>=:SUELDO'
+      'AND :NIVEL IS NULL'
+      ')'
+      'UNION'
+      '(SELECT VZ.* FROM VIATICOZONA VZ'
+      'WHERE VZ.CODIGOZONAORIGEN=:CODIGOZONAORIGEN'
+      'AND VZ.CODIGOZONADESTINO=:CODIGOZONA'
+      'AND VZ.VIGENCIADESDE<=:FECHAINICIO'
+      'AND VZ.VIGENCIAHASTA>=:FECHAINICIO'
+      'AND VZ.NIVELCARGO=:NIVEL'
+      ')')
+    Left = 654
+    Top = 40
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOMUNICIPIODESTINO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOZONAORIGEN'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOZONAORIGEN'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'CodigoZona'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'CIUDADCAPITAL'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'Sueldo'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'SUELDO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Nivel'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOZONAORIGEN'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'CODIGOZONA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'NIVEL'
+        ParamType = ptUnknown
+      end>
+    object qValorEscalaDiarioCODIGOVIATICOZONA: TFloatField
+      FieldName = 'CODIGOVIATICOZONA'
+    end
+    object qValorEscalaDiarioCODIGOZONAORIGEN: TFloatField
+      FieldName = 'CODIGOZONAORIGEN'
+    end
+    object qValorEscalaDiarioCODIGOZONADESTINO: TFloatField
+      FieldName = 'CODIGOZONADESTINO'
+    end
+    object qValorEscalaDiarioVALORVIATICO: TFloatField
+      FieldName = 'VALORVIATICO'
+    end
+    object qValorEscalaDiarioVALORAUXILIO: TFloatField
+      FieldName = 'VALORAUXILIO'
+    end
+    object qValorEscalaDiarioPORCENTAJESALARIO: TFloatField
+      FieldName = 'PORCENTAJESALARIO'
+    end
+    object qValorEscalaDiarioPORCENTAJEULTIMODIA: TFloatField
+      FieldName = 'PORCENTAJEULTIMODIA'
+    end
+    object qValorEscalaDiarioVIGENCIADESDE: TDateTimeField
+      FieldName = 'VIGENCIADESDE'
+    end
+    object qValorEscalaDiarioVIGENCIAHASTA: TDateTimeField
+      FieldName = 'VIGENCIAHASTA'
+    end
+    object qValorEscalaDiarioSALARIODESDE: TFloatField
+      FieldName = 'SALARIODESDE'
+    end
+    object qValorEscalaDiarioSALARIOHASTA: TFloatField
+      FieldName = 'SALARIOHASTA'
+    end
+    object qValorEscalaDiarioCIUDADCAPITAL: TStringField
+      FieldName = 'CIUDADCAPITAL'
+      Size = 1
+    end
+    object qValorEscalaDiarioNIVELCARGO: TFloatField
+      FieldName = 'NIVELCARGO'
+    end
+  end
+  object qGeografico: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsViatico
+    SQL.Strings = (
+      'SELECT NOMBRECATEGORIA,INDICEDIFICULTAD FROM GEOGRAFICO'
+      'WHERE CODIGOGEOGRAFICO=:CODIGOGEOGRAFICO')
+    Left = 881
+    Top = 22
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOGEOGRAFICO'
+        ParamType = ptUnknown
+      end>
+    object qGeograficoNOMBRECATEGORIA: TStringField
+      FieldName = 'NOMBRECATEGORIA'
+      Origin = 'GEOGRAFICO.NOMBRECATEGORIA'
+      Size = 80
+    end
+    object qGeograficoINDICEDIFICULTAD: TFloatField
+      FieldName = 'INDICEDIFICULTAD'
+      Origin = 'GEOGRAFICO.INDICEDIFICULTAD'
+    end
+  end
+  object qViaticoDiarioEncargo: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      '(SELECT VZ.* FROM VIATICOZONA VZ, MUNICIPIO M'
+      'WHERE VZ.CODIGOZONADESTINO=M.CODIGOZONA'
+      'AND M.CODIGOMUNICIPIO=:CODIGOMUNICIPIODESTINO'
+      'AND VZ.CODIGOZONAORIGEN=:CODIGOZONAORIGEN'
+      'AND VZ.CODIGOMUNICIPIOORIGEN IS NULL'
+      'AND VZ.CODIGOMUNICIPIODESTINO IS NULL'
+      'AND VZ.VIGENCIADESDE<=:FECHAINICIO'
+      'AND VZ.VIGENCIAHASTA>=:FECHAINICIO)'
+      'UNION'
+      '(SELECT VZ.* FROM VIATICOZONA VZ'
+      'WHERE VZ.CODIGOZONAORIGEN=:CODIGOZONAORIGEN'
+      'AND VZ.CODIGOZONADESTINO=:CODIGOZONA'
+      'AND VZ.CODIGOMUNICIPIOORIGEN IS NULL'
+      'AND VZ.CODIGOMUNICIPIODESTINO IS NULL'
+      'AND VZ.VIGENCIADESDE<=:FECHAINICIO'
+      'AND VZ.VIGENCIAHASTA>=:FECHAINICIO'
+      'AND VZ.CIUDADCAPITAL=:CIUDADCAPITAL'
+      'AND VZ.SALARIODESDE<=:SUELDO'
+      'AND VZ.SALARIOHASTA>=:SUELDO'
+      'AND :NIVEL IS NULL'
+      ')'
+      'UNION'
+      '(SELECT VZ.* FROM VIATICOZONA VZ'
+      'WHERE VZ.CODIGOZONAORIGEN=:CODIGOZONAORIGEN'
+      'AND VZ.CODIGOZONADESTINO=:CODIGOZONA'
+      'AND VZ.CODIGOMUNICIPIOORIGEN IS NULL'
+      'AND VZ.CODIGOMUNICIPIODESTINO IS NULL'
+      'AND VZ.VIGENCIADESDE<=:FECHAINICIO'
+      'AND VZ.VIGENCIAHASTA>=:FECHAINICIO'
+      'AND VZ.NIVELCARGO=:NIVEL'
+      'AND VZ.CIUDADCAPITAL=:CIUDADCAPITAL'
+      ')'
+      'ORDER BY 1 DESC')
+    Left = 313
+    Top = 509
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOMUNICIPIODESTINO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOZONAORIGEN'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOZONAORIGEN'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'CodigoZona'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'CIUDADCAPITAL'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'Sueldo'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'SUELDO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Nivel'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOZONAORIGEN'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'CODIGOZONA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'NIVEL'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'CIUDADCAPITAL'
+        ParamType = ptUnknown
+      end>
+  end
+  object qMunicipioOrigen: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsViatico
+    SQL.Strings = (
+      'SELECT AM.*,AZ.NOMBREZONA FROM MUNICIPIO AM,ZONAESSA AZ '
+      'WHERE CODIGOMUNICIPIO=:CODIGOMUNICIPIOORIGEN'
+      'AND AZ.CODIGOZONA=AM.CODIGOZONA')
+    Left = 474
+    Top = 469
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOMUNICIPIOORIGEN'
+        ParamType = ptUnknown
+      end>
+    object qMunicipioOrigenCODIGOMUNICIPIO: TFloatField
+      FieldName = 'CODIGOMUNICIPIO'
+      Origin = 'MUNICIPIO.CODIGOMUNICIPIO'
+    end
+    object qMunicipioOrigenNOMBREMUNICIPIO: TStringField
+      FieldName = 'NOMBREMUNICIPIO'
+      Origin = 'MUNICIPIO.NOMBREMUNICIPIO'
+      Size = 200
+    end
+    object qMunicipioOrigenCODIGO_CUENTA: TFloatField
+      FieldName = 'CODIGO_CUENTA'
+      Origin = 'MUNICIPIO.CODIGO_CUENTA'
+    end
+    object qMunicipioOrigenZONAESPECIAL: TStringField
+      FieldName = 'ZONAESPECIAL'
+      Origin = 'MUNICIPIO.ZONAESPECIAL'
+      Size = 1
+    end
+    object qMunicipioOrigenNOMBREZONA: TStringField
+      FieldName = 'NOMBREZONA'
+      Origin = 'ZONAESSA.NOMBREZONA'
+      Size = 200
+    end
+    object qMunicipioOrigenCODIGOGEOGRAFICO: TFloatField
+      FieldName = 'CODIGOGEOGRAFICO'
+      Origin = 'MUNICIPIO.CODIGOGEOGRAFICO'
+    end
+    object qMunicipioOrigenCODIGOZONA: TFloatField
+      FieldName = 'CODIGOZONA'
+      Origin = 'MUNICIPIO.CODIGOZONA'
+    end
+  end
+  object dsMunicipioOrigen: TDataSource
+    DataSet = qMunicipioOrigen
+    Left = 579
+    Top = 469
+  end
+  object qViaticoDiarioExclusion: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsViatico
+    SQL.Strings = (
+      '(SELECT VZ.* FROM VIATICOZONA VZ'
+      'WHERE VZ.CODIGOMUNICIPIODESTINO= :CODIGOMUNICIPIODESTINO'
+      'AND VZ.CODIGOMUNICIPIOORIGEN = :CODIGOMUNICIPIOORIGEN'
+      'AND VZ.VIGENCIADESDE<=:FECHAINICIO'
+      'AND VZ.VIGENCIAHASTA>=:FECHAINICIO)'
+      'UNION'
+      '(SELECT VZ.* FROM VIATICOZONA VZ'
+      'WHERE VZ.CODIGOMUNICIPIODESTINO  =:CODIGOMUNICIPIODESTINO'
+      'AND VZ.CODIGOMUNICIPIOORIGEN=:CODIGOMUNICIPIOORIGEN'
+      'AND VZ.VIGENCIADESDE<=:FECHAINICIO'
+      'AND VZ.VIGENCIAHASTA>=:FECHAINICIO'
+      'AND VZ.CIUDADCAPITAL=:CIUDADCAPITAL'
+      'AND VZ.SALARIODESDE<=:SUELDO'
+      'AND VZ.SALARIOHASTA>=:SUELDO'
+      'AND :NIVEL IS NULL)'
+      'UNION'
+      '(SELECT VZ.* FROM VIATICOZONA VZ'
+      'WHERE VZ.CODIGOMUNICIPIODESTINO  =:CODIGOMUNICIPIODESTINO'
+      'AND VZ.CODIGOMUNICIPIOORIGEN=:CODIGOMUNICIPIOORIGEN'
+      'AND VZ.VIGENCIADESDE<=:FECHAINICIO'
+      'AND VZ.VIGENCIAHASTA>=:FECHAINICIO'
+      'AND VZ.NIVELCARGO=:NIVEL'
+      'AND VZ.CIUDADCAPITAL=:CIUDADCAPITAL)'
+      'ORDER BY 1 DESC')
+    Left = 593
+    Top = 333
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOMUNICIPIODESTINO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOMUNICIPIOORIGEN'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOMUNICIPIODESTINO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOMUNICIPIOORIGEN'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'CIUDADCAPITAL'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'Sueldo'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'SUELDO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Nivel'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOMUNICIPIODESTINO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOMUNICIPIOORIGEN'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'NIVEL'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'CIUDADCAPITAL'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsViaticoDiarioExclusion: TDataSource
+    DataSet = qViaticoDiarioExclusion
+    Left = 716
+    Top = 333
+  end
+end

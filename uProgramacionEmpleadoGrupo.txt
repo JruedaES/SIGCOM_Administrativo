@@ -1,0 +1,194 @@
+object FProgramacionEmpleadoGrupo: TFProgramacionEmpleadoGrupo
+  Left = 272
+  Top = 174
+  BorderStyle = bsToolWindow
+  Caption = 'Planilla de empleados Asociados al Grupo'
+  ClientHeight = 350
+  ClientWidth = 345
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 13
+    Top = 13
+    Width = 78
+    Height = 13
+    Caption = 'Código Program.'
+    FocusControl = dbeCodigoProgramacion
+  end
+  object Label2: TLabel
+    Left = 13
+    Top = 38
+    Width = 82
+    Height = 13
+    Caption = 'Nombre Program.'
+    FocusControl = dbeNombreProgramacion
+  end
+  object Label3: TLabel
+    Left = 13
+    Top = 77
+    Width = 65
+    Height = 13
+    Caption = 'Código Grupo'
+    FocusControl = dbeCodigoGrupo
+  end
+  object Label4: TLabel
+    Left = 13
+    Top = 102
+    Width = 69
+    Height = 13
+    Caption = 'Nombre Grupo'
+    FocusControl = dbeNombreProgramacion
+  end
+  object dbeCodigoProgramacion: TDBEdit
+    Left = 98
+    Top = 8
+    Width = 49
+    Height = 21
+    Color = clSilver
+    DataField = 'CODIGOPROGRAMACION'
+    DataSource = dsProgramacion
+    Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object dbeNombreProgramacion: TDBEdit
+    Left = 98
+    Top = 35
+    Width = 180
+    Height = 21
+    CharCase = ecUpperCase
+    Color = clSilver
+    DataField = 'NOMBREPROGRAMACION'
+    DataSource = dsProgramacion
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 1
+  end
+  object dbeCodigoGrupo: TDBEdit
+    Left = 98
+    Top = 72
+    Width = 49
+    Height = 21
+    Color = clSilver
+    DataField = 'CODIGOGRUPOTRABAJO'
+    DataSource = dsGrupo
+    Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 2
+  end
+  object dbeNombreGrupo: TDBEdit
+    Left = 98
+    Top = 99
+    Width = 180
+    Height = 21
+    CharCase = ecUpperCase
+    Color = clSilver
+    DataField = 'NOMBREGRUPOTRABAJO'
+    DataSource = dsGrupo
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 3
+  end
+  object RxDBGrid1: TRxDBGrid
+    Left = 0
+    Top = 152
+    Width = 345
+    Height = 173
+    Align = alBottom
+    DataSource = dsProgramacionEmpleado
+    TabOrder = 4
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    OnEditButtonClick = RxDBGrid1EditButtonClick
+    Columns = <
+      item
+        ButtonStyle = cbsEllipsis
+        Expanded = False
+        FieldName = 'CODIGOEMPLEADO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Cédula No'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOMBREEMPLEADO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Nombre Empleado'
+        Width = 250
+        Visible = True
+      end>
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 0
+    Top = 325
+    Width = 345
+    Height = 25
+    DataSource = dsProgramacionEmpleado
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+    Align = alBottom
+    TabOrder = 5
+  end
+  object Panel18: TPanel
+    Left = 0
+    Top = 137
+    Width = 345
+    Height = 15
+    Align = alBottom
+    Caption = 'Empleados Asignados'
+    Color = 16744448
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 6
+  end
+  object dsProgramacion: TDataSource
+    DataSet = FCrearProgramacion.qProgramacion
+    Left = 296
+    Top = 24
+  end
+  object dsGrupo: TDataSource
+    DataSet = FCrearProgramacion.qProgramacionGrupo
+    Left = 296
+    Top = 88
+  end
+  object dsProgramacionEmpleado: TDataSource
+    DataSet = FCrearProgramacion.qProgramacionEmpleadoGrupo
+    Left = 184
+    Top = 200
+  end
+end

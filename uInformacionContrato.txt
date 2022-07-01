@@ -1,0 +1,145 @@
+object FInformacionContrato: TFInformacionContrato
+  Left = 144
+  Top = 279
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsToolWindow
+  Caption = 'Información General'
+  ClientHeight = 141
+  ClientWidth = 226
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = True
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object GBObjeto: TGroupBox
+    Left = 0
+    Top = 70
+    Width = 226
+    Height = 71
+    Align = alClient
+    Caption = 'Objeto'
+    TabOrder = 0
+    object MObjeto: TMemo
+      Left = 2
+      Top = 15
+      Width = 222
+      Height = 54
+      Align = alClient
+      ReadOnly = True
+      TabOrder = 0
+    end
+  end
+  object gbUbicacion: TGroupBox
+    Left = 0
+    Top = 0
+    Width = 226
+    Height = 70
+    Align = alTop
+    Caption = 'Ubicación'
+    TabOrder = 1
+    object MUbicacion: TMemo
+      Left = 2
+      Top = 15
+      Width = 222
+      Height = 53
+      Align = alClient
+      Lines.Strings = (
+        'MUbicacion')
+      ReadOnly = True
+      TabOrder = 0
+    end
+  end
+  object qBorrarActividades: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'Delete from ActividadContratoobra'
+      'Where CodigoContratoobra = :Contrato')
+    Left = 59
+    Top = 94
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'Contrato'
+        ParamType = ptUnknown
+      end>
+  end
+  object qBuscarActividadContrato: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'Select count(*) as Cantidad from ActividadContrato'
+      'Where CodigoContrato = :Contrato'
+      'And CodigoActividad= :Actividad')
+    Left = 51
+    Top = 14
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'Contrato'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'Actividad'
+        ParamType = ptUnknown
+      end>
+  end
+  object qActividadContrato: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from actividadcontrato')
+    UpdateObject = updActividadContrato
+    Left = 168
+    Top = 16
+  end
+  object updActividadContrato: TUpdateSQL
+    ModifySQL.Strings = (
+      'update actividadcontrato'
+      'set'
+      '  CODIGOACTIVIDAD = :CODIGOACTIVIDAD,'
+      '  CODIGOCONTRATO = :CODIGOCONTRATO,'
+      '  CODIGOTIPOPRESUPUESTO = :CODIGOTIPOPRESUPUESTO,'
+      '  CANTIDADPRESUPUESTADA = :CANTIDADPRESUPUESTADA,'
+      '  MATERIAL = :MATERIAL,'
+      '  TRANSPORTE = :TRANSPORTE,'
+      '  EQUIPO = :EQUIPO,'
+      '  MANOOBRA = :MANOOBRA,'
+      '  CANTIDADEJECUTADA = :CANTIDADEJECUTADA,'
+      '  MATERIALLIQUIDADO = :MATERIALLIQUIDADO,'
+      '  TRANSPORTELIQUIDADO = :TRANSPORTELIQUIDADO,'
+      '  EQUIPOLIQUIDADO = :EQUIPOLIQUIDADO,'
+      '  MANOOBRALIQUIDADA = :MANOOBRALIQUIDADA'
+      'where'
+      '  CODIGOACTIVIDAD = :OLD_CODIGOACTIVIDAD and'
+      '  CODIGOCONTRATO = :OLD_CODIGOCONTRATO')
+    InsertSQL.Strings = (
+      'insert into actividadcontrato'
+      
+        '  (CODIGOACTIVIDAD, CODIGOCONTRATO, CODIGOTIPOPRESUPUESTO, CANTI' +
+        'DADPRESUPUESTADA, '
+      
+        '   MATERIAL, TRANSPORTE, EQUIPO, MANOOBRA, CANTIDADEJECUTADA, MA' +
+        'TERIALLIQUIDADO, '
+      '   TRANSPORTELIQUIDADO, EQUIPOLIQUIDADO, MANOOBRALIQUIDADA)'
+      'values'
+      
+        '  (:CODIGOACTIVIDAD, :CODIGOCONTRATO, :CODIGOTIPOPRESUPUESTO, :C' +
+        'ANTIDADPRESUPUESTADA, '
+      
+        '   :MATERIAL, :TRANSPORTE, :EQUIPO, :MANOOBRA, :CANTIDADEJECUTAD' +
+        'A, :MATERIALLIQUIDADO, '
+      '   :TRANSPORTELIQUIDADO, :EQUIPOLIQUIDADO, :MANOOBRALIQUIDADA)')
+    DeleteSQL.Strings = (
+      'delete from actividadcontrato'
+      'where'
+      '  CODIGOACTIVIDAD = :OLD_CODIGOACTIVIDAD and'
+      '  CODIGOCONTRATO = :OLD_CODIGOCONTRATO')
+    Left = 168
+    Top = 92
+  end
+end

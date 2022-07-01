@@ -1,0 +1,466 @@
+object FTareaMtto: TFTareaMtto
+  Left = 361
+  Top = 155
+  Width = 450
+  Height = 494
+  Caption = 'FTareaMtto'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PanelCentral: TPanel
+    Left = 0
+    Top = 15
+    Width = 434
+    Height = 189
+    Align = alTop
+    Ctl3D = False
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Verdana'
+    Font.Style = []
+    ParentCtl3D = False
+    ParentFont = False
+    TabOrder = 0
+    object LabelCodigoTarea: TLabel
+      Left = 12
+      Top = 13
+      Width = 116
+      Height = 12
+      Caption = 'Código Mantenimiento:'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object LabelNombreTarea: TLabel
+      Left = 12
+      Top = 32
+      Width = 43
+      Height = 12
+      Caption = 'Nombre:'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object LabelCodigoEstadoTarea: TLabel
+      Left = 12
+      Top = 51
+      Width = 86
+      Height = 12
+      Caption = 'Estado de Tarea:'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object LabelFrecuencia: TLabel
+      Left = 12
+      Top = 70
+      Width = 93
+      Height = 12
+      Caption = 'Frecuencia (Dias):'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object ECodigoTarea: TDBEdit
+      Left = 133
+      Top = 11
+      Width = 100
+      Height = 17
+      Ctl3D = False
+      DataField = 'CODIGOTAREA'
+      DataSource = DSTarea
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentCtl3D = False
+      ParentFont = False
+      TabOrder = 0
+    end
+    object ENombreTarea: TDBEdit
+      Left = 133
+      Top = 30
+      Width = 299
+      Height = 17
+      DataField = 'NOMBRETAREA'
+      DataSource = DSTarea
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+    end
+    object EFrecuencia: TDBEdit
+      Left = 133
+      Top = 68
+      Width = 100
+      Height = 17
+      DataField = 'FRECUENCIA'
+      DataSource = DSTarea
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+    end
+    object GroupBoxFechas: TGroupBox
+      Left = 12
+      Top = 87
+      Width = 221
+      Height = 92
+      Caption = 'Fechas de Programación'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 3
+      object LabelFechaInicial: TLabel
+        Left = 5
+        Top = 29
+        Width = 69
+        Height = 12
+        Caption = 'Fecha Inicial:'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Reference Sans Serif'
+        Font.Style = []
+        ParentFont = False
+      end
+      object LabelFechaFinal: TLabel
+        Left = 5
+        Top = 49
+        Width = 61
+        Height = 12
+        Caption = 'Fecha Final:'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Reference Sans Serif'
+        Font.Style = []
+        ParentFont = False
+      end
+      object LabelFechaAlarma: TLabel
+        Left = 5
+        Top = 70
+        Width = 73
+        Height = 12
+        Caption = 'Fecha Alarma:'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Reference Sans Serif'
+        Font.Style = []
+        ParentFont = False
+      end
+      object LabelFechaHora: TLabel
+        Left = 128
+        Top = 12
+        Width = 78
+        Height = 12
+        Caption = 'Fecha        Hora'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Reference Sans Serif'
+        Font.Style = []
+        ParentFont = False
+      end
+      object MEFechaInicial: TMaskEdit
+        Left = 115
+        Top = 25
+        Width = 100
+        Height = 19
+        EditMask = '!99/99/0000 !90:00;1;_'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        MaxLength = 16
+        ParentFont = False
+        TabOrder = 0
+        Text = '  /  /       :  '
+      end
+      object MEFechaFinal: TMaskEdit
+        Left = 115
+        Top = 46
+        Width = 100
+        Height = 19
+        EditMask = '!99/99/0000 !90:00;1;_'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        MaxLength = 16
+        ParentFont = False
+        TabOrder = 1
+        Text = '  /  /       :  '
+      end
+      object MEFechaAlarma: TMaskEdit
+        Left = 115
+        Top = 67
+        Width = 100
+        Height = 19
+        EditMask = '!99/99/0000 !90:00;1;_'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        MaxLength = 16
+        ParentFont = False
+        TabOrder = 2
+        Text = '  /  /       :  '
+      end
+    end
+    object GroupBoxDescripcion: TGroupBox
+      Left = 240
+      Top = 49
+      Width = 192
+      Height = 130
+      Caption = 'Descripción'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 4
+      object MDescripcion: TDBMemo
+        Left = 6
+        Top = 14
+        Width = 180
+        Height = 110
+        DataField = 'DESCRIPCION'
+        DataSource = DSTarea
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+      end
+    end
+    object CodigoEstado: TDBLookupComboBox
+      Left = 133
+      Top = 49
+      Width = 100
+      Height = 17
+      Color = clWhite
+      DataField = 'CODIGOESTADOTAREA'
+      DataSource = DSTarea
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      KeyField = 'CODIGOESTADOTAREA'
+      ListField = 'NOMBREESTADO'
+      ListSource = DSEstado
+      ParentFont = False
+      TabOrder = 5
+    end
+  end
+  object PanelSuperior: TPanel
+    Left = 0
+    Top = 0
+    Width = 434
+    Height = 15
+    Align = alTop
+    TabOrder = 1
+    object LabelTitulo: TLabel
+      Left = 1
+      Top = 1
+      Width = 432
+      Height = 13
+      Align = alClient
+      Alignment = taCenter
+      Caption = 'CREAR NUEVA TAREA'
+      Color = clBlue
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object PanelInferior: TPanel
+    Left = 0
+    Top = 204
+    Width = 434
+    Height = 217
+    Align = alClient
+    Ctl3D = False
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Verdana'
+    Font.Style = []
+    ParentCtl3D = False
+    ParentFont = False
+    TabOrder = 2
+  end
+  object PanelInferiorFinal: TPanel
+    Left = 0
+    Top = 421
+    Width = 434
+    Height = 35
+    Align = alBottom
+    Color = clBlue
+    TabOrder = 3
+    object SpeedButton1: TSpeedButton
+      Left = 271
+      Top = 7
+      Width = 75
+      Height = 20
+      Caption = 'ACEPTAR'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -9
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+        555555555555555555555555555555555555555555FF55555555555559055555
+        55555555577FF5555555555599905555555555557777F5555555555599905555
+        555555557777FF5555555559999905555555555777777F555555559999990555
+        5555557777777FF5555557990599905555555777757777F55555790555599055
+        55557775555777FF5555555555599905555555555557777F5555555555559905
+        555555555555777FF5555555555559905555555555555777FF55555555555579
+        05555555555555777FF5555555555557905555555555555777FF555555555555
+        5990555555555555577755555555555555555555555555555555}
+      NumGlyphs = 2
+      ParentFont = False
+    end
+    object SpeedButton2: TSpeedButton
+      Left = 359
+      Top = 7
+      Width = 75
+      Height = 20
+      Caption = 'CANCELAR'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -9
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        333333333333333333333333333333333333333FFF33FF333FFF339993370733
+        999333777FF37FF377733339993000399933333777F777F77733333399970799
+        93333333777F7377733333333999399933333333377737773333333333990993
+        3333333333737F73333333333331013333333333333777FF3333333333910193
+        333333333337773FF3333333399000993333333337377737FF33333399900099
+        93333333773777377FF333399930003999333337773777F777FF339993370733
+        9993337773337333777333333333333333333333333333333333333333333333
+        3333333333333333333333333333333333333333333333333333}
+      NumGlyphs = 2
+      ParentFont = False
+    end
+  end
+  object UpdateTarea: TUpdateSQL
+    ModifySQL.Strings = (
+      'update PM_TAREA'
+      'set'
+      '  CODIGOTAREA = :CODIGOTAREA,'
+      '  CODIGOUSUARIO = :CODIGOUSUARIO,'
+      '  NOMBRETAREA = :NOMBRETAREA,'
+      '  FECHAINICIAL = :FECHAINICIAL,'
+      '  FECHAFINAL = :FECHAFINAL,'
+      '  CODIGOESTADOTAREA = :CODIGOESTADOTAREA,'
+      '  DESCRIPCION = :DESCRIPCION,'
+      '  CODIGOTIPOTAREA = :CODIGOTIPOTAREA,'
+      '  FRECUENCIA = :FRECUENCIA,'
+      '  FECHAALARMA = :FECHAALARMA'
+      'where'
+      '  CODIGOTAREA = :OLD_CODIGOTAREA')
+    InsertSQL.Strings = (
+      'insert into PM_TAREA'
+      
+        '  (CODIGOTAREA, CODIGOUSUARIO, NOMBRETAREA, FECHAINICIAL, FECHAF' +
+        'INAL, CODIGOESTADOTAREA, '
+      '   DESCRIPCION, CODIGOTIPOTAREA, FRECUENCIA, FECHAALARMA)'
+      'values'
+      
+        '  (:CODIGOTAREA, :CODIGOUSUARIO, :NOMBRETAREA, :FECHAINICIAL, :F' +
+        'ECHAFINAL, '
+      
+        '   :CODIGOESTADOTAREA, :DESCRIPCION, :CODIGOTIPOTAREA, :FRECUENC' +
+        'IA, :FECHAALARMA)')
+    DeleteSQL.Strings = (
+      'delete from PM_TAREA'
+      'where'
+      '  CODIGOTAREA = :OLD_CODIGOTAREA')
+    Left = 368
+  end
+  object DSTarea: TDataSource
+    AutoEdit = False
+    DataSet = QTarea
+    Left = 400
+  end
+  object QEstado: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOESTADOTAREA, NOMBREESTADO FROM PM_ESTADOTAREA')
+    Left = 376
+    Top = 282
+  end
+  object DSEstado: TDataSource
+    DataSet = QEstado
+    Left = 344
+    Top = 282
+  end
+  object QTarea: TQuery
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM PM_TAREA WHERE CODIGOTAREA= :CODIGO')
+    UpdateObject = UpdateTarea
+    Left = 320
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGO'
+        ParamType = ptUnknown
+      end>
+  end
+end

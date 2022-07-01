@@ -1,0 +1,374 @@
+object fBodegaAreainvalida: TfBodegaAreainvalida
+  Left = 338
+  Top = 222
+  Width = 523
+  Height = 343
+  Caption = 'Bodegas No permitidas por Areas'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel3: TPanel
+    Left = 0
+    Top = 0
+    Width = 507
+    Height = 33
+    Align = alTop
+    TabOrder = 0
+  end
+  object Panel4: TPanel
+    Left = 0
+    Top = 33
+    Width = 507
+    Height = 232
+    Align = alClient
+    TabOrder = 1
+    object DBGrid1: TDBGrid
+      Left = 1
+      Top = 1
+      Width = 505
+      Height = 230
+      Align = alClient
+      DataSource = dsBodegaInvalida
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'NombreArea'
+          Width = 119
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NombreAlmacen'
+          Title.Caption = 'Almacen'
+          Width = 177
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NombreBodega'
+          Title.Caption = 'Bodega'
+          Width = 172
+          Visible = True
+        end>
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 265
+    Width = 507
+    Height = 42
+    Align = alBottom
+    TabOrder = 2
+    object btAceptar: TBitBtn
+      Left = 405
+      Top = 8
+      Width = 93
+      Height = 25
+      Caption = '&Registrar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ModalResult = 1
+      ParentFont = False
+      TabOrder = 0
+      OnClick = btAceptarClick
+      Glyph.Data = {
+        BE060000424DBE06000000000000360400002800000024000000120000000100
+        0800000000008802000000000000000000000001000000010000000000000000
+        80000080000000808000800000008000800080800000C0C0C000C0DCC000F0CA
+        A600000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000F0FBFF00A4A0A000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00030303030303
+        0303030303030303030303030303030303030303030303030303030303030303
+        03030303030303030303030303030303030303030303FF030303030303030303
+        03030303030303040403030303030303030303030303030303F8F8FF03030303
+        03030303030303030303040202040303030303030303030303030303F80303F8
+        FF030303030303030303030303040202020204030303030303030303030303F8
+        03030303F8FF0303030303030303030304020202020202040303030303030303
+        0303F8030303030303F8FF030303030303030304020202FA0202020204030303
+        0303030303F8FF0303F8FF030303F8FF03030303030303020202FA03FA020202
+        040303030303030303F8FF03F803F8FF0303F8FF03030303030303FA02FA0303
+        03FA0202020403030303030303F8FFF8030303F8FF0303F8FF03030303030303
+        FA0303030303FA0202020403030303030303F80303030303F8FF0303F8FF0303
+        0303030303030303030303FA0202020403030303030303030303030303F8FF03
+        03F8FF03030303030303030303030303FA020202040303030303030303030303
+        0303F8FF0303F8FF03030303030303030303030303FA02020204030303030303
+        03030303030303F8FF0303F8FF03030303030303030303030303FA0202020403
+        030303030303030303030303F8FF0303F8FF03030303030303030303030303FA
+        0202040303030303030303030303030303F8FF03F8FF03030303030303030303
+        03030303FA0202030303030303030303030303030303F8FFF803030303030303
+        030303030303030303FA0303030303030303030303030303030303F803030303
+        0303030303030303030303030303030303030303030303030303030303030303
+        0303}
+      NumGlyphs = 2
+    end
+    object btCancelar: TBitBtn
+      Left = 299
+      Top = 9
+      Width = 91
+      Height = 25
+      Caption = '&Cancelar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+      Kind = bkCancel
+    end
+    object DBNavigator2: TDBNavigator
+      Left = 6
+      Top = 7
+      Width = 259
+      Height = 28
+      DataSource = dsBodegaInvalida
+      VisibleButtons = [nbPrior, nbNext, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+      Flat = True
+      Hints.Strings = (
+        'Primero'
+        'Anterior'
+        'Siguiente'
+        'Ultimo'
+        'Insertar'
+        'Eliminar'
+        'Editar'
+        'Aplicar'
+        'Cancelar'
+        'Refrescar')
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+    end
+  end
+  object qBodegaInvalida: TQuery
+    CachedUpdates = True
+    BeforeInsert = qBodegaInvalidaBeforeInsert
+    DatabaseName = 'basedato'
+    Constrained = True
+    SQL.Strings = (
+      
+        'SELECT DISTINCT r.area_area, r.cod_almacen, r.cod_bodega,g.AREA_' +
+        'DESCRI, a.ALMACEN_DESCRI, b.BODEGA_DESCRI  '
+      
+        'FROM RESTRICCIONBODEGAAREA r, inv_s_almacen a, inv_s_bodega b, G' +
+        'E_TAREA g '
+      'WHERE r.AREA_AREA = g.AREA_AREA'
+      'AND r.COD_ALMACEN = a.COD_ALMACEN'
+      'AND r.COD_BODEGA = b.COD_BODEGA'
+      'ORDER BY  g.AREA_DESCRI, a.ALMACEN_DESCRI, b.BODEGA_DESCRI')
+    UpdateObject = updBodegaInvalida
+    Left = 416
+    Top = 8
+    object qBodegaInvalidaCOD_ALMACEN: TStringField
+      FieldName = 'COD_ALMACEN'
+      Origin = 'RESTRICCIONBODEGAAREA.COD_ALMACEN'
+      Size = 5
+    end
+    object qBodegaInvalidaCOD_BODEGA: TStringField
+      FieldName = 'COD_BODEGA'
+      Origin = 'RESTRICCIONBODEGAAREA.COD_BODEGA'
+      Size = 5
+    end
+    object qBodegaInvalidaAREA_AREA: TStringField
+      FieldName = 'AREA_AREA'
+      Origin = 'RESTRICCIONBODEGAAREA.AREA_AREA'
+      Size = 16
+    end
+    object qBodegaInvalidaNombreArea: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NombreArea'
+      LookupDataSet = qArea
+      LookupKeyFields = 'AREA_AREA'
+      LookupResultField = 'AREA_DESCRI'
+      KeyFields = 'AREA_AREA'
+      Size = 88
+      Lookup = True
+    end
+    object qBodegaInvalidaNombreAlmacen: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NombreAlmacen'
+      LookupDataSet = qAlmacen
+      LookupKeyFields = 'COD_ALMACEN'
+      LookupResultField = 'ALMACEN_DESCRI'
+      KeyFields = 'COD_ALMACEN'
+      Size = 97
+      Lookup = True
+    end
+    object qBodegaInvalidaNombreBodega: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NombreBodega'
+      LookupDataSet = qBodega
+      LookupKeyFields = 'COD_BODEGA'
+      LookupResultField = 'BODEGA_DESCRI'
+      KeyFields = 'COD_BODEGA'
+      Size = 97
+      Lookup = True
+    end
+  end
+  object dsBodegaInvalida: TDataSource
+    DataSet = qBodegaInvalida
+    Left = 448
+    Top = 56
+  end
+  object updBodegaInvalida: TUpdateSQL
+    ModifySQL.Strings = (
+      'update RESTRICCIONBODEGAAREA'
+      'set'
+      '  COD_ALMACEN = :COD_ALMACEN,'
+      '  COD_BODEGA = :COD_BODEGA,'
+      '  AREA_AREA = :AREA_AREA'
+      'where'
+      '  COD_ALMACEN = :OLD_COD_ALMACEN and'
+      '  COD_BODEGA = :OLD_COD_BODEGA and'
+      '  AREA_AREA = :OLD_AREA_AREA')
+    InsertSQL.Strings = (
+      'insert into RESTRICCIONBODEGAAREA'
+      '  (COD_ALMACEN, COD_BODEGA, AREA_AREA)'
+      'values'
+      '  (:COD_ALMACEN, :COD_BODEGA, :AREA_AREA)')
+    DeleteSQL.Strings = (
+      'delete from RESTRICCIONBODEGAAREA'
+      'where'
+      '  COD_ALMACEN = :OLD_COD_ALMACEN and'
+      '  COD_BODEGA = :OLD_COD_BODEGA and'
+      '  AREA_AREA = :OLD_AREA_AREA')
+    Left = 449
+    Top = 105
+  end
+  object qArea: TQuery
+    Active = True
+    DatabaseName = 'basedato'
+    SQL.Strings = (
+      
+        'SELECT area_area , area_area || '#39'   '#39' || area_descri AS area_des' +
+        'cri FROM GE_TAREA'
+      'ORDER BY  area_descri')
+    Left = 224
+    Top = 160
+    object qAreaAREA_AREA: TStringField
+      FieldName = 'AREA_AREA'
+      Origin = 'GE_TAREA.AREA_AREA'
+      Size = 16
+    end
+    object qAreaAREA_DESCRI: TStringField
+      FieldName = 'AREA_DESCRI'
+      Origin = 'GE_TAREA.AREA_AREA'
+      Size = 88
+    end
+  end
+  object dsArea: TDataSource
+    DataSet = qArea
+    Left = 224
+    Top = 104
+  end
+  object qAlmacen: TQuery
+    DatabaseName = 'basedato'
+    SQL.Strings = (
+      
+        'SELECT cod_almacen,cod_almacen || '#39'   '#39' || almacen_descri AS alm' +
+        'acen_descri  FROM  inv_s_almacen'
+      'ORDER BY almacen_descri ')
+    Left = 127
+    Top = 149
+    object qAlmacenCOD_ALMACEN: TStringField
+      FieldName = 'COD_ALMACEN'
+      Origin = 'INV_S_ALMACEN.COD_ALMACEN'
+      Size = 5
+    end
+    object qAlmacenALMACEN_DESCRI: TStringField
+      FieldName = 'ALMACEN_DESCRI'
+      Origin = 'INV_S_ALMACEN.COD_ALMACEN'
+      Size = 97
+    end
+  end
+  object dsAlmacen: TDataSource
+    DataSet = qAlmacen
+    Left = 130
+    Top = 99
+  end
+  object qBodega: TQuery
+    DatabaseName = 'basedato'
+    DataSource = dsAlmacen
+    SQL.Strings = (
+      
+        'SELECT cod_almacen, cod_bodega,cod_bodega || '#39'   '#39' || bodega_des' +
+        'cri AS bodega_descri  '
+      'FROM inv_s_bodega'
+      'WHERE cod_almacen = :cod_almacen'
+      'ORDER  BY bodega_descri')
+    Left = 48
+    Top = 152
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'COD_ALMACEN'
+        ParamType = ptUnknown
+      end>
+    object qBodegaCOD_ALMACEN: TStringField
+      FieldName = 'COD_ALMACEN'
+      Origin = 'INV_S_BODEGA.COD_ALMACEN'
+      Size = 5
+    end
+    object qBodegaCOD_BODEGA: TStringField
+      FieldName = 'COD_BODEGA'
+      Origin = 'INV_S_BODEGA.COD_BODEGA'
+      Size = 5
+    end
+    object qBodegaBODEGA_DESCRI: TStringField
+      FieldName = 'BODEGA_DESCRI'
+      Origin = 'INV_S_BODEGA.COD_BODEGA'
+      Size = 97
+    end
+  end
+  object dsBodega: TDataSource
+    DataSet = qBodega
+    Left = 48
+    Top = 96
+  end
+end

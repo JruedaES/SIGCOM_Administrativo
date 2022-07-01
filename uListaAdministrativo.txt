@@ -1,0 +1,157 @@
+inherited fListaAdministrativo: TfListaAdministrativo
+  Left = 215
+  Top = 121
+  Width = 792
+  Caption = 'Listado de Grupos de Trabajo'
+  Font.Charset = ANSI_CHARSET
+  Font.Name = 'Tahoma'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    Width = 776
+    inherited Panel2: TPanel
+      Left = 504
+      Width = 271
+      inherited SBSalir: TSpeedButton
+        Left = 241
+      end
+      inherited SBImprimir: TSpeedButton
+        Left = 188
+      end
+      inherited SBFiltrar: TSpeedButton
+        Left = 41
+      end
+      inherited SBBuscar: TSpeedButton
+        Left = 105
+      end
+      inherited SBOrdenar: TSpeedButton
+        Left = 129
+        Visible = False
+      end
+      inherited Bevel2: TBevel
+        Left = 157
+      end
+      inherited SBEstadistica: TSpeedButton
+        Left = 165
+        Visible = False
+      end
+      inherited Bevel3: TBevel
+        Left = 67
+      end
+      inherited Bevel1: TBevel
+        Left = 235
+      end
+      inherited SBBuscaElementoCartografia: TSpeedButton
+        Left = 75
+        Top = 3
+        Flat = False
+        Visible = False
+      end
+      inherited SBFiltroCarografico: TSpeedButton
+        Left = 13
+        Top = 1
+        Visible = False
+      end
+      inherited sbExportar: TSpeedButton
+        Left = 211
+      end
+    end
+    inherited dNavigator1: TdNavigator
+      Hints.Strings = ()
+    end
+  end
+  inherited Panel3: TPanel
+    Width = 776
+  end
+  inherited PFiltro: TPanel
+    Width = 776
+    inherited lFiltroDatos: TLabel
+      Width = 774
+    end
+  end
+  object dbgListaAdministrativo: TRxDBGrid [3]
+    Left = 0
+    Top = 78
+    Width = 776
+    Height = 436
+    Align = alClient
+    DataSource = dsBase
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
+    TitleFont.Charset = ANSI_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    OnTitleClick = dbgListaAdministrativoTitleClick
+    OnMouseMove = dbgListaAdministrativoMouseMove
+    Columns = <
+      item
+        Alignment = taCenter
+        Color = clAqua
+        Expanded = False
+        FieldName = 'CODIGOADMINISTRATIVO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Cia'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOMBRECATEGORIA'
+        Title.Alignment = taCenter
+        Title.Caption = 'Nombre'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOMBREADMINISTRATIVO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Nombre Completo'
+        Visible = True
+      end>
+  end
+  inherited dsBase: TDDataSource
+    DataSet = qListaAdministrativo
+    Top = 132
+  end
+  inherited qTotales: TQuery
+    SQL.Strings = (
+      'SELECT count(*) as Total'
+      ''
+      'FROM GRUPOTRABAJO G, ADMINISTRATIVO A, HORARIOTRABAJO H'
+      'WHERE (A.CODIGOADMINISTRATIVO = G.CODIGOADMINISTRATIVO)'
+      'AND (H.CODIGOHORARIOTRABAJO = G.CODIGOHORARIOTRABAJO)')
+  end
+  object qListaAdministrativo: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT A.CODIGOADMINISTRATIVO, A.NOMBREADMINISTRATIVO,A.NOMBRECA' +
+        'TEGORIA '
+      'FROM ADMINISTRATIVO A'
+      'WHERE CODIGOADMINISTRATIVO>0'
+      'ORDER BY 1 ASC')
+    Left = 232
+    Top = 216
+    object qListaAdministrativoCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.CODIGOADMINISTRATIVO'
+    end
+    object qListaAdministrativoNOMBREADMINISTRATIVO: TStringField
+      FieldName = 'NOMBREADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.NOMBREADMINISTRATIVO'
+      Size = 250
+    end
+    object qListaAdministrativoNOMBRECATEGORIA: TStringField
+      FieldName = 'NOMBRECATEGORIA'
+      Origin = 'ADMINISTRATIVO.NOMBRECATEGORIA'
+      Size = 80
+    end
+  end
+end

@@ -1,0 +1,120 @@
+inherited FListaElementoODT: TFListaElementoODT
+  Left = 161
+  Top = 111
+  Caption = 'FListaElementoODT'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    inherited dNavigator1: TdNavigator
+      Hints.Strings = ()
+    end
+  end
+  object RxDBGrid1: TRxDBGrid [3]
+    Left = 0
+    Top = 78
+    Width = 790
+    Height = 447
+    Align = alClient
+    DataSource = dsBase
+    TabOrder = 3
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'CODIGOODT'
+        Title.Alignment = taCenter
+        Title.Caption = 'Código ODT'
+        Width = 95
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CONSECUTIVO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Consecutivo'
+        Width = 72
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOMBRETIPOELEMENTO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Tipo Elemento'
+        Width = 189
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CLAVE1'
+        Title.Alignment = taCenter
+        Title.Caption = 'Clave1'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CLAVE2'
+        Title.Alignment = taCenter
+        Title.Caption = 'Clave2'
+        Width = 66
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CODIGOESTRUCTURA'
+        Title.Alignment = taCenter
+        Title.Caption = 'Código Estructura'
+        Width = 210
+        Visible = True
+      end>
+  end
+  inherited dsBase: TDDataSource
+    DataSet = qElementos
+  end
+  object qElementos: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT OE.CODIGOODT, OE.CONSECUTIVO, OE.CODIGOTIPOELEMENTO,'
+      'OE.CLAVE1, OE.CLAVE2, OE.CODIGOESTRUCTURA, TE.NOMBRETIPOELEMENTO'
+      'FROM ODTELEMENTO OE, TIPOELEMENTO TE'
+      'WHERE OE.CODIGOTIPOELEMENTO = TE.CODIGOTIPOELEMENTO'
+      'ORDER BY CODIGOODT,CONSECUTIVO')
+    Left = 133
+    Top = 224
+    object qElementosCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'ODTELEMENTO.CODIGOODT'
+    end
+    object qElementosCONSECUTIVO: TFloatField
+      FieldName = 'CONSECUTIVO'
+      Origin = 'ODTELEMENTO.CONSECUTIVO'
+    end
+    object qElementosCODIGOTIPOELEMENTO: TStringField
+      FieldName = 'CODIGOTIPOELEMENTO'
+      Origin = 'ODTELEMENTO.CODIGOTIPOELEMENTO'
+      Size = 2
+    end
+    object qElementosCLAVE1: TFloatField
+      FieldName = 'CLAVE1'
+      Origin = 'ODTELEMENTO.CLAVE1'
+    end
+    object qElementosCLAVE2: TStringField
+      FieldName = 'CLAVE2'
+      Origin = 'ODTELEMENTO.CLAVE2'
+      Size = 2
+    end
+    object qElementosCODIGOESTRUCTURA: TFloatField
+      FieldName = 'CODIGOESTRUCTURA'
+      Origin = 'ODTELEMENTO.CODIGOESTRUCTURA'
+    end
+    object qElementosNOMBRETIPOELEMENTO: TStringField
+      FieldName = 'NOMBRETIPOELEMENTO'
+      Origin = 'TIPOELEMENTO.NOMBRETIPOELEMENTO'
+      Size = 30
+    end
+  end
+end

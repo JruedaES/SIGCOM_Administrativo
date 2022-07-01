@@ -1,0 +1,1418 @@
+object fMantenimientoMes: TfMantenimientoMes
+  Left = 395
+  Top = 34
+  Width = 551
+  Height = 730
+  Caption = 'Mantenimientos Mes'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 535
+    Height = 33
+    Align = alTop
+    Caption = 'Mantenimiento para Programar'
+    Color = 12541952
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 33
+    Width = 535
+    Height = 310
+    Align = alTop
+    Color = 16766890
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 15
+      Top = 10
+      Width = 39
+      Height = 12
+      Caption = 'Nombre'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 15
+      Top = 33
+      Width = 36
+      Height = 12
+      Caption = 'Ambito'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 270
+      Top = 33
+      Width = 69
+      Height = 12
+      Caption = 'Nivel Tensión'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 15
+      Top = 57
+      Width = 72
+      Height = 12
+      Caption = 'Tipo Elemento'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 15
+      Top = 81
+      Width = 55
+      Height = 12
+      Caption = 'Frecuencia'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 270
+      Top = 81
+      Width = 99
+      Height = 12
+      Caption = 'Tipo Mantenimiento'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label7: TLabel
+      Left = 212
+      Top = 104
+      Width = 163
+      Height = 12
+      Caption = 'ACTIVIDADES A PROGRAMAR'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label8: TLabel
+      Left = 230
+      Top = 207
+      Width = 143
+      Height = 12
+      Caption = 'PRUEBAS RELACIONADAS'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object ENombreMantenimiento: TEdit
+      Left = 96
+      Top = 10
+      Width = 438
+      Height = 18
+      Ctl3D = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentCtl3D = False
+      ParentFont = False
+      TabOrder = 0
+      Text = 'ENombreMantenimiento'
+    end
+    object EAmbito: TEdit
+      Left = 96
+      Top = 33
+      Width = 152
+      Height = 18
+      Ctl3D = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentCtl3D = False
+      ParentFont = False
+      TabOrder = 1
+      Text = 'EAmbito'
+    end
+    object ENivelTension: TEdit
+      Left = 382
+      Top = 33
+      Width = 152
+      Height = 18
+      Ctl3D = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentCtl3D = False
+      ParentFont = False
+      TabOrder = 2
+      Text = 'ENivelTension'
+    end
+    object ETipoElemento: TEdit
+      Left = 96
+      Top = 57
+      Width = 438
+      Height = 18
+      Ctl3D = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentCtl3D = False
+      ParentFont = False
+      TabOrder = 3
+      Text = 'ETipoElemento'
+    end
+    object EFrecuencia: TEdit
+      Left = 96
+      Top = 81
+      Width = 152
+      Height = 18
+      Ctl3D = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentCtl3D = False
+      ParentFont = False
+      TabOrder = 4
+      Text = 'EFrecuencia'
+    end
+    object ETipoMantenimiento: TEdit
+      Left = 382
+      Top = 81
+      Width = 152
+      Height = 18
+      Ctl3D = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentCtl3D = False
+      ParentFont = False
+      TabOrder = 5
+      Text = 'ETipoMantenimiento'
+    end
+    object clbActividades: TCheckListBox
+      Left = 96
+      Top = 119
+      Width = 438
+      Height = 81
+      OnClickCheck = clbActividadesClickCheck
+      Ctl3D = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ItemHeight = 12
+      ParentCtl3D = False
+      ParentFont = False
+      TabOrder = 6
+    end
+    object clbSubactividadprueba: TCheckListBox
+      Left = 96
+      Top = 221
+      Width = 438
+      Height = 81
+      Ctl3D = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ItemHeight = 12
+      ParentCtl3D = False
+      ParentFont = False
+      TabOrder = 7
+    end
+    object lbSp: TListBox
+      Left = 16
+      Top = 248
+      Width = 25
+      Height = 25
+      ItemHeight = 13
+      TabOrder = 8
+      Visible = False
+    end
+    object actividades: TListBox
+      Left = 16
+      Top = 280
+      Width = 25
+      Height = 25
+      ItemHeight = 13
+      TabOrder = 9
+      Visible = False
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 657
+    Width = 535
+    Height = 35
+    Align = alBottom
+    Color = 12541952
+    TabOrder = 2
+    object SpeedButton1: TSpeedButton
+      Left = 272
+      Top = 8
+      Width = 97
+      Height = 20
+      Caption = 'Aceptar'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+        555555555555555555555555555555555555555555FF55555555555559055555
+        55555555577FF5555555555599905555555555557777F5555555555599905555
+        555555557777FF5555555559999905555555555777777F555555559999990555
+        5555557777777FF5555557990599905555555777757777F55555790555599055
+        55557775555777FF5555555555599905555555555557777F5555555555559905
+        555555555555777FF5555555555559905555555555555777FF55555555555579
+        05555555555555777FF5555555555557905555555555555777FF555555555555
+        5990555555555555577755555555555555555555555555555555}
+      NumGlyphs = 2
+      ParentFont = False
+      OnClick = SpeedButton1Click
+    end
+    object SpeedButton2: TSpeedButton
+      Left = 416
+      Top = 8
+      Width = 97
+      Height = 20
+      Caption = 'Cancelar'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        3333333333FFFFF3333333333999993333333333F77777FFF333333999999999
+        3333333777333777FF3333993333339993333377FF3333377FF3399993333339
+        993337777FF3333377F3393999333333993337F777FF333337FF993399933333
+        399377F3777FF333377F993339993333399377F33777FF33377F993333999333
+        399377F333777FF3377F993333399933399377F3333777FF377F993333339993
+        399377FF3333777FF7733993333339993933373FF3333777F7F3399933333399
+        99333773FF3333777733339993333339933333773FFFFFF77333333999999999
+        3333333777333777333333333999993333333333377777333333}
+      NumGlyphs = 2
+      ParentFont = False
+    end
+  end
+  object Panel4: TPanel
+    Left = 0
+    Top = 343
+    Width = 535
+    Height = 314
+    Align = alClient
+    Color = 16766890
+    TabOrder = 3
+    object Label9: TLabel
+      Left = 15
+      Top = 10
+      Width = 71
+      Height = 12
+      Caption = 'Nombre Tarea'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label10: TLabel
+      Left = 15
+      Top = 30
+      Width = 35
+      Height = 12
+      Caption = 'Estado'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object dblcbEstadoTarea: TDBLookupComboBox
+      Left = 96
+      Top = 30
+      Width = 161
+      Height = 18
+      Ctl3D = False
+      DataField = 'CODIGOESTADOTAREA'
+      DataSource = dsTarea
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      KeyField = 'CODIGOESTADOTAREA'
+      ListField = 'NOMBREESTADO'
+      ListSource = dsEstadoTarea
+      ParentCtl3D = False
+      ParentFont = False
+      TabOrder = 0
+    end
+    object GroupBox1: TGroupBox
+      Left = 10
+      Top = 50
+      Width = 280
+      Height = 93
+      Caption = 'Lugar y Elemento'
+      Ctl3D = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentCtl3D = False
+      ParentFont = False
+      TabOrder = 1
+      object lElemento: TLabel
+        Left = 10
+        Top = 66
+        Width = 47
+        Height = 12
+        Caption = 'Elemento'
+      end
+      object Label11: TLabel
+        Left = 10
+        Top = 20
+        Width = 62
+        Height = 12
+        Caption = 'Subestacion'
+      end
+      object lLinea: TLabel
+        Left = 10
+        Top = 43
+        Width = 27
+        Height = 12
+        Caption = 'Línea'
+        Visible = False
+      end
+      object ESubestacion: TEdit
+        Left = 85
+        Top = 20
+        Width = 161
+        Height = 18
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 0
+        Text = 'ESubestacion'
+      end
+      object EElemento: TEdit
+        Left = 85
+        Top = 66
+        Width = 161
+        Height = 18
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 1
+        Text = 'EElemento'
+      end
+      object Elinea: TEdit
+        Left = 85
+        Top = 43
+        Width = 161
+        Height = 18
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 2
+        Text = 'Elinea'
+      end
+    end
+    object GroupBox2: TGroupBox
+      Left = 10
+      Top = 146
+      Width = 280
+      Height = 165
+      Caption = 'Fechas de Programación'
+      Ctl3D = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentCtl3D = False
+      ParentFont = False
+      TabOrder = 2
+      object sbUltimo: TSpeedButton
+        Left = 253
+        Top = 25
+        Width = 19
+        Height = 19
+        Hint = 'Ver Ultimo Mantenimiento Realizado'
+        Flat = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333300000000
+          0000333377777777777733330FFFFFFFFFF033337F3FFF3F3FF733330F000F0F
+          00F033337F777373773733330FFFFFFFFFF033337F3FF3FF3FF733330F00F00F
+          00F033337F773773773733330FFFFFFFFFF033337FF3333FF3F7333300FFFF00
+          F0F03333773FF377F7373330FB00F0F0FFF0333733773737F3F7330FB0BF0FB0
+          F0F0337337337337373730FBFBF0FB0FFFF037F333373373333730BFBF0FB0FF
+          FFF037F3337337333FF700FBFBFB0FFF000077F333337FF37777E0BFBFB000FF
+          0FF077FF3337773F7F37EE0BFB0BFB0F0F03777FF3733F737F73EEE0BFBF00FF
+          00337777FFFF77FF7733EEEE0000000003337777777777777333}
+        NumGlyphs = 2
+        Visible = False
+      end
+      object sbFechaInicial: TSpeedButton
+        Tag = 9
+        Left = 250
+        Top = 76
+        Width = 22
+        Height = 21
+        Flat = True
+        Glyph.Data = {
+          4E010000424D4E01000000000000760000002800000012000000120000000100
+          040000000000D800000000000000000000001000000010000000000000000000
+          BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333330000003333333333333333330000003338888888888888330000003304
+          0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+          FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+          F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033F7777777777F4833000000330000000000003333000000333333333333
+          333333000000333333333333333333000000}
+        OnClick = sbFechaInicialClick
+      end
+      object sbFechaFinal: TSpeedButton
+        Tag = 9
+        Left = 250
+        Top = 108
+        Width = 22
+        Height = 21
+        Flat = True
+        Glyph.Data = {
+          4E010000424D4E01000000000000760000002800000012000000120000000100
+          040000000000D800000000000000000000001000000010000000000000000000
+          BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333330000003333333333333333330000003338888888888888330000003304
+          0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+          FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+          F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033F7777777777F4833000000330000000000003333000000333333333333
+          333333000000333333333333333333000000}
+        OnClick = sbFechaFinalClick
+      end
+      object sbFechaAlarma: TSpeedButton
+        Tag = 9
+        Left = 250
+        Top = 139
+        Width = 22
+        Height = 21
+        Flat = True
+        Glyph.Data = {
+          4E010000424D4E01000000000000760000002800000012000000120000000100
+          040000000000D800000000000000000000001000000010000000000000000000
+          BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333330000003333333333333333330000003338888888888888330000003304
+          0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+          FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+          F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033F7777777777F4833000000330000000000003333000000333333333333
+          333333000000333333333333333333000000}
+        OnClick = sbFechaAlarmaClick
+      end
+      object Label13: TLabel
+        Left = 10
+        Top = 24
+        Width = 66
+        Height = 12
+        Caption = 'Fecha Ultimo'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Reference Sans Serif'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label14: TLabel
+        Left = 10
+        Top = 53
+        Width = 70
+        Height = 12
+        Caption = 'Recomendado'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Reference Sans Serif'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label15: TLabel
+        Left = 10
+        Top = 81
+        Width = 65
+        Height = 12
+        Caption = 'Fecha Inicial'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Reference Sans Serif'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label16: TLabel
+        Left = 10
+        Top = 112
+        Width = 57
+        Height = 12
+        Caption = 'Fecha Final'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Reference Sans Serif'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label17: TLabel
+        Left = 10
+        Top = 141
+        Width = 69
+        Height = 12
+        Caption = 'Fecha Alarma'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Reference Sans Serif'
+        Font.Style = []
+        ParentFont = False
+      end
+      object dbeUltimo: TDBEdit
+        Left = 15
+        Top = 120
+        Width = 18
+        Height = 18
+        TabOrder = 0
+        Visible = False
+      end
+      object dbeFechaInicial: TDBEdit
+        Left = 85
+        Top = 78
+        Width = 161
+        Height = 18
+        Ctl3D = False
+        DataField = 'FECHAINICIAL'
+        DataSource = dsTarea
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Reference Sans Serif'
+        Font.Style = []
+        ParentCtl3D = False
+        ParentFont = False
+        TabOrder = 1
+      end
+      object dbeFechaFinal: TDBEdit
+        Left = 85
+        Top = 110
+        Width = 161
+        Height = 18
+        Ctl3D = False
+        DataField = 'FECHAFINAL'
+        DataSource = dsTarea
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Reference Sans Serif'
+        Font.Style = []
+        ParentCtl3D = False
+        ParentFont = False
+        TabOrder = 2
+      end
+      object dbeFechaAlarma: TDBEdit
+        Left = 85
+        Top = 140
+        Width = 161
+        Height = 18
+        Ctl3D = False
+        DataField = 'FECHAALARMA'
+        DataSource = dsTarea
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Reference Sans Serif'
+        Font.Style = []
+        ParentCtl3D = False
+        ParentFont = False
+        TabOrder = 3
+      end
+      object eRecomendado: TEdit
+        Left = 85
+        Top = 50
+        Width = 161
+        Height = 18
+        Ctl3D = False
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Reference Sans Serif'
+        Font.Style = []
+        ParentCtl3D = False
+        ParentFont = False
+        TabOrder = 4
+        Text = 'eRecomendado'
+      end
+      object Eultimo: TEdit
+        Left = 85
+        Top = 24
+        Width = 161
+        Height = 18
+        Ctl3D = False
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Reference Sans Serif'
+        Font.Style = []
+        ParentCtl3D = False
+        ParentFont = False
+        TabOrder = 5
+        Text = 'Eultimo'
+      end
+    end
+    object GroupBox3: TGroupBox
+      Left = 297
+      Top = 146
+      Width = 236
+      Height = 165
+      Caption = 'Fechas de Ejecución'
+      Ctl3D = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentCtl3D = False
+      ParentFont = False
+      TabOrder = 3
+      object Label18: TLabel
+        Left = 5
+        Top = 45
+        Width = 62
+        Height = 12
+        Caption = 'Fecha Inicio'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Reference Sans Serif'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label19: TLabel
+        Left = 5
+        Top = 77
+        Width = 48
+        Height = 12
+        Caption = 'Fecha Fin'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Reference Sans Serif'
+        Font.Style = []
+        ParentFont = False
+      end
+      object DBEdit6: TDBEdit
+        Left = 69
+        Top = 43
+        Width = 160
+        Height = 18
+        Ctl3D = False
+        Enabled = False
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Reference Sans Serif'
+        Font.Style = []
+        ParentCtl3D = False
+        ParentFont = False
+        TabOrder = 0
+      end
+      object DBEdit7: TDBEdit
+        Left = 69
+        Top = 74
+        Width = 160
+        Height = 18
+        Ctl3D = False
+        Enabled = False
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Reference Sans Serif'
+        Font.Style = []
+        ParentCtl3D = False
+        ParentFont = False
+        TabOrder = 1
+      end
+      object DBEdit1: TDBEdit
+        Left = 70
+        Top = 121
+        Width = 161
+        Height = 18
+        DataField = 'CODIGOTAREA'
+        DataSource = dsTarea
+        TabOrder = 2
+        Visible = False
+      end
+    end
+    object codigo1: TListBox
+      Left = 1
+      Top = -3
+      Width = 25
+      Height = 25
+      ItemHeight = 13
+      TabOrder = 4
+      Visible = False
+    end
+    object codigo2: TListBox
+      Left = 55
+      Top = -11
+      Width = 25
+      Height = 25
+      ItemHeight = 13
+      TabOrder = 5
+      Visible = False
+    end
+    object dbeNombreTarea: TDBEdit
+      Left = 96
+      Top = 6
+      Width = 438
+      Height = 18
+      Ctl3D = False
+      DataField = 'NOMBRETAREA'
+      DataSource = dsTarea
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentCtl3D = False
+      ParentFont = False
+      TabOrder = 6
+    end
+    object GroupBox4: TGroupBox
+      Left = 297
+      Top = 32
+      Width = 236
+      Height = 113
+      Caption = 'Descripción'
+      Ctl3D = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Reference Sans Serif'
+      Font.Style = []
+      ParentCtl3D = False
+      ParentFont = False
+      TabOrder = 7
+      object DBMemo1: TDBMemo
+        Left = 10
+        Top = 16
+        Width = 217
+        Height = 91
+        Ctl3D = False
+        DataField = 'DESCRIPCION'
+        DataSource = dsTarea
+        ParentCtl3D = False
+        TabOrder = 0
+      end
+    end
+  end
+  object qBancoMantenimiento: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'select * from pm_bancomantenimiento where codigobancomantenimien' +
+        'to =:codigobancomantenimiento')
+    Left = 920
+    Top = 81
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'codigobancomantenimiento'
+        ParamType = ptUnknown
+      end>
+    object qBancoMantenimientoCODIGOBANCOMANTENIMIENTO: TFloatField
+      FieldName = 'CODIGOBANCOMANTENIMIENTO'
+      Origin = 'PM_BANCOMANTENIMIENTO.CODIGOBANCOMANTENIMIENTO'
+    end
+    object qBancoMantenimientoCODIGONIVELTENSION: TStringField
+      FieldName = 'CODIGONIVELTENSION'
+      Origin = 'PM_BANCOMANTENIMIENTO.CODIGONIVELTENSION'
+      Size = 1
+    end
+    object qBancoMantenimientoCODIGOAMBITO: TFloatField
+      FieldName = 'CODIGOAMBITO'
+      Origin = 'PM_BANCOMANTENIMIENTO.CODIGOAMBITO'
+    end
+    object qBancoMantenimientoFRECUENCIA: TFloatField
+      FieldName = 'FRECUENCIA'
+      Origin = 'PM_BANCOMANTENIMIENTO.FRECUENCIA'
+    end
+    object qBancoMantenimientoDESCRIPCION: TBlobField
+      FieldName = 'DESCRIPCION'
+      Origin = 'PM_BANCOMANTENIMIENTO.DESCRIPCION'
+      BlobType = ftBlob
+      Size = 1
+    end
+    object qBancoMantenimientoCODIGOTIPOMANT: TFloatField
+      FieldName = 'CODIGOTIPOMANT'
+      Origin = 'PM_BANCOMANTENIMIENTO.CODIGOTIPOMANT'
+    end
+    object qBancoMantenimientoCODIGODESCRIPTIVO: TStringField
+      FieldName = 'CODIGODESCRIPTIVO'
+      Origin = 'PM_BANCOMANTENIMIENTO.CODIGODESCRIPTIVO'
+      Size = 8
+    end
+    object qBancoMantenimientoCODIGOELEMENTO: TFloatField
+      FieldName = 'CODIGOELEMENTO'
+      Origin = 'PM_BANCOMANTENIMIENTO.CODIGOELEMENTO'
+    end
+    object qBancoMantenimientoCODIGOAREAOPERACIONODT: TFloatField
+      FieldName = 'CODIGOAREAOPERACIONODT'
+      Origin = 'PM_BANCOMANTENIMIENTO.CODIGOAREAOPERACIONODT'
+    end
+    object qBancoMantenimientoNOMBREMANTENIMIENTO: TStringField
+      FieldName = 'NOMBREMANTENIMIENTO'
+      Origin = 'PM_BANCOMANTENIMIENTO.NOMBREMANTENIMIENTO'
+      Size = 150
+    end
+  end
+  object qAmbito: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from pm_ambito where codigoambito =:codigoambito')
+    Left = 1024
+    Top = 41
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'codigoambito'
+        ParamType = ptUnknown
+      end>
+  end
+  object qNivelTension: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'select * from niveltension where codigoniveltension =:codigonive' +
+        'ltension')
+    Left = 920
+    Top = 41
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'codigoniveltension'
+        ParamType = ptUnknown
+      end>
+  end
+  object qTipoElemento: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from pm_elemento where codigoelemento =:codigoelemento')
+    Left = 1040
+    Top = 89
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'codigoelemento'
+        ParamType = ptUnknown
+      end>
+  end
+  object qMantenimiento: TQuery
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'select * from pm_mantenimiento where codigomantenimiento =:codig' +
+        'omantenimiento')
+    UpdateObject = updateMantenimiento
+    Left = 456
+    Top = 193
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'codigomantenimiento'
+        ParamType = ptUnknown
+      end>
+  end
+  object qTarea: TQuery
+    CachedUpdates = True
+    BeforePost = qTareaBeforePost
+    OnNewRecord = qTareaNewRecord
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from pm_tarea where codigotarea =:codigotarea')
+    UpdateObject = updateTarea
+    Left = 168
+    Top = 265
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'codigotarea'
+        ParamType = ptUnknown
+      end>
+    object qTareaCODIGOTAREA: TFloatField
+      FieldName = 'CODIGOTAREA'
+      Origin = 'PM_TAREA.CODIGOTAREA'
+    end
+    object qTareaCODIGOUSUARIO: TFloatField
+      FieldName = 'CODIGOUSUARIO'
+      Origin = 'PM_TAREA.CODIGOUSUARIO'
+    end
+    object qTareaNOMBRETAREA: TStringField
+      FieldName = 'NOMBRETAREA'
+      Origin = 'PM_TAREA.NOMBRETAREA'
+      Size = 250
+    end
+    object qTareaFECHAINICIAL: TDateTimeField
+      FieldName = 'FECHAINICIAL'
+      Origin = 'PM_TAREA.FECHAINICIAL'
+    end
+    object qTareaFECHAFINAL: TDateTimeField
+      FieldName = 'FECHAFINAL'
+      Origin = 'PM_TAREA.FECHAFINAL'
+    end
+    object qTareaCODIGOESTADOTAREA: TFloatField
+      FieldName = 'CODIGOESTADOTAREA'
+      Origin = 'PM_TAREA.CODIGOESTADOTAREA'
+    end
+    object qTareaDESCRIPCION: TBlobField
+      FieldName = 'DESCRIPCION'
+      Origin = 'PM_TAREA.DESCRIPCION'
+      BlobType = ftBlob
+      Size = 1
+    end
+    object qTareaCODIGOTIPOTAREA: TFloatField
+      FieldName = 'CODIGOTIPOTAREA'
+      Origin = 'PM_TAREA.CODIGOTIPOTAREA'
+    end
+    object qTareaFRECUENCIA: TFloatField
+      FieldName = 'FRECUENCIA'
+      Origin = 'PM_TAREA.FRECUENCIA'
+    end
+    object qTareaFECHAALARMA: TDateTimeField
+      FieldName = 'FECHAALARMA'
+      Origin = 'PM_TAREA.FECHAALARMA'
+    end
+    object qTareaCODIGODESC: TStringField
+      FieldName = 'CODIGODESC'
+      Origin = 'PM_TAREA.CODIGODESC'
+      Size = 8
+    end
+  end
+  object qTipoMantenimiento: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'select * from pm_tipomantenimiento where codigotipomant =:codigo' +
+        'tipomant')
+    Left = 920
+    Top = 129
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'codigotipomant'
+        ParamType = ptUnknown
+      end>
+  end
+  object qActividades: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'select * from pm_actividadmantenimiento where codigobancomanteni' +
+        'miento =:codigobancomantenimiento')
+    Left = 648
+    Top = 353
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'codigobancomantenimiento'
+        ParamType = ptUnknown
+      end>
+    object qActividadesCODIGOACTIVIDADMANTENIMIENTO: TFloatField
+      FieldName = 'CODIGOACTIVIDADMANTENIMIENTO'
+      Origin = 'PM_ACTIVIDADMANTENIMIENTO.CODIGOACTIVIDADMANTENIMIENTO'
+    end
+    object qActividadesCODIGOBANCOMANTENIMIENTO: TFloatField
+      FieldName = 'CODIGOBANCOMANTENIMIENTO'
+      Origin = 'PM_ACTIVIDADMANTENIMIENTO.CODIGOBANCOMANTENIMIENTO'
+    end
+    object qActividadesCODIGOSUBACTIVIDADAREAODT: TFloatField
+      FieldName = 'CODIGOSUBACTIVIDADAREAODT'
+      Origin = 'PM_ACTIVIDADMANTENIMIENTO.CODIGOSUBACTIVIDADAREAODT'
+    end
+    object qActividadesNOMBREACTIVIDADMANTENIMIENTO: TStringField
+      FieldName = 'NOMBREACTIVIDADMANTENIMIENTO'
+      Origin = 'PM_ACTIVIDADMANTENIMIENTO.NOMBREACTIVIDADMANTENIMIENTO'
+      Size = 120
+    end
+  end
+  object qSubestacion: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from subestacion')
+    Left = 640
+    Top = 73
+  end
+  object dsSubestacion: TDataSource
+    DataSet = qSubestacion
+    Left = 640
+    Top = 129
+  end
+  object qElementoMantenimiento: TQuery
+    CachedUpdates = True
+    BeforePost = qElementoMantenimientoBeforePost
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'select * from pm_elementomantenimiento where codigoelementomante' +
+        'nimiento =:codigoelementomantenimiento')
+    UpdateObject = updateElementoMantenimiento
+    Left = 944
+    Top = 201
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'codigoelementomantenimiento'
+        ParamType = ptUnknown
+      end>
+  end
+  object qLinea: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'select * from circuito where codigosubestacion =:codigosubestaci' +
+        'on')
+    Left = 640
+    Top = 201
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'codigosubestacion'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsTarea: TDataSource
+    DataSet = qTarea
+    Left = 170
+    Top = 313
+  end
+  object qCaracteristicasElemento: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from pm_elemento where codigoelemento =:codigoelemento')
+    Left = 784
+    Top = 33
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'codigoelemento'
+        ParamType = ptUnknown
+      end>
+  end
+  object qTablaElemento: TQuery
+    DatabaseName = 'BaseDato'
+    Left = 1048
+    Top = 129
+  end
+  object qEstadoTarea: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from pm_estadotarea'
+      'ORDER BY CODIGOESTADOTAREA DESC')
+    Left = 792
+    Top = 81
+  end
+  object dsEstadoTarea: TDataSource
+    DataSet = qEstadoTarea
+    Left = 792
+    Top = 129
+  end
+  object qActividadesProgramadas: TQuery
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from pm_actividadesprogramadas')
+    UpdateObject = updActividadesProgramadas
+    Left = 792
+    Top = 201
+    object qActividadesProgramadasCONSECUTIVOACTIVIDAD: TFloatField
+      FieldName = 'CONSECUTIVOACTIVIDAD'
+      Origin = 'PM_ACTIVIDADESPROGRAMADAS.CONSECUTIVOACTIVIDAD'
+    end
+    object qActividadesProgramadasCODIGOMANTENIMIENTO: TFloatField
+      FieldName = 'CODIGOMANTENIMIENTO'
+      Origin = 'PM_ACTIVIDADESPROGRAMADAS.CODIGOMANTENIMIENTO'
+    end
+    object qActividadesProgramadasCODIGOACTIVIDADMANTENIMIENTO: TFloatField
+      FieldName = 'CODIGOACTIVIDADMANTENIMIENTO'
+      Origin = 'PM_ACTIVIDADESPROGRAMADAS.CODIGOACTIVIDADMANTENIMIENTO'
+    end
+  end
+  object dsMantenimiento: TDataSource
+    DataSet = qMantenimiento
+    Left = 481
+    Top = 243
+  end
+  object dsLinea: TDataSource
+    DataSet = qLinea
+    Left = 640
+    Top = 249
+  end
+  object updateMantenimiento: TUpdateSQL
+    ModifySQL.Strings = (
+      'update pm_mantenimiento'
+      'set'
+      '  CODIGOMANTENIMIENTO = :CODIGOMANTENIMIENTO,'
+      '  CODIGOTIPOMANT = :CODIGOTIPOMANT,'
+      '  FECHAINICIOEJEC = :FECHAINICIOEJEC,'
+      '  FECHAFINEJEC = :FECHAFINEJEC,'
+      '  CODIGOSUBESTACION = :CODIGOSUBESTACION,'
+      '  CODIGOCIRCUITO = :CODIGOCIRCUITO,'
+      '  CODIGOBANCOMANTENIMIENTO = :CODIGOBANCOMANTENIMIENTO,'
+      '  CODIGOAMBITO = :CODIGOAMBITO,'
+      '  CODIGOELEMENTO = :CODIGOELEMENTO'
+      'where'
+      '  CODIGOMANTENIMIENTO = :OLD_CODIGOMANTENIMIENTO')
+    InsertSQL.Strings = (
+      'insert into pm_mantenimiento'
+      
+        '  (CODIGOMANTENIMIENTO, CODIGOTIPOMANT, FECHAINICIOEJEC, FECHAFI' +
+        'NEJEC, '
+      
+        '   CODIGOSUBESTACION, CODIGOCIRCUITO, CODIGOBANCOMANTENIMIENTO, ' +
+        'CODIGOAMBITO, '
+      '   CODIGOELEMENTO)'
+      'values'
+      
+        '  (:CODIGOMANTENIMIENTO, :CODIGOTIPOMANT, :FECHAINICIOEJEC, :FEC' +
+        'HAFINEJEC, '
+      
+        '   :CODIGOSUBESTACION, :CODIGOCIRCUITO, :CODIGOBANCOMANTENIMIENT' +
+        'O, :CODIGOAMBITO, '
+      '   :CODIGOELEMENTO)')
+    DeleteSQL.Strings = (
+      'delete from pm_mantenimiento'
+      'where'
+      '  CODIGOMANTENIMIENTO = :OLD_CODIGOMANTENIMIENTO')
+    Left = 488
+    Top = 153
+  end
+  object updateTarea: TUpdateSQL
+    ModifySQL.Strings = (
+      'update pm_tarea'
+      'set'
+      '  CODIGOTAREA = :CODIGOTAREA,'
+      '  CODIGOUSUARIO = :CODIGOUSUARIO,'
+      '  NOMBRETAREA = :NOMBRETAREA,'
+      '  FECHAINICIAL = :FECHAINICIAL,'
+      '  FECHAFINAL = :FECHAFINAL,'
+      '  CODIGOESTADOTAREA = :CODIGOESTADOTAREA,'
+      '  DESCRIPCION = :DESCRIPCION,'
+      '  CODIGOTIPOTAREA = :CODIGOTIPOTAREA,'
+      '  FRECUENCIA = :FRECUENCIA,'
+      '  FECHAALARMA = :FECHAALARMA,'
+      '  CODIGODESC = :CODIGODESC'
+      'where'
+      '  CODIGOTAREA = :OLD_CODIGOTAREA')
+    InsertSQL.Strings = (
+      'insert into pm_tarea'
+      
+        '  (CODIGOTAREA, CODIGOUSUARIO, NOMBRETAREA, FECHAINICIAL, FECHAF' +
+        'INAL, CODIGOESTADOTAREA, '
+      
+        '   DESCRIPCION, CODIGOTIPOTAREA, FRECUENCIA, FECHAALARMA, CODIGO' +
+        'DESC)'
+      'values'
+      
+        '  (:CODIGOTAREA, :CODIGOUSUARIO, :NOMBRETAREA, :FECHAINICIAL, :F' +
+        'ECHAFINAL, '
+      
+        '   :CODIGOESTADOTAREA, :DESCRIPCION, :CODIGOTIPOTAREA, :FRECUENC' +
+        'IA, :FECHAALARMA, '
+      '   :CODIGODESC)')
+    DeleteSQL.Strings = (
+      'delete from pm_tarea'
+      'where'
+      '  CODIGOTAREA = :OLD_CODIGOTAREA')
+    Left = 176
+    Top = 361
+  end
+  object updateElementoMantenimiento: TUpdateSQL
+    ModifySQL.Strings = (
+      'update pm_elementomantenimiento'
+      'set'
+      '  CODIGOELEMENTOMANTENIMIENTO = :CODIGOELEMENTOMANTENIMIENTO,'
+      '  CLELEMENTO1 = :CLELEMENTO1,'
+      '  CLELEMENTO2 = :CLELEMENTO2,'
+      '  CODIGOELEMENTO = :CODIGOELEMENTO'
+      'where'
+      '  CODIGOELEMENTOMANTENIMIENTO = '
+      ':OLD_CODIGOELEMENTOMANTENIMIENTO')
+    InsertSQL.Strings = (
+      'insert into pm_elementomantenimiento'
+      
+        '  (CODIGOELEMENTOMANTENIMIENTO, CLELEMENTO1, CLELEMENTO2, CODIGO' +
+        'ELEMENTO)'
+      'values'
+      
+        '  (:CODIGOELEMENTOMANTENIMIENTO, :CLELEMENTO1, :CLELEMENTO2, :CO' +
+        'DIGOELEMENTO)')
+    DeleteSQL.Strings = (
+      'delete from pm_elementomantenimiento'
+      'where'
+      '  CODIGOELEMENTOMANTENIMIENTO = :OLD_CODIGOELEMENTOMANTENIMIENTO')
+    Left = 944
+    Top = 256
+  end
+  object updActividadesProgramadas: TUpdateSQL
+    ModifySQL.Strings = (
+      'update pm_actividadesprogramadas'
+      'set'
+      '  CONSECUTIVOACTIVIDAD = :CONSECUTIVOACTIVIDAD,'
+      '  CODIGOMANTENIMIENTO = :CODIGOMANTENIMIENTO,'
+      '  CODIGOACTIVIDADMANTENIMIENTO = :CODIGOACTIVIDADMANTENIMIENTO'
+      'where'
+      '  CONSECUTIVOACTIVIDAD = :OLD_CONSECUTIVOACTIVIDAD and'
+      '  CODIGOMANTENIMIENTO = :OLD_CODIGOMANTENIMIENTO')
+    InsertSQL.Strings = (
+      'insert into pm_actividadesprogramadas'
+      '  (CONSECUTIVOACTIVIDAD, CODIGOMANTENIMIENTO, '
+      'CODIGOACTIVIDADMANTENIMIENTO)'
+      'values'
+      '  (:CONSECUTIVOACTIVIDAD, :CODIGOMANTENIMIENTO, '
+      ':CODIGOACTIVIDADMANTENIMIENTO)')
+    DeleteSQL.Strings = (
+      'delete from pm_actividadesprogramadas'
+      'where'
+      '  CONSECUTIVOACTIVIDAD = :OLD_CONSECUTIVOACTIVIDAD and'
+      '  CODIGOMANTENIMIENTO = :OLD_CODIGOMANTENIMIENTO')
+    Left = 792
+    Top = 249
+  end
+  object qSubactividadprueba: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT sp.codigosubactividadprueba,sf.nombreseccionformato FROM ' +
+        'subactividadprueba sp,hve_seccionformato sf'
+      
+        'WHERE sp.codigosubactividadareaodt =:codigosubactividadareaodt A' +
+        'ND'
+      
+        'sp.CODIGOSECCIONFORMATO = sf.CODIGOSECCIONFORMATO AND sf.ACTIVO=' +
+        ' '#39'S'#39)
+    Left = 752
+    Top = 353
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'codigosubactividadareaodt'
+        ParamType = ptUnknown
+      end>
+  end
+  object qPruebasprogramadas: TQuery
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select *  from pm_pruebasprogramadas')
+    UpdateObject = updpruebasprogramadas
+    Left = 872
+    Top = 353
+  end
+  object updpruebasprogramadas: TUpdateSQL
+    ModifySQL.Strings = (
+      'update pm_pruebasprogramadas'
+      'set'
+      '  CONSECUTIVOACTIVIDAD = :CONSECUTIVOACTIVIDAD,'
+      '  CODIGOMANTENIMIENTO = :CODIGOMANTENIMIENTO,'
+      '  CODIGOSUBACTIVIDADPRUEBA = :CODIGOSUBACTIVIDADPRUEBA'
+      'where'
+      '  CONSECUTIVOACTIVIDAD = :OLD_CONSECUTIVOACTIVIDAD and'
+      '  CODIGOMANTENIMIENTO = :OLD_CODIGOMANTENIMIENTO and'
+      '  CODIGOSUBACTIVIDADPRUEBA = :OLD_CODIGOSUBACTIVIDADPRUEBA')
+    InsertSQL.Strings = (
+      'insert into pm_pruebasprogramadas'
+      
+        '  (CONSECUTIVOACTIVIDAD, CODIGOMANTENIMIENTO, CODIGOSUBACTIVIDAD' +
+        'PRUEBA)'
+      'values'
+      
+        '  (:CONSECUTIVOACTIVIDAD, :CODIGOMANTENIMIENTO, :CODIGOSUBACTIVI' +
+        'DADPRUEBA)')
+    DeleteSQL.Strings = (
+      'delete from pm_pruebasprogramadas'
+      'where'
+      '  CONSECUTIVOACTIVIDAD = :OLD_CONSECUTIVOACTIVIDAD and'
+      '  CODIGOMANTENIMIENTO = :OLD_CODIGOMANTENIMIENTO and'
+      '  CODIGOSUBACTIVIDADPRUEBA = :OLD_CODIGOSUBACTIVIDADPRUEBA')
+    Left = 984
+    Top = 353
+  end
+end

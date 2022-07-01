@@ -1,0 +1,37 @@
+inherited FTarea: TFTarea
+  Caption = 'Tarea'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    inherited dbNavigator1: TdNavigator
+      Hints.Strings = ()
+    end
+  end
+  inherited DBGrid1: TDBGrid
+    Columns = <
+      item
+        Alignment = taCenter
+        Color = clAqua
+        Expanded = False
+        FieldName = 'CODIGOTIPOTAREA'
+        PickList.Strings = ()
+        Title.Alignment = taCenter
+        Title.Caption = 'Código'
+        Width = 48
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOMBRETIPOTAREA'
+        PickList.Strings = ()
+        Title.Alignment = taCenter
+        Title.Caption = 'Nombre'
+        Width = 211
+        Visible = True
+      end>
+  end
+  inherited tTabla: TDTable
+    Active = True
+    TableName = 'TIPOTAREA'
+  end
+end

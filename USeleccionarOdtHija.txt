@@ -1,0 +1,165 @@
+inherited fSeleccionarOdtHija: TfSeleccionarOdtHija
+  Caption = 'Seleccionar Odt Hija Terminada'
+  ClientHeight = 468
+  ClientWidth = 678
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel2: TPanel
+    Width = 678
+    Height = 427
+    inherited dbgDatos: TRxDBGrid
+      Top = 48
+      Width = 676
+      Height = 378
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'CODIGOODT'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Código ODT'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 108
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CONSECUTIVO'
+          PickList.Strings = ()
+          Title.Caption = 'Consecutivo'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 82
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGOADMINISTRATIVO'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'CIA'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 55
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRECATEGORIA'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Nombre CIA'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 196
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'MotivosCalculado'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Motivos'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 288
+          Visible = True
+        end>
+    end
+    inherited Panel3: TPanel
+      Width = 676
+      Height = 47
+      inherited SBFiltrar: TSpeedButton
+        Left = 620
+        Top = 14
+        OnClick = SBFiltrarClick
+      end
+      inherited Label2: TLabel
+        Left = 120
+        Width = 20
+        Caption = 'CIA:'
+      end
+      inherited Label3: TLabel
+        Left = 240
+        Width = 69
+        Caption = 'Motivos ODT :'
+      end
+      inherited EdCodigo2: TEdit
+        Left = 163
+        Width = 65
+      end
+      inherited EdNombre: TEdit
+        Left = 320
+        Width = 281
+        CharCase = ecUpperCase
+      end
+    end
+  end
+  inherited Panel1: TPanel
+    Top = 427
+    Width = 678
+  end
+  inherited dsDatos: TDataSource
+    DataSet = qDatos
+  end
+  inherited qDatos: TQuery
+    Active = True
+    OnCalcFields = qDatosCalcFields
+    SQL.Strings = (
+      
+        'select o.codigoodt, od.consecutivo,o.codigoadministrativo,a.nomb' +
+        'recategoria ,o.motivos from odt o,odtdia od, administrativo a'
+      
+        'where a.codigoadministrativo=o.codigoadministrativo and o.codigo' +
+        'odt = od.codigoodt'
+      'and ((od.codigoestadoodtdia=6) or (od.codigoestadoodtdia=0))'
+      'order by 1 desc,2')
+    Left = 136
+    Top = 136
+    object qDatosCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'ODT.CODIGOODT'
+    end
+    object qDatosCONSECUTIVO: TFloatField
+      FieldName = 'CONSECUTIVO'
+      Origin = 'ODTDIA.CONSECUTIVO'
+    end
+    object qDatosCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'ODT.CODIGOADMINISTRATIVO'
+    end
+    object qDatosNOMBRECATEGORIA: TStringField
+      FieldName = 'NOMBRECATEGORIA'
+      Origin = 'ADMINISTRATIVO.NOMBRECATEGORIA'
+      Size = 80
+    end
+    object qDatosMOTIVOS: TMemoField
+      FieldName = 'MOTIVOS'
+      Origin = 'ODT.MOTIVOS'
+      BlobType = ftMemo
+      Size = 500
+    end
+    object qDatosMotivosCalculado: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'MotivosCalculado'
+      Size = 150
+      Calculated = True
+    end
+  end
+end

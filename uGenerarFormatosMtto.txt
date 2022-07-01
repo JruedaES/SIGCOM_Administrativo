@@ -1,0 +1,332 @@
+inherited FGenerarFormatosMtto: TFGenerarFormatosMtto
+  Left = 141
+  Top = 143
+  Width = 870
+  Height = 597
+  Caption = 'Generar Formatos de Mantenimientos'
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBText1: TDBText
+    Left = 64
+    Top = 256
+    Width = 81
+    Height = 17
+  end
+  object DBText2: TDBText
+    Left = 64
+    Top = 384
+    Width = 65
+    Height = 17
+  end
+  object Label1: TLabel
+    Left = 232
+    Top = 392
+    Width = 32
+    Height = 13
+    Caption = 'Label1'
+  end
+  object pSuperior: TPanel
+    Left = 0
+    Top = 0
+    Width = 862
+    Height = 193
+    Align = alTop
+    TabOrder = 0
+    object Bevel2: TBevel
+      Left = 546
+      Top = 3
+      Width = 10
+      Height = 51
+      Shape = bsLeftLine
+    end
+    object DBText3: TDBText
+      Left = 136
+      Top = 88
+      Width = 65
+      Height = 17
+      DataSource = DataSource1
+    end
+    object Label2: TLabel
+      Left = 448
+      Top = 56
+      Width = 32
+      Height = 13
+      Caption = 'Label2'
+    end
+    object chbBloquearProgramacion: TCheckBox
+      Left = 864
+      Top = 24
+      Width = 137
+      Height = 17
+      Caption = 'Bloquear Programación'
+      TabOrder = 0
+    end
+    object btnGenerarFormato: TButton
+      Left = 608
+      Top = 24
+      Width = 139
+      Height = 33
+      Caption = 'btnGenerarFormato'
+      TabOrder = 1
+      OnClick = btnGenerarFormatoClick
+    end
+    object TabControl2: TTabControl
+      Left = 152
+      Top = 152
+      Width = 177
+      Height = 41
+      TabOrder = 2
+    end
+    object TabControl3: TTabControl
+      Left = 328
+      Top = 152
+      Width = 177
+      Height = 41
+      TabOrder = 3
+    end
+    object ListBox1: TListBox
+      Left = 464
+      Top = 136
+      Width = 121
+      Height = 97
+      ItemHeight = 13
+      TabOrder = 4
+    end
+    object Button1: TButton
+      Left = 296
+      Top = 120
+      Width = 75
+      Height = 25
+      Caption = 'Button1'
+      TabOrder = 5
+      OnClick = Button1Click
+    end
+  end
+  object GroupBox1: TGroupBox
+    Left = 8
+    Top = 4
+    Width = 250
+    Height = 49
+    Caption = ' Seleccione un Formato'
+    TabOrder = 1
+    object DBLCBFormato: TDBLookupComboBox
+      Left = 15
+      Top = 18
+      Width = 220
+      Height = 21
+      KeyField = 'NOMBREFORMATOMTTO'
+      ListField = 'NOMBREFORMATOMTTO'
+      ListSource = DataSource1
+      TabOrder = 0
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 56
+    Top = 296
+    Width = 625
+    Height = 73
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+  end
+  object DBGrid2: TDBGrid
+    Left = 64
+    Top = 424
+    Width = 753
+    Height = 265
+    TabOrder = 3
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 48
+    Top = 528
+    Width = 750
+    Height = 25
+    TabOrder = 4
+  end
+  object TabControl1: TTabControl
+    Left = 0
+    Top = 152
+    Width = 161
+    Height = 41
+    TabOrder = 5
+  end
+  object PageControl1: TPageControl
+    Left = 696
+    Top = 216
+    Width = 121
+    Height = 17
+    TabOrder = 6
+  end
+  object Header1: THeader
+    Left = 512
+    Top = 208
+    Width = 97
+    Height = 25
+    TabOrder = 7
+  end
+  object TabbedNotebook1: TTabbedNotebook
+    Left = 504
+    Top = 136
+    Width = 129
+    Height = 57
+    TabFont.Charset = DEFAULT_CHARSET
+    TabFont.Color = clBtnText
+    TabFont.Height = -11
+    TabFont.Name = 'MS Sans Serif'
+    TabFont.Style = []
+    TabOrder = 8
+    object TTabPage
+      Left = 4
+      Top = 24
+      Caption = 'Default'
+    end
+  end
+  object TabSet1: TTabSet
+    Left = 296
+    Top = 272
+    Width = 105
+    Height = 21
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+  end
+  object pmMeses: TPopupMenu
+    Alignment = paCenter
+    Left = 906
+    Top = 104
+    object Enero1: TMenuItem
+      Tag = 1
+      Caption = 'Enero'
+    end
+    object Febrero1: TMenuItem
+      Tag = 2
+      Caption = 'Febrero'
+    end
+    object Marzo1: TMenuItem
+      Tag = 3
+      Caption = 'Marzo'
+    end
+    object Abril1: TMenuItem
+      Tag = 4
+      Caption = 'Abril'
+    end
+    object Mayo1: TMenuItem
+      Tag = 5
+      Caption = 'Mayo'
+    end
+    object Junio1: TMenuItem
+      Tag = 6
+      Caption = 'Junio'
+    end
+    object Julio1: TMenuItem
+      Tag = 7
+      Caption = 'Julio'
+    end
+    object Agosto1: TMenuItem
+      Tag = 8
+      Caption = 'Agosto'
+    end
+    object Septiembre1: TMenuItem
+      Tag = 9
+      Caption = 'Septiembre'
+    end
+    object Octubre1: TMenuItem
+      Tag = 10
+      Caption = 'Octubre'
+    end
+    object Noviembre1: TMenuItem
+      Tag = 11
+      Caption = 'Noviembre'
+    end
+    object Diciembre1: TMenuItem
+      Tag = 12
+      Caption = 'Diciembre'
+    end
+  end
+  object qFormato: TQuery
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM HVE_FORMATOMTTO')
+    UpdateObject = UpdateSQL1
+    Left = 264
+    Top = 16
+    object qFormatoCODIGOFORMATOMTTO: TFloatField
+      FieldName = 'CODIGOFORMATOMTTO'
+      Origin = 'HVE_FORMATOMTTO.CODIGOFORMATOMTTO'
+    end
+    object qFormatoNOMBREFORMATOMTTO: TStringField
+      FieldName = 'NOMBREFORMATOMTTO'
+      Origin = 'HVE_FORMATOMTTO.NOMBREFORMATOMTTO'
+      Size = 80
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = qFormato
+    Left = 296
+    Top = 16
+  end
+  object UpdateSQL1: TUpdateSQL
+    ModifySQL.Strings = (
+      'update HVE_FORMATOMTTO'
+      'set'
+      '  CODIGOFORMATOMTTO = :CODIGOFORMATOMTTO,'
+      '  NOMBREFORMATOMTTO = :NOMBREFORMATOMTTO'
+      'where'
+      '  CODIGOFORMATOMTTO = :OLD_CODIGOFORMATOMTTO')
+    InsertSQL.Strings = (
+      'insert into HVE_FORMATOMTTO'
+      '  (CODIGOFORMATOMTTO, NOMBREFORMATOMTTO)'
+      'values'
+      '  (:CODIGOFORMATOMTTO, :NOMBREFORMATOMTTO)')
+    DeleteSQL.Strings = (
+      'delete from HVE_FORMATOMTTO'
+      'where'
+      '  CODIGOFORMATOMTTO = :OLD_CODIGOFORMATOMTTO')
+    Left = 328
+    Top = 16
+  end
+  object qEncabezadoFormato: TQuery
+    Left = 784
+    Top = 240
+  end
+  object EncabezadoFormato: TDataSource
+    Left = 792
+    Top = 280
+  end
+  object UpdateSQL2: TUpdateSQL
+    Left = 808
+    Top = 320
+  end
+  object Query1: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT NOMBRECAMPO FROM HVE_ENCABEZADOFORMATO')
+    Left = 184
+    Top = 232
+  end
+  object DataSource2: TDataSource
+    DataSet = Query1
+    Left = 224
+    Top = 232
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 328
+    Top = 224
+  end
+  object ActionList1: TActionList
+    Left = 464
+    Top = 248
+  end
+end

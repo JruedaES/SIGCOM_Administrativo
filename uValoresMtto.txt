@@ -1,0 +1,350 @@
+object FValoresMantenimiento: TFValoresMantenimiento
+  Left = 169
+  Top = 165
+  Width = 729
+  Height = 334
+  Caption = 'Valores Mantenimiento'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 721
+    Height = 28
+    Align = alTop
+    TabOrder = 0
+    object dbNavigator1: TdNavigator
+      Left = 6
+      Top = 4
+      Width = 234
+      Height = 21
+      DataSource = dsValorMantenimiento
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+      Flat = True
+      ConfirmDelete = False
+      TabOrder = 0
+    end
+    object Panel5: TPanel
+      Left = 613
+      Top = 1
+      Width = 107
+      Height = 26
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 1
+      object SBFiltrar: TSpeedButton
+        Left = 33
+        Top = 3
+        Width = 25
+        Height = 23
+        Hint = 'Filtro de Datos en Lista'
+        Flat = True
+        Glyph.Data = {
+          EE000000424DEE000000000000007600000028000000100000000F0000000100
+          0400000000007800000000000000000000001000000010000000000000000000
+          8000008000000080800080000000800080008080000080808000C0C0C0000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+          8888888888888888888888888800008888888888880660888888888888088088
+          8888888888088088888888888808808888888888806886088888888806688860
+          8888888066888866088888066FF8888660888066FFFF88866608800000000000
+          000888888888888888888888888888888888}
+      end
+      object SBOrdenar: TSpeedButton
+        Left = 2
+        Top = 2
+        Width = 23
+        Height = 23
+        Hint = 'Refrescar Lista'
+        Flat = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333333333FFFFF3333333333999993333333333F77777FFF333333999999999
+          3333333777333777FF33339993707399933333773337F3777FF3399933000339
+          9933377333777F3377F3399333707333993337733337333337FF993333333333
+          399377F33333F333377F993333303333399377F33337FF333373993333707333
+          333377F333777F333333993333101333333377F333777F3FFFFF993333000399
+          999377FF33777F77777F3993330003399993373FF3777F37777F399933000333
+          99933773FF777F3F777F339993707399999333773F373F77777F333999999999
+          3393333777333777337333333999993333333333377777333333}
+        NumGlyphs = 2
+        OnClick = SBOrdenarClick
+      end
+      object Bevel2: TBevel
+        Left = 99
+        Top = 1
+        Width = 3
+        Height = 24
+      end
+      object Bevel3: TBevel
+        Left = 66
+        Top = 1
+        Width = 3
+        Height = 24
+      end
+      object sbCerrar: TSpeedButton
+        Left = 75
+        Top = 4
+        Width = 23
+        Height = 22
+        Hint = 'Cierra esta ventana'
+        Flat = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00330000000000
+          03333377777777777F333301BBBBBBBB033333773F3333337F3333011BBBBBBB
+          0333337F73F333337F33330111BBBBBB0333337F373F33337F333301110BBBBB
+          0333337F337F33337F333301110BBBBB0333337F337F33337F333301110BBBBB
+          0333337F337F33337F333301110BBBBB0333337F337F33337F333301110BBBBB
+          0333337F337F33337F333301110BBBBB0333337F337FF3337F33330111B0BBBB
+          0333337F337733337F333301110BBBBB0333337F337F33337F333301110BBBBB
+          0333337F3F7F33337F333301E10BBBBB0333337F7F7F33337F333301EE0BBBBB
+          0333337F777FFFFF7F3333000000000003333377777777777333}
+        NumGlyphs = 2
+        OnClick = sbCerrarClick
+      end
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 284
+    Width = 721
+    Height = 18
+    Align = alBottom
+    Alignment = taLeftJustify
+    BevelOuter = bvLowered
+    TabOrder = 1
+  end
+  object dbgValorMantenimiento: TRxDBGrid
+    Left = 0
+    Top = 28
+    Width = 721
+    Height = 256
+    Align = alClient
+    DataSource = dsValorMantenimiento
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'CODIGOVALOR'
+        Title.Alignment = taCenter
+        Title.Caption = 'Código Valor'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clMaroon
+        Title.Font.Height = -11
+        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CODIGOTIPOVALOR'
+        Title.Alignment = taCenter
+        Title.Caption = 'Código Tipo Valor'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clMaroon
+        Title.Font.Height = -11
+        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'TipoValor'
+        PickList.Strings = (
+          'Select nombretipovalor from hve_tipovalor'
+          'order by 2')
+        Title.Alignment = taCenter
+        Title.Caption = 'Tipo Valor'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clMaroon
+        Title.Font.Height = -11
+        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Style = [fsBold]
+        Width = 279
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'VALOR'
+        Title.Alignment = taCenter
+        Title.Caption = 'Valor'
+        Title.Font.Charset = ANSI_CHARSET
+        Title.Font.Color = clMaroon
+        Title.Font.Height = -11
+        Title.Font.Name = 'Arial'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end>
+  end
+  object dsValorMantenimiento: TDDataSource
+    AutoEdit = False
+    DataSet = qValorMantenimiento
+    Left = 230
+    Top = 163
+  end
+  object qValorMantenimiento: TQuery
+    CachedUpdates = True
+    AfterInsert = qValorMantenimientoAfterInsert
+    AfterPost = qValorMantenimientoAfterPost
+    AfterDelete = qValorMantenimientoAfterDelete
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from hve_valores'
+      'order by 1'
+      '')
+    UpdateObject = updValorMantenimiento
+    Left = 232
+    Top = 118
+    object qValorMantenimientoCODIGOVALOR: TFloatField
+      FieldName = 'CODIGOVALOR'
+    end
+    object qValorMantenimientoCODIGOTIPOVALOR: TFloatField
+      FieldName = 'CODIGOTIPOVALOR'
+    end
+    object qValorMantenimientoVALOR: TStringField
+      FieldName = 'VALOR'
+      Size = 50
+    end
+    object qValorMantenimientoTipoValor: TStringField
+      DisplayWidth = 50
+      FieldKind = fkLookup
+      FieldName = 'TipoValor'
+      LookupDataSet = qTipoValor
+      LookupKeyFields = 'CODIGOTIPOVALOR'
+      LookupResultField = 'NOMBRETIPOVALOR'
+      KeyFields = 'CODIGOTIPOVALOR'
+      Size = 50
+      Lookup = True
+    end
+  end
+  object updValorMantenimiento: TUpdateSQL
+    ModifySQL.Strings = (
+      'update hve_valores'
+      'set'
+      '  CODIGOVALOR = :CODIGOVALOR,'
+      '  CODIGOTIPOVALOR = :CODIGOTIPOVALOR,'
+      '  VALOR = :VALOR'
+      'where'
+      '  CODIGOVALOR = :OLD_CODIGOVALOR')
+    InsertSQL.Strings = (
+      'insert into hve_valores'
+      '  (CODIGOVALOR, CODIGOTIPOVALOR, VALOR)'
+      'values'
+      '  (:CODIGOVALOR, :CODIGOTIPOVALOR, :VALOR)')
+    DeleteSQL.Strings = (
+      'delete from hve_valores'
+      'where'
+      '  CODIGOVALOR = :OLD_CODIGOVALOR')
+    Left = 232
+    Top = 206
+  end
+  object qCopiar: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from hve_formatomtto'
+      'where codigoformatomtto=:codigoformatomtto'
+      '')
+    Left = 608
+    Top = 96
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'codigoformatomtto'
+        ParamType = ptUnknown
+      end>
+  end
+  object Query1: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from hve_formatomtto'
+      'where codigoformatomtto=:codigoformatomtto'
+      '')
+    Left = 608
+    Top = 96
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'codigoformatomtto'
+        ParamType = ptUnknown
+      end>
+  end
+  object Query2: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from hve_formatomtto'
+      'where codigoformatomtto=:codigoformatomtto'
+      '')
+    Left = 608
+    Top = 96
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'codigoformatomtto'
+        ParamType = ptUnknown
+      end>
+  end
+  object Query3: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from hve_formatomtto'
+      'where codigoformatomtto=:codigoformatomtto'
+      '')
+    Left = 608
+    Top = 96
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'codigoformatomtto'
+        ParamType = ptUnknown
+      end>
+  end
+  object Query4: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from hve_formatomtto'
+      'where codigoformatomtto=:codigoformatomtto'
+      '')
+    Left = 608
+    Top = 96
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'codigoformatomtto'
+        ParamType = ptUnknown
+      end>
+  end
+  object qTipoValor: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'Select * from hve_tipovalor')
+    Left = 320
+    Top = 120
+    object qTipoValorCODIGOTIPOVALOR: TFloatField
+      FieldName = 'CODIGOTIPOVALOR'
+      Origin = 'HVE_TIPOVALOR.CODIGOTIPOVALOR'
+    end
+    object qTipoValorNOMBRETIPOVALOR: TStringField
+      FieldName = 'NOMBRETIPOVALOR'
+      Origin = 'HVE_TIPOVALOR.NOMBRETIPOVALOR'
+      Size = 50
+    end
+  end
+end

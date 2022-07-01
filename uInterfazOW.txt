@@ -1,0 +1,318 @@
+object fInterfazOW: TfInterfazOW
+  Left = 277
+  Top = 178
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Interfaz EnerGis - OW'
+  ClientHeight = 411
+  ClientWidth = 775
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel5: TPanel
+    Left = 0
+    Top = 0
+    Width = 775
+    Height = 377
+    Align = alClient
+    TabOrder = 0
+    object sbClientesnocreados: TSpeedButton
+      Left = 7
+      Top = 9
+      Width = 164
+      Height = 25
+      Caption = 'OT-OW pendientes'
+      Glyph.Data = {
+        F6000000424DF600000000000000760000002800000010000000100000000100
+        0400000000008000000000000000000000001000000010000000000000000000
+        8000008000000080800080000000800080008080000080808000C0C0C0000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF008888888888CC
+        288888888888CC6662C888888888C6666CC88888888CCC66CCC28888888C3CCC
+        C66C8888888C33CCC66C88888888C3CC662888888888C2CC6CC88888888888CC
+        C888888888888884888888888888884448888888888884444488888888888884
+        8888888888888884888884444444444488888888888888888888}
+      OnClick = sbClientesnocreadosClick
+    end
+    object SBBuscar: TSpeedButton
+      Left = 446
+      Top = 8
+      Width = 25
+      Height = 21
+      Hint = 'Busca Dato en Lista'
+      Flat = True
+      Glyph.Data = {
+        EE000000424DEE000000000000007600000028000000100000000F0000000100
+        0400000000007800000000000000000000001000000010000000000000000000
+        8000008000000080800080000000800080008080000080808000C0C0C0000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+        888800000888880000080F000888880F00080F000888880F0008000000080000
+        000800F000000F00000800F000800F00000800F000800F000008800000000000
+        0088880F00080F000888880000080000088888800088800088888880F08880F0
+        888888800088800088888888888888888888}
+      OnClick = SBBuscarClick
+    end
+    object Label1: TLabel
+      Left = 271
+      Top = 11
+      Width = 51
+      Height = 13
+      Caption = 'Codigo OT'
+    end
+    object BitBtn2: TBitBtn
+      Left = 483
+      Top = 139
+      Width = 26
+      Height = 51
+      Caption = '>'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      OnClick = BitBtn2Click
+    end
+    object dbdot_ow: TDBGrid
+      Left = 7
+      Top = 41
+      Width = 467
+      Height = 323
+      DataSource = dsOT_OW
+      Options = [dgTitles, dgIndicator, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+      TabOrder = 1
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'CODIGO_OT'
+          Title.Caption = 'Código OT'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 67
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DESCRIPCION'
+          Title.Caption = 'Descripción'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 288
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DESC_ESTADO'
+          Title.Caption = 'Estado'
+          Width = 74
+          Visible = True
+        end>
+    end
+    object dbgClineteEnergis: TDBGrid
+      Left = 520
+      Top = 41
+      Width = 230
+      Height = 323
+      DataSource = dsODT_OT
+      Options = [dgTitles, dgIndicator, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+      TabOrder = 2
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'CODIGO_OT'
+          Title.Caption = 'OTs Asociadas'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 135
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'MATERIALRELACIONADO'
+          Title.Caption = 'Relacionado'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 82
+          Visible = True
+        end>
+    end
+    object BitBtn1: TBitBtn
+      Left = 484
+      Top = 197
+      Width = 26
+      Height = 50
+      Caption = '<'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 3
+      OnClick = BitBtn1Click
+    end
+    object textobuscado: TEdit
+      Left = 334
+      Top = 8
+      Width = 108
+      Height = 21
+      TabOrder = 4
+    end
+  end
+  object Panel4: TPanel
+    Left = 0
+    Top = 377
+    Width = 775
+    Height = 34
+    Align = alBottom
+    TabOrder = 1
+    object BitBtn3: TBitBtn
+      Left = 618
+      Top = 3
+      Width = 132
+      Height = 27
+      Caption = 'Traer Materiales'
+      ModalResult = 1
+      TabOrder = 0
+      OnClick = BitBtn3Click
+      Glyph.Data = {
+        F6000000424DF600000000000000760000002800000010000000100000000100
+        0400000000008000000000000000000000001000000010000000000000000000
+        8000008000000080800080000000800080008080000080808000C0C0C0000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+        8488888888888888844888884444444444448888488888888448888848888888
+        848888884888888888888888488888888888888CC288888888888CC6662C8888
+        88888C6666CC88888888CCC66CCC28888888C3CCCC66C8888888C33CCC66C888
+        88888C3CC662888888888C2CC6CC88888888888CCC8888888888}
+    end
+  end
+  object qOT_OW: TQuery
+    CachedUpdates = True
+    BeforeOpen = qOT_OWBeforeOpen
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT DISTINCT OT.CODIGO_OT, OT.DESCRIPCION, ESTADO, DESC_ESTAD' +
+        'O  FROM V4801A@ERPSTR OT'
+      'WHERE NOT EXISTS ('
+      
+        'SELECT *  FROM inventario.OW_ODTOT OD WHERE OD.CODIGO_OT = OT.CO' +
+        'DIGO_OT)'
+      'AND ESTADO <> '#39'98'#39
+      'and CODIGO_DOCUMENTO_EXTERNO LIKE :CODIGO_DOCUMENTO_EXTERNO ')
+    Left = 106
+    Top = 128
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'CODIGO_DOCUMENTO_EXTERNO'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsOT_OW: TDataSource
+    DataSet = qOT_OW
+    Left = 106
+    Top = 210
+  end
+  object qODT_OT: TQuery
+    CachedUpdates = True
+    AfterPost = qODT_OTAfterPost
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT *'
+      'FROM INVENTARIO.OW_ODTOT'
+      'WHERE CODIGOODT= :CODIGOODT'
+      'AND CONSECUTIVO = :CONSECUTIVO')
+    UpdateObject = updODT_OT
+    Left = 618
+    Top = 104
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'CONSECUTIVO'
+        ParamType = ptUnknown
+      end>
+    object qODT_OTCODIGO_OT: TFloatField
+      FieldName = 'CODIGO_OT'
+      Origin = 'OW_ODTOT.CODIGO_OT'
+    end
+    object qODT_OTCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'OW_ODTOT.CODIGOODT'
+    end
+    object qODT_OTCONSECUTIVO: TFloatField
+      FieldName = 'CONSECUTIVO'
+      Origin = 'OW_ODTOT.CONSECUTIVO'
+    end
+    object qODT_OTMATERIALRELACIONADO: TStringField
+      FieldName = 'MATERIALRELACIONADO'
+      Origin = 'OW_ODTOT.MATERIALRELACIONADO'
+      Size = 1
+    end
+  end
+  object dsODT_OT: TDataSource
+    DataSet = qODT_OT
+    Left = 618
+    Top = 154
+  end
+  object updODT_OT: TUpdateSQL
+    ModifySQL.Strings = (
+      'update INVENTARIO.OW_ODTOT'
+      'set'
+      '  CODIGOODT = :CODIGOODT,'
+      '  CONSECUTIVO = :CONSECUTIVO,'
+      '  CODIGO_OT = :CODIGO_OT,'
+      '  MATERIALRELACIONADO = :MATERIALRELACIONADO'
+      'where'
+      '  CODIGOODT = :OLD_CODIGOODT and'
+      '  CONSECUTIVO = :OLD_CONSECUTIVO and'
+      '  CODIGO_OT = :OLD_CODIGO_OT')
+    InsertSQL.Strings = (
+      'insert into INVENTARIO.OW_ODTOT'
+      '  (CODIGOODT, CONSECUTIVO, CODIGO_OT, MATERIALRELACIONADO)'
+      'values'
+      '  (:CODIGOODT, :CONSECUTIVO, :CODIGO_OT, :MATERIALRELACIONADO)')
+    DeleteSQL.Strings = (
+      'delete from INVENTARIO.OW_ODTOT'
+      'where'
+      '  CODIGOODT = :OLD_CODIGOODT and'
+      '  CONSECUTIVO = :OLD_CONSECUTIVO and'
+      '  CODIGO_OT = :OLD_CODIGO_OT')
+    Left = 618
+    Top = 208
+  end
+end

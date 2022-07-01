@@ -1,0 +1,1441 @@
+inherited FListaContratoDistribucion: TFListaContratoDistribucion
+  Left = 171
+  Top = 98
+  Width = 984
+  Height = 627
+  Caption = 'Listado de Contratos de Distribución'
+  OnActivate = FormActivate
+  OnDestroy = nil
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    Width = 968
+    object sbInsertar: TSpeedButton [0]
+      Left = 103
+      Top = 4
+      Width = 23
+      Height = 21
+      Hint = 'Ingresar Dato en Lista'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        33333333FF33333333FF333993333333300033377F3333333777333993333333
+        300033F77FFF3333377739999993333333333777777F3333333F399999933333
+        33003777777333333377333993333333330033377F3333333377333993333333
+        3333333773333333333F333333333333330033333333F33333773333333C3333
+        330033333337FF3333773333333CC333333333FFFFF77FFF3FF33CCCCCCCCCC3
+        993337777777777F77F33CCCCCCCCCC3993337777777777377333333333CC333
+        333333333337733333FF3333333C333330003333333733333777333333333333
+        3000333333333333377733333333333333333333333333333333}
+      NumGlyphs = 2
+      OnClick = sbInsertarClick
+    end
+    object sbEditar: TSpeedButton [1]
+      Left = 127
+      Top = 4
+      Width = 23
+      Height = 21
+      Hint = 'Editar Dato en Lista'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333000000
+        000033333377777777773333330FFFFFFFF03FF3FF7FF33F3FF700300000FF0F
+        00F077F777773F737737E00BFBFB0FFFFFF07773333F7F3333F7E0BFBF000FFF
+        F0F077F3337773F3F737E0FBFBFBF0F00FF077F3333FF7F77F37E0BFBF00000B
+        0FF077F3337777737337E0FBFBFBFBF0FFF077F33FFFFFF73337E0BF0000000F
+        FFF077FF777777733FF7000BFB00B0FF00F07773FF77373377373330000B0FFF
+        FFF03337777373333FF7333330B0FFFF00003333373733FF777733330B0FF00F
+        0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
+        00333377737FFFFF773333303300000003333337337777777333}
+      NumGlyphs = 2
+      OnClick = sbEditarClick
+    end
+    object SpeedButton1: TSpeedButton [2]
+      Left = 151
+      Top = 4
+      Width = 23
+      Height = 21
+      Hint = 'Editar Dato en Lista y Cartografía'
+      Flat = True
+      Glyph.Data = {
+        36060000424D3606000000000000360000002800000020000000100000000100
+        1800000000000006000000000000000000000000000000000000008080008080
+        0080800080800080800080800000000000000000000000000000000000000000
+        0000000000000000000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080008080008080
+        008080008080008080008080000000FFFFFFFFFFFFFFFFFFFFFFFF8000008000
+        00FFFFFFFFFFFF00000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080000000000000
+        008080000000000000000000000000000000FFFFFF800000FF0000808000FF00
+        00FF000080000000000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080FFFFFF000000
+        00000000FFFFFFFFFF00FFFFFFFFFF00FFFF000000FF0000FF00008080008000
+        0080000080000000000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080FFFFFF000000
+        00FFFFFFFFFF00FFFFFFFFFF000000000000000000FF0000FF0000808000FF00
+        00FF000080000080000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080FFFFFF000000
+        FFFFFF00FFFFFFFFFF00FFFFFFFFFF00FFFFFFFFFF0000008080008080008080
+        00808000FF000080000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080FFFFFF000000
+        00FFFFFFFFFF00FFFFFFFFFF00000000000000000000000000000000FFFF8080
+        00808000FF0000FF000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080FFFFFF000000
+        FFFFFF00FFFFFFFFFF00FFFFFFFFFF00FFFFFFFFFF00FFFFFFFFFF0000008080
+        0080800080800000000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080FFFFFF000000
+        00FFFFFFFFFF000000000000000000000000000000000000000000FF0000FF00
+        00FF000000000000000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080000000000000
+        00000000FFFFFFFFFF00FFFF00000000000000FFFF000000000000FF00000000
+        00FFFFFFFFFFFF00000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080008080008080
+        00808000000000000000000000000000FFFF000000FFFFFFFFFFFFFFFFFF0000
+        00000000FFFFFF00000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080008080008080
+        00808000808000808000000000FFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFF00000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080008080008080
+        00808000808000000000FFFF000000FFFFFFFFFFFF000000000000FFFFFF0000
+        0000000000000000000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080008080008080
+        00808000000000FFFF000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
+        00FFFFFFFFFFFF00000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080008080008080
+        0000000000FF000000008080000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
+        00FFFFFF00000000808000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080008080008080
+        0080800000000080800080800000000000000000000000000000000000000000
+        0000000000808000808000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080}
+      NumGlyphs = 2
+      OnClick = SpeedButton1Click
+    end
+    inherited Panel2: TPanel
+      Left = 718
+      Width = 249
+      inherited SBImprimir: TSpeedButton
+        OnClick = SBImprimirClick
+      end
+      inherited SBFiltrar: TSpeedButton
+        Left = 25
+      end
+      inherited SBBuscar: TSpeedButton
+        OnClick = SBBuscarClick
+      end
+      inherited SBOrdenar: TSpeedButton
+        OnClick = SBOrdenarClick
+      end
+      inherited SBEstadistica: TSpeedButton
+        Visible = False
+        OnClick = SBEstadisticaClick
+      end
+      inherited SBBuscaElementoCartografia: TSpeedButton
+        OnClick = SBBuscaElementoCartografiaClick
+      end
+      inherited SBFiltroCarografico: TSpeedButton
+        Left = 5
+        Visible = False
+      end
+    end
+    inherited dNavigator1: TdNavigator
+      Width = 96
+      Hints.Strings = ()
+    end
+  end
+  inherited Panel3: TPanel
+    Top = 416
+    Width = 968
+  end
+  inherited PFiltro: TPanel
+    Width = 968
+    inherited lFiltroDatos: TLabel
+      Width = 966
+    end
+  end
+  object dbgListaContrato: TDBGrid [3]
+    Left = 0
+    Top = 78
+    Width = 968
+    Height = 138
+    Align = alClient
+    DataSource = dsBase
+    TabOrder = 3
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    OnDblClick = sbEditarClick
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'CODIGOCONTRATO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Código'
+        Width = 70
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NUMEROCONTRATO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Contrato'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'FECHAASIGNACION'
+        Title.Alignment = taCenter
+        Title.Caption = 'Fecha de Asignación'
+        Width = 110
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOMBREADMINISTRATIVO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Dependencia'
+        Width = 329
+        Visible = True
+      end
+      item
+        Alignment = taLeftJustify
+        Expanded = False
+        FieldName = 'COSTOTOTAL'
+        Title.Alignment = taCenter
+        Title.Caption = 'Costo Total'
+        Width = 100
+        Visible = True
+      end>
+  end
+  object v: TPanel [4]
+    Left = 0
+    Top = 216
+    Width = 968
+    Height = 200
+    Align = alBottom
+    TabOrder = 4
+    object Label1: TLabel
+      Left = 8
+      Top = 6
+      Width = 131
+      Height = 13
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'Objeto'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 155
+      Top = 4
+      Width = 58
+      Height = 13
+      Caption = 'Ubicación'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 152
+      Top = 71
+      Width = 26
+      Height = 13
+      Caption = 'Tipo'
+      FocusControl = DBEdit3
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 354
+      Top = 4
+      Width = 76
+      Height = 13
+      Caption = 'Dependencia'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label8: TLabel
+      Left = 152
+      Top = 131
+      Width = 49
+      Height = 13
+      Caption = 'Contrato'
+      FocusControl = DBEdit7
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label9: TLabel
+      Left = 354
+      Top = 111
+      Width = 84
+      Height = 26
+      Caption = 'Representante'#13#10'Legal'
+      FocusControl = DBEdit8
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label12: TLabel
+      Left = 621
+      Top = 29
+      Width = 63
+      Height = 13
+      Caption = 'Asignación'
+      FocusControl = DBEdit11
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label13: TLabel
+      Left = 621
+      Top = 62
+      Width = 79
+      Height = 13
+      Caption = 'Inicio Trabajo'
+      FocusControl = DBEdit12
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label14: TLabel
+      Left = 621
+      Top = 96
+      Width = 75
+      Height = 13
+      Caption = 'Final Trabajo'
+      FocusControl = DBEdit13
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Bevel4: TBevel
+      Left = 347
+      Top = 0
+      Width = 2
+      Height = 215
+    end
+    object Bevel5: TBevel
+      Left = 615
+      Top = 0
+      Width = 2
+      Height = 215
+    end
+    object Label16: TLabel
+      Left = 152
+      Top = 101
+      Width = 40
+      Height = 13
+      Caption = 'Estado'
+      FocusControl = DBEdit15
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Bevel6: TBevel
+      Left = 147
+      Top = 0
+      Width = 2
+      Height = 215
+    end
+    object Label10: TLabel
+      Left = 152
+      Top = 161
+      Width = 40
+      Height = 13
+      Caption = 'Código'
+      FocusControl = DBEdit9
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label15: TLabel
+      Left = 354
+      Top = 78
+      Width = 62
+      Height = 13
+      Caption = 'Contratista'
+      FocusControl = DBEdit14
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label18: TLabel
+      Left = 834
+      Top = 29
+      Width = 46
+      Height = 13
+      Caption = 'Material'
+      FocusControl = DBEdit17
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label19: TLabel
+      Left = 834
+      Top = 62
+      Width = 62
+      Height = 13
+      Caption = 'Transporte'
+      FocusControl = DBEdit18
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label20: TLabel
+      Left = 834
+      Top = 96
+      Width = 40
+      Height = 13
+      Caption = 'Equipo'
+      FocusControl = DBEdit19
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label21: TLabel
+      Left = 834
+      Top = 129
+      Width = 81
+      Height = 13
+      Caption = 'Mano de Obra'
+      FocusControl = DBEdit20
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Bevel7: TBevel
+      Left = 830
+      Top = -38
+      Width = 2
+      Height = 215
+    end
+    object Label22: TLabel
+      Left = 834
+      Top = 162
+      Width = 34
+      Height = 13
+      Caption = 'Total '
+      FocusControl = DBEdit21
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label23: TLabel
+      Left = 621
+      Top = 129
+      Width = 62
+      Height = 13
+      Caption = 'Certificado'
+      FocusControl = DBEdit22
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Bevel8: TBevel
+      Left = 830
+      Top = -23
+      Width = 2
+      Height = 215
+    end
+    object Label24: TLabel
+      Left = 621
+      Top = 162
+      Width = 66
+      Height = 13
+      Caption = 'Liquidación'
+      FocusControl = DBEdit23
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Bevel9: TBevel
+      Left = 830
+      Top = 1
+      Width = 2
+      Height = 215
+    end
+    object DBText1: TDBText
+      Left = 152
+      Top = 20
+      Width = 190
+      Height = 42
+      DataField = 'NOMBREGEOGRAFICO'
+      DataSource = dsBase
+      WordWrap = True
+    end
+    object DBText2: TDBText
+      Left = 352
+      Top = 20
+      Width = 249
+      Height = 42
+      DataField = 'NOMBREGEOGRAFICO'
+      DataSource = dsBase
+      WordWrap = True
+    end
+    object Label3: TLabel
+      Left = 353
+      Top = 161
+      Width = 63
+      Height = 13
+      Caption = 'Interventor'
+      FocusControl = DBEdit1
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object DBMemo1: TDBMemo
+      Left = 8
+      Top = 24
+      Width = 133
+      Height = 153
+      DataField = 'OBJETO'
+      DataSource = dsqObjeto
+      ParentColor = True
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object DBEdit3: TDBEdit
+      Left = 210
+      Top = 68
+      Width = 131
+      Height = 21
+      DataField = 'NOMBRETIPOCONTRATO'
+      DataSource = dsBase
+      ParentColor = True
+      ReadOnly = True
+      TabOrder = 1
+    end
+    object DBEdit7: TDBEdit
+      Left = 210
+      Top = 127
+      Width = 131
+      Height = 21
+      DataField = 'NUMEROCONTRATO'
+      DataSource = dsBase
+      ParentColor = True
+      ReadOnly = True
+      TabOrder = 2
+    end
+    object DBEdit8: TDBEdit
+      Left = 443
+      Top = 117
+      Width = 168
+      Height = 21
+      DataField = 'REPRESENTANTECONTRATISTA'
+      DataSource = dsBase
+      ParentColor = True
+      ReadOnly = True
+      TabOrder = 3
+    end
+    object DBEdit11: TDBEdit
+      Left = 701
+      Top = 26
+      Width = 126
+      Height = 21
+      DataField = 'FECHAASIGNACION'
+      DataSource = dsBase
+      ParentColor = True
+      ReadOnly = True
+      TabOrder = 4
+    end
+    object DBEdit12: TDBEdit
+      Left = 701
+      Top = 59
+      Width = 126
+      Height = 21
+      DataField = 'FECHAINICIO'
+      DataSource = dsBase
+      ParentColor = True
+      ReadOnly = True
+      TabOrder = 5
+    end
+    object DBEdit13: TDBEdit
+      Left = 701
+      Top = 93
+      Width = 126
+      Height = 21
+      DataField = 'FECHAENTREGA'
+      DataSource = dsBase
+      ParentColor = True
+      ReadOnly = True
+      TabOrder = 6
+    end
+    object DBEdit15: TDBEdit
+      Left = 210
+      Top = 97
+      Width = 131
+      Height = 21
+      DataField = 'NOMBREESTADOCONTRATO'
+      DataSource = dsBase
+      ParentColor = True
+      ReadOnly = True
+      TabOrder = 7
+    end
+    object DBEdit9: TDBEdit
+      Left = 210
+      Top = 157
+      Width = 131
+      Height = 21
+      DataField = 'CODIGOCONTRATO'
+      DataSource = dsBase
+      ParentColor = True
+      ReadOnly = True
+      TabOrder = 8
+    end
+    object DBEdit14: TDBEdit
+      Left = 443
+      Top = 75
+      Width = 168
+      Height = 21
+      DataField = 'NOMBRECONTRATISTA'
+      DataSource = dsBase
+      ParentColor = True
+      ReadOnly = True
+      TabOrder = 9
+    end
+    object DBEdit17: TDBEdit
+      Left = 918
+      Top = 26
+      Width = 92
+      Height = 21
+      DataField = 'MATERIALPRESUPUESTADO'
+      DataSource = dsBase
+      ParentColor = True
+      ReadOnly = True
+      TabOrder = 10
+    end
+    object DBEdit18: TDBEdit
+      Left = 918
+      Top = 59
+      Width = 92
+      Height = 21
+      DataField = 'TRANSPORTEPRESUPUESTADO'
+      DataSource = dsBase
+      ParentColor = True
+      ReadOnly = True
+      TabOrder = 11
+    end
+    object DBEdit19: TDBEdit
+      Left = 918
+      Top = 93
+      Width = 92
+      Height = 21
+      DataField = 'EQUIPOPRESUPUESTADO'
+      DataSource = dsBase
+      ParentColor = True
+      ReadOnly = True
+      TabOrder = 12
+    end
+    object DBEdit20: TDBEdit
+      Left = 918
+      Top = 126
+      Width = 92
+      Height = 21
+      DataField = 'MANOOBRAPRESUPUESTADO'
+      DataSource = dsBase
+      ParentColor = True
+      ReadOnly = True
+      TabOrder = 13
+    end
+    object DBEdit21: TDBEdit
+      Left = 918
+      Top = 159
+      Width = 92
+      Height = 21
+      DataField = 'COSTOTOTAL'
+      DataSource = dsBase
+      ParentColor = True
+      ReadOnly = True
+      TabOrder = 14
+    end
+    object DBEdit22: TDBEdit
+      Left = 701
+      Top = 126
+      Width = 126
+      Height = 21
+      DataField = 'FECHACERTIFICADO'
+      DataSource = dsBase
+      ParentColor = True
+      ReadOnly = True
+      TabOrder = 15
+    end
+    object DBEdit23: TDBEdit
+      Left = 701
+      Top = 159
+      Width = 126
+      Height = 21
+      DataField = 'FECHALIQUIDACION'
+      DataSource = dsBase
+      ParentColor = True
+      ReadOnly = True
+      TabOrder = 16
+    end
+    object DBEdit1: TDBEdit
+      Left = 442
+      Top = 158
+      Width = 168
+      Height = 21
+      DataField = 'NOMBREINTERVENTOR'
+      DataSource = dsBase
+      ParentColor = True
+      ReadOnly = True
+      TabOrder = 17
+    end
+  end
+  object Panel6: TPanel [5]
+    Left = 0
+    Top = 434
+    Width = 968
+    Height = 28
+    Align = alBottom
+    TabOrder = 5
+    object sbInsertarObra: TSpeedButton
+      Left = 103
+      Top = 4
+      Width = 23
+      Height = 21
+      Hint = 'Ingresar Dato en Lista'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        33333333FF33333333FF333993333333300033377F3333333777333993333333
+        300033F77FFF3333377739999993333333333777777F3333333F399999933333
+        33003777777333333377333993333333330033377F3333333377333993333333
+        3333333773333333333F333333333333330033333333F33333773333333C3333
+        330033333337FF3333773333333CC333333333FFFFF77FFF3FF33CCCCCCCCCC3
+        993337777777777F77F33CCCCCCCCCC3993337777777777377333333333CC333
+        333333333337733333FF3333333C333330003333333733333777333333333333
+        3000333333333333377733333333333333333333333333333333}
+      NumGlyphs = 2
+      OnClick = sbInsertarObraClick
+    end
+    object sbEditarObra: TSpeedButton
+      Left = 127
+      Top = 4
+      Width = 23
+      Height = 21
+      Hint = 'Editar Dato en Lista'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333000000
+        000033333377777777773333330FFFFFFFF03FF3FF7FF33F3FF700300000FF0F
+        00F077F777773F737737E00BFBFB0FFFFFF07773333F7F3333F7E0BFBF000FFF
+        F0F077F3337773F3F737E0FBFBFBF0F00FF077F3333FF7F77F37E0BFBF00000B
+        0FF077F3337777737337E0FBFBFBFBF0FFF077F33FFFFFF73337E0BF0000000F
+        FFF077FF777777733FF7000BFB00B0FF00F07773FF77373377373330000B0FFF
+        FFF03337777373333FF7333330B0FFFF00003333373733FF777733330B0FF00F
+        0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
+        00333377737FFFFF773333303300000003333337337777777333}
+      NumGlyphs = 2
+      OnClick = sbEditarObraClick
+    end
+    object sbEditarObraCartografia: TSpeedButton
+      Left = 151
+      Top = 4
+      Width = 23
+      Height = 21
+      Hint = 'Editar Dato en Lista y Cartografía'
+      Flat = True
+      Glyph.Data = {
+        36060000424D3606000000000000360000002800000020000000100000000100
+        1800000000000006000000000000000000000000000000000000008080008080
+        0080800080800080800080800000000000000000000000000000000000000000
+        0000000000000000000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080008080008080
+        008080008080008080008080000000FFFFFFFFFFFFFFFFFFFFFFFF8000008000
+        00FFFFFFFFFFFF00000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080000000000000
+        008080000000000000000000000000000000FFFFFF800000FF0000808000FF00
+        00FF000080000000000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080FFFFFF000000
+        00000000FFFFFFFFFF00FFFFFFFFFF00FFFF000000FF0000FF00008080008000
+        0080000080000000000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080FFFFFF000000
+        00FFFFFFFFFF00FFFFFFFFFF000000000000000000FF0000FF0000808000FF00
+        00FF000080000080000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080FFFFFF000000
+        FFFFFF00FFFFFFFFFF00FFFFFFFFFF00FFFFFFFFFF0000008080008080008080
+        00808000FF000080000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080FFFFFF000000
+        00FFFFFFFFFF00FFFFFFFFFF00000000000000000000000000000000FFFF8080
+        00808000FF0000FF000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080FFFFFF000000
+        FFFFFF00FFFFFFFFFF00FFFFFFFFFF00FFFFFFFFFF00FFFFFFFFFF0000008080
+        0080800080800000000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080FFFFFF000000
+        00FFFFFFFFFF000000000000000000000000000000000000000000FF0000FF00
+        00FF000000000000000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080000000000000
+        00000000FFFFFFFFFF00FFFF00000000000000FFFF000000000000FF00000000
+        00FFFFFFFFFFFF00000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080008080008080
+        00808000000000000000000000000000FFFF000000FFFFFFFFFFFFFFFFFF0000
+        00000000FFFFFF00000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080008080008080
+        00808000808000808000000000FFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFF00000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080008080008080
+        00808000808000000000FFFF000000FFFFFFFFFFFF000000000000FFFFFF0000
+        0000000000000000000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080008080008080
+        00808000000000FFFF000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
+        00FFFFFFFFFFFF00000000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080008080008080
+        0000000000FF000000008080000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
+        00FFFFFF00000000808000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080008080008080
+        0080800000000080800080800000000000000000000000000000000000000000
+        0000000000808000808000808000808000808000808000808000808000808000
+        8080008080008080008080008080008080008080008080008080}
+      NumGlyphs = 2
+    end
+    object dNavigator2: TdNavigator
+      Left = 6
+      Top = 4
+      Width = 96
+      Height = 21
+      DataSource = dsBase
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+      Flat = True
+      ConfirmDelete = False
+      TabOrder = 0
+    end
+  end
+  object DBGrid1: TDBGrid [6]
+    Left = 0
+    Top = 462
+    Width = 968
+    Height = 127
+    Align = alBottom
+    DataSource = dsContratoObra
+    TabOrder = 6
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    OnDblClick = sbEditarObraClick
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'CONSECUTIVO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Consecutivo'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clMaroon
+        Title.Font.Height = -11
+        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Style = [fsBold]
+        Width = 78
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOMBRECATEGORIA'
+        Title.Alignment = taCenter
+        Title.Caption = 'Ubicación'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clMaroon
+        Title.Font.Height = -11
+        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Style = [fsBold]
+        Width = 122
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'FECHAINICIO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Fecha Inicio'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clMaroon
+        Title.Font.Height = -11
+        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Style = [fsBold]
+        Width = 78
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'FECHAFIN'
+        Title.Alignment = taCenter
+        Title.Caption = 'Fecha Fin'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clMaroon
+        Title.Font.Height = -11
+        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Style = [fsBold]
+        Width = 75
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'MATERIALPRESUPUESTADO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Material'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clMaroon
+        Title.Font.Height = -11
+        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Style = [fsBold]
+        Width = 90
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'TRANSPORTEPRESUPUESTADO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Transporte'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clMaroon
+        Title.Font.Height = -11
+        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Style = [fsBold]
+        Width = 90
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'EQUIPOPRESUPUESTADO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Equipo'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clMaroon
+        Title.Font.Height = -11
+        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Style = [fsBold]
+        Width = 90
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'MANOOBRAPRESUPUESTADO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Mano Obra'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clMaroon
+        Title.Font.Height = -11
+        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Style = [fsBold]
+        Width = 90
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'URBANO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Urbano'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clMaroon
+        Title.Font.Height = -11
+        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'INDICEDIFICULTAD'
+        Title.Alignment = taCenter
+        Title.Caption = 'Indice Dificultad'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clMaroon
+        Title.Font.Height = -11
+        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end>
+  end
+  inherited dsBase: TDDataSource
+    DataSet = qContrato
+  end
+  inherited qTotales: TQuery
+    object qTotalesREGISTROS: TFloatField
+      FieldName = 'REGISTROS'
+    end
+  end
+  object qContrato: TQuery
+    Active = True
+    AfterOpen = qContratoAfterOpen
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT DISTINCT C.CODIGOCONTRATO, C.CODIGOCONTRATISTA, C.MATERIA' +
+        'LPRESUPUESTADO, C.TRANSPORTEPRESUPUESTADO, C.EQUIPOPRESUPUESTADO' +
+        ', C.MANOOBRAPRESUPUESTADO,'
+      
+        ' C.CODIGOINTERVENTOR, C.FECHAASIGNACION,C.REPRESENTANTECONTRATIS' +
+        'TA,'
+      
+        ' (C.MATERIALPRESUPUESTADO+C.MANOOBRAPRESUPUESTADO+C.TRANSPORTEPR' +
+        'ESUPUESTADO+C.EQUIPOPRESUPUESTADO) AS COSTOTOTAL,'
+      
+        ' C.FECHAINICIO, C.FECHAENTREGA, C.FECHACERTIFICADO, G.INDICE,G.U' +
+        'RBANO AS UBI_URBANO,'
+      
+        ' (C.MATERIALPRESUPUESTADO+C.TRANSPORTEPRESUPUESTADO+C.EQUIPOPRES' +
+        'UPUESTADO+C.MANOOBRAPRESUPUESTADO) AS COSTOS,'
+      
+        ' EC.NOMBREESTADOCONTRATO, T.NOMBRETIPOCONTRATO, C.FECHALIQUIDACI' +
+        'ON, G.NOMBREGEOGRAFICO,'
+      
+        ' A1.NOMBRECATEGORIA NOMBREADMINISTRATIVO, C2.NOMBRECONTRATISTA,C' +
+        '.NUMEROCONTRATO,'
+      ' E1.NOMBREEMPLEADO NOMBREINTERVENTOR'
+      'FROM CONTRATO C, GEOGRAFICO G, CONTRATISTA C2,'
+      ' ESTADOCONTRATO EC, TIPOCONTRATO T,EMPLEADO E1,'
+      ' ADMINISTRATIVO A1'
+      'WHERE (G.CODIGOGEOGRAFICO(+) = C.CODIGOGEOGRAFICO)'
+      ' AND (A1.CODIGOADMINISTRATIVO=C.CODIGOADMINISTRATIVO)'
+      ' AND (C2.CODIGOCONTRATISTA = C.CODIGOCONTRATISTA)'
+      ' AND (EC.CODIGOESTADOCONTRATO=C.CODIGOESTADOCONTRATO)'
+      ' AND (T.CODIGOTIPOCONTRATO=C.CODIGOTIPOCONTRATO)'
+      ' AND (E1.CODIGOEMPLEADO=C.CODIGOINTERVENTOR)'
+      'ORDER BY C.CODIGOCONTRATO DESC')
+    Left = 200
+    Top = 136
+    object qContratoCODIGOCONTRATO: TFloatField
+      FieldName = 'CODIGOCONTRATO'
+      Origin = 'CONTRATO.CODIGOCONTRATO'
+    end
+    object qContratoCODIGOCONTRATISTA: TStringField
+      FieldName = 'CODIGOCONTRATISTA'
+      Origin = 'CONTRATO.CODIGOCONTRATISTA'
+      Size = 14
+    end
+    object qContratoFECHAASIGNACION: TDateTimeField
+      FieldName = 'FECHAASIGNACION'
+      Origin = 'CONTRATO.FECHAASIGNACION'
+    end
+    object qContratoCOSTOTOTAL: TFloatField
+      FieldName = 'COSTOTOTAL'
+      Origin = 'CONTRATO.MATERIAL'
+      currency = True
+    end
+    object qContratoFECHAINICIO: TDateTimeField
+      FieldName = 'FECHAINICIO'
+      Origin = 'CONTRATO.FECHAINICIO'
+    end
+    object qContratoFECHAENTREGA: TDateTimeField
+      FieldName = 'FECHAENTREGA'
+      Origin = 'CONTRATO.FECHAENTREGA'
+    end
+    object qContratoFECHACERTIFICADO: TDateTimeField
+      FieldName = 'FECHACERTIFICADO'
+      Origin = 'CONTRATO.FECHACERTIFICADO'
+    end
+    object qContratoINDICE: TFloatField
+      FieldName = 'INDICE'
+      Origin = 'GEOGRAFICO.INDICE'
+    end
+    object qContratoUBI_URBANO: TStringField
+      FieldName = 'UBI_URBANO'
+      Origin = 'GEOGRAFICO.URBANO'
+      Size = 1
+    end
+    object qContratoCOSTOS: TFloatField
+      FieldName = 'COSTOS'
+      Origin = 'CONTRATO.MATERIAL'
+      currency = True
+    end
+    object qContratoNOMBREESTADOCONTRATO: TStringField
+      FieldName = 'NOMBREESTADOCONTRATO'
+      Origin = 'ESTADOCONTRATO.NOMBREESTADOCONTRATO'
+      Size = 30
+    end
+    object qContratoNOMBRETIPOCONTRATO: TStringField
+      FieldName = 'NOMBRETIPOCONTRATO'
+      Origin = 'TIPOCONTRATO.NOMBRETIPOCONTRATO'
+      Size = 30
+    end
+    object qContratoFECHALIQUIDACION: TDateTimeField
+      FieldName = 'FECHALIQUIDACION'
+      Origin = 'CONTRATO.FECHALIQUIDACION'
+    end
+    object qContratoNOMBREGEOGRAFICO: TStringField
+      FieldName = 'NOMBREGEOGRAFICO'
+      Origin = 'GEOGRAFICO.NOMBREGEOGRAFICO'
+      Size = 250
+    end
+    object qContratoNOMBRECONTRATISTA: TStringField
+      FieldName = 'NOMBRECONTRATISTA'
+      Origin = 'CONTRATISTA.NOMBRECONTRATISTA'
+      Size = 50
+    end
+    object qContratoNOMBREINTERVENTOR: TStringField
+      FieldName = 'NOMBREINTERVENTOR'
+      Origin = 'EMPLEADO.NOMBREEMPLEADO'
+      Size = 50
+    end
+    object qContratoCODIGOINTERVENTOR: TFloatField
+      FieldName = 'CODIGOINTERVENTOR'
+      Origin = 'CONTRATO.CODIGOINTERVENTOR'
+    end
+    object qContratoNUMEROCONTRATO: TStringField
+      FieldName = 'NUMEROCONTRATO'
+      Size = 30
+    end
+    object qContratoMATERIALPRESUPUESTADO: TFloatField
+      FieldName = 'MATERIALPRESUPUESTADO'
+      currency = True
+    end
+    object qContratoTRANSPORTEPRESUPUESTADO: TFloatField
+      FieldName = 'TRANSPORTEPRESUPUESTADO'
+      currency = True
+    end
+    object qContratoEQUIPOPRESUPUESTADO: TFloatField
+      FieldName = 'EQUIPOPRESUPUESTADO'
+      currency = True
+    end
+    object qContratoMANOOBRAPRESUPUESTADO: TFloatField
+      FieldName = 'MANOOBRAPRESUPUESTADO'
+      currency = True
+    end
+    object qContratoNOMBREADMINISTRATIVO: TStringField
+      FieldName = 'NOMBREADMINISTRATIVO'
+      Size = 80
+    end
+    object qContratoREPRESENTANTECONTRATISTA: TStringField
+      FieldName = 'REPRESENTANTECONTRATISTA'
+      Size = 80
+    end
+  end
+  object PMOrdenar: TPopupMenu
+    Left = 631
+    Top = 120
+    object Codigo: TMenuItem
+      Caption = 'Código'
+      GroupIndex = 1
+      RadioItem = True
+      OnClick = CodigoClick
+    end
+    object FechaEmision: TMenuItem
+      Caption = 'Fecha Asignación'
+      GroupIndex = 1
+      RadioItem = True
+      OnClick = FechaEmisionClick
+    end
+    object Objeto: TMenuItem
+      Caption = 'Objeto'
+      GroupIndex = 1
+      RadioItem = True
+      Visible = False
+    end
+    object N3: TMenuItem
+      Caption = '-'
+      GroupIndex = 1
+      Visible = False
+    end
+    object ZonaCiudad: TMenuItem
+      Caption = 'Zona y Ciudad'
+      GroupIndex = 1
+      RadioItem = True
+      Visible = False
+    end
+    object Barrio: TMenuItem
+      Caption = 'Barrio'
+      GroupIndex = 1
+      RadioItem = True
+      Visible = False
+    end
+    object Direccion: TMenuItem
+      Caption = 'Direccion'
+      GroupIndex = 1
+      RadioItem = True
+      Visible = False
+      OnClick = DireccionClick
+    end
+    object N4: TMenuItem
+      Caption = '-'
+      GroupIndex = 1
+      Visible = False
+    end
+    object Prioridad: TMenuItem
+      Caption = 'Prioridad'
+      GroupIndex = 1
+      RadioItem = True
+      Visible = False
+    end
+    object Labor: TMenuItem
+      Caption = 'Labor'
+      GroupIndex = 1
+      RadioItem = True
+      Visible = False
+      OnClick = LaborClick
+    end
+    object Responsable: TMenuItem
+      Caption = 'Responsable'
+      GroupIndex = 1
+      RadioItem = True
+      Visible = False
+      OnClick = ResponsableClick
+    end
+    object Estado: TMenuItem
+      Caption = 'Estado'
+      GroupIndex = 1
+      RadioItem = True
+      OnClick = EstadoClick
+    end
+    object N1: TMenuItem
+      Caption = '-'
+      GroupIndex = 1
+      Visible = False
+    end
+    object DivisionSeccion: TMenuItem
+      Caption = 'División y Sección'
+      GroupIndex = 1
+      RadioItem = True
+      Visible = False
+      OnClick = DivisionSeccionClick
+    end
+    object Cuadrilla: TMenuItem
+      Caption = 'Cuadrilla'
+      GroupIndex = 1
+      RadioItem = True
+      Visible = False
+      OnClick = CuadrillaClick
+    end
+    object Aprueba: TMenuItem
+      Caption = 'Aprobó'
+      GroupIndex = 1
+      RadioItem = True
+      Visible = False
+      OnClick = ApruebaClick
+    end
+  end
+  object qMaxContrato: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select max (CodigoContrato)CodigoContrato'
+      'from Contrato'
+      ''
+      '')
+    Left = 252
+    Top = 345
+  end
+  object dsqMaxContrato: TDataSource
+    DataSet = qMaxContrato
+    Left = 256
+    Top = 387
+  end
+  object qObjeto: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    DataSource = dsBase
+    SQL.Strings = (
+      'select *'
+      'from Contrato'
+      'Where CodigoContrato =:CodigoContrato'
+      '')
+    Left = 220
+    Top = 273
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOCONTRATO'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsqObjeto: TDDataSource
+    AutoEdit = False
+    DataSet = qObjeto
+    Left = 300
+    Top = 276
+  end
+  object pmImprimir: TPopupMenu
+    Left = 712
+    Top = 120
+    object ImprimirContratos1: TMenuItem
+      Caption = 'Imprimir Contratos'
+      OnClick = ImprimirContratos1Click
+    end
+    object ImprimirPresupuestordeObra1: TMenuItem
+      Caption = 'Imprimir Presupuestos de Obra'
+      OnClick = ImprimirPresupuestordeObra1Click
+    end
+  end
+  object qContratoObra: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    DataSource = dsBase
+    SQL.Strings = (
+      
+        'SELECT p.*,g.nombrecategoria,SUBSTR(getmunicipio(g.codigogeograf' +
+        'ico),1,80) AS nombremunicipio,g.indicedificultad,g.urbano'
+      'FROM Contratoobra p,geografico g'
+      'WHERE codigoContrato=:codigoContrato'
+      'AND g.codigogeografico(+)=p.codigogeografico'
+      ''
+      ''
+      '')
+    Left = 232
+    Top = 456
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOCONTRATO'
+        ParamType = ptUnknown
+      end>
+    object qContratoObraCODIGOCONTRATOOBRA: TFloatField
+      FieldName = 'CODIGOCONTRATOOBRA'
+    end
+    object qContratoObraCODIGOCONTRATO: TFloatField
+      FieldName = 'CODIGOCONTRATO'
+    end
+    object qContratoObraCONSECUTIVO: TFloatField
+      FieldName = 'CONSECUTIVO'
+    end
+    object qContratoObraFECHAINICIO: TDateTimeField
+      FieldName = 'FECHAINICIO'
+    end
+    object qContratoObraFECHAFIN: TDateTimeField
+      FieldName = 'FECHAFIN'
+    end
+    object qContratoObraMATERIALPRESUPUESTADO: TFloatField
+      FieldName = 'MATERIALPRESUPUESTADO'
+      currency = True
+    end
+    object qContratoObraTRANSPORTEPRESUPUESTADO: TFloatField
+      FieldName = 'TRANSPORTEPRESUPUESTADO'
+      currency = True
+    end
+    object qContratoObraEQUIPOPRESUPUESTADO: TFloatField
+      FieldName = 'EQUIPOPRESUPUESTADO'
+      currency = True
+    end
+    object qContratoObraMANOOBRAPRESUPUESTADO: TFloatField
+      FieldName = 'MANOOBRAPRESUPUESTADO'
+      currency = True
+    end
+    object qContratoObraCODIGOMUNICIPIO: TFloatField
+      FieldName = 'CODIGOMUNICIPIO'
+    end
+    object qContratoObraCODIGOGEOGRAFICO: TFloatField
+      FieldName = 'CODIGOGEOGRAFICO'
+    end
+    object qContratoObraCODIGOMUNICIPIODIFICULTAD: TFloatField
+      FieldName = 'CODIGOMUNICIPIODIFICULTAD'
+    end
+    object qContratoObraMATERIALEJECUTADO: TFloatField
+      FieldName = 'MATERIALEJECUTADO'
+    end
+    object qContratoObraMANOOBRAEJECUTADO: TFloatField
+      FieldName = 'MANOOBRAEJECUTADO'
+    end
+    object qContratoObraEQUIPOEJECUTADO: TFloatField
+      FieldName = 'EQUIPOEJECUTADO'
+    end
+    object qContratoObraTRANSPORTEEJECUTADO: TFloatField
+      FieldName = 'TRANSPORTEEJECUTADO'
+    end
+    object qContratoObraVALORMATERIALSOLICITADO: TFloatField
+      FieldName = 'VALORMATERIALSOLICITADO'
+      currency = True
+    end
+    object qContratoObraVALORMATERIALENTREGADO: TFloatField
+      FieldName = 'VALORMATERIALENTREGADO'
+      currency = True
+    end
+    object qContratoObraVALORMATERIALCONSUMIDO: TFloatField
+      FieldName = 'VALORMATERIALCONSUMIDO'
+      currency = True
+    end
+    object qContratoObraVALORMATERIALREINTEGRADO: TFloatField
+      FieldName = 'VALORMATERIALREINTEGRADO'
+      currency = True
+    end
+    object qContratoObraNOMBRECATEGORIA: TStringField
+      FieldName = 'NOMBRECATEGORIA'
+      Size = 80
+    end
+    object qContratoObraINDICEDIFICULTAD: TFloatField
+      FieldName = 'INDICEDIFICULTAD'
+    end
+    object qContratoObraURBANO: TStringField
+      FieldName = 'URBANO'
+      Size = 1
+    end
+  end
+  object dsContratoObra: TDataSource
+    DataSet = qContratoObra
+    Left = 232
+    Top = 512
+  end
+end

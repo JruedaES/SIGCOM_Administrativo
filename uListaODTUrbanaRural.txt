@@ -1,0 +1,1852 @@
+inherited fListaODTUrbanaRural: TfListaODTUrbanaRural
+  Left = 156
+  Top = 107
+  Width = 1147
+  Height = 644
+  Caption = 'Listado de ODT'
+  WindowState = wsNormal
+  OnKeyUp = FormKeyUp
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Splitter1: TSplitter [0]
+    Left = 0
+    Top = 201
+    Width = 1131
+    Height = 3
+    Cursor = crVSplit
+    Align = alBottom
+    Color = clActiveBorder
+    ParentColor = False
+  end
+  inherited Panel1: TPanel
+    Width = 1131
+    object sbRefrescar: TSpeedButton [0]
+      Left = 601
+      Top = 3
+      Width = 23
+      Height = 23
+      Hint = 'Refrescar Lista'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        3333333333FFFFF3333333333999993333333333F77777FFF333333999999999
+        3333333777333777FF33339993707399933333773337F3777FF3399933000339
+        9933377333777F3377F3399333707333993337733337333337FF993333333333
+        399377F33333F333377F993333303333399377F33337FF333373993333707333
+        333377F333777F333333993333101333333377F333777F3FFFFF993333000399
+        999377FF33777F77777F3993330003399993373FF3777F37777F399933000333
+        99933773FF777F3F777F339993707399999333773F373F77777F333999999999
+        3393333777333777337333333999993333333333377777333333}
+      NumGlyphs = 2
+      OnClick = sbRefrescarClick
+    end
+    inherited Panel2: TPanel
+      Left = 887
+      inherited SBImprimir: TSpeedButton
+        OnClick = SBImprimirClick
+      end
+      inherited SBBuscar: TSpeedButton
+        OnClick = SBBuscarClick
+      end
+      inherited SBOrdenar: TSpeedButton
+        OnClick = SBOrdenarClick
+      end
+      inherited SBEstadistica: TSpeedButton
+        OnClick = SBEstadisticaClick
+      end
+    end
+    inherited dNavigator1: TdNavigator
+      Hints.Strings = ()
+    end
+  end
+  inherited Panel3: TPanel
+    Top = 587
+    Width = 1131
+  end
+  inherited PFiltro: TPanel
+    Width = 1131
+    inherited lFiltroDatos: TLabel
+      Width = 1129
+    end
+  end
+  object Panel5: TPanel [4]
+    Left = 0
+    Top = 204
+    Width = 1131
+    Height = 383
+    Align = alBottom
+    Caption = 'Panel5'
+    TabOrder = 3
+    object Panel6: TPanel
+      Left = 1
+      Top = 1
+      Width = 1129
+      Height = 29
+      Align = alTop
+      Caption = 'ODT'#39'S HIJAS'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      OnMouseDown = Panel6MouseDown
+      object Label7: TLabel
+        Left = 201
+        Top = 1
+        Width = 826
+        Height = 27
+        Align = alClient
+        Alignment = taCenter
+        Caption = 'ODT'#39'S HIJAS'
+      end
+      object Panel9: TPanel
+        Left = 1
+        Top = 1
+        Width = 200
+        Height = 27
+        Align = alLeft
+        BevelOuter = bvNone
+        TabOrder = 0
+        object SpeedButton1: TSpeedButton
+          Left = 126
+          Top = 4
+          Width = 23
+          Height = 21
+          Hint = 'Ingresar Dato en Lista'
+          Enabled = False
+          Flat = True
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            0400000000000001000000000000000000001000000010000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+            33333333FF33333333FF333993333333300033377F3333333777333993333333
+            300033F77FFF3333377739999993333333333777777F3333333F399999933333
+            33003777777333333377333993333333330033377F3333333377333993333333
+            3333333773333333333F333333333333330033333333F33333773333333C3333
+            330033333337FF3333773333333CC333333333FFFFF77FFF3FF33CCCCCCCCCC3
+            993337777777777F77F33CCCCCCCCCC3993337777777777377333333333CC333
+            333333333337733333FF3333333C333330003333333733333777333333333333
+            3000333333333333377733333333333333333333333333333333}
+          NumGlyphs = 2
+          OnClick = SpeedButton1Click
+        end
+        object sbEditarHija: TSpeedButton
+          Left = 150
+          Top = 4
+          Width = 23
+          Height = 21
+          Hint = 'Editar Dato en Lista'
+          Enabled = False
+          Flat = True
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            0400000000000001000000000000000000001000000010000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333000000
+            000033333377777777773333330FFFFFFFF03FF3FF7FF33F3FF700300000FF0F
+            00F077F777773F737737E00BFBFB0FFFFFF07773333F7F3333F7E0BFBF000FFF
+            F0F077F3337773F3F737E0FBFBFBF0F00FF077F3333FF7F77F37E0BFBF00000B
+            0FF077F3337777737337E0FBFBFBFBF0FFF077F33FFFFFF73337E0BF0000000F
+            FFF077FF777777733FF7000BFB00B0FF00F07773FF77373377373330000B0FFF
+            FFF03337777373333FF7333330B0FFFF00003333373733FF777733330B0FF00F
+            0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
+            00333377737FFFFF773333303300000003333337337777777333}
+          NumGlyphs = 2
+          OnClick = sbEditarHijaClick
+        end
+        object SpeedButton3: TSpeedButton
+          Left = 199
+          Top = 4
+          Width = 23
+          Height = 21
+          Hint = 'Elementos Asociados a La ODT'
+          Flat = True
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            0400000000000001000000000000000000001000000010000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555550FF0559
+            1950555FF75F7557F7F757000FF055591903557775F75557F77570FFFF055559
+            1933575FF57F5557F7FF0F00FF05555919337F775F7F5557F7F700550F055559
+            193577557F7F55F7577F07550F0555999995755575755F7FFF7F5570F0755011
+            11155557F755F777777555000755033305555577755F75F77F55555555503335
+            0555555FF5F75F757F5555005503335505555577FF75F7557F55505050333555
+            05555757F75F75557F5505000333555505557F777FF755557F55000000355557
+            07557777777F55557F5555000005555707555577777FF5557F55553000075557
+            0755557F7777FFF5755555335000005555555577577777555555}
+          NumGlyphs = 2
+          Visible = False
+          OnClick = SpeedButton3Click
+        end
+        object SpeedButton4: TSpeedButton
+          Left = 222
+          Top = 4
+          Width = 23
+          Height = 21
+          Hint = 'Ubicar Reportes Asociados en Cartografía'
+          Flat = True
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            0400000000000001000000000000000000001000000010000000000000000000
+            8000008000000080800080000000800080008080000080808000C0C0C0000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+            5555555555FFFFF555555555544C4C5555555555F777775FF5555554C444C444
+            5555555775FF55775F55554C4334444445555575577F55557FF554C4C334C4C4
+            335557F5577FF55577F554CCC3334444335557555777F555775FCCCCC333CCC4
+            C4457F55F777F555557F4CC33333CCC444C57F577777F5F5557FC4333333C3C4
+            CCC57F777777F7FF557F4CC33333333C4C457F577777777F557FCCC33CC4333C
+            C4C575F7755F777FF5755CCCCC3333334C5557F5FF777777F7F554C333333333
+            CC55575777777777F755553333CC3C33C555557777557577755555533CC4C4CC
+            5555555775FFFF77555555555C4CCC5555555555577777555555}
+          NumGlyphs = 2
+          Visible = False
+          OnClick = SpeedButton4Click
+        end
+        object SBBuscarOdtHija: TSpeedButton
+          Left = 175
+          Top = 2
+          Width = 23
+          Height = 23
+          Hint = 'Busca Dato en Lista'
+          Flat = True
+          Glyph.Data = {
+            EE000000424DEE000000000000007600000028000000100000000F0000000100
+            0400000000007800000000000000000000001000000010000000000000000000
+            8000008000000080800080000000800080008080000080808000C0C0C0000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+            888800000888880000080F000888880F00080F000888880F0008000000080000
+            000800F000000F00000800F000800F00000800F000800F000008800000000000
+            0088880F00080F000888880000080000088888800088800088888880F08880F0
+            888888800088800088888888888888888888}
+          OnClick = SBBuscarOdtHijaClick
+        end
+        object dNavigator3: TdNavigator
+          Left = 6
+          Top = 4
+          Width = 120
+          Height = 21
+          DataSource = dsListaHija
+          VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+          Flat = True
+          ConfirmDelete = False
+          TabOrder = 0
+        end
+      end
+      object Panel11: TPanel
+        Left = 1027
+        Top = 1
+        Width = 101
+        Height = 27
+        Align = alRight
+        BevelOuter = bvNone
+        TabOrder = 1
+        object SpeedButton2: TSpeedButton
+          Left = 72
+          Top = 2
+          Width = 23
+          Height = 23
+          Hint = 'Imprimir...'
+          Enabled = False
+          Flat = True
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            0400000000000001000000000000000000001000000010000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+            0003377777777777777308888888888888807F33333333333337088888888888
+            88807FFFFFFFFFFFFFF7000000000000000077777777777777770F8F8F8F8F8F
+            8F807F333333333333F708F8F8F8F8F8F9F07F333333333337370F8F8F8F8F8F
+            8F807FFFFFFFFFFFFFF7000000000000000077777777777777773330FFFFFFFF
+            03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+            03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+            33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
+            33333337FFFF7733333333300000033333333337777773333333}
+          NumGlyphs = 2
+          OnClick = SpeedButton2Click
+        end
+        object sbAsignarGT: TSpeedButton
+          Left = 45
+          Top = 3
+          Width = 23
+          Height = 23
+          Hint = 'Asociar Grupo de Trabajo  a ODTs Hijas seleccionadas...'
+          Enabled = False
+          Flat = True
+          Glyph.Data = {
+            36080000424D3608000000000000360000002800000020000000100000000100
+            2000000000000008000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000020000
+            000B000000150000001A0808081D32323233383838483B3B3B51383838483232
+            32330808081D0000001A000000150000000B0000000200000000000000020000
+            000B000000150000001A0808081D32323233383838483B3B3B51383838483232
+            32330808081D0000001A000000150000000B0000000200000000000000010000
+            00060000000B353535345B5B5B64656565376363631255555503636363126565
+            65375B5B5B64353535340000000B000000060000000100000000000000010000
+            00060000000B353535345B5B5B64656565376363631255555503636363126565
+            65375B5B5B64353535340000000B000000060000000100000000000000000000
+            00003B3B3B2B4040406F4E4E4E0D000000000000000000000000000000000000
+            00004E4E4E0D4040406F3B3B3B2B000000000000000000000000000000000000
+            00003B3B3B2B4040406F4E4E4E0D000000000000000000000000000000000000
+            00004E4E4E0D4040406F3B3B3B2B000000000000000000000000000000000000
+            00001F1F1F811B304B2500000000000000000000000000000000000000000000
+            0000000000001B304B251F1F1F81000000000000000000000000000000000000
+            00001F1F1F813535352500000000000000000000000000000000000000000000
+            000000000000353535251F1F1F810000000000000000000000000053A8990257
+            AACD060606AA0C6AB6D30F73BCD6167CBFD9117BC2DB117CC6DC117BC2DB1075
+            BFD90F71BBD60C69B6D3060606AA0258AACD0053A89900000000636363996666
+            66CD060606AA767676D37D7D7DD6848484D9848484DB868686DC848484DB8080
+            80D97C7C7CD6757575D3060606AA676767CD63636399000000000055AACC36CF
+            FFFF43DCFFFF52EBFFFF40D1EEFF55EEFFFF52EBFFFF4EE7FFFF4AE3FFFF45DE
+            FFFF30C1EEFF3CD5FFFF38D1FFFF35CEFFFF0055AACC00000000656565CCCCCC
+            CCFFD5D5D5FFE0E0E0FFC9C9C9FFE2E2E2FFE0E0E0FFDDDDDDFFDADADAFFD7D7
+            D7FFBEBEBEFFD0D0D0FFCDCDCDFFCBCBCBFF656565CC000000000058AD99005A
+            AFCC15ADEFFF0EA7EBFF058DD1FF33CCFFFF139DE1FF139DE1FF139DE1FF33CC
+            FFFF068ED2FF0EA7EBFF15ADEFFF005AAFCC0058AD9900000000676767996969
+            69CCB0B0B0FFAAAAAAFF929292FFCACACAFFA2A2A2FFA2A2A2FFA2A2A2FFCACA
+            CAFF939393FFAAAAAAFFB0B0B0FF696969CC6767679900000000000000000064
+            B7CB1CB2F0FF0EA7EBFF0697DBFF33CCFFFF1CAFF3FF1CAFF3FF1CAFF3FF33CC
+            FFFF0899DDFF0EA7EBFF1BB2EFFF0064B7CB0000000000000000000000007171
+            71CBB4B4B4FFAAAAAAFF9B9B9BFFCACACAFFB3B3B3FFB3B3B3FFB3B3B3FFCACA
+            CAFF9D9D9DFFAAAAAAFFB3B3B3FF717171CB000000000000000000000000006D
+            C4BF25BAE9F93FBEF1FF3AB9ECFF9FEBFFFF33CCFFFF33CCFFFF33CCFFFF3CD5
+            FFFF15AEEBFF18B1EEFF6C7962FE3E6173D40000000000000000000000007B7B
+            7BBFB7B7B7F9BFBFBFFFBABABAFFE8E8E8FFCACACAFFCACACAFFCACACAFFD0D0
+            D0FFAFAFAFFFB2B2B2FF707070FE626262D4000000000000000000000000007B
+            D0994CBFE9EDB1EAFBFFAEE8FAFF47C7EFFF1DB6ECFF1DB6ECFF20B9EDFF25BE
+            EFFF2AC3F1FF2FC7F4FF8B6D32FC915F27EBA95E0D5C00000000000000008686
+            8699BEBEBEEDE8E8E8FFE7E7E7FFC4C4C4FFB5B5B5FFB5B5B5FFB7B7B7FFBBBB
+            BBFFBFBFBFFFC3C3C3FF5E5E5EFC535353EB4D4D4D5C00000000000000000087
+            DB4038A9E7D9BAF0F9FEB9F2FDFF5CDBF8FF32CBF6FF32CBF6FF819271FF9D7F
+            45FF9D8045FFA08145FF936F36F7FFC538FFB56A16CCB66C185C000000009191
+            9140AFAFAFD9ECECECFEEFEFEFFFD5D5D5FFC7C7C7FFC7C7C7FF868686FF7070
+            70FF717171FF727272FF616161F7A1A1A1FF595959CC5A5A5A5C000000000000
+            00000397EC8845BFF2E175EAF9FC52E8FEFF41DAFEFF41DAFEFFAA8E4FFFFFE3
+            92FFFFD56AFFFFD15DFFFFD15DFFFFD15DFFFFD873FFC37923CC000000000000
+            0000A0A0A088C0C0C0E1E1E1E1FCDEDEDEFFD3D3D3FFD3D3D3FF7E7E7EFFCDCD
+            CDFFB9B9B9FFB3B3B3FFB3B3B3FFB3B3B3FFBDBDBDFF676767CC000000000000
+            000000A3EC0E00A1F58812AEF6D43DD8F8EC4EE5FAF95CE8FAFE9DAE7FFCB791
+            50FCAF8E4FF7B68A46E8CC8731CFFFE597FFD2872ECCCF852C5C000000000000
+            0000A6A6A60EA8A8A888B2B2B2D4D0D0D0ECDADADAF9DEDEDEFE9E9E9EFC8181
+            81FC7E7E7EF77A7A7AE8747474CFD0D0D0FF747474CC7272725C000000000000
+            0000000000000000000000A7FB4000A8FD9900A9FDBF00A9FCCA00A9FDBF00A8
+            FD9900A7FB4000000000DE9338CCDE9338CCDD92375C00000000000000000000
+            00000000000000000000ADADAD40AFAFAF99AFAFAFBFAFAFAFCAAFAFAFBFAFAF
+            AF99ADADAD40000000007F7F7FCC7F7F7FCC7E7E7E5C00000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            00000000000000000000E79C3D99E69B3C5C0000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            00000000000000000000878787998686865C0000000000000000}
+          NumGlyphs = 2
+          OnClick = sbAsignarGTClick
+        end
+        object sbFiltroHijas: TSpeedButton
+          Left = 1
+          Top = 2
+          Width = 23
+          Height = 23
+          Hint = 'Filtro de Datos en Lista'
+          Flat = True
+          Glyph.Data = {
+            EE000000424DEE000000000000007600000028000000100000000F0000000100
+            0400000000007800000000000000000000001000000010000000000000000000
+            8000008000000080800080000000800080008080000080808000C0C0C0000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+            8888888888888888888888888800008888888888880660888888888888088088
+            8888888888088088888888888808808888888888806886088888888806688860
+            8888888066888866088888066FF8888660888066FFFF88866608800000000000
+            000888888888888888888888888888888888}
+          OnClick = sbFiltroHijasClick
+        end
+      end
+      object cbReportesPendientes: TCheckBox
+        Left = 208
+        Top = 8
+        Width = 145
+        Height = 17
+        Caption = 'Reportes pendientes'
+        Enabled = False
+        TabOrder = 2
+        OnClick = cbReportesPendientesClick
+      end
+      object cbTodosReportes: TCheckBox
+        Left = 352
+        Top = 8
+        Width = 129
+        Height = 17
+        Hint = 'Todos los reportes'
+        Caption = 'Todos los reportes'
+        Enabled = False
+        TabOrder = 3
+        OnClick = cbTodosReportesClick
+      end
+    end
+    object dbgListaHijas: TRxDBGrid
+      Left = 1
+      Top = 30
+      Width = 860
+      Height = 274
+      Align = alClient
+      DataSource = dsListaHija
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = []
+      Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+      ParentFont = False
+      TabOrder = 1
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      OnDblClick = dbgListaHijasDblClick
+      MultiSelect = True
+      OnGetCellParams = dbgListaHijasGetCellParams
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'CONSECUTIVO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Consecutivo'
+          Visible = True
+        end
+        item
+          Color = clInfoBk
+          Expanded = False
+          FieldName = 'IMPRESOODT'
+          Title.Alignment = taCenter
+          Title.Caption = 'Impreso ODT'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NombreGrupoTrabajo'
+          Title.Alignment = taCenter
+          Title.Caption = 'Grupo Trabajo'
+          Width = 120
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAINICIOTRABAJO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Fecha Inicio Trabajo'
+          Width = 140
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAFINALTRABAJO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Fecha Final Trabajo'
+          Width = 140
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NombreEstadoOdt'
+          Title.Alignment = taCenter
+          Title.Caption = 'Estado ODT Hija'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRECATEGORIA'
+          Title.Caption = 'Ubicación'
+          Width = 256
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'COSTOMANOOBRA'
+          Title.Caption = 'Costo Mano Obra'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'COSTOMATERIAL'
+          Title.Caption = 'Costo Material'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'COSTOTRANSPORTE'
+          Title.Caption = 'Costo Transporte'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'COSTOEQUIPO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Costo Equipo'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'COSTOACTIVIDAD'
+          Title.Alignment = taCenter
+          Title.Caption = 'Costo Actividad'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'CostoTotalHija'
+          Title.Alignment = taCenter
+          Title.Caption = 'Costo Total'
+          Visible = False
+        end>
+    end
+    object Panel7: TPanel
+      Left = 1
+      Top = 304
+      Width = 1129
+      Height = 78
+      Align = alBottom
+      TabOrder = 2
+      object GroupBox2: TGroupBox
+        Left = 3
+        Top = 8
+        Width = 546
+        Height = 69
+        Caption = 'Dependencia Responsable'
+        TabOrder = 0
+        object Label5: TLabel
+          Left = 4
+          Top = 21
+          Width = 17
+          Height = 13
+          Caption = 'CIA'
+        end
+        object DBText1: TDBText
+          Left = 25
+          Top = 14
+          Width = 515
+          Height = 49
+          Color = clSilver
+          DataField = 'NOMBREADMINISTRATIVO'
+          DataSource = dsListaPadre
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = []
+          ParentColor = False
+          ParentFont = False
+          WordWrap = True
+        end
+      end
+      object gbMotivos: TGroupBox
+        Left = 3
+        Top = 76
+        Width = 546
+        Height = 54
+        Caption = 'Motivos'
+        TabOrder = 1
+        object DBText2: TDBText
+          Left = 7
+          Top = 13
+          Width = 533
+          Height = 35
+          Color = clSilver
+          DataField = 'Motivos'
+          DataSource = dsListaPadre
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = []
+          ParentColor = False
+          ParentFont = False
+          WordWrap = True
+        end
+      end
+      object GroupBox1: TGroupBox
+        Left = 1094
+        Top = 43
+        Width = 197
+        Height = 121
+        Caption = 'Costos Acumulados'
+        TabOrder = 2
+        Visible = False
+        object Label1: TLabel
+          Left = 5
+          Top = 18
+          Width = 37
+          Height = 13
+          Caption = 'Material'
+          FocusControl = DBEdit1
+        end
+        object Label2: TLabel
+          Left = 5
+          Top = 42
+          Width = 68
+          Height = 13
+          Caption = 'Mano de Obra'
+          FocusControl = DBEdit2
+        end
+        object Label3: TLabel
+          Left = 5
+          Top = 67
+          Width = 51
+          Height = 13
+          Caption = 'Transporte'
+          FocusControl = DBEdit3
+        end
+        object Label4: TLabel
+          Left = 5
+          Top = 91
+          Width = 33
+          Height = 13
+          Caption = 'Equipo'
+          FocusControl = DBEdit4
+        end
+        object DBEdit1: TDBEdit
+          Left = 77
+          Top = 14
+          Width = 110
+          Height = 21
+          Color = clSilver
+          DataField = 'COSTOMATERIAL'
+          DataSource = dsListaPadre
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          ReadOnly = True
+          TabOrder = 0
+        end
+        object DBEdit2: TDBEdit
+          Left = 77
+          Top = 39
+          Width = 110
+          Height = 21
+          Color = clSilver
+          DataField = 'COSTOMANOOBRA'
+          DataSource = dsListaPadre
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          ReadOnly = True
+          TabOrder = 1
+        end
+        object DBEdit3: TDBEdit
+          Left = 77
+          Top = 64
+          Width = 110
+          Height = 21
+          Color = clSilver
+          DataField = 'COSTOTRANSPORTE'
+          DataSource = dsListaPadre
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          ReadOnly = True
+          TabOrder = 2
+        end
+        object DBEdit4: TDBEdit
+          Left = 77
+          Top = 89
+          Width = 110
+          Height = 21
+          Color = clSilver
+          DataField = 'COSTOEQUIPO'
+          DataSource = dsListaPadre
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          ReadOnly = True
+          TabOrder = 3
+        end
+      end
+      object GroupBox10: TGroupBox
+        Left = 3
+        Top = 129
+        Width = 546
+        Height = 70
+        Caption = 'Descripción DIRECCIÓN :'
+        TabOrder = 3
+        object DBText4: TDBText
+          Left = 5
+          Top = 13
+          Width = 533
+          Height = 50
+          Color = 16776176
+          DataField = 'DireccionCalculada'
+          DataSource = dsListaHija
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentColor = False
+          ParentFont = False
+          WordWrap = True
+        end
+      end
+      object GroupBox3: TGroupBox
+        Left = 568
+        Top = 8
+        Width = 454
+        Height = 101
+        Caption = 'Daños encontrados y trabajos realizados'
+        TabOrder = 4
+        Visible = False
+        object DBMemo1: TDBMemo
+          Left = 2
+          Top = 15
+          Width = 450
+          Height = 84
+          Align = alClient
+          DataField = 'OBSERVACION1'
+          DataSource = dsListaHija
+          ReadOnly = True
+          ScrollBars = ssVertical
+          TabOrder = 0
+        end
+      end
+      object GroupBox4: TGroupBox
+        Left = 568
+        Top = 114
+        Width = 454
+        Height = 87
+        Caption = 'Observaciones y recomendaciones'
+        TabOrder = 5
+        Visible = False
+        object DBMemo2: TDBMemo
+          Left = 2
+          Top = 15
+          Width = 450
+          Height = 70
+          Align = alClient
+          DataField = 'OBSERVACION2'
+          DataSource = dsListaHija
+          ReadOnly = True
+          ScrollBars = ssVertical
+          TabOrder = 0
+        end
+      end
+    end
+    object RxDBGrid1: TRxDBGrid
+      Left = 864
+      Top = 30
+      Width = 266
+      Height = 274
+      Align = alRight
+      DataSource = dsReporte
+      TabOrder = 3
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      OnGetCellParams = RxDBGrid1GetCellParams
+      Columns = <
+        item
+          Color = clInfoBk
+          Expanded = False
+          FieldName = 'CONSECUTIVO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Consecutivo'
+          Visible = True
+        end
+        item
+          Alignment = taCenter
+          Color = clAqua
+          Expanded = False
+          FieldName = 'CODIGOREPORTE'
+          Title.Alignment = taCenter
+          Title.Caption = 'Reportes'
+          Width = 70
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREESTADOREPORTE'
+          Title.Alignment = taCenter
+          Title.Caption = 'Estado'
+          Width = 85
+          Visible = True
+        end>
+    end
+    object RxSplitter1: TRxSplitter
+      Left = 861
+      Top = 30
+      Width = 3
+      Height = 274
+      ControlFirst = RxDBGrid1
+      Align = alRight
+    end
+  end
+  object Panel4: TPanel [5]
+    Left = 0
+    Top = 78
+    Width = 1131
+    Height = 123
+    Align = alClient
+    Caption = 'Panel4'
+    TabOrder = 4
+    object Panel8: TPanel
+      Left = 1
+      Top = 1
+      Width = 1129
+      Height = 26
+      Align = alTop
+      Caption = 'ODT'#39'S PADRES'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      object Label6: TLabel
+        Left = 177
+        Top = 1
+        Width = 951
+        Height = 24
+        Align = alClient
+        Alignment = taCenter
+        Caption = 'ODT'#39'S PADRES'
+      end
+      object Panel10: TPanel
+        Left = 1
+        Top = 1
+        Width = 176
+        Height = 24
+        Align = alLeft
+        BevelOuter = bvNone
+        TabOrder = 0
+        object sbInsertar: TSpeedButton
+          Left = 124
+          Top = 2
+          Width = 23
+          Height = 21
+          Hint = 'Ingresar Dato en Lista'
+          Flat = True
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            0400000000000001000000000000000000001000000010000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+            33333333FF33333333FF333993333333300033377F3333333777333993333333
+            300033F77FFF3333377739999993333333333777777F3333333F399999933333
+            33003777777333333377333993333333330033377F3333333377333993333333
+            3333333773333333333F333333333333330033333333F33333773333333C3333
+            330033333337FF3333773333333CC333333333FFFFF77FFF3FF33CCCCCCCCCC3
+            993337777777777F77F33CCCCCCCCCC3993337777777777377333333333CC333
+            333333333337733333FF3333333C333330003333333733333777333333333333
+            3000333333333333377733333333333333333333333333333333}
+          NumGlyphs = 2
+          OnClick = sbInsertarClick
+        end
+        object sbEditarPadre: TSpeedButton
+          Left = 149
+          Top = 2
+          Width = 23
+          Height = 21
+          Hint = 'Editar Dato en Lista'
+          Flat = True
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            0400000000000001000000000000000000001000000010000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333000000
+            000033333377777777773333330FFFFFFFF03FF3FF7FF33F3FF700300000FF0F
+            00F077F777773F737737E00BFBFB0FFFFFF07773333F7F3333F7E0BFBF000FFF
+            F0F077F3337773F3F737E0FBFBFBF0F00FF077F3333FF7F77F37E0BFBF00000B
+            0FF077F3337777737337E0FBFBFBFBF0FFF077F33FFFFFF73337E0BF0000000F
+            FFF077FF777777733FF7000BFB00B0FF00F07773FF77373377373330000B0FFF
+            FFF03337777373333FF7333330B0FFFF00003333373733FF777733330B0FF00F
+            0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
+            00333377737FFFFF773333303300000003333337337777777333}
+          NumGlyphs = 2
+          OnClick = sbEditarPadreClick
+        end
+        object dNavigator2: TdNavigator
+          Left = 1
+          Top = 1
+          Width = 120
+          Height = 22
+          DataSource = dsListaPadre
+          VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+          Flat = True
+          ConfirmDelete = False
+          TabOrder = 0
+        end
+      end
+    end
+    object dbgListaOdtPadre: TRxDBGrid
+      Left = 1
+      Top = 27
+      Width = 1129
+      Height = 95
+      Align = alClient
+      DataSource = dsListaPadre
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      OnDblClick = dbgListaOdtPadreDblClick
+      OnTitleClick = dbgListaOdtPadreTitleClick
+      OnGetCellParams = dbgListaOdtPadreGetCellParams
+      OnMouseMove = dbgListaOdtPadreMouseMove
+      Columns = <
+        item
+          Color = clAqua
+          Expanded = False
+          FieldName = 'CODIGOODT'
+          Title.Alignment = taCenter
+          Title.Caption = 'Código'
+          Width = 94
+          Visible = True
+        end
+        item
+          Color = clInfoBk
+          Expanded = False
+          FieldName = 'ImpresoODT'
+          Title.Alignment = taCenter
+          Title.Caption = 'Impreso ODT'
+          Width = 79
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGOADMINISTRATIVO'
+          Title.Alignment = taCenter
+          Title.Caption = 'CIA'
+          Width = 65
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAEMISION'
+          Title.Alignment = taCenter
+          Title.Caption = 'Fecha Emisión'
+          Width = 122
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAAPROBACION'
+          Title.Alignment = taCenter
+          Title.Caption = 'Fecha de Aprobación'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAASIGNACION'
+          Title.Alignment = taCenter
+          Title.Caption = 'Fecha de Asignación'
+          Width = 113
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREESTADOODT'
+          Title.Alignment = taCenter
+          Title.Caption = 'Estado ODT'
+          Width = 105
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREPRIORIDAD'
+          Title.Alignment = taCenter
+          Title.Caption = 'Prioridad'
+          Width = 149
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRELABOR'
+          Title.Alignment = taCenter
+          Title.Caption = 'Labor'
+          Width = 123
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRETIPOTAREA'
+          Title.Alignment = taCenter
+          Title.Caption = 'Tipo Tarea'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREODTTIPOMANOOBRA'
+          Title.Alignment = taCenter
+          Title.Caption = 'Tipo Mano Obra'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGOAPROBADO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Aprobado'
+          Width = 100
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGOEJECUTOR'
+          Title.Alignment = taCenter
+          Title.Caption = 'Ejecutado'
+          Width = 100
+          Visible = True
+        end
+        item
+          Color = 33023
+          Expanded = False
+          FieldName = 'CODIGOREVISADO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Revisado'
+          Width = 100
+          Visible = True
+        end>
+    end
+  end
+  inherited dSegControl1: TdSegControl
+    Left = 192
+    Top = 212
+  end
+  inherited dsBase: TDDataSource
+    DataSet = qListaODTPadre
+    Left = 784
+    Top = 184
+  end
+  inherited dTblBase: TDTable
+    Left = 784
+    Top = 136
+  end
+  inherited qTotales: TQuery
+    SQL.Strings = (
+      'SELECT COUNT(DISTINCT O.CODIGOODT) AS TOTAL'
+      ''
+      ''
+      ''
+      ''
+      
+        'FROM ODT O, ESTADOODT EO, PRIORIDAD P, LABOR L, TIPOTAREA TT, OD' +
+        'TTIPOMANOOBRA MO, ADMINISTRATIVO A, ODTDIA OD,MUNICIPIO M'
+      'WHERE (EO.CODIGOESTADOODT = O.CODIGOESTADOODT) AND'
+      '      (O.CODIGOPRIORIDAD = P.CODIGOPRIORIDAD) AND'
+      '      (L.CODIGOLABOR (+)= O.CODIGOLABOR) AND '
+      '      (M.CODIGOMUNICIPIO(+)=O.CODIGOMUNICIPIO) AND'
+      '      (TT.CODIGOTIPOTAREA(+) = O.CODIGOTIPOTAREA) AND'
+      
+        '      (MO.CODIGOODTTIPOMANOOBRA (+)= O.CODIGOODTTIPOMANOOBRA) AN' +
+        'D'
+      
+        '      (A.CODIGOADMINISTRATIVO = O.CODIGOADMINISTRATIVO) AND (OD.' +
+        'CODIGOODT (+) = O.CODIGOODT) AND (HE.CODIGOODT (+) = OD.CODIGOOD' +
+        'T)')
+    Left = 125
+    Top = 136
+  end
+  inherited CVS1: TCVS
+    Left = 102
+    Top = 203
+  end
+  inherited SaveDialog1: TSaveDialog
+    Left = 504
+    Top = 136
+  end
+  object qListaODTPadre: TQuery
+    AfterScroll = qListaODTPadreAfterScroll
+    OnCalcFields = qListaODTPadreCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT DISTINCT O.CODIGOODT, O.FECHAEMISION, O.CODIGOADMINISTRAT' +
+        'IVO, O.CODIGOPRIORIDAD,'
+      
+        'O.CODIGOLABOR, O.CODIGOTIPOTAREA, O.CODIGOAPROBADO, O.CODIGOODTT' +
+        'IPOMANOOBRA, O.CODIGOEJECUTOR, O.CODIGOFIRMANTE,'
+      
+        'O.FECHAAPROBACION, O.FECHAASIGNACION, O.COSTOMATERIAL, O.COSTOMA' +
+        'NOOBRA, O.COSTOTRANSPORTE, O.COSTOEQUIPO,'
+      
+        'O.CODIGOESTADOODT, P.NOMBREPRIORIDAD, L.NOMBRELABOR, TT.NOMBRETI' +
+        'POTAREA, MO.NOMBREODTTIPOMANOOBRA, O.CODIGOREVISADO,'
+      'A.NOMBREADMINISTRATIVO,M.NOMBREMUNICIPIO, O.CODIGOMODOODT'
+      
+        'FROM ODT O, ESTADOODT EO, PRIORIDAD P, LABOR L, TIPOTAREA TT, OD' +
+        'TTIPOMANOOBRA MO, ADMINISTRATIVO A, ODTDIA OD,MUNICIPIO M, ODTSO' +
+        'BRETIEMPO HE'
+      'WHERE (EO.CODIGOESTADOODT = O.CODIGOESTADOODT) AND'
+      '      (O.CODIGOPRIORIDAD = P.CODIGOPRIORIDAD) AND'
+      '      (L.CODIGOLABOR (+)= O.CODIGOLABOR) AND '
+      '      (M.CODIGOMUNICIPIO(+)=O.CODIGOMUNICIPIO) AND'
+      '      (TT.CODIGOTIPOTAREA(+) = O.CODIGOTIPOTAREA) AND'
+      
+        '      (MO.CODIGOODTTIPOMANOOBRA (+)= O.CODIGOODTTIPOMANOOBRA) AN' +
+        'D (HE.CODIGOODT (+) = OD.CODIGOODT) AND'
+      
+        '      (A.CODIGOADMINISTRATIVO = O.CODIGOADMINISTRATIVO) AND (OD.' +
+        'CODIGOODT (+) = O.CODIGOODT)'
+      'ORDER BY O.FECHAEMISION  DESC')
+    Left = 56
+    Top = 136
+    object qListaODTPadreCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'ODT.CODIGOODT'
+    end
+    object qListaODTPadreFECHAEMISION: TDateTimeField
+      FieldName = 'FECHAEMISION'
+      Origin = 'ODT.FECHAEMISION'
+      DisplayFormat = 'mmmm dd '#39'de'#39' yyyy'
+    end
+    object qListaODTPadreCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'ODT.CODIGOADMINISTRATIVO'
+    end
+    object qListaODTPadreCODIGOPRIORIDAD: TStringField
+      FieldName = 'CODIGOPRIORIDAD'
+      Origin = 'ODT.CODIGOPRIORIDAD'
+      Size = 1
+    end
+    object qListaODTPadreCODIGOTIPOTAREA: TFloatField
+      FieldName = 'CODIGOTIPOTAREA'
+      Origin = 'ODT.CODIGOTIPOTAREA'
+    end
+    object qListaODTPadreCODIGOAPROBADO: TFloatField
+      FieldName = 'CODIGOAPROBADO'
+      Origin = 'ODT.CODIGOAPROBADO'
+    end
+    object qListaODTPadreCODIGOODTTIPOMANOOBRA: TFloatField
+      FieldName = 'CODIGOODTTIPOMANOOBRA'
+      Origin = 'ODT.CODIGOODTTIPOMANOOBRA'
+    end
+    object qListaODTPadreCODIGOEJECUTOR: TFloatField
+      FieldName = 'CODIGOEJECUTOR'
+      Origin = 'ODT.CODIGOEJECUTOR'
+    end
+    object qListaODTPadreCODIGOFIRMANTE: TFloatField
+      FieldName = 'CODIGOFIRMANTE'
+      Origin = 'ODT.CODIGOFIRMANTE'
+    end
+    object qListaODTPadreFECHAAPROBACION: TDateTimeField
+      FieldName = 'FECHAAPROBACION'
+      Origin = 'ODT.FECHAAPROBACION'
+      DisplayFormat = 'dd/mm/yyyy'
+    end
+    object qListaODTPadreFECHAASIGNACION: TDateTimeField
+      FieldName = 'FECHAASIGNACION'
+      Origin = 'ODT.FECHAASIGNACION'
+    end
+    object qListaODTPadreCOSTOMATERIAL: TFloatField
+      FieldName = 'COSTOMATERIAL'
+      Origin = 'ODT.COSTOMATERIAL'
+      currency = True
+    end
+    object qListaODTPadreCOSTOMANOOBRA: TFloatField
+      FieldName = 'COSTOMANOOBRA'
+      Origin = 'ODT.COSTOMANOOBRA'
+      currency = True
+    end
+    object qListaODTPadreCOSTOTRANSPORTE: TFloatField
+      FieldName = 'COSTOTRANSPORTE'
+      Origin = 'ODT.COSTOTRANSPORTE'
+      currency = True
+    end
+    object qListaODTPadreCOSTOEQUIPO: TFloatField
+      FieldName = 'COSTOEQUIPO'
+      Origin = 'ODT.COSTOEQUIPO'
+    end
+    object qListaODTPadreCODIGOESTADOODT: TStringField
+      FieldName = 'CODIGOESTADOODT'
+      Origin = 'ODT.CODIGOESTADOODT'
+      Size = 1
+    end
+    object qListaODTPadreNOMBREESTADOODT: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'NOMBREESTADOODT'
+      Size = 30
+      Calculated = True
+    end
+    object qListaODTPadreNOMBREPRIORIDAD: TStringField
+      FieldName = 'NOMBREPRIORIDAD'
+      Origin = 'PRIORIDAD.NOMBREPRIORIDAD'
+      Size = 30
+    end
+    object qListaODTPadreNOMBRETIPOTAREA: TStringField
+      FieldName = 'NOMBRETIPOTAREA'
+      Origin = 'TIPOTAREA.NOMBRETIPOTAREA'
+      Size = 30
+    end
+    object qListaODTPadreNOMBREODTTIPOMANOOBRA: TStringField
+      FieldName = 'NOMBREODTTIPOMANOOBRA'
+      Origin = 'ODTTIPOMANOOBRA.NOMBREODTTIPOMANOOBRA'
+      Size = 30
+    end
+    object qListaODTPadreCODIGOREVISADO: TFloatField
+      FieldName = 'CODIGOREVISADO'
+      Origin = 'ODT.CODIGOREVISADO'
+    end
+    object qListaODTPadreNOMBREADMINISTRATIVO: TStringField
+      FieldName = 'NOMBREADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.NOMBREADMINISTRATIVO'
+      Size = 250
+    end
+    object qListaODTPadreNombreAprobado: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'NombreAprobado'
+      Size = 50
+      Calculated = True
+    end
+    object qListaODTPadreNOMBRELABOR: TStringField
+      FieldName = 'NOMBRELABOR'
+      Size = 80
+    end
+    object qListaODTPadreCODIGOLABOR: TStringField
+      FieldName = 'CODIGOLABOR'
+      Size = 3
+    end
+    object qListaODTPadreNOMBREMUNICIPIO: TStringField
+      FieldName = 'NOMBREMUNICIPIO'
+      Size = 200
+    end
+    object qListaODTPadreMotivos: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Motivos'
+      Size = 200
+      Calculated = True
+    end
+    object qListaODTPadreImpresoODT: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'ImpresoODT'
+      Size = 12
+      Calculated = True
+    end
+    object qListaODTPadreCODIGOMODOODT: TFloatField
+      FieldName = 'CODIGOMODOODT'
+    end
+  end
+  object dsListaPadre: TDataSource
+    DataSet = qListaODTPadre
+    Left = 56
+    Top = 184
+  end
+  object qListaODTHija: TQuery
+    AfterScroll = qListaODTHijaAfterScroll
+    OnCalcFields = qListaODTHijaCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsListaPadre
+    SQL.Strings = (
+      
+        'SELECT D.CODIGOODT, D.CONSECUTIVO, D.IMPRESOODT, D.CODIGOGRUPOTR' +
+        'ABAJO, D.CODIGOGEOGRAFICO, D.CODIGOSUBESTACION,'
+      
+        'D.CODIGOCIRCUITO, D.CODIGOTIPOELEMENTO, D.CODIGOEQUIPO, D.COSTOM' +
+        'ATERIAL, D.COSTOMANOOBRA, D.COSTOTRANSPORTE,'
+      
+        'D.COSTOEQUIPO, D.OBSERVACION1, D.OBSERVACION2, D.OBSERVACION3, D' +
+        '.FECHAINICIOTRABAJO, D.FECHAFINALTRABAJO,'
+      
+        'O.CODIGOADMINISTRATIVO,D.COSTOACTIVIDAD,D.CODIGOESTADOODTDIA, D.' +
+        'REVISIONCOORDINADOR, G.NOMBRECATEGORIA, D.DESCRIPCIONTIPOPREDIO'
+      'FROM ODTDIA D, ODT O, GEOGRAFICO G'
+      
+        'WHERE   (D.CODIGOODT =:CODIGOODT) AND (O.CODIGOODT = D.CODIGOODT' +
+        ') AND D.CODIGOGEOGRAFICO = G.CODIGOGEOGRAFICO(+)'
+      'ORDER BY 2 DESC')
+    Left = 288
+    Top = 216
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end>
+    object qListaODTHijaCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'ODTDIA.CODIGOODT'
+    end
+    object qListaODTHijaCONSECUTIVO: TFloatField
+      FieldName = 'CONSECUTIVO'
+      Origin = 'ODTDIA.CONSECUTIVO'
+    end
+    object qListaODTHijaIMPRESOODT: TStringField
+      FieldName = 'IMPRESOODT'
+      Origin = 'ODTDIA.IMPRESOODT'
+      Size = 9
+    end
+    object qListaODTHijaCODIGOGRUPOTRABAJO: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJO'
+      Origin = 'ODTDIA.CODIGOGRUPOTRABAJO'
+    end
+    object qListaODTHijaCODIGOGEOGRAFICO: TFloatField
+      FieldName = 'CODIGOGEOGRAFICO'
+      Origin = 'ODTDIA.CODIGOGEOGRAFICO'
+    end
+    object qListaODTHijaCODIGOSUBESTACION: TStringField
+      FieldName = 'CODIGOSUBESTACION'
+      Origin = 'ODTDIA.CODIGOSUBESTACION'
+      Size = 3
+    end
+    object qListaODTHijaCODIGOCIRCUITO: TStringField
+      FieldName = 'CODIGOCIRCUITO'
+      Origin = 'ODTDIA.CODIGOCIRCUITO'
+      Size = 6
+    end
+    object qListaODTHijaCODIGOTIPOELEMENTO: TStringField
+      FieldName = 'CODIGOTIPOELEMENTO'
+      Origin = 'ODTDIA.CODIGOTIPOELEMENTO'
+      Size = 2
+    end
+    object qListaODTHijaCODIGOEQUIPO: TStringField
+      FieldName = 'CODIGOEQUIPO'
+      Origin = 'ODTDIA.CODIGOEQUIPO'
+      Size = 6
+    end
+    object qListaODTHijaCOSTOMATERIAL: TFloatField
+      FieldName = 'COSTOMATERIAL'
+      Origin = 'ODTDIA.COSTOMATERIAL'
+      currency = True
+    end
+    object qListaODTHijaCOSTOMANOOBRA: TFloatField
+      FieldName = 'COSTOMANOOBRA'
+      Origin = 'ODTDIA.COSTOMANOOBRA'
+      currency = True
+    end
+    object qListaODTHijaCOSTOTRANSPORTE: TFloatField
+      FieldName = 'COSTOTRANSPORTE'
+      Origin = 'ODTDIA.COSTOTRANSPORTE'
+      currency = True
+    end
+    object qListaODTHijaCOSTOEQUIPO: TFloatField
+      FieldName = 'COSTOEQUIPO'
+      Origin = 'ODTDIA.COSTOEQUIPO'
+      currency = True
+    end
+    object qListaODTHijaOBSERVACION1: TMemoField
+      FieldName = 'OBSERVACION1'
+      Origin = 'ODTDIA.OBSERVACION1'
+      BlobType = ftMemo
+      Size = 500
+    end
+    object qListaODTHijaOBSERVACION3: TStringField
+      FieldName = 'OBSERVACION3'
+      Origin = 'ODTDIA.OBSERVACION3'
+      Size = 250
+    end
+    object qListaODTHijaOBSERVACION2: TMemoField
+      FieldName = 'OBSERVACION2'
+      Origin = 'ODTDIA.OBSERVACION2'
+      BlobType = ftMemo
+      Size = 500
+    end
+    object qListaODTHijaFECHAINICIOTRABAJO: TDateTimeField
+      FieldName = 'FECHAINICIOTRABAJO'
+      Origin = 'ODTDIA.FECHAINICIOTRABAJO'
+    end
+    object qListaODTHijaFECHAFINALTRABAJO: TDateTimeField
+      FieldName = 'FECHAFINALTRABAJO'
+      Origin = 'ODTDIA.FECHAFINALTRABAJO'
+    end
+    object qListaODTHijaCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'ODT.CODIGOADMINISTRATIVO'
+    end
+    object qListaODTHijaCostoTotalHija: TCurrencyField
+      FieldKind = fkCalculated
+      FieldName = 'CostoTotalHija'
+      Calculated = True
+    end
+    object qListaODTHijaNombreGrupoTrabajo: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NombreGrupoTrabajo'
+      LookupDataSet = qGrupoTrabajo
+      LookupKeyFields = 'CODIGOGRUPOTRABAJO'
+      LookupResultField = 'NOMBREGRUPOTRABAJO'
+      KeyFields = 'CODIGOGRUPOTRABAJO'
+      Size = 30
+      Lookup = True
+    end
+    object qListaODTHijaCOSTOACTIVIDAD: TFloatField
+      FieldName = 'COSTOACTIVIDAD'
+      Origin = 'ODTDIA.COSTOACTIVIDAD'
+      currency = True
+    end
+    object qListaODTHijaCODIGOESTADOODTDIA: TStringField
+      FieldName = 'CODIGOESTADOODTDIA'
+      Origin = 'ODTDIA.CODIGOESTADOODTDIA'
+      Size = 1
+    end
+    object qListaODTHijaNombreEstadoOdt: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'NombreEstadoOdt'
+      Calculated = True
+    end
+    object qListaODTHijaREVISIONCOORDINADOR: TStringField
+      FieldName = 'REVISIONCOORDINADOR'
+      Origin = 'ODTDIA.REVISIONCOORDINADOR'
+      Size = 1
+    end
+    object qListaODTHijaNOMBRECATEGORIA: TStringField
+      FieldName = 'NOMBRECATEGORIA'
+      Size = 80
+    end
+    object qListaODTHijaDESCRIPCIONTIPOPREDIO: TMemoField
+      FieldName = 'DESCRIPCIONTIPOPREDIO'
+      BlobType = ftMemo
+      Size = 500
+    end
+    object qListaODTHijaDireccionCalculada: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'DireccionCalculada'
+      Size = 500
+      Calculated = True
+    end
+  end
+  object dsListaHija: TDataSource
+    DataSet = qListaODTHija
+    Left = 312
+    Top = 288
+  end
+  object qBusquedaReportes: TQuery
+    AfterScroll = qBusquedaReportesAfterScroll
+    DatabaseName = 'BaseDato'
+    DataSource = dsListaHija
+    SQL.Strings = (
+      'SELECT CODIGOREPORTE FROM'
+      'ODTREPORTE'
+      'WHERE CODIGOODT=:CODIGOODT'
+      'AND CONSECUTIVO=:CONSECUTIVO')
+    Left = 456
+    Top = 318
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CONSECUTIVO'
+        ParamType = ptUnknown
+      end>
+  end
+  object qGrupoTrabajo: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsListaPadre
+    SQL.Strings = (
+      'SELECT CODIGOGRUPOTRABAJO,CODIGOADMINISTRATIVO,'
+      'NOMBREGRUPOTRABAJO'
+      'FROM GRUPOTRABAJO'
+      'WHERE CODIGOADMINISTRATIVO=:CODIGOADMINISTRATIVO')
+    Left = 368
+    Top = 310
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end>
+  end
+  object qReporte: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsListaHija
+    SQL.Strings = (
+      
+        'SELECT O.CONSECUTIVO, O.CODIGOREPORTE, ER.COLOR, ER.NOMBREESTADO' +
+        'REPORTE'
+      'FROM ODTREPORTE O, REPORTE R, ESTADOREPORTE ER'
+      'WHERE 1=1'
+      'AND O.CODIGOODT=:CODIGOODT'
+      'AND O.CONSECUTIVO =:CONSECUTIVO'
+      'AND R.CODIGOREPORTE = O.CODIGOREPORTE'
+      'AND R.CODIGOESTADOREPORTE = ER.CODIGOESTADOREPORTE')
+    Left = 800
+    Top = 262
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CONSECUTIVO'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsReporte: TDataSource
+    DataSet = qReporte
+    Left = 808
+    Top = 326
+  end
+  object pmImprimir: TPopupMenu
+    Left = 248
+    Top = 136
+    object ListadodeOdts1: TMenuItem
+      Caption = 'Listado de Odts'
+      OnClick = ListadodeOdts1Click
+    end
+    object MaterialesConsumidos: TMenuItem
+      Caption = 'Listado de Materiales Consumidos'
+      OnClick = MaterialesConsumidosClick
+    end
+    object ListadodeHorasExtras1: TMenuItem
+      Caption = 'Listado de Horas Extras Causadas'
+      OnClick = ListadodeHorasExtras1Click
+    end
+    object ListadodeViticosCausados1: TMenuItem
+      Caption = 'Listado de Viáticos Causados'
+      OnClick = ListadodeViticosCausados1Click
+    end
+    object ListadodeAuxiliosCausados1: TMenuItem
+      Caption = 'Listado de Auxilios de Alimentación Causados'
+      OnClick = ListadodeAuxiliosCausados1Click
+    end
+  end
+  object qNombreMaterial: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOMATERIAL, NOMBREMATERIAL,'
+      'CODIGOUNIDAD, VALORUNITARIO'
+      'FROM MATERIALESSA')
+    Left = 701
+    Top = 301
+    object qNombreMaterialCODIGOMATERIAL: TFloatField
+      FieldName = 'CODIGOMATERIAL'
+      Origin = 'MATERIALESSA.CODIGOMATERIAL'
+    end
+    object qNombreMaterialNOMBREMATERIAL: TStringField
+      FieldName = 'NOMBREMATERIAL'
+      Origin = 'MATERIALESSA.NOMBREMATERIAL'
+      Size = 100
+    end
+    object qNombreMaterialCODIGOUNIDAD: TStringField
+      FieldName = 'CODIGOUNIDAD'
+      Origin = 'MATERIALESSA.CODIGOUNIDAD'
+      Size = 2
+    end
+    object qNombreMaterialVALORUNITARIO: TFloatField
+      FieldName = 'VALORUNITARIO'
+      Origin = 'MATERIALESSA.VALORUNITARIO'
+    end
+  end
+  object pmOrdenar: TPopupMenu
+    Tag = 5
+    Left = 330
+    Top = 136
+    object CodigoOdt: TMenuItem
+      Tag = 1
+      Caption = 'Código Odt'
+      RadioItem = True
+      OnClick = CodigoOdtClick
+    end
+    object CIA: TMenuItem
+      Tag = 2
+      Caption = 'Código Administrativo'
+      RadioItem = True
+      OnClick = CIAClick
+    end
+    object N1: TMenuItem
+      Caption = '-'
+      RadioItem = True
+    end
+    object FechaEmision: TMenuItem
+      Tag = 3
+      Caption = 'Fecha Emisión'
+      RadioItem = True
+      OnClick = FechaEmisionClick
+    end
+    object FechaAprobacion: TMenuItem
+      Tag = 4
+      Caption = 'Fecha Aprobación'
+      RadioItem = True
+      OnClick = FechaAprobacionClick
+    end
+    object FechaAsignacion: TMenuItem
+      Tag = 5
+      Caption = 'Fecha Asignación'
+      RadioItem = True
+      OnClick = FechaAsignacionClick
+    end
+    object N3: TMenuItem
+      Caption = '-'
+      RadioItem = True
+    end
+    object EstadoOdt: TMenuItem
+      Tag = 6
+      Caption = 'Estado Odt'
+      RadioItem = True
+      OnClick = EstadoOdtClick
+    end
+    object Prioridad: TMenuItem
+      Tag = 7
+      Caption = 'Prioridad'
+      RadioItem = True
+      OnClick = PrioridadClick
+    end
+    object Labor: TMenuItem
+      Tag = 8
+      Caption = 'Labor'
+      RadioItem = True
+      OnClick = LaborClick
+    end
+    object TipoTarea: TMenuItem
+      Caption = 'Tipo Tarea'
+      RadioItem = True
+      OnClick = TipoTareaClick
+    end
+  end
+  object qMaterialesODT: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT PM.CODIGOMATERIAL, SUM(NVL(CANTIDADSOLICITADA,0))CANTIDAD' +
+        'SOLICITADA, SUM(NVL(CANTIDADCONSUMIDA,0))CANTIDADCONSUMIDA, '
+      
+        'SUM(NVL(CANTIDADENTREGADA,0))CANTIDADENTREGADA, SUM(NVL(CANTIDAD' +
+        'REINTEGRADABUENA,0))CANTIDADREINTEGRADABUENA, SUM(NVL(CANTIDADRE' +
+        'INTEGRADAMALA,0))CANTIDADREINTEGRADAMALA, '
+      
+        'SUM(NVL(CANTIDADRETIRADABUENA,0))CANTIDADRETIRADABUENA, SUM(NVL(' +
+        'CANTIDADRETIRADAMALA,0)) CANTIDADRETIRADAMALA '
+      'FROM ODTPRESMATE PM, ODTDIA OD, ODTREPORTE ODR,  TEMP_ODT1 T'
+      'WHERE PM.CODIGOODT = OD.CODIGOODT'
+      'AND PM.CONSECUTIVO = OD.CONSECUTIVO'
+      'AND OD.CODIGOODT = ODR.CODIGOODT'
+      'AND OD.CONSECUTIVO = ODR.CONSECUTIVO'
+      'AND ODR.CODIGOODT = T.CODIGOODT'
+      'AND ODR.CODIGOREPORTE = T.CODIGOREPORTE'
+      'GROUP BY PM.CODIGOMATERIAL')
+    Left = 568
+    Top = 188
+    object qMaterialesODTCODIGOMATERIAL: TFloatField
+      FieldName = 'CODIGOMATERIAL'
+      Origin = 'ODTPRESMATE.CODIGOMATERIAL'
+    end
+    object qMaterialesODTNombreMaterial: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NombreMaterial'
+      LookupDataSet = qNombreMaterial
+      LookupKeyFields = 'CODIGOMATERIAL'
+      LookupResultField = 'NOMBREMATERIAL'
+      KeyFields = 'CODIGOMATERIAL'
+      Size = 100
+      Lookup = True
+    end
+    object qMaterialesODTNombreUnidad: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NombreUnidad'
+      LookupDataSet = qNombreMaterial
+      LookupKeyFields = 'CODIGOMATERIAL'
+      LookupResultField = 'CODIGOUNIDAD'
+      KeyFields = 'CODIGOMATERIAL'
+      Size = 3
+      Lookup = True
+    end
+    object qMaterialesODTCANTIDADSOLICITADA: TFloatField
+      FieldName = 'CANTIDADSOLICITADA'
+    end
+    object qMaterialesODTCANTIDADCONSUMIDA: TFloatField
+      FieldName = 'CANTIDADCONSUMIDA'
+    end
+    object qMaterialesODTCANTIDADENTREGADA: TFloatField
+      FieldName = 'CANTIDADENTREGADA'
+    end
+    object qMaterialesODTCANTIDADREINTEGRADABUENA: TFloatField
+      FieldName = 'CANTIDADREINTEGRADABUENA'
+    end
+    object qMaterialesODTCANTIDADREINTEGRADAMALA: TFloatField
+      FieldName = 'CANTIDADREINTEGRADAMALA'
+    end
+    object qMaterialesODTCANTIDADRETIRADABUENA: TFloatField
+      FieldName = 'CANTIDADRETIRADABUENA'
+    end
+    object qMaterialesODTCANTIDADRETIRADAMALA: TFloatField
+      FieldName = 'CANTIDADRETIRADAMALA'
+    end
+  end
+  object qApoyosOdtHIja: TQuery
+    Left = 568
+    Top = 306
+  end
+  object pmExportar: TPopupMenu
+    Left = 400
+    Top = 136
+    object ExportarListaOdtPadres1: TMenuItem
+      Caption = 'Exportar Lista Odt Padres'
+      OnClick = ExportarListaOdtPadres1Click
+    end
+    object ExportarListaOdtHijas1: TMenuItem
+      Caption = 'Exportar Lista Odt Hijas'
+      OnClick = ExportarListaOdtHijas1Click
+    end
+  end
+  object qListaOdtHijaExportar: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT O.CODIGOODT,OD.CONSECUTIVO, O.FECHAEMISION, O.CODIGOADMIN' +
+        'ISTRATIVO, O.CODIGOPRIORIDAD, OD.IMPRESOODT, OD.CODIGOGRUPOTRABA' +
+        'JO,'
+      
+        'OD.CODIGOGEOGRAFICO, OD.CODIGOSUBESTACION,OD.CODIGOCIRCUITO, OD.' +
+        'CODIGOTIPOELEMENTO, OD.CODIGOEQUIPO, OD.COSTOMATERIAL, OD.COSTOM' +
+        'ANOOBRA,'
+      
+        'OD.COSTOTRANSPORTE,OD.COSTOEQUIPO,   OD.FECHAINICIOTRABAJO, OD.F' +
+        'ECHAFINALTRABAJO,OD.COSTOACTIVIDAD,O.CODIGOLABOR, O.CODIGOTIPOTA' +
+        'REA, '
+      
+        'O.CODIGOAPROBADO, O.CODIGOODTTIPOMANOOBRA, O.CODIGOEJECUTOR, O.C' +
+        'ODIGOFIRMANTE,O.FECHAAPROBACION, O.FECHAASIGNACION, O.COSTOMATER' +
+        'IAL, O.COSTOMANOOBRA, O.COSTOTRANSPORTE, '
+      
+        'O.COSTOEQUIPO,O.CODIGOESTADOODT, EO.NOMBREESTADOODT, P.NOMBREPRI' +
+        'ORIDAD, L.NOMBRELABOR, TT.NOMBRETIPOTAREA, MO.NOMBREODTTIPOMANOO' +
+        'BRA, O.CODIGOREVISADO,'
+      
+        'A.NOMBREADMINISTRATIVO,replace(replace(o.motivos,ascii(13),'#39' '#39'),' +
+        #39','#39','#39' '#39') motivos,'
+      
+        'M.NOMBREMUNICIPIO,replace(replace(od.observacion1,ascii(13),'#39' '#39')' +
+        ','#39','#39','#39' '#39')  observacion1,'
+      
+        'replace(replace(od.observacion2,ascii(13),'#39' '#39'),'#39','#39','#39' '#39')  observa' +
+        'cion2, TR.CODIGOREPORTE, GETMUNICIPIO(R.CIGDANO) MUNICIPIO'
+      
+        'FROM ODT O, ESTADOODT EO, PRIORIDAD P, LABOR L, TIPOTAREA TT, OD' +
+        'TTIPOMANOOBRA MO, ADMINISTRATIVO A, ODTDIA OD, MUNICIPIO M, ODTR' +
+        'EPORTE TR, REPORTE R'
+      'WHERE (EO.CODIGOESTADOODT = O.CODIGOESTADOODT) AND'
+      '      (O.CODIGOPRIORIDAD = P.CODIGOPRIORIDAD) AND'
+      '      (L.CODIGOLABOR (+)= O.CODIGOLABOR) AND'
+      '      (M.CODIGOMUNICIPIO(+)=O.CODIGOMUNICIPIO) AND'
+      '      (TT.CODIGOTIPOTAREA(+) = O.CODIGOTIPOTAREA) AND'
+      
+        '      (MO.CODIGOODTTIPOMANOOBRA (+)= O.CODIGOODTTIPOMANOOBRA) AN' +
+        'D'
+      
+        '      (A.CODIGOADMINISTRATIVO = O.CODIGOADMINISTRATIVO) AND (OD.' +
+        'CODIGOODT (+) = O.CODIGOODT) AND TR.CODIGOODT(+) = OD.CODIGOODT ' +
+        'AND TR.CONSECUTIVO(+) = OD.CONSECUTIVO AND R.CODIGOREPORTE(+) = ' +
+        'TR.CODIGOREPORTE'
+      'ORDER BY O.FECHAEMISION  DESC'
+      ' '
+      ' ')
+    Left = 680
+    Top = 146
+  end
+  object pmImprimirHija: TPopupMenu
+    Left = 584
+    Top = 144
+    object MenuItem1: TMenuItem
+      Caption = 'ODT Hija Actual'
+      OnClick = MenuItem1Click
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Todas las ODT Hijas'
+      OnClick = MenuItem2Click
+    end
+  end
+  object ilBotones: TImageList
+    Left = 976
+    Top = 292
+    Bitmap = {
+      3608000002000000424D36080000000000003600000028000000200000001000
+      0000010020000000000000080000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000000000FF000000FF0000
+      00FF000000FF0000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000808000008080
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000000000FF40FF00FF40FF
+      00FF000000FF0000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000000000FF40FF00FF40FF
+      00FF000000FF0000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000000000FF40FF00FF40FF
+      00FF000000FF0000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000000000FF40FF00FF40FF
+      00FF000000FF0000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000080800000000000000000
+      0000808000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000FF40FF00FF40FF00FF40FF
+      00FF40FF00FF000000FF00000000000000000000000000000000000000000000
+      0000000000000000000000000000000000008080000080800000000000000000
+      0000000000008080000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000FF40FF00FF40FF00FF40FF00FF40FF
+      00FF40FF00FF40FF00FF000000FF000000000000000000000000000000000000
+      0000000000000000000000000000808000008080000000000000000000000000
+      0000000000008080000080800000000000000000000000000000000000000000
+      00000000000000000000000000FF40FF00FF40FF00FF40FF00FF40FF00FF40FF
+      00FF40FF00FF40FF00FF40FF00FF000000FF0000000000000000000000000000
+      000000000000000000008080000080800000FFFFFF00FFFFFF00000000000000
+      0000000000000000000080800000808000000000000000000000000000000000
+      000000000000000000FF40FF00FF40FF00FF40FF00FF40FF00FF40FF00FF40FF
+      00FF40FF00FF40FF00FF40FF00FF40FF00FF000000FF00000000000000000000
+      0000000000008080000080800000FFFFFF00FFFFFF00FFFFFF00FFFFFF000000
+      0000000000000000000080800000808000008080000000000000000000000000
+      0000000000FF40FF00FF40FF00FF40FF00FF40FF00FF40FF00FF40FF00FF40FF
+      00FF40FF00FF40FF00FF40FF00FF40FF00FF40FF00FF000000FF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000000000424D
+      7E000000000000003E0000002800000020000000100000000100010000000000
+      400000000000000000000000020000000200000000000000FFFFFF00FFFFFFFF
+      FFFFFFFFFFFFFFFFFC3FFC3FFC3FFC3FFDBFFC3FFDBFFC3FFDBFFC3FF99FF81F
+      F1CFF00FE3C7E007C1E3C00380E1800180018001FFFFFFFFFFFFFFFF}
+  end
+end

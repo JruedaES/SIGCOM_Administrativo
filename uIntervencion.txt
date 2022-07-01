@@ -1,0 +1,775 @@
+object fIntervencion: TfIntervencion
+  Left = 326
+  Top = 176
+  Width = 713
+  Height = 227
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Información de la intervención'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 30
+    Width = 705
+    Height = 125
+    Align = alTop
+    TabOrder = 0
+    object Label53: TLabel
+      Left = 8
+      Top = 12
+      Width = 76
+      Height = 13
+      Caption = 'Intervencion:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label1: TLabel
+      Left = 8
+      Top = 44
+      Width = 72
+      Height = 26
+      Caption = 'Tipo de'#13#10'Intervencion'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 300
+      Top = 12
+      Width = 54
+      Height = 13
+      Alignment = taCenter
+      Caption = 'Vigencia:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 300
+      Top = 45
+      Width = 61
+      Height = 26
+      Caption = 'Progama o'#13#10'Convenio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label7: TLabel
+      Left = 300
+      Top = 90
+      Width = 34
+      Height = 13
+      Alignment = taCenter
+      Caption = 'Zona:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object dbeNegocioSolicitante: TDBEdit
+      Left = 363
+      Top = 46
+      Width = 69
+      Height = 21
+      DataField = 'IMPU_PROG_CONVENIO'
+      DataSource = dsSAF_M_INTERVENCIONES
+      TabOrder = 0
+    end
+    object dblcProgramaConvenio: TDBLookupComboBox
+      Left = 434
+      Top = 45
+      Width = 260
+      Height = 21
+      DataField = 'IMPU_PROG_CONVENIO'
+      DataSource = dsSAF_M_INTERVENCIONES
+      KeyField = 'IMPU_IMPU'
+      ListField = 'IMPU_DESCRI'
+      ListSource = dsPP_TIMPU
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+    end
+    object dbeCodTipoIntervencion: TDBEdit
+      Left = 90
+      Top = 43
+      Width = 30
+      Height = 21
+      DataField = 'COD_TIPO_INTERVENCION'
+      DataSource = dsSAF_M_INTERVENCIONES
+      ReadOnly = True
+      TabOrder = 2
+    end
+    object dbeTipoIntervencion: TDBEdit
+      Left = 124
+      Top = 43
+      Width = 157
+      Height = 21
+      DataField = 'NombreTipoIntervencion'
+      DataSource = FOdtUrbanaRural.dsODTHija
+      TabOrder = 3
+    end
+    object dbeCodIntervencion: TDBEdit
+      Left = 90
+      Top = 10
+      Width = 77
+      Height = 21
+      DataField = 'COD_INTERVENCION'
+      DataSource = dsSAF_M_INTERVENCIONES
+      ReadOnly = True
+      TabOrder = 4
+    end
+    object dblcbZonas: TDBLookupComboBox
+      Tag = 9
+      Left = 434
+      Top = 87
+      Width = 259
+      Height = 21
+      DataField = 'COD_ZONA'
+      DataSource = dsSAF_M_INTERVENCIONES
+      KeyField = 'CODIGOZONAESSA'
+      ListField = 'NOMBREZONA'
+      ListSource = dsZona
+      TabOrder = 5
+    end
+    object dbeZonas: TDBEdit
+      Tag = 9
+      Left = 363
+      Top = 87
+      Width = 68
+      Height = 21
+      DataField = 'COD_ZONA'
+      DataSource = dsSAF_M_INTERVENCIONES
+      TabOrder = 6
+    end
+    object dbeVigencia: TDBEdit
+      Left = 363
+      Top = 11
+      Width = 80
+      Height = 21
+      DataField = 'VIGENCIA'
+      DataSource = dsSAF_M_INTERVENCIONES
+      ReadOnly = True
+      TabOrder = 7
+    end
+    object Notebook1: TNotebook
+      Left = 1
+      Top = 79
+      Width = 283
+      Height = 44
+      PageIndex = 1
+      TabOrder = 8
+      object TPage
+        Left = 0
+        Top = 0
+        Caption = 'Circuitos'
+        object Label2: TLabel
+          Left = 10
+          Top = 13
+          Width = 48
+          Height = 13
+          Alignment = taCenter
+          Caption = 'Circuito:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object dbeCodCircuito: TDBEdit
+          Left = 89
+          Top = 9
+          Width = 30
+          Height = 21
+          DataField = 'COD_ACTIVO'
+          DataSource = dsSAF_M_INTERVENCIONES
+          ReadOnly = True
+          TabOrder = 0
+        end
+        object dbeCircuito: TDBEdit
+          Left = 124
+          Top = 8
+          Width = 200
+          Height = 21
+          DataField = 'NombreCircuito'
+          DataSource = FOdtUrbanaRural.dsODTHija
+          TabOrder = 1
+        end
+      end
+      object TPage
+        Left = 0
+        Top = 0
+        Caption = 'Subestaciones'
+        object Label8: TLabel
+          Left = 9
+          Top = 12
+          Width = 75
+          Height = 13
+          Alignment = taCenter
+          Caption = 'Subestación:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object dbeCodigoSubestacion: TDBEdit
+          Left = 89
+          Top = 8
+          Width = 30
+          Height = 21
+          DataField = 'COD_ACTIVO'
+          DataSource = dsSAF_M_INTERVENCIONES
+          ReadOnly = True
+          TabOrder = 0
+        end
+        object dbeSubestacion: TDBEdit
+          Left = 124
+          Top = 8
+          Width = 155
+          Height = 21
+          DataField = 'NombreSubestacion'
+          DataSource = FOdtUrbanaRural.dsODTHija
+          TabOrder = 1
+        end
+      end
+      object TPage
+        Left = 0
+        Top = 0
+        Caption = 'Lineas'
+        object Label9: TLabel
+          Left = 10
+          Top = 12
+          Width = 36
+          Height = 13
+          Alignment = taCenter
+          Caption = 'Linea:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object dbeCodigoLinea: TDBEdit
+          Left = 89
+          Top = 8
+          Width = 30
+          Height = 21
+          DataField = 'COD_ACTIVO'
+          DataSource = dsSAF_M_INTERVENCIONES
+          ReadOnly = True
+          TabOrder = 0
+        end
+        object dbeLinea: TDBEdit
+          Left = 124
+          Top = 7
+          Width = 200
+          Height = 21
+          DataField = 'NombreLinea'
+          DataSource = FOdtUrbanaRural.dsODTHija
+          TabOrder = 1
+        end
+      end
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 0
+    Width = 705
+    Height = 30
+    Align = alTop
+    Caption = 'Intervención'
+    Color = clScrollBar
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 155
+    Width = 705
+    Height = 40
+    Align = alClient
+    TabOrder = 2
+    object BitBtn2: TBitBtn
+      Left = 511
+      Top = 4
+      Width = 79
+      Height = 27
+      Caption = '&Asignar'
+      Default = True
+      ModalResult = 1
+      TabOrder = 0
+      Glyph.Data = {
+        BE060000424DBE06000000000000360400002800000024000000120000000100
+        0800000000008802000000000000000000000001000000010000000000000000
+        80000080000000808000800000008000800080800000C0C0C000C0DCC000F0CA
+        A600000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000F0FBFF00A4A0A000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00030303030303
+        0303030303030303030303030303030303030303030303030303030303030303
+        03030303030303030303030303030303030303030303FF030303030303030303
+        03030303030303040403030303030303030303030303030303F8F8FF03030303
+        03030303030303030303040202040303030303030303030303030303F80303F8
+        FF030303030303030303030303040202020204030303030303030303030303F8
+        03030303F8FF0303030303030303030304020202020202040303030303030303
+        0303F8030303030303F8FF030303030303030304020202FA0202020204030303
+        0303030303F8FF0303F8FF030303F8FF03030303030303020202FA03FA020202
+        040303030303030303F8FF03F803F8FF0303F8FF03030303030303FA02FA0303
+        03FA0202020403030303030303F8FFF8030303F8FF0303F8FF03030303030303
+        FA0303030303FA0202020403030303030303F80303030303F8FF0303F8FF0303
+        0303030303030303030303FA0202020403030303030303030303030303F8FF03
+        03F8FF03030303030303030303030303FA020202040303030303030303030303
+        0303F8FF0303F8FF03030303030303030303030303FA02020204030303030303
+        03030303030303F8FF0303F8FF03030303030303030303030303FA0202020403
+        030303030303030303030303F8FF0303F8FF03030303030303030303030303FA
+        0202040303030303030303030303030303F8FF03F8FF03030303030303030303
+        03030303FA0202030303030303030303030303030303F8FFF803030303030303
+        030303030303030303FA0303030303030303030303030303030303F803030303
+        0303030303030303030303030303030303030303030303030303030303030303
+        0303}
+      NumGlyphs = 2
+    end
+    object BitBtnCerrar: TBitBtn
+      Left = 612
+      Top = 4
+      Width = 79
+      Height = 27
+      Cancel = True
+      Caption = '&Cerrar'
+      ModalResult = 2
+      TabOrder = 1
+      Glyph.Data = {
+        BE060000424DBE06000000000000360400002800000024000000120000000100
+        0800000000008802000000000000000000000001000000010000000000000000
+        80000080000000808000800000008000800080800000C0C0C000C0DCC000F0CA
+        A600000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000F0FBFF00A4A0A000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF0003F8F8F8F8F8
+        F8F8F8F80707FF07FF07F807FFF8F8F8F8F8F8F8F8F8F8030303030303FF0404
+        0404040000F8F8F8FFFFFF0404040404F8F8F8F8F8F8F8F8F8F8FF030303FFFF
+        F8FF0303030304FD05000007FFFFFF0403030303F8F8F8F8F8F8F8F8F8F80303
+        03F8F8F8F8FF030303030405FD0500FFFFFFFF040303030303030303F8FFF8F8
+        F8FF030303F8FF0303FF0303030304FD05FD00FFFFFFFF040303030303030303
+        F8F807F8F8FF030303F8FF0303FF030303030405FD0500FFFEFFFE0403030303
+        03030303F8FFF807F8FF030303F8FF0303FF0303030304FD05FD00FFFFFFFF04
+        0303030303030303F8F807F8F8FF030303F8FF0303FF030303030405FD0500FF
+        FEFFFE040303030303030303F8FFF807F8FF030303F8FF0303FF0303030304FD
+        05FD00FFFFFFFF040303030303030303F8F807F8F8FF030303F8FF0303FF0303
+        03030405FD0500FFFEFFFE040303030303030303F8FFF807F8FF030303F8FF03
+        03FF0303030304FD05FD00FEFFFEFF040303030303030303F8F807F8F8FF0303
+        03F8FF0303FF030303030405FD0500FFFEFFFE040303030303030303F8FFF807
+        F8FF030303F8FF0303FF0303030304FD05FD00FEFFFEFF040303030303030303
+        F8F807F8F8FF030303F8FF0303FF030303030404040404040404040403030303
+        03030303F8FFF8FFF8FFFFFFFFF8FF0303FF0303030303030303030303030303
+        0303030303030303F8F8F8F8F8F8F8F8F8F8030303FF03030303030300000000
+        000003030303030303030303030303FFFFFFFFFFFF03030303FF030303030303
+        00FAFAFAFA00030303030303030303030303F8F8F8F8F8F8FF03030303FF0303
+        03030303000000000000030303030303030303030303F8FFFFFFFFF8FF030303
+        03FF}
+      NumGlyphs = 2
+    end
+  end
+  object UpdODTINTERVENCION: TUpdateSQL
+    ModifySQL.Strings = (
+      'update ODTINTERVENCION'
+      'set'
+      '  CODIGOODT = :CODIGOODT,'
+      '  CONSECUTIVO = :CONSECUTIVO,'
+      '  CODIGOINTERVENCION = :CODIGOINTERVENCION'
+      'where'
+      '  CODIGOODT = :OLD_CODIGOODT and'
+      '  CONSECUTIVO = :OLD_CONSECUTIVO and'
+      '  CODIGOINTERVENCION = :OLD_CODIGOINTERVENCION')
+    InsertSQL.Strings = (
+      'insert into ODTINTERVENCION'
+      '  (CODIGOODT, CONSECUTIVO, CODIGOINTERVENCION)'
+      'values'
+      '  (:CODIGOODT, :CONSECUTIVO, :CODIGOINTERVENCION)')
+    DeleteSQL.Strings = (
+      'delete from ODTINTERVENCION'
+      'where'
+      '  CODIGOODT = :OLD_CODIGOODT and'
+      '  CONSECUTIVO = :OLD_CONSECUTIVO and'
+      '  CODIGOINTERVENCION = :OLD_CODIGOINTERVENCION')
+    Left = 265
+    Top = 411
+  end
+  object dsODTIntervencion: TDataSource
+    DataSet = qODTINTERVENCION
+    Left = 272
+    Top = 361
+  end
+  object qODTINTERVENCION: TQuery
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM ODTINTERVENCION'
+      'WHERE CODIGOODT = :CODIGOODT'
+      'AND CONSECUTIVO =:CONSECUTIVO')
+    UpdateObject = UpdODTINTERVENCION
+    Left = 273
+    Top = 307
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CONSECUTIVO'
+        ParamType = ptUnknown
+      end>
+    object qODTINTERVENCIONCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'ODTINTERVENCION.CODIGOODT'
+    end
+    object qODTINTERVENCIONCONSECUTIVO: TFloatField
+      FieldName = 'CONSECUTIVO'
+      Origin = 'ODTINTERVENCION.CONSECUTIVO'
+    end
+    object qODTINTERVENCIONCODIGOINTERVENCION: TFloatField
+      FieldName = 'CODIGOINTERVENCION'
+      Origin = 'ODTINTERVENCION.CODIGOINTERVENCION'
+    end
+  end
+  object updSAF_M_INTERVENCIONES: TUpdateSQL
+    ModifySQL.Strings = (
+      'update SIRF.SAF_M_INTERVENCIONES'
+      'set'
+      '  COD_INTERVENCION = :COD_INTERVENCION,'
+      '  COD_TIPO_INTERVENCION = :COD_TIPO_INTERVENCION,'
+      '  COD_ORIGEN = :COD_ORIGEN,'
+      '  COD_EJECUTOR = :COD_EJECUTOR,'
+      '  VIGENCIA = :VIGENCIA,'
+      '  COD_ZONA = :COD_ZONA,'
+      '  IMPU_PROG_CONVENIO = :IMPU_PROG_CONVENIO,'
+      '  COD_ACTIVO = :COD_ACTIVO,'
+      '  FECHA_CREA = :FECHA_CREA,'
+      '  USUARIO_CREA = :USUARIO_CREA,'
+      '  FECHA_MOD = :FECHA_MOD,'
+      '  USUARIO_MOD = :USUARIO_MOD,'
+      '  VALOR_INTERVENCION = :VALOR_INTERVENCION'
+      'where'
+      '  COD_INTERVENCION = :OLD_COD_INTERVENCION')
+    InsertSQL.Strings = (
+      'insert into SIRF.SAF_M_INTERVENCIONES'
+      
+        '  (COD_INTERVENCION, COD_TIPO_INTERVENCION, COD_ORIGEN, COD_EJEC' +
+        'UTOR, VIGENCIA, '
+      
+        '   COD_ZONA, IMPU_PROG_CONVENIO, COD_ACTIVO, FECHA_CREA, USUARIO' +
+        '_CREA, '
+      '   FECHA_MOD, USUARIO_MOD, VALOR_INTERVENCION)'
+      'values'
+      
+        '  (:COD_INTERVENCION, :COD_TIPO_INTERVENCION, :COD_ORIGEN, :COD_' +
+        'EJECUTOR, '
+      
+        '   :VIGENCIA, :COD_ZONA, :IMPU_PROG_CONVENIO, :COD_ACTIVO, :FECH' +
+        'A_CREA, '
+      '   :USUARIO_CREA, :FECHA_MOD, :USUARIO_MOD, :VALOR_INTERVENCION)')
+    DeleteSQL.Strings = (
+      'delete from SIRF.SAF_M_INTERVENCIONES'
+      'where'
+      '  COD_INTERVENCION = :OLD_COD_INTERVENCION')
+    Left = 73
+    Top = 410
+  end
+  object dsSAF_M_INTERVENCIONES: TDataSource
+    DataSet = qSAF_M_INTERVENCIONES
+    Left = 79
+    Top = 360
+  end
+  object qSAF_M_INTERVENCIONES: TQuery
+    CachedUpdates = True
+    BeforeOpen = qSAF_M_INTERVENCIONESBeforeOpen
+    AfterScroll = qSAF_M_INTERVENCIONESAfterScroll
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM SIRF.SAF_M_INTERVENCIONES'
+      'WHERE COD_INTERVENCION= :CODINTERVENCION')
+    UpdateObject = updSAF_M_INTERVENCIONES
+    Left = 84
+    Top = 312
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODINTERVENCION'
+        ParamType = ptUnknown
+      end>
+    object qSAF_M_INTERVENCIONESCOD_INTERVENCION: TFloatField
+      Alignment = taLeftJustify
+      FieldName = 'COD_INTERVENCION'
+    end
+    object qSAF_M_INTERVENCIONESCOD_TIPO_INTERVENCION: TStringField
+      FieldName = 'COD_TIPO_INTERVENCION'
+      Size = 3
+    end
+    object qSAF_M_INTERVENCIONESCOD_ORIGEN: TStringField
+      FieldName = 'COD_ORIGEN'
+      Size = 4
+    end
+    object qSAF_M_INTERVENCIONESCOD_EJECUTOR: TStringField
+      FieldName = 'COD_EJECUTOR'
+      Size = 30
+    end
+    object qSAF_M_INTERVENCIONESVIGENCIA: TFloatField
+      Alignment = taLeftJustify
+      FieldName = 'VIGENCIA'
+    end
+    object qSAF_M_INTERVENCIONESCOD_ZONA: TFloatField
+      FieldName = 'COD_ZONA'
+    end
+    object qSAF_M_INTERVENCIONESIMPU_PROG_CONVENIO: TStringField
+      FieldName = 'IMPU_PROG_CONVENIO'
+      Size = 16
+    end
+    object qSAF_M_INTERVENCIONESCOD_ACTIVO: TFloatField
+      FieldName = 'COD_ACTIVO'
+    end
+    object qSAF_M_INTERVENCIONESFECHA_CREA: TDateTimeField
+      FieldName = 'FECHA_CREA'
+    end
+    object qSAF_M_INTERVENCIONESUSUARIO_CREA: TStringField
+      FieldName = 'USUARIO_CREA'
+      Size = 16
+    end
+    object qSAF_M_INTERVENCIONESFECHA_MOD: TDateTimeField
+      FieldName = 'FECHA_MOD'
+    end
+    object qSAF_M_INTERVENCIONESUSUARIO_MOD: TStringField
+      FieldName = 'USUARIO_MOD'
+      Size = 16
+    end
+    object qSAF_M_INTERVENCIONESVALOR_INTERVENCION: TFloatField
+      FieldName = 'VALOR_INTERVENCION'
+      Origin = 'SAF_M_INTERVENCIONES.COD_INTERVENCION'
+    end
+  end
+  object qPP_TIMPU: TQuery
+    CachedUpdates = True
+    BeforeOpen = qPP_TIMPUBeforeOpen
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM PP_TIMPU '
+      'WHERE IMPU_ESTADO = '#39'A'#39
+      'ORDER BY  IMPU_DESCRI')
+    Left = 465
+    Top = 307
+    object qPP_TIMPUIMPU_IMPU: TStringField
+      FieldName = 'IMPU_IMPU'
+      Size = 16
+    end
+    object qPP_TIMPUIMPU_DESCRI: TStringField
+      FieldName = 'IMPU_DESCRI'
+      Size = 50
+    end
+  end
+  object dsPP_TIMPU: TDataSource
+    DataSet = qPP_TIMPU
+    Left = 471
+    Top = 400
+  end
+  object qZona: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM ZONAESSA'
+      'ORDER BY CODIGOZONA')
+    Left = 535
+    Top = 306
+    object qZonaCODIGOZONA: TFloatField
+      FieldName = 'CODIGOZONA'
+      Origin = 'AP_ZONA.CODIGOZONA'
+    end
+    object qZonaNOMBREZONA: TStringField
+      FieldName = 'NOMBREZONA'
+      Origin = 'AP_ZONA.NOMBREZONA'
+      Size = 200
+    end
+    object qZonaCODIGOZONAESSA: TFloatField
+      FieldName = 'CODIGOZONAESSA'
+      Origin = 'ZONAESSA.CODIGOZONAESSA'
+    end
+  end
+  object dsZona: TDataSource
+    DataSet = qZona
+    Left = 544
+    Top = 400
+  end
+  object qSAF_M_EJECUTORES: TQuery
+    CachedUpdates = True
+    BeforeOpen = qSAF_M_EJECUTORESBeforeOpen
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT *  FROM SIRF.SAF_M_EJECUTORES')
+    UpdateObject = updSAF_M_EJECUTORES
+    Left = 727
+    Top = 295
+    object qSAF_M_EJECUTORESCOD_ORIGEN: TStringField
+      FieldName = 'COD_ORIGEN'
+      Size = 4
+    end
+    object qSAF_M_EJECUTORESCOD_EJECUTOR: TStringField
+      FieldName = 'COD_EJECUTOR'
+      Size = 30
+    end
+    object qSAF_M_EJECUTORESVIGENCIA: TFloatField
+      FieldName = 'VIGENCIA'
+    end
+    object qSAF_M_EJECUTORESFECHA_INICIO: TDateTimeField
+      FieldName = 'FECHA_INICIO'
+    end
+    object qSAF_M_EJECUTORESFECHA_FINAL: TDateTimeField
+      FieldName = 'FECHA_FINAL'
+    end
+    object qSAF_M_EJECUTORESVALOR_LIQ_FINAL: TFloatField
+      FieldName = 'VALOR_LIQ_FINAL'
+    end
+    object qSAF_M_EJECUTORESFECHA_CREA: TDateTimeField
+      FieldName = 'FECHA_CREA'
+    end
+    object qSAF_M_EJECUTORESUSUARIO_CREA: TStringField
+      FieldName = 'USUARIO_CREA'
+      Size = 16
+    end
+    object qSAF_M_EJECUTORESFECHA_MOD: TDateTimeField
+      FieldName = 'FECHA_MOD'
+    end
+    object qSAF_M_EJECUTORESUSUARIO_MOD: TStringField
+      FieldName = 'USUARIO_MOD'
+      Size = 16
+    end
+  end
+  object dsSAF_M_EJECUTORES: TDataSource
+    DataSet = qSAF_M_EJECUTORES
+    Left = 727
+    Top = 342
+  end
+  object updSAF_M_EJECUTORES: TUpdateSQL
+    ModifySQL.Strings = (
+      'update SIRF.SAF_M_EJECUTORES'
+      'set'
+      '  COD_ORIGEN = :COD_ORIGEN,'
+      '  COD_EJECUTOR = :COD_EJECUTOR,'
+      '  VIGENCIA = :VIGENCIA,'
+      '  FECHA_INICIO = :FECHA_INICIO,'
+      '  FECHA_FINAL = :FECHA_FINAL,'
+      '  VALOR_LIQ_FINAL = :VALOR_LIQ_FINAL,'
+      '  FECHA_CREA = :FECHA_CREA,'
+      '  USUARIO_CREA = :USUARIO_CREA,'
+      '  FECHA_MOD = :FECHA_MOD,'
+      '  USUARIO_MOD = :USUARIO_MOD'
+      'where'
+      '  COD_ORIGEN = :OLD_COD_ORIGEN and'
+      '  COD_EJECUTOR = :OLD_COD_EJECUTOR and'
+      '  VIGENCIA = :OLD_VIGENCIA')
+    InsertSQL.Strings = (
+      'insert into SIRF.SAF_M_EJECUTORES'
+      
+        '  (COD_ORIGEN, COD_EJECUTOR, VIGENCIA, FECHA_INICIO, FECHA_FINAL' +
+        ', VALOR_LIQ_FINAL, '
+      '   FECHA_CREA, USUARIO_CREA, FECHA_MOD, USUARIO_MOD)'
+      'values'
+      
+        '  (:COD_ORIGEN, :COD_EJECUTOR, :VIGENCIA, :FECHA_INICIO, :FECHA_' +
+        'FINAL, '
+      
+        '   :VALOR_LIQ_FINAL, :FECHA_CREA, :USUARIO_CREA, :FECHA_MOD, :US' +
+        'UARIO_MOD)')
+    DeleteSQL.Strings = (
+      'delete from SIRF.SAF_M_EJECUTORES'
+      'where'
+      '  COD_ORIGEN = :OLD_COD_ORIGEN and'
+      '  COD_EJECUTOR = :OLD_COD_EJECUTOR and'
+      '  VIGENCIA = :OLD_VIGENCIA')
+    Left = 727
+    Top = 388
+  end
+end

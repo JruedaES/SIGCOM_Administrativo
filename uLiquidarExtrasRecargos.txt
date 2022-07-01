@@ -1,0 +1,3980 @@
+object FLiquidarExtrasRecargos: TFLiquidarExtrasRecargos
+  Left = 23
+  Top = 162
+  Width = 1612
+  Height = 876
+  Caption = 'Liquidación Horas Extras y Recargos'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  Position = poDefault
+  Visible = True
+  WindowState = wsMaximized
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PanelTotal: TPanel
+    Left = 0
+    Top = 0
+    Width = 1596
+    Height = 837
+    Align = alClient
+    Caption = 'PanelTotal'
+    TabOrder = 0
+    object PanelEncabezado: TPanel
+      Left = 1
+      Top = 1
+      Width = 1594
+      Height = 85
+      Align = alTop
+      Caption = 'PanelEncabezado'
+      PopupMenu = pmVer
+      TabOrder = 0
+      object Panel3: TPanel
+        Left = 1
+        Top = 1
+        Width = 1592
+        Height = 45
+        Align = alTop
+        BevelOuter = bvNone
+        Caption = 'Panel2'
+        TabOrder = 0
+        object gbCia: TGroupBox
+          Left = 0
+          Top = 0
+          Width = 419
+          Height = 45
+          Align = alLeft
+          Caption = 'Dependencia administrativa'
+          TabOrder = 0
+          object SpeedButton2: TSpeedButton
+            Left = 371
+            Top = 16
+            Width = 40
+            Height = 21
+            Caption = 'CIA'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clNavy
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            NumGlyphs = 2
+            ParentFont = False
+            OnClick = SpeedButton2Click
+          end
+          object dbEdCodigoCia: TDBEdit
+            Left = 10
+            Top = 16
+            Width = 47
+            Height = 21
+            DataField = 'CodigoAdministrativo'
+            DataSource = dsMemFiltro
+            PopupMenu = dMenuCIA
+            TabOrder = 0
+            OnKeyPress = FormKeyPress
+          end
+          object dbLkCbNombreCia: TDBLookupComboBox
+            Left = 60
+            Top = 16
+            Width = 309
+            Height = 21
+            DataField = 'CodigoAdministrativo'
+            DataSource = dsMemFiltro
+            KeyField = 'CODIGOADMINISTRATIVO'
+            ListField = 'NOMBRECATEGORIA'
+            ListSource = dsCIA
+            TabOrder = 1
+            OnKeyPress = FormKeyPress
+          end
+        end
+        object GroupBox1: TGroupBox
+          Left = 419
+          Top = 0
+          Width = 216
+          Height = 45
+          Align = alLeft
+          Caption = 'Seleccione una Fecha'
+          TabOrder = 1
+          object PanelSeleccionFecha: TPanel
+            Left = 5
+            Top = 12
+            Width = 205
+            Height = 29
+            Alignment = taLeftJustify
+            Color = 16744448
+            Ctl3D = True
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentCtl3D = False
+            ParentFont = False
+            TabOrder = 0
+            OnMouseDown = PanelSeleccionFechaMouseDown
+            object seAgnos: TSpinEdit
+              Left = 147
+              Top = 5
+              Width = 53
+              Height = 22
+              Color = 16744448
+              Ctl3D = False
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWhite
+              Font.Height = -11
+              Font.Name = 'MS Sans Serif'
+              Font.Style = [fsBold]
+              MaxValue = 5941
+              MinValue = 1900
+              ParentCtl3D = False
+              ParentFont = False
+              TabOrder = 0
+              Value = 1997
+              OnChange = seAgnosChange
+            end
+            object dbEdFecha: TDBDateEdit
+              Left = 14
+              Top = 5
+              Width = 101
+              Height = 21
+              DataField = 'Fecha'
+              DataSource = dsMemFiltro
+              NumGlyphs = 2
+              TabOrder = 1
+              Visible = False
+              OnChange = dbEdFechaChange
+            end
+          end
+        end
+        object gbTipoTurno: TGroupBox
+          Left = 635
+          Top = 0
+          Width = 957
+          Height = 45
+          Align = alClient
+          Caption = 'Tipo de Horario'
+          TabOrder = 2
+          object sbtmirarLiquidacion: TSpeedButton
+            Left = 217
+            Top = 16
+            Width = 92
+            Height = 24
+            Caption = 'Verificación'
+            Enabled = False
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              0400000000000001000000000000000000001000000010000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333303
+              333333333333337FF3333333333333903333333333333377FF33333333333399
+              03333FFFFFFFFF777FF3000000999999903377777777777777FF0FFFF0999999
+              99037F3337777777777F0FFFF099999999907F3FF777777777770F00F0999999
+              99037F773777777777730FFFF099999990337F3FF777777777330F00FFFFF099
+              03337F773333377773330FFFFFFFF09033337F3FF3FFF77733330F00F0000003
+              33337F773777777333330FFFF0FF033333337F3FF7F3733333330F08F0F03333
+              33337F7737F7333333330FFFF003333333337FFFF77333333333000000333333
+              3333777777333333333333333333333333333333333333333333}
+            NumGlyphs = 2
+            Transparent = False
+            OnClick = sbtmirarLiquidacionClick
+          end
+          object dbedTipoTurno: TDBEdit
+            Left = 8
+            Top = 18
+            Width = 25
+            Height = 21
+            DataField = 'CodigoTipoTurno'
+            DataSource = dsMemFiltro
+            TabOrder = 0
+          end
+          object dblcbTipoTurno: TDBLookupComboBox
+            Left = 34
+            Top = 18
+            Width = 178
+            Height = 21
+            DataField = 'CodigoTipoTurno'
+            DataSource = dsMemFiltro
+            KeyField = 'CODIGOTIPOTURNO'
+            ListField = 'NOMBRETIPOTURNO'
+            ListSource = dsTipoTurno
+            TabOrder = 1
+          end
+        end
+      end
+      object gbEmpleado: TGroupBox
+        Left = 1
+        Top = 46
+        Width = 1592
+        Height = 39
+        Align = alTop
+        Caption = 'Empleado'
+        TabOrder = 1
+        object sbtGenerarPlanilla: TSpeedButton
+          Left = 426
+          Top = 11
+          Width = 100
+          Height = 24
+          Caption = 'Generar Planilla'
+          Enabled = False
+          Flat = True
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            0400000000000001000000000000000000001000000010000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+            003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
+            F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
+            F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
+            F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
+            F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
+            F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
+            F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
+            333337FFFFFFFF77333330000000000333333777777777733333}
+          NumGlyphs = 2
+          ParentShowHint = False
+          ShowHint = True
+          Transparent = False
+          OnClick = sbtGenerarPlanillaClick
+        end
+        object Bevel1: TBevel
+          Left = 418
+          Top = 5
+          Width = 2
+          Height = 30
+          Shape = bsLeftLine
+        end
+        object sbtLiquidarConceptos: TSpeedButton
+          Left = 632
+          Top = 11
+          Width = 115
+          Height = 24
+          Caption = 'Liquidar Conceptos'
+          Enabled = False
+          Flat = True
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            0400000000000001000000000000000000001000000010000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00337000000000
+            73333337777777773F333308888888880333337F3F3F3FFF7F33330808089998
+            0333337F737377737F333308888888880333337F3F3F3F3F7F33330808080808
+            0333337F737373737F333308888888880333337F3F3F3F3F7F33330808080808
+            0333337F737373737F333308888888880333337F3F3F3F3F7F33330808080808
+            0333337F737373737F333308888888880333337F3FFFFFFF7F33330800000008
+            0333337F7777777F7F333308000E0E080333337F7FFFFF7F7F33330800000008
+            0333337F777777737F333308888888880333337F333333337F33330888888888
+            03333373FFFFFFFF733333700000000073333337777777773333}
+          NumGlyphs = 2
+          Transparent = False
+          OnClick = sbtLiquidarConceptosClick
+        end
+        object sbtImprimirPlanilla: TSpeedButton
+          Left = 748
+          Top = 11
+          Width = 100
+          Height = 24
+          Caption = 'Imprimir Planilla'
+          Enabled = False
+          Flat = True
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            0400000000000001000000000000000000001000000010000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+            00033FFFFFFFFFFFFFFF0888888888888880777777777777777F088888888888
+            8880777777777777777F0000000000000000FFFFFFFFFFFFFFFF0F8F8F8F8F8F
+            8F80777777777777777F08F8F8F8F8F8F9F0777777777777777F0F8F8F8F8F8F
+            8F807777777777777F7F0000000000000000777777777777777F3330FFFFFFFF
+            03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+            03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+            33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
+            33333337FFFF7733333333300000033333333337777773333333}
+          NumGlyphs = 2
+          Transparent = False
+          OnClick = sbtImprimirPlanillaClick
+        end
+        object sbtActualizarExtras: TSpeedButton
+          Left = 527
+          Top = 11
+          Width = 104
+          Height = 24
+          Caption = 'Actualizar Extras'
+          Enabled = False
+          Flat = True
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            0400000000000001000000000000000000001000000010000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+            3333333333FFFFF3333333333999993333333333F77777FFF333333999999999
+            3333333777333777FF33339993707399933333773337F3777FF3399933000339
+            9933377333777F3377F3399333707333993337733337333337FF993333333333
+            399377F33333F333377F993333303333399377F33337FF333373993333707333
+            333377F333777F333333993333101333333377F333777F3FFFFF993333000399
+            999377FF33777F77777F3993330003399993373FF3777F37777F399933000333
+            99933773FF777F3F777F339993707399999333773F373F77777F333999999999
+            3393333777333777337333333999993333333333377777333333}
+          NumGlyphs = 2
+          ParentShowHint = False
+          ShowHint = True
+          Transparent = False
+          OnClick = sbtActualizarExtrasClick
+        end
+        object sbtAprobarPlanilla: TSpeedButton
+          Left = 856
+          Top = 11
+          Width = 105
+          Height = 24
+          Caption = 'Aprobar Planilla'
+          Enabled = False
+          Flat = True
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            0400000000000001000000000000000000001000000010000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333000003
+            333333333F777773FF333333008888800333333377333F3773F3333077870787
+            7033333733337F33373F3308888707888803337F33337F33337F330777880887
+            7703337F33337FF3337F3308888000888803337F333777F3337F330777700077
+            7703337F33377733337F33088888888888033373FFFFFFFFFF73333000000000
+            00333337777777777733333308033308033333337F7F337F7F33333308033308
+            033333337F7F337F7F33333308033308033333337F73FF737F33333377800087
+            7333333373F77733733333333088888033333333373FFFF73333333333000003
+            3333333333777773333333333333333333333333333333333333}
+          NumGlyphs = 2
+          Transparent = False
+          OnClick = sbtAprobarPlanillaClick
+        end
+        object dbLkCbNombreEmpleado: TDBLookupComboBox
+          Left = 94
+          Top = 13
+          Width = 322
+          Height = 21
+          DataField = 'CodigoEmpleado'
+          DataSource = dsMemFiltro
+          KeyField = 'CODIGOEMPLEADO'
+          ListField = 'NOMBREEMPLEADO'
+          ListSource = dsEmpleado
+          TabOrder = 0
+          OnKeyPress = FormKeyPress
+        end
+        object dbEdCodigoEmpleado: TDBEdit
+          Left = 6
+          Top = 13
+          Width = 85
+          Height = 21
+          DataField = 'CodigoEmpleado'
+          DataSource = dsMemFiltro
+          TabOrder = 1
+          OnKeyPress = FormKeyPress
+        end
+        object DBEdit1: TDBEdit
+          Left = 972
+          Top = 13
+          Width = 110
+          Height = 21
+          BorderStyle = bsNone
+          Color = clBtnFace
+          DataField = 'Estado'
+          DataSource = dsPlanillaMesEmpleado
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 2
+        end
+      end
+      object PanelGenerar: TPanel
+        Left = 1
+        Top = 85
+        Width = 1592
+        Height = 0
+        Align = alClient
+        Caption = 'PanelGenerar'
+        TabOrder = 2
+        object Panel4: TPanel
+          Left = 1
+          Top = 1
+          Width = 1590
+          Height = 21
+          Align = alTop
+          Caption = 'Turnos Programados'
+          Color = 16744448
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWhite
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+        end
+        object dbgCalendarioProgramacion: TRxDBGrid
+          Left = 1
+          Top = 42
+          Width = 1590
+          Height = 0
+          Align = alClient
+          BorderStyle = bsNone
+          DataSource = dsCalendarioProgramacion
+          Options = [dgTitles, dgIndicator, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit]
+          TabOrder = 1
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+          OnGetCellParams = dbgCalendarioProgramacionGetCellParams
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'D1'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D2'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D3'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D4'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D5'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D6'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D7'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D8'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D9'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D10'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D11'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D12'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D13'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D14'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D15'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D16'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D17'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D18'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D19'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D20'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D21'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D22'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D23'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D24'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D25'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D26'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D27'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D28'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D29'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D30'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'D31'
+              Title.Alignment = taCenter
+              Width = 30
+              Visible = True
+            end>
+        end
+        object HeaderControl1: THeaderControl
+          Left = 1
+          Top = 22
+          Width = 1590
+          Height = 20
+          BorderWidth = 1
+          Sections = <
+            item
+              Alignment = taCenter
+              MaxWidth = 12
+              MinWidth = 12
+              Style = hsOwnerDraw
+              Width = 12
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 31
+              MinWidth = 31
+              Style = hsOwnerDraw
+              Width = 31
+            end>
+          Style = hsFlat
+          OnDrawSection = HeaderControl1DrawSection
+        end
+      end
+    end
+    object PanelLiquidacion: TPanel
+      Left = 1
+      Top = 690
+      Width = 1594
+      Height = 146
+      Align = alBottom
+      Caption = 'PanelLiquidacion'
+      TabOrder = 1
+      object dbgCantidadSobreTiempo: TRxDBGrid
+        Left = 1
+        Top = 62
+        Width = 1592
+        Height = 42
+        Align = alTop
+        DataSource = dsMemCantidadConcepto
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Options = [dgEditing, dgTitles, dgIndicator, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit]
+        ParentFont = False
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -7
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Pitch = fpVariable
+        TitleFont.Style = []
+        OnDrawColumnCell = dbgCantidadSobreTiempoDrawColumnCell
+        Columns = <
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'SRDIURNODOMINGO'
+            Title.Alignment = taCenter
+            Width = 60
+            Visible = True
+          end
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'SRDIURNOFESTIVO'
+            Title.Alignment = taCenter
+            Width = 60
+            Visible = True
+          end
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'SRNOCTURNOORDINARIO'
+            Title.Alignment = taCenter
+            Width = 60
+            Visible = True
+          end
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'SRNOCTURNODOMINGO'
+            Title.Alignment = taCenter
+            Width = 60
+            Visible = True
+          end
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'SRNOCTURNOFESTIVO'
+            Title.Alignment = taCenter
+            Width = 60
+            Visible = True
+          end
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'STDIURNOORDINARIO'
+            Title.Alignment = taCenter
+            Width = 60
+            Visible = True
+          end
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'STDIURNOORDINARIOCONV'
+            Title.Alignment = taCenter
+            Title.Caption = 'Conv. Ordinario'
+            Width = 60
+            Visible = True
+          end
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'STDIURNODOMINGOFESTIVO'
+            Title.Alignment = taCenter
+            Title.Caption = 'Dom/Fest'
+            Width = 60
+            Visible = True
+          end
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'STDIURNODOMINGOFESTIVOCONV'
+            Title.Alignment = taCenter
+            Title.Caption = 'Conv. Dom/Fest'
+            Width = 60
+            Visible = True
+          end
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'STDIURNODOMINGOFESTIVO2'
+            Title.Alignment = taCenter
+            Title.Caption = 'Dom/Fest>8'
+            Width = 60
+            Visible = True
+          end
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'STNOCTURNOORDINARIO'
+            Title.Alignment = taCenter
+            Width = 60
+            Visible = True
+          end
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'STNOCTURNOORDINARIOCONV'
+            Title.Alignment = taCenter
+            Title.Caption = 'Conv. Ordinario'
+            Width = 60
+            Visible = True
+          end
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'STNOCTURNODOMINGOFESTIVO'
+            Title.Alignment = taCenter
+            Title.Caption = 'Dom/Fest'
+            Width = 60
+            Visible = True
+          end
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'STNOCTURNODOMINGOFESTIVOCONV'
+            Title.Alignment = taCenter
+            Title.Caption = 'Conv. Dom/Fest'
+            Width = 60
+            Visible = True
+          end
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'DISPONIBILIDADSABADO'
+            Title.Alignment = taCenter
+            Title.Caption = 'Sabado'
+            Width = 60
+            Visible = True
+          end
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'DISPONIBILIDADDOMINGOFESTIVO'
+            Title.Alignment = taCenter
+            Title.Caption = 'Dom/Fest'
+            Width = 60
+            Visible = True
+          end>
+      end
+      object SeparadorResumenSobreTiempo: TPanel
+        Left = 1
+        Top = 1
+        Width = 1592
+        Height = 21
+        Align = alTop
+        Caption = 'Liquidación SobreRemuneración y SobreTiempo'
+        Color = 16744448
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 1
+      end
+      object dbgLiquidacionSobretiempo: TRxDBGrid
+        Left = 1
+        Top = 104
+        Width = 1592
+        Height = 41
+        Align = alClient
+        DataSource = dsTdMemCantidadPorcentaje
+        TabOrder = 2
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+        OnDrawColumnCell = dbgLiquidacionSobretiempoDrawColumnCell
+      end
+      object HeaderControl2: THeaderControl
+        Left = 1
+        Top = 22
+        Width = 1592
+        Height = 20
+        BorderWidth = 1
+        Sections = <
+          item
+            Alignment = taCenter
+            MaxWidth = 14
+            MinWidth = 14
+            Width = 14
+          end
+          item
+            Alignment = taCenter
+            MaxWidth = 305
+            MinWidth = 305
+            Text = 'SobreRemuneración'
+            Width = 305
+          end
+          item
+            Alignment = taCenter
+            MaxWidth = 549
+            MinWidth = 549
+            Text = 'SobreTiempo'
+            Width = 549
+          end
+          item
+            Alignment = taCenter
+            MaxWidth = 122
+            MinWidth = 122
+            Text = 'Otros'
+            Width = 122
+          end>
+        Style = hsFlat
+      end
+      object HeaderControl3: THeaderControl
+        Left = 1
+        Top = 42
+        Width = 1592
+        Height = 20
+        BorderWidth = 1
+        Sections = <
+          item
+            Alignment = taCenter
+            MaxWidth = 14
+            MinWidth = 14
+            Width = 14
+          end
+          item
+            Alignment = taCenter
+            MaxWidth = 162
+            MinWidth = 122
+            Text = 'Diurno'
+            Width = 122
+          end
+          item
+            Alignment = taCenter
+            MaxWidth = 243
+            MinWidth = 183
+            Text = 'Nocturno'
+            Width = 183
+          end
+          item
+            Alignment = taCenter
+            MaxWidth = 305
+            MinWidth = 305
+            Text = 'Diurno'
+            Width = 305
+          end
+          item
+            Alignment = taCenter
+            MaxWidth = 244
+            MinWidth = 244
+            Text = 'Nocturno'
+            Width = 244
+          end
+          item
+            Alignment = taCenter
+            MaxWidth = 122
+            MinWidth = 122
+            Text = 'Disponibilidad'
+            Width = 122
+          end>
+        Style = hsFlat
+      end
+    end
+    object PanelTurnosMes: TPanel
+      Left = 1
+      Top = 86
+      Width = 1594
+      Height = 604
+      Align = alClient
+      Caption = 'PanelTurnosMes'
+      Color = clBlack
+      TabOrder = 2
+      object PanelEncabezadoPlanilla: TPanel
+        Left = 1
+        Top = 1
+        Width = 1592
+        Height = 21
+        Align = alTop
+        Caption = 'Asignación Mensual Empleado'
+        Color = 16744448
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+      end
+      object PanelDetalle: TPanel
+        Left = 1
+        Top = 518
+        Width = 1592
+        Height = 85
+        Align = alBottom
+        Caption = 'PanelDetalle'
+        TabOrder = 1
+        Visible = False
+        object PanelDetalleExtras: TPanel
+          Left = 257
+          Top = 1
+          Width = 1334
+          Height = 83
+          Align = alClient
+          Caption = 'PanelDetalle'
+          TabOrder = 0
+          object dbgSobreTiempoDetalle: TRxDBGrid
+            Left = 1
+            Top = 22
+            Width = 1332
+            Height = 60
+            Align = alClient
+            BorderStyle = bsNone
+            DataSource = dsOdtSobreTiempoDetalle
+            TabOrder = 0
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'MS Sans Serif'
+            TitleFont.Style = []
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'CODIGOODT'
+                Title.Alignment = taCenter
+                Width = 60
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CANTIDADDIURNA'
+                Title.Alignment = taCenter
+                Width = 40
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CANTIDADNOCTURNA'
+                Title.Alignment = taCenter
+                Width = 40
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'DESDEHASTA'
+                Title.Alignment = taCenter
+                Width = 140
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'OBSERVACION'
+                Title.Alignment = taCenter
+                Width = 207
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CONVENCIONAL'
+                PickList.Strings = (
+                  'S'
+                  'N')
+                Width = 70
+                Visible = True
+              end>
+          end
+          object PanelEncabezadoExtrasDia: TPanel
+            Left = 1
+            Top = 1
+            Width = 1332
+            Height = 21
+            Align = alTop
+            BevelOuter = bvNone
+            Color = 16744448
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 1
+            object Label7: TLabel
+              Left = 222
+              Top = 3
+              Width = 73
+              Height = 13
+              Caption = 'Extras del Día :'
+            end
+            object dbtDiaExtras: TDBText
+              Left = 321
+              Top = 3
+              Width = 170
+              Height = 13
+              DataField = 'FECHA'
+            end
+          end
+        end
+        object PanelInferiorTurno: TPanel
+          Left = 1
+          Top = 1
+          Width = 256
+          Height = 83
+          Align = alLeft
+          Caption = 'PanelInferiorTurno'
+          TabOrder = 1
+          object PanelEncabezadoTurnoDia: TPanel
+            Left = 1
+            Top = 1
+            Width = 254
+            Height = 21
+            Align = alTop
+            BevelOuter = bvNone
+            Color = 16744448
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 0
+            object Label6: TLabel
+              Left = 30
+              Top = 3
+              Width = 77
+              Height = 13
+              Caption = 'Turnos del Día :'
+            end
+            object dbtDiaTurno: TDBText
+              Left = 119
+              Top = 3
+              Width = 170
+              Height = 13
+              DataField = 'FECHA'
+            end
+          end
+          object dbgTurnoDetalle: TRxDBGrid
+            Left = 1
+            Top = 22
+            Width = 254
+            Height = 60
+            Align = alClient
+            BorderStyle = bsNone
+            DataSource = dsTurnoEmpleadoDetalle
+            TabOrder = 1
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'MS Sans Serif'
+            TitleFont.Style = []
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'FECHA'
+                Title.Alignment = taCenter
+                Title.Caption = 'Fecha'
+                Width = 66
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CANTIDADDIURNA'
+                Title.Alignment = taCenter
+                Title.Caption = 'H.D.'
+                Width = 35
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'CANTIDADNOCTURNA'
+                Title.Alignment = taCenter
+                Title.Caption = 'H.N.'
+                Width = 35
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'DesdeHasta'
+                Title.Alignment = taCenter
+                Title.Caption = 'De - A'
+                Width = 82
+                Visible = True
+              end>
+          end
+        end
+      end
+      object Panel5: TPanel
+        Left = 1
+        Top = 22
+        Width = 1592
+        Height = 496
+        Align = alClient
+        Caption = 'Panel5'
+        TabOrder = 2
+        object dbgTurnoEmpleado: TRxDBGrid
+          Left = 1
+          Top = 21
+          Width = 1590
+          Height = 456
+          Align = alClient
+          BorderStyle = bsNone
+          DataSource = dsTurnoEmpleado
+          Options = [dgEditing, dgTitles, dgIndicator, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit]
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+          OnGetCellParams = dbgTurnoEmpleadoGetCellParams
+          Columns = <
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'D'
+              ReadOnly = True
+              Title.Alignment = taCenter
+              Width = 25
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'Descripcion'
+              Title.Alignment = taCenter
+              Width = 131
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'CANTIDADDIURNA'
+              ReadOnly = True
+              Title.Alignment = taCenter
+              Title.Caption = 'H.D.'
+              Width = 35
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'DESDEHASTADIURNA'
+              ReadOnly = True
+              Title.Alignment = taCenter
+              Title.Caption = 'De - A'
+              Width = 80
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'CANTIDADNOCTURNA'
+              ReadOnly = True
+              Title.Alignment = taCenter
+              Title.Caption = 'H.N.'
+              Width = 35
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'DESDEHASTANOCTURNA'
+              ReadOnly = True
+              Title.Alignment = taCenter
+              Title.Caption = 'De - A'
+              Width = 80
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'OBSERVACION'
+              ReadOnly = True
+              Title.Alignment = taCenter
+              Width = 150
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'CantidadExtraDiurnaTotal'
+              ReadOnly = True
+              Title.Alignment = taCenter
+              Title.Caption = 'H.D.'
+              Width = 35
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'DESDEHASTAEXTRADIURNA'
+              ReadOnly = True
+              Title.Alignment = taCenter
+              Title.Caption = 'De - A'
+              Width = 80
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'CantidadExtraNocturnaTotal'
+              ReadOnly = True
+              Title.Alignment = taCenter
+              Title.Caption = 'H.N.'
+              Width = 35
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'DESDEHASTAEXTRANOCTURNA'
+              ReadOnly = True
+              Title.Alignment = taCenter
+              Title.Caption = 'De - A'
+              Width = 80
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'OBSERVACIONEXTRA'
+              ReadOnly = True
+              Title.Alignment = taCenter
+              Width = 150
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'D'
+              ReadOnly = True
+              Title.Alignment = taCenter
+              Width = 25
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'CANTIDADEXTRADISPONIBILIDAD'
+              Title.Alignment = taCenter
+              Title.Caption = 'Disponibilidad'
+              Visible = True
+            end>
+        end
+        object DBNavigator2: TDBNavigator
+          Left = 1
+          Top = 477
+          Width = 1590
+          Height = 18
+          VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbEdit, nbPost, nbCancel]
+          Align = alBottom
+          Flat = True
+          Hints.Strings = (
+            'First record'
+            'Prior record'
+            'Next record'
+            'Last record'
+            'Edit record'
+            'Post edit'
+            'Cancel edit'
+            'Refresh data')
+          ParentShowHint = False
+          ShowHint = False
+          TabOrder = 1
+        end
+        object HeaderControl5: THeaderControl
+          Left = 1
+          Top = 1
+          Width = 1590
+          Height = 20
+          BorderWidth = 1
+          Sections = <
+            item
+              Alignment = taCenter
+              MaxWidth = 170
+              MinWidth = 170
+              Text = 'TURNO DÍA'
+              Width = 170
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 385
+              MinWidth = 385
+              Text = 'HORAS TURNOS NORMALES'
+              Width = 385
+            end
+            item
+              Alignment = taCenter
+              MaxWidth = 410
+              MinWidth = 410
+              Text = 'HORAS EXTRAS'
+              Width = 410
+            end>
+          Style = hsFlat
+        end
+      end
+    end
+  end
+  object dsMemFiltro: TDataSource
+    DataSet = tdMemFiltro
+    Left = 36
+    Top = 437
+  end
+  object qEmpleado: TQuery
+    BeforeOpen = qEmpleadoBeforeOpen
+    DatabaseName = 'BaseDato'
+    DataSource = dsCIA
+    SQL.Strings = (
+      'SELECT E.CODIGOEMPLEADO, E.NOMBREEMPLEADO,SE.TIPO_CONTRATO'
+      'FROM EMPLEADO E, SIP_EMPLEADO SE'
+      'WHERE CODIGOADMINISTRATIVO=:CODIGOADMINISTRATIVO'
+      'AND E.CODIGOEMPLEADO=SE.CODIGO'
+      'AND ((E.estado IN ('#39'AC'#39','#39'LC'#39')) OR (E.estado IS NULL))'
+      'ORDER BY NOMBREEMPLEADO')
+    Left = 139
+    Top = 392
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end>
+    object qEmpleadoCODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'EMPLEADO.CODIGOEMPLEADO'
+    end
+    object qEmpleadoNOMBREEMPLEADO: TStringField
+      FieldName = 'NOMBREEMPLEADO'
+      Origin = 'EMPLEADO.NOMBREEMPLEADO'
+      Size = 50
+    end
+    object qEmpleadoTIPO_CONTRATO: TFloatField
+      FieldName = 'TIPO_CONTRATO'
+    end
+  end
+  object dsEmpleado: TDataSource
+    DataSet = qEmpleado
+    Left = 158
+    Top = 437
+  end
+  object qCIA: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOADMINISTRATIVO, NOMBRECATEGORIA'
+      'FROM ADMINISTRATIVO'
+      'WHERE CODIGOADMINISTRATIVO>0'
+      'ORDER BY NOMBRECATEGORIA')
+    Left = 94
+    Top = 392
+    object qCIACODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.CODIGOADMINISTRATIVO'
+    end
+    object qCIANOMBRECATEGORIA: TStringField
+      FieldName = 'NOMBRECATEGORIA'
+      Origin = 'ADMINISTRATIVO.NOMBRECATEGORIA'
+      Size = 80
+    end
+    object qCIAREABRIR: TStringField
+      FieldKind = fkLookup
+      FieldName = 'REABRIR'
+      LookupDataSet = qOdtPermisos
+      LookupKeyFields = 'CODIGOADMINISTRATIVO'
+      LookupResultField = 'REABRIR'
+      KeyFields = 'CODIGOADMINISTRATIVO'
+      Size = 1
+      Lookup = True
+    end
+  end
+  object dsCIA: TDataSource
+    DataSet = qCIA
+    Left = 94
+    Top = 437
+  end
+  object pmVer: TPopupMenu
+    Left = 82
+    Top = 203
+    object VerProgramacinTurnos1: TMenuItem
+      Caption = 'Ver Programación Turnos'
+      OnClick = VerProgramacinTurnos1Click
+    end
+    object VerDetalleTurnosDa1: TMenuItem
+      Caption = 'Ver Detalle Turnos/Extras Día'
+      OnClick = VerDetalleTurnosDa1Click
+    end
+  end
+  object pmMeses: TPopupMenu
+    Alignment = paCenter
+    Left = 83
+    Top = 250
+    object Enero1: TMenuItem
+      Tag = 1
+      Caption = 'Enero'
+      OnClick = MesClick
+    end
+    object Febrero1: TMenuItem
+      Tag = 2
+      Caption = 'Febrero'
+      OnClick = MesClick
+    end
+    object Marzo1: TMenuItem
+      Tag = 3
+      Caption = 'Marzo'
+      OnClick = MesClick
+    end
+    object Abril1: TMenuItem
+      Tag = 4
+      Caption = 'Abril'
+      OnClick = MesClick
+    end
+    object Mayo1: TMenuItem
+      Tag = 5
+      Caption = 'Mayo'
+      OnClick = MesClick
+    end
+    object Junio1: TMenuItem
+      Tag = 6
+      Caption = 'Junio'
+      OnClick = MesClick
+    end
+    object Julio1: TMenuItem
+      Tag = 7
+      Caption = 'Julio'
+      OnClick = MesClick
+    end
+    object Agosto1: TMenuItem
+      Tag = 8
+      Caption = 'Agosto'
+      OnClick = MesClick
+    end
+    object Septiembre1: TMenuItem
+      Tag = 9
+      Caption = 'Septiembre'
+      OnClick = MesClick
+    end
+    object Octubre1: TMenuItem
+      Tag = 10
+      Caption = 'Octubre'
+      OnClick = MesClick
+    end
+    object Noviembre1: TMenuItem
+      Tag = 11
+      Caption = 'Noviembre'
+      OnClick = MesClick
+    end
+    object Diciembre1: TMenuItem
+      Tag = 12
+      Caption = 'Diciembre'
+      OnClick = MesClick
+    end
+  end
+  object qCalendarioProgramacion: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsMemFiltro
+    SQL.Strings = (
+      'SELECT * FROM CALENDARIOPROGRAMACION'
+      'WHERE CODIGOEMPLEADO=:CODIGOEMPLEADO'
+      'AND FECHA=:FECHA')
+    Left = 226
+    Top = 392
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CodigoEmpleado'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDate
+        Name = 'Fecha'
+        ParamType = ptUnknown
+      end>
+    object qCalendarioProgramacionCODIGOEMPLEADO: TFloatField
+      Alignment = taCenter
+      DisplayLabel = 'Cédula No.'
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'CALENDARIOPROGRAMACION.CODIGOEMPLEADO'
+    end
+    object qCalendarioProgramacionCODIGOPROGRAMACION: TFloatField
+      Alignment = taCenter
+      DisplayLabel = 'Código Programación'
+      FieldName = 'CODIGOPROGRAMACION'
+      Origin = 'CALENDARIOPROGRAMACION.CODIGOPROGRAMACION'
+    end
+    object qCalendarioProgramacionFECHA: TDateTimeField
+      Alignment = taCenter
+      DisplayLabel = 'Fecha'
+      FieldName = 'FECHA'
+      Origin = 'CALENDARIOPROGRAMACION.FECHA'
+    end
+    object qCalendarioProgramacionD1: TFloatField
+      Alignment = taCenter
+      FieldName = 'D1'
+      Origin = 'CALENDARIOPROGRAMACION.D1'
+    end
+    object qCalendarioProgramacionD2: TFloatField
+      Alignment = taCenter
+      FieldName = 'D2'
+      Origin = 'CALENDARIOPROGRAMACION.D2'
+    end
+    object qCalendarioProgramacionD3: TFloatField
+      Alignment = taCenter
+      FieldName = 'D3'
+      Origin = 'CALENDARIOPROGRAMACION.D3'
+    end
+    object qCalendarioProgramacionD4: TFloatField
+      Alignment = taCenter
+      FieldName = 'D4'
+      Origin = 'CALENDARIOPROGRAMACION.D4'
+    end
+    object qCalendarioProgramacionD5: TFloatField
+      Alignment = taCenter
+      FieldName = 'D5'
+      Origin = 'CALENDARIOPROGRAMACION.D5'
+    end
+    object qCalendarioProgramacionD6: TFloatField
+      Alignment = taCenter
+      FieldName = 'D6'
+      Origin = 'CALENDARIOPROGRAMACION.D6'
+    end
+    object qCalendarioProgramacionD7: TFloatField
+      Alignment = taCenter
+      FieldName = 'D7'
+      Origin = 'CALENDARIOPROGRAMACION.D7'
+    end
+    object qCalendarioProgramacionD8: TFloatField
+      Alignment = taCenter
+      FieldName = 'D8'
+      Origin = 'CALENDARIOPROGRAMACION.D8'
+    end
+    object qCalendarioProgramacionD9: TFloatField
+      Alignment = taCenter
+      FieldName = 'D9'
+      Origin = 'CALENDARIOPROGRAMACION.D9'
+    end
+    object qCalendarioProgramacionD10: TFloatField
+      Alignment = taCenter
+      FieldName = 'D10'
+      Origin = 'CALENDARIOPROGRAMACION.D10'
+    end
+    object qCalendarioProgramacionD11: TFloatField
+      Alignment = taCenter
+      FieldName = 'D11'
+      Origin = 'CALENDARIOPROGRAMACION.D11'
+    end
+    object qCalendarioProgramacionD12: TFloatField
+      Alignment = taCenter
+      FieldName = 'D12'
+      Origin = 'CALENDARIOPROGRAMACION.D12'
+    end
+    object qCalendarioProgramacionD13: TFloatField
+      Alignment = taCenter
+      FieldName = 'D13'
+      Origin = 'CALENDARIOPROGRAMACION.D13'
+    end
+    object qCalendarioProgramacionD14: TFloatField
+      Alignment = taCenter
+      FieldName = 'D14'
+      Origin = 'CALENDARIOPROGRAMACION.D14'
+    end
+    object qCalendarioProgramacionD15: TFloatField
+      Alignment = taCenter
+      FieldName = 'D15'
+      Origin = 'CALENDARIOPROGRAMACION.D15'
+    end
+    object qCalendarioProgramacionD16: TFloatField
+      Alignment = taCenter
+      FieldName = 'D16'
+      Origin = 'CALENDARIOPROGRAMACION.D16'
+    end
+    object qCalendarioProgramacionD17: TFloatField
+      Alignment = taCenter
+      FieldName = 'D17'
+      Origin = 'CALENDARIOPROGRAMACION.D17'
+    end
+    object qCalendarioProgramacionD18: TFloatField
+      Alignment = taCenter
+      FieldName = 'D18'
+      Origin = 'CALENDARIOPROGRAMACION.D18'
+    end
+    object qCalendarioProgramacionD19: TFloatField
+      Alignment = taCenter
+      FieldName = 'D19'
+      Origin = 'CALENDARIOPROGRAMACION.D19'
+    end
+    object qCalendarioProgramacionD20: TFloatField
+      Alignment = taCenter
+      FieldName = 'D20'
+      Origin = 'CALENDARIOPROGRAMACION.D20'
+    end
+    object qCalendarioProgramacionD21: TFloatField
+      Alignment = taCenter
+      FieldName = 'D21'
+      Origin = 'CALENDARIOPROGRAMACION.D21'
+    end
+    object qCalendarioProgramacionD22: TFloatField
+      Alignment = taCenter
+      FieldName = 'D22'
+      Origin = 'CALENDARIOPROGRAMACION.D22'
+    end
+    object qCalendarioProgramacionD23: TFloatField
+      Alignment = taCenter
+      FieldName = 'D23'
+      Origin = 'CALENDARIOPROGRAMACION.D23'
+    end
+    object qCalendarioProgramacionD24: TFloatField
+      Alignment = taCenter
+      FieldName = 'D24'
+      Origin = 'CALENDARIOPROGRAMACION.D24'
+    end
+    object qCalendarioProgramacionD25: TFloatField
+      Alignment = taCenter
+      FieldName = 'D25'
+      Origin = 'CALENDARIOPROGRAMACION.D25'
+    end
+    object qCalendarioProgramacionD26: TFloatField
+      Alignment = taCenter
+      FieldName = 'D26'
+      Origin = 'CALENDARIOPROGRAMACION.D26'
+    end
+    object qCalendarioProgramacionD27: TFloatField
+      Alignment = taCenter
+      FieldName = 'D27'
+      Origin = 'CALENDARIOPROGRAMACION.D27'
+    end
+    object qCalendarioProgramacionD28: TFloatField
+      Alignment = taCenter
+      FieldName = 'D28'
+      Origin = 'CALENDARIOPROGRAMACION.D28'
+    end
+    object qCalendarioProgramacionD29: TFloatField
+      Alignment = taCenter
+      FieldName = 'D29'
+      Origin = 'CALENDARIOPROGRAMACION.D29'
+    end
+    object qCalendarioProgramacionD30: TFloatField
+      Alignment = taCenter
+      FieldName = 'D30'
+      Origin = 'CALENDARIOPROGRAMACION.D30'
+    end
+    object qCalendarioProgramacionD31: TFloatField
+      Alignment = taCenter
+      FieldName = 'D31'
+      Origin = 'CALENDARIOPROGRAMACION.D31'
+    end
+    object qCalendarioProgramacionCODIGOESTADOPROGRAMACION: TStringField
+      Alignment = taCenter
+      DisplayLabel = 'Estado Programación'
+      FieldName = 'CODIGOESTADOPROGRAMACION'
+      Origin = 'CALENDARIOPROGRAMACION.CODIGOESTADOPROGRAMACION'
+      Size = 3
+    end
+    object qCalendarioProgramacionDIADESCANSO: TFloatField
+      Alignment = taCenter
+      DisplayLabel = 'Día Descanso'
+      FieldName = 'DIADESCANSO'
+      Origin = 'CALENDARIOPROGRAMACION.DIADESCANSO'
+    end
+  end
+  object dsCalendarioProgramacion: TDataSource
+    DataSet = qCalendarioProgramacion
+    Left = 226
+    Top = 437
+  end
+  object qPlanilla: TQuery
+    CachedUpdates = True
+    AfterInsert = qPlanillaAfterInsert
+    AfterPost = qPlanillaAfterPost
+    AfterDelete = qPlanillaAfterDelete
+    OnCalcFields = qPlanillaCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsMemFiltro
+    SQL.Strings = (
+      'SELECT CODIGOPLANILLATURNOEMPLEADO,TO_CHAR(DIA,'#39'DD'#39') D,'
+      
+        ' CODIGOEMPLEADO,FECHA,DIA, CANTIDADDIURNA,CANTIDADNOCTURNA,OBSER' +
+        'VACION,'
+      ' DESDEHASTADIURNA,DESDEHASTANOCTURNA, '
+      ' CANTIDADEXTRADIURNA,CANTIDADEXTRANOCTURNA,'
+      ' DESDEHASTAEXTRADIURNA,DESDEHASTAEXTRANOCTURNA,'
+      ' OBSERVACIONEXTRA,CODIGOESTADOPLANILLA,CANTIDADEXTRADIURNACONV,'
+      ' CANTIDADEXTRANOCTURNACONV,CANTIDADEXTRADISPONIBILIDAD'
+      'FROM PLANILLATURNOEMPLEADO'
+      'WHERE CODIGOEMPLEADO=:CODIGOEMPLEADO'
+      'AND FECHA=:FECHA '
+      'ORDER BY DIA')
+    UpdateObject = updPlanilla
+    Left = 536
+    Top = 107
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOEMPLEADO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FECHA'
+        ParamType = ptUnknown
+      end>
+    object qPlanillaCODIGOPLANILLATURNOEMPLEADO: TFloatField
+      FieldName = 'CODIGOPLANILLATURNOEMPLEADO'
+    end
+    object qPlanillaCODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+    end
+    object qPlanillaCANTIDADDIURNA: TFloatField
+      FieldName = 'CANTIDADDIURNA'
+    end
+    object qPlanillaCANTIDADNOCTURNA: TFloatField
+      FieldName = 'CANTIDADNOCTURNA'
+    end
+    object qPlanillaOBSERVACION: TStringField
+      FieldName = 'OBSERVACION'
+      Size = 50
+    end
+    object qPlanillaDESDEHASTADIURNA: TStringField
+      FieldName = 'DESDEHASTADIURNA'
+      Size = 40
+    end
+    object qPlanillaDESDEHASTANOCTURNA: TStringField
+      FieldName = 'DESDEHASTANOCTURNA'
+      Size = 40
+    end
+    object qPlanillaCANTIDADEXTRADIURNA: TFloatField
+      FieldName = 'CANTIDADEXTRADIURNA'
+    end
+    object qPlanillaCANTIDADEXTRANOCTURNA: TFloatField
+      FieldName = 'CANTIDADEXTRANOCTURNA'
+    end
+    object qPlanillaDESDEHASTAEXTRADIURNA: TStringField
+      FieldName = 'DESDEHASTAEXTRADIURNA'
+      Size = 40
+    end
+    object qPlanillaDESDEHASTAEXTRANOCTURNA: TStringField
+      FieldName = 'DESDEHASTAEXTRANOCTURNA'
+      Size = 40
+    end
+    object qPlanillaOBSERVACIONEXTRA: TStringField
+      FieldName = 'OBSERVACIONEXTRA'
+      Size = 50
+    end
+    object qPlanillaCODIGOESTADOPLANILLA: TStringField
+      FieldName = 'CODIGOESTADOPLANILLA'
+      Size = 3
+    end
+    object qPlanillaCANTIDADEXTRADIURNACONV: TFloatField
+      FieldName = 'CANTIDADEXTRADIURNACONV'
+    end
+    object qPlanillaCANTIDADEXTRANOCTURNACONV: TFloatField
+      FieldName = 'CANTIDADEXTRANOCTURNACONV'
+    end
+    object qPlanillaCANTIDADEXTRADISPONIBILIDAD: TFloatField
+      FieldName = 'CANTIDADEXTRADISPONIBILIDAD'
+    end
+    object qPlanillaFECHA: TDateTimeField
+      FieldName = 'FECHA'
+    end
+    object qPlanillaDIA: TDateTimeField
+      FieldName = 'DIA'
+    end
+    object qPlanillaD: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'D'
+      Size = 2
+      Calculated = True
+    end
+  end
+  object dsPlanilla: TDataSource
+    DataSet = qPlanilla
+    Left = 537
+    Top = 152
+  end
+  object updPlanilla: TUpdateSQL
+    ModifySQL.Strings = (
+      'update PLANILLATURNOEMPLEADO'
+      'set'
+      '  CODIGOPLANILLATURNOEMPLEADO = :CODIGOPLANILLATURNOEMPLEADO,'
+      '  CODIGOEMPLEADO = :CODIGOEMPLEADO,'
+      '  FECHA = :FECHA,'
+      '  DIA = :DIA,'
+      '  CANTIDADDIURNA = :CANTIDADDIURNA,'
+      '  CANTIDADNOCTURNA = :CANTIDADNOCTURNA,'
+      '  DESDEHASTADIURNA = :DESDEHASTADIURNA,'
+      '  DESDEHASTANOCTURNA = :DESDEHASTANOCTURNA,'
+      '  OBSERVACION = :OBSERVACION,'
+      '  CANTIDADEXTRADIURNA = :CANTIDADEXTRADIURNA,'
+      '  CANTIDADEXTRANOCTURNA = :CANTIDADEXTRANOCTURNA,'
+      '  DESDEHASTAEXTRADIURNA = :DESDEHASTAEXTRADIURNA,'
+      '  DESDEHASTAEXTRANOCTURNA = :DESDEHASTAEXTRANOCTURNA,'
+      '  OBSERVACIONEXTRA = :OBSERVACIONEXTRA,'
+      '  CODIGOESTADOPLANILLA = :CODIGOESTADOPLANILLA,'
+      '  CANTIDADEXTRADIURNACONV = :CANTIDADEXTRADIURNACONV,'
+      '  CANTIDADEXTRANOCTURNACONV = :CANTIDADEXTRANOCTURNACONV,'
+      '  CANTIDADEXTRADISPONIBILIDAD = :CANTIDADEXTRADISPONIBILIDAD'
+      'where'
+      '  CODIGOPLANILLATURNOEMPLEADO = '
+      ':OLD_CODIGOPLANILLATURNOEMPLEADO and'
+      '  CODIGOEMPLEADO = :OLD_CODIGOEMPLEADO and'
+      '  FECHA = :OLD_FECHA and'
+      '  DIA = :OLD_DIA')
+    InsertSQL.Strings = (
+      'insert into PLANILLATURNOEMPLEADO'
+      
+        '  (CODIGOPLANILLATURNOEMPLEADO, CODIGOEMPLEADO, FECHA, DIA, CANT' +
+        'IDADDIURNA, '
+      
+        '   CANTIDADNOCTURNA, DESDEHASTADIURNA, DESDEHASTANOCTURNA, OBSER' +
+        'VACION, '
+      
+        '   CANTIDADEXTRADIURNA, CANTIDADEXTRANOCTURNA, DESDEHASTAEXTRADI' +
+        'URNA, DESDEHASTAEXTRANOCTURNA, '
+      
+        '   OBSERVACIONEXTRA, CODIGOESTADOPLANILLA, CANTIDADEXTRADIURNACO' +
+        'NV, CANTIDADEXTRANOCTURNACONV, '
+      '   CANTIDADEXTRADISPONIBILIDAD)'
+      'values'
+      
+        '  (:CODIGOPLANILLATURNOEMPLEADO, :CODIGOEMPLEADO, :FECHA, :DIA, ' +
+        ':CANTIDADDIURNA, '
+      
+        '   :CANTIDADNOCTURNA, :DESDEHASTADIURNA, :DESDEHASTANOCTURNA, :O' +
+        'BSERVACION, '
+      
+        '   :CANTIDADEXTRADIURNA, :CANTIDADEXTRANOCTURNA, :DESDEHASTAEXTR' +
+        'ADIURNA, '
+      
+        '   :DESDEHASTAEXTRANOCTURNA, :OBSERVACIONEXTRA, :CODIGOESTADOPLA' +
+        'NILLA, '
+      
+        '   :CANTIDADEXTRADIURNACONV, :CANTIDADEXTRANOCTURNACONV, :CANTID' +
+        'ADEXTRADISPONIBILIDAD)')
+    DeleteSQL.Strings = (
+      'delete from PLANILLATURNOEMPLEADO'
+      'where'
+      
+        '  CODIGOPLANILLATURNOEMPLEADO = :OLD_CODIGOPLANILLATURNOEMPLEADO' +
+        ' and'
+      '  CODIGOEMPLEADO = :OLD_CODIGOEMPLEADO and'
+      '  FECHA = :OLD_FECHA and'
+      '  DIA = :OLD_DIA')
+    Left = 535
+    Top = 197
+  end
+  object qOdtSobreTiempoDetalle: TQuery
+    CachedUpdates = True
+    AfterPost = qOdtSobreTiempoDetalleAfterPost
+    OnCalcFields = qOdtSobreTiempoDetalleCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsTurnoEmpleado
+    SQL.Strings = (
+      'SELECT OD.CODIGOODTSOBRETIEMPODETALLE,'
+      ' OD.CODIGOODTSOBRETIEMPO,OD.CODIGOODT,OD.CODIGOEMPLEADO,'
+      ' OD.FECHAHORADESDE, OD.FECHAHORAHASTA,OD.CANTIDADDIURNA,'
+      ' OD.CANTIDADNOCTURNA,OD.OBSERVACION,OD.CONVENCIONAL'
+      'FROM ODTSOBRETIEMPODETALLE OD,ODTSOBRETIEMPO O'
+      'WHERE O.CODIGOODTSOBRETIEMPO=OD.CODIGOODTSOBRETIEMPO'
+      'AND OD.CODIGOEMPLEADO=:CODIGOEMPLEADO'
+      
+        'AND ((FECHAHORADESDE>=:FECHA AND FECHAHORADESDE<:DIASIGUIENTE) O' +
+        'R'
+      '     (FECHAHORAHASTA>:FECHA AND FECHAHORAHASTA<=:DIASIGUIENTE))')
+    UpdateObject = updOdtSobreTiempoDetalle
+    Left = 727
+    Top = 108
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOEMPLEADO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'DIASIGUIENTE'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'DIASIGUIENTE'
+        ParamType = ptUnknown
+      end>
+    object qOdtSobreTiempoDetalleCODIGOODTSOBRETIEMPODETALLE: TFloatField
+      Alignment = taCenter
+      DisplayLabel = 'Código OdtSobreTiempoDetalle'
+      FieldName = 'CODIGOODTSOBRETIEMPODETALLE'
+      Origin = 'ODTSOBRETIEMPODETALLE.CODIGOODTSOBRETIEMPODETALLE'
+    end
+    object qOdtSobreTiempoDetalleCODIGOODTSOBRETIEMPO: TFloatField
+      Alignment = taCenter
+      DisplayLabel = 'Código OdtSobreTiempo'
+      FieldName = 'CODIGOODTSOBRETIEMPO'
+      Origin = 'ODTSOBRETIEMPODETALLE.CODIGOODTSOBRETIEMPO'
+    end
+    object qOdtSobreTiempoDetalleCODIGOODT: TFloatField
+      Alignment = taCenter
+      DisplayLabel = 'Código Odt'
+      FieldName = 'CODIGOODT'
+      Origin = 'ODTSOBRETIEMPODETALLE.CODIGOODT'
+    end
+    object qOdtSobreTiempoDetalleCODIGOEMPLEADO: TFloatField
+      Alignment = taCenter
+      DisplayLabel = 'Cédula No.'
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'ODTSOBRETIEMPODETALLE.CODIGOEMPLEADO'
+    end
+    object qOdtSobreTiempoDetalleFECHAHORADESDE: TDateTimeField
+      Alignment = taCenter
+      DisplayLabel = 'Desde'
+      FieldName = 'FECHAHORADESDE'
+      Origin = 'ODTSOBRETIEMPODETALLE.FECHAHORADESDE'
+    end
+    object qOdtSobreTiempoDetalleFECHAHORAHASTA: TDateTimeField
+      Alignment = taCenter
+      DisplayLabel = 'Hasta'
+      FieldName = 'FECHAHORAHASTA'
+      Origin = 'ODTSOBRETIEMPODETALLE.FECHAHORAHASTA'
+    end
+    object qOdtSobreTiempoDetalleCANTIDADDIURNA: TFloatField
+      Alignment = taCenter
+      DisplayLabel = 'H.E.D.'
+      FieldName = 'CANTIDADDIURNA'
+      Origin = 'ODTSOBRETIEMPODETALLE.CANTIDADDIURNA'
+    end
+    object qOdtSobreTiempoDetalleCANTIDADNOCTURNA: TFloatField
+      Alignment = taCenter
+      DisplayLabel = 'H.E.N.'
+      FieldName = 'CANTIDADNOCTURNA'
+      Origin = 'ODTSOBRETIEMPODETALLE.CANTIDADNOCTURNA'
+    end
+    object qOdtSobreTiempoDetalleDESDEHASTA: TStringField
+      Alignment = taCenter
+      DisplayLabel = 'De - A'
+      FieldKind = fkCalculated
+      FieldName = 'DESDEHASTA'
+      Size = 40
+      Calculated = True
+    end
+    object qOdtSobreTiempoDetalleCONVENCIONAL: TStringField
+      Alignment = taCenter
+      DisplayLabel = 'Convencional'
+      FieldName = 'CONVENCIONAL'
+      Origin = 'ODTSOBRETIEMPODETALLE.CONVENCIONAL'
+      OnValidate = qOdtSobreTiempoDetalleCONVENCIONALValidate
+      Size = 1
+    end
+    object qOdtSobreTiempoDetalleOBSERVACION: TStringField
+      FieldName = 'OBSERVACION'
+      Origin = 'ODTSOBRETIEMPODETALLE.OBSERVACION'
+      Size = 50
+    end
+  end
+  object dsOdtSobreTiempoDetalle: TDataSource
+    DataSet = qOdtSobreTiempoDetalle
+    Left = 727
+    Top = 152
+  end
+  object qTipoTurnoProgramacion: TQuery
+    OnCalcFields = qTipoTurnoProgramacionCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsMemFiltro
+    SQL.Strings = (
+      'SELECT CODIGOTIPOTURNO,CODIGOTURNO,JORNADA,'
+      'FECHADESDE, FECHAHASTA,DESCRIPCION'
+      'FROM TIPOTURNODETALLE'
+      'WHERE CODIGOTIPOTURNO=:CODIGOTIPOTURNO'
+      'ORDER BY 1,2,3')
+    Left = 378
+    Top = 392
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOTIPOTURNO'
+        ParamType = ptUnknown
+      end>
+    object qTipoTurnoProgramacionCODIGOTIPOTURNO: TFloatField
+      FieldName = 'CODIGOTIPOTURNO'
+      Origin = 'TIPOTURNODETALLE.CODIGOTIPOTURNO'
+    end
+    object qTipoTurnoProgramacionCODIGOTURNO: TFloatField
+      FieldName = 'CODIGOTURNO'
+      Origin = 'DETALLETIPOTURNOPROGRAMACION.CODIGOTURNO'
+    end
+    object qTipoTurnoProgramacionDesdeHasta: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'DesdeHasta'
+      Size = 40
+      Calculated = True
+    end
+    object qTipoTurnoProgramacionJORNADA: TFloatField
+      FieldName = 'JORNADA'
+      Origin = 'TIPOTURNODETALLE.JORNADA'
+    end
+    object qTipoTurnoProgramacionFECHADESDE: TDateTimeField
+      FieldName = 'FECHADESDE'
+      Origin = 'TIPOTURNODETALLE.FECHADESDE'
+    end
+    object qTipoTurnoProgramacionFECHAHASTA: TDateTimeField
+      FieldName = 'FECHAHASTA'
+      Origin = 'TIPOTURNODETALLE.FECHAHASTA'
+    end
+    object qTipoTurnoProgramacionDESCRIPCION: TStringField
+      FieldName = 'DESCRIPCION'
+      Origin = 'TIPOTURNODETALLE.DESCRIPCION'
+      Size = 30
+    end
+  end
+  object dsTipoTurnoProgramacion: TDataSource
+    DataSet = qTipoTurnoProgramacion
+    Left = 342
+    Top = 437
+  end
+  object tdMemCantidadConcepto: tdMemTable
+    FieldDefs = <
+      item
+        Name = 'STDIURNOORDINARIO'
+        DataType = ftInteger
+      end
+      item
+        Name = 'STDIURNODOMINGOFESTIVO'
+        DataType = ftInteger
+      end
+      item
+        Name = 'STDIURNODOMINGOFESTIVO2'
+        DataType = ftInteger
+      end
+      item
+        Name = 'STNOCTURNOORDINARIO'
+        DataType = ftInteger
+      end
+      item
+        Name = 'STNOCTURNODOMINGOFESTIVO'
+        DataType = ftInteger
+      end
+      item
+        Name = 'SRDIURNODOMINGO'
+        DataType = ftInteger
+      end
+      item
+        Name = 'SRDIURNOFESTIVO'
+        DataType = ftInteger
+      end
+      item
+        Name = 'SRNOCTURNOORDINARIO'
+        DataType = ftInteger
+      end
+      item
+        Name = 'SRNOCTURNODOMINGO'
+        DataType = ftInteger
+      end
+      item
+        Name = 'SRNOCTURNOFESTIVO'
+        DataType = ftInteger
+      end
+      item
+        Name = 'SRDESCANSOFESTIVO'
+        DataType = ftInteger
+      end>
+    StoreDefs = True
+    Left = 35
+    Top = 481
+    object tdMemCantidadConceptoSTDIURNOORDINARIO: TIntegerField
+      DisplayLabel = 'Ordinario'
+      FieldName = 'STDIURNOORDINARIO'
+    end
+    object tdMemCantidadConceptoSTDIURNODOMINGOFESTIVO: TIntegerField
+      DisplayLabel = 'Domingo/Festivo'
+      FieldName = 'STDIURNODOMINGOFESTIVO'
+    end
+    object tdMemCantidadConceptoSTDIURNODOMINGOFESTIVO2: TIntegerField
+      DisplayLabel = 'Domingo/Festivo>8'
+      FieldName = 'STDIURNODOMINGOFESTIVO2'
+    end
+    object tdMemCantidadConceptoSTNOCTURNOORDINARIO: TIntegerField
+      DisplayLabel = 'Ordinario'
+      FieldName = 'STNOCTURNOORDINARIO'
+    end
+    object tdMemCantidadConceptoSTNOCTURNODOMINGOFESTIVO: TIntegerField
+      DisplayLabel = 'Domingo/Festivo'
+      FieldName = 'STNOCTURNODOMINGOFESTIVO'
+    end
+    object tdMemCantidadConceptoSRDIURNODOMINGO: TIntegerField
+      DisplayLabel = 'Domingo'
+      FieldName = 'SRDIURNODOMINGO'
+    end
+    object tdMemCantidadConceptoSRDIURNOFESTIVO: TIntegerField
+      DisplayLabel = 'Festivo'
+      FieldName = 'SRDIURNOFESTIVO'
+    end
+    object tdMemCantidadConceptoSRNOCTURNOORDINARIO: TIntegerField
+      DisplayLabel = 'Ordinario'
+      FieldName = 'SRNOCTURNOORDINARIO'
+    end
+    object tdMemCantidadConceptoSRNOCTURNODOMINGO: TIntegerField
+      DisplayLabel = 'Domingo'
+      FieldName = 'SRNOCTURNODOMINGO'
+    end
+    object tdMemCantidadConceptoSRNOCTURNOFESTIVO: TIntegerField
+      DisplayLabel = 'Festivo'
+      FieldName = 'SRNOCTURNOFESTIVO'
+    end
+    object tdMemCantidadConceptoSTDIURNOORDINARIOCONV: TIntegerField
+      FieldName = 'STDIURNOORDINARIOCONV'
+    end
+    object tdMemCantidadConceptoSTNOCTURNOORDINARIOCONV: TIntegerField
+      FieldName = 'STNOCTURNOORDINARIOCONV'
+    end
+    object tdMemCantidadConceptoSTDIURNODOMINGOFESTIVOCONV: TIntegerField
+      FieldName = 'STDIURNODOMINGOFESTIVOCONV'
+    end
+    object tdMemCantidadConceptoSTNOCTURNODOMINGOFESTIVOCONV: TIntegerField
+      FieldName = 'STNOCTURNODOMINGOFESTIVOCONV'
+    end
+    object tdMemCantidadConceptoDISPONIBILIDADSABADO: TIntegerField
+      FieldName = 'DISPONIBILIDADSABADO'
+    end
+    object tdMemCantidadConceptoDISPONIBILIDADDOMINGOFESTIVO: TIntegerField
+      FieldName = 'DISPONIBILIDADDOMINGOFESTIVO'
+    end
+  end
+  object dsMemCantidadConcepto: TDataSource
+    DataSet = tdMemCantidadConcepto
+    Left = 36
+    Top = 525
+  end
+  object tdMemCantidadPorcentaje: tdMemTable
+    TableName = 'temp3'
+    Left = 186
+    Top = 481
+  end
+  object dsTdMemCantidadPorcentaje: TDataSource
+    DataSet = tdMemCantidadPorcentaje
+    Left = 177
+    Top = 525
+  end
+  object qTipoTurno: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM TIPOTURNO')
+    Left = 506
+    Top = 392
+    object qTipoTurnoCODIGOTIPOTURNO: TFloatField
+      FieldName = 'CODIGOTIPOTURNO'
+      Origin = 'TIPOTURNO.CODIGOTIPOTURNO'
+    end
+    object qTipoTurnoNOMBRETIPOTURNO: TStringField
+      FieldName = 'NOMBRETIPOTURNO'
+      Origin = 'TIPOTURNO.NOMBRETIPOTURNO'
+      Size = 40
+    end
+    object qTipoTurnoDESCANSOFESTIVO: TStringField
+      FieldName = 'DESCANSOFESTIVO'
+      Origin = 'TIPOTURNO.DESCANSOFESTIVO'
+      Size = 1
+    end
+    object qTipoTurnoTIPOHORARIO: TStringField
+      FieldName = 'TIPOHORARIO'
+      Origin = 'TIPOTURNO.TIPOHORARIO'
+      Size = 1
+    end
+  end
+  object dsTipoTurno: TDataSource
+    DataSet = qTipoTurno
+    Left = 505
+    Top = 436
+  end
+  object qTurnoEmpleadoDetalle: TQuery
+    CachedUpdates = True
+    AfterDelete = qTurnoEmpleadoDetalleAfterDelete
+    OnCalcFields = qTurnoEmpleadoDetalleCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsTurnoEmpleado
+    SQL.Strings = (
+      'SELECT TD.*'
+      'FROM TURNOEMPLEADODETALLE TD,TURNOEMPLEADO T'
+      'WHERE T.CODIGOTURNOEMPLEADO=TD.CODIGOTURNOEMPLEADO'
+      'AND T.CODIGOEMPLEADO=:CODIGOEMPLEADO'
+      'AND ((FECHAHORADESDE>=:FECHA AND FECHAHORADESDE<:DIASIGUIENTE)'
+      'OR   (FECHAHORAHASTA>:FECHA AND FECHAHORAHASTA<=:DIASIGUIENTE))'
+      'AND T.CODIGOTURNO>0'
+      'ORDER BY FECHAHORADESDE'
+      '')
+    Left = 852
+    Top = 107
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOEMPLEADO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'DIASIGUIENTE'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'DIASIGUIENTE'
+        ParamType = ptUnknown
+      end>
+    object qTurnoEmpleadoDetalleCODIGOTURNOEMPLEADODETALLE: TFloatField
+      FieldName = 'CODIGOTURNOEMPLEADODETALLE'
+      Origin = 'TURNOEMPLEADODETALLE.CODIGOTURNOEMPLEADODETALLE'
+    end
+    object qTurnoEmpleadoDetalleCODIGOTURNOEMPLEADO: TFloatField
+      FieldName = 'CODIGOTURNOEMPLEADO'
+      Origin = 'TURNOEMPLEADODETALLE.CODIGOTURNOEMPLEADO'
+    end
+    object qTurnoEmpleadoDetalleFECHA: TDateTimeField
+      FieldName = 'FECHA'
+      Origin = 'TURNOEMPLEADODETALLE.FECHA'
+    end
+    object qTurnoEmpleadoDetalleFECHAHORADESDE: TDateTimeField
+      FieldName = 'FECHAHORADESDE'
+      Origin = 'TURNOEMPLEADODETALLE.FECHAHORADESDE'
+    end
+    object qTurnoEmpleadoDetalleFECHAHORAHASTA: TDateTimeField
+      FieldName = 'FECHAHORAHASTA'
+      Origin = 'TURNOEMPLEADODETALLE.FECHAHORAHASTA'
+    end
+    object qTurnoEmpleadoDetalleCANTIDADDIURNA: TFloatField
+      FieldName = 'CANTIDADDIURNA'
+      Origin = 'TURNOEMPLEADODETALLE.CANTIDADDIURNA'
+    end
+    object qTurnoEmpleadoDetalleCANTIDADNOCTURNA: TFloatField
+      FieldName = 'CANTIDADNOCTURNA'
+      Origin = 'TURNOEMPLEADODETALLE.CANTIDADNOCTURNA'
+    end
+    object qTurnoEmpleadoDetalleDesdeHasta: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'DesdeHasta'
+      Size = 50
+      Calculated = True
+    end
+  end
+  object dsTurnoEmpleadoDetalle: TDataSource
+    DataSet = qTurnoEmpleadoDetalle
+    Left = 854
+    Top = 152
+  end
+  object tdMemPorcentajeConcepto: tdMemTable
+    FieldDefs = <
+      item
+        Name = 'STDIURNOORDINARIO'
+        DataType = ftInteger
+      end
+      item
+        Name = 'STDIURNODOMINGOFESTIVO'
+        DataType = ftInteger
+      end
+      item
+        Name = 'STDIURNODOMINGOFESTIVO2'
+        DataType = ftInteger
+      end
+      item
+        Name = 'STNOCTURNOORDINARIO'
+        DataType = ftInteger
+      end
+      item
+        Name = 'STNOCTURNODOMINGOFESTIVO'
+        DataType = ftInteger
+      end
+      item
+        Name = 'SRDIURNODOMINGO'
+        DataType = ftInteger
+      end
+      item
+        Name = 'SRDIURNOFESTIVO'
+        DataType = ftInteger
+      end
+      item
+        Name = 'SRNOCTURNOORDINARIO'
+        DataType = ftInteger
+      end
+      item
+        Name = 'SRNOCTURNODOMINGO'
+        DataType = ftInteger
+      end
+      item
+        Name = 'SRNOCTURNOFESTIVO'
+        DataType = ftInteger
+      end
+      item
+        Name = 'SRDESCANSOFESTIVO'
+        DataType = ftInteger
+      end>
+    StoreDefs = True
+    TableName = 'temp2'
+    Left = 340
+    Top = 481
+    object tdMemPorcentajeConceptoSTDIURNOORDINARIO: TIntegerField
+      DisplayLabel = 'Extras Diurnas Ordinarias'
+      FieldName = 'STDIURNOORDINARIO'
+      DisplayFormat = '###'#39'%'#39
+    end
+    object tdMemPorcentajeConceptoSTDIURNODOMINGOFESTIVO: TIntegerField
+      DisplayLabel = 'Extras Diurnas Domingo/Festivo'
+      FieldName = 'STDIURNODOMINGOFESTIVO'
+      DisplayFormat = '###'#39'%'#39
+    end
+    object tdMemPorcentajeConceptoSTDIURNODOMINGOFESTIVO2: TIntegerField
+      DisplayLabel = 'Extras Diurnas Domingo/Festivo>8'
+      FieldName = 'STDIURNODOMINGOFESTIVO2'
+      DisplayFormat = '###'#39'%'#39
+    end
+    object tdMemPorcentajeConceptoSTNOCTURNOORDINARIO: TIntegerField
+      DisplayLabel = 'Extras Nocturnas Ordinarias'
+      FieldName = 'STNOCTURNOORDINARIO'
+      DisplayFormat = '###'#39'%'#39
+    end
+    object tdMemPorcentajeConceptoSTNOCTURNODOMINGOFESTIVO: TIntegerField
+      DisplayLabel = 'Extras Nocturnas Domingo/Festivo'
+      FieldName = 'STNOCTURNODOMINGOFESTIVO'
+      DisplayFormat = '###'#39'%'#39
+    end
+    object tdMemPorcentajeConceptoSRDIURNODOMINGO: TIntegerField
+      DisplayLabel = 'Recargo Diurno Domingo'
+      FieldName = 'SRDIURNODOMINGO'
+      DisplayFormat = '###'#39'%'#39
+    end
+    object tdMemPorcentajeConceptoSRDIURNOFESTIVO: TIntegerField
+      DisplayLabel = 'Recargo Diurno Festivo'
+      FieldName = 'SRDIURNOFESTIVO'
+      DisplayFormat = '###'#39'%'#39
+    end
+    object tdMemPorcentajeConceptoSRNOCTURNOORDINARIO: TIntegerField
+      DisplayLabel = 'Recargo Nocturno Ordinario'
+      FieldName = 'SRNOCTURNOORDINARIO'
+      DisplayFormat = '###'#39'%'#39
+    end
+    object tdMemPorcentajeConceptoSRNOCTURNODOMINGO: TIntegerField
+      DisplayLabel = 'Recargo Nocturno Domingo'
+      FieldName = 'SRNOCTURNODOMINGO'
+      DisplayFormat = '###'#39'%'#39
+    end
+    object tdMemPorcentajeConceptoSRNOCTURNOFESTIVO: TIntegerField
+      DisplayLabel = 'Recargo Nocturno Festivo'
+      FieldName = 'SRNOCTURNOFESTIVO'
+      DisplayFormat = '###'#39'%'#39
+    end
+    object tdMemPorcentajeConceptoSTDIURNOORDINARIOCONV: TIntegerField
+      FieldName = 'STDIURNOORDINARIOCONV'
+      DisplayFormat = '###'#39'%'#39
+    end
+    object tdMemPorcentajeConceptoSTNOCTURNOORDINARIOCONV: TIntegerField
+      FieldName = 'STNOCTURNOORDINARIOCONV'
+      DisplayFormat = '###'#39'%'#39
+    end
+    object tdMemPorcentajeConceptoSTDIURNODOMINGOFESTIVOCONV: TIntegerField
+      FieldName = 'STDIURNODOMINGOFESTIVOCONV'
+      DisplayFormat = '###'#39'%'#39
+    end
+    object tdMemPorcentajeConceptoSTNOCTURNODOMINGOFESTIVOCONV: TIntegerField
+      FieldName = 'STNOCTURNODOMINGOFESTIVOCONV'
+      DisplayFormat = '###'#39'%'#39
+    end
+    object tdMemPorcentajeConceptoDISPONIBILIDADSABADO: TIntegerField
+      FieldName = 'DISPONIBILIDADSABADO'
+      DisplayFormat = '###'#39'%'#39
+    end
+    object tdMemPorcentajeConceptoDISPONIBILIDADDOMINGOFESTIVO: TIntegerField
+      FieldName = 'DISPONIBILIDADDOMINGOFESTIVO'
+      DisplayFormat = '###'#39'%'#39
+    end
+  end
+  object dsTdMemPorcentajeConcepto: TDataSource
+    Left = 340
+    Top = 525
+  end
+  object qSobreTiempoTurno: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT OD.CODIGOODTSOBRETIEMPODETALLE,'
+      ' OD.CODIGOODTSOBRETIEMPO,OD.CODIGOODT,OD.CODIGOEMPLEADO,'
+      ' OD.FECHAHORADESDE, OD.FECHAHORAHASTA,OD.CANTIDADDIURNA,'
+      
+        ' OD.CANTIDADNOCTURNA,OD.OBSERVACION,OD.CONVENCIONAL,OD.DISPONIBI' +
+        'LIDAD'
+      'FROM ODTSOBRETIEMPODETALLE OD,ODTSOBRETIEMPO O'
+      'WHERE O.CODIGOODTSOBRETIEMPO=OD.CODIGOODTSOBRETIEMPO'
+      'AND OD.CODIGOEMPLEADO=:CODIGOEMPLEADO'
+      
+        'AND ((FECHAHORADESDE>=:FECHA AND FECHAHORADESDE<:DIASIGUIENTE) O' +
+        'R'
+      '     (FECHAHORAHASTA>:FECHA AND FECHAHORAHASTA<=:DIASIGUIENTE))'
+      'AND (OD.CONVENCIONAL<>'#39'S'#39' OR OD.CONVENCIONAL IS NULL)'
+      'AND (OD.DISPONIBILIDAD <>'#39'S'#39' OR OD.DISPONIBILIDAD IS NULL)'
+      'ORDER BY FECHAHORADESDE')
+    Left = 40
+    Top = 340
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOEMPLEADO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'DIASIGUIENTE'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'DIASIGUIENTE'
+        ParamType = ptUnknown
+      end>
+    object qSobreTiempoTurnoCODIGOODTSOBRETIEMPODETALLE: TFloatField
+      FieldName = 'CODIGOODTSOBRETIEMPODETALLE'
+      Origin = 'ODTSOBRETIEMPODETALLE.CODIGOODTSOBRETIEMPODETALLE'
+    end
+    object qSobreTiempoTurnoCODIGOODTSOBRETIEMPO: TFloatField
+      FieldName = 'CODIGOODTSOBRETIEMPO'
+      Origin = 'ODTSOBRETIEMPODETALLE.CODIGOODTSOBRETIEMPO'
+    end
+    object qSobreTiempoTurnoCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'ODTSOBRETIEMPODETALLE.CODIGOODT'
+    end
+    object qSobreTiempoTurnoCODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'ODTSOBRETIEMPODETALLE.CODIGOEMPLEADO'
+    end
+    object qSobreTiempoTurnoFECHAHORADESDE: TDateTimeField
+      FieldName = 'FECHAHORADESDE'
+      Origin = 'ODTSOBRETIEMPODETALLE.FECHAHORADESDE'
+    end
+    object qSobreTiempoTurnoFECHAHORAHASTA: TDateTimeField
+      FieldName = 'FECHAHORAHASTA'
+      Origin = 'ODTSOBRETIEMPODETALLE.FECHAHORAHASTA'
+    end
+    object qSobreTiempoTurnoCANTIDADDIURNA: TFloatField
+      FieldName = 'CANTIDADDIURNA'
+      Origin = 'ODTSOBRETIEMPODETALLE.CANTIDADDIURNA'
+    end
+    object qSobreTiempoTurnoCANTIDADNOCTURNA: TFloatField
+      FieldName = 'CANTIDADNOCTURNA'
+      Origin = 'ODTSOBRETIEMPODETALLE.CANTIDADNOCTURNA'
+    end
+    object qSobreTiempoTurnoCONVENCIONAL: TStringField
+      FieldName = 'CONVENCIONAL'
+      Origin = 'ODTSOBRETIEMPODETALLE.CONVENCIONAL'
+      Size = 1
+    end
+    object qSobreTiempoTurnoOBSERVACION: TStringField
+      FieldName = 'OBSERVACION'
+      Origin = 'ODTSOBRETIEMPODETALLE.OBSERVACION'
+      Size = 50
+    end
+    object qSobreTiempoTurnoDISPONIBILIDAD: TStringField
+      FieldName = 'DISPONIBILIDAD'
+      Origin = 'ODTSOBRETIEMPODETALLE.DISPONIBILIDAD'
+      Size = 1
+    end
+  end
+  object qDetalleTurno: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT TD.FECHAHORADESDE,TD.FECHAHORAHASTA'
+      'FROM TURNOEMPLEADODETALLE TD,TURNOEMPLEADO T'
+      'WHERE T.CODIGOTURNOEMPLEADO=TD.CODIGOTURNOEMPLEADO'
+      'AND T.CODIGOEMPLEADO=:CODIGOEMPLEADO'
+      'AND ((FECHAHORADESDE>=:FECHA AND FECHAHORADESDE<:DIASIGUIENTE)'
+      'OR   (FECHAHORAHASTA>:FECHA AND FECHAHORAHASTA<=:DIASIGUIENTE))')
+    Left = 340
+    Top = 340
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOEMPLEADO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'DIASIGUIENTE'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'DIASIGUIENTE'
+        ParamType = ptUnknown
+      end>
+  end
+  object qLiquidacion: TQuery
+    CachedUpdates = True
+    BeforeOpen = qLiquidacionBeforeOpen
+    AfterInsert = qLiquidacionAfterInsert
+    AfterPost = qLiquidacionAfterPost
+    AfterDelete = qLiquidacionAfterDelete
+    DatabaseName = 'BaseDato'
+    DataSource = dsMemFiltro
+    SQL.Strings = (
+      'SELECT * FROM SIP_EXTRA_TIEMPO'
+      'WHERE CODIGO=:CODIGOEMPLEADO'
+      'AND ANO_SBT=:ANO'
+      'AND MES_SBT=:MES')
+    UpdateObject = updLiquidacion
+    Left = 953
+    Top = 106
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CodigoEmpleado'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Ano'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Mes'
+        ParamType = ptUnknown
+      end>
+    object qLiquidacionCODIGO: TStringField
+      FieldName = 'CODIGO'
+      Size = 15
+    end
+    object qLiquidacionCONCEPTO: TFloatField
+      FieldName = 'CONCEPTO'
+    end
+    object qLiquidacionANO_SBT: TFloatField
+      FieldName = 'ANO_SBT'
+    end
+    object qLiquidacionMES_SBT: TFloatField
+      FieldName = 'MES_SBT'
+    end
+    object qLiquidacionDIA_1: TFloatField
+      FieldName = 'DIA_1'
+    end
+    object qLiquidacionDIA_2: TFloatField
+      FieldName = 'DIA_2'
+    end
+    object qLiquidacionDIA_3: TFloatField
+      FieldName = 'DIA_3'
+    end
+    object qLiquidacionDIA_4: TFloatField
+      FieldName = 'DIA_4'
+    end
+    object qLiquidacionDIA_5: TFloatField
+      FieldName = 'DIA_5'
+    end
+    object qLiquidacionDIA_6: TFloatField
+      FieldName = 'DIA_6'
+    end
+    object qLiquidacionDIA_7: TFloatField
+      FieldName = 'DIA_7'
+    end
+    object qLiquidacionDIA_8: TFloatField
+      FieldName = 'DIA_8'
+    end
+    object qLiquidacionDIA_9: TFloatField
+      FieldName = 'DIA_9'
+    end
+    object qLiquidacionDIA_10: TFloatField
+      FieldName = 'DIA_10'
+    end
+    object qLiquidacionDIA_11: TFloatField
+      FieldName = 'DIA_11'
+    end
+    object qLiquidacionDIA_12: TFloatField
+      FieldName = 'DIA_12'
+    end
+    object qLiquidacionDIA_13: TFloatField
+      FieldName = 'DIA_13'
+    end
+    object qLiquidacionDIA_14: TFloatField
+      FieldName = 'DIA_14'
+    end
+    object qLiquidacionDIA_15: TFloatField
+      FieldName = 'DIA_15'
+    end
+    object qLiquidacionDIA_16: TFloatField
+      FieldName = 'DIA_16'
+    end
+    object qLiquidacionDIA_17: TFloatField
+      FieldName = 'DIA_17'
+    end
+    object qLiquidacionDIA_18: TFloatField
+      FieldName = 'DIA_18'
+    end
+    object qLiquidacionDIA_19: TFloatField
+      FieldName = 'DIA_19'
+    end
+    object qLiquidacionDIA_20: TFloatField
+      FieldName = 'DIA_20'
+    end
+    object qLiquidacionDIA_21: TFloatField
+      FieldName = 'DIA_21'
+    end
+    object qLiquidacionDIA_22: TFloatField
+      FieldName = 'DIA_22'
+    end
+    object qLiquidacionDIA_23: TFloatField
+      FieldName = 'DIA_23'
+    end
+    object qLiquidacionDIA_24: TFloatField
+      FieldName = 'DIA_24'
+    end
+    object qLiquidacionDIA_25: TFloatField
+      FieldName = 'DIA_25'
+    end
+    object qLiquidacionDIA_26: TFloatField
+      FieldName = 'DIA_26'
+    end
+    object qLiquidacionDIA_27: TFloatField
+      FieldName = 'DIA_27'
+    end
+    object qLiquidacionDIA_28: TFloatField
+      FieldName = 'DIA_28'
+    end
+    object qLiquidacionDIA_29: TFloatField
+      FieldName = 'DIA_29'
+    end
+    object qLiquidacionDIA_30: TFloatField
+      FieldName = 'DIA_30'
+    end
+    object qLiquidacionDIA_31: TFloatField
+      FieldName = 'DIA_31'
+    end
+    object qLiquidacionUSUARIO: TFloatField
+      FieldName = 'USUARIO'
+    end
+    object qLiquidacionFECHA: TDateTimeField
+      FieldName = 'FECHA'
+    end
+    object qLiquidacionANO_SIRH: TFloatField
+      FieldName = 'ANO_SIRH'
+    end
+    object qLiquidacionMES_SIRH: TFloatField
+      FieldName = 'MES_SIRH'
+    end
+    object qLiquidacionNOMINA_SIRH: TFloatField
+      FieldName = 'NOMINA_SIRH'
+    end
+    object qLiquidacionFEC_SIRH: TDateTimeField
+      FieldName = 'FEC_SIRH'
+    end
+    object qLiquidacionUSR_SIRH: TFloatField
+      FieldName = 'USR_SIRH'
+    end
+  end
+  object dsLiquidacion: TDataSource
+    DataSet = qLiquidacion
+    Left = 958
+    Top = 162
+  end
+  object updLiquidacion: TUpdateSQL
+    ModifySQL.Strings = (
+      'update SIP_EXTRA_TIEMPO'
+      'set'
+      '  CODIGO = :CODIGO,'
+      '  CONCEPTO = :CONCEPTO,'
+      '  ANO_SBT = :ANO_SBT,'
+      '  MES_SBT = :MES_SBT,'
+      '  DIA_1 = :DIA_1,'
+      '  DIA_2 = :DIA_2,'
+      '  DIA_3 = :DIA_3,'
+      '  DIA_4 = :DIA_4,'
+      '  DIA_5 = :DIA_5,'
+      '  DIA_6 = :DIA_6,'
+      '  DIA_7 = :DIA_7,'
+      '  DIA_8 = :DIA_8,'
+      '  DIA_9 = :DIA_9,'
+      '  DIA_10 = :DIA_10,'
+      '  DIA_11 = :DIA_11,'
+      '  DIA_12 = :DIA_12,'
+      '  DIA_13 = :DIA_13,'
+      '  DIA_14 = :DIA_14,'
+      '  DIA_15 = :DIA_15,'
+      '  DIA_16 = :DIA_16,'
+      '  DIA_17 = :DIA_17,'
+      '  DIA_18 = :DIA_18,'
+      '  DIA_19 = :DIA_19,'
+      '  DIA_20 = :DIA_20,'
+      '  DIA_21 = :DIA_21,'
+      '  DIA_22 = :DIA_22,'
+      '  DIA_23 = :DIA_23,'
+      '  DIA_24 = :DIA_24,'
+      '  DIA_25 = :DIA_25,'
+      '  DIA_26 = :DIA_26,'
+      '  DIA_27 = :DIA_27,'
+      '  DIA_28 = :DIA_28,'
+      '  DIA_29 = :DIA_29,'
+      '  DIA_30 = :DIA_30,'
+      '  DIA_31 = :DIA_31,'
+      '  USUARIO = :USUARIO,'
+      '  FECHA = :FECHA,'
+      '  ANO_SIRH = :ANO_SIRH,'
+      '  MES_SIRH = :MES_SIRH,'
+      '  NOMINA_SIRH = :NOMINA_SIRH,'
+      '  FEC_SIRH = :FEC_SIRH,'
+      '  USR_SIRH = :USR_SIRH'
+      'where'
+      '  CODIGO = :OLD_CODIGO and'
+      '  CONCEPTO = :OLD_CONCEPTO and'
+      '  ANO_SBT = :OLD_ANO_SBT and'
+      '  MES_SBT = :OLD_MES_SBT')
+    InsertSQL.Strings = (
+      'insert into SIP_EXTRA_TIEMPO'
+      
+        '  (CODIGO, CONCEPTO, ANO_SBT, MES_SBT, DIA_1, DIA_2, DIA_3, DIA_' +
+        '4, '
+      'DIA_5, '
+      
+        '   DIA_6, DIA_7, DIA_8, DIA_9, DIA_10, DIA_11, DIA_12, DIA_13, D' +
+        'IA_14, '
+      
+        '   DIA_15, DIA_16, DIA_17, DIA_18, DIA_19, DIA_20, DIA_21, DIA_2' +
+        '2, DIA_23, '
+      
+        '   DIA_24, DIA_25, DIA_26, DIA_27, DIA_28, DIA_29, DIA_30, DIA_3' +
+        '1, USUARIO, '
+      '   FECHA, ANO_SIRH, MES_SIRH, NOMINA_SIRH, FEC_SIRH, USR_SIRH)'
+      'values'
+      
+        '  (:CODIGO, :CONCEPTO, :ANO_SBT, :MES_SBT, :DIA_1, :DIA_2, :DIA_' +
+        '3, :DIA_4, '
+      
+        '   :DIA_5, :DIA_6, :DIA_7, :DIA_8, :DIA_9, :DIA_10, :DIA_11, :DI' +
+        'A_12, :DIA_13, '
+      
+        '   :DIA_14, :DIA_15, :DIA_16, :DIA_17, :DIA_18, :DIA_19, :DIA_20' +
+        ', :DIA_21, '
+      
+        '   :DIA_22, :DIA_23, :DIA_24, :DIA_25, :DIA_26, :DIA_27, :DIA_28' +
+        ', :DIA_29, '
+      
+        '   :DIA_30, :DIA_31, :USUARIO, :FECHA, :ANO_SIRH, :MES_SIRH, :NO' +
+        'MINA_SIRH, '
+      '   :FEC_SIRH, :USR_SIRH)')
+    DeleteSQL.Strings = (
+      'delete from SIP_EXTRA_TIEMPO'
+      'where'
+      '  CODIGO = :OLD_CODIGO and'
+      '  CONCEPTO = :OLD_CONCEPTO and'
+      '  ANO_SBT = :OLD_ANO_SBT and'
+      '  MES_SBT = :OLD_MES_SBT')
+    Left = 959
+    Top = 213
+  end
+  object updOdtSobreTiempoDetalle: TUpdateSQL
+    ModifySQL.Strings = (
+      'update ODTSOBRETIEMPODETALLE'
+      'set'
+      '  CONVENCIONAL = :CONVENCIONAL'
+      'where'
+      '  CODIGOODTSOBRETIEMPODETALLE = '
+      ':OLD_CODIGOODTSOBRETIEMPODETALLE')
+    InsertSQL.Strings = (
+      'insert into ODTSOBRETIEMPODETALLE'
+      '  (CONVENCIONAL)'
+      'values'
+      '  (:CONVENCIONAL)')
+    DeleteSQL.Strings = (
+      'delete from ODTSOBRETIEMPODETALLE'
+      'where'
+      '  CODIGOODTSOBRETIEMPODETALLE = :OLD_CODIGOODTSOBRETIEMPODETALLE')
+    Left = 729
+    Top = 196
+  end
+  object dsPlanillaMesEmpleado: TDataSource
+    DataSet = qPlanillaMesEmpleado
+    Left = 448
+    Top = 152
+  end
+  object updPlanillaMesEmpleado: TUpdateSQL
+    ModifySQL.Strings = (
+      'update PLANILLAMESEMPLEADO'
+      'set'
+      '  CODIGOEMPLEADO = :CODIGOEMPLEADO,'
+      '  FECHA = :FECHA,'
+      '  CODIGOTIPOTURNO = :CODIGOTIPOTURNO,'
+      '  CODIGOESTADOPLANILLA = :CODIGOESTADOPLANILLA,'
+      '  CODIGOUSUARIOCREACION = :CODIGOUSUARIOCREACION,'
+      '  FECHACREACION = :FECHACREACION,'
+      '  CODIGOUSUARIOMODIFICACION = :CODIGOUSUARIOMODIFICACION,'
+      '  FECHAMODIFICACION = :FECHAMODIFICACION'
+      'where'
+      '  CODIGOEMPLEADO = :OLD_CODIGOEMPLEADO and'
+      '  FECHA = :OLD_FECHA')
+    InsertSQL.Strings = (
+      'insert into PLANILLAMESEMPLEADO'
+      
+        '  (CODIGOEMPLEADO, FECHA, CODIGOTIPOTURNO, CODIGOESTADOPLANILLA,' +
+        ' CODIGOUSUARIOCREACION, '
+      '   FECHACREACION, CODIGOUSUARIOMODIFICACION, FECHAMODIFICACION)'
+      'values'
+      
+        '  (:CODIGOEMPLEADO, :FECHA, :CODIGOTIPOTURNO, :CODIGOESTADOPLANI' +
+        'LLA, :CODIGOUSUARIOCREACION, '
+      
+        '   :FECHACREACION, :CODIGOUSUARIOMODIFICACION, :FECHAMODIFICACIO' +
+        'N)')
+    DeleteSQL.Strings = (
+      'delete from PLANILLAMESEMPLEADO'
+      'where'
+      '  CODIGOEMPLEADO = :OLD_CODIGOEMPLEADO and'
+      '  FECHA = :OLD_FECHA')
+    Left = 446
+    Top = 197
+  end
+  object dMenuCIA: TdMenuArbol
+    OwnerDraw = True
+    DatabaseName = 'BaseDato'
+    TableName = 'Administrativo'
+    TableTitle = 'MetadataAdministrativo'
+    FiltroInicial = '(Nivel = 3)'
+    OnSelectID = dMenuCIASelectID
+    FieldsTableName = 
+      'CODIGO=CODIGOARBOL, ID=CODIGOADMINISTRATIVO, CODIGONIVEL=NOMBREC' +
+      'ATEGORIA, NOMBRE=NOMBREADMINISTRATIVO, NIVEL=NIVEL'
+    FieldsTableTitle = 
+      'IDNIVEL=CODIGONIVEL, NIVEL=NIVELADMINISTRATIVO, CAMPO=CAMPOADMIN' +
+      'ISTRATIVO, DESCRIPCION=DESCRIPCIONCAMPO'
+    Left = 83
+    Top = 151
+  end
+  object qTipoHorario: TQuery
+    OnCalcFields = qTipoTurnoProgramacionCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsMemFiltro
+    SQL.Strings = (
+      'SELECT * FROM TIPOTURNO'
+      'WHERE CODIGOTIPOTURNO=:CODIGOTIPOTURNO')
+    Left = 586
+    Top = 392
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'CodigoTipoTurno'
+        ParamType = ptUnknown
+      end>
+    object qTipoHorarioCODIGOTIPOTURNO: TFloatField
+      FieldName = 'CODIGOTIPOTURNO'
+      Origin = 'TIPOTURNO.CODIGOTIPOTURNO'
+    end
+    object qTipoHorarioNOMBRETIPOTURNO: TStringField
+      FieldName = 'NOMBRETIPOTURNO'
+      Origin = 'TIPOTURNO.NOMBRETIPOTURNO'
+      Size = 40
+    end
+    object qTipoHorarioDESCANSOFESTIVO: TStringField
+      FieldName = 'DESCANSOFESTIVO'
+      Origin = 'TIPOTURNO.DESCANSOFESTIVO'
+      Size = 1
+    end
+    object qTipoHorarioTIPOHORARIO: TStringField
+      FieldName = 'TIPOHORARIO'
+      Origin = 'TIPOTURNO.TIPOHORARIO'
+      Size = 1
+    end
+  end
+  object dsTipoHorario: TDataSource
+    DataSet = qTipoHorario
+    Left = 585
+    Top = 436
+  end
+  object qDescripcionTurno: TQuery
+    OnCalcFields = qDescripcionTurnoCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsMemFiltro
+    SQL.Strings = (
+      'SELECT CODIGOTIPOTURNO,CODIGOTURNO,'
+      'MIN(FECHADESDE),MAX(FECHAHASTA)'
+      'FROM TIPOTURNODETALLE'
+      'WHERE CODIGOTIPOTURNO=:CODIGOTIPOTURNO'
+      'GROUP BY CODIGOTIPOTURNO,CODIGOTURNO')
+    Left = 674
+    Top = 391
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'CodigoTipoTurno'
+        ParamType = ptUnknown
+      end>
+    object qDescripcionTurnoCODIGOTIPOTURNO: TFloatField
+      FieldName = 'CODIGOTIPOTURNO'
+      Origin = 'TIPOTURNODETALLE.CODIGOTIPOTURNO'
+    end
+    object qDescripcionTurnoCODIGOTURNO: TFloatField
+      FieldName = 'CODIGOTURNO'
+      Origin = 'TIPOTURNODETALLE.CODIGOTURNO'
+    end
+    object qDescripcionTurnoMINFECHADESDE: TDateTimeField
+      FieldName = 'MIN(FECHADESDE)'
+      Origin = 'TIPOTURNODETALLE.FECHADESDE'
+    end
+    object qDescripcionTurnoMAXFECHAHASTA: TDateTimeField
+      FieldName = 'MAX(FECHAHASTA)'
+      Origin = 'TIPOTURNODETALLE.FECHAHASTA'
+    end
+    object qDescripcionTurnoDesdeHasta: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'DesdeHasta'
+      Size = 40
+      Calculated = True
+    end
+  end
+  object dsDescripcionTurno: TDataSource
+    DataSet = qDescripcionTurno
+    Left = 677
+    Top = 437
+  end
+  object qPlanillaMesEmpleado: TQuery
+    CachedUpdates = True
+    AfterInsert = qPlanillaMesEmpleadoAfterInsert
+    AfterPost = qPlanillaMesEmpleadoAfterPost
+    OnCalcFields = qPlanillaMesEmpleadoCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsMemFiltro
+    SQL.Strings = (
+      
+        'SELECT CODIGOEMPLEADO,FECHA,CODIGOTIPOTURNO,CODIGOESTADOPLANILLA' +
+        ','
+      
+        'CODIGOUSUARIOCREACION,FECHACREACION,CODIGOUSUARIOMODIFICACION,FE' +
+        'CHAMODIFICACION'
+      'FROM PLANILLAMESEMPLEADO'
+      'WHERE CODIGOEMPLEADO=:CODIGOEMPLEADO'
+      'AND FECHA=:FECHA ')
+    UpdateObject = updPlanillaMesEmpleado
+    Left = 449
+    Top = 107
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CodigoEmpleado'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDate
+        Name = 'Fecha'
+        ParamType = ptUnknown
+      end>
+    object qPlanillaMesEmpleadoCODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'PLANILLAMESEMPLEADO.CODIGOEMPLEADO'
+    end
+    object qPlanillaMesEmpleadoFECHA: TDateTimeField
+      FieldName = 'FECHA'
+      Origin = 'PLANILLAMESEMPLEADO.FECHA'
+    end
+    object qPlanillaMesEmpleadoCODIGOTIPOTURNO: TFloatField
+      FieldName = 'CODIGOTIPOTURNO'
+      Origin = 'PLANILLAMESEMPLEADO.CODIGOTIPOTURNO'
+    end
+    object qPlanillaMesEmpleadoCODIGOESTADOPLANILLA: TStringField
+      FieldName = 'CODIGOESTADOPLANILLA'
+      Origin = 'PLANILLAMESEMPLEADO.CODIGOESTADOPLANILLA'
+      OnChange = qPlanillaMesEmpleadoCODIGOESTADOPLANILLAChange
+      OnValidate = qPlanillaMesEmpleadoCODIGOESTADOPLANILLAValidate
+      Size = 3
+    end
+    object qPlanillaMesEmpleadoCODIGOUSUARIOCREACION: TFloatField
+      FieldName = 'CODIGOUSUARIOCREACION'
+      Origin = 'PLANILLAMESEMPLEADO.CODIGOUSUARIOCREACION'
+    end
+    object qPlanillaMesEmpleadoFECHACREACION: TDateTimeField
+      FieldName = 'FECHACREACION'
+      Origin = 'PLANILLAMESEMPLEADO.FECHACREACION'
+    end
+    object qPlanillaMesEmpleadoCODIGOUSUARIOMODIFICACION: TFloatField
+      FieldName = 'CODIGOUSUARIOMODIFICACION'
+      Origin = 'PLANILLAMESEMPLEADO.CODIGOUSUARIOMODIFICACION'
+    end
+    object qPlanillaMesEmpleadoFECHAMODIFICACION: TDateTimeField
+      FieldName = 'FECHAMODIFICACION'
+      Origin = 'PLANILLAMESEMPLEADO.FECHAMODIFICACION'
+    end
+    object qPlanillaMesEmpleadoEstado: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Estado'
+      Size = 15
+      Calculated = True
+    end
+  end
+  object qOdtPermisos: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOUSUARIO, CODIGOADMINISTRATIVO,REABRIR '
+      'FROM ODTPERMISOS'
+      'WHERE NOMBRETABLA='#39'PLANILLAMESEMPLEADO'#39
+      'AND EDITAR='#39'S'#39
+      ''
+      ''
+      '')
+    Left = 763
+    Top = 391
+    object qOdtPermisosCODIGOUSUARIO: TFloatField
+      FieldName = 'CODIGOUSUARIO'
+      Origin = 'ODTPERMISOS.CODIGOUSUARIO'
+    end
+    object qOdtPermisosCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'ODTPERMISOS.CODIGOADMINISTRATIVO'
+    end
+    object qOdtPermisosREABRIR: TStringField
+      FieldName = 'REABRIR'
+      Origin = 'ODTPERMISOS.REABRIR'
+      Size = 1
+    end
+  end
+  object qSobreTiempoConvTurno: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT OD.CODIGOODTSOBRETIEMPODETALLE,'
+      ' OD.CODIGOODTSOBRETIEMPO,OD.CODIGOODT,OD.CODIGOEMPLEADO,'
+      ' OD.FECHAHORADESDE, OD.FECHAHORAHASTA,OD.CANTIDADDIURNA,'
+      
+        ' OD.CANTIDADNOCTURNA,OD.OBSERVACION,OD.CONVENCIONAL,OD.DISPONIBI' +
+        'LIDAD'
+      'FROM ODTSOBRETIEMPODETALLE OD,ODTSOBRETIEMPO O'
+      'WHERE O.CODIGOODTSOBRETIEMPO=OD.CODIGOODTSOBRETIEMPO'
+      'AND OD.CODIGOEMPLEADO=:CODIGOEMPLEADO'
+      
+        'AND ((FECHAHORADESDE>=:FECHA AND FECHAHORADESDE<:DIASIGUIENTE) O' +
+        'R'
+      '     (FECHAHORAHASTA>:FECHA AND FECHAHORAHASTA<=:DIASIGUIENTE))'
+      'AND OD.CONVENCIONAL='#39'S'#39
+      'AND (OD.DISPONIBILIDAD <>'#39'S'#39' OR OD.DISPONIBILIDAD IS NULL)'
+      'ORDER BY FECHAHORADESDE')
+    Left = 139
+    Top = 300
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOEMPLEADO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'DIASIGUIENTE'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'DIASIGUIENTE'
+        ParamType = ptUnknown
+      end>
+    object qSobreTiempoConvTurnoCODIGOODTSOBRETIEMPODETALLE: TFloatField
+      FieldName = 'CODIGOODTSOBRETIEMPODETALLE'
+      Origin = 'ODTSOBRETIEMPODETALLE.CODIGOODTSOBRETIEMPODETALLE'
+    end
+    object qSobreTiempoConvTurnoCODIGOODTSOBRETIEMPO: TFloatField
+      FieldName = 'CODIGOODTSOBRETIEMPO'
+      Origin = 'ODTSOBRETIEMPODETALLE.CODIGOODTSOBRETIEMPO'
+    end
+    object qSobreTiempoConvTurnoCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'ODTSOBRETIEMPODETALLE.CODIGOODT'
+    end
+    object qSobreTiempoConvTurnoCODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'ODTSOBRETIEMPODETALLE.CODIGOEMPLEADO'
+    end
+    object qSobreTiempoConvTurnoFECHAHORADESDE: TDateTimeField
+      FieldName = 'FECHAHORADESDE'
+      Origin = 'ODTSOBRETIEMPODETALLE.FECHAHORADESDE'
+    end
+    object qSobreTiempoConvTurnoFECHAHORAHASTA: TDateTimeField
+      FieldName = 'FECHAHORAHASTA'
+      Origin = 'ODTSOBRETIEMPODETALLE.FECHAHORAHASTA'
+    end
+    object qSobreTiempoConvTurnoCANTIDADDIURNA: TFloatField
+      FieldName = 'CANTIDADDIURNA'
+      Origin = 'ODTSOBRETIEMPODETALLE.CANTIDADDIURNA'
+    end
+    object qSobreTiempoConvTurnoCANTIDADNOCTURNA: TFloatField
+      FieldName = 'CANTIDADNOCTURNA'
+      Origin = 'ODTSOBRETIEMPODETALLE.CANTIDADNOCTURNA'
+    end
+    object qSobreTiempoConvTurnoCONVENCIONAL: TStringField
+      FieldName = 'CONVENCIONAL'
+      Origin = 'ODTSOBRETIEMPODETALLE.CONVENCIONAL'
+      Size = 1
+    end
+    object qSobreTiempoConvTurnoOBSERVACION: TStringField
+      FieldName = 'OBSERVACION'
+      Origin = 'ODTSOBRETIEMPODETALLE.OBSERVACION'
+      Size = 50
+    end
+    object qSobreTiempoConvTurnoDISPONIBILIDAD: TStringField
+      FieldName = 'DISPONIBILIDAD'
+      Origin = 'ODTSOBRETIEMPODETALLE.DISPONIBILIDAD'
+      Size = 1
+    end
+  end
+  object qTurnoEmpleado: TQuery
+    CachedUpdates = True
+    BeforeOpen = qTurnoEmpleadoBeforeOpen
+    AfterOpen = qTurnoEmpleadoAfterOpen
+    BeforeClose = qTurnoEmpleadoBeforeClose
+    AfterClose = qTurnoEmpleadoAfterClose
+    AfterPost = qTurnoEmpleadoAfterPost
+    OnCalcFields = qTurnoEmpleadoCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsMemFiltro
+    SQL.Strings = (
+      
+        'SELECT   t.codigoturnoempleado, t.codigoempleado, t.fecha, t.cod' +
+        'igotipoturno,'
+      
+        '         t.codigoturno, t.codigoestado, t.jornada,SumarHorasTurn' +
+        'osAnteriores(t.codigoempleado,t.fecha)horasacumuladas,'
+      '         p.codigoplanillaturnoempleado, p.dia, p.cantidaddiurna,'
+      '         p.cantidadnocturna, p.observacion, p.desdehastadiurna,'
+      
+        '         p.desdehastanocturna, p.cantidadextradiurna, p.cantidad' +
+        'extranocturna,'
+      '         p.cantidadextradiurnaconv, p.cantidadextranocturnaconv,'
+      '         p.cantidadextradisponibilidad, p.desdehastaextradiurna,'
+      '         p.desdehastaextranocturna, p.observacionextra,'
+      '         p.codigoestadoplanilla'
+      '    FROM turnoempleado t, planillaturnoempleado p'
+      '   WHERE p.codigoempleado = t.codigoempleado'
+      '     AND t.fecha = p.dia'
+      '     AND t.codigoempleado = :codigoempleado'
+      '     AND t.fecha >= :iniciomes'
+      '     AND t.fecha <= :finmes'
+      'ORDER BY t.fecha')
+    UpdateObject = updTurnoEmpleado
+    Left = 610
+    Top = 107
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CodigoEmpleado'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDate
+        Name = 'InicioMes'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDate
+        Name = 'FinMes'
+        ParamType = ptUnknown
+      end>
+    object qTurnoEmpleadoCantidadExtraDiurnaTotal: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = 'CantidadExtraDiurnaTotal'
+      Calculated = True
+    end
+    object qTurnoEmpleadoCantidadExtraNocturnaTotal: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = 'CantidadExtraNocturnaTotal'
+      Calculated = True
+    end
+    object qTurnoEmpleadoDIASIGUIENTE: TDateTimeField
+      Alignment = taCenter
+      DisplayLabel = 'Día Siguiente'
+      FieldKind = fkCalculated
+      FieldName = 'DIASIGUIENTE'
+      Calculated = True
+    end
+    object qTurnoEmpleadoDescripcion: TStringField
+      FieldKind = fkLookup
+      FieldName = 'Descripcion'
+      LookupDataSet = qDescripcionTurno
+      LookupKeyFields = 'CODIGOTURNO'
+      LookupResultField = 'DesdeHasta'
+      KeyFields = 'CODIGOTURNO'
+      Size = 50
+      Lookup = True
+    end
+    object qTurnoEmpleadoCODIGOTURNOEMPLEADO: TFloatField
+      FieldName = 'CODIGOTURNOEMPLEADO'
+    end
+    object qTurnoEmpleadoCODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+    end
+    object qTurnoEmpleadoCODIGOTIPOTURNO: TFloatField
+      FieldName = 'CODIGOTIPOTURNO'
+    end
+    object qTurnoEmpleadoCODIGOTURNO: TFloatField
+      FieldName = 'CODIGOTURNO'
+      OnChange = qTurnoEmpleadoCODIGOTURNOChange
+      OnValidate = qTurnoEmpleadoCODIGOTURNOValidate
+    end
+    object qTurnoEmpleadoCODIGOESTADO: TStringField
+      FieldName = 'CODIGOESTADO'
+      Size = 3
+    end
+    object qTurnoEmpleadoCODIGOPLANILLATURNOEMPLEADO: TFloatField
+      FieldName = 'CODIGOPLANILLATURNOEMPLEADO'
+    end
+    object qTurnoEmpleadoCANTIDADDIURNA: TFloatField
+      FieldName = 'CANTIDADDIURNA'
+    end
+    object qTurnoEmpleadoCANTIDADNOCTURNA: TFloatField
+      FieldName = 'CANTIDADNOCTURNA'
+    end
+    object qTurnoEmpleadoOBSERVACION: TStringField
+      FieldName = 'OBSERVACION'
+      Size = 50
+    end
+    object qTurnoEmpleadoDESDEHASTADIURNA: TStringField
+      FieldName = 'DESDEHASTADIURNA'
+      Size = 40
+    end
+    object qTurnoEmpleadoDESDEHASTANOCTURNA: TStringField
+      FieldName = 'DESDEHASTANOCTURNA'
+      Size = 40
+    end
+    object qTurnoEmpleadoCANTIDADEXTRADIURNA: TFloatField
+      FieldName = 'CANTIDADEXTRADIURNA'
+    end
+    object qTurnoEmpleadoCANTIDADEXTRANOCTURNA: TFloatField
+      FieldName = 'CANTIDADEXTRANOCTURNA'
+    end
+    object qTurnoEmpleadoDESDEHASTAEXTRADIURNA: TStringField
+      FieldName = 'DESDEHASTAEXTRADIURNA'
+      Size = 40
+    end
+    object qTurnoEmpleadoDESDEHASTAEXTRANOCTURNA: TStringField
+      FieldName = 'DESDEHASTAEXTRANOCTURNA'
+      Size = 40
+    end
+    object qTurnoEmpleadoOBSERVACIONEXTRA: TStringField
+      FieldName = 'OBSERVACIONEXTRA'
+      Size = 50
+    end
+    object qTurnoEmpleadoCODIGOESTADOPLANILLA: TStringField
+      FieldName = 'CODIGOESTADOPLANILLA'
+      Size = 3
+    end
+    object qTurnoEmpleadoJORNADA: TFloatField
+      FieldName = 'JORNADA'
+    end
+    object qTurnoEmpleadoCANTIDADEXTRADIURNACONV: TFloatField
+      FieldName = 'CANTIDADEXTRADIURNACONV'
+    end
+    object qTurnoEmpleadoCANTIDADEXTRANOCTURNACONV: TFloatField
+      FieldName = 'CANTIDADEXTRANOCTURNACONV'
+    end
+    object qTurnoEmpleadoCANTIDADEXTRADISPONIBILIDAD: TFloatField
+      FieldName = 'CANTIDADEXTRADISPONIBILIDAD'
+    end
+    object qTurnoEmpleadoD: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'D'
+      Size = 2
+      Calculated = True
+    end
+    object qTurnoEmpleadoFECHA: TDateTimeField
+      FieldName = 'FECHA'
+    end
+    object qTurnoEmpleadoDIA: TDateTimeField
+      FieldName = 'DIA'
+    end
+  end
+  object dsTurnoEmpleado: TDataSource
+    DataSet = qTurnoEmpleado
+    Left = 611
+    Top = 152
+  end
+  object updTurnoEmpleado: TUpdateSQL
+    ModifySQL.Strings = (
+      'update TURNOEMPLEADO'
+      'set'
+      '  CODIGOTURNOEMPLEADO = :CODIGOTURNOEMPLEADO,'
+      '  CODIGOEMPLEADO = :CODIGOEMPLEADO,'
+      '  FECHA = :FECHA,'
+      '  CODIGOTIPOTURNO = :CODIGOTIPOTURNO,'
+      '  CODIGOTURNO = :CODIGOTURNO,'
+      '  CODIGOESTADO = :CODIGOESTADO,'
+      '  JORNADA = :JORNADA'
+      'where'
+      '  CODIGOTURNOEMPLEADO = :OLD_CODIGOTURNOEMPLEADO and'
+      '  CODIGOEMPLEADO = :OLD_CODIGOEMPLEADO and'
+      '  FECHA = :OLD_FECHA')
+    InsertSQL.Strings = (
+      'insert into TURNOEMPLEADO'
+      '  (CODIGOTURNOEMPLEADO, CODIGOEMPLEADO, FECHA, '
+      'CODIGOTIPOTURNO, CODIGOTURNO, '
+      '   CODIGOESTADO, JORNADA)'
+      'values'
+      '  (:CODIGOTURNOEMPLEADO, :CODIGOEMPLEADO, :FECHA, '
+      ':CODIGOTIPOTURNO, :CODIGOTURNO, '
+      '   :CODIGOESTADO, :JORNADA)')
+    DeleteSQL.Strings = (
+      'delete from TURNOEMPLEADO'
+      'where'
+      '  CODIGOTURNOEMPLEADO = :OLD_CODIGOTURNOEMPLEADO and'
+      '  CODIGOEMPLEADO = :OLD_CODIGOEMPLEADO and'
+      '  FECHA = :OLD_FECHA')
+    Left = 613
+    Top = 197
+  end
+  object tdMemFiltro: TTable
+    AfterInsert = tdMemFiltroAfterInsert
+    DatabaseName = 'Temp'
+    TableName = 'TempLiquidacion'
+    TableType = ttParadox
+    Left = 34
+    Top = 392
+    object tdMemFiltroCodigoAdministrativo: TIntegerField
+      FieldName = 'CodigoAdministrativo'
+      OnChange = tdMemFiltroCodigoAdministrativoChange
+      OnValidate = tdMemFiltroCodigoAdministrativoValidate
+    end
+    object tdMemFiltroFecha: TDateField
+      FieldName = 'Fecha'
+      OnChange = tdMemFiltroFechaChange
+      DisplayFormat = 'mmmm yyyy'
+    end
+    object tdMemFiltroInicioMes: TDateField
+      FieldName = 'InicioMes'
+    end
+    object tdMemFiltroFinMes: TDateField
+      FieldName = 'FinMes'
+    end
+    object tdMemFiltroCodigoTipoTurno: TIntegerField
+      FieldName = 'CodigoTipoTurno'
+      OnChange = tdMemFiltroCodigoTipoTurnoChange
+    end
+    object tdMemFiltroAno: TIntegerField
+      FieldName = 'Ano'
+    end
+    object tdMemFiltroMes: TIntegerField
+      FieldName = 'Mes'
+    end
+    object tdMemFiltroTipoHorario: TStringField
+      FieldName = 'TipoHorario'
+    end
+    object tdMemFiltroReabrir: TStringField
+      FieldKind = fkLookup
+      FieldName = 'Reabrir'
+      LookupDataSet = qOdtPermisos
+      LookupKeyFields = 'CODIGOADMINISTRATIVO'
+      LookupResultField = 'REABRIR'
+      KeyFields = 'CodigoAdministrativo'
+      Size = 1
+      Lookup = True
+    end
+    object tdMemFiltroTipoContrato: TIntegerField
+      FieldKind = fkLookup
+      FieldName = 'TipoContrato'
+      LookupDataSet = qEmpleado
+      LookupKeyFields = 'CODIGOEMPLEADO'
+      LookupResultField = 'TIPO_CONTRATO'
+      KeyFields = 'CodigoEmpleado'
+      Lookup = True
+    end
+    object tdMemFiltroCodigoEmpleado: TFloatField
+      FieldName = 'CodigoEmpleado'
+    end
+  end
+  object qSobreTiempoDispTurno: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT OD.CODIGOODTSOBRETIEMPODETALLE,'
+      ' OD.CODIGOODTSOBRETIEMPO,OD.CODIGOODT,OD.CODIGOEMPLEADO,'
+      ' OD.FECHAHORADESDE, OD.FECHAHORAHASTA,OD.CANTIDADDIURNA,'
+      
+        ' OD.CANTIDADNOCTURNA,OD.OBSERVACION,OD.CONVENCIONAL,OD.DISPONIBI' +
+        'LIDAD'
+      'FROM ODTSOBRETIEMPODETALLE OD,ODTSOBRETIEMPO O'
+      'WHERE O.CODIGOODTSOBRETIEMPO=OD.CODIGOODTSOBRETIEMPO'
+      'AND OD.CODIGOEMPLEADO=:CODIGOEMPLEADO'
+      
+        'AND ((FECHAHORADESDE>=:FECHA AND FECHAHORADESDE<:DIASIGUIENTE) O' +
+        'R'
+      '     (FECHAHORAHASTA>:FECHA AND FECHAHORAHASTA<=:DIASIGUIENTE))'
+      'AND OD.DISPONIBILIDAD='#39'S'#39
+      'AND (OD.CONVENCIONAL<>'#39'S'#39' OR OD.CONVENCIONAL IS NULL)'
+      'ORDER BY FECHAHORADESDE')
+    Left = 230
+    Top = 340
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOEMPLEADO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'DIASIGUIENTE'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'DIASIGUIENTE'
+        ParamType = ptUnknown
+      end>
+    object FloatField1: TFloatField
+      FieldName = 'CODIGOODTSOBRETIEMPODETALLE'
+      Origin = 'ODTSOBRETIEMPODETALLE.CODIGOODTSOBRETIEMPODETALLE'
+    end
+    object FloatField2: TFloatField
+      FieldName = 'CODIGOODTSOBRETIEMPO'
+      Origin = 'ODTSOBRETIEMPODETALLE.CODIGOODTSOBRETIEMPO'
+    end
+    object FloatField3: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'ODTSOBRETIEMPODETALLE.CODIGOODT'
+    end
+    object FloatField4: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'ODTSOBRETIEMPODETALLE.CODIGOEMPLEADO'
+    end
+    object DateTimeField1: TDateTimeField
+      FieldName = 'FECHAHORADESDE'
+      Origin = 'ODTSOBRETIEMPODETALLE.FECHAHORADESDE'
+    end
+    object DateTimeField2: TDateTimeField
+      FieldName = 'FECHAHORAHASTA'
+      Origin = 'ODTSOBRETIEMPODETALLE.FECHAHORAHASTA'
+    end
+    object FloatField5: TFloatField
+      FieldName = 'CANTIDADDIURNA'
+      Origin = 'ODTSOBRETIEMPODETALLE.CANTIDADDIURNA'
+    end
+    object FloatField6: TFloatField
+      FieldName = 'CANTIDADNOCTURNA'
+      Origin = 'ODTSOBRETIEMPODETALLE.CANTIDADNOCTURNA'
+    end
+    object StringField1: TStringField
+      FieldName = 'CONVENCIONAL'
+      Origin = 'ODTSOBRETIEMPODETALLE.CONVENCIONAL'
+      Size = 1
+    end
+    object StringField2: TStringField
+      FieldName = 'OBSERVACION'
+      Origin = 'ODTSOBRETIEMPODETALLE.OBSERVACION'
+      Size = 50
+    end
+    object StringField3: TStringField
+      FieldName = 'DISPONIBILIDAD'
+      Origin = 'ODTSOBRETIEMPODETALLE.DISPONIBILIDAD'
+      Size = 1
+    end
+  end
+  object qVerificarliquidacion: TQuery
+    BeforeOpen = qVerificarliquidacionBeforeOpen
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT TO_CHAR (SYSDATE,'#39'DD/MM/YYYY HH:MI'#39') AS fecha,mm.CODIGOAD' +
+        'MINISTRATIVO,e.codigo,MM.NOMBREEMPLEADO,e.concepto,c.DESCRIPCION' +
+        ',em.tipo_contrato,c.valor_3, NVL(e.dia_1,0)+NVL(e.dia_2,0)+NVL(e' +
+        '.dia_3,0)+NVL(e.dia_4,0)+ NVL(e.dia_5,0)+ NVL(e.dia_6,0)+NVL(e.d' +
+        'ia_7,0)+ NVL(e.dia_8,0)+NVL( e.dia_9,0)+ NVL(e.dia_10,0)+ NVL(e.' +
+        'dia_11,0)+ NVL(e.dia_12,0)'
+      
+        '+ NVL(e.dia_13,0)+NVL(e.dia_14,0)+NVL(e.dia_15,0) +NVL(e.dia_16,' +
+        '0)+ NVL(e.dia_17,0)+ NVL(e.dia_18,0)+ NVL(e.dia_19,0) +NVL(e.dia' +
+        '_20,0)+ NVL(e.dia_21,0)+ NVL(e.dia_22,0)+ NVL(e.dia_23,0)+ NVL(e' +
+        '.dia_24,0)+ NVL(e.dia_25,0)+ NVL(e.dia_26,0)'
+      
+        '+ NVL(e.dia_27,0)+NVL(e.dia_28,0) + NVL(e.dia_29,0)+ NVL(e.dia_3' +
+        '0,0)+ NVL(e.dia_31,0) AS suma '
+      
+        ' FROM SIP_EXTRA_TIEMPO E, SIP_CONCEPTOS c, sip_empleado em, empl' +
+        'eado mm'
+      'WHERE  EM.CODIGO =e.CODIGO'
+      'AND e.ANO_SBT=:ANO'
+      'AND e.MES_SBT=:MES'
+      'AND E.concepto=c.concepto'
+      'AND C.TIPO_CONTRATO = em.tipo_contrato '
+      'AND mm.CODIGOEMPLEADO= EM.CODIGO '
+      'AND mm.CODIGOADMINISTRATIVO= :ADMINISTRATIVO'
+      'ORDER BY MM.NOMBREEMPLEADO,e.codigo,e.concepto'
+      '')
+    Left = 258
+    Top = 200
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'ANO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'MES'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'ADMINISTRATIVO'
+        ParamType = ptUnknown
+      end>
+  end
+  object qLiquidacionver: TQuery
+    CachedUpdates = True
+    AfterOpen = qLiquidacionverAfterOpen
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT e.codigo,e.concepto,c.DESCRIPCION,c.VALOR_3 , NVL(e.dia_1' +
+        ',0)+NVL(e.dia_2,0)+NVL(e.dia_3,0)+NVL(e.dia_4,0)+ NVL(e.dia_5,0)' +
+        '+ NVL(e.dia_6,0)+NVL(e.dia_7,0)+ NVL(e.dia_8,0)+NVL( e.dia_9,0)+' +
+        ' NVL(e.dia_10,0)+ NVL(e.dia_11,0)+ NVL(e.dia_12,0)'
+      
+        '+ NVL(e.dia_13,0)+NVL(e.dia_14,0)+NVL(e.dia_15,0) +NVL(e.dia_16,' +
+        '0)+ NVL(e.dia_17,0)+ NVL(e.dia_18,0)+ NVL(e.dia_19,0) +NVL(e.dia' +
+        '_20,0)+ NVL(e.dia_21,0)+ NVL(e.dia_22,0)+ NVL(e.dia_23,0)+ NVL(e' +
+        '.dia_24,0)+ NVL(e.dia_25,0)+ NVL(e.dia_26,0)'
+      
+        '+ NVL(e.dia_27,0)+NVL(e.dia_28,0) + NVL(e.dia_29,0)+ NVL(e.dia_3' +
+        '0,0)+ NVL(e.dia_31,0) AS suma '
+      ' FROM SIP_EXTRA_TIEMPO E, SIP_CONCEPTOS c, sip_empleado em'
+      'WHERE e.CODIGO=:CODIGOEMPLEADO'
+      'AND EM.CODIGO =e.CODIGO'
+      'AND e.ANO_SBT=:ANO'
+      'AND e.MES_SBT=:MES'
+      'AND E.concepto=c.concepto'
+      'AND C.TIPO_CONTRATO = em.tipo_contrato ')
+    Left = 953
+    Top = 290
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CodigoEmpleado'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Ano'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Mes'
+        ParamType = ptUnknown
+      end>
+    object qLiquidacionverCODIGO: TStringField
+      FieldName = 'CODIGO'
+      Size = 15
+    end
+    object qLiquidacionverCONCEPTO: TFloatField
+      FieldName = 'CONCEPTO'
+    end
+    object qLiquidacionverDESCRIPCION: TStringField
+      FieldName = 'DESCRIPCION'
+      Size = 50
+    end
+    object qLiquidacionverSUMA: TFloatField
+      FieldName = 'SUMA'
+    end
+  end
+  object qTurnoEmpleado2: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsMemFiltro
+    SQL.Strings = (
+      'SELECT * '
+      'FROM TURNOEMPLEADO T'
+      'WHERE T.CODIGOEMPLEADO=:CODIGOEMPLEADO'
+      'AND T.FECHA>=:INICIOMES'
+      'AND T.FECHA<=:FINMES'
+      'ORDER BY T.FECHA')
+    Left = 602
+    Top = 293
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CodigoEmpleado'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDate
+        Name = 'InicioMes'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDate
+        Name = 'FinMes'
+        ParamType = ptUnknown
+      end>
+    object qTurnoEmpleado2CODIGOTURNOEMPLEADO: TFloatField
+      FieldName = 'CODIGOTURNOEMPLEADO'
+      Origin = 'TURNOEMPLEADO.CODIGOTURNOEMPLEADO'
+    end
+    object qTurnoEmpleado2CODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'TURNOEMPLEADO.CODIGOEMPLEADO'
+    end
+    object qTurnoEmpleado2FECHA: TDateTimeField
+      FieldName = 'FECHA'
+      Origin = 'TURNOEMPLEADO.FECHA'
+    end
+    object qTurnoEmpleado2CODIGOTIPOTURNO: TFloatField
+      FieldName = 'CODIGOTIPOTURNO'
+      Origin = 'TURNOEMPLEADO.CODIGOTIPOTURNO'
+    end
+    object qTurnoEmpleado2CODIGOTURNO: TFloatField
+      FieldName = 'CODIGOTURNO'
+      Origin = 'TURNOEMPLEADO.CODIGOTURNO'
+    end
+    object qTurnoEmpleado2CODIGOESTADO: TStringField
+      FieldName = 'CODIGOESTADO'
+      Origin = 'TURNOEMPLEADO.CODIGOESTADO'
+      Size = 3
+    end
+    object qTurnoEmpleado2JORNADA: TFloatField
+      FieldName = 'JORNADA'
+      Origin = 'TURNOEMPLEADO.JORNADA'
+    end
+  end
+end

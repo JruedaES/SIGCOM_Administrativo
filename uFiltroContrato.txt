@@ -1,0 +1,278 @@
+object FFiltroContrato: TFFiltroContrato
+  Left = 459
+  Top = 216
+  BorderStyle = bsToolWindow
+  Caption = 'Filtro Contratos'
+  ClientHeight = 191
+  ClientWidth = 306
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyPress = FormKeyPress
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 306
+    Height = 161
+    Align = alClient
+    TabOrder = 0
+    object Label9: TLabel
+      Left = 11
+      Top = 65
+      Width = 18
+      Height = 13
+      Caption = 'CIG'
+    end
+    object DBTGeografico: TDBText
+      Left = 88
+      Top = 59
+      Width = 205
+      Height = 58
+      Color = clSilver
+      DataField = 'NombreGeografico'
+      DataSource = dsGeografico
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
+    object sbBuscarCIG: TSpeedButton
+      Left = 11
+      Top = 91
+      Width = 68
+      Height = 23
+      Hint = 'Editar CIG'
+      Caption = 'CIG'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      NumGlyphs = 2
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = sbBuscarCIGClick
+    end
+    object DBEdit1: TDBEdit
+      Left = 8
+      Top = 127
+      Width = 57
+      Height = 21
+      CharCase = ecUpperCase
+      DataField = 'CODIGOINTERVENTOR'
+      DataSource = dsFiltroContrato
+      TabOrder = 0
+      OnKeyPress = FormKeyPress
+    end
+    object DBLookupComboBox1: TDBLookupComboBox
+      Left = 80
+      Top = 126
+      Width = 209
+      Height = 21
+      DataField = 'CODIGOINTERVENTOR'
+      DataSource = dsFiltroContrato
+      KeyField = 'CODIGOEMPLEADO'
+      ListField = 'NOMBREEMPLEADO'
+      ListSource = dsEmpleado
+      TabOrder = 1
+    end
+    object dbeCIG: TDBEdit
+      Left = 40
+      Top = 62
+      Width = 41
+      Height = 21
+      DataField = 'CODIGOGEOGRAFICO'
+      DataSource = dsFiltroContrato
+      TabOrder = 2
+    end
+    object Opcionurbano: TDBRadioGroup
+      Left = 8
+      Top = 8
+      Width = 287
+      Height = 45
+      Caption = 'Opcion urbano'
+      Columns = 2
+      DataField = 'URBANO'
+      DataSource = dsFiltroContrato
+      Items.Strings = (
+        '&Urbano'
+        '&Rural')
+      TabOrder = 3
+      Values.Strings = (
+        'S'
+        'N')
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 161
+    Width = 306
+    Height = 30
+    Align = alBottom
+    TabOrder = 1
+    object Panel3: TPanel
+      Left = 120
+      Top = 1
+      Width = 185
+      Height = 28
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 0
+      object BitBtnAnularFiltro: TBitBtn
+        Left = 159
+        Top = 3
+        Width = 23
+        Height = 22
+        ModalResult = 2
+        TabOrder = 0
+        OnClick = BitBtnAnularFiltroClick
+        Glyph.Data = {
+          EE000000424DEE000000000000007600000028000000100000000F0000000100
+          0400000000007800000000000000000000001000000010000000000000000000
+          8000008000000080800080000000800080008080000080808000C0C0C0000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+          8889998888888888889999988800008089908899980660899988888999088099
+          9888888889988998888888888899998888888888806999088888888806999990
+          88888880699888990888880999F88889908880999FFF88869998899000000000
+          099999888888888888899888888888888889}
+      end
+      object BitBtnFiltrar: TBitBtn
+        Left = 139
+        Top = 3
+        Width = 23
+        Height = 22
+        ModalResult = 1
+        TabOrder = 1
+        OnClick = BitBtnFiltrarClick
+        Glyph.Data = {
+          EE000000424DEE000000000000007600000028000000100000000F0000000100
+          0400000000007800000000000000000000001000000010000000000000000000
+          8000008000000080800080000000800080008080000080808000C0C0C0000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+          8888888888888888888888888800008080808888880660888888888888088088
+          8888888888088088888888888808808888888888806886088888888806688860
+          8888888066888866088888066FF8888660888066FFFF88866608800000000000
+          000888888888888888888888888888888888}
+      end
+    end
+  end
+  object dsFiltroContrato: TDataSource
+    DataSet = tdFiltroContrato
+    Left = 539
+    Top = 59
+  end
+  object tdFiltroContrato: tdMemTable
+    FieldDefs = <
+      item
+        Name = 'NOMBRE1'
+        DataType = ftString
+        Size = 30
+      end
+      item
+        Name = 'NOMBRE2'
+        DataType = ftString
+        Size = 30
+      end
+      item
+        Name = 'NOMBRE3'
+        DataType = ftString
+        Size = 30
+      end
+      item
+        Name = 'CODIGOEMPLEADO'
+        DataType = ftFloat
+      end
+      item
+        Name = 'CODIGOADMINISTRATIVO'
+        DataType = ftString
+        Size = 20
+      end>
+    StoreDefs = True
+    TableName = 'EmpleadoTemp'
+    Left = 538
+    Top = 10
+    object tdFiltroContratoURBANO: TStringField
+      FieldName = 'URBANO'
+      Size = 1
+    end
+    object tdFiltroContratoCIG: TFloatField
+      FieldName = 'CIG'
+    end
+    object tdFiltroContratoCODIGOINTERVENTOR: TIntegerField
+      FieldName = 'CODIGOINTERVENTOR'
+    end
+  end
+  object dMenuArbol1: TdMenuArbol
+    OwnerDraw = True
+    DatabaseName = 'BaseDato'
+    TableName = 'Administrativo'
+    TableTitle = 'MetadataAdministrativo'
+    FiltroInicial = '(Nivel = 3)'
+    FieldsTableName = 
+      'CODIGO=CODIGOARBOL, ID=CODIGOADMINISTRATIVO, CODIGONIVEL=NOMBREC' +
+      'ATEGORIA, NOMBRE=NOMBREADMINISTRATIVO, NIVEL=NIVEL'
+    FieldsTableTitle = 
+      'IDNIVEL=CODIGONIVEL, NIVEL=NIVELADMINISTRATIVO, CAMPO=CAMPOADMIN' +
+      'ISTRATIVO, DESCRIPCION=DESCRIPCIONCAMPO'
+    Left = 324
+    Top = 12
+  end
+  object qGeografico: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsFiltroContrato
+    SQL.Strings = (
+      'select nombregeografico where '
+      'codigogeografico=:cig')
+    Left = 393
+    Top = 11
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CIG'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsGeografico: TDataSource
+    DataSet = qGeografico
+    Left = 393
+    Top = 59
+  end
+  object qEmpleado: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsFiltroContrato
+    SQL.Strings = (
+      'select nombreempleado, codigoempleado'
+      'from empleado'
+      'where codigoadministrativo=:codigoadministrativo'
+      'AND ((estado IN ('#39'AC'#39','#39'LC'#39')) OR (estado IS NULL))')
+    Left = 465
+    Top = 10
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'codigoadministrativo'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsEmpleado: TDataSource
+    DataSet = qEmpleado
+    Left = 466
+    Top = 59
+  end
+end

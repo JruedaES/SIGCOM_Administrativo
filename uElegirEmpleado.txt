@@ -1,0 +1,367 @@
+object fElegirEmpleado: TfElegirEmpleado
+  Left = 230
+  Top = 180
+  Width = 609
+  Height = 446
+  Caption = 'Elegir Empleado...'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 358
+    Width = 601
+    Height = 61
+    Align = alBottom
+    TabOrder = 0
+    object LbRegistros: TLabel
+      Left = 15
+      Top = 12
+      Width = 5
+      Height = 16
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clRed
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Panel4: TPanel
+      Left = 281
+      Top = 1
+      Width = 319
+      Height = 59
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 0
+      object BitBtn1: TBitBtn
+        Left = 80
+        Top = 16
+        Width = 75
+        Height = 28
+        Caption = '&Aceptar'
+        TabOrder = 0
+        Kind = bkOK
+      end
+      object BitBtn2: TBitBtn
+        Left = 216
+        Top = 16
+        Width = 75
+        Height = 28
+        Caption = '&Cancelar'
+        TabOrder = 1
+        Kind = bkCancel
+      end
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 0
+    Width = 601
+    Height = 38
+    Align = alTop
+    TabOrder = 1
+    object Label4: TLabel
+      Left = 5
+      Top = 12
+      Width = 37
+      Height = 13
+      Caption = 'Nombre'
+    end
+    object Label5: TLabel
+      Left = 168
+      Top = 8
+      Width = 11
+      Height = 20
+      Caption = '&&'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 333
+      Top = 12
+      Width = 33
+      Height = 13
+      Caption = 'Cédula'
+      OnMouseDown = Label6MouseDown
+    end
+    object BitBtnFiltrar: TBitBtn
+      Left = 516
+      Top = 6
+      Width = 35
+      Height = 25
+      TabOrder = 0
+      OnClick = BitBtnFiltrarClick
+      Glyph.Data = {
+        EE000000424DEE000000000000007600000028000000100000000F0000000100
+        0400000000007800000000000000000000001000000010000000000000000000
+        8000008000000080800080000000800080008080000080808000C0C0C0000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+        8888888888888888888888888800008080808888880660888888888888088088
+        8888888888088088888888888808808888888888806886088888888806688860
+        8888888066888866088888066FF8888660888066FFFF88866608800000000000
+        000888888888888888888888888888888888}
+    end
+    object BitBtnAnularFiltro: TBitBtn
+      Left = 551
+      Top = 6
+      Width = 35
+      Height = 25
+      TabOrder = 1
+      OnClick = BitBtnAnularFiltroClick
+      Glyph.Data = {
+        EE000000424DEE000000000000007600000028000000100000000F0000000100
+        0400000000007800000000000000000000001000000010000000000000000000
+        8000008000000080800080000000800080008080000080808000C0C0C0000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+        8889998888888888889999988800008089908899980660899988888999088099
+        9888888889988998888888888899998888888888806999088888888806999990
+        88888880699888990888880999F88889908880999FFF88869998899000000000
+        099999888888888888899888888888888889}
+    end
+    object EdNombre1: TEdit
+      Left = 51
+      Top = 8
+      Width = 115
+      Height = 21
+      CharCase = ecUpperCase
+      TabOrder = 2
+    end
+    object EdNombre2: TEdit
+      Left = 182
+      Top = 8
+      Width = 115
+      Height = 21
+      CharCase = ecUpperCase
+      TabOrder = 3
+    end
+    object EdCedula: TEdit
+      Left = 374
+      Top = 8
+      Width = 115
+      Height = 21
+      CharCase = ecUpperCase
+      TabOrder = 4
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 38
+    Width = 601
+    Height = 255
+    Align = alClient
+    TabOrder = 2
+    object RxDBGrid1: TRxDBGrid
+      Left = 1
+      Top = 1
+      Width = 599
+      Height = 253
+      Align = alClient
+      DataSource = dsEmpleado
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+      ParentFont = False
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      OnTitleClick = RxDBGrid1TitleClick
+      MultiSelect = True
+      OnMouseMove = RxDBGrid1MouseMove
+      Columns = <
+        item
+          Color = clAqua
+          Expanded = False
+          FieldName = 'CODIGOEMPLEADO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Código'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clBlack
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = []
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREEMPLEADO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Nombre Empleado'
+          Width = 261
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGOSUELDO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Código Sueldo'
+          Width = 90
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'SUELDO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Sueldo'
+          Width = 80
+          Visible = True
+        end>
+    end
+  end
+  object Panel5: TPanel
+    Left = 0
+    Top = 293
+    Width = 601
+    Height = 65
+    Align = alBottom
+    TabOrder = 3
+    object Label1: TLabel
+      Left = 12
+      Top = 5
+      Width = 59
+      Height = 13
+      Caption = 'DIRECCION'
+      FocusControl = DBEdit1
+    end
+    object Label2: TLabel
+      Left = 278
+      Top = 5
+      Width = 41
+      Height = 13
+      Caption = 'BARRIO'
+      FocusControl = DBEdit2
+    end
+    object Label3: TLabel
+      Left = 487
+      Top = 5
+      Width = 57
+      Height = 13
+      Caption = 'TELEFONO'
+      FocusControl = DBEdit3
+    end
+    object DBEdit1: TDBEdit
+      Left = 12
+      Top = 21
+      Width = 244
+      Height = 21
+      Color = clSilver
+      DataField = 'DIRECCION'
+      DataSource = dsEmpleado
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object DBEdit2: TDBEdit
+      Left = 278
+      Top = 21
+      Width = 184
+      Height = 21
+      Color = clSilver
+      DataField = 'BARRIO'
+      DataSource = dsEmpleado
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 1
+    end
+    object DBEdit3: TDBEdit
+      Left = 487
+      Top = 21
+      Width = 94
+      Height = 21
+      Color = clSilver
+      DataField = 'TELEFONO'
+      DataSource = dsEmpleado
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 2
+    end
+  end
+  object qEmpleado: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT E.CODIGOEMPLEADO, E.NOMBREEMPLEADO, E.DIRECCION,'
+      'E.BARRIO, E.TELEFONO, E.CODIGOSUELDO, S.SUELDO'
+      'FROM EMPLEADO E, SUELDO S'
+      'WHERE (E.CODIGOSUELDO = S.CODIGOSUELDO)'
+      'AND E.ESTADO = '#39'AC'#39)
+    Left = 280
+    Top = 80
+    object qEmpleadoCODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'EMPLEADO.CODIGOEMPLEADO'
+    end
+    object qEmpleadoNOMBREEMPLEADO: TStringField
+      FieldName = 'NOMBREEMPLEADO'
+      Origin = 'EMPLEADO.NOMBREEMPLEADO'
+      Size = 50
+    end
+    object qEmpleadoDIRECCION: TStringField
+      FieldName = 'DIRECCION'
+      Origin = 'EMPLEADO.DIRECCION'
+      Size = 40
+    end
+    object qEmpleadoBARRIO: TStringField
+      FieldName = 'BARRIO'
+      Origin = 'EMPLEADO.BARRIO'
+      Size = 30
+    end
+    object qEmpleadoTELEFONO: TStringField
+      FieldName = 'TELEFONO'
+      Origin = 'EMPLEADO.TELEFONO'
+      Size = 15
+    end
+    object qEmpleadoCODIGOSUELDO: TStringField
+      FieldName = 'CODIGOSUELDO'
+      Origin = 'EMPLEADO.CODIGOSUELDO'
+      Size = 15
+    end
+    object qEmpleadoSUELDO: TFloatField
+      FieldName = 'SUELDO'
+      Origin = 'SUELDO.SUELDO'
+      DisplayFormat = '$ #,##0'
+    end
+  end
+  object dsEmpleado: TDataSource
+    DataSet = qEmpleado
+    Left = 280
+    Top = 144
+  end
+end

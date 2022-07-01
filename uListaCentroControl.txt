@@ -1,0 +1,3436 @@
+inherited FListaCentroControl: TFListaCentroControl
+  Left = 0
+  Top = 0
+  Width = 1032
+  Height = 748
+  Caption = 'Estadisitica de Reportes'
+  Font.Charset = ANSI_CHARSET
+  Font.Name = 'Tahoma'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    Width = 1024
+    inherited Panel2: TPanel
+      Left = 780
+      inherited SBFiltrar: TSpeedButton
+        Left = 3
+        Hint = 'Asignar Reporte a Grupo de Trabajo'
+        Glyph.Data = {
+          8E050000424D8E05000000000000360000002800000013000000120000000100
+          2000000000005805000000000000000000000000000000000000008080000080
+          8000008080000080800000808000008080008000000080000000800000008000
+          0000800000008000000000808000008080000080800000808000008080000080
+          8000008080000080800000800000800000000080800000808000800000000080
+          0000008000000080000000800000008000000080000080000000800000000080
+          8000008080000080800000808000008080000080800000800000008000008000
+          0000800000000080000000800000008000000080000000800000008000000080
+          0000008000000080000080000000008080000080800000808000008080000080
+          800000800000008000000080000000800000008000000080000000FF000000FF
+          000000FF000000FF000000FF0000008000000080000000800000800000000080
+          8000008080000080800000808000008000000080000000000000000000000080
+          000000FF0000008080000080800000808000008080000080800000FF00000000
+          0000000000000080000080000000008080000080800000808000008000000000
+          0000000000000000000000000000008080000080800000808000008080000080
+          8000008080000000000000000000000000000000000080000000008080000080
+          8000008080000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000808000008080000080800000000000FFFFFF00BFBFBF00BFBF
+          BF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00BFBFBF00FFFFFF00FFFFFF00FFFF
+          FF00BFBFBF00BFBFBF00FFFFFF00000000000080800000808000008080000000
+          0000FFFFFF00FFFFFF00FFFFFF000000FF00FFFFFF00FFFFFF00FFFFFF00BFBF
+          BF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF007F7F7F00000000000080
+          8000008080000080800000000000FFFFFF00FFFFFF000000FF000000FF000000
+          FF00FFFFFF00FFFFFF00BFBFBF00000000000000000000000000000000000000
+          0000000000008000000080000000008080000080800000000000FFFFFF00FFFF
+          FF00FFFFFF000000FF00FFFFFF00FFFFFF00FFFFFF0000000000BFBFBF00BFBF
+          BF00BFBFBF00BFBFBF0000000000008000000080000080000000008080000080
+          800000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF0000000000BFBFBF00BFBFBF00BFBFBF000000000000800000008000000080
+          00008000000000808000008080007F7F7F000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000080
+          00000080000000800000008000008000000000808000008080000080800000FF
+          000000800000008000000080000080000000800000000000FF00800000000000
+          FF000000FF000000FF00008000000000FF000080000000800000800000000080
+          800000808000008080000080800000FF00000080000000800000008000000080
+          00000080000000800000008000000000FF00008000000080000000FF000000FF
+          00000080000080000000008080000080800000808000008080000080800000FF
+          000000FF00000080000000800000008000000000FF00008000000080000000FF
+          00000000FF00008080000080800000FF00000080800000808000008080000080
+          80000080800000808000008080000080800000FF000000FF000000FF000000FF
+          000000FF00000000FF0000808000008080000080800000808000008080000080
+          8000008080000080800000808000008080000080800000808000008080000080
+          8000008080000080800000808000008080000080800000808000008080000080
+          800000808000008080000080800000808000}
+      end
+      inherited SBBuscaElementoCartografia: TSpeedButton
+        Hint = 'Asignar Orden de Trabajo'
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF0033333333B333
+          333B33F333337F3333373B33333BB33333B337FF33377F33337F3BB3333BB333
+          3BB3377FF3377F33377333BB777BB777BB333377FFF77FFF7733330000000000
+          B3333377777777777333330FFFFFFFF03333337F3FF3FFF7F333330F00F000F0
+          33333F7F77377737FFFFBB0FFF8FFFF0BBB3777F3F33FFF7777F3B0F08700000
+          000B377F73F7777777773308880FFFFFF033337F377333333733330807FFFFF8
+          033333737FFFFFFF7F33333000000000B3333337777777777FF333BB333BB333
+          BB33337733377F3377FF3BB3333BB3333BB3377333377F33377F3B33333BB333
+          33B33733333773333373B333333B3333333B7333333733333337}
+        OnClick = SBBuscaElementoCartografiaClick
+      end
+      inherited SBFiltroCarografico: TSpeedButton
+        Hint = 'Actualizar Datos'
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333333333FFFFF3333333333999993333333333F77777FFF333333999999999
+          3333333777333777FF33339993707399933333773337F3777FF3399933000339
+          9933377333777F3377F3399333707333993337733337333337FF993333333333
+          399377F33333F333377F993333303333399377F33337FF333373993333707333
+          333377F333777F333333993333101333333377F333777F3FFFFF993333000399
+          999377FF33777F77777F3993330003399993373FF3777F37777F399933000333
+          99933773FF777F3F777F339993707399999333773F373F77777F333999999999
+          3393333777333777337333333999993333333333377777333333}
+        NumGlyphs = 2
+        OnClick = SBFiltroCarograficoClick
+      end
+    end
+    inherited dNavigator1: TdNavigator
+      Hints.Strings = ()
+    end
+  end
+  inherited Panel3: TPanel
+    Top = 696
+    Width = 1024
+  end
+  inherited PFiltro: TPanel
+    Width = 1024
+    Height = 1
+    inherited lFiltroDatos: TLabel
+      Width = 1022
+    end
+  end
+  object PCLibro: TPageControl [3]
+    Left = 0
+    Top = 29
+    Width = 1024
+    Height = 667
+    ActivePage = tsTerminado
+    Align = alClient
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clRed
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    HotTrack = True
+    MultiLine = True
+    ParentFont = False
+    ScrollOpposite = True
+    TabOrder = 3
+    object tsRecibidos: TTabSheet
+      Caption = 'Reportes Recibidos'
+      object Panel4: TPanel
+        Left = 0
+        Top = 0
+        Width = 1016
+        Height = 549
+        Align = alClient
+        Caption = 'Panel4'
+        TabOrder = 0
+        object Panel9: TPanel
+          Left = 1
+          Top = 1
+          Width = 1014
+          Height = 300
+          Align = alTop
+          Caption = 'Panel9'
+          TabOrder = 0
+          object DBCRecibidos: TDBChart
+            Left = 1
+            Top = 1
+            Width = 608
+            Height = 298
+            BackWall.Brush.Style = bsClear
+            MarginBottom = 2
+            MarginLeft = 2
+            MarginRight = 2
+            MarginTop = 2
+            Title.Font.Charset = ANSI_CHARSET
+            Title.Font.Color = clBlue
+            Title.Font.Height = -16
+            Title.Font.Name = 'Arial'
+            Title.Font.Style = [fsBold]
+            Title.Text.Strings = (
+              'PRIORIDAD  DE LOS REPORTES RECIBIDOS')
+            BottomAxis.AxisValuesFormat = 'PRIORIDAD #,##0.###'
+            BottomAxis.ExactDateTime = False
+            BottomAxis.LabelStyle = talValue
+            LeftAxis.Title.Caption = 'TOTALES'
+            Legend.Alignment = laBottom
+            Legend.ColorWidth = 20
+            View3D = False
+            TabOrder = 0
+            object Series1: TBarSeries
+              ColorEachPoint = True
+              Marks.ArrowLength = 20
+              Marks.Visible = True
+              DataSource = qTotales
+              Title = 'PrioridadRecibidos'
+              ShowInLegend = False
+              SeriesColor = clRed
+              XValues.DateTime = False
+              XValues.Name = 'X'
+              XValues.Multiplier = 1.000000000000000000
+              XValues.Order = loAscending
+              XValues.ValueSource = 'PRIORIDADDANO'
+              YValues.DateTime = False
+              YValues.Name = 'Bar'
+              YValues.Multiplier = 1.000000000000000000
+              YValues.Order = loNone
+              YValues.ValueSource = 'COUNT(*)'
+            end
+          end
+          object DBCRecibidosClasificacion: TDBChart
+            Left = 609
+            Top = 2
+            Width = 392
+            Height = 298
+            AllowPanning = pmNone
+            AllowZoom = False
+            BackWall.Brush.Style = bsClear
+            BackWall.Pen.Visible = False
+            MarginBottom = 2
+            MarginLeft = 2
+            MarginRight = 2
+            MarginTop = 2
+            Title.Font.Charset = ANSI_CHARSET
+            Title.Font.Color = clBlue
+            Title.Font.Height = -16
+            Title.Font.Name = 'Arial'
+            Title.Font.Style = [fsBold]
+            Title.Text.Strings = (
+              'CLASIFICACIÓN REPORTES RECIBIDOS')
+            AxisVisible = False
+            BottomAxis.ExactDateTime = False
+            BottomAxis.LabelStyle = talValue
+            ClipPoints = False
+            Frame.Visible = False
+            LeftAxis.Title.Caption = 'TOTALES'
+            Legend.Alignment = laBottom
+            Legend.ColorWidth = 20
+            View3D = False
+            View3DOptions.Elevation = 315
+            View3DOptions.Orthogonal = False
+            View3DOptions.Rotation = 360
+            View3DWalls = False
+            TabOrder = 1
+            object BarSeries1: TPieSeries
+              Marks.ArrowLength = 20
+              Marks.Visible = True
+              DataSource = qTotalesTipo
+              XLabelsSource = 'NOMBRETIPOREPORTE'
+              OtherSlice.Text = 'Other'
+              PieValues.DateTime = False
+              PieValues.Name = 'Pie'
+              PieValues.Multiplier = 1.000000000000000000
+              PieValues.Order = loNone
+              PieValues.ValueSource = 'COUNT(*)'
+            end
+          end
+        end
+        object DBGRecibidos: TRxDBGrid
+          Left = 1
+          Top = 301
+          Width = 1014
+          Height = 247
+          Align = alClient
+          DataSource = dsRecibidos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Options = [dgTitles, dgIndicator, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+          ParentFont = False
+          ReadOnly = True
+          TabOrder = 1
+          TitleFont.Charset = ANSI_CHARSET
+          TitleFont.Color = clBlack
+          TitleFont.Height = -11
+          TitleFont.Name = 'Tahoma'
+          TitleFont.Style = []
+          OnDblClick = DBGRecibidosDblClick
+          MultiSelect = True
+          TitleButtons = True
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'CODIGOREPORTE'
+              Title.Alignment = taCenter
+              Title.Caption = 'Código'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clBlack
+              Title.Font.Height = -11
+              Title.Font.Name = 'MS Sans Serif'
+              Title.Font.Style = []
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'NOMBREINFORMANTE_1'
+              Title.Caption = 'Tipo Solicitante'
+              Width = 131
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'TELEFONO'
+              Title.Alignment = taCenter
+              Title.Caption = 'Telefono'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'NOMBREINFORMANTE'
+              Title.Alignment = taCenter
+              Title.Caption = 'Nombre Solicitante'
+              Width = 184
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'CIGDANO'
+              Title.Alignment = taCenter
+              Title.Caption = 'CIG'
+              Width = 42
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'DIRECCIONDANO'
+              Title.Alignment = taCenter
+              Title.Caption = 'Dirección Sist. Comercial'
+              Width = 184
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'PRIORIDADDANO'
+              Title.Alignment = taCenter
+              Title.Caption = 'Prioridad'
+              Width = 55
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'NOMBRETIPOREPORTE'
+              Title.Alignment = taCenter
+              Title.Caption = 'Tipo Reporte'
+              Width = 94
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'NOMBRECLASEREPORTE'
+              Title.Alignment = taCenter
+              Title.Caption = 'Clase Reporte'
+              Width = 112
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'NOMBRESUBESTACION'
+              Title.Alignment = taCenter
+              Title.Caption = 'Subestación'
+              Width = 100
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'NOMBRECIRCUITO'
+              Title.Alignment = taCenter
+              Title.Caption = 'Circuito'
+              Width = 96
+              Visible = True
+            end>
+        end
+      end
+      object Panel5: TPanel
+        Left = 0
+        Top = 549
+        Width = 1016
+        Height = 90
+        Align = alBottom
+        Caption = 'Panel5'
+        TabOrder = 1
+        object Shape25: TShape
+          Left = 8
+          Top = 10
+          Width = 985
+          Height = 71
+          Brush.Color = clBtnFace
+        end
+        object Shape31: TShape
+          Left = 761
+          Top = 31
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Shape30: TShape
+          Left = 438
+          Top = 31
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Shape29: TShape
+          Left = 273
+          Top = 31
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Label39: TLabel
+          Left = 441
+          Top = 35
+          Width = 103
+          Height = 13
+          Caption = 'Dirección EnerGis'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label38: TLabel
+          Left = 766
+          Top = 35
+          Width = 47
+          Height = 13
+          Caption = 'TrafoDis'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Shape28: TShape
+          Left = 8
+          Top = 30
+          Width = 985
+          Height = 1
+          Brush.Color = clBtnFace
+        end
+        object Shape27: TShape
+          Left = 8
+          Top = 55
+          Width = 985
+          Height = 1
+          Brush.Color = clBtnFace
+        end
+        object Label36: TLabel
+          Left = 11
+          Top = 61
+          Width = 61
+          Height = 13
+          Caption = 'Recepción '
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label35: TLabel
+          Left = 11
+          Top = 35
+          Width = 65
+          Height = 13
+          Caption = 'Informante'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label34: TLabel
+          Left = 275
+          Top = 35
+          Width = 49
+          Height = 13
+          Caption = 'Teléfono'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label15: TLabel
+          Left = 12
+          Top = 13
+          Width = 973
+          Height = 16
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'Datos Reportes Recibidos'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object DBText24: TDBText
+          Left = 82
+          Top = 35
+          Width = 185
+          Height = 13
+          DataField = 'NOMBREINFORMANTE'
+          DataSource = dsRecibidos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object DBText25: TDBText
+          Left = 79
+          Top = 61
+          Width = 189
+          Height = 13
+          DataField = 'FECHAHORA'
+          DataSource = dsRecibidos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object DBText26: TDBText
+          Left = 330
+          Top = 35
+          Width = 51
+          Height = 13
+          DataField = 'TELEFONO'
+          DataSource = dsRecibidos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object DBText27: TDBText
+          Left = 548
+          Top = 35
+          Width = 207
+          Height = 13
+          DataField = 'DireccionCalculada'
+          DataSource = dsRecibidos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object DBText28: TDBText
+          Left = 821
+          Top = 35
+          Width = 56
+          Height = 13
+          DataField = 'CODIGOTRAFODIS'
+          DataSource = dsRecibidos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Shape38: TShape
+          Left = 273
+          Top = 56
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Label42: TLabel
+          Left = 276
+          Top = 61
+          Width = 65
+          Height = 13
+          Caption = 'Descripción'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object DBText32: TDBText
+          Left = 349
+          Top = 61
+          Width = 635
+          Height = 13
+          DataField = 'DESCRIPCION'
+          DataSource = dsRecibidos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clRed
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Shape5: TShape
+          Left = 882
+          Top = 31
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Label1: TLabel
+          Left = 887
+          Top = 35
+          Width = 36
+          Height = 13
+          Caption = 'Apoyo'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object DBText1: TDBText
+          Left = 933
+          Top = 35
+          Width = 56
+          Height = 13
+          DataField = 'PINTADOAPOYO'
+          DataSource = dsRecibidos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+      end
+    end
+    object tsDictados: TTabSheet
+      Caption = 'Reportes Dictados'
+      object Panel6: TPanel
+        Left = 0
+        Top = 549
+        Width = 1016
+        Height = 90
+        Align = alBottom
+        Caption = 'Panel6'
+        TabOrder = 0
+        object Shape1: TShape
+          Left = 8
+          Top = 10
+          Width = 991
+          Height = 71
+          Brush.Color = clBtnFace
+        end
+        object DBText4: TDBText
+          Left = 327
+          Top = 35
+          Width = 51
+          Height = 13
+          DataField = 'TELEFONO'
+          DataSource = dsDictados
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object DBText5: TDBText
+          Left = 81
+          Top = 35
+          Width = 183
+          Height = 13
+          DataField = 'NOMBREINFORMANTE'
+          DataSource = dsDictados
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object DBText6: TDBText
+          Left = 81
+          Top = 61
+          Width = 160
+          Height = 13
+          DataField = 'FECHAHORA'
+          DataSource = dsDictados
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object DBText7: TDBText
+          Left = 327
+          Top = 61
+          Width = 154
+          Height = 13
+          DataField = 'FECHAHORADICTADO'
+          DataSource = dsDictados
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label17: TLabel
+          Left = 275
+          Top = 35
+          Width = 49
+          Height = 13
+          Caption = 'Teléfono'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label18: TLabel
+          Left = 11
+          Top = 35
+          Width = 65
+          Height = 13
+          Caption = 'Informante'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label19: TLabel
+          Left = 11
+          Top = 61
+          Width = 61
+          Height = 13
+          Caption = 'Recepción '
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label20: TLabel
+          Left = 275
+          Top = 61
+          Width = 43
+          Height = 13
+          Caption = 'Dictado'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label21: TLabel
+          Left = 12
+          Top = 11
+          Width = 981
+          Height = 16
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'Datos Reportes Dictados'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Shape2: TShape
+          Left = 273
+          Top = 55
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Shape3: TShape
+          Left = 8
+          Top = 55
+          Width = 991
+          Height = 1
+          Brush.Color = clBtnFace
+        end
+        object Shape4: TShape
+          Left = 8
+          Top = 30
+          Width = 991
+          Height = 1
+          Brush.Color = clBtnFace
+        end
+        object Label9: TLabel
+          Left = 385
+          Top = 35
+          Width = 97
+          Height = 13
+          Caption = 'Dirección EnerGis'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object DBText15: TDBText
+          Left = 485
+          Top = 35
+          Width = 214
+          Height = 13
+          DataField = 'DireccionCalculada'
+          DataSource = dsDictados
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Shape21: TShape
+          Left = 273
+          Top = 31
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Shape22: TShape
+          Left = 382
+          Top = 31
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Shape23: TShape
+          Left = 731
+          Top = 31
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Shape39: TShape
+          Left = 474
+          Top = 56
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Label43: TLabel
+          Left = 483
+          Top = 61
+          Width = 45
+          Height = 13
+          Caption = 'Descrip.'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object DBText33: TDBText
+          Left = 533
+          Top = 61
+          Width = 452
+          Height = 13
+          DataField = 'DESCRIPCION'
+          DataSource = dsDictados
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clRed
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label2: TLabel
+          Left = 747
+          Top = 35
+          Width = 47
+          Height = 13
+          Caption = 'TrafoDis'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object DBText2: TDBText
+          Left = 802
+          Top = 35
+          Width = 56
+          Height = 13
+          DataField = 'CODIGOTRAFODIS'
+          DataSource = dsDictados
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Shape6: TShape
+          Left = 863
+          Top = 31
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Label3: TLabel
+          Left = 868
+          Top = 35
+          Width = 36
+          Height = 13
+          Caption = 'Apoyo'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object DBText3: TDBText
+          Left = 914
+          Top = 35
+          Width = 56
+          Height = 13
+          DataField = 'PINTADOAPOYO'
+          DataSource = dsDictados
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+      end
+      object Panel7: TPanel
+        Left = 0
+        Top = 0
+        Width = 1016
+        Height = 305
+        Align = alTop
+        Caption = 'Panel7'
+        TabOrder = 1
+        object Panel10: TPanel
+          Left = 1
+          Top = 1
+          Width = 1014
+          Height = 300
+          Align = alTop
+          Caption = 'Panel10'
+          TabOrder = 0
+          object PCDictados: TPageControl
+            Left = 1
+            Top = 1
+            Width = 1012
+            Height = 298
+            ActivePage = TSTiempo
+            Align = alClient
+            TabOrder = 0
+            object TSTiempo: TTabSheet
+              Caption = 'Tiempos'
+              object DBCTiemposDictados: TDBChart
+                Left = 0
+                Top = 0
+                Width = 1004
+                Height = 270
+                BackWall.Brush.Style = bsClear
+                Title.Font.Charset = DEFAULT_CHARSET
+                Title.Font.Color = clBlue
+                Title.Font.Height = -16
+                Title.Font.Name = 'Arial'
+                Title.Font.Style = [fsBold]
+                Title.Text.Strings = (
+                  'TIEMPO ACUMULADO DE LOS REPORTES DICTADOS')
+                BottomAxis.DateTimeFormat = 'hh:mm'
+                BottomAxis.Title.Caption = 'TIEMPO TRANSCURRIDO'
+                LeftAxis.Title.Caption = 'CODIGO DE LOS REPORTES'
+                Legend.Alignment = laBottom
+                View3D = False
+                Align = alClient
+                BevelInner = bvRaised
+                TabOrder = 0
+                OnDblClick = DBCTiemposDictadosDblClick
+                object HBSTiempoDictadoReportesDictados: THorizBarSeries
+                  Marks.ArrowLength = 25
+                  Marks.Font.Charset = DEFAULT_CHARSET
+                  Marks.Font.Color = clGreen
+                  Marks.Font.Height = -11
+                  Marks.Font.Name = 'Arial'
+                  Marks.Font.Style = [fsBold]
+                  Marks.Style = smsXValue
+                  Marks.Visible = False
+                  DataSource = qDictados
+                  Title = 'Tiempo de Dictado'
+                  XLabelsSource = 'CODIGOREPORTE'
+                  MultiBar = mbStacked
+                  SeriesColor = clGreen
+                  XValues.DateTime = False
+                  XValues.Name = 'Bar'
+                  XValues.Multiplier = 1.000000000000000000
+                  XValues.Order = loNone
+                  XValues.ValueSource = 'TIEMPODICTADO'
+                  YValues.DateTime = False
+                  YValues.Name = 'Y'
+                  YValues.Multiplier = 1.000000000000000000
+                  YValues.Order = loNone
+                  YValues.ValueSource = 'CODIGOREPORTE'
+                end
+                object STiempoEnLlegar: THorizBarSeries
+                  Marks.ArrowLength = 20
+                  Marks.Visible = False
+                  DataSource = qDictados
+                  Title = 'Tiempo en Espera (En Llegar)'
+                  XLabelsSource = 'CODIGOREPORTE'
+                  MultiBar = mbStacked
+                  SeriesColor = 1710847
+                  XValues.DateTime = False
+                  XValues.Name = 'Bar'
+                  XValues.Multiplier = 1.000000000000000000
+                  XValues.Order = loNone
+                  XValues.ValueSource = 'TiempoEnEspera'
+                  YValues.DateTime = False
+                  YValues.Name = 'Y'
+                  YValues.Multiplier = 1.000000000000000000
+                  YValues.Order = loNone
+                  YValues.ValueSource = 'CODIGOREPORTE'
+                end
+              end
+            end
+            object TSMovil: TTabSheet
+              Caption = 'Grupos de Trabajo'
+              object DBCMovilReporteDictados: TDBChart
+                Left = 0
+                Top = 0
+                Width = 1004
+                Height = 270
+                BackWall.Brush.Style = bsClear
+                Title.Font.Charset = DEFAULT_CHARSET
+                Title.Font.Color = clBlue
+                Title.Font.Height = -16
+                Title.Font.Name = 'Arial'
+                Title.Font.Style = [fsBold]
+                Title.Text.Strings = (
+                  'GRUPOS DE TRABAJO ASOCIADOS A LOS REPORTES')
+                BottomAxis.DateTimeFormat = 'hh:mm'
+                BottomAxis.Title.Caption = 'NOMBRE DEL GRUPO DE TRABAJO'
+                LeftAxis.Title.Caption = 'NUMERO DE REPORTES'
+                View3D = False
+                Align = alClient
+                BevelInner = bvRaised
+                TabOrder = 0
+                object HBSMovilReporteDictado: TBarSeries
+                  ColorEachPoint = True
+                  Marks.ArrowLength = 25
+                  Marks.Font.Charset = DEFAULT_CHARSET
+                  Marks.Font.Color = clGreen
+                  Marks.Font.Height = -11
+                  Marks.Font.Name = 'Arial'
+                  Marks.Font.Style = [fsBold]
+                  Marks.Style = smsValue
+                  Marks.Transparent = True
+                  Marks.Visible = True
+                  DataSource = qDictadosGrupos
+                  Title = 'Tiempo de Dictado'
+                  XLabelsSource = 'NOMBREGRUPOTRABAJO'
+                  MultiBar = mbStacked
+                  SeriesColor = clGreen
+                  XValues.DateTime = False
+                  XValues.Name = 'X'
+                  XValues.Multiplier = 1.000000000000000000
+                  XValues.Order = loNone
+                  YValues.DateTime = False
+                  YValues.Name = 'Bar'
+                  YValues.Multiplier = 1.000000000000000000
+                  YValues.Order = loNone
+                  YValues.ValueSource = 'COUNT(*)'
+                end
+              end
+            end
+          end
+        end
+      end
+      object DBGDictados: TRxDBGrid
+        Left = 0
+        Top = 305
+        Width = 1016
+        Height = 244
+        Align = alClient
+        DataSource = dsDictados
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 2
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clBlack
+        TitleFont.Height = -11
+        TitleFont.Name = 'Tahoma'
+        TitleFont.Style = []
+        OnDblClick = DBGDictadosDblClick
+        MultiSelect = True
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'CODIGOREPORTE'
+            Title.Alignment = taCenter
+            Title.Caption = 'Reporte'
+            Width = 42
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CODIGOADMINISTRATIVO'
+            Title.Alignment = taCenter
+            Title.Caption = 'CIA'
+            Width = 50
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NOMBREGRUPOTRABAJO'
+            Title.Alignment = taCenter
+            Title.Caption = 'Grupo de Trabajo'
+            Width = 100
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'TiempoC'
+            Title.Alignment = taCenter
+            Title.Caption = 'Tiempo En Llegar'
+            Width = 140
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'TiempoB'
+            Title.Alignment = taCenter
+            Title.Caption = 'Tiempo En Dictar'
+            Width = 140
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'TiempoA'
+            Title.Alignment = taCenter
+            Title.Caption = 'Tiempo Transcurrido'
+            Width = 140
+            Visible = True
+          end
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'CIGDANO'
+            Title.Alignment = taCenter
+            Title.Caption = 'CIG'
+            Width = 42
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'DIRECCIONDANO'
+            Title.Alignment = taCenter
+            Title.Caption = 'Dirección Sist. Comercial'
+            Width = 184
+            Visible = True
+          end
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'PRIORIDADDANO'
+            Title.Alignment = taCenter
+            Title.Caption = 'Prioridad'
+            Width = 50
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NOMBRETIPOREPORTE'
+            Title.Alignment = taCenter
+            Title.Caption = 'Tipo Reporte'
+            Width = 94
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NOMBRECLASEREPORTE'
+            Title.Alignment = taCenter
+            Title.Caption = 'Clase Reporte'
+            Width = 112
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NOMBRESUBESTACION'
+            Title.Alignment = taCenter
+            Title.Caption = 'Subestación'
+            Width = 126
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NOMBRECIRCUITO'
+            Title.Alignment = taCenter
+            Title.Caption = 'Circuito'
+            Width = 125
+            Visible = True
+          end>
+      end
+    end
+    object tsAtendidos: TTabSheet
+      Caption = 'Reportes Atendidos'
+      object Panel12: TPanel
+        Left = 0
+        Top = 0
+        Width = 1016
+        Height = 300
+        Align = alTop
+        Caption = 'Panel12'
+        TabOrder = 0
+        object PCReporteAtendidos: TPageControl
+          Left = 1
+          Top = 1
+          Width = 1014
+          Height = 298
+          ActivePage = tsTiempoAtendidos
+          Align = alClient
+          TabOrder = 0
+          object tsTiempoAtendidos: TTabSheet
+            Caption = 'Tiempos'
+            object DBCReporteAtendidosTiempo: TDBChart
+              Left = 0
+              Top = 0
+              Width = 1006
+              Height = 270
+              AnimatedZoomSteps = 3
+              BackWall.Brush.Style = bsClear
+              BottomWall.Brush.Style = bsHorizontal
+              BottomWall.Color = 8453888
+              BottomWall.Size = 8
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clBlue
+              Title.Font.Height = -16
+              Title.Font.Name = 'Arial'
+              Title.Font.Style = [fsBold]
+              Title.Text.Strings = (
+                'TIEMPOS ACUMULADOS DE LOS REPORTES ATENDIDOS')
+              BottomAxis.DateTimeFormat = 'hh:mm'
+              BottomAxis.LabelStyle = talValue
+              BottomAxis.Title.Caption = 'TIEMPO TRANSCURRIDO'
+              LeftAxis.DateTimeFormat = 'hh:mm'
+              LeftAxis.Title.Caption = 'CODIGO DE LOS REPORTES'
+              Legend.Alignment = laBottom
+              Legend.ShadowSize = 2
+              View3D = False
+              View3DWalls = False
+              Align = alClient
+              TabOrder = 0
+              OnDblClick = DBCReporteAtendidosTiempoDblClick
+              object HBSReporteAtendidoTiempoDictado: THorizBarSeries
+                Marks.ArrowLength = 25
+                Marks.Font.Charset = DEFAULT_CHARSET
+                Marks.Font.Color = clGreen
+                Marks.Font.Height = -11
+                Marks.Font.Name = 'Arial'
+                Marks.Font.Style = [fsBold]
+                Marks.Style = smsXValue
+                Marks.Visible = False
+                DataSource = qAtendidos
+                Title = 'Tiempo de Dictado'
+                XLabelsSource = 'CODIGOREPORTE'
+                MultiBar = mbStacked
+                SeriesColor = clGreen
+                XValues.DateTime = False
+                XValues.Name = 'Bar'
+                XValues.Multiplier = 1.000000000000000000
+                XValues.Order = loNone
+                XValues.ValueSource = 'TIEMPODICTADO'
+                YValues.DateTime = False
+                YValues.Name = 'Y'
+                YValues.Multiplier = 1.000000000000000000
+                YValues.Order = loNone
+              end
+              object HBSReporteAtendidosTiempoAtencion: THorizBarSeries
+                Marks.ArrowLength = 20
+                Marks.Font.Charset = DEFAULT_CHARSET
+                Marks.Font.Color = clYellow
+                Marks.Font.Height = -11
+                Marks.Font.Name = 'Arial'
+                Marks.Font.Style = []
+                Marks.Style = smsValue
+                Marks.Visible = False
+                DataSource = qAtendidos
+                Title = 'Tiempo de Llegada'
+                XLabelsSource = 'CODIGOREPORTE'
+                MultiBar = mbStacked
+                SeriesColor = clYellow
+                XValues.DateTime = False
+                XValues.Name = 'Bar'
+                XValues.Multiplier = 1.000000000000000000
+                XValues.Order = loNone
+                XValues.ValueSource = 'TIEMPOLLEGADA'
+                YValues.DateTime = False
+                YValues.Name = 'Y'
+                YValues.Multiplier = 1.000000000000000000
+                YValues.Order = loNone
+              end
+              object Series2: THorizBarSeries
+                Marks.ArrowLength = 20
+                Marks.Font.Charset = DEFAULT_CHARSET
+                Marks.Font.Color = clYellow
+                Marks.Font.Height = -11
+                Marks.Font.Name = 'Arial'
+                Marks.Font.Style = []
+                Marks.Style = smsValue
+                Marks.Visible = False
+                DataSource = qAtendidos
+                Title = 'Tiempo Reparación'
+                XLabelsSource = 'CODIGOREPORTE'
+                MultiBar = mbStacked
+                SeriesColor = clLime
+                XValues.DateTime = False
+                XValues.Name = 'Bar'
+                XValues.Multiplier = 1.000000000000000000
+                XValues.Order = loNone
+                XValues.ValueSource = 'TiempoEnReparacion'
+                YValues.DateTime = False
+                YValues.Name = 'Y'
+                YValues.Multiplier = 1.000000000000000000
+                YValues.Order = loNone
+              end
+              object STiempoEnReparacion: THorizBarSeries
+                Marks.ArrowLength = 20
+                Marks.Style = smsXValue
+                Marks.Visible = True
+                DataSource = qAtendidos
+                Title = 'Tiempo Transcurrido'
+                XLabelsSource = 'CODIGOREPORTE'
+                BarWidthPercent = 100
+                SeriesColor = clBlue
+                XValues.DateTime = False
+                XValues.Name = 'Bar'
+                XValues.Multiplier = 1.000000000000000000
+                XValues.Order = loNone
+                XValues.ValueSource = 'TiempoEnEspera'
+                YValues.DateTime = False
+                YValues.Name = 'Y'
+                YValues.Multiplier = 1.000000000000000000
+                YValues.Order = loNone
+              end
+            end
+          end
+          object tsMovilReportesAtendidos: TTabSheet
+            Caption = 'Grupos de Trabajo'
+            object DBCMovilReporteAtendidos: TDBChart
+              Left = 0
+              Top = 0
+              Width = 1006
+              Height = 270
+              BackWall.Brush.Style = bsClear
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clBlue
+              Title.Font.Height = -16
+              Title.Font.Name = 'Arial'
+              Title.Font.Style = [fsBold]
+              Title.Text.Strings = (
+                'GRUPOS DE TRABAJO ASOCIADOS LOS REPORTES')
+              BottomAxis.DateTimeFormat = 'hh:mm'
+              BottomAxis.Title.Caption = 'NOMBRE DEL GRUPO DE TRABAJO'
+              LeftAxis.Title.Caption = 'NUMERO DE REPORTES'
+              View3D = False
+              Align = alClient
+              TabOrder = 0
+              object HBSMovilReporteAtendido: TBarSeries
+                ColorEachPoint = True
+                Marks.ArrowLength = 25
+                Marks.Font.Charset = DEFAULT_CHARSET
+                Marks.Font.Color = clGreen
+                Marks.Font.Height = -11
+                Marks.Font.Name = 'Arial'
+                Marks.Font.Style = [fsBold]
+                Marks.Style = smsValue
+                Marks.Transparent = True
+                Marks.Visible = True
+                DataSource = qAtendidosGrupos
+                Title = 'Moviles'
+                XLabelsSource = 'NOMBREGRUPOTRABAJO'
+                MultiBar = mbNone
+                SeriesColor = clGreen
+                XValues.DateTime = False
+                XValues.Name = 'X'
+                XValues.Multiplier = 1.000000000000000000
+                XValues.Order = loNone
+                YValues.DateTime = False
+                YValues.Name = 'Bar'
+                YValues.Multiplier = 1.000000000000000000
+                YValues.Order = loNone
+                YValues.ValueSource = 'COUNT(*)'
+              end
+            end
+          end
+        end
+      end
+      object DBGAtendidos: TDBGrid
+        Left = 0
+        Top = 300
+        Width = 1016
+        Height = 249
+        Align = alClient
+        DataSource = dsAtendidos
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 1
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+        OnDblClick = DBGAtendidosDblClick
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'CODIGOREPORTE'
+            Title.Alignment = taCenter
+            Title.Caption = 'Reporte'
+            Width = 40
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CODIGOADMINISTRATIVO'
+            Title.Alignment = taCenter
+            Title.Caption = 'CIA'
+            Width = 50
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NOMBREGRUPOTRABAJO'
+            Title.Alignment = taCenter
+            Title.Caption = 'Grupo de Trabajo'
+            Width = 100
+            Visible = True
+          end
+          item
+            Alignment = taRightJustify
+            Expanded = False
+            FieldName = 'TiempoD'
+            Title.Alignment = taCenter
+            Title.Caption = 'Tiempo En Reparar'
+            Width = 160
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'TiempoC'
+            Title.Alignment = taCenter
+            Title.Caption = 'Tiempo En Llegar'
+            Width = 140
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'TiempoB'
+            Title.Alignment = taCenter
+            Title.Caption = 'Tiempo En Dictar'
+            Width = 140
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'TiempoA'
+            Title.Alignment = taCenter
+            Title.Caption = 'Tiempo Transcurrido'
+            Width = 140
+            Visible = True
+          end
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'CIGDANO'
+            Title.Alignment = taCenter
+            Title.Caption = 'CIG'
+            Width = 42
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'DIRECCIONDANO'
+            Title.Alignment = taCenter
+            Title.Caption = 'Dirección Sist. Comercial'
+            Width = 184
+            Visible = True
+          end
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'PRIORIDADDANO'
+            Title.Alignment = taCenter
+            Title.Caption = 'Prioridad'
+            Width = 50
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NOMBRETIPOREPORTE'
+            Title.Alignment = taCenter
+            Title.Caption = 'Tipo Reporte'
+            Width = 94
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NOMBRECLASEREPORTE'
+            Title.Alignment = taCenter
+            Title.Caption = 'Clase Reporte'
+            Width = 112
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NOMBRESUBESTACION'
+            Title.Alignment = taCenter
+            Title.Caption = 'Subestación'
+            Width = 126
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NOMBRECIRCUITO'
+            Title.Alignment = taCenter
+            Title.Caption = 'Circuito'
+            Width = 125
+            Visible = True
+          end>
+      end
+      object Panel13: TPanel
+        Left = 0
+        Top = 549
+        Width = 1016
+        Height = 90
+        Align = alBottom
+        Caption = 'Panel13'
+        TabOrder = 2
+        object Shape16: TShape
+          Left = 8
+          Top = 10
+          Width = 990
+          Height = 71
+          Brush.Color = clBtnFace
+        end
+        object Shape26: TShape
+          Left = 382
+          Top = 31
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Shape20: TShape
+          Left = 273
+          Top = 31
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Label32: TLabel
+          Left = 385
+          Top = 37
+          Width = 64
+          Height = 13
+          Caption = 'Dir. EnerGis'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Shape19: TShape
+          Left = 8
+          Top = 30
+          Width = 990
+          Height = 1
+          Brush.Color = clBtnFace
+        end
+        object Shape18: TShape
+          Left = 8
+          Top = 55
+          Width = 990
+          Height = 1
+          Brush.Color = clBtnFace
+        end
+        object Shape17: TShape
+          Left = 221
+          Top = 55
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Label29: TLabel
+          Left = 225
+          Top = 61
+          Width = 43
+          Height = 13
+          Caption = 'Dictado'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label28: TLabel
+          Left = 11
+          Top = 61
+          Width = 61
+          Height = 13
+          Caption = 'Recepción '
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label27: TLabel
+          Left = 11
+          Top = 37
+          Width = 65
+          Height = 13
+          Caption = 'Informante'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label26: TLabel
+          Left = 275
+          Top = 37
+          Width = 49
+          Height = 13
+          Caption = 'Teléfono'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label30: TLabel
+          Left = 12
+          Top = 13
+          Width = 981
+          Height = 16
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'Datos Reportes Atendidos'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object DBText18: TDBText
+          Left = 78
+          Top = 61
+          Width = 137
+          Height = 12
+          DataField = 'FECHAHORA'
+          DataSource = dsAtendidos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object DBText19: TDBText
+          Left = 462
+          Top = 61
+          Width = 137
+          Height = 13
+          DataField = 'FECHAHORALLEGADA'
+          DataSource = dsAtendidos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object DBText20: TDBText
+          Left = 328
+          Top = 37
+          Width = 52
+          Height = 13
+          DataField = 'TELEFONO'
+          DataSource = dsAtendidos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object DBText21: TDBText
+          Left = 80
+          Top = 37
+          Width = 189
+          Height = 13
+          DataField = 'NOMBREINFORMANTE'
+          DataSource = dsAtendidos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object DBText23: TDBText
+          Left = 458
+          Top = 37
+          Width = 210
+          Height = 13
+          DataField = 'DireccionCalculada'
+          DataSource = dsAtendidos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object DBText29: TDBText
+          Left = 272
+          Top = 61
+          Width = 137
+          Height = 13
+          DataField = 'FECHAHORADICTADO'
+          DataSource = dsAtendidos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label37: TLabel
+          Left = 412
+          Top = 61
+          Width = 44
+          Height = 13
+          Caption = 'Llegada'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Shape33: TShape
+          Left = 612
+          Top = 55
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Label45: TLabel
+          Left = 619
+          Top = 61
+          Width = 29
+          Height = 13
+          Caption = 'Daño'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object DBText35: TDBText
+          Left = 656
+          Top = 61
+          Width = 334
+          Height = 13
+          DataField = 'DESCRIPCION'
+          DataSource = dsAtendidos
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clRed
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Shape7: TShape
+          Left = 405
+          Top = 55
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Shape8: TShape
+          Left = 731
+          Top = 31
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Label4: TLabel
+          Left = 747
+          Top = 35
+          Width = 47
+          Height = 13
+          Caption = 'TrafoDis'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object DBText9: TDBText
+          Left = 802
+          Top = 35
+          Width = 56
+          Height = 13
+          DataField = 'CODIGOTRAFODIS'
+          DataSource = dsAtendidos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Shape13: TShape
+          Left = 863
+          Top = 31
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Label5: TLabel
+          Left = 868
+          Top = 35
+          Width = 36
+          Height = 13
+          Caption = 'Apoyo'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object DBText12: TDBText
+          Left = 914
+          Top = 35
+          Width = 56
+          Height = 13
+          DataField = 'PINTADOAPOYO'
+          DataSource = dsAtendidos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+      end
+    end
+    object tsTerminado: TTabSheet
+      Caption = 'Reportes Terminados'
+      object Panel8: TPanel
+        Left = 0
+        Top = 549
+        Width = 1016
+        Height = 90
+        Align = alBottom
+        Caption = 'Panel8'
+        TabOrder = 0
+        object Shape9: TShape
+          Left = 8
+          Top = 10
+          Width = 994
+          Height = 71
+          Brush.Color = clBtnFace
+        end
+        object Label16: TLabel
+          Left = 12
+          Top = 13
+          Width = 981
+          Height = 16
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'Datos Reportes Terminados'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object DBText8: TDBText
+          Left = 76
+          Top = 61
+          Width = 130
+          Height = 13
+          DataField = 'FECHAHORA'
+          DataSource = dsTerminados
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+        end
+        object DBText10: TDBText
+          Left = 328
+          Top = 36
+          Width = 51
+          Height = 13
+          DataField = 'TELEFONO'
+          DataSource = dsTerminados
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+        end
+        object DBText11: TDBText
+          Left = 73
+          Top = 36
+          Width = 197
+          Height = 13
+          DataField = 'NOMBREINFORMANTE'
+          DataSource = dsTerminados
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+        end
+        object DBText17: TDBText
+          Left = 457
+          Top = 36
+          Width = 232
+          Height = 13
+          DataField = 'DireccionCalculada'
+          DataSource = dsTerminados
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label10: TLabel
+          Left = 275
+          Top = 36
+          Width = 51
+          Height = 13
+          Caption = 'Teléfono'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label11: TLabel
+          Left = 11
+          Top = 36
+          Width = 61
+          Height = 13
+          Caption = 'Informante'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label12: TLabel
+          Left = 11
+          Top = 61
+          Width = 66
+          Height = 13
+          Caption = 'Recepción '
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Shape10: TShape
+          Left = 209
+          Top = 55
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Shape11: TShape
+          Left = 8
+          Top = 55
+          Width = 994
+          Height = 1
+          Brush.Color = clBtnFace
+        end
+        object Shape12: TShape
+          Left = 8
+          Top = 30
+          Width = 994
+          Height = 1
+          Brush.Color = clBtnFace
+        end
+        object Label22: TLabel
+          Left = 385
+          Top = 36
+          Width = 69
+          Height = 13
+          Caption = 'Dir. EnerGis'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Shape15: TShape
+          Left = 273
+          Top = 31
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Shape34: TShape
+          Left = 382
+          Top = 31
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Shape36: TShape
+          Left = 411
+          Top = 55
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object DBText30: TDBText
+          Left = 275
+          Top = 61
+          Width = 122
+          Height = 13
+          DataField = 'FECHAHORAATENCION'
+          DataSource = dsTerminados
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label41: TLabel
+          Left = 213
+          Top = 61
+          Width = 60
+          Height = 13
+          Caption = 'Terminado'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label44: TLabel
+          Left = 427
+          Top = 61
+          Width = 90
+          Height = 13
+          Caption = 'Daño Reparado'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object DBText34: TDBText
+          Left = 526
+          Top = 61
+          Width = 469
+          Height = 13
+          DataField = 'DESCRIPCION'
+          DataSource = dsTerminados
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clRed
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Shape14: TShape
+          Left = 731
+          Top = 31
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Label6: TLabel
+          Left = 747
+          Top = 35
+          Width = 47
+          Height = 13
+          Caption = 'TrafoDis'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Shape24: TShape
+          Left = 863
+          Top = 31
+          Width = 1
+          Height = 25
+          Brush.Color = clBtnFace
+        end
+        object Label7: TLabel
+          Left = 868
+          Top = 35
+          Width = 36
+          Height = 13
+          Caption = 'Apoyo'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object DBText13: TDBText
+          Left = 802
+          Top = 35
+          Width = 56
+          Height = 13
+          DataField = 'CODIGOTRAFODIS'
+          DataSource = dsTerminados
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object DBText14: TDBText
+          Left = 914
+          Top = 35
+          Width = 56
+          Height = 13
+          DataField = 'PINTADOAPOYO'
+          DataSource = dsTerminados
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+      end
+      object Panel11: TPanel
+        Left = 0
+        Top = 0
+        Width = 1016
+        Height = 549
+        Align = alClient
+        Caption = 'Panel11'
+        TabOrder = 1
+        object DBGTerminados: TDBGrid
+          Left = 1
+          Top = 301
+          Width = 1014
+          Height = 247
+          Align = alClient
+          DataSource = dsTerminados
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+          ParentFont = False
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+          OnDblClick = DBGTerminadosDblClick
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'CODIGOREPORTE'
+              Title.Alignment = taCenter
+              Title.Caption = 'Reporte'
+              Width = 50
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CODIGOADMINISTRATIVO'
+              Title.Alignment = taCenter
+              Title.Caption = 'CIA'
+              Width = 50
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'NOMBREGRUPOTRABAJO'
+              Title.Alignment = taCenter
+              Title.Caption = 'Grupo de Trabajo'
+              Width = 100
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'TiempoC'
+              Title.Alignment = taCenter
+              Title.Caption = 'Tiempo de Reparación'
+              Width = 140
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'TiempoB'
+              Title.Alignment = taCenter
+              Title.Caption = 'Tiempo de Llegada'
+              Width = 140
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'TiempoA'
+              Title.Alignment = taCenter
+              Title.Caption = 'Tiempo de Dictado'
+              Width = 140
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'CIGDANO'
+              Title.Alignment = taCenter
+              Title.Caption = 'CIG'
+              Width = 40
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'DIRECCIONDANO'
+              Title.Alignment = taCenter
+              Title.Caption = 'Dirección Sist. Comercial'
+              Width = 184
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'PRIORIDADDANO'
+              Title.Alignment = taCenter
+              Title.Caption = 'Prioridad'
+              Width = 50
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'NOMBRECLASEREPORTE'
+              Title.Alignment = taCenter
+              Title.Caption = 'Clase Reporte'
+              Width = 90
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'NOMBRETIPOREPORTE'
+              Title.Alignment = taCenter
+              Title.Caption = 'Tipo Reporte'
+              Width = 110
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'NOMBRESUBESTACION'
+              Title.Alignment = taCenter
+              Title.Caption = 'Subestación'
+              Width = 125
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'NOMBRECIRCUITO'
+              Title.Alignment = taCenter
+              Title.Caption = 'Circuito'
+              Width = 125
+              Visible = True
+            end>
+        end
+        object Panel14: TPanel
+          Left = 1
+          Top = 1
+          Width = 1014
+          Height = 300
+          Align = alTop
+          Caption = 'Panel14'
+          TabOrder = 1
+          object PCTerminados: TPageControl
+            Left = 1
+            Top = 1
+            Width = 1012
+            Height = 298
+            ActivePage = TSTiempos
+            Align = alClient
+            TabOrder = 0
+            object TSTiempos: TTabSheet
+              Caption = 'Tiempos'
+              object DBCTiemposReportesTerminados: TDBChart
+                Left = 0
+                Top = 0
+                Width = 1004
+                Height = 270
+                AnimatedZoomSteps = 5
+                BackWall.Brush.Style = bsClear
+                Title.Font.Charset = DEFAULT_CHARSET
+                Title.Font.Color = clBlue
+                Title.Font.Height = -16
+                Title.Font.Name = 'Arial'
+                Title.Font.Style = [fsBold]
+                Title.Text.Strings = (
+                  'TIEMPOS ACUMULADOS DE LOS REPORTES TERMINADOS')
+                BottomAxis.DateTimeFormat = 'hh:mm'
+                BottomAxis.Title.Caption = 'TIEMPO TRANSCURRIDO'
+                LeftAxis.DateTimeFormat = 'hh:mm'
+                LeftAxis.ExactDateTime = False
+                LeftAxis.Increment = 3.000000000000000000
+                LeftAxis.Title.Caption = 'CODIGO DE LOS REPORTES'
+                Legend.Alignment = laBottom
+                View3D = False
+                Align = alClient
+                TabOrder = 0
+                OnDblClick = DBCTiemposReportesTerminadosDblClick
+                object LReporteTerminados: TLabel
+                  Left = 8
+                  Top = 248
+                  Width = 77
+                  Height = 13
+                  Caption = 'Ordenado por : '
+                  Visible = False
+                end
+                object STiempoDictadoReportesTerminados: THorizBarSeries
+                  Marks.ArrowLength = 25
+                  Marks.Font.Charset = DEFAULT_CHARSET
+                  Marks.Font.Color = clGreen
+                  Marks.Font.Height = -11
+                  Marks.Font.Name = 'Arial'
+                  Marks.Font.Style = [fsBold]
+                  Marks.Style = smsXValue
+                  Marks.Transparent = True
+                  Marks.Visible = False
+                  DataSource = qTerminados
+                  Title = 'Tiempo de Dictado'
+                  XLabelsSource = 'CODIGOREPORTE'
+                  MultiBar = mbStacked
+                  SeriesColor = clGreen
+                  XValues.DateTime = False
+                  XValues.Name = 'Bar'
+                  XValues.Multiplier = 1.000000000000000000
+                  XValues.Order = loNone
+                  XValues.ValueSource = 'TIEMPODICTADO'
+                  YValues.DateTime = False
+                  YValues.Name = 'Y'
+                  YValues.Multiplier = 1.000000000000000000
+                  YValues.Order = loNone
+                end
+                object STiempoLlegadaTerminados: THorizBarSeries
+                  Marks.ArrowLength = 20
+                  Marks.Style = smsXValue
+                  Marks.Visible = False
+                  DataSource = qTerminados
+                  Title = 'Tiempo de Llegada'
+                  XLabelsSource = 'CODIGOREPORTE'
+                  MultiBar = mbStacked
+                  SeriesColor = clYellow
+                  XValues.DateTime = False
+                  XValues.Name = 'Bar'
+                  XValues.Multiplier = 1.000000000000000000
+                  XValues.Order = loNone
+                  XValues.ValueSource = 'TIEMPOLLEGADA'
+                  YValues.DateTime = False
+                  YValues.Name = 'Y'
+                  YValues.Multiplier = 1.000000000000000000
+                  YValues.Order = loNone
+                end
+                object STiempoTerminacion: THorizBarSeries
+                  Marks.ArrowLength = 20
+                  Marks.Font.Charset = DEFAULT_CHARSET
+                  Marks.Font.Color = clYellow
+                  Marks.Font.Height = -11
+                  Marks.Font.Name = 'Arial'
+                  Marks.Font.Style = []
+                  Marks.Style = smsValue
+                  Marks.Transparent = True
+                  Marks.Visible = False
+                  DataSource = qTerminados
+                  Title = 'Tiempo en Reparación'
+                  XLabelsSource = 'CODIGOREPORTE'
+                  MultiBar = mbStacked
+                  SeriesColor = clBlue
+                  XValues.DateTime = False
+                  XValues.Name = 'Bar'
+                  XValues.Multiplier = 1.000000000000000000
+                  XValues.Order = loNone
+                  XValues.ValueSource = 'TIEMPOATENDIDO'
+                  YValues.DateTime = False
+                  YValues.Name = 'Y'
+                  YValues.Multiplier = 1.000000000000000000
+                  YValues.Order = loNone
+                end
+              end
+            end
+            object TSmoviles: TTabSheet
+              Caption = 'Moviles'
+              object DBCMovilReportesTerminados: TDBChart
+                Left = 0
+                Top = 0
+                Width = 1004
+                Height = 270
+                BackWall.Brush.Style = bsClear
+                Title.Font.Charset = DEFAULT_CHARSET
+                Title.Font.Color = clBlue
+                Title.Font.Height = -16
+                Title.Font.Name = 'Arial'
+                Title.Font.Style = [fsBold]
+                Title.Text.Strings = (
+                  'GRUPOS DE TRABAJO ASOCIADOS LOS REPORTES')
+                BottomAxis.DateTimeFormat = 'hh:mm'
+                BottomAxis.Title.Caption = 'NOMBRE DEL GRUPO DE TRABAJO'
+                LeftAxis.Title.Caption = 'NUMERO DE REPORTES'
+                Legend.ShadowSize = 0
+                Legend.TextStyle = ltsPlain
+                ScaleLastPage = False
+                View3D = False
+                View3DWalls = False
+                Align = alClient
+                TabOrder = 0
+                object HBSMovilReporteTerminados: TBarSeries
+                  ColorEachPoint = True
+                  Marks.ArrowLength = 15
+                  Marks.BackColor = clWhite
+                  Marks.Clip = True
+                  Marks.Font.Charset = DEFAULT_CHARSET
+                  Marks.Font.Color = clNavy
+                  Marks.Font.Height = -11
+                  Marks.Font.Name = 'Arial'
+                  Marks.Font.Style = [fsBold]
+                  Marks.Style = smsValue
+                  Marks.Visible = True
+                  DataSource = qTerminadosGrupos
+                  Title = 'Grupos de Trabajo'
+                  XLabelsSource = 'NOMBREGRUPOTRABAJO'
+                  BarWidthPercent = 50
+                  SeriesColor = clGreen
+                  XValues.DateTime = False
+                  XValues.Name = 'X'
+                  XValues.Multiplier = 1.000000000000000000
+                  XValues.Order = loNone
+                  YValues.DateTime = False
+                  YValues.Name = 'Bar'
+                  YValues.Multiplier = 1.000000000000000000
+                  YValues.Order = loNone
+                  YValues.ValueSource = 'COUNT(*)'
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  inherited qTotales: TQuery
+    Active = True
+    SQL.Strings = (
+      'SELECT  PRIORIDADDANO, COUNT(*)'
+      'FROM REPORTE'
+      'GROUP BY PRIORIDADDANO')
+    Left = 165
+    Top = 154
+  end
+  inherited CVS1: TCVS
+    Left = 574
+    Top = 139
+  end
+  inherited SaveDialog1: TSaveDialog
+    Left = 617
+    Top = 177
+  end
+  object qRecibidos: TQuery
+    Active = True
+    OnCalcFields = qRecibidosCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT'
+      'R.CODIGOREPORTE,'
+      'R.CODIGOINFORMANTE, R.DIRECCIONINFORMANTE, R.NOMBREINFORMANTE,'
+      
+        'R.CIGINFORMANTE, R.TELEFONO, R.CIGDANO, R.DIRECCIONDANO, R.CODIG' +
+        'OADMINISTRATIVO,'
+      
+        'R.CODIGOTIPOREPORTE, R.CODIGOCLASEREPORTE, R.CODIGOTIPODANO, R.C' +
+        'ODIGOPRIORIDAD,'
+      
+        'R.CODIGOESTADOREPORTE, R.NUMEROCARTA, R.CODIGOESTADOCARTA, R.REG' +
+        'ISTROS, R.DESCRIPCION,'
+      
+        'R.OBSERVACION, R.FECHAHORA, R.FECHAULTIMOREGISTRO, R.FECHAHORADI' +
+        'CTADO, R.FECHAHORALLEGADA,'
+      
+        'R.FECHAHORAATENCION, R.X, R.Y, R.ORIGENREPORTE, R.CODIGOTIPOELEM' +
+        'ENTO, R.CODIGOELEMENTO,'
+      
+        'R.CODIGOSUBESTACION, R.CODIGOCIRCUITO, R.CODIGOTRAFODIS, R.CODIG' +
+        'OAPOYO, R.CODIGOCLIENTESGD,'
+      
+        'R.CODIGOCLIENTECOM, R.REPORTEPADRE, R.CODIGOODT, R.PINTADOAPOYO,' +
+        ' I.NOMBREINFORMANTE,'
+      
+        'A.NOMBREADMINISTRATIVO, TR.NOMBRETIPOREPORTE, CR.NOMBRECLASEREPO' +
+        'RTE, S.NOMBRESUBESTACION,'
+      
+        'C.NOMBRECIRCUITO, ER.COLOR, ER.NOMBREESTADOREPORTE, R.PRIORIDADD' +
+        'ANO, R.CIAINFORMANTE,'
+      
+        'AD.NOMBREADMINISTRATIVO AS NOMBRECIAINFORMANTE, R.CODIGOTIPOVIA,' +
+        ' R.CODIGONOMBREVIA, R.MODIFICADORVIA, R.DUPLICADOR, R.MODIFICADO' +
+        'RDUPLICADOR, R.NUMEROPUERTA'
+      
+        'FROM REPORTE R, INFORMANTE I, ADMINISTRATIVO A, TIPOREPORTE TR, ' +
+        'CLASEREPORTE CR, ESTADOREPORTE ER, SUBESTACION S, CIRCUITO C, AD' +
+        'MINISTRATIVO AD'
+      
+        'WHERE (R.CODIGOINFORMANTE = I.CODIGOINFORMANTE) AND (A.CODIGOADM' +
+        'INISTRATIVO = R.CODIGOADMINISTRATIVO)'
+      
+        'AND (TR.CODIGOTIPOREPORTE = R.CODIGOTIPOREPORTE) AND (CR.CODIGOC' +
+        'LASEREPORTE = R.CODIGOCLASEREPORTE)'
+      
+        'AND (ER.CODIGOESTADOREPORTE = R.CODIGOESTADOREPORTE) AND (S.CODI' +
+        'GOSUBESTACION (+)= R.CODIGOSUBESTACION)'
+      
+        'AND (C.CODIGOCIRCUITO (+)= R.CODIGOCIRCUITO) AND (AD.CODIGOADMIN' +
+        'ISTRATIVO (+)= R.CIAINFORMANTE)')
+    Left = 63
+    Top = 406
+    object qRecibidosCODIGOREPORTE: TFloatField
+      FieldName = 'CODIGOREPORTE'
+    end
+    object qRecibidosCODIGOINFORMANTE: TStringField
+      FieldName = 'CODIGOINFORMANTE'
+      Size = 2
+    end
+    object qRecibidosDIRECCIONINFORMANTE: TStringField
+      FieldName = 'DIRECCIONINFORMANTE'
+      Size = 40
+    end
+    object qRecibidosNOMBREINFORMANTE: TStringField
+      FieldName = 'NOMBREINFORMANTE'
+      Size = 40
+    end
+    object qRecibidosCIGINFORMANTE: TFloatField
+      FieldName = 'CIGINFORMANTE'
+    end
+    object qRecibidosTELEFONO: TStringField
+      FieldName = 'TELEFONO'
+      Size = 10
+    end
+    object qRecibidosCIGDANO: TFloatField
+      FieldName = 'CIGDANO'
+    end
+    object qRecibidosDIRECCIONDANO: TStringField
+      FieldName = 'DIRECCIONDANO'
+      Size = 40
+    end
+    object qRecibidosCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+    end
+    object qRecibidosCODIGOTIPOREPORTE: TStringField
+      FieldName = 'CODIGOTIPOREPORTE'
+      Size = 1
+    end
+    object qRecibidosCODIGOCLASEREPORTE: TStringField
+      FieldName = 'CODIGOCLASEREPORTE'
+      Size = 1
+    end
+    object qRecibidosCODIGOPRIORIDAD: TStringField
+      FieldName = 'CODIGOPRIORIDAD'
+      Size = 1
+    end
+    object qRecibidosCODIGOESTADOREPORTE: TStringField
+      FieldName = 'CODIGOESTADOREPORTE'
+      Size = 1
+    end
+    object qRecibidosNUMEROCARTA: TStringField
+      FieldName = 'NUMEROCARTA'
+      Size = 6
+    end
+    object qRecibidosCODIGOESTADOCARTA: TFloatField
+      FieldName = 'CODIGOESTADOCARTA'
+    end
+    object qRecibidosREGISTROS: TFloatField
+      FieldName = 'REGISTROS'
+    end
+    object qRecibidosDESCRIPCION: TStringField
+      FieldName = 'DESCRIPCION'
+      Size = 250
+    end
+    object qRecibidosOBSERVACION: TStringField
+      FieldName = 'OBSERVACION'
+      Size = 250
+    end
+    object qRecibidosFECHAHORA: TDateTimeField
+      FieldName = 'FECHAHORA'
+    end
+    object qRecibidosFECHAULTIMOREGISTRO: TDateTimeField
+      FieldName = 'FECHAULTIMOREGISTRO'
+    end
+    object qRecibidosFECHAHORADICTADO: TDateTimeField
+      FieldName = 'FECHAHORADICTADO'
+    end
+    object qRecibidosFECHAHORALLEGADA: TDateTimeField
+      FieldName = 'FECHAHORALLEGADA'
+    end
+    object qRecibidosFECHAHORAATENCION: TDateTimeField
+      FieldName = 'FECHAHORAATENCION'
+    end
+    object qRecibidosX: TFloatField
+      FieldName = 'X'
+    end
+    object qRecibidosY: TFloatField
+      FieldName = 'Y'
+    end
+    object qRecibidosORIGENREPORTE: TStringField
+      FieldName = 'ORIGENREPORTE'
+      Size = 1
+    end
+    object qRecibidosCODIGOTIPOELEMENTO: TStringField
+      FieldName = 'CODIGOTIPOELEMENTO'
+      Size = 2
+    end
+    object qRecibidosCODIGOELEMENTO: TStringField
+      FieldName = 'CODIGOELEMENTO'
+      Size = 12
+    end
+    object qRecibidosCODIGOSUBESTACION: TStringField
+      FieldName = 'CODIGOSUBESTACION'
+      Size = 3
+    end
+    object qRecibidosCODIGOCIRCUITO: TStringField
+      FieldName = 'CODIGOCIRCUITO'
+      Size = 6
+    end
+    object qRecibidosCODIGOTRAFODIS: TFloatField
+      FieldName = 'CODIGOTRAFODIS'
+    end
+    object qRecibidosCODIGOAPOYO: TFloatField
+      FieldName = 'CODIGOAPOYO'
+    end
+    object qRecibidosCODIGOCLIENTESGD: TFloatField
+      FieldName = 'CODIGOCLIENTESGD'
+    end
+    object qRecibidosCODIGOCLIENTECOM: TFloatField
+      FieldName = 'CODIGOCLIENTECOM'
+    end
+    object qRecibidosREPORTEPADRE: TFloatField
+      FieldName = 'REPORTEPADRE'
+    end
+    object qRecibidosCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+    end
+    object qRecibidosPINTADOAPOYO: TStringField
+      FieldName = 'PINTADOAPOYO'
+      Size = 7
+    end
+    object qRecibidosNOMBREINFORMANTE_1: TStringField
+      FieldName = 'NOMBREINFORMANTE_1'
+      Size = 40
+    end
+    object qRecibidosNOMBREADMINISTRATIVO: TStringField
+      FieldName = 'NOMBREADMINISTRATIVO'
+      Size = 250
+    end
+    object qRecibidosNOMBRETIPOREPORTE: TStringField
+      FieldName = 'NOMBRETIPOREPORTE'
+      Size = 30
+    end
+    object qRecibidosNOMBRECLASEREPORTE: TStringField
+      FieldName = 'NOMBRECLASEREPORTE'
+      Size = 60
+    end
+    object qRecibidosNOMBRESUBESTACION: TStringField
+      FieldName = 'NOMBRESUBESTACION'
+      Size = 30
+    end
+    object qRecibidosNOMBRECIRCUITO: TStringField
+      FieldName = 'NOMBRECIRCUITO'
+      Size = 30
+    end
+    object qRecibidosCOLOR: TFloatField
+      FieldName = 'COLOR'
+    end
+    object qRecibidosNOMBREESTADOREPORTE: TStringField
+      FieldName = 'NOMBREESTADOREPORTE'
+      Size = 30
+    end
+    object qRecibidosPRIORIDADDANO: TFloatField
+      FieldName = 'PRIORIDADDANO'
+    end
+    object qRecibidosCIAINFORMANTE: TFloatField
+      FieldName = 'CIAINFORMANTE'
+    end
+    object qRecibidosNOMBRECIAINFORMANTE: TStringField
+      FieldName = 'NOMBRECIAINFORMANTE'
+      Size = 250
+    end
+    object qRecibidosCODIGOTIPOVIA: TFloatField
+      FieldName = 'CODIGOTIPOVIA'
+    end
+    object qRecibidosCODIGONOMBREVIA: TFloatField
+      FieldName = 'CODIGONOMBREVIA'
+    end
+    object qRecibidosMODIFICADORVIA: TStringField
+      FieldName = 'MODIFICADORVIA'
+      Size = 5
+    end
+    object qRecibidosDUPLICADOR: TFloatField
+      FieldName = 'DUPLICADOR'
+    end
+    object qRecibidosMODIFICADORDUPLICADOR: TStringField
+      FieldName = 'MODIFICADORDUPLICADOR'
+      Size = 5
+    end
+    object qRecibidosNUMEROPUERTA: TFloatField
+      FieldName = 'NUMEROPUERTA'
+    end
+    object qRecibidosDireccionCalculada: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'DireccionCalculada'
+      Size = 50
+      Calculated = True
+    end
+    object qRecibidosCODIGOTIPODANO: TFloatField
+      FieldName = 'CODIGOTIPODANO'
+    end
+  end
+  object dsRecibidos: TDataSource
+    DataSet = qRecibidos
+    Left = 124
+    Top = 446
+  end
+  object qTotalesTipo: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    Constrained = True
+    SQL.Strings = (
+      'SELECT  T.NOMBRETIPOREPORTE, COUNT(*)'
+      'FROM REPORTE R, TIPOREPORTE T'
+      'WHERE R.CODIGOTIPOREPORTE = T.CODIGOTIPOREPORTE'
+      'GROUP BY NOMBRETIPOREPORTE')
+    Left = 165
+    Top = 210
+  end
+  object qDictados: TQuery
+    Active = True
+    OnCalcFields = qDictadosCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT DISTINCT R.CODIGOREPORTE, R.NOMBREINFORMANTE, R.TELEFONO,'
+      'R.FECHAHORA, R.FECHAHORADICTADO,'
+      '(R.FECHAHORADICTADO-R.FECHAHORA) AS TIEMPOTRANSCURRIDO1,'
+      '(R.FECHAHORADICTADO-R.FECHAHORA) AS TIEMPODICTADO,'
+      
+        'R.CODIGOADMINISTRATIVO, R.CODIGOGRUPOTRABAJO, GT.NOMBREGRUPOTRAB' +
+        'AJO,'
+      'R.DESCRIPCION, R.CIGDANO, R.DIRECCIONDANO, R.PRIORIDADDANO,'
+      
+        'TR.NOMBRETIPOREPORTE, CR.NOMBRECLASEREPORTE, S.NOMBRESUBESTACION' +
+        ', C.NOMBRECIRCUITO, R.CODIGOTRAFODIS, R.PINTADOAPOYO,'
+      
+        'R.CODIGOTIPOVIA, R.CODIGONOMBREVIA, R.MODIFICADORVIA, R.DUPLICAD' +
+        'OR, R.MODIFICADORDUPLICADOR, R.NUMEROPUERTA'
+      
+        'FROM REPORTE R, INFORMANTE I, ADMINISTRATIVO A, TIPOREPORTE TR, ' +
+        'CLASEREPORTE CR, ESTADOREPORTE ER, SUBESTACION S, CIRCUITO C, AD' +
+        'MINISTRATIVO AD, GRUPOTRABAJO GT'
+      
+        'WHERE (R.CODIGOINFORMANTE = I.CODIGOINFORMANTE) AND (A.CODIGOADM' +
+        'INISTRATIVO = R.CODIGOADMINISTRATIVO)'
+      
+        'AND (TR.CODIGOTIPOREPORTE = R.CODIGOTIPOREPORTE) AND (CR.CODIGOC' +
+        'LASEREPORTE = R.CODIGOCLASEREPORTE)'
+      
+        'AND (ER.CODIGOESTADOREPORTE = R.CODIGOESTADOREPORTE) AND (S.CODI' +
+        'GOSUBESTACION (+)= R.CODIGOSUBESTACION)'
+      
+        'AND (C.CODIGOCIRCUITO (+)= R.CODIGOCIRCUITO) AND (AD.CODIGOADMIN' +
+        'ISTRATIVO (+)= R.CIAINFORMANTE) AND (GT.CODIGOGRUPOTRABAJO (+) =' +
+        ' R.CODIGOGRUPOTRABAJO) AND (GT.CODIGOADMINISTRATIVO (+) = R.CODI' +
+        'GOADMINISTRATIVO)'
+      
+        'AND R.CODIGOESTADOREPORTE = '#39'2'#39' AND (R.FECHAHORALLEGADA is Null)' +
+        ' AND  (R.FECHAHORADICTADO <= SYSDATE + 1)'
+      'ORDER BY R.CODIGOREPORTE DESC')
+    Left = 52
+    Top = 509
+    object qDictadosCODIGOREPORTE: TFloatField
+      FieldName = 'CODIGOREPORTE'
+      Origin = 'REPORTE.CODIGOREPORTE'
+    end
+    object qDictadosNOMBREINFORMANTE: TStringField
+      FieldName = 'NOMBREINFORMANTE'
+      Origin = 'REPORTE.NOMBREINFORMANTE'
+      Size = 40
+    end
+    object qDictadosTELEFONO: TStringField
+      FieldName = 'TELEFONO'
+      Origin = 'REPORTE.TELEFONO'
+      Size = 10
+    end
+    object qDictadosFECHAHORA: TDateTimeField
+      FieldName = 'FECHAHORA'
+      Origin = 'REPORTE.FECHAHORA'
+    end
+    object qDictadosFECHAHORADICTADO: TDateTimeField
+      FieldName = 'FECHAHORADICTADO'
+      Origin = 'REPORTE.FECHAHORADICTADO'
+    end
+    object qDictadosTIEMPOTRANSCURRIDO1: TFloatField
+      FieldName = 'TIEMPOTRANSCURRIDO1'
+      Origin = 'REPORTE.FECHAHORADICTADO'
+    end
+    object qDictadosTIEMPODICTADO: TFloatField
+      FieldName = 'TIEMPODICTADO'
+      Origin = 'REPORTE.FECHAHORADICTADO'
+    end
+    object qDictadosTiempoDictadoReporte: TDateTimeField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoDictadoReporte'
+      DisplayFormat = 'mm dd hh:mm:ss'
+      Calculated = True
+    end
+    object qDictadosTiempoEnEspera: TDateTimeField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoEnEspera'
+      Calculated = True
+    end
+    object qDictadosTiempoEnLlegar: TDateTimeField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoEnLlegar'
+      Calculated = True
+    end
+    object qDictadosTiempoTranscurrido: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoTranscurrido'
+      Calculated = True
+    end
+    object qDictadosTiempoA: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoA'
+      Size = 50
+      Calculated = True
+    end
+    object qDictadosTiempoB: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoB'
+      Size = 50
+      Calculated = True
+    end
+    object qDictadosTiempoC: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoC'
+      Size = 50
+      Calculated = True
+    end
+    object qDictadosCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'REPORTE.CODIGOADMINISTRATIVO'
+    end
+    object qDictadosCODIGOGRUPOTRABAJO: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJO'
+      Origin = 'REPORTE.CODIGOGRUPOTRABAJO'
+    end
+    object qDictadosNOMBREGRUPOTRABAJO: TStringField
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+    object qDictadosDESCRIPCION: TStringField
+      FieldName = 'DESCRIPCION'
+      Size = 250
+    end
+    object qDictadosCIGDANO: TFloatField
+      FieldName = 'CIGDANO'
+    end
+    object qDictadosDIRECCIONDANO: TStringField
+      FieldName = 'DIRECCIONDANO'
+      Size = 40
+    end
+    object qDictadosPRIORIDADDANO: TFloatField
+      FieldName = 'PRIORIDADDANO'
+    end
+    object qDictadosNOMBRETIPOREPORTE: TStringField
+      FieldName = 'NOMBRETIPOREPORTE'
+      Size = 30
+    end
+    object qDictadosNOMBRECLASEREPORTE: TStringField
+      FieldName = 'NOMBRECLASEREPORTE'
+      Size = 60
+    end
+    object qDictadosDireccionCalculada: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'DireccionCalculada'
+      Size = 50
+      Calculated = True
+    end
+    object qDictadosCODIGOTIPOVIA: TFloatField
+      FieldName = 'CODIGOTIPOVIA'
+    end
+    object qDictadosCODIGONOMBREVIA: TFloatField
+      FieldName = 'CODIGONOMBREVIA'
+    end
+    object qDictadosMODIFICADORVIA: TStringField
+      FieldName = 'MODIFICADORVIA'
+      Size = 5
+    end
+    object qDictadosDUPLICADOR: TFloatField
+      FieldName = 'DUPLICADOR'
+    end
+    object qDictadosMODIFICADORDUPLICADOR: TStringField
+      FieldName = 'MODIFICADORDUPLICADOR'
+      Size = 5
+    end
+    object qDictadosNUMEROPUERTA: TFloatField
+      FieldName = 'NUMEROPUERTA'
+    end
+    object qDictadosNOMBRESUBESTACION: TStringField
+      FieldName = 'NOMBRESUBESTACION'
+      Size = 30
+    end
+    object qDictadosNOMBRECIRCUITO: TStringField
+      FieldName = 'NOMBRECIRCUITO'
+      Size = 30
+    end
+    object qDictadosCODIGOTRAFODIS: TFloatField
+      FieldName = 'CODIGOTRAFODIS'
+    end
+    object qDictadosPINTADOAPOYO: TStringField
+      FieldName = 'PINTADOAPOYO'
+      Size = 7
+    end
+  end
+  object dsDictados: TDataSource
+    DataSet = qDictados
+    Left = 124
+    Top = 509
+  end
+  object qDictadosGrupos: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT G.NOMBREGRUPOTRABAJO, COUNT(*)'
+      'FROM REPORTE R, GRUPOTRABAJO G'
+      
+        'WHERE (R.FECHAHORALLEGADA is Null) and  (R.FechaHoraDictado <= S' +
+        'YSDATE + 1)'
+      'AND (G.CODIGOADMINISTRATIVO (+) = R.CODIGOADMINISTRATIVO)'
+      'AND (G.CODIGOGRUPOTRABAJO (+) = R.CODIGOGRUPOTRABAJO)'
+      'GROUP BY G.NOMBREGRUPOTRABAJO')
+    Left = 204
+    Top = 509
+  end
+  object dsDictadosGrupos: TDataSource
+    DataSet = qDictadosGrupos
+    Left = 300
+    Top = 509
+  end
+  object qAtendidos: TQuery
+    Active = True
+    OnCalcFields = qAtendidosCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT DISTINCT R.CODIGOREPORTE, R.NOMBREINFORMANTE, R.TELEFONO,'
+      'R.FECHAHORA, R.FECHAHORADICTADO, R.FECHAHORALLEGADA,'
+      '(R.FECHAHORADICTADO-R.FECHAHORA) AS TIEMPOTRANSCURRIDO1,'
+      '(R.FECHAHORADICTADO-R.FECHAHORA) AS TIEMPODICTADO,'
+      '(R.FECHAHORALLEGADA-R.FECHAHORADICTADO) AS TIEMPOLLEGADA,'
+      
+        'R.CODIGOADMINISTRATIVO, R.CODIGOGRUPOTRABAJO, GT.NOMBREGRUPOTRAB' +
+        'AJO,'
+      'R.DESCRIPCION, R.CIGDANO, R.DIRECCIONDANO, R.PRIORIDADDANO,'
+      
+        'TR.NOMBRETIPOREPORTE, CR.NOMBRECLASEREPORTE, S.NOMBRESUBESTACION' +
+        ', C.NOMBRECIRCUITO, R.CODIGOTRAFODIS, R.PINTADOAPOYO,'
+      
+        'R.CODIGOTIPOVIA, R.CODIGONOMBREVIA, R.MODIFICADORVIA, R.DUPLICAD' +
+        'OR, R.MODIFICADORDUPLICADOR, R.NUMEROPUERTA'
+      
+        'FROM REPORTE R, INFORMANTE I, ADMINISTRATIVO A, TIPOREPORTE TR, ' +
+        'CLASEREPORTE CR, ESTADOREPORTE ER, SUBESTACION S, CIRCUITO C, AD' +
+        'MINISTRATIVO AD, GRUPOTRABAJO GT'
+      
+        'WHERE (R.CODIGOINFORMANTE = I.CODIGOINFORMANTE) AND (A.CODIGOADM' +
+        'INISTRATIVO = R.CODIGOADMINISTRATIVO)'
+      
+        'AND (TR.CODIGOTIPOREPORTE = R.CODIGOTIPOREPORTE) AND (CR.CODIGOC' +
+        'LASEREPORTE = R.CODIGOCLASEREPORTE)'
+      
+        'AND (ER.CODIGOESTADOREPORTE = R.CODIGOESTADOREPORTE) AND (S.CODI' +
+        'GOSUBESTACION (+)= R.CODIGOSUBESTACION)'
+      
+        'AND (C.CODIGOCIRCUITO (+)= R.CODIGOCIRCUITO) AND (AD.CODIGOADMIN' +
+        'ISTRATIVO (+)= R.CIAINFORMANTE) AND (GT.CODIGOGRUPOTRABAJO (+) =' +
+        ' R.CODIGOGRUPOTRABAJO) AND (GT.CODIGOADMINISTRATIVO (+) = R.CODI' +
+        'GOADMINISTRATIVO)'
+      
+        'AND R.CODIGOESTADOREPORTE = '#39'3'#39' AND (R.FECHAHORAATENCION is Null' +
+        ') AND (R.FECHAHORALLEGADA <= SYSDATE + 1)'
+      'ORDER BY R.CODIGOREPORTE DESC')
+    Left = 390
+    Top = 509
+    object qAtendidosCODIGOREPORTE: TFloatField
+      FieldName = 'CODIGOREPORTE'
+    end
+    object qAtendidosNOMBREINFORMANTE: TStringField
+      FieldName = 'NOMBREINFORMANTE'
+      Size = 40
+    end
+    object qAtendidosTELEFONO: TStringField
+      FieldName = 'TELEFONO'
+      Size = 10
+    end
+    object qAtendidosFECHAHORA: TDateTimeField
+      FieldName = 'FECHAHORA'
+    end
+    object qAtendidosFECHAHORADICTADO: TDateTimeField
+      FieldName = 'FECHAHORADICTADO'
+    end
+    object qAtendidosTIEMPOTRANSCURRIDO1: TFloatField
+      FieldName = 'TIEMPOTRANSCURRIDO1'
+    end
+    object qAtendidosTIEMPODICTADO: TFloatField
+      FieldName = 'TIEMPODICTADO'
+    end
+    object qAtendidosTIEMPOLLEGADA: TFloatField
+      FieldName = 'TIEMPOLLEGADA'
+    end
+    object qAtendidosCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+    end
+    object qAtendidosCODIGOGRUPOTRABAJO: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJO'
+    end
+    object qAtendidosNOMBREGRUPOTRABAJO: TStringField
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+    object qAtendidosDESCRIPCION: TStringField
+      FieldName = 'DESCRIPCION'
+      Size = 250
+    end
+    object qAtendidosCIGDANO: TFloatField
+      FieldName = 'CIGDANO'
+    end
+    object qAtendidosDIRECCIONDANO: TStringField
+      FieldName = 'DIRECCIONDANO'
+      Size = 40
+    end
+    object qAtendidosPRIORIDADDANO: TFloatField
+      FieldName = 'PRIORIDADDANO'
+    end
+    object qAtendidosNOMBRETIPOREPORTE: TStringField
+      FieldName = 'NOMBRETIPOREPORTE'
+      Size = 30
+    end
+    object qAtendidosNOMBRECLASEREPORTE: TStringField
+      FieldName = 'NOMBRECLASEREPORTE'
+      Size = 60
+    end
+    object qAtendidosNOMBRESUBESTACION: TStringField
+      FieldName = 'NOMBRESUBESTACION'
+      Size = 30
+    end
+    object qAtendidosNOMBRECIRCUITO: TStringField
+      FieldName = 'NOMBRECIRCUITO'
+      Size = 30
+    end
+    object qAtendidosCODIGOTRAFODIS: TFloatField
+      FieldName = 'CODIGOTRAFODIS'
+    end
+    object qAtendidosPINTADOAPOYO: TStringField
+      FieldName = 'PINTADOAPOYO'
+      Size = 7
+    end
+    object qAtendidosCODIGOTIPOVIA: TFloatField
+      FieldName = 'CODIGOTIPOVIA'
+    end
+    object qAtendidosCODIGONOMBREVIA: TFloatField
+      FieldName = 'CODIGONOMBREVIA'
+    end
+    object qAtendidosMODIFICADORVIA: TStringField
+      FieldName = 'MODIFICADORVIA'
+      Size = 5
+    end
+    object qAtendidosDUPLICADOR: TFloatField
+      FieldName = 'DUPLICADOR'
+    end
+    object qAtendidosMODIFICADORDUPLICADOR: TStringField
+      FieldName = 'MODIFICADORDUPLICADOR'
+      Size = 5
+    end
+    object qAtendidosNUMEROPUERTA: TFloatField
+      FieldName = 'NUMEROPUERTA'
+    end
+    object qAtendidosFECHAHORALLEGADA: TDateTimeField
+      FieldName = 'FECHAHORALLEGADA'
+    end
+    object qAtendidosTiempoDictadoTotal: TDateTimeField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoDictadoTotal'
+      Calculated = True
+    end
+    object qAtendidosTiempoLlegadaTotal: TDateTimeField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoLlegadaTotal'
+      Calculated = True
+    end
+    object qAtendidosTiempoEnReparacion: TDateTimeField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoEnReparacion'
+      Calculated = True
+    end
+    object qAtendidosTiempoTranscurrido: TDateTimeField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoTranscurrido'
+      Calculated = True
+    end
+    object qAtendidosTiempoEnEspera: TDateTimeField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoEnEspera'
+      Calculated = True
+    end
+    object qAtendidosTiempoA: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoA'
+      Size = 50
+      Calculated = True
+    end
+    object qAtendidosTiempoB: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoB'
+      Size = 50
+      Calculated = True
+    end
+    object qAtendidosTiempoC: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoC'
+      Size = 50
+      Calculated = True
+    end
+    object qAtendidosTiempoD: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoD'
+      Size = 50
+      Calculated = True
+    end
+    object qAtendidosDireccionCalculada: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'DireccionCalculada'
+      Size = 50
+      Calculated = True
+    end
+  end
+  object dsAtendidos: TDataSource
+    DataSet = qAtendidos
+    Left = 460
+    Top = 509
+  end
+  object qAtendidosGrupos: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT G.NOMBREGRUPOTRABAJO, COUNT(*)'
+      'FROM REPORTE R, GRUPOTRABAJO G'
+      
+        'WHERE (R.CODIGOESTADOREPORTE = '#39'3'#39') AND (R.FECHAHORAATENCION is ' +
+        'Null) AND (R.FECHAHORALLEGADA <= SYSDATE + 1)'
+      'AND (G.CODIGOADMINISTRATIVO (+) = R.CODIGOADMINISTRATIVO)'
+      'AND (G.CODIGOGRUPOTRABAJO (+) = R.CODIGOGRUPOTRABAJO)'
+      'GROUP BY G.NOMBREGRUPOTRABAJO')
+    Left = 556
+    Top = 509
+  end
+  object dsAtendidosGrupos: TDataSource
+    DataSet = qAtendidosGrupos
+    Left = 660
+    Top = 509
+  end
+  object qTerminados: TQuery
+    Active = True
+    OnCalcFields = qTerminadosCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT DISTINCT R.CODIGOREPORTE, R.NOMBREINFORMANTE, R.TELEFONO,'
+      
+        'R.FECHAHORA, R.FECHAHORADICTADO, R.FECHAHORALLEGADA, R.FECHAHORA' +
+        'ATENCION,'
+      '(R.FECHAHORADICTADO-R.FECHAHORA) AS TIEMPOTRANSCURRIDO1,'
+      '(R.FECHAHORADICTADO-R.FECHAHORA) AS TIEMPODICTADO,'
+      '(R.FECHAHORALLEGADA-R.FECHAHORADICTADO) AS TIEMPOLLEGADA,'
+      '(R.FECHAHORAATENCION-R.FECHAHORALLEGADA) AS TIEMPOATENDIDO,'
+      
+        'R.CODIGOADMINISTRATIVO, R.CODIGOGRUPOTRABAJO, GT.NOMBREGRUPOTRAB' +
+        'AJO,'
+      'R.DESCRIPCION, R.CIGDANO, R.DIRECCIONDANO, R.PRIORIDADDANO,'
+      
+        'TR.NOMBRETIPOREPORTE, CR.NOMBRECLASEREPORTE, S.NOMBRESUBESTACION' +
+        ', C.NOMBRECIRCUITO, R.CODIGOTRAFODIS, R.PINTADOAPOYO,'
+      
+        'R.CODIGOTIPOVIA, R.CODIGONOMBREVIA, R.MODIFICADORVIA, R.DUPLICAD' +
+        'OR, R.MODIFICADORDUPLICADOR, R.NUMEROPUERTA'
+      
+        'FROM REPORTE R, INFORMANTE I, ADMINISTRATIVO A, TIPOREPORTE TR, ' +
+        'CLASEREPORTE CR, ESTADOREPORTE ER, SUBESTACION S, CIRCUITO C, AD' +
+        'MINISTRATIVO AD, GRUPOTRABAJO GT, ODTREPORTE ODR'
+      
+        'WHERE (R.CODIGOINFORMANTE = I.CODIGOINFORMANTE) AND (A.CODIGOADM' +
+        'INISTRATIVO = R.CODIGOADMINISTRATIVO)'
+      
+        'AND (TR.CODIGOTIPOREPORTE = R.CODIGOTIPOREPORTE) AND (CR.CODIGOC' +
+        'LASEREPORTE = R.CODIGOCLASEREPORTE)'
+      
+        'AND (ER.CODIGOESTADOREPORTE = R.CODIGOESTADOREPORTE) AND (S.CODI' +
+        'GOSUBESTACION (+)= R.CODIGOSUBESTACION)'
+      
+        'AND (C.CODIGOCIRCUITO (+)= R.CODIGOCIRCUITO) AND (AD.CODIGOADMIN' +
+        'ISTRATIVO (+)= R.CIAINFORMANTE) AND (GT.CODIGOGRUPOTRABAJO (+) =' +
+        ' R.CODIGOGRUPOTRABAJO) AND (GT.CODIGOADMINISTRATIVO (+) = R.CODI' +
+        'GOADMINISTRATIVO)'
+      
+        'AND R.CODIGOESTADOREPORTE = '#39'4'#39' AND (R.FECHAHORAATENCION is not ' +
+        'Null) AND (R.FECHAHORAATENCION <= SYSDATE + 1)'
+      
+        'AND (R.CODIGOREPORTE NOT IN (SELECT DISTINCT CODIGOREPORTE FROM ' +
+        'ODTREPORTE))'
+      'ORDER BY R.CODIGOREPORTE DESC')
+    Left = 756
+    Top = 509
+    object qTerminadosCODIGOREPORTE: TFloatField
+      FieldName = 'CODIGOREPORTE'
+    end
+    object qTerminadosNOMBREINFORMANTE: TStringField
+      FieldName = 'NOMBREINFORMANTE'
+      Size = 40
+    end
+    object qTerminadosTELEFONO: TStringField
+      FieldName = 'TELEFONO'
+      Size = 10
+    end
+    object qTerminadosFECHAHORA: TDateTimeField
+      FieldName = 'FECHAHORA'
+    end
+    object qTerminadosFECHAHORADICTADO: TDateTimeField
+      FieldName = 'FECHAHORADICTADO'
+    end
+    object qTerminadosFECHAHORALLEGADA: TDateTimeField
+      FieldName = 'FECHAHORALLEGADA'
+    end
+    object qTerminadosFECHAHORAATENCION: TDateTimeField
+      FieldName = 'FECHAHORAATENCION'
+    end
+    object qTerminadosTIEMPOTRANSCURRIDO1: TFloatField
+      FieldName = 'TIEMPOTRANSCURRIDO1'
+    end
+    object qTerminadosTIEMPODICTADO: TFloatField
+      FieldName = 'TIEMPODICTADO'
+    end
+    object qTerminadosTIEMPOLLEGADA: TFloatField
+      FieldName = 'TIEMPOLLEGADA'
+    end
+    object qTerminadosTIEMPOATENDIDO: TFloatField
+      FieldName = 'TIEMPOATENDIDO'
+    end
+    object qTerminadosCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+    end
+    object qTerminadosCODIGOGRUPOTRABAJO: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJO'
+    end
+    object qTerminadosNOMBREGRUPOTRABAJO: TStringField
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+    object qTerminadosDESCRIPCION: TStringField
+      FieldName = 'DESCRIPCION'
+      Size = 250
+    end
+    object qTerminadosCIGDANO: TFloatField
+      FieldName = 'CIGDANO'
+    end
+    object qTerminadosDIRECCIONDANO: TStringField
+      FieldName = 'DIRECCIONDANO'
+      Size = 40
+    end
+    object qTerminadosPRIORIDADDANO: TFloatField
+      FieldName = 'PRIORIDADDANO'
+    end
+    object qTerminadosNOMBRETIPOREPORTE: TStringField
+      FieldName = 'NOMBRETIPOREPORTE'
+      Size = 30
+    end
+    object qTerminadosNOMBRECLASEREPORTE: TStringField
+      FieldName = 'NOMBRECLASEREPORTE'
+      Size = 60
+    end
+    object qTerminadosNOMBRESUBESTACION: TStringField
+      FieldName = 'NOMBRESUBESTACION'
+      Size = 30
+    end
+    object qTerminadosNOMBRECIRCUITO: TStringField
+      FieldName = 'NOMBRECIRCUITO'
+      Size = 30
+    end
+    object qTerminadosCODIGOTRAFODIS: TFloatField
+      FieldName = 'CODIGOTRAFODIS'
+    end
+    object qTerminadosPINTADOAPOYO: TStringField
+      FieldName = 'PINTADOAPOYO'
+      Size = 7
+    end
+    object qTerminadosCODIGOTIPOVIA: TFloatField
+      FieldName = 'CODIGOTIPOVIA'
+    end
+    object qTerminadosCODIGONOMBREVIA: TFloatField
+      FieldName = 'CODIGONOMBREVIA'
+    end
+    object qTerminadosMODIFICADORVIA: TStringField
+      FieldName = 'MODIFICADORVIA'
+      Size = 5
+    end
+    object qTerminadosDUPLICADOR: TFloatField
+      FieldName = 'DUPLICADOR'
+    end
+    object qTerminadosMODIFICADORDUPLICADOR: TStringField
+      FieldName = 'MODIFICADORDUPLICADOR'
+      Size = 5
+    end
+    object qTerminadosNUMEROPUERTA: TFloatField
+      FieldName = 'NUMEROPUERTA'
+    end
+    object qTerminadosTiempoA: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoA'
+      Size = 50
+      Calculated = True
+    end
+    object qTerminadosTiempoB: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoB'
+      Size = 50
+      Calculated = True
+    end
+    object qTerminadosTiempoC: TStringField
+      DisplayWidth = 50
+      FieldKind = fkCalculated
+      FieldName = 'TiempoC'
+      Size = 50
+      Calculated = True
+    end
+    object qTerminadosDireccionCalculada: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'DireccionCalculada'
+      Size = 50
+      Calculated = True
+    end
+  end
+  object dsTerminados: TDataSource
+    DataSet = qTerminados
+    Left = 828
+    Top = 509
+  end
+  object qTerminadosGrupos: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT G.NOMBREGRUPOTRABAJO, COUNT(*)'
+      'FROM REPORTE R, GRUPOTRABAJO G'
+      
+        'WHERE (R.CODIGOESTADOREPORTE = '#39'4'#39') AND (R.FECHAHORAATENCION is ' +
+        'not Null) AND (R.FECHAHORAATENCION <= SYSDATE + 1)'
+      
+        'AND (R.CODIGOREPORTE NOT IN (SELECT DISTINCT CODIGOREPORTE FROM ' +
+        'ODTREPORTE))'
+      'AND (G.CODIGOADMINISTRATIVO (+) = R.CODIGOADMINISTRATIVO)'
+      'AND (G.CODIGOGRUPOTRABAJO (+) = R.CODIGOGRUPOTRABAJO)'
+      'GROUP BY G.NOMBREGRUPOTRABAJO'
+      ''
+      ' ')
+    Left = 756
+    Top = 453
+  end
+end

@@ -1,0 +1,254 @@
+inherited fListaGrupoTrabajo: TfListaGrupoTrabajo
+  Left = 255
+  Top = 153
+  Width = 792
+  Caption = 'Listado De Lectores'
+  Font.Charset = ANSI_CHARSET
+  Font.Name = 'Tahoma'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    Width = 776
+    object sbInsertar: TSpeedButton [0]
+      Left = 126
+      Top = 4
+      Width = 23
+      Height = 21
+      Hint = 'Ingresar Dato en Lista'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        33333333FF33333333FF333993333333300033377F3333333777333993333333
+        300033F77FFF3333377739999993333333333777777F3333333F399999933333
+        33003777777333333377333993333333330033377F3333333377333993333333
+        3333333773333333333F333333333333330033333333F33333773333333C3333
+        330033333337FF3333773333333CC333333333FFFFF77FFF3FF33CCCCCCCCCC3
+        993337777777777F77F33CCCCCCCCCC3993337777777777377333333333CC333
+        333333333337733333FF3333333C333330003333333733333777333333333333
+        3000333333333333377733333333333333333333333333333333}
+      NumGlyphs = 2
+      OnClick = sbInsertarClick
+    end
+    object sbEditar: TSpeedButton [1]
+      Left = 150
+      Top = 4
+      Width = 23
+      Height = 21
+      Hint = 'Editar Dato en Lista'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333000000
+        000033333377777777773333330FFFFFFFF03FF3FF7FF33F3FF700300000FF0F
+        00F077F777773F737737E00BFBFB0FFFFFF07773333F7F3333F7E0BFBF000FFF
+        F0F077F3337773F3F737E0FBFBFBF0F00FF077F3333FF7F77F37E0BFBF00000B
+        0FF077F3337777737337E0FBFBFBFBF0FFF077F33FFFFFF73337E0BF0000000F
+        FFF077FF777777733FF7000BFB00B0FF00F07773FF77373377373330000B0FFF
+        FFF03337777373333FF7333330B0FFFF00003333373733FF777733330B0FF00F
+        0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
+        00333377737FFFFF773333303300000003333337337777777333}
+      NumGlyphs = 2
+      OnClick = sbEditarClick
+    end
+    inherited Panel2: TPanel
+      Left = 504
+      Width = 271
+      inherited SBSalir: TSpeedButton
+        Left = 241
+      end
+      inherited SBImprimir: TSpeedButton
+        Left = 159
+        Visible = False
+      end
+      inherited SBFiltrar: TSpeedButton
+        Left = 187
+      end
+      inherited SBBuscar: TSpeedButton
+        Left = 76
+        Visible = False
+      end
+      inherited SBOrdenar: TSpeedButton
+        Left = 100
+        Visible = False
+      end
+      inherited Bevel2: TBevel
+        Left = 157
+      end
+      inherited SBEstadistica: TSpeedButton
+        Left = 136
+        Visible = False
+      end
+      inherited Bevel3: TBevel
+        Left = 67
+      end
+      inherited Bevel1: TBevel
+        Left = 235
+      end
+      inherited SBBuscaElementoCartografia: TSpeedButton
+        Left = 39
+        Top = 3
+        Flat = False
+        Visible = False
+      end
+      inherited SBFiltroCarografico: TSpeedButton
+        Left = 13
+        Visible = False
+      end
+      inherited sbExportar: TSpeedButton
+        Left = 211
+      end
+    end
+    inherited dNavigator1: TdNavigator
+      Hints.Strings = ()
+    end
+  end
+  inherited Panel3: TPanel
+    Top = 444
+    Width = 776
+  end
+  inherited PFiltro: TPanel
+    Width = 776
+    inherited lFiltroDatos: TLabel
+      Width = 774
+    end
+  end
+  object dbgGrupoTrabajo: TRxDBGrid [3]
+    Left = 0
+    Top = 78
+    Width = 776
+    Height = 366
+    Align = alClient
+    DataSource = dsBase
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
+    TitleFont.Charset = ANSI_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    OnDblClick = dbgGrupoTrabajoDblClick
+    OnTitleClick = dbgGrupoTrabajoTitleClick
+    OnMouseMove = dbgGrupoTrabajoMouseMove
+    Columns = <
+      item
+        Color = clAqua
+        Expanded = False
+        FieldName = 'CODIGOADMINISTRATIVO'
+        Title.Alignment = taCenter
+        Title.Caption = 'CIA'
+        Visible = True
+      end
+      item
+        Color = clInfoBk
+        Expanded = False
+        FieldName = 'CODIGOGRUPOTRABAJO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Lector'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOMBREGRUPOTRABAJO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Nombre'
+        Width = 192
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOMBRETIPOTURNO'
+        ReadOnly = True
+        Title.Alignment = taCenter
+        Title.Caption = 'Horario'
+        Width = 91
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CODIGOVEHICULO'
+        Title.Caption = 'Placa Vehiculo'
+        Visible = True
+      end
+      item
+        Alignment = taCenter
+        Expanded = False
+        FieldName = 'ACTIVO'
+        Title.Caption = 'Activo'
+        Width = 35
+        Visible = True
+      end>
+  end
+  object Panel4: TPanel [4]
+    Left = 0
+    Top = 462
+    Width = 776
+    Height = 69
+    Align = alBottom
+    TabOrder = 4
+    object DBText1: TDBText
+      Left = 104
+      Top = 16
+      Width = 665
+      Height = 30
+      Color = clSilver
+      DataField = 'NOMBREADMINISTRATIVO'
+      DataSource = dsBase
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
+    object Label1: TLabel
+      Left = 16
+      Top = 16
+      Width = 68
+      Height = 26
+      Caption = 'Nombre  '#13#10'Administrativo'
+    end
+  end
+  inherited dsBase: TDDataSource
+    DataSet = qListaGrupoTrabajo
+    Top = 132
+  end
+  inherited qTotales: TQuery
+    SQL.Strings = (
+      'SELECT count(*) as Total'
+      ''
+      'FROM GRUPOTRABAJO G, ADMINISTRATIVO A, HORARIOTRABAJO H'
+      'WHERE (A.CODIGOADMINISTRATIVO = G.CODIGOADMINISTRATIVO)'
+      'AND (H.CODIGOHORARIOTRABAJO = G.CODIGOHORARIOTRABAJO)')
+    Left = 125
+    Top = 130
+  end
+  object qListaGrupoTrabajo: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT G.CODIGOADMINISTRATIVO, A.NOMBREADMINISTRATIVO,G.CODIGOGR' +
+        'UPOTRABAJO, '
+      
+        'G.NOMBREGRUPOTRABAJO,G.CODIGOTIPOTURNO, TT.NOMBRETIPOTURNO,CODIG' +
+        'OCONTRATISTA,CODIGOVEHICULO, G.ACTIVO'
+      'FROM GRUPOTRABAJO G, ADMINISTRATIVO A, TIPOTURNO TT'
+      'WHERE (A.CODIGOADMINISTRATIVO = G.CODIGOADMINISTRATIVO)'
+      'AND (TT.CODIGOTIPOTURNO (+)= G.CODIGOTIPOTURNO)'
+      'ORDER BY 1')
+    Left = 208
+    Top = 128
+  end
+end

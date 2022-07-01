@@ -1,0 +1,84 @@
+inherited fEstadisticasCarta: TfEstadisticasCarta
+  Caption = 'fEstadisticasCarta'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited DecisionPivot1: TDecisionPivot
+    inherited DecisionGrid1: TDecisionGrid
+      Dimensions = <
+        item
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          DisplayName = 'Ave of ItemsTotal'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end>
+    end
+  end
+  inherited DecisionSource1: TDecisionSource
+    DimensionCount = 6
+    SummaryCount = 2
+    CurrentSummary = 0
+    SparseRows = False
+    SparseCols = False
+    DimensionInfo = (
+      2
+      -1
+      2
+      0
+      -1
+      2
+      -1
+      2
+      1
+      0
+      1
+      -1
+      2
+      0
+      0
+      1
+      -1
+      2
+      1
+      0
+      1
+      -1
+      2
+      2
+      -1
+      1
+      -1
+      2
+      3
+      -1)
+  end
+end

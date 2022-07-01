@@ -1,0 +1,1457 @@
+object FSeccionFormatoDatosODT: TFSeccionFormatoDatosODT
+  Left = 317
+  Top = 53
+  Width = 710
+  Height = 685
+  BorderIcons = []
+  Caption = 'Sección Formato Mantenimiento ODT'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel2: TPanel
+    Left = 0
+    Top = 185
+    Width = 694
+    Height = 462
+    Align = alClient
+    Caption = 'Panel2'
+    TabOrder = 0
+    object PageControl1: TPageControl
+      Left = 1
+      Top = 1
+      Width = 692
+      Height = 460
+      ActivePage = TabSheet1
+      Align = alClient
+      TabOrder = 0
+      object TabSheet1: TTabSheet
+        object Panel3: TPanel
+          Left = 0
+          Top = 0
+          Width = 684
+          Height = 177
+          Align = alTop
+          Caption = 'Panel3'
+          TabOrder = 0
+          object Panel4: TPanel
+            Left = 1
+            Top = 1
+            Width = 682
+            Height = 28
+            Align = alTop
+            Caption = 'Encabezado Sección'
+            Color = 16550188
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 0
+          end
+          object RxDBGrid1: TRxDBGrid
+            Left = 1
+            Top = 29
+            Width = 682
+            Height = 122
+            Align = alClient
+            DataSource = dsEncabezadoSeccionDatos
+            TabOrder = 1
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'MS Sans Serif'
+            TitleFont.Style = []
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'NombreCampo'
+                Title.Alignment = taCenter
+                Title.Caption = 'NOMBRE CAMPO'
+                Width = 176
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'VALORENCABEZADOSECCION'
+                Title.Alignment = taCenter
+                Title.Caption = 'VALOR ENCABEZADO'
+                Width = 239
+                Visible = True
+              end>
+          end
+          object DBNavigator2: TDBNavigator
+            Left = 1
+            Top = 151
+            Width = 682
+            Height = 25
+            DataSource = dsEncabezadoSeccionDatos
+            VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbPost, nbCancel]
+            Align = alBottom
+            TabOrder = 2
+          end
+        end
+        object Panel5: TPanel
+          Left = 0
+          Top = 177
+          Width = 684
+          Height = 255
+          Align = alClient
+          Caption = 'Panel5'
+          TabOrder = 1
+          object Panel6: TPanel
+            Left = 1
+            Top = 1
+            Width = 682
+            Height = 28
+            Align = alTop
+            Caption = 'Medidas'
+            Color = 16550188
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 0
+          end
+          object dbgmedidas: TRxDBGrid
+            Left = 1
+            Top = 29
+            Width = 682
+            Height = 163
+            Align = alClient
+            DataSource = dsMedidas
+            TabOrder = 1
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'MS Sans Serif'
+            TitleFont.Style = []
+          end
+          object Panel1: TPanel
+            Left = 1
+            Top = 217
+            Width = 682
+            Height = 37
+            Align = alBottom
+            TabOrder = 2
+            object Panel7: TPanel
+              Left = 286
+              Top = 1
+              Width = 395
+              Height = 35
+              Align = alRight
+              BevelOuter = bvNone
+              TabOrder = 0
+              object bAceptar: TBitBtn
+                Left = 212
+                Top = 7
+                Width = 75
+                Height = 25
+                Caption = '&Aceptar'
+                ModalResult = 1
+                TabOrder = 0
+                OnClick = bAceptarClick
+                Glyph.Data = {
+                  DE010000424DDE01000000000000760000002800000024000000120000000100
+                  0400000000006801000000000000000000001000000010000000000000000000
+                  80000080000000808000800000008000800080800000C0C0C000808080000000
+                  FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+                  3333333333333333333333330000333333333333333333333333F33333333333
+                  00003333344333333333333333388F3333333333000033334224333333333333
+                  338338F3333333330000333422224333333333333833338F3333333300003342
+                  222224333333333383333338F3333333000034222A22224333333338F338F333
+                  8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+                  33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+                  0000333333333A222433333333333338F338F33300003333333333A222433333
+                  333333338F338F33000033333333333A222433333333333338F338F300003333
+                  33333333A222433333333333338F338F00003333333333333A22433333333333
+                  3338F38F000033333333333333A223333333333333338F830000333333333333
+                  333A333333333333333338330000333333333333333333333333333333333333
+                  0000}
+                NumGlyphs = 2
+              end
+              object bCancelar: TBitBtn
+                Left = 301
+                Top = 7
+                Width = 75
+                Height = 25
+                Caption = '&Cancelar'
+                TabOrder = 1
+                OnClick = bCancelarClick
+                Kind = bkCancel
+              end
+              object BitBtnImprimir: TBitBtn
+                Left = 128
+                Top = 7
+                Width = 75
+                Height = 25
+                Caption = '&Imprimir'
+                Enabled = False
+                TabOrder = 2
+                Glyph.Data = {
+                  76010000424D7601000000000000760000002800000020000000100000000100
+                  0400000000000001000000000000000000001000000010000000000000000000
+                  800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+                  FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+                  0003377777777777777308888888888888807F33333333333337088888888888
+                  88807FFFFFFFFFFFFFF7000000000000000077777777777777770F8F8F8F8F8F
+                  8F807F333333333333F708F8F8F8F8F8F9F07F333333333337370F8F8F8F8F8F
+                  8F807FFFFFFFFFFFFFF7000000000000000077777777777777773330FFFFFFFF
+                  03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+                  03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+                  33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
+                  33333337FFFF7733333333300000033333333337777773333333}
+                NumGlyphs = 2
+              end
+            end
+          end
+          object DBNavigator1: TDBNavigator
+            Left = 1
+            Top = 192
+            Width = 682
+            Height = 25
+            DataSource = dsMedidas
+            VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+            Align = alBottom
+            TabOrder = 3
+          end
+        end
+      end
+    end
+  end
+  object Panel8: TPanel
+    Left = 0
+    Top = 0
+    Width = 694
+    Height = 185
+    Align = alTop
+    TabOrder = 1
+    object Panel9: TPanel
+      Left = 1
+      Top = 1
+      Width = 692
+      Height = 32
+      Align = alTop
+      Caption = 'Encabezado Formato'
+      Color = 16550188
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+    end
+    object GroupBox1: TGroupBox
+      Left = 1
+      Top = 37
+      Width = 904
+      Height = 137
+      Color = clBtnFace
+      ParentColor = False
+      TabOrder = 1
+      object Label1: TLabel
+        Left = 10
+        Top = 105
+        Width = 38
+        Height = 13
+        Caption = 'Formato'
+      end
+      object Label2: TLabel
+        Left = 345
+        Top = 105
+        Width = 39
+        Height = 13
+        Caption = 'Sección'
+      end
+      object Label4: TLabel
+        Left = 10
+        Top = 77
+        Width = 23
+        Height = 13
+        Caption = 'ODT'
+      end
+      object Label3: TLabel
+        Left = 345
+        Top = 77
+        Width = 63
+        Height = 13
+        Caption = 'SubActividad'
+      end
+      object Label5: TLabel
+        Left = 345
+        Top = 47
+        Width = 85
+        Height = 13
+        Caption = 'Fecha de  Prueba'
+      end
+      object Label6: TLabel
+        Left = 10
+        Top = 47
+        Width = 93
+        Height = 13
+        Caption = 'Fecha Modificación'
+      end
+      object LbFecha: TLabel
+        Left = 345
+        Top = 17
+        Width = 87
+        Height = 13
+        Caption = 'Fecha de Registro'
+      end
+      object Label7: TLabel
+        Left = 10
+        Top = 17
+        Width = 84
+        Height = 13
+        Caption = 'Usuario Creación:'
+      end
+      object sbFechaPrueba: TSpeedButton
+        Tag = 9
+        Left = 648
+        Top = 42
+        Width = 22
+        Height = 21
+        Glyph.Data = {
+          4E010000424D4E01000000000000760000002800000012000000120000000100
+          040000000000D800000000000000000000001000000010000000000000000000
+          BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333330000003333333333333333330000003338888888888888330000003304
+          0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+          FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+          F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033F7777777777F4833000000330000000000003333000000333333333333
+          333333000000333333333333333333000000}
+        OnClick = sbFechaPruebaClick
+      end
+      object Label8: TLabel
+        Left = 220
+        Top = 77
+        Width = 62
+        Height = 13
+        Caption = 'Consecuttivo'
+      end
+      object DBFechaCreacionSeccion: TDBEdit
+        Left = 440
+        Top = 12
+        Width = 230
+        Height = 21
+        Color = clWhite
+        DataField = 'FECHAREGISTRO'
+        DataSource = dsSeccionDatos
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 0
+      end
+      object DBFechaModificacionSeccion: TDBEdit
+        Left = 110
+        Top = 47
+        Width = 230
+        Height = 21
+        Color = clWhite
+        DataField = 'FECHAMODIFICACION'
+        DataSource = dsSeccionDatos
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 1
+      end
+      object DBLCBSeccion: TDBLookupComboBox
+        Left = 440
+        Top = 102
+        Width = 230
+        Height = 21
+        DataField = 'CODIGOSECCIONFORMATO'
+        DataSource = dsSeccionDatos
+        KeyField = 'CODIGOSECCIONFORMATO'
+        ListField = 'NOMBRESECCIONFORMATO'
+        ListSource = dsSeccion
+        ReadOnly = True
+        TabOrder = 2
+      end
+      object DBEFechaPrueba: TDBEdit
+        Left = 440
+        Top = 42
+        Width = 201
+        Height = 21
+        DataField = 'FECHAPRUEBA'
+        DataSource = dsSeccionDatos
+        TabOrder = 3
+        OnKeyUp = DBEFechaPruebaKeyUp
+      end
+      object Edit4: TEdit
+        Left = 110
+        Top = 16
+        Width = 230
+        Height = 21
+        ReadOnly = True
+        TabOrder = 4
+      end
+      object DBEdit1: TDBEdit
+        Left = 111
+        Top = 74
+        Width = 106
+        Height = 21
+        DataField = 'CODIGOODT'
+        DataSource = dsFormatoDatos
+        TabOrder = 5
+      end
+      object DBEdit2: TDBEdit
+        Left = 288
+        Top = 72
+        Width = 49
+        Height = 21
+        DataField = 'CONSECUTIVOODT'
+        DataSource = dsFormatoDatos
+        TabOrder = 6
+      end
+      object DBLookupComboBox1: TDBLookupComboBox
+        Left = 440
+        Top = 72
+        Width = 233
+        Height = 21
+        DataField = 'NombreSubactividad'
+        DataSource = dsSeccionDatos
+        TabOrder = 7
+      end
+      object EFormato: TEdit
+        Left = 110
+        Top = 102
+        Width = 230
+        Height = 21
+        ReadOnly = True
+        TabOrder = 8
+        Text = 'EFormato'
+      end
+    end
+  end
+  object qFormatoDatos: TQuery
+    Active = True
+    CachedUpdates = True
+    AfterPost = qFormatoDatosAfterPost
+    AfterDelete = qFormatoDatosAfterDelete
+    DatabaseName = 'BaseDato'
+    DataSource = dsSeccionDatos
+    SQL.Strings = (
+      'SELECT * FROM HVE_FORMATOMTTODATOS'
+      'WHERE CODIGOFORMATOMTTODATOS=:CODIGOFORMATOMTTODATOS')
+    UpdateObject = updFormatoDatos
+    Left = 109
+    Top = 484
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOFORMATOMTTODATOS'
+        ParamType = ptUnknown
+      end>
+    object qFormatoDatosCODIGOFORMATOMTTODATOS: TFloatField
+      FieldName = 'CODIGOFORMATOMTTODATOS'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOFORMATOMTTODATOS'
+    end
+    object qFormatoDatosCODIGOFORMATOMTTO: TFloatField
+      FieldName = 'CODIGOFORMATOMTTO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOFORMATOMTTO'
+    end
+    object qFormatoDatosCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOADMINISTRATIVO'
+    end
+    object qFormatoDatosCODIGOUSUARIOCREACION: TFloatField
+      FieldName = 'CODIGOUSUARIOCREACION'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOUSUARIOCREACION'
+    end
+    object qFormatoDatosFECHACREACION: TDateTimeField
+      FieldName = 'FECHACREACION'
+      Origin = 'HVE_FORMATOMTTODATOS.FECHACREACION'
+    end
+    object qFormatoDatosCODIGOUSUARIOMODIFICACION: TFloatField
+      FieldName = 'CODIGOUSUARIOMODIFICACION'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOUSUARIOMODIFICACION'
+    end
+    object qFormatoDatosFECHAULTIMAMODIFICACION: TDateTimeField
+      FieldName = 'FECHAULTIMAMODIFICACION'
+      Origin = 'HVE_FORMATOMTTODATOS.FECHAULTIMAMODIFICACION'
+    end
+    object qFormatoDatosCODIGOAMBITO: TFloatField
+      FieldName = 'CODIGOAMBITO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOAMBITO'
+    end
+    object qFormatoDatosCODIGOSUBESTACION: TStringField
+      FieldName = 'CODIGOSUBESTACION'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOSUBESTACION'
+      Size = 3
+    end
+    object qFormatoDatosCODIGOCOORDINACION: TFloatField
+      FieldName = 'CODIGOCOORDINACION'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOCOORDINACION'
+    end
+    object qFormatoDatosCODIGOTIPOMTTO: TFloatField
+      FieldName = 'CODIGOTIPOMTTO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOTIPOMTTO'
+    end
+    object qFormatoDatosCODIGOTIPOELEMENTO: TFloatField
+      FieldName = 'CODIGOTIPOELEMENTO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOTIPOELEMENTO'
+    end
+    object qFormatoDatosCODIGOCIRCUITO: TStringField
+      FieldName = 'CODIGOCIRCUITO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOCIRCUITO'
+      Size = 6
+    end
+    object qFormatoDatosFECHAPRUEBA: TDateTimeField
+      FieldName = 'FECHAPRUEBA'
+      Origin = 'HVE_FORMATOMTTODATOS.FECHAPRUEBA'
+    end
+    object qFormatoDatosCODIGOELEMENTO: TStringField
+      FieldName = 'CODIGOELEMENTO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOELEMENTO'
+      Size = 60
+    end
+    object qFormatoDatosCLELEMENTO1: TStringField
+      FieldName = 'CLELEMENTO1'
+      Origin = 'HVE_FORMATOMTTODATOS.CLELEMENTO1'
+      Size = 30
+    end
+    object qFormatoDatosCLELEMENTO2: TStringField
+      FieldName = 'CLELEMENTO2'
+      Origin = 'HVE_FORMATOMTTODATOS.CLELEMENTO2'
+      Size = 30
+    end
+    object qFormatoDatosCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOODT'
+    end
+    object qFormatoDatosCONSECUTIVOODT: TFloatField
+      FieldName = 'CONSECUTIVOODT'
+      Origin = 'HVE_FORMATOMTTODATOS.CONSECUTIVOODT'
+    end
+  end
+  object dsFormatoDatos: TDataSource
+    DataSet = qFormatoDatos
+    Left = 112
+    Top = 531
+  end
+  object updFormatoDatos: TUpdateSQL
+    ModifySQL.Strings = (
+      'update HVE_FORMATOMTTODATOS'
+      'set'
+      '  CODIGOFORMATOMTTODATOS = :CODIGOFORMATOMTTODATOS,'
+      '  CODIGOFORMATOMTTO = :CODIGOFORMATOMTTO,'
+      '  CODIGOADMINISTRATIVO = :CODIGOADMINISTRATIVO,'
+      '  CODIGOUSUARIOCREACION = :CODIGOUSUARIOCREACION,'
+      '  FECHACREACION = :FECHACREACION,'
+      '  CODIGOUSUARIOMODIFICACION = :CODIGOUSUARIOMODIFICACION,'
+      '  FECHAULTIMAMODIFICACION = :FECHAULTIMAMODIFICACION,'
+      '  CODIGOAMBITO = :CODIGOAMBITO,'
+      '  CODIGOSUBESTACION = :CODIGOSUBESTACION,'
+      '  CODIGOCOORDINACION = :CODIGOCOORDINACION,'
+      '  CODIGOTIPOMTTO = :CODIGOTIPOMTTO,'
+      '  CODIGOTIPOELEMENTO = :CODIGOTIPOELEMENTO,'
+      '  CODIGOELEMENTO = :CODIGOELEMENTO,'
+      '  CODIGOCIRCUITO = :CODIGOCIRCUITO,'
+      '  FECHAPRUEBA = :FECHAPRUEBA,'
+      '  CLELEMENTO1 = :CLELEMENTO1,'
+      '  CLELEMENTO2 = :CLELEMENTO2,'
+      '  CODIGOODT = :CODIGOODT,'
+      '  CONSECUTIVOODT = :CONSECUTIVOODT'
+      'where'
+      '  CODIGOFORMATOMTTODATOS = :OLD_CODIGOFORMATOMTTODATOS')
+    InsertSQL.Strings = (
+      'insert into HVE_FORMATOMTTODATOS'
+      
+        '  (CODIGOFORMATOMTTODATOS, CODIGOFORMATOMTTO, CODIGOADMINISTRATI' +
+        'VO, CODIGOUSUARIOCREACION, '
+      
+        '   FECHACREACION, CODIGOUSUARIOMODIFICACION, FECHAULTIMAMODIFICA' +
+        'CION, CODIGOAMBITO, '
+      
+        '   CODIGOSUBESTACION, CODIGOCOORDINACION, CODIGOTIPOMTTO, CODIGO' +
+        'TIPOELEMENTO, '
+      
+        '   CODIGOELEMENTO, CODIGOCIRCUITO, FECHAPRUEBA, CLELEMENTO1, CLE' +
+        'LEMENTO2, '
+      '   CODIGOODT, CONSECUTIVOODT)'
+      'values'
+      
+        '  (:CODIGOFORMATOMTTODATOS, :CODIGOFORMATOMTTO, :CODIGOADMINISTR' +
+        'ATIVO, '
+      
+        '   :CODIGOUSUARIOCREACION, :FECHACREACION, :CODIGOUSUARIOMODIFIC' +
+        'ACION, '
+      
+        '   :FECHAULTIMAMODIFICACION, :CODIGOAMBITO, :CODIGOSUBESTACION, ' +
+        ':CODIGOCOORDINACION, '
+      
+        '   :CODIGOTIPOMTTO, :CODIGOTIPOELEMENTO, :CODIGOELEMENTO, :CODIG' +
+        'OCIRCUITO, '
+      
+        '   :FECHAPRUEBA, :CLELEMENTO1, :CLELEMENTO2, :CODIGOODT, :CONSEC' +
+        'UTIVOODT)')
+    DeleteSQL.Strings = (
+      'delete from HVE_FORMATOMTTODATOS'
+      'where'
+      '  CODIGOFORMATOMTTODATOS = :OLD_CODIGOFORMATOMTTODATOS')
+    Left = 113
+    Top = 577
+  end
+  object qSeccionDatos: TQuery
+    Active = True
+    CachedUpdates = True
+    AfterOpen = qSeccionDatosAfterOpen
+    BeforeInsert = qSeccionDatosBeforeInsert
+    AfterInsert = qSeccionDatosAfterInsert
+    BeforePost = qSeccionDatosBeforePost
+    AfterPost = qSeccionDatosAfterPost
+    AfterDelete = qSeccionDatosAfterDelete
+    OnCalcFields = qSeccionDatosCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM HVE_SECCIONFORMATODATOS'
+      'WHERE CODIGOSECCIONFORMATODATOS=-1')
+    UpdateObject = updSeccionDatos
+    Left = 37
+    Top = 484
+    object qSeccionDatosCODIGOSECCIONFORMATODATOS: TFloatField
+      FieldName = 'CODIGOSECCIONFORMATODATOS'
+      Origin = 'HVE_SECCIONFORMATODATOS.CODIGOSECCIONFORMATODATOS'
+    end
+    object qSeccionDatosCODIGOFORMATOMTTODATOS: TFloatField
+      FieldName = 'CODIGOFORMATOMTTODATOS'
+      Origin = 'HVE_SECCIONFORMATODATOS.CODIGOFORMATOMTTODATOS'
+    end
+    object qSeccionDatosCODIGOSECCIONFORMATO: TFloatField
+      FieldName = 'CODIGOSECCIONFORMATO'
+      Origin = 'HVE_SECCIONFORMATODATOS.CODIGOSECCIONFORMATO'
+      OnChange = qSeccionDatosCODIGOSECCIONFORMATOChange
+    end
+    object qSeccionDatosNombreSeccion: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NombreSeccion'
+      LookupDataSet = qSeccion
+      LookupKeyFields = 'CODIGOSECCIONFORMATO'
+      LookupResultField = 'NOMBRESECCIONFORMATO'
+      KeyFields = 'CODIGOSECCIONFORMATO'
+      Lookup = True
+    end
+    object qSeccionDatosCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'HVE_SECCIONFORMATODATOS.CODIGOODT'
+    end
+    object qSeccionDatosSUBACTIVIDADODT: TFloatField
+      FieldName = 'SUBACTIVIDADODT'
+      Origin = 'HVE_SECCIONFORMATODATOS.SUBACTIVIDADODT'
+    end
+    object qSeccionDatosESTADOTERMINADO: TStringField
+      FieldName = 'ESTADOTERMINADO'
+      Origin = 'HVE_SECCIONFORMATODATOS.ESTADOTERMINADO'
+      Size = 2
+    end
+    object qSeccionDatosFECHAREGISTRO: TDateTimeField
+      FieldName = 'FECHAREGISTRO'
+      Origin = 'HVE_SECCIONFORMATODATOS.CODIGOSECCIONFORMATODATOS'
+    end
+    object qSeccionDatosFECHAMODIFICACION: TDateTimeField
+      FieldName = 'FECHAMODIFICACION'
+      Origin = 'HVE_SECCIONFORMATODATOS.CODIGOSECCIONFORMATODATOS'
+    end
+    object qSeccionDatosFECHAPRUEBA: TDateTimeField
+      FieldName = 'FECHAPRUEBA'
+      Origin = 'HVE_SECCIONFORMATODATOS.CODIGOSECCIONFORMATODATOS'
+    end
+    object qSeccionDatosNombreUsuarioCreacion: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'NombreUsuarioCreacion'
+      Calculated = True
+    end
+    object qSeccionDatosNombreUsuarioModificacion: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'NombreUsuarioModificacion'
+      Calculated = True
+    end
+    object qSeccionDatosCODIGOUSUARIOCREACION: TFloatField
+      FieldName = 'CODIGOUSUARIOCREACION'
+      Origin = 'HVE_SECCIONFORMATODATOS.CODIGOUSUARIOCREACION'
+      OnValidate = qSeccionDatosCODIGOUSUARIOCREACIONValidate
+    end
+    object qSeccionDatosCODIGOUSUARIOMODIFICACION: TFloatField
+      FieldName = 'CODIGOUSUARIOMODIFICACION'
+      Origin = 'HVE_SECCIONFORMATODATOS.CODIGOUSUARIOMODIFICACION'
+    end
+    object qSeccionDatosNombreSubactividad: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NombreSubactividad'
+      LookupDataSet = qSubactividad
+      LookupKeyFields = 'CODIGOSUBACTIVIDADAREAODT'
+      LookupResultField = 'NOMBRESUBACTIVIDADAREAODT'
+      KeyFields = 'SUBACTIVIDADODT'
+      Size = 120
+      Lookup = True
+    end
+  end
+  object dsSeccionDatos: TDataSource
+    DataSet = qSeccionDatos
+    Left = 37
+    Top = 531
+  end
+  object updSeccionDatos: TUpdateSQL
+    ModifySQL.Strings = (
+      'update HVE_SECCIONFORMATODATOS'
+      'set'
+      '  CODIGOSECCIONFORMATODATOS = :CODIGOSECCIONFORMATODATOS,'
+      '  CODIGOFORMATOMTTODATOS = :CODIGOFORMATOMTTODATOS,'
+      '  CODIGOSECCIONFORMATO = :CODIGOSECCIONFORMATO,'
+      '  CODIGOODT = :CODIGOODT,'
+      '  SUBACTIVIDADODT = :SUBACTIVIDADODT,'
+      '  ESTADOTERMINADO = :ESTADOTERMINADO,'
+      '  FECHAREGISTRO = :FECHAREGISTRO,'
+      '  FECHAMODIFICACION = :FECHAMODIFICACION,'
+      '  FECHAPRUEBA = :FECHAPRUEBA,'
+      '  CODIGOUSUARIOCREACION = :CODIGOUSUARIOCREACION,'
+      '  CODIGOUSUARIOMODIFICACION = :CODIGOUSUARIOMODIFICACION'
+      'where'
+      '  CODIGOSECCIONFORMATODATOS = :OLD_CODIGOSECCIONFORMATODATOS')
+    InsertSQL.Strings = (
+      'insert into HVE_SECCIONFORMATODATOS'
+      
+        '  (CODIGOSECCIONFORMATODATOS, CODIGOFORMATOMTTODATOS, CODIGOSECC' +
+        'IONFORMATO, '
+      
+        '   CODIGOODT, SUBACTIVIDADODT, ESTADOTERMINADO, FECHAREGISTRO, F' +
+        'ECHAMODIFICACION, '
+      
+        '   FECHAPRUEBA, CODIGOUSUARIOCREACION, CODIGOUSUARIOMODIFICACION' +
+        ')'
+      'values'
+      
+        '  (:CODIGOSECCIONFORMATODATOS, :CODIGOFORMATOMTTODATOS, :CODIGOS' +
+        'ECCIONFORMATO, '
+      
+        '   :CODIGOODT, :SUBACTIVIDADODT, :ESTADOTERMINADO, :FECHAREGISTR' +
+        'O, :FECHAMODIFICACION, '
+      
+        '   :FECHAPRUEBA, :CODIGOUSUARIOCREACION, :CODIGOUSUARIOMODIFICAC' +
+        'ION)')
+    DeleteSQL.Strings = (
+      'delete from HVE_SECCIONFORMATODATOS'
+      'where'
+      '  CODIGOSECCIONFORMATODATOS = :OLD_CODIGOSECCIONFORMATODATOS')
+    Left = 35
+    Top = 578
+  end
+  object qUsuarioCreacion: TQuery
+    Active = True
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT U.NOMBREUSUARIO '
+      'FROM USUARIO U, HVE_FORMATOMTTODATOS F'
+      'WHERE U.CODIGOUSUARIO = F.CODIGOUSUARIOCREACION'
+      'AND F.CODIGOFORMATOMTTO=:CODIGOFORMATOMTTO')
+    Left = 335
+    Top = 296
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'CODIGOFORMATOMTTO'
+        ParamType = ptUnknown
+      end>
+    object qUsuarioCreacionNOMBREUSUARIO: TStringField
+      FieldName = 'NOMBREUSUARIO'
+      Origin = 'USUARIO.NOMBREUSUARIO'
+      Size = 40
+    end
+  end
+  object qUsuarioModificacion: TQuery
+    Active = True
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT U.NOMBREUSUARIO '
+      'FROM USUARIO U, HVE_FORMATOMTTODATOS F'
+      'WHERE U.CODIGOUSUARIO = F.CODIGOUSUARIOMODIFICACION'
+      'AND F.CODIGOFORMATOMTTODATOS =:CODIGOFORMATOMTTODATOS')
+    Left = 248
+    Top = 296
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'CODIGOFORMATOMTTODATOS'
+        ParamType = ptUnknown
+      end>
+    object qUsuarioModificacionNOMBREUSUARIO: TStringField
+      FieldName = 'NOMBREUSUARIO'
+      Origin = 'USUARIO.NOMBREUSUARIO'
+      Size = 40
+    end
+  end
+  object dsUsuarioModificacion: TDataSource
+    DataSet = qUsuarioModificacion
+    Left = 247
+    Top = 342
+  end
+  object dsUsuarioCreacion: TDataSource
+    DataSet = qUsuarioCreacion
+    Left = 335
+    Top = 342
+  end
+  object qEncabezadoSeccion: TQuery
+    Active = True
+    CachedUpdates = True
+    AfterPost = qEncabezadoSeccionAfterPost
+    AfterDelete = qEncabezadoSeccionAfterDelete
+    DatabaseName = 'BaseDato'
+    DataSource = dsSeccionDatos
+    SQL.Strings = (
+      'SELECT * FROM HVE_ENCABEZADOSECCION ES'
+      'WHERE ES.CODIGOSECCIONFORMATO=:CODIGOSECCIONFORMATO')
+    UpdateObject = updEncabezadoSeccion
+    Left = 187
+    Top = 484
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOSECCIONFORMATO'
+        ParamType = ptUnknown
+      end>
+    object qEncabezadoSeccionCODIGOENCABEZADOSECCION: TFloatField
+      FieldName = 'CODIGOENCABEZADOSECCION'
+      Origin = 'HVE_ENCABEZADOSECCION.CODIGOENCABEZADOSECCION'
+    end
+    object qEncabezadoSeccionCODIGOSECCIONFORMATO: TFloatField
+      FieldName = 'CODIGOSECCIONFORMATO'
+      Origin = 'HVE_ENCABEZADOSECCION.CODIGOSECCIONFORMATO'
+    end
+    object qEncabezadoSeccionNOMBRECAMPO: TStringField
+      FieldName = 'NOMBRECAMPO'
+      Origin = 'HVE_ENCABEZADOSECCION.NOMBRECAMPO'
+      Size = 50
+    end
+    object qEncabezadoSeccionCONSECUTIVOENCABEZADOSECCION: TFloatField
+      FieldName = 'CONSECUTIVOENCABEZADOSECCION'
+      Origin = 'HVE_ENCABEZADOSECCION.CONSECUTIVOENCABEZADOSECCION'
+    end
+  end
+  object dsEncabezadoSeccion: TDataSource
+    DataSet = qEncabezadoSeccion
+    Left = 187
+    Top = 531
+  end
+  object updEncabezadoSeccion: TUpdateSQL
+    ModifySQL.Strings = (
+      'update HVE_ENCABEZADOSECCION'
+      'set'
+      '  CODIGOENCABEZADOSECCION = :CODIGOENCABEZADOSECCION,'
+      '  CODIGOSECCIONFORMATO = :CODIGOSECCIONFORMATO,'
+      '  NOMBRECAMPO = :NOMBRECAMPO,'
+      '  CONSECUTIVOENCABEZADOSECCION = '
+      ':CONSECUTIVOENCABEZADOSECCION'
+      'where'
+      '  CODIGOENCABEZADOSECCION = :OLD_CODIGOENCABEZADOSECCION')
+    InsertSQL.Strings = (
+      'insert into HVE_ENCABEZADOSECCION'
+      
+        '  (CODIGOENCABEZADOSECCION, CODIGOSECCIONFORMATO, NOMBRECAMPO, C' +
+        'ONSECUTIVOENCABEZADOSECCION)'
+      'values'
+      
+        '  (:CODIGOENCABEZADOSECCION, :CODIGOSECCIONFORMATO, :NOMBRECAMPO' +
+        ', :CONSECUTIVOENCABEZADOSECCION)')
+    DeleteSQL.Strings = (
+      'delete from HVE_ENCABEZADOSECCION'
+      'where'
+      '  CODIGOENCABEZADOSECCION = :OLD_CODIGOENCABEZADOSECCION')
+    Left = 187
+    Top = 578
+  end
+  object TMedidas: TTable
+    AfterInsert = TMedidasAfterInsert
+    Left = 410
+    Top = 296
+  end
+  object dsMedidas: TDataSource
+    DataSet = TMedidas
+    Left = 413
+    Top = 358
+  end
+  object qValorMedida: TQuery
+    Active = True
+    CachedUpdates = True
+    AfterInsert = qValorMedidaAfterInsert
+    AfterPost = qValorMedidaAfterPost
+    AfterDelete = qValorMedidaAfterDelete
+    DatabaseName = 'BaseDato'
+    DataSource = dsSeccionDatos
+    SQL.Strings = (
+      'SELECT * FROM HVE_VALORMEDIDA'
+      'WHERE CODIGOSECCIONFORMATODATOS=:CODIGOSECCIONFORMATODATOS'
+      'ORDER BY FILA')
+    UpdateObject = updValorMedida
+    Left = 466
+    Top = 484
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOSECCIONFORMATODATOS'
+        ParamType = ptUnknown
+      end>
+    object qValorMedidaCODIGOVALORMEDIDA: TFloatField
+      FieldName = 'CODIGOVALORMEDIDA'
+      Origin = 'HVE_VALORMEDIDA.CODIGOVALORMEDIDA'
+    end
+    object qValorMedidaCODIGOSECCIONFORMATODATOS: TFloatField
+      FieldName = 'CODIGOSECCIONFORMATODATOS'
+      Origin = 'HVE_VALORMEDIDA.CODIGOSECCIONFORMATODATOS'
+    end
+    object qValorMedidaFILA: TFloatField
+      FieldName = 'FILA'
+      Origin = 'HVE_VALORMEDIDA.FILA'
+    end
+  end
+  object dsValorMedida: TDataSource
+    DataSet = qValorMedida
+    Left = 463
+    Top = 531
+  end
+  object updValorMedida: TUpdateSQL
+    ModifySQL.Strings = (
+      'update HVE_VALORMEDIDA'
+      'set'
+      '  CODIGOVALORMEDIDA = :CODIGOVALORMEDIDA,'
+      '  CODIGOSECCIONFORMATODATOS = :CODIGOSECCIONFORMATODATOS,'
+      '  FILA = :FILA'
+      'where'
+      '  CODIGOVALORMEDIDA = :OLD_CODIGOVALORMEDIDA')
+    InsertSQL.Strings = (
+      'insert into HVE_VALORMEDIDA'
+      '  (CODIGOVALORMEDIDA, CODIGOSECCIONFORMATODATOS, FILA)'
+      'values'
+      '  (:CODIGOVALORMEDIDA, :CODIGOSECCIONFORMATODATOS, :FILA)')
+    DeleteSQL.Strings = (
+      'delete from HVE_VALORMEDIDA'
+      'where'
+      '  CODIGOVALORMEDIDA = :OLD_CODIGOVALORMEDIDA')
+    Left = 463
+    Top = 578
+  end
+  object qValorMedidaDetalle: TQuery
+    Active = True
+    CachedUpdates = True
+    AfterInsert = qValorMedidaDetalleAfterInsert
+    AfterPost = qValorMedidaDetalleAfterPost
+    AfterDelete = qValorMedidaDetalleAfterDelete
+    OnCalcFields = qValorMedidaDetalleCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsValorMedida
+    SQL.Strings = (
+      'SELECT * FROM HVE_VALORMEDIDADETALLE'
+      'WHERE CODIGOVALORMEDIDA=:CODIGOVALORMEDIDA'
+      'ORDER BY CODIGOCOLUMNAMEDIDA')
+    UpdateObject = updValorMedidaDetalle
+    Left = 547
+    Top = 483
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOVALORMEDIDA'
+        ParamType = ptUnknown
+      end>
+    object qValorMedidaDetalleCODIGOVALORMEDIDADETALLE: TFloatField
+      FieldName = 'CODIGOVALORMEDIDADETALLE'
+      Origin = 'HVE_VALORMEDIDADETALLE.CODIGOVALORMEDIDADETALLE'
+    end
+    object qValorMedidaDetalleCODIGOVALORMEDIDA: TFloatField
+      FieldName = 'CODIGOVALORMEDIDA'
+      Origin = 'HVE_VALORMEDIDADETALLE.CODIGOVALORMEDIDA'
+    end
+    object qValorMedidaDetalleCODIGOCOLUMNAMEDIDA: TFloatField
+      FieldName = 'CODIGOCOLUMNAMEDIDA'
+      Origin = 'HVE_VALORMEDIDADETALLE.CODIGOCOLUMNAMEDIDA'
+    end
+    object qValorMedidaDetalleVALOR: TStringField
+      FieldName = 'VALOR'
+      Origin = 'HVE_VALORMEDIDADETALLE.VALOR'
+      Size = 80
+    end
+    object qValorMedidaDetalleNombreColumnaMedida: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'NombreColumnaMedida'
+      Size = 80
+      Calculated = True
+    end
+  end
+  object dsValorMedidaDetalle: TDataSource
+    DataSet = qValorMedidaDetalle
+    Left = 547
+    Top = 531
+  end
+  object updValorMedidaDetalle: TUpdateSQL
+    ModifySQL.Strings = (
+      'update HVE_VALORMEDIDADETALLE'
+      'set'
+      '  CODIGOVALORMEDIDADETALLE = :CODIGOVALORMEDIDADETALLE,'
+      '  CODIGOVALORMEDIDA = :CODIGOVALORMEDIDA,'
+      '  CODIGOCOLUMNAMEDIDA = :CODIGOCOLUMNAMEDIDA,'
+      '  VALOR = :VALOR'
+      'where'
+      '  CODIGOVALORMEDIDADETALLE = :OLD_CODIGOVALORMEDIDADETALLE')
+    InsertSQL.Strings = (
+      'insert into HVE_VALORMEDIDADETALLE'
+      
+        '  (CODIGOVALORMEDIDADETALLE, CODIGOVALORMEDIDA, CODIGOCOLUMNAMED' +
+        'IDA, VALOR)'
+      'values'
+      
+        '  (:CODIGOVALORMEDIDADETALLE, :CODIGOVALORMEDIDA, :CODIGOCOLUMNA' +
+        'MEDIDA, '
+      '   :VALOR)')
+    DeleteSQL.Strings = (
+      'delete from HVE_VALORMEDIDADETALLE'
+      'where'
+      '  CODIGOVALORMEDIDADETALLE = :OLD_CODIGOVALORMEDIDADETALLE')
+    Left = 548
+    Top = 578
+  end
+  object dsColumnaMedida: TDataSource
+    Left = 638
+    Top = 531
+  end
+  object qSeccion: TQuery
+    Active = True
+    CachedUpdates = True
+    AfterPost = qSeccionAfterPost
+    AfterDelete = qSeccionAfterDelete
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM HVE_SECCIONFORMATO')
+    Left = 169
+    Top = 296
+    object qSeccionCODIGOSECCIONFORMATO: TFloatField
+      FieldName = 'CODIGOSECCIONFORMATO'
+      Origin = 'HVE_SECCIONFORMATO.CODIGOSECCIONFORMATO'
+    end
+    object qSeccionCODIGOFORMATOMTTO: TFloatField
+      FieldName = 'CODIGOFORMATOMTTO'
+      Origin = 'HVE_SECCIONFORMATO.CODIGOFORMATOMTTO'
+    end
+    object qSeccionNOMBRESECCIONFORMATO: TStringField
+      FieldName = 'NOMBRESECCIONFORMATO'
+      Origin = 'HVE_SECCIONFORMATO.NOMBRESECCIONFORMATO'
+      Size = 80
+    end
+    object qSeccionCONSECUTIVOSECCIONFORMATO: TFloatField
+      FieldName = 'CONSECUTIVOSECCIONFORMATO'
+      Origin = 'HVE_SECCIONFORMATO.CONSECUTIVOSECCIONFORMATO'
+    end
+  end
+  object dsSeccion: TDataSource
+    DataSet = qSeccion
+    Left = 169
+    Top = 342
+  end
+  object qEncabezadoSeccionDatos: TQuery
+    Active = True
+    CachedUpdates = True
+    AfterInsert = qEncabezadoSeccionDatosAfterInsert
+    AfterPost = qEncabezadoSeccionDatosAfterPost
+    AfterDelete = qEncabezadoSeccionDatosAfterDelete
+    OnCalcFields = qEncabezadoSeccionDatosCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsSeccionDatos
+    SQL.Strings = (
+      'SELECT *'
+      'FROM HVE_ENCABEZADOSECCIONDATOS ESD'
+      'WHERE '
+      'ESD.CODIGOSECCIONFORMATODATOS =:CODIGOSECCIONFORMATODATOS')
+    UpdateObject = updEncabezadoSeccionDatos
+    Left = 367
+    Top = 484
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOSECCIONFORMATODATOS'
+        ParamType = ptUnknown
+      end>
+    object qEncabezadoSeccionDatosCODIGOENCABEZADOSECCIONDATOS: TFloatField
+      FieldName = 'CODIGOENCABEZADOSECCIONDATOS'
+      Origin = 'HVE_ENCABEZADOSECCIONDATOS.CODIGOENCABEZADOSECCIONDATOS'
+    end
+    object qEncabezadoSeccionDatosCODIGOSECCIONFORMATODATOS: TFloatField
+      FieldName = 'CODIGOSECCIONFORMATODATOS'
+      Origin = 'HVE_ENCABEZADOSECCIONDATOS.CODIGOSECCIONFORMATODATOS'
+    end
+    object qEncabezadoSeccionDatosCODIGOENCABEZADOSECCION: TFloatField
+      FieldName = 'CODIGOENCABEZADOSECCION'
+      Origin = 'HVE_ENCABEZADOSECCIONDATOS.CODIGOENCABEZADOSECCION'
+    end
+    object qEncabezadoSeccionDatosVALORENCABEZADOSECCION: TStringField
+      FieldName = 'VALORENCABEZADOSECCION'
+      Origin = 'HVE_ENCABEZADOSECCIONDATOS.VALORENCABEZADOSECCION'
+      Size = 50
+    end
+    object qEncabezadoSeccionDatosNombreCampo: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'NombreCampo'
+      Size = 80
+      Calculated = True
+    end
+  end
+  object dsEncabezadoSeccionDatos: TDataSource
+    DataSet = qEncabezadoSeccionDatos
+    Left = 366
+    Top = 531
+  end
+  object updEncabezadoSeccionDatos: TUpdateSQL
+    ModifySQL.Strings = (
+      'update HVE_ENCABEZADOSECCIONDATOS'
+      'set'
+      '  CODIGOENCABEZADOSECCIONDATOS = '
+      ':CODIGOENCABEZADOSECCIONDATOS,'
+      '  CODIGOSECCIONFORMATODATOS = :CODIGOSECCIONFORMATODATOS,'
+      '  CODIGOENCABEZADOSECCION = :CODIGOENCABEZADOSECCION,'
+      '  VALORENCABEZADOSECCION = :VALORENCABEZADOSECCION'
+      'where'
+      '  CODIGOENCABEZADOSECCIONDATOS = '
+      ':OLD_CODIGOENCABEZADOSECCIONDATOS')
+    InsertSQL.Strings = (
+      'insert into HVE_ENCABEZADOSECCIONDATOS'
+      
+        '  (CODIGOENCABEZADOSECCIONDATOS, CODIGOSECCIONFORMATODATOS, CODI' +
+        'GOENCABEZADOSECCION, '
+      '   VALORENCABEZADOSECCION)'
+      'values'
+      
+        '  (:CODIGOENCABEZADOSECCIONDATOS, :CODIGOSECCIONFORMATODATOS, :C' +
+        'ODIGOENCABEZADOSECCION, '
+      '   :VALORENCABEZADOSECCION)')
+    DeleteSQL.Strings = (
+      'delete from HVE_ENCABEZADOSECCIONDATOS'
+      'where'
+      
+        '  CODIGOENCABEZADOSECCIONDATOS = :OLD_CODIGOENCABEZADOSECCIONDAT' +
+        'OS')
+    Left = 369
+    Top = 578
+  end
+  object updColumnaMedida: TUpdateSQL
+    ModifySQL.Strings = (
+      'update HVE_COLUMNAMEDIDA'
+      'set'
+      '  CODIGOCOLUMNAMEDIDA = :CODIGOCOLUMNAMEDIDA,'
+      '  CODIGOSECCIONFORMATO = :CODIGOSECCIONFORMATO,'
+      '  NOMBRECOLUMNAMEDIDA = :NOMBRECOLUMNAMEDIDA,'
+      '  CODIGOTIPOCOLUMNAMEDIDA = :CODIGOTIPOCOLUMNAMEDIDA,'
+      '  CONSECUTIVOMEDIDASECCION = :CONSECUTIVOMEDIDASECCION,'
+      '  TIPODATO = :TIPODATO,'
+      '  CODIGOUNIDADMEDIDAMTTO = :CODIGOUNIDADMEDIDAMTTO,'
+      '  CODIGOTIPOVALOR = :CODIGOTIPOVALOR'
+      'where'
+      '  CODIGOCOLUMNAMEDIDA = :OLD_CODIGOCOLUMNAMEDIDA')
+    InsertSQL.Strings = (
+      'insert into HVE_COLUMNAMEDIDA'
+      
+        '  (CODIGOCOLUMNAMEDIDA, CODIGOSECCIONFORMATO, NOMBRECOLUMNAMEDID' +
+        'A, CODIGOTIPOCOLUMNAMEDIDA, '
+      
+        '   CONSECUTIVOMEDIDASECCION, TIPODATO, CODIGOUNIDADMEDIDAMTTO, C' +
+        'ODIGOTIPOVALOR)'
+      'values'
+      
+        '  (:CODIGOCOLUMNAMEDIDA, :CODIGOSECCIONFORMATO, :NOMBRECOLUMNAME' +
+        'DIDA, :CODIGOTIPOCOLUMNAMEDIDA, '
+      
+        '   :CONSECUTIVOMEDIDASECCION, :TIPODATO, :CODIGOUNIDADMEDIDAMTTO' +
+        ', :CODIGOTIPOVALOR)')
+    DeleteSQL.Strings = (
+      'delete from HVE_COLUMNAMEDIDA'
+      'where'
+      '  CODIGOCOLUMNAMEDIDA = :OLD_CODIGOCOLUMNAMEDIDA')
+    Left = 640
+    Top = 578
+  end
+  object qNombreFormato: TQuery
+    Active = True
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    DataSource = dsFormato1
+    SQL.Strings = (
+      'SELECT * FROM HVE_FORMATOMTTO'
+      'WHERE CODIGOFORMATOMTTO=:CODIGOFORMATOMTTO')
+    Left = 98
+    Top = 296
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOFORMATOMTTO'
+        ParamType = ptUnknown
+      end>
+    object qNombreFormatoCODIGOFORMATOMTTO: TFloatField
+      FieldName = 'CODIGOFORMATOMTTO'
+      Origin = 'HVE_FORMATOMTTO.CODIGOFORMATOMTTO'
+    end
+    object qNombreFormatoNOMBREFORMATOMTTO: TStringField
+      FieldName = 'NOMBREFORMATOMTTO'
+      Origin = 'HVE_FORMATOMTTO.NOMBREFORMATOMTTO'
+      Size = 80
+    end
+    object qNombreFormatoCODIGOCOORDINACION: TFloatField
+      FieldName = 'CODIGOCOORDINACION'
+      Origin = 'HVE_FORMATOMTTO.CODIGOCOORDINACION'
+    end
+  end
+  object dsNombreFormato: TDataSource
+    DataSet = qNombreFormato
+    Left = 104
+    Top = 342
+  end
+  object qFormato1: TQuery
+    Active = True
+    CachedUpdates = True
+    AfterPost = qFormatoDatosAfterPost
+    AfterDelete = qFormatoDatosAfterDelete
+    DatabaseName = 'BaseDato'
+    DataSource = dsSeccionDatos
+    SQL.Strings = (
+      'SELECT * FROM HVE_FORMATOMTTODATOS'
+      'WHERE CODIGOFORMATOMTTODATOS=:CODIGOFORMATOMTTODATOS')
+    Left = 41
+    Top = 296
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOFORMATOMTTODATOS'
+        ParamType = ptUnknown
+      end>
+    object FloatField1: TFloatField
+      FieldName = 'CODIGOFORMATOMTTODATOS'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOFORMATOMTTODATOS'
+    end
+    object FloatField3: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOADMINISTRATIVO'
+    end
+    object FloatField4: TFloatField
+      FieldName = 'CODIGOUSUARIOCREACION'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOUSUARIOCREACION'
+    end
+    object DateTimeField1: TDateTimeField
+      FieldName = 'FECHACREACION'
+      Origin = 'HVE_FORMATOMTTODATOS.FECHACREACION'
+    end
+    object FloatField5: TFloatField
+      FieldName = 'CODIGOUSUARIOMODIFICACION'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOUSUARIOMODIFICACION'
+    end
+    object DateTimeField2: TDateTimeField
+      FieldName = 'FECHAULTIMAMODIFICACION'
+      Origin = 'HVE_FORMATOMTTODATOS.FECHAULTIMAMODIFICACION'
+    end
+    object qFormato1CODIGOAMBITO: TFloatField
+      FieldName = 'CODIGOAMBITO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOAMBITO'
+    end
+    object qFormato1CODIGOSUBESTACION: TStringField
+      FieldName = 'CODIGOSUBESTACION'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOSUBESTACION'
+      Size = 3
+    end
+    object qFormato1CODIGOCOORDINACION: TFloatField
+      FieldName = 'CODIGOCOORDINACION'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOCOORDINACION'
+    end
+    object qFormato1CODIGOTIPOMTTO: TFloatField
+      FieldName = 'CODIGOTIPOMTTO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOTIPOMTTO'
+    end
+    object qFormato1CODIGOTIPOELEMENTO: TFloatField
+      FieldName = 'CODIGOTIPOELEMENTO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOTIPOELEMENTO'
+    end
+    object qFormato1CODIGOELEMENTO: TStringField
+      FieldName = 'CODIGOELEMENTO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOELEMENTO'
+      Size = 60
+    end
+    object qFormato1CODIGOCIRCUITO: TStringField
+      FieldName = 'CODIGOCIRCUITO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOCIRCUITO'
+      Size = 6
+    end
+    object qFormato1CODIGOFORMATOMTTO: TFloatField
+      FieldName = 'CODIGOFORMATOMTTO'
+      Origin = 'HVE_FORMATOMTTODATOS.CODIGOFORMATOMTTO'
+    end
+  end
+  object dsFormato1: TDataSource
+    DataSet = qFormato1
+    Left = 39
+    Top = 342
+  end
+  object qEncabezadoDatos: TQuery
+    Active = True
+    CachedUpdates = True
+    OnCalcFields = qEncabezadoDatosCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsFormatoDatos
+    SQL.Strings = (
+      'SELECT *'
+      'FROM HVE_ENCABEZADOFORMATODATOS EFD'
+      'WHERE EFD.CODIGOFORMATOMTTODATOS=:CODIGOFORMATOMTTODATOS'
+      'ORDER BY CODIGOENCABEZADOFORMATO')
+    Left = 279
+    Top = 484
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOFORMATOMTTODATOS'
+        ParamType = ptUnknown
+      end>
+    object qEncabezadoDatosCODIGOENCABEZADOFORMATODATOS: TFloatField
+      FieldName = 'CODIGOENCABEZADOFORMATODATOS'
+      Origin = 'HVE_ENCABEZADOFORMATODATOS.CODIGOENCABEZADOFORMATODATOS'
+    end
+    object qEncabezadoDatosCODIGOENCABEZADOFORMATO: TFloatField
+      FieldName = 'CODIGOENCABEZADOFORMATO'
+      Origin = 'HVE_ENCABEZADOFORMATODATOS.CODIGOENCABEZADOFORMATO'
+    end
+    object qEncabezadoDatosCODIGOFORMATOMTTODATOS: TFloatField
+      FieldName = 'CODIGOFORMATOMTTODATOS'
+      Origin = 'HVE_ENCABEZADOFORMATODATOS.CODIGOFORMATOMTTODATOS'
+    end
+    object qEncabezadoDatosVALORENCABEZADOFORMATO: TStringField
+      FieldName = 'VALORENCABEZADOFORMATO'
+      Origin = 'HVE_ENCABEZADOFORMATODATOS.VALORENCABEZADOFORMATO'
+      Size = 50
+    end
+    object qEncabezadoDatosNombreCampo: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'NombreCampo'
+      Size = 80
+      Calculated = True
+    end
+  end
+  object dsEncabezadoDatos: TDataSource
+    DataSet = qEncabezadoDatos
+    Left = 279
+    Top = 531
+  end
+  object qCIA: TQuery
+    Active = True
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT NOMBREADMINISTRATIVO,NOMBRECATEGORIA, CODIGOCENTROCOSTO, ' +
+        'CODIGOAREARESPONSABILIDAD'
+      'FROM ADMINISTRATIVO'
+      'WHERE CODIGOADMINISTRATIVO=:CODIGOADMINISTRATIVO'
+      '')
+    Left = 285
+    Top = 579
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end>
+  end
+  object qSubactividad: TQuery
+    Active = True
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    DataSource = dsSeccionDatos
+    SQL.Strings = (
+      'SELECT * FROM SUBACTIVIDADAREAODT '
+      '')
+    Left = 493
+    Top = 298
+    object qSubactividadCODIGOSUBACTIVIDADAREAODT: TFloatField
+      FieldName = 'CODIGOSUBACTIVIDADAREAODT'
+      Origin = 'SUBACTIVIDADAREAODT.CODIGOSUBACTIVIDADAREAODT'
+    end
+    object qSubactividadCODIGOACTIVIDADAREAODT: TFloatField
+      FieldName = 'CODIGOACTIVIDADAREAODT'
+      Origin = 'SUBACTIVIDADAREAODT.CODIGOACTIVIDADAREAODT'
+    end
+    object qSubactividadNOMBRESUBACTIVIDADAREAODT: TStringField
+      FieldName = 'NOMBRESUBACTIVIDADAREAODT'
+      Origin = 'SUBACTIVIDADAREAODT.NOMBRESUBACTIVIDADAREAODT'
+      Size = 120
+    end
+  end
+  object dsSubactividad: TDataSource
+    DataSet = FOdtUrbanaRural.qActividad
+    Left = 494
+    Top = 348
+  end
+  object qColumnaMedida: TQuery
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    DataSource = dsSeccionDatos
+    SQL.Strings = (
+      'SELECT  '
+      'CODIGOCOLUMNAMEDIDA,CODIGOSECCIONFORMATO,NOMBRECOLUMNAMEDIDA,'
+      'CODIGOTIPOCOLUMNAMEDIDA,CONSECUTIVOMEDIDASECCION,TIPODATO,'
+      'CODIGOUNIDADMEDIDAMTTO,CODIGOTIPOVALOR'
+      'FROM HVE_COLUMNAMEDIDA'
+      
+        'WHERE ACTIVO = '#39'S'#39' AND  CODIGOSECCIONFORMATO=:CODIGOSECCIONFORMA' +
+        'TO')
+    UpdateObject = updColumnaMedida
+    Left = 637
+    Top = 483
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOSECCIONFORMATO'
+        ParamType = ptUnknown
+      end>
+    object qColumnaMedidaCODIGOCOLUMNAMEDIDA: TFloatField
+      FieldName = 'CODIGOCOLUMNAMEDIDA'
+    end
+    object qColumnaMedidaCODIGOSECCIONFORMATO: TFloatField
+      FieldName = 'CODIGOSECCIONFORMATO'
+    end
+    object qColumnaMedidaNOMBRECOLUMNAMEDIDA: TStringField
+      FieldName = 'NOMBRECOLUMNAMEDIDA'
+      Size = 80
+    end
+    object qColumnaMedidaCODIGOTIPOCOLUMNAMEDIDA: TStringField
+      FieldName = 'CODIGOTIPOCOLUMNAMEDIDA'
+      Size = 3
+    end
+    object qColumnaMedidaCONSECUTIVOMEDIDASECCION: TFloatField
+      FieldName = 'CONSECUTIVOMEDIDASECCION'
+    end
+    object qColumnaMedidaTIPODATO: TStringField
+      FieldName = 'TIPODATO'
+      Size = 1
+    end
+    object qColumnaMedidaCODIGOUNIDADMEDIDAMTTO: TFloatField
+      FieldName = 'CODIGOUNIDADMEDIDAMTTO'
+    end
+    object qColumnaMedidaCODIGOTIPOVALOR: TFloatField
+      FieldName = 'CODIGOTIPOVALOR'
+    end
+  end
+end

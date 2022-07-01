@@ -1,0 +1,525 @@
+object fListaMovimientosStock: TfListaMovimientosStock
+  Left = 67
+  Top = 59
+  Width = 1136
+  Height = 592
+  Caption = 'Lista de Movimientos del Stock'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1120
+    Height = 70
+    Align = alTop
+    TabOrder = 0
+    object Label4: TLabel
+      Left = 430
+      Top = 13
+      Width = 70
+      Height = 13
+      Caption = 'Fecha inicio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 430
+      Top = 38
+      Width = 64
+      Height = 13
+      Caption = 'Fecha final'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object SpeedButton2: TSpeedButton
+      Left = 884
+      Top = 11
+      Width = 76
+      Height = 43
+      Caption = 'Consultar'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333300000000
+        0000333377777777777733330FFFFFFFFFF033337F3FFF3F3FF733330F000F0F
+        00F033337F777373773733330FFFFFFFFFF033337F3FF3FF3FF733330F00F00F
+        00F033337F773773773733330FFFFFFFFFF033337FF3333FF3F7333300FFFF00
+        F0F03333773FF377F7373330FB00F0F0FFF0333733773737F3F7330FB0BF0FB0
+        F0F0337337337337373730FBFBF0FB0FFFF037F333373373333730BFBF0FB0FF
+        FFF037F3337337333FF700FBFBFB0FFF000077F333337FF37777E0BFBFB000FF
+        0FF077FF3337773F7F37EE0BFB0BFB0F0F03777FF3733F737F73EEE0BFBF00FF
+        00337777FFFF77FF7733EEEE0000000003337777777777777333}
+      NumGlyphs = 2
+      Transparent = False
+      OnClick = SpeedButton2Click
+    end
+    object lUsuario: TLabel
+      Left = 670
+      Top = 13
+      Width = 44
+      Height = 13
+      Caption = 'Usuario'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lMaterial: TLabel
+      Left = 670
+      Top = 38
+      Width = 46
+      Height = 13
+      Caption = 'Material'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label1: TLabel
+      Left = 6
+      Top = 19
+      Width = 76
+      Height = 13
+      Caption = 'Dependencia'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 6
+      Top = 40
+      Width = 78
+      Height = 13
+      Caption = 'GrupoTrabajo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object EditFechaIni: TDateTimePicker
+      Left = 503
+      Top = 13
+      Width = 135
+      Height = 21
+      CalAlignment = dtaLeft
+      Date = 38899.000000000000000000
+      Time = 38899.000000000000000000
+      DateFormat = dfShort
+      DateMode = dmComboBox
+      Kind = dtkDate
+      ParseInput = False
+      TabOrder = 0
+    end
+    object dtpFechafin: TDateTimePicker
+      Left = 504
+      Top = 38
+      Width = 135
+      Height = 21
+      CalAlignment = dtaLeft
+      Date = 38899.000000000000000000
+      Time = 38899.000000000000000000
+      DateFormat = dfShort
+      DateMode = dmComboBox
+      Kind = dtkDate
+      ParseInput = False
+      TabOrder = 1
+    end
+    object eUsuario: TEdit
+      Left = 728
+      Top = 13
+      Width = 105
+      Height = 21
+      TabOrder = 2
+    end
+    object eMaterial: TEdit
+      Left = 728
+      Top = 38
+      Width = 105
+      Height = 21
+      TabOrder = 3
+    end
+    object dbEdCodigoCia: TDBEdit
+      Left = 86
+      Top = 15
+      Width = 28
+      Height = 21
+      DataField = 'CODIGOADMINISTRATIVO'
+      DataSource = dsCIA
+      TabOrder = 4
+    end
+    object dbLkCbNombreCia: TDBLookupComboBox
+      Left = 117
+      Top = 15
+      Width = 272
+      Height = 21
+      KeyField = 'CODIGOADMINISTRATIVO'
+      ListField = 'NOMBRECATEGORIA'
+      ListSource = dsCIA
+      TabOrder = 5
+    end
+    object cbCIA: TCheckBox
+      Left = 393
+      Top = 15
+      Width = 14
+      Height = 21
+      Caption = 'cbGrupoTrabajo'
+      TabOrder = 6
+      OnClick = cbCIAClick
+    end
+    object cbGrupoTrabajo: TCheckBox
+      Left = 393
+      Top = 38
+      Width = 14
+      Height = 21
+      Caption = 'cbGrupoTrabajo'
+      TabOrder = 7
+      OnClick = cbGrupoTrabajoClick
+    end
+    object DBLookupComboBox1: TDBLookupComboBox
+      Left = 118
+      Top = 38
+      Width = 271
+      Height = 21
+      KeyField = 'CODIGOGRUPOTRABAJO'
+      ListField = 'NOMBREGRUPOTRABAJO'
+      ListSource = dsGrupoTrabajo
+      TabOrder = 8
+    end
+    object DBEdit1: TDBEdit
+      Left = 87
+      Top = 38
+      Width = 26
+      Height = 21
+      DataField = 'CODIGOGRUPOTRABAJO'
+      DataSource = dsGrupoTrabajo
+      TabOrder = 9
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 70
+    Width = 1120
+    Height = 447
+    Align = alClient
+    TabOrder = 1
+    object RxDBGrid1: TRxDBGrid
+      Left = 1
+      Top = 1
+      Width = 1118
+      Height = 445
+      Align = alClient
+      DataSource = dsMovimientosStock
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'FECHA'
+          Width = 125
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'AREA'
+          Title.Caption = 'Dependencia'
+          Width = 74
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'GRUPOTRABAJO'
+          Title.Caption = 'Grupo de Trabajo'
+          Width = 94
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGO_MATERIAL'
+          Title.Caption = 'Cod_Material'
+          Width = 70
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREMATERIAL'
+          Title.Caption = 'Material'
+          Width = 285
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CLAVE1'
+          Title.Caption = 'ODT'
+          Width = 69
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CLAVE2'
+          Title.Caption = 'Hija'
+          Width = 28
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'ACCION'
+          Title.Caption = 'Acción'
+          Width = 109
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'USUARIO'
+          Title.Caption = 'Usuario'
+          Width = 94
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NUEVOOLD'
+          Title.Caption = 'Nuevo old'
+          Width = 58
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NUEVONEW'
+          Title.Caption = 'Nuevo New'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DESMABUENAOLD'
+          Title.Caption = 'Desmantelada buena old'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DESMABUENANEW'
+          Title.Caption = 'Desmantelada buena new'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DESMAMALAOLD'
+          Title.Caption = 'Desmantelada Mala Old'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DESMAMALANEW'
+          Title.Caption = 'Desmantelada Mala New'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'SESION'
+          Title.Caption = 'Sesión'
+          Width = 69
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'HOST'
+          Title.Caption = 'Host'
+          Width = 166
+          Visible = True
+        end>
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 517
+    Width = 1120
+    Height = 36
+    Align = alBottom
+    TabOrder = 2
+    object sbImprimirRequisicion: TSpeedButton
+      Left = 12
+      Top = 5
+      Width = 109
+      Height = 26
+      Caption = 'Exportar a Excel'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333303
+        333333333333337FF3333333333333903333333333333377FF33333333333399
+        03333FFFFFFFFF777FF3000000999999903377777777777777FF0FFFF0999999
+        99037F3337777777777F0FFFF099999999907F3FF777777777770F00F0999999
+        99037F773777777777730FFFF099999990337F3FF777777777330F00FFFFF099
+        03337F773333377773330FFFFFFFF09033337F3FF3FFF77733330F00F0000003
+        33337F773777777333330FFFF0FF033333337F3FF7F3733333330F08F0F03333
+        33337F7737F7333333330FFFF003333333337FFFF77333333333000000333333
+        3333777777333333333333333333333333333333333333333333}
+      NumGlyphs = 2
+      Visible = False
+    end
+    object bbCerrar: TBitBtn
+      Left = 642
+      Top = 5
+      Width = 75
+      Height = 25
+      Caption = '&Cerrar'
+      ModalResult = 1
+      TabOrder = 0
+      OnClick = bbCerrarClick
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00330000000000
+        03333377777777777F333301BBBBBBBB033333773F3333337F3333011BBBBBBB
+        0333337F73F333337F33330111BBBBBB0333337F373F33337F333301110BBBBB
+        0333337F337F33337F333301110BBBBB0333337F337F33337F333301110BBBBB
+        0333337F337F33337F333301110BBBBB0333337F337F33337F333301110BBBBB
+        0333337F337F33337F333301110BBBBB0333337F337FF3337F33330111B0BBBB
+        0333337F337733337F333301110BBBBB0333337F337F33337F333301110BBBBB
+        0333337F3F7F33337F333301E10BBBBB0333337F7F7F33337F333301EE0BBBBB
+        0333337F777FFFFF7F3333000000000003333377777777777333}
+      NumGlyphs = 2
+    end
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = 'txt'
+    Filter = 'Archivo de Excel|*.xls'
+    Title = 'Salvar Lista'
+    Left = 81
+    Top = 169
+  end
+  object dsMovimientosStock: TDataSource
+    DataSet = qMovimientosStock
+    Left = 712
+    Top = 176
+  end
+  object qMovimientosStock: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT DISTINCT A.*, M.NOMBREMATERIAL, S.CLAVE1,S.CLAVE2 FROM ('
+      
+        'SELECT ID_USUARIO USUARIO,  ID_SESION SESION, HOST,  DECODE (ACC' +
+        'ION, '#39'A'#39','#39'MODIFICACION'#39','#39'I'#39','#39'INSERCION'#39','#39'E'#39','#39'BORRADO'#39') ACCION, F' +
+        'ECHA, CLAVE1 AREA, CLAVE2 GRUPOTRABAJO, CLAVE3 CODIGO_MATERIAL, '
+      
+        'CLAVE4 NUEVONEW, CLAVE5 NUEVOOLD, CLAVE6 DESMABUENANEW, CLAVE7 D' +
+        'ESMABUENAOLD, CLAVE8 DESMAMALANEW, CLAVE9 DESMAMALAOLD   FROM US' +
+        'UARIO_LOG   WHERE tabla = '#39'STOCKGRUPOTRABAJO'#39' '
+      'AND (CLAVE4 <> CLAVE5'
+      'OR CLAVE6 <> CLAVE7'
+      'OR CLAVE8 <> CLAVE9)'
+      'AND ACCION = '#39'A'#39
+      'UNION'
+      
+        'SELECT ID_USUARIO USUARIO,  ID_SESION SESION, HOST,  DECODE (ACC' +
+        'ION, '#39'A'#39','#39'MODIFICACION'#39','#39'I'#39','#39'INSERCION'#39','#39'E'#39','#39'BORRADO'#39') ACCION, F' +
+        'ECHA, CLAVE1 AREA, CLAVE2 GRUPOTRABAJO, CLAVE3 CODIGO_MATERIAL, '
+      
+        'CLAVE4 NUEVONEW, CLAVE5 NUEVOOLD, CLAVE6 DESMABUENANEW, CLAVE7 D' +
+        'ESMABUENAOLD, CLAVE8 DESMAMALANEW, CLAVE9 DESMAMALAOLD  FROM USU' +
+        'ARIO_LOG   WHERE tabla = '#39'STOCKGRUPOTRABAJO'#39' '
+      'AND ACCION = '#39'I'#39' '
+      'UNION'
+      
+        'SELECT ID_USUARIO USUARIO,  ID_SESION SESION, HOST, DECODE (ACCI' +
+        'ON, '#39'A'#39','#39'MODIFICACION'#39','#39'I'#39','#39'INSERCION'#39','#39'E'#39','#39'BORRADO'#39') ACCION, FE' +
+        'CHA, CLAVE1 AREA, CLAVE2 GRUPOTRABAJO, CLAVE3 CODIGO_MATERIAL, '
+      
+        'CLAVE4 NUEVONEW, CLAVE5 NUEVOOLD, CLAVE6 DESMABUENANEW, CLAVE7 D' +
+        'ESMABUENAOLD, CLAVE8 DESMAMALANEW, CLAVE9 DESMAMALAOLD  FROM USU' +
+        'ARIO_LOG   WHERE tabla = '#39'STOCKGRUPOTRABAJO'#39' '
+      'AND ACCION = '#39'E'#39') '
+      'A, MATERIALESSA M, SESIONGESTION S'
+      'WHERE A.SESION = S.IDSESIONBD(+)'
+      'AND S.FECHAINICIO(+)<=A.FECHA AND S.FECHAFIN(+)  >= A.FECHA'
+      'AND A.CODIGO_MATERIAL = M.CODIGOMATERIAL'
+      'ORDER BY FECHA DESC')
+    Left = 712
+    Top = 240
+  end
+  object qGrupoTrabajo: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsCIA
+    SQL.Strings = (
+      'SELECT codigogrupotrabajo, nombregrupotrabajo'
+      'FROM grupotrabajo'
+      'WHERE CODIGOADMINISTRATIVO = :codigoadministrativo')
+    Left = 582
+    Top = 160
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end>
+    object qGrupoTrabajoCODIGOGRUPOTRABAJO: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.CODIGOGRUPOTRABAJO'
+    end
+    object qGrupoTrabajoNOMBREGRUPOTRABAJO: TStringField
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+  end
+  object dsGrupoTrabajo: TDataSource
+    DataSet = qGrupoTrabajo
+    Left = 582
+    Top = 205
+  end
+  object qCIA: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOADMINISTRATIVO, NOMBRECATEGORIA'
+      'FROM ADMINISTRATIVO'
+      'WHERE CODIGOADMINISTRATIVO>0')
+    Left = 382
+    Top = 160
+    object qCIACODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.CODIGOADMINISTRATIVO'
+    end
+    object qCIANOMBRECATEGORIA: TStringField
+      FieldName = 'NOMBRECATEGORIA'
+      Origin = 'ADMINISTRATIVO.NOMBRECATEGORIA'
+      Size = 80
+    end
+  end
+  object dsCIA: TDataSource
+    DataSet = qCIA
+    Left = 382
+    Top = 205
+  end
+end

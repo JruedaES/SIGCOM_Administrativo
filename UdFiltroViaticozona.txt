@@ -1,0 +1,243 @@
+object fdFiltroviaticoZona: TfdFiltroviaticoZona
+  Left = 346
+  Top = 250
+  Width = 385
+  Height = 226
+  Caption = 'Filtro Viático Zonas'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 377
+    Height = 162
+    Align = alClient
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 16
+      Top = 29
+      Width = 59
+      Height = 13
+      Caption = 'Zona Origen'
+    end
+    object Label2: TLabel
+      Left = 16
+      Top = 61
+      Width = 64
+      Height = 13
+      Caption = 'Zona Destino'
+    end
+    object Label3: TLabel
+      Left = 16
+      Top = 90
+      Width = 108
+      Height = 13
+      Caption = 'Fecha Vigencia Desde'
+    end
+    object Label4: TLabel
+      Left = 16
+      Top = 119
+      Width = 105
+      Height = 13
+      Caption = 'Fecha Vigencia Hasta'
+    end
+    object DBEdit1: TDBEdit
+      Left = 97
+      Top = 27
+      Width = 65
+      Height = 21
+      DataField = 'CODIGOZONAORIGEN'
+      DataSource = DSTdMemTable1
+      TabOrder = 0
+    end
+    object DBLookupComboBox1: TDBLookupComboBox
+      Left = 167
+      Top = 27
+      Width = 199
+      Height = 21
+      DataField = 'CODIGOZONAORIGEN'
+      DataSource = DSTdMemTable1
+      KeyField = 'CODIGOZONA'
+      ListField = 'NOMBREZONA'
+      ListSource = dsZonaOrigen
+      TabOrder = 1
+    end
+    object DBEdit2: TDBEdit
+      Left = 97
+      Top = 59
+      Width = 65
+      Height = 21
+      DataField = 'CODIGOZONADESTINO'
+      DataSource = DSTdMemTable1
+      TabOrder = 2
+    end
+    object DBLookupComboBox2: TDBLookupComboBox
+      Left = 167
+      Top = 59
+      Width = 199
+      Height = 21
+      DataField = 'CODIGOZONADESTINO'
+      DataSource = DSTdMemTable1
+      KeyField = 'CODIGOZONA'
+      ListField = 'NOMBREZONA'
+      ListSource = dsZonaDestino
+      TabOrder = 3
+    end
+    object DBDateEdit1: TDBDateEdit
+      Left = 168
+      Top = 89
+      Width = 197
+      Height = 21
+      DataField = 'VIGENCIADESDE'
+      DataSource = DSTdMemTable1
+      NumGlyphs = 2
+      TabOrder = 4
+    end
+    object DBDateEdit2: TDBDateEdit
+      Left = 168
+      Top = 115
+      Width = 197
+      Height = 21
+      DataField = 'VIGENCIAHASTA'
+      DataSource = DSTdMemTable1
+      NumGlyphs = 2
+      TabOrder = 5
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 162
+    Width = 377
+    Height = 30
+    Align = alBottom
+    TabOrder = 1
+    object Panel3: TPanel
+      Left = 275
+      Top = 1
+      Width = 101
+      Height = 28
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 0
+      object bitBFiltrar: TBitBtn
+        Left = 10
+        Top = 3
+        Width = 23
+        Height = 22
+        ModalResult = 1
+        TabOrder = 0
+        OnClick = bitBFiltrarClick
+        Glyph.Data = {
+          EE000000424DEE000000000000007600000028000000100000000F0000000100
+          0400000000007800000000000000000000001000000010000000000000000000
+          8000008000000080800080000000800080008080000080808000C0C0C0000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+          8888888888888888888888888800008080808888880660888888888888088088
+          8888888888088088888888888808808888888888806886088888888806688860
+          8888888066888866088888066FF8888660888066FFFF88866608800000000000
+          000888888888888888888888888888888888}
+      end
+      object bitBAnularFiltro: TBitBtn
+        Left = 42
+        Top = 3
+        Width = 23
+        Height = 22
+        ModalResult = 2
+        TabOrder = 1
+        Glyph.Data = {
+          EE000000424DEE000000000000007600000028000000100000000F0000000100
+          0400000000007800000000000000000000001000000010000000000000000000
+          8000008000000080800080000000800080008080000080808000C0C0C0000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+          8889998888888888889999988800008089908899980660899988888999088099
+          9888888889988998888888888899998888888888806999088888888806999990
+          88888880699888990888880999F88889908880999FFF88869998899000000000
+          099999888888888888899888888888888889}
+      end
+    end
+  end
+  object qZonaOrigen: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select codigozona,nombrezona from zonaessa')
+    Left = 400
+    Top = 32
+  end
+  object qZonaDestino: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select codigozona,nombrezona from zonaessa')
+    Left = 400
+    Top = 88
+  end
+  object tdMemTable1: tdMemTable
+    FieldDefs = <
+      item
+        Name = 'CODIGOADMINISTRATIVO'
+        DataType = ftFloat
+      end
+      item
+        Name = 'CANTIDAD'
+        DataType = ftFloat
+      end
+      item
+        Name = 'NOMBRECATEGORIA'
+        DataType = ftString
+        Size = 80
+      end
+      item
+        Name = 'CODIGOODTHASTA'
+        DataType = ftFloat
+      end
+      item
+        Name = 'FECHAEMISIONDESDE'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'FECHAEMISIONHASTA'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'CODIGOODTDESDE'
+        DataType = ftFloat
+      end>
+    StoreDefs = True
+    Left = 48
+    Top = 152
+    object tdMemTable1CODIZONAORIGEN: TIntegerField
+      FieldName = 'CODIGOZONAORIGEN'
+    end
+    object tdMemTable1CODIGOZONADESTINO: TIntegerField
+      FieldName = 'CODIGOZONADESTINO'
+    end
+    object tdMemTable1VIGENCIADESDE: TDateField
+      FieldName = 'VIGENCIADESDE'
+    end
+    object tdMemTable1VIGENCIAHASTA: TDateField
+      FieldName = 'VIGENCIAHASTA'
+    end
+  end
+  object DSTdMemTable1: TDataSource
+    DataSet = tdMemTable1
+    Left = 144
+    Top = 152
+  end
+  object dsZonaOrigen: TDataSource
+    DataSet = qZonaOrigen
+    Left = 472
+    Top = 32
+  end
+  object dsZonaDestino: TDataSource
+    DataSet = qZonaDestino
+    Left = 472
+    Top = 88
+  end
+end

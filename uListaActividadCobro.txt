@@ -1,0 +1,223 @@
+inherited fListaActividadCobro: TfListaActividadCobro
+  Left = 206
+  Top = 102
+  Caption = 'Listado de Actividades'
+  Font.Charset = ANSI_CHARSET
+  Font.Name = 'Tahoma'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    object sbInsertar: TSpeedButton [0]
+      Left = 126
+      Top = 4
+      Width = 23
+      Height = 21
+      Hint = 'Ingresar Dato en Lista'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        33333333FF33333333FF333993333333300033377F3333333777333993333333
+        300033F77FFF3333377739999993333333333777777F3333333F399999933333
+        33003777777333333377333993333333330033377F3333333377333993333333
+        3333333773333333333F333333333333330033333333F33333773333333C3333
+        330033333337FF3333773333333CC333333333FFFFF77FFF3FF33CCCCCCCCCC3
+        993337777777777F77F33CCCCCCCCCC3993337777777777377333333333CC333
+        333333333337733333FF3333333C333330003333333733333777333333333333
+        3000333333333333377733333333333333333333333333333333}
+      NumGlyphs = 2
+      OnClick = sbInsertarClick
+    end
+    object sbEditar: TSpeedButton [1]
+      Left = 150
+      Top = 4
+      Width = 23
+      Height = 21
+      Hint = 'Editar Dato en Lista'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333000000
+        000033333377777777773333330FFFFFFFF03FF3FF7FF33F3FF700300000FF0F
+        00F077F777773F737737E00BFBFB0FFFFFF07773333F7F3333F7E0BFBF000FFF
+        F0F077F3337773F3F737E0FBFBFBF0F00FF077F3333FF7F77F37E0BFBF00000B
+        0FF077F3337777737337E0FBFBFBFBF0FFF077F33FFFFFF73337E0BF0000000F
+        FFF077FF777777733FF7000BFB00B0FF00F07773FF77373377373330000B0FFF
+        FFF03337777373333FF7333330B0FFFF00003333373733FF777733330B0FF00F
+        0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
+        00333377737FFFFF773333303300000003333337337777777333}
+      NumGlyphs = 2
+      OnClick = sbEditarClick
+    end
+    inherited Panel2: TPanel
+      inherited SBFiltrar: TSpeedButton
+        Left = 49
+      end
+      inherited SBBuscaElementoCartografia: TSpeedButton
+        Left = 7
+        Flat = False
+        Visible = False
+      end
+      inherited SBFiltroCarografico: TSpeedButton
+        Left = -8
+        Visible = False
+      end
+    end
+    inherited dNavigator1: TdNavigator
+      Hints.Strings = ()
+    end
+  end
+  inherited Panel3: TPanel
+    Top = 445
+  end
+  object RxDBGrid1: TRxDBGrid [3]
+    Left = 0
+    Top = 78
+    Width = 782
+    Height = 367
+    Align = alClient
+    DataSource = dsBase
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
+    TitleFont.Charset = ANSI_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    OnDblClick = RxDBGrid1DblClick
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'CODIGOADMINISTRATIVO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Cia'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CODIGOODTACTIVIDADCOBRO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Código Actividad'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOMBREODTACTIVIDADCOBRO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Nombre Actividad'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'VALORNORMAL'
+        Title.Caption = 'Valor Normal'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'VALORFESTIVO'
+        Title.Caption = 'Valor Festivo'
+        Visible = True
+      end>
+  end
+  object Panel4: TPanel [4]
+    Left = 0
+    Top = 463
+    Width = 782
+    Height = 69
+    Align = alBottom
+    TabOrder = 4
+    object DBText1: TDBText
+      Left = 104
+      Top = 16
+      Width = 665
+      Height = 30
+      Color = clSilver
+      DataField = 'NOMBREADMINISTRATIVO'
+      DataSource = dsBase
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
+    object Label1: TLabel
+      Left = 16
+      Top = 16
+      Width = 68
+      Height = 26
+      Caption = 'Nombre  '#13#10'Administrativo'
+    end
+  end
+  inherited dsBase: TDDataSource
+    DataSet = qListaActividadCobro
+    Top = 132
+  end
+  inherited qTotales: TQuery
+    SQL.Strings = (
+      'SELECT COUNT(*) AS TOTAL'
+      ''
+      'FROM ODTACTIVIDADCOBRO O, ADMINISTRATIVO A'
+      'WHERE O.CODIGOADMINISTRATIVO=A.CODIGOADMINISTRATIVO'
+      '')
+    object qTotalesTOTAL: TFloatField
+      FieldName = 'TOTAL'
+    end
+  end
+  object qListaActividadCobro: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT O.CODIGOADMINISTRATIVO,A.NOMBREADMINISTRATIVO,O.CODIGOODT' +
+        'ACTIVIDADCOBRO,'
+      'O.NOMBREODTACTIVIDADCOBRO,O.VALORNORMAL,O.VALORFESTIVO'
+      'FROM ODTACTIVIDADCOBRO O, ADMINISTRATIVO A'
+      'WHERE O.CODIGOADMINISTRATIVO=A.CODIGOADMINISTRATIVO')
+    Left = 232
+    Top = 216
+    object qListaActividadCobroCODIGOADMINISTRATIVO: TFloatField
+      Alignment = taCenter
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'ODTACTIVIDADCOBRO.CODIGOADMINISTRATIVO'
+    end
+    object qListaActividadCobroNOMBREADMINISTRATIVO: TStringField
+      Alignment = taCenter
+      FieldName = 'NOMBREADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.NOMBREADMINISTRATIVO'
+      Size = 250
+    end
+    object qListaActividadCobroCODIGOODTACTIVIDADCOBRO: TFloatField
+      Alignment = taCenter
+      FieldName = 'CODIGOODTACTIVIDADCOBRO'
+      Origin = 'ODTACTIVIDADCOBRO.CODIGOODTACTIVIDADCOBRO'
+    end
+    object qListaActividadCobroNOMBREODTACTIVIDADCOBRO: TStringField
+      FieldName = 'NOMBREODTACTIVIDADCOBRO'
+      Origin = 'ODTACTIVIDADCOBRO.NOMBREODTACTIVIDADCOBRO'
+      Size = 80
+    end
+    object qListaActividadCobroVALORNORMAL: TFloatField
+      FieldName = 'VALORNORMAL'
+      Origin = 'ODTACTIVIDADCOBRO.VALORNORMAL'
+      DisplayFormat = '$###,###,###'
+    end
+    object qListaActividadCobroVALORFESTIVO: TFloatField
+      FieldName = 'VALORFESTIVO'
+      Origin = 'ODTACTIVIDADCOBRO.VALORFESTIVO'
+      DisplayFormat = '$###,###,###'
+    end
+  end
+end

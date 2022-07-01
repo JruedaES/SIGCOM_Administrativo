@@ -1,0 +1,129 @@
+object FAdicionarSecuenciaTrabajos: TFAdicionarSecuenciaTrabajos
+  Left = 220
+  Top = 168
+  BorderStyle = bsToolWindow
+  Caption = 'Adicionar Secuencia de Trabajos'
+  ClientHeight = 273
+  ClientWidth = 582
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = True
+  OnActivate = FormActivate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 41
+    Width = 582
+    Height = 191
+    Align = alClient
+    DataSource = dsSecuenciaTrabajo
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'CODIGOSECUENCIATRABAJO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Secuencia'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOMBRESECUENCIATRABAJO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Labor'
+        Width = 479
+        Visible = True
+      end>
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 582
+    Height = 41
+    Align = alTop
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 28
+      Top = 16
+      Width = 95
+      Height = 13
+      Caption = 'Trabajo a Realizar : '
+    end
+    object DBLookupComboBox1: TDBLookupComboBox
+      Left = 136
+      Top = 12
+      Width = 437
+      Height = 21
+      KeyField = 'CODIGOTRABAJO'
+      ListField = 'NOMBRETRABAJO'
+      ListSource = DSTrabajo
+      TabOrder = 0
+      OnClick = DBLookupComboBox1Click
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 232
+    Width = 582
+    Height = 41
+    Align = alBottom
+    TabOrder = 2
+    object bbAdicionar: TBitBtn
+      Left = 127
+      Top = 8
+      Width = 90
+      Height = 25
+      Caption = '&Adicionar'
+      TabOrder = 0
+      Kind = bkOK
+    end
+    object bbSalir: TBitBtn
+      Left = 388
+      Top = 8
+      Width = 90
+      Height = 25
+      Caption = '&Salir'
+      TabOrder = 1
+      Kind = bkClose
+    end
+  end
+  object tSecuencia: TTable
+    Active = True
+    DatabaseName = 'BaseDato'
+    IndexFieldNames = 'CODIGOTRABAJO'
+    MasterFields = 'CODIGOTRABAJO'
+    MasterSource = DSTrabajo
+    TableName = 'SECUENCIATRABAJO'
+    Left = 116
+    Top = 56
+  end
+  object dsSecuenciaTrabajo: TDataSource
+    DataSet = tSecuencia
+    Left = 172
+    Top = 56
+  end
+  object tTrabajo: TTable
+    Active = True
+    DatabaseName = 'BaseDato'
+    TableName = 'TRABAJO'
+    Left = 120
+    Top = 108
+  end
+  object DSTrabajo: TDataSource
+    DataSet = tTrabajo
+    Left = 176
+    Top = 108
+  end
+end

@@ -1,0 +1,204 @@
+object fFirmaContrato: TfFirmaContrato
+  Left = 215
+  Top = 300
+  BorderStyle = bsDialog
+  Caption = 'Firmas Contrato'
+  ClientHeight = 182
+  ClientWidth = 542
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBNavigator1: TDBNavigator
+    Left = 0
+    Top = 157
+    Width = 542
+    Height = 25
+    DataSource = dsFirma
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+    Align = alBottom
+    TabOrder = 0
+  end
+  object dbgFirma: TDBGrid
+    Left = 0
+    Top = 0
+    Width = 542
+    Height = 157
+    Align = alClient
+    DataSource = dsFirma
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    Columns = <
+      item
+        ButtonStyle = cbsNone
+        Expanded = False
+        FieldName = 'CODIGOEMPLEADO'
+        Title.Alignment = taCenter
+        Title.Caption = 'Cédula'
+        Width = 54
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NombreEmpleado'
+        Title.Alignment = taCenter
+        Title.Caption = 'Nombre'
+        Width = 181
+        Visible = True
+      end
+      item
+        ButtonStyle = cbsNone
+        Expanded = False
+        FieldName = 'CargoEmpleado'
+        Title.Alignment = taCenter
+        Title.Caption = 'Cargo'
+        Width = 148
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NombreDocumento'
+        Title.Alignment = taCenter
+        Title.Caption = 'Documento'
+        Visible = True
+      end>
+  end
+  object qFirma: TQuery
+    CachedUpdates = True
+    AfterInsert = qFirmaAfterInsert
+    BeforePost = qFirmaBeforePost
+    AfterPost = qFirmaAfterPost
+    AfterDelete = qFirmaAfterDelete
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select codigocontrato,codigoempleado,codigocargo,codigodocumento'
+      'from firmacontrato'
+      'where codigocontrato=:codigocontrato')
+    UpdateObject = updFirma
+    Left = 80
+    Top = 13
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'codigocontrato'
+        ParamType = ptUnknown
+      end>
+    object qFirmaCODIGOCONTRATO: TFloatField
+      FieldName = 'CODIGOCONTRATO'
+      Origin = 'CONTRATOFIRMA.CODIGOCONTRATO'
+    end
+    object qFirmaCODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'CONTRATOFIRMA.CODIGOEMPLEADO'
+    end
+    object qFirmaCODIGOCARGO: TFloatField
+      FieldName = 'CODIGOCARGO'
+      Origin = 'CONTRATOFIRMA.CODIGOCARGO'
+    end
+    object qFirmaNombreEmpleado: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NombreEmpleado'
+      LookupDataSet = qEmpleado
+      LookupKeyFields = 'CODIGOEMPLEADO'
+      LookupResultField = 'NOMBREEMPLEADO'
+      KeyFields = 'CODIGOEMPLEADO'
+      Size = 50
+      Lookup = True
+    end
+    object qFirmaCargoEmpleado: TStringField
+      FieldKind = fkLookup
+      FieldName = 'CargoEmpleado'
+      LookupDataSet = qEmpleado
+      LookupKeyFields = 'CODIGOEMPLEADO'
+      LookupResultField = 'NOMBRECARGO'
+      KeyFields = 'CODIGOEMPLEADO'
+      Size = 50
+      Lookup = True
+    end
+    object qFirmaCODIGODOCUMENTO: TStringField
+      FieldName = 'CODIGODOCUMENTO'
+      Origin = 'CONTRATOFIRMA.CODIGODOCUMENTO'
+      Size = 3
+    end
+    object qFirmaNombreDocumento: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NombreDocumento'
+      LookupDataSet = qDocumento
+      LookupKeyFields = 'CODIGODOCUMENTO'
+      LookupResultField = 'NOMBREDOCUMENTO'
+      KeyFields = 'CODIGODOCUMENTO'
+      Size = 50
+      Lookup = True
+    end
+  end
+  object dsFirma: TDataSource
+    DataSet = qFirma
+    Left = 152
+    Top = 13
+  end
+  object updFirma: TUpdateSQL
+    ModifySQL.Strings = (
+      'update firmacontrato'
+      'set'
+      '  CODIGOCONTRATO = :CODIGOCONTRATO,'
+      '  CODIGOEMPLEADO = :CODIGOEMPLEADO,'
+      '  CODIGOCARGO = :CODIGOCARGO,'
+      '  CODIGODOCUMENTO = :CODIGODOCUMENTO'
+      'where'
+      '  CODIGOCONTRATO = :OLD_CODIGOCONTRATO and'
+      '  CODIGOEMPLEADO = :OLD_CODIGOEMPLEADO and'
+      '  CODIGODOCUMENTO = :OLD_CODIGODOCUMENTO')
+    InsertSQL.Strings = (
+      'insert into firmacontrato'
+      '  (CODIGOCONTRATO, CODIGOEMPLEADO, CODIGOCARGO, CODIGODOCUMENTO)'
+      'values'
+      
+        '  (:CODIGOCONTRATO, :CODIGOEMPLEADO, :CODIGOCARGO, :CODIGODOCUME' +
+        'NTO)')
+    DeleteSQL.Strings = (
+      'delete from firmacontrato'
+      'where'
+      '  CODIGOCONTRATO = :OLD_CODIGOCONTRATO and'
+      '  CODIGOEMPLEADO = :OLD_CODIGOEMPLEADO and'
+      '  CODIGODOCUMENTO = :OLD_CODIGODOCUMENTO')
+    Left = 224
+    Top = 13
+  end
+  object qEmpleado: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select codigoempleado, nombreempleado,nombrecargo'
+      'from empleado e, cargo c'
+      'where e.codigocargo=c.codigocargo(+)'
+      'and codigoadministrativo=:codigoadministrativo'
+      'AND ((E.estado IN ('#39'AC'#39','#39'LC'#39')) OR (E.estado IS NULL))'
+      'order by nombreempleado')
+    Left = 80
+    Top = 71
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'codigoadministrativo'
+        ParamType = ptUnknown
+      end>
+  end
+  object qDocumento: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select codigodocumento,nombredocumento'
+      'from documento')
+    Left = 80
+    Top = 124
+  end
+end

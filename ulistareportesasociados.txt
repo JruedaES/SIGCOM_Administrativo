@@ -1,0 +1,240 @@
+object flistareportesasociados: Tflistareportesasociados
+  Left = 247
+  Top = 186
+  BorderIcons = []
+  BorderStyle = bsDialog
+  Caption = 'EnerGis....'
+  ClientHeight = 262
+  ClientWidth = 809
+  Color = clWindow
+  Ctl3D = False
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object titular: TPanel
+    Left = 0
+    Top = 0
+    Width = 809
+    Height = 25
+    Align = alTop
+    Alignment = taLeftJustify
+    Caption = 'Listado de Reportes Asociados'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object base: TPanel
+    Left = 0
+    Top = 232
+    Width = 809
+    Height = 30
+    Align = alBottom
+    TabOrder = 1
+    object lcircuito: TLabel
+      Left = 1
+      Top = 6
+      Width = 61
+      Height = 16
+      Caption = 'Circuito: '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clRed
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object bSalir: TBitBtn
+      Left = 611
+      Top = 1
+      Width = 75
+      Height = 25
+      Anchors = [akRight, akBottom]
+      TabOrder = 0
+      OnClick = bSalirClick
+      Kind = bkClose
+    end
+    object asociar: TBitBtn
+      Left = 693
+      Top = 1
+      Width = 112
+      Height = 25
+      Anchors = [akRight, akBottom]
+      Caption = 'Agrupar Reportes'
+      TabOrder = 1
+      OnClick = asociarClick
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555000000
+        000055555F77777777775555000FFFFFFFF0555F777F5FFFF55755000F0F0000
+        FFF05F777F7F77775557000F0F0FFFFFFFF0777F7F7F5FFFFFF70F0F0F0F0000
+        00F07F7F7F7F777777570F0F0F0FFFFFFFF07F7F7F7F5FFFFFF70F0F0F0F0000
+        00F07F7F7F7F777777570F0F0F0FFFFFFFF07F7F7F7F5FFF55570F0F0F0F000F
+        FFF07F7F7F7F77755FF70F0F0F0FFFFF00007F7F7F7F5FF577770F0F0F0F00FF
+        0F057F7F7F7F77557F750F0F0F0FFFFF00557F7F7F7FFFFF77550F0F0F000000
+        05557F7F7F77777775550F0F0000000555557F7F7777777555550F0000000555
+        55557F7777777555555500000005555555557777777555555555}
+      NumGlyphs = 2
+    end
+  end
+  object dbgReportesAsociados: TDBGrid
+    Left = 0
+    Top = 25
+    Width = 809
+    Height = 132
+    Align = alClient
+    DataSource = Dlista
+    ReadOnly = True
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    OnDblClick = dbgReportesAsociadosDblClick
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'Reporte'
+        Title.Alignment = taCenter
+        Width = 58
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Codigocliente'
+        Title.Alignment = taCenter
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Cliente'
+        Title.Alignment = taCenter
+        Width = 166
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Direccion'
+        Title.Alignment = taCenter
+        Width = 180
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Trafo'
+        Title.Alignment = taCenter
+        Width = 55
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'FECHA'
+        Title.Alignment = taCenter
+        Title.Caption = 'Fecha'
+        Width = 109
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'EstadoReporte'
+        Title.Alignment = taCenter
+        Width = 123
+        Visible = True
+      end>
+  end
+  object pInterrupcion: TPanel
+    Left = 0
+    Top = 157
+    Width = 809
+    Height = 75
+    Align = alBottom
+    Caption = 'pInterrupcion'
+    TabOrder = 3
+    object Label1: TLabel
+      Left = 8
+      Top = 3
+      Width = 140
+      Height = 13
+      Caption = 'Información de la Interrupción'
+    end
+    object memo: TMemo
+      Left = 8
+      Top = 17
+      Width = 795
+      Height = 45
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+    end
+  end
+  object Dlista: TDataSource
+    AutoEdit = False
+    DataSet = Qlista
+    Left = 360
+    Top = 112
+  end
+  object Qlista: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'select to_char(fechahora,'#39'DD/MM/YYYY HH24:MI:SS'#39') as fecha,t.pin' +
+        'tadotrafodis as "Trafo",ci.nombrecircuito as "Circuito",c.codigo' +
+        'clientecom as "Codigocliente",'
+      
+        'c.nombresuscriptor as "Cliente",direccionsuscriptor as "Direccio' +
+        'n",r.codigoreporte as "Reporte",er.NOMBREESTADOREPORTE as "Estad' +
+        'oReporte"'
+      
+        'from clientesgd c,nodobt nb, trafodis t, nodomt nm,reporte r,cir' +
+        'cuito ci, estadoreporte er,'
+      '(SELECT SUBSTR(Hijo.Nombre, 5) as codigotrafodis'
+      'FROM TREENODES Papa, TREENODES Hijo'
+      'WHERE Hijo.Izquierda >= Papa.Izquierda'
+      'AND Hijo.Izquierda <= Papa.Derecha'
+      'AND Papa.CodigoCircuito ='#39'03 303'#39
+      'AND Papa.Tipo = '#39'TF'#39
+      'AND Hijo.CodigoCircuito ='#39'03 303'#39
+      'AND Hijo.Tipo = '#39'TF'#39
+      'AND Papa.Nombre = '#39'SW: 21968'#39
+      ') trafos'
+      'where'
+      'c.codigoapoyo=nb.codigoapoyo'
+      'and c.codigonodobt=nb.codigonodobt'
+      'and nb.codigotrafodis=t.codigotrafodis'
+      'and t.codigoapoyo1=nm.codigoapoyo'
+      'and t.codigonodomt=nm.codigonodomt'
+      'and nm.codigocircuito='#39'03 303'#39
+      'and t.codigotrafodis=trafos.codigotrafodis'
+      'and r.codigoclientesgd=c.codigoclientesgd'
+      'and nm.codigocircuito=ci.codigocircuito'
+      'and r.codigoclasereporte=2'
+      'and r.codigoestadoreporte in (1,2)'
+      'and r.codigoestadoreporte=er.codigoestadoreporte'
+      'order by t.pintadotrafodis,c.nombresuscriptor'
+      #9#9#9#9'  '
+      ''
+      ''
+      ' '
+      ' ')
+    Left = 312
+    Top = 112
+  end
+end

@@ -1,0 +1,237 @@
+object fuProgramarHorarioJob: TfuProgramarHorarioJob
+  Left = 354
+  Top = 157
+  Anchors = []
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Modificar horario de generación de información de TI a SIGCOM'
+  ClientHeight = 245
+  ClientWidth = 570
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 213
+    Width = 570
+    Height = 32
+    Align = alBottom
+    Anchors = []
+    TabOrder = 0
+    object BtnAceptar: TBitBtn
+      Left = 382
+      Top = 3
+      Width = 90
+      Height = 25
+      Anchors = [akRight, akBottom]
+      Caption = '&Aceptar'
+      TabOrder = 0
+      OnClick = BtnAceptarClick
+      Glyph.Data = {
+        DE010000424DDE01000000000000760000002800000024000000120000000100
+        0400000000006801000000000000000000001000000010000000000000000000
+        8000008000000080800080000000800080008080000080808000C0C0C0000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        3333333333333333333333330000333333333333333333333333F33333333333
+        00003333344333333333333333377F3333333333000033334224333333333333
+        337337F3333333330000333422224333333333333733337F3333333300003342
+        222224333333333373333337F3333333000034222A22224333333337F337F333
+        7F33333300003222A3A2224333333337F3737F337F33333300003A2A333A2224
+        33333337F73337F337F33333000033A33333A222433333337333337F337F3333
+        0000333333333A222433333333333337F337F33300003333333333A222433333
+        333333337F337F33000033333333333A222433333333333337F337F300003333
+        33333333A222433333333333337F337F00003333333333333A22433333333333
+        3337F37F000033333333333333A223333333333333337F730000333333333333
+        333A333333333333333337330000333333333333333333333333333333333333
+        0000}
+      NumGlyphs = 2
+    end
+    object btnCancelar: TBitBtn
+      Left = 476
+      Top = 3
+      Width = 89
+      Height = 25
+      Anchors = [akRight, akBottom]
+      Caption = '&Cancelar'
+      TabOrder = 1
+      OnClick = btnCancelarClick
+      Glyph.Data = {
+        DE010000424DDE01000000000000760000002800000024000000120000000100
+        0400000000006801000000000000000000001000000010000000000000000000
+        8000008000000080800080000000800080008080000080808000C0C0C0000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        333333333333333333333333000033337733333333333333333F333333333333
+        0000333911733333973333333377F333333F3333000033391117333911733333
+        37F37F333F77F33300003339111173911117333337F337F3F7337F3300003333
+        911117111117333337F3337F733337F3000033333911111111733333337F3337
+        3333F7330000333333911111173333333337F333333F73330000333333311111
+        7333333333337F3333373333000033333339111173333333333337F333733333
+        00003333339111117333333333333733337F3333000033333911171117333333
+        33337333337F333300003333911173911173333333373337F337F33300003333
+        9117333911173333337F33737F337F33000033333913333391113333337FF733
+        37F337F300003333333333333919333333377333337FFF730000333333333333
+        3333333333333333333777330000333333333333333333333333333333333333
+        0000}
+      NumGlyphs = 2
+    end
+  end
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 0
+    Width = 570
+    Height = 213
+    ActivePage = TabSheet1
+    Align = alClient
+    TabOrder = 1
+    object TabSheet1: TTabSheet
+      Caption = 'Programar cargue de información'
+      object Panel2: TPanel
+        Left = 0
+        Top = 0
+        Width = 562
+        Height = 185
+        Align = alClient
+        Caption = 'Panel2'
+        TabOrder = 0
+        object Panel3: TPanel
+          Left = 1
+          Top = 1
+          Width = 560
+          Height = 48
+          Align = alTop
+          Caption = 'Panel3'
+          TabOrder = 0
+          object Horario: TGroupBox
+            Left = 1
+            Top = 1
+            Width = 761
+            Height = 46
+            Align = alLeft
+            Anchors = [akLeft, akTop, akRight, akBottom]
+            Caption = 'Horario'
+            TabOrder = 0
+            object dtp_hora: TDateTimePicker
+              Left = 40
+              Top = 16
+              Width = 105
+              Height = 21
+              CalAlignment = dtaLeft
+              Date = 43679.250000000000000000
+              Time = 43679.250000000000000000
+              DateFormat = dfShort
+              DateMode = dmComboBox
+              Kind = dtkTime
+              ParseInput = False
+              TabOrder = 0
+            end
+            object BitBtn1: TBitBtn
+              Left = 158
+              Top = 12
+              Width = 75
+              Height = 25
+              Hint = 'Agrega un Horario de ejecución'
+              Caption = 'Agregar'
+              ParentShowHint = False
+              ShowHint = True
+              TabOrder = 1
+              OnClick = btagregarClick
+            end
+            object bbQuitar: TBitBtn
+              Left = 246
+              Top = 12
+              Width = 75
+              Height = 25
+              Hint = 'En caso de existir el horario lo elimina del listado'
+              Caption = 'Suprimir'
+              ParentShowHint = False
+              ShowHint = True
+              TabOrder = 2
+              OnClick = bbQuitarClick
+            end
+          end
+        end
+        object rcListadoLecturas: TRxDBGrid
+          Left = 1
+          Top = 49
+          Width = 560
+          Height = 135
+          Align = alClient
+          PopupMenu = ppm
+          TabOrder = 1
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'HORA'
+              Title.Caption = 'Hora de Ejecución'
+              Width = 112
+              Visible = True
+            end>
+        end
+      end
+    end
+  end
+  object ppm: TPopupMenu
+    Left = 416
+    Top = 64
+    object mmBorrar: TMenuItem
+      Caption = 'Borrar Horario'
+      OnClick = mmBorrarClick
+    end
+  end
+  object cbsTime: TClientDataSet
+    Active = True
+    Aggregates = <>
+    FieldDefs = <
+      item
+        Name = 'HORA'
+        DataType = ftString
+        Size = 20
+      end>
+    IndexDefs = <>
+    Params = <>
+    StoreDefs = True
+    Left = 401
+    Top = 129
+    Data = {
+      330000009619E0BD010000001800000001000000000003000000330004484F52
+      4101004900000001000557494454480200020014000000}
+  end
+  object dsTime: TDataSource
+    DataSet = cbsTime
+    Left = 352
+    Top = 136
+  end
+  object spCAMBIAR_HORARIO_JOB: TStoredProc
+    DatabaseName = 'BaseDato'
+    StoredProcName = 'SGC_CAMBIAR_HORARIO_JOB_INFO_TI'
+    Left = 352
+    Top = 83
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'HORARIOS'
+        ParamType = ptInput
+      end>
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 224
+    Top = 88
+    object MenuItem1: TMenuItem
+      Caption = 'Borrar Horario'
+      OnClick = mmBorrarClick
+    end
+  end
+end

@@ -1,0 +1,2586 @@
+object FAuxilio: TFAuxilio
+  Left = 402
+  Top = 131
+  BorderStyle = bsDialog
+  Caption = 'Auxilios'
+  ClientHeight = 309
+  ClientWidth = 491
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel2: TPanel
+    Left = 0
+    Top = 145
+    Width = 491
+    Height = 128
+    Align = alClient
+    BevelInner = bvLowered
+    TabOrder = 3
+    object Bevel1: TBevel
+      Left = 4
+      Top = 194
+      Width = 498
+      Height = 2
+    end
+    object Label17: TLabel
+      Left = 253
+      Top = 175
+      Width = 78
+      Height = 13
+      Caption = 'Valor Transporte'
+    end
+    object Label18: TLabel
+      Left = 12
+      Top = 205
+      Width = 297
+      Height = 13
+      Caption = 'TOTAL AUXILIO:   Auxilio de Alimentación + Otros Gastos      $'
+    end
+    object Label19: TLabel
+      Left = 8
+      Top = 174
+      Width = 93
+      Height = 13
+      Caption = 'Auxilio Alimentación'
+    end
+    object GroupBox2: TGroupBox
+      Left = 230
+      Top = 4
+      Width = 241
+      Height = 163
+      Caption = 'Otros Gastos'
+      TabOrder = 0
+      object Label22: TLabel
+        Left = 8
+        Top = 49
+        Width = 60
+        Height = 13
+        Caption = 'Valor Peaje :'
+      end
+      object Label29: TLabel
+        Left = 8
+        Top = 70
+        Width = 94
+        Height = 13
+        Caption = 'Valor Parqueadero :'
+      end
+      object Label30: TLabel
+        Left = 119
+        Top = 48
+        Width = 6
+        Height = 13
+        Caption = '$'
+      end
+      object Label32: TLabel
+        Left = 119
+        Top = 70
+        Width = 6
+        Height = 13
+        Caption = '$'
+      end
+      object Label33: TLabel
+        Left = 8
+        Top = 117
+        Width = 71
+        Height = 13
+        Caption = 'Valor Gasolina:'
+      end
+      object Label34: TLabel
+        Left = 119
+        Top = 118
+        Width = 6
+        Height = 13
+        Caption = '$'
+      end
+      object Label35: TLabel
+        Left = 9
+        Top = 24
+        Width = 47
+        Height = 13
+        Caption = 'Placa No.'
+      end
+      object SpeedButton1: TSpeedButton
+        Left = 178
+        Top = 14
+        Width = 27
+        Height = 23
+        Hint = 'Asociar Vehiculo a Odt'
+        Glyph.Data = {
+          F6000000424DF600000000000000760000002800000010000000100000000100
+          0400000000008000000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333333333333333333333003333333300333000033333300003000000000000
+          00000F88FFFF8FFF88F00F44F44F8FFFFF700F4B4B4F800000030F44F44F0888
+          80330FFFFFFF0888033370000000000033333330030033333333333330000003
+          33333333330F440333333333330F4B0333333333330000033333}
+        OnClick = sbAsociarVehiculoClick
+      end
+      object Label36: TLabel
+        Left = 8
+        Top = 94
+        Width = 67
+        Height = 13
+        Caption = 'Valor Pasajes:'
+      end
+      object Label37: TLabel
+        Left = 119
+        Top = 95
+        Width = 6
+        Height = 13
+        Caption = '$'
+      end
+      object Label38: TLabel
+        Left = 8
+        Top = 139
+        Width = 61
+        Height = 13
+        Caption = 'Reparación :'
+      end
+      object Label39: TLabel
+        Left = 119
+        Top = 138
+        Width = 6
+        Height = 13
+        Caption = '$'
+      end
+      object DBEdit2: TDBEdit
+        Tag = 5
+        Left = 132
+        Top = 43
+        Width = 96
+        Height = 21
+        DataField = 'VALORIMPUTACION'
+        DataSource = dsPeaje
+        TabOrder = 1
+        OnKeyPress = FormKeyPress
+      end
+      object DBEdit8: TDBEdit
+        Tag = 6
+        Left = 132
+        Top = 67
+        Width = 96
+        Height = 21
+        DataField = 'VALORIMPUTACION'
+        DataSource = dsParqueo
+        TabOrder = 2
+        OnKeyPress = FormKeyPress
+      end
+      object DBEdit9: TDBEdit
+        Tag = 7
+        Left = 132
+        Top = 91
+        Width = 96
+        Height = 21
+        DataField = 'VALORIMPUTACION'
+        DataSource = dsPasaje
+        TabOrder = 3
+        OnKeyPress = FormKeyPress
+      end
+      object DBEdit10: TDBEdit
+        Tag = 4
+        Left = 66
+        Top = 16
+        Width = 100
+        Height = 21
+        CharCase = ecUpperCase
+        DataField = 'CODIGOVEHICULO'
+        DataSource = dsAuxilio
+        TabOrder = 0
+        OnKeyPress = FormKeyPress
+      end
+      object DBEdit11: TDBEdit
+        Tag = 7
+        Left = 132
+        Top = 114
+        Width = 96
+        Height = 21
+        DataField = 'VALORIMPUTACION'
+        DataSource = dsGasolina
+        TabOrder = 4
+        OnKeyPress = FormKeyPress
+      end
+      object DBEdit12: TDBEdit
+        Left = 132
+        Top = 137
+        Width = 96
+        Height = 21
+        DataField = 'VALORIMPUTACION'
+        DataSource = dsReparacion
+        TabOrder = 5
+        OnKeyPress = FormKeyPress
+      end
+    end
+    object GroupBox3: TGroupBox
+      Left = 5
+      Top = 4
+      Width = 215
+      Height = 161
+      Caption = 'Alimentación'
+      TabOrder = 1
+      object Label40: TLabel
+        Left = 8
+        Top = 32
+        Width = 53
+        Height = 13
+        Caption = 'Desayunos'
+      end
+      object Label41: TLabel
+        Left = 8
+        Top = 77
+        Width = 48
+        Height = 13
+        Caption = 'Almuerzos'
+      end
+      object Label42: TLabel
+        Left = 8
+        Top = 123
+        Width = 40
+        Height = 13
+        Caption = 'Comidas'
+      end
+      object Label43: TLabel
+        Left = 106
+        Top = 31
+        Width = 6
+        Height = 13
+        Caption = '$'
+      end
+      object Label44: TLabel
+        Left = 106
+        Top = 77
+        Width = 6
+        Height = 13
+        Caption = '$'
+      end
+      object Label45: TLabel
+        Left = 106
+        Top = 124
+        Width = 6
+        Height = 13
+        Caption = '$'
+      end
+      object DBEdit13: TDBEdit
+        Left = 116
+        Top = 28
+        Width = 90
+        Height = 21
+        DataField = 'VALORIMPUTACION'
+        DataSource = dsValorDesayuno
+        ReadOnly = True
+        TabOrder = 0
+        OnKeyPress = FormKeyPress
+      end
+      object DBEdit14: TDBEdit
+        Left = 116
+        Top = 75
+        Width = 90
+        Height = 21
+        DataField = 'VALORIMPUTACION'
+        DataSource = dsValorAlmuerzo
+        ReadOnly = True
+        TabOrder = 1
+        OnKeyPress = FormKeyPress
+      end
+      object DBEdit15: TDBEdit
+        Left = 116
+        Top = 120
+        Width = 90
+        Height = 21
+        DataField = 'VALORIMPUTACION'
+        DataSource = dsValorComida
+        ReadOnly = True
+        TabOrder = 2
+        OnKeyPress = FormKeyPress
+      end
+      object DBEdit16: TDBEdit
+        Tag = 1
+        Left = 70
+        Top = 28
+        Width = 27
+        Height = 21
+        DataField = 'CANTIDADDESAYUNOS'
+        DataSource = dsAuxilio
+        TabOrder = 3
+        OnKeyPress = FormKeyPress
+      end
+      object DBEdit17: TDBEdit
+        Tag = 2
+        Left = 70
+        Top = 75
+        Width = 27
+        Height = 21
+        DataField = 'CANTIDADALMUERZOS'
+        DataSource = dsAuxilio
+        TabOrder = 4
+        OnKeyPress = FormKeyPress
+      end
+      object DBEdit18: TDBEdit
+        Tag = 3
+        Left = 70
+        Top = 120
+        Width = 27
+        Height = 21
+        DataField = 'CANTIDADCOMIDAS'
+        DataSource = dsAuxilio
+        TabOrder = 5
+        OnKeyPress = FormKeyPress
+      end
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 273
+    Width = 491
+    Height = 36
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 0
+    object bbAceptar: TBitBtn
+      Left = 318
+      Top = 5
+      Width = 75
+      Height = 25
+      Caption = '&Aceptar'
+      ModalResult = 1
+      TabOrder = 0
+      OnClick = bbAceptarClick
+      Glyph.Data = {
+        DE010000424DDE01000000000000760000002800000024000000120000000100
+        0400000000006801000000000000000000001000000010000000000000000000
+        80000080000000808000800000008000800080800000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        3333333333333333333333330000333333333333333333333333F33333333333
+        00003333344333333333333333388F3333333333000033334224333333333333
+        338338F3333333330000333422224333333333333833338F3333333300003342
+        222224333333333383333338F3333333000034222A22224333333338F338F333
+        8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+        33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+        0000333333333A222433333333333338F338F33300003333333333A222433333
+        333333338F338F33000033333333333A222433333333333338F338F300003333
+        33333333A222433333333333338F338F00003333333333333A22433333333333
+        3338F38F000033333333333333A223333333333333338F830000333333333333
+        333A333333333333333338330000333333333333333333333333333333333333
+        0000}
+      NumGlyphs = 2
+    end
+    object bbCancelar: TBitBtn
+      Left = 398
+      Top = 5
+      Width = 75
+      Height = 25
+      Caption = '&Cancelar'
+      TabOrder = 1
+      OnClick = bbCancelarClick
+      Kind = bkCancel
+    end
+  end
+  object PanelEncabezado: TPanel
+    Left = 0
+    Top = 0
+    Width = 491
+    Height = 145
+    Align = alTop
+    BevelInner = bvLowered
+    BevelOuter = bvSpace
+    TabOrder = 1
+    object Label2: TLabel
+      Left = 10
+      Top = 16
+      Width = 43
+      Height = 13
+      Caption = 'Nombre :'
+      FocusControl = dbEdCedula
+    end
+    object Label1: TLabel
+      Left = 309
+      Top = 18
+      Width = 53
+      Height = 13
+      Caption = 'Cédula No.'
+      FocusControl = dbEdCedula
+    end
+    object Label3: TLabel
+      Left = 10
+      Top = 44
+      Width = 70
+      Height = 13
+      Caption = 'Dependencia :'
+      FocusControl = dbEdCedula
+    end
+    object Label46: TLabel
+      Left = 383
+      Top = 44
+      Width = 58
+      Height = 13
+      Caption = 'Tipo CeCos:'
+      FocusControl = DBEdit19
+    end
+    object dbEdNombreEmpleado: TDBEdit
+      Left = 82
+      Top = 12
+      Width = 213
+      Height = 21
+      Color = 15658734
+      DataField = 'NOMBREEMPLEADO'
+      DataSource = dsEmpleado
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 0
+      OnKeyPress = FormKeyPress
+    end
+    object dbEdCedula: TDBEdit
+      Left = 367
+      Top = 12
+      Width = 119
+      Height = 21
+      Color = 15658734
+      DataField = 'CODIGOEMPLEADO'
+      DataSource = dsEmpleado
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 1
+      OnKeyPress = FormKeyPress
+    end
+    object dbEdCia: TDBEdit
+      Left = 82
+      Top = 41
+      Width = 285
+      Height = 21
+      Color = 15658734
+      DataField = 'NOMBRECATEGORIA'
+      DataSource = dsCia
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 2
+      OnKeyPress = FormKeyPress
+    end
+    object dbChbResponsableCobro: TDBCheckBox
+      Left = 257
+      Top = 165
+      Width = 196
+      Height = 19
+      Caption = 'Responsable cobro grupo de trabajo'
+      DataField = 'RESPONSABLECOBRO'
+      DataSource = dsAuxilio
+      TabOrder = 3
+      ValueChecked = 'S'
+      ValueUnchecked = 'N'
+      Visible = False
+      OnKeyPress = FormKeyPress
+      OnMouseUp = dbChbResponsableCobroMouseUp
+    end
+    object GroupBox1: TGroupBox
+      Left = 6
+      Top = 69
+      Width = 480
+      Height = 63
+      Caption = 'Fechas / horas'
+      TabOrder = 4
+      object Label27: TLabel
+        Left = 10
+        Top = 27
+        Width = 31
+        Height = 13
+        Caption = 'Inicio :'
+      end
+      object Label28: TLabel
+        Left = 247
+        Top = 27
+        Width = 20
+        Height = 13
+        Caption = 'Fin :'
+      end
+      object sbFechaInicio: TSpeedButton
+        Tag = 9
+        Left = 209
+        Top = 24
+        Width = 22
+        Height = 21
+        Glyph.Data = {
+          4E010000424D4E01000000000000760000002800000012000000120000000100
+          040000000000D800000000000000000000001000000010000000000000000000
+          BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333330000003333333333333333330000003338888888888888330000003304
+          0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+          FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+          F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033F7777777777F4833000000330000000000003333000000333333333333
+          333333000000333333333333333333000000}
+        OnClick = sbFechaInicioClick
+      end
+      object sbFechaFin: TSpeedButton
+        Tag = 9
+        Left = 441
+        Top = 24
+        Width = 22
+        Height = 21
+        Glyph.Data = {
+          4E010000424D4E01000000000000760000002800000012000000120000000100
+          040000000000D800000000000000000000001000000010000000000000000000
+          BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333330000003333333333333333330000003338888888888888330000003304
+          0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+          FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+          F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+          000033F7777777777F4833000000330000000000003333000000333333333333
+          333333000000333333333333333333000000}
+        OnClick = sbFechaFinClick
+      end
+      object dbedFechaInicio: TDBEdit
+        Left = 43
+        Top = 25
+        Width = 162
+        Height = 21
+        Color = 15658734
+        DataField = 'FECHAINICIO'
+        DataSource = dsAuxilio
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clNavy
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+        OnKeyPress = FormKeyPress
+      end
+      object dbedFechaFin: TDBEdit
+        Left = 275
+        Top = 25
+        Width = 162
+        Height = 21
+        Color = 15658734
+        DataField = 'FECHAFIN'
+        DataSource = dsAuxilio
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clNavy
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 1
+        OnKeyPress = FormKeyPress
+      end
+    end
+    object DBRadioGroup1: TDBRadioGroup
+      Left = 14
+      Top = 148
+      Width = 224
+      Height = 49
+      Caption = 'Tipo Cobro'
+      Columns = 2
+      DataField = 'COBROINDIVIDUAL'
+      DataSource = dsAuxilio
+      Items.Strings = (
+        'Individual'
+        'Grupo de trabajo')
+      TabOrder = 5
+      Values.Strings = (
+        'S'
+        'N')
+      Visible = False
+    end
+    object DBEdit19: TDBEdit
+      Left = 447
+      Top = 41
+      Width = 38
+      Height = 21
+      Color = 15658734
+      DataField = 'TipoCecos'
+      DataSource = dsEmpleado
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 6
+      OnKeyPress = FormKeyPress
+    end
+  end
+  object PanelGastosTransporte: TPanel
+    Left = 0
+    Top = 145
+    Width = 491
+    Height = 128
+    Align = alClient
+    BevelInner = bvLowered
+    TabOrder = 2
+    object Label9: TLabel
+      Left = 861
+      Top = 215
+      Width = 78
+      Height = 13
+      Caption = 'Valor Transporte'
+    end
+    object Label31: TLabel
+      Left = 864
+      Top = 278
+      Width = 93
+      Height = 13
+      Caption = 'Auxilio Alimentación'
+    end
+    object gbOtrosGastos: TGroupBox
+      Left = 846
+      Top = 36
+      Width = 241
+      Height = 163
+      Caption = 'Otros Gastos'
+      TabOrder = 0
+      object Label20: TLabel
+        Left = 8
+        Top = 49
+        Width = 60
+        Height = 13
+        Caption = 'Valor Peaje :'
+      end
+      object Label21: TLabel
+        Left = 8
+        Top = 70
+        Width = 94
+        Height = 13
+        Caption = 'Valor Parqueadero :'
+      end
+      object Label23: TLabel
+        Left = 119
+        Top = 48
+        Width = 6
+        Height = 13
+        Caption = '$'
+      end
+      object Label24: TLabel
+        Left = 119
+        Top = 70
+        Width = 6
+        Height = 13
+        Caption = '$'
+      end
+      object Label12: TLabel
+        Left = 8
+        Top = 117
+        Width = 71
+        Height = 13
+        Caption = 'Valor Gasolina:'
+      end
+      object Label13: TLabel
+        Left = 119
+        Top = 118
+        Width = 6
+        Height = 13
+        Caption = '$'
+      end
+      object Label25: TLabel
+        Left = 9
+        Top = 24
+        Width = 47
+        Height = 13
+        Caption = 'Placa No.'
+      end
+      object sbAsociarVehiculo: TSpeedButton
+        Left = 178
+        Top = 14
+        Width = 27
+        Height = 23
+        Hint = 'Asociar Vehiculo a Odt'
+        Glyph.Data = {
+          F6000000424DF600000000000000760000002800000010000000100000000100
+          0400000000008000000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333333333333333333333003333333300333000033333300003000000000000
+          00000F88FFFF8FFF88F00F44F44F8FFFFF700F4B4B4F800000030F44F44F0888
+          80330FFFFFFF0888033370000000000033333330030033333333333330000003
+          33333333330F440333333333330F4B0333333333330000033333}
+        OnClick = sbAsociarVehiculoClick
+      end
+      object Label5: TLabel
+        Left = 8
+        Top = 94
+        Width = 67
+        Height = 13
+        Caption = 'Valor Pasajes:'
+      end
+      object Label14: TLabel
+        Left = 119
+        Top = 95
+        Width = 6
+        Height = 13
+        Caption = '$'
+      end
+      object Label15: TLabel
+        Left = 8
+        Top = 139
+        Width = 61
+        Height = 13
+        Caption = 'Reparación :'
+      end
+      object Label16: TLabel
+        Left = 119
+        Top = 138
+        Width = 6
+        Height = 13
+        Caption = '$'
+      end
+      object dbEdPeaje: TDBEdit
+        Tag = 5
+        Left = 132
+        Top = 43
+        Width = 96
+        Height = 21
+        DataField = 'VALORIMPUTACION'
+        DataSource = dsPeaje
+        TabOrder = 1
+        OnKeyPress = FormKeyPress
+      end
+      object dbEdParqueadero: TDBEdit
+        Tag = 6
+        Left = 132
+        Top = 67
+        Width = 96
+        Height = 21
+        DataField = 'VALORIMPUTACION'
+        DataSource = dsParqueo
+        TabOrder = 2
+        OnKeyPress = FormKeyPress
+      end
+      object DBEdPasajes: TDBEdit
+        Tag = 7
+        Left = 132
+        Top = 91
+        Width = 96
+        Height = 21
+        DataField = 'VALORIMPUTACION'
+        DataSource = dsPasaje
+        TabOrder = 3
+        OnKeyPress = FormKeyPress
+      end
+      object dbEdPlacaVehiculo: TDBEdit
+        Tag = 4
+        Left = 66
+        Top = 16
+        Width = 100
+        Height = 21
+        CharCase = ecUpperCase
+        DataField = 'CODIGOVEHICULO'
+        DataSource = dsAuxilio
+        TabOrder = 0
+        OnKeyPress = FormKeyPress
+      end
+      object dbEdGasolina: TDBEdit
+        Tag = 7
+        Left = 132
+        Top = 114
+        Width = 96
+        Height = 21
+        DataField = 'VALORIMPUTACION'
+        DataSource = dsGasolina
+        TabOrder = 4
+        OnKeyPress = FormKeyPress
+      end
+      object dbEdOtros: TDBEdit
+        Left = 132
+        Top = 137
+        Width = 96
+        Height = 21
+        DataField = 'VALORIMPUTACION'
+        DataSource = dsReparacion
+        TabOrder = 5
+        OnKeyPress = FormKeyPress
+      end
+    end
+    object gbAuxilioAlimentacion: TGroupBox
+      Left = 6
+      Top = 4
+      Width = 480
+      Height = 109
+      Caption = 'Alimentación'
+      TabOrder = 1
+      object Label4: TLabel
+        Left = 8
+        Top = 24
+        Width = 53
+        Height = 13
+        Caption = 'Desayunos'
+      end
+      object Label6: TLabel
+        Left = 8
+        Top = 50
+        Width = 48
+        Height = 13
+        Caption = 'Almuerzos'
+      end
+      object Label7: TLabel
+        Left = 8
+        Top = 81
+        Width = 40
+        Height = 13
+        Caption = 'Comidas'
+      end
+      object Label8: TLabel
+        Left = 106
+        Top = 23
+        Width = 6
+        Height = 13
+        Caption = '$'
+      end
+      object Label10: TLabel
+        Left = 106
+        Top = 50
+        Width = 6
+        Height = 13
+        Caption = '$'
+      end
+      object Label11: TLabel
+        Left = 106
+        Top = 82
+        Width = 6
+        Height = 13
+        Caption = '$'
+      end
+      object Label26: TLabel
+        Left = 244
+        Top = 64
+        Width = 218
+        Height = 13
+        Caption = 'TOTAL AUXILIO:   Auxilio de Alimentación      '
+      end
+      object DBEdit1: TDBEdit
+        Left = 116
+        Top = 20
+        Width = 101
+        Height = 21
+        DataField = 'VALORIMPUTACION'
+        DataSource = dsValorDesayuno
+        ReadOnly = True
+        TabOrder = 0
+        OnKeyPress = FormKeyPress
+      end
+      object DBEdit3: TDBEdit
+        Left = 116
+        Top = 48
+        Width = 101
+        Height = 21
+        DataField = 'VALORIMPUTACION'
+        DataSource = dsValorAlmuerzo
+        ReadOnly = True
+        TabOrder = 1
+        OnKeyPress = FormKeyPress
+      end
+      object DBEdit4: TDBEdit
+        Left = 116
+        Top = 78
+        Width = 101
+        Height = 21
+        DataField = 'VALORIMPUTACION'
+        DataSource = dsValorComida
+        ReadOnly = True
+        TabOrder = 2
+        OnKeyPress = FormKeyPress
+      end
+      object DBEdit5: TDBEdit
+        Tag = 1
+        Left = 70
+        Top = 20
+        Width = 27
+        Height = 21
+        DataField = 'CANTIDADDESAYUNOS'
+        DataSource = dsAuxilio
+        TabOrder = 3
+        OnKeyPress = FormKeyPress
+      end
+      object DBEdit6: TDBEdit
+        Tag = 2
+        Left = 70
+        Top = 48
+        Width = 27
+        Height = 21
+        DataField = 'CANTIDADALMUERZOS'
+        DataSource = dsAuxilio
+        TabOrder = 4
+        OnKeyPress = FormKeyPress
+      end
+      object DBEdit7: TDBEdit
+        Tag = 3
+        Left = 70
+        Top = 78
+        Width = 27
+        Height = 21
+        DataField = 'CANTIDADCOMIDAS'
+        DataSource = dsAuxilio
+        TabOrder = 5
+        OnKeyPress = FormKeyPress
+      end
+      object EdTotalAuxilios: TCurrencyEdit
+        Left = 297
+        Top = 78
+        Width = 113
+        Height = 21
+        AutoSize = False
+        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clNavy
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 6
+      end
+    end
+    object EdOtrosGastos: TCurrencyEdit
+      Left = 985
+      Top = 210
+      Width = 94
+      Height = 21
+      AutoSize = False
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 2
+    end
+    object EdAlimentacion: TCurrencyEdit
+      Left = 967
+      Top = 272
+      Width = 94
+      Height = 21
+      AutoSize = False
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 3
+    end
+  end
+  object dsAuxilio: TDataSource
+    DataSet = qAuxilio
+    Left = 512
+    Top = 66
+  end
+  object updAuxilio: TUpdateSQL
+    ModifySQL.Strings = (
+      'update ODTAUXILIO'
+      'set'
+      '  CODIGOAUXILIO = :CODIGOAUXILIO,'
+      '  CODIGOEMPLEADO = :CODIGOEMPLEADO,'
+      '  CODIGOODT = :CODIGOODT,'
+      '  FECHAINICIO = :FECHAINICIO,'
+      '  FECHAFIN = :FECHAFIN,'
+      '  CANTIDADDESAYUNOS = :CANTIDADDESAYUNOS,'
+      '  CANTIDADALMUERZOS = :CANTIDADALMUERZOS,'
+      '  CANTIDADCOMIDAS = :CANTIDADCOMIDAS,'
+      '  RESPONSABLECOBRO = :RESPONSABLECOBRO,'
+      '  CODIGOVEHICULO = :CODIGOVEHICULO,'
+      '  ESTADO = :ESTADO,'
+      '  COBROINDIVIDUAL = :COBROINDIVIDUAL'
+      'where'
+      '  CODIGOAUXILIO = :OLD_CODIGOAUXILIO and'
+      '  CODIGOEMPLEADO = :OLD_CODIGOEMPLEADO and'
+      '  CODIGOODT = :OLD_CODIGOODT')
+    InsertSQL.Strings = (
+      'insert into ODTAUXILIO'
+      
+        '  (CODIGOAUXILIO, CODIGOEMPLEADO, CODIGOODT, FECHAINICIO, FECHAF' +
+        'IN, CANTIDADDESAYUNOS, '
+      
+        '   CANTIDADALMUERZOS, CANTIDADCOMIDAS, RESPONSABLECOBRO, CODIGOV' +
+        'EHICULO, '
+      '   ESTADO, COBROINDIVIDUAL)'
+      'values'
+      
+        '  (:CODIGOAUXILIO, :CODIGOEMPLEADO, :CODIGOODT, :FECHAINICIO, :F' +
+        'ECHAFIN, '
+      
+        '   :CANTIDADDESAYUNOS, :CANTIDADALMUERZOS, :CANTIDADCOMIDAS, :RE' +
+        'SPONSABLECOBRO, '
+      '   :CODIGOVEHICULO, :ESTADO, :COBROINDIVIDUAL)')
+    DeleteSQL.Strings = (
+      'delete from ODTAUXILIO'
+      'where'
+      '  CODIGOAUXILIO = :OLD_CODIGOAUXILIO and'
+      '  CODIGOEMPLEADO = :OLD_CODIGOEMPLEADO and'
+      '  CODIGOODT = :OLD_CODIGOODT')
+    Left = 512
+    Top = 114
+  end
+  object qDesayuno: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsAuxilio
+    SQL.Strings = (
+      'SELECT * FROM AUXILIOALIMENTACION'
+      'WHERE CODIGOTIPOIMPUTACIONODT='#39'A'#39
+      'AND CODIGOSUBTIPOIMPUTACIONODT='#39'DES'#39
+      'AND VIGENCIADESDE<=:FECHAINICIO'
+      'AND VIGENCIAHASTA>:FECHAINICIO'
+      '')
+    Left = 584
+    Top = 16
+    ParamData = <
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end>
+    object qDesayunoCODIGOAUXILIOALIMENTACION: TFloatField
+      FieldName = 'CODIGOAUXILIOALIMENTACION'
+      Origin = 'AUXILIOALIMENTACION.CODIGOAUXILIOALIMENTACION'
+    end
+    object qDesayunoNOMBREAUXILIOALIMENTACION: TStringField
+      FieldName = 'NOMBREAUXILIOALIMENTACION'
+      Origin = 'AUXILIOALIMENTACION.NOMBREAUXILIOALIMENTACION'
+      Size = 15
+    end
+    object qDesayunoVALORAUXILIOALIMENTACION: TFloatField
+      FieldName = 'VALORAUXILIOALIMENTACION'
+      Origin = 'AUXILIOALIMENTACION.VALORAUXILIOALIMENTACION'
+    end
+    object qDesayunoVIGENCIADESDE: TDateTimeField
+      FieldName = 'VIGENCIADESDE'
+      Origin = 'AUXILIOALIMENTACION.VIGENCIADESDE'
+    end
+    object qDesayunoVIGENCIAHASTA: TDateTimeField
+      FieldName = 'VIGENCIAHASTA'
+      Origin = 'AUXILIOALIMENTACION.VIGENCIAHASTA'
+    end
+    object qDesayunoCODIGOTIPOIMPUTACIONODT: TStringField
+      FieldName = 'CODIGOTIPOIMPUTACIONODT'
+      Origin = 'AUXILIOALIMENTACION.CODIGOTIPOIMPUTACIONODT'
+      Size = 1
+    end
+    object qDesayunoCODIGOSUBTIPOIMPUTACIONODT: TStringField
+      FieldName = 'CODIGOSUBTIPOIMPUTACIONODT'
+      Origin = 'AUXILIOALIMENTACION.CODIGOSUBTIPOIMPUTACIONODT'
+      Size = 3
+    end
+  end
+  object qAlmuerzo: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsAuxilio
+    SQL.Strings = (
+      'SELECT * FROM AUXILIOALIMENTACION'
+      'WHERE CODIGOTIPOIMPUTACIONODT='#39'A'#39
+      'AND CODIGOSUBTIPOIMPUTACIONODT='#39'ALM'#39
+      'AND VIGENCIADESDE<=:FECHAINICIO'
+      'AND VIGENCIAHASTA>:FECHAINICIO'
+      '')
+    Left = 584
+    Top = 66
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end>
+    object qAlmuerzoCODIGOAUXILIOALIMENTACION: TFloatField
+      FieldName = 'CODIGOAUXILIOALIMENTACION'
+      Origin = 'AUXILIOALIMENTACION.CODIGOAUXILIOALIMENTACION'
+    end
+    object qAlmuerzoNOMBREAUXILIOALIMENTACION: TStringField
+      FieldName = 'NOMBREAUXILIOALIMENTACION'
+      Origin = 'AUXILIOALIMENTACION.NOMBREAUXILIOALIMENTACION'
+      Size = 15
+    end
+    object qAlmuerzoVALORAUXILIOALIMENTACION: TFloatField
+      FieldName = 'VALORAUXILIOALIMENTACION'
+      Origin = 'AUXILIOALIMENTACION.VALORAUXILIOALIMENTACION'
+    end
+    object qAlmuerzoVIGENCIADESDE: TDateTimeField
+      FieldName = 'VIGENCIADESDE'
+      Origin = 'AUXILIOALIMENTACION.VIGENCIADESDE'
+    end
+    object qAlmuerzoVIGENCIAHASTA: TDateTimeField
+      FieldName = 'VIGENCIAHASTA'
+      Origin = 'AUXILIOALIMENTACION.VIGENCIAHASTA'
+    end
+    object qAlmuerzoCODIGOTIPOIMPUTACIONODT: TStringField
+      FieldName = 'CODIGOTIPOIMPUTACIONODT'
+      Origin = 'AUXILIOALIMENTACION.CODIGOTIPOIMPUTACIONODT'
+      Size = 1
+    end
+    object qAlmuerzoCODIGOSUBTIPOIMPUTACIONODT: TStringField
+      FieldName = 'CODIGOSUBTIPOIMPUTACIONODT'
+      Origin = 'AUXILIOALIMENTACION.CODIGOSUBTIPOIMPUTACIONODT'
+      Size = 3
+    end
+  end
+  object qComida: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsAuxilio
+    SQL.Strings = (
+      'SELECT * FROM AUXILIOALIMENTACION'
+      'WHERE CODIGOTIPOIMPUTACIONODT='#39'A'#39
+      'AND CODIGOSUBTIPOIMPUTACIONODT='#39'COM'#39
+      'AND VIGENCIADESDE<=:FECHAINICIO'
+      'AND VIGENCIAHASTA>:FECHAINICIO')
+    Left = 584
+    Top = 114
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FECHAINICIO'
+        ParamType = ptUnknown
+      end>
+    object qComidaCODIGOAUXILIOALIMENTACION: TFloatField
+      FieldName = 'CODIGOAUXILIOALIMENTACION'
+      Origin = 'AUXILIOALIMENTACION.CODIGOAUXILIOALIMENTACION'
+    end
+    object qComidaNOMBREAUXILIOALIMENTACION: TStringField
+      FieldName = 'NOMBREAUXILIOALIMENTACION'
+      Origin = 'AUXILIOALIMENTACION.NOMBREAUXILIOALIMENTACION'
+      Size = 15
+    end
+    object qComidaVALORAUXILIOALIMENTACION: TFloatField
+      FieldName = 'VALORAUXILIOALIMENTACION'
+      Origin = 'AUXILIOALIMENTACION.VALORAUXILIOALIMENTACION'
+    end
+    object qComidaVIGENCIADESDE: TDateTimeField
+      FieldName = 'VIGENCIADESDE'
+      Origin = 'AUXILIOALIMENTACION.VIGENCIADESDE'
+    end
+    object qComidaVIGENCIAHASTA: TDateTimeField
+      FieldName = 'VIGENCIAHASTA'
+      Origin = 'AUXILIOALIMENTACION.VIGENCIAHASTA'
+    end
+    object qComidaCODIGOTIPOIMPUTACIONODT: TStringField
+      FieldName = 'CODIGOTIPOIMPUTACIONODT'
+      Origin = 'AUXILIOALIMENTACION.CODIGOTIPOIMPUTACIONODT'
+      Size = 1
+    end
+    object qComidaCODIGOSUBTIPOIMPUTACIONODT: TStringField
+      FieldName = 'CODIGOSUBTIPOIMPUTACIONODT'
+      Origin = 'AUXILIOALIMENTACION.CODIGOSUBTIPOIMPUTACIONODT'
+      Size = 3
+    end
+  end
+  object qCia: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsEmpleado
+    SQL.Strings = (
+      'SELECT CODIGOADMINISTRATIVO,NOMBRECATEGORIA,'
+      'CODIGOCENTROCOSTO,CODIGOAREARESPONSABILIDAD'
+      'FROM ADMINISTRATIVO '
+      'WHERE CODIGOADMINISTRATIVO=:CODIGOADMINISTRATIVO')
+    Left = 728
+    Top = 16
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end>
+    object qCiaCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.CODIGOADMINISTRATIVO'
+    end
+    object qCiaNOMBRECATEGORIA: TStringField
+      FieldName = 'NOMBRECATEGORIA'
+      Origin = 'ADMINISTRATIVO.NOMBRECATEGORIA'
+      Size = 80
+    end
+    object qCiaCODIGOCENTROCOSTO: TFloatField
+      FieldName = 'CODIGOCENTROCOSTO'
+      Origin = 'ADMINISTRATIVO.CODIGOCENTROCOSTO'
+    end
+    object qCiaCODIGOAREARESPONSABILIDAD: TFloatField
+      FieldName = 'CODIGOAREARESPONSABILIDAD'
+      Origin = 'ADMINISTRATIVO.CODIGOAREARESPONSABILIDAD'
+    end
+  end
+  object qEmpleado: TQuery
+    AfterOpen = qEmpleadoAfterOpen
+    OnCalcFields = qEmpleadoCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsAuxilio
+    SQL.Strings = (
+      'SELECT * FROM EMPLEADO'
+      'WHERE CODIGOEMPLEADO=:CODIGOEMPLEADO'
+      'AND ((estado IN ('#39'AC'#39','#39'LC'#39')) OR (estado IS NULL))')
+    Left = 656
+    Top = 16
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOEMPLEADO'
+        ParamType = ptUnknown
+      end>
+    object qEmpleadoTipoCecos: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'TipoCecos'
+      Size = 1
+      Calculated = True
+    end
+    object qEmpleadoCODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'EMPLEADO.CODIGOEMPLEADO'
+    end
+    object qEmpleadoNOMBREEMPLEADO: TStringField
+      FieldName = 'NOMBREEMPLEADO'
+      Origin = 'EMPLEADO.NOMBREEMPLEADO'
+      Size = 50
+    end
+    object qEmpleadoDIRECCION: TStringField
+      FieldName = 'DIRECCION'
+      Origin = 'EMPLEADO.DIRECCION'
+      Size = 40
+    end
+    object qEmpleadoBARRIO: TStringField
+      FieldName = 'BARRIO'
+      Origin = 'EMPLEADO.BARRIO'
+      Size = 30
+    end
+    object qEmpleadoTELEFONO: TStringField
+      FieldName = 'TELEFONO'
+      Origin = 'EMPLEADO.TELEFONO'
+      Size = 15
+    end
+    object qEmpleadoCODIGOSUELDO: TStringField
+      FieldName = 'CODIGOSUELDO'
+      Origin = 'EMPLEADO.CODIGOSUELDO'
+      Size = 15
+    end
+    object qEmpleadoCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'EMPLEADO.CODIGOADMINISTRATIVO'
+    end
+    object qEmpleadoREFERENCIA: TStringField
+      FieldName = 'REFERENCIA'
+      Origin = 'EMPLEADO.REFERENCIA'
+      Size = 12
+    end
+  end
+  object dsEmpleado: TDataSource
+    DataSet = qEmpleado
+    Left = 656
+    Top = 66
+  end
+  object dsCia: TDataSource
+    DataSet = qCia
+    Left = 728
+    Top = 66
+  end
+  object dsCuentaAuxiliar: TDataSource
+    DataSet = qCuentaAuxiliar
+    Left = 730
+    Top = 114
+  end
+  object qCuentaAuxiliar: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM IMPUTACIONMANOOBRA'
+      'WHERE CODIGOIMPUTACIONMANOOBRA=7')
+    Left = 656
+    Top = 114
+    object qCuentaAuxiliarCODIGOIMPUTACIONMANOOBRA: TFloatField
+      FieldName = 'CODIGOIMPUTACIONMANOOBRA'
+      Origin = 'IMPUTACIONMANOOBRA.CODIGOIMPUTACIONMANOOBRA'
+    end
+    object qCuentaAuxiliarNUMEROIMPUTACION: TFloatField
+      FieldName = 'NUMEROIMPUTACION'
+      Origin = 'IMPUTACIONMANOOBRA.NUMEROIMPUTACION'
+    end
+    object qCuentaAuxiliarAUXILIAR: TFloatField
+      FieldName = 'AUXILIAR'
+      Origin = 'IMPUTACIONMANOOBRA.AUXILIAR'
+    end
+    object qCuentaAuxiliarDESCRIPCIONIMPUTACIONMANOOBRA: TStringField
+      FieldName = 'DESCRIPCIONIMPUTACIONMANOOBRA'
+      Origin = 'IMPUTACIONMANOOBRA.DESCRIPCIONIMPUTACIONMANOOBRA'
+      Size = 100
+    end
+  end
+  object qValorDesayuno: TQuery
+    CachedUpdates = True
+    AfterInsert = qValorDesayunoAfterInsert
+    AfterPost = qValorDesayunoAfterPost
+    DatabaseName = 'BaseDato'
+    DataSource = dsAuxilio
+    SQL.Strings = (
+      'SELECT VD.CODIGOAUXILIODETALLE,VD.CODIGOAUXILIO,'
+      'VD.CODIGOIMPUTACIONMANOOBRA,VD.VALORIMPUTACION,'
+      
+        'IMO.NUMEROIMPUTACION,IMO.AUXILIAR,IMO.DESCRIPCIONIMPUTACIONMANOO' +
+        'BRA'
+      'FROM ODTAUXILIODETALLE VD,IMPUTACIONMANOOBRA IMO,ODTAUXILIO V'
+      'WHERE VD.CODIGOIMPUTACIONMANOOBRA = IMO.CODIGOIMPUTACIONMANOOBRA'
+      'AND VD.CODIGOAUXILIO = :CODIGOAUXILIO'
+      'AND V.CODIGOAUXILIO=VD.CODIGOAUXILIO'
+      'AND IMO.VIGENCIADESDE<=V.FECHAINICIO'
+      'AND (IMO.VIGENCIAHASTA>=V.FECHAFIN OR IMO.VIGENCIAHASTA IS NULL)'
+      'AND IMO.CODIGOTIPOIMPUTACIONODT='#39'A'#39
+      'AND IMO.CODIGOSUBTIPOIMPUTACIONODT='#39'DES'#39
+      '')
+    UpdateObject = updValorDesayuno
+    Left = 513
+    Top = 294
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOAUXILIO'
+        ParamType = ptUnknown
+      end>
+    object qValorDesayunoCODIGOAUXILIODETALLE: TFloatField
+      FieldName = 'CODIGOAUXILIODETALLE'
+      Origin = 'ODTAUXILIODETALLE.CODIGOAUXILIODETALLE'
+    end
+    object qValorDesayunoCODIGOAUXILIO: TFloatField
+      FieldName = 'CODIGOAUXILIO'
+      Origin = 'ODTAUXILIODETALLE.CODIGOAUXILIO'
+    end
+    object qValorDesayunoCODIGOIMPUTACIONMANOOBRA: TFloatField
+      FieldName = 'CODIGOIMPUTACIONMANOOBRA'
+      Origin = 'ODTAUXILIODETALLE.CODIGOIMPUTACIONMANOOBRA'
+    end
+    object qValorDesayunoVALORIMPUTACION: TFloatField
+      FieldName = 'VALORIMPUTACION'
+      Origin = 'ODTAUXILIODETALLE.VALORIMPUTACION'
+      OnChange = qValorDesayunoVALORIMPUTACIONChange
+      currency = True
+    end
+    object qValorDesayunoNUMEROIMPUTACION: TFloatField
+      FieldName = 'NUMEROIMPUTACION'
+      Origin = 'IMPUTACIONMANOOBRA.NUMEROIMPUTACION'
+    end
+    object qValorDesayunoAUXILIAR: TFloatField
+      FieldName = 'AUXILIAR'
+      Origin = 'IMPUTACIONMANOOBRA.AUXILIAR'
+    end
+    object qValorDesayunoDESCRIPCIONIMPUTACIONMANOOBRA: TStringField
+      FieldName = 'DESCRIPCIONIMPUTACIONMANOOBRA'
+      Origin = 'IMPUTACIONMANOOBRA.DESCRIPCIONIMPUTACIONMANOOBRA'
+      Size = 100
+    end
+  end
+  object qPeaje: TQuery
+    CachedUpdates = True
+    AfterInsert = qPeajeAfterInsert
+    AfterPost = qPeajeAfterPost
+    DatabaseName = 'BaseDato'
+    DataSource = dsAuxilio
+    SQL.Strings = (
+      'SELECT VD.CODIGOAUXILIODETALLE,VD.CODIGOAUXILIO,'
+      'VD.CODIGOIMPUTACIONMANOOBRA,VD.VALORIMPUTACION,'
+      
+        'IMO.NUMEROIMPUTACION,IMO.AUXILIAR,IMO.DESCRIPCIONIMPUTACIONMANOO' +
+        'BRA'
+      'FROM ODTAUXILIODETALLE VD,IMPUTACIONMANOOBRA IMO,ODTAUXILIO V'
+      'WHERE VD.CODIGOIMPUTACIONMANOOBRA = IMO.CODIGOIMPUTACIONMANOOBRA'
+      'AND VD.CODIGOAUXILIO = :CODIGOAUXILIO'
+      'AND V.CODIGOAUXILIO=VD.CODIGOAUXILIO'
+      'AND IMO.VIGENCIADESDE<=V.FECHAINICIO'
+      'AND (IMO.VIGENCIAHASTA>=V.FECHAFIN OR IMO.VIGENCIAHASTA IS NULL)'
+      'AND IMO.CODIGOTIPOIMPUTACIONODT='#39'A'#39
+      'AND IMO.CODIGOSUBTIPOIMPUTACIONODT='#39'PEA'#39
+      '')
+    UpdateObject = updPeaje
+    Left = 513
+    Top = 452
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOAUXILIO'
+        ParamType = ptUnknown
+      end>
+    object qPeajeCODIGOAUXILIODETALLE: TFloatField
+      FieldName = 'CODIGOAUXILIODETALLE'
+      Origin = 'ODTAUXILIODETALLE.CODIGOAUXILIODETALLE'
+    end
+    object qPeajeCODIGOAUXILIO: TFloatField
+      FieldName = 'CODIGOAUXILIO'
+      Origin = 'ODTAUXILIODETALLE.CODIGOAUXILIO'
+    end
+    object qPeajeCODIGOIMPUTACIONMANOOBRA: TFloatField
+      FieldName = 'CODIGOIMPUTACIONMANOOBRA'
+      Origin = 'ODTAUXILIODETALLE.CODIGOIMPUTACIONMANOOBRA'
+    end
+    object qPeajeVALORIMPUTACION: TFloatField
+      FieldName = 'VALORIMPUTACION'
+      Origin = 'ODTAUXILIODETALLE.VALORIMPUTACION'
+      OnChange = qPeajeVALORIMPUTACIONChange
+      OnValidate = qPeajeVALORIMPUTACIONValidate
+      currency = True
+    end
+    object qPeajeNUMEROIMPUTACION: TFloatField
+      FieldName = 'NUMEROIMPUTACION'
+      Origin = 'IMPUTACIONMANOOBRA.NUMEROIMPUTACION'
+    end
+    object qPeajeAUXILIAR: TFloatField
+      FieldName = 'AUXILIAR'
+      Origin = 'IMPUTACIONMANOOBRA.AUXILIAR'
+    end
+    object qPeajeDESCRIPCIONIMPUTACIONMANOOBRA: TStringField
+      FieldName = 'DESCRIPCIONIMPUTACIONMANOOBRA'
+      Origin = 'IMPUTACIONMANOOBRA.DESCRIPCIONIMPUTACIONMANOOBRA'
+      Size = 100
+    end
+  end
+  object qPasaje: TQuery
+    CachedUpdates = True
+    AfterInsert = qPasajeAfterInsert
+    AfterPost = qPasajeAfterPost
+    DatabaseName = 'BaseDato'
+    DataSource = dsAuxilio
+    SQL.Strings = (
+      'SELECT VD.CODIGOAUXILIODETALLE,VD.CODIGOAUXILIO,'
+      'VD.CODIGOIMPUTACIONMANOOBRA,VD.VALORIMPUTACION,'
+      
+        'IMO.NUMEROIMPUTACION,IMO.AUXILIAR,IMO.DESCRIPCIONIMPUTACIONMANOO' +
+        'BRA'
+      'FROM ODTAUXILIODETALLE VD,IMPUTACIONMANOOBRA IMO,ODTAUXILIO V'
+      'WHERE VD.CODIGOIMPUTACIONMANOOBRA = IMO.CODIGOIMPUTACIONMANOOBRA'
+      'AND VD.CODIGOAUXILIO = :CODIGOAUXILIO'
+      'AND V.CODIGOAUXILIO=VD.CODIGOAUXILIO'
+      'AND IMO.VIGENCIADESDE<=V.FECHAINICIO'
+      'AND (IMO.VIGENCIAHASTA>=V.FECHAFIN OR IMO.VIGENCIAHASTA IS NULL)'
+      'AND IMO.CODIGOTIPOIMPUTACIONODT='#39'A'#39
+      'AND IMO.CODIGOSUBTIPOIMPUTACIONODT='#39'PAS'#39
+      ''
+      '')
+    UpdateObject = updPasaje
+    Left = 513
+    Top = 502
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOAUXILIO'
+        ParamType = ptUnknown
+      end>
+    object qPasajeCODIGOAUXILIODETALLE: TFloatField
+      FieldName = 'CODIGOAUXILIODETALLE'
+      Origin = 'ODTAUXILIODETALLE.CODIGOAUXILIODETALLE'
+    end
+    object qPasajeCODIGOAUXILIO: TFloatField
+      FieldName = 'CODIGOAUXILIO'
+      Origin = 'ODTAUXILIODETALLE.CODIGOAUXILIO'
+    end
+    object qPasajeCODIGOIMPUTACIONMANOOBRA: TFloatField
+      FieldName = 'CODIGOIMPUTACIONMANOOBRA'
+      Origin = 'ODTAUXILIODETALLE.CODIGOIMPUTACIONMANOOBRA'
+    end
+    object qPasajeVALORIMPUTACION: TFloatField
+      FieldName = 'VALORIMPUTACION'
+      Origin = 'ODTAUXILIODETALLE.VALORIMPUTACION'
+      OnChange = qPasajeVALORIMPUTACIONChange
+      currency = True
+    end
+    object qPasajeNUMEROIMPUTACION: TFloatField
+      FieldName = 'NUMEROIMPUTACION'
+      Origin = 'IMPUTACIONMANOOBRA.NUMEROIMPUTACION'
+    end
+    object qPasajeAUXILIAR: TFloatField
+      FieldName = 'AUXILIAR'
+      Origin = 'IMPUTACIONMANOOBRA.AUXILIAR'
+    end
+    object qPasajeDESCRIPCIONIMPUTACIONMANOOBRA: TStringField
+      FieldName = 'DESCRIPCIONIMPUTACIONMANOOBRA'
+      Origin = 'IMPUTACIONMANOOBRA.DESCRIPCIONIMPUTACIONMANOOBRA'
+      Size = 100
+    end
+  end
+  object qGasolina: TQuery
+    CachedUpdates = True
+    AfterInsert = qGasolinaAfterInsert
+    AfterPost = qGasolinaAfterPost
+    DatabaseName = 'BaseDato'
+    DataSource = dsAuxilio
+    SQL.Strings = (
+      'SELECT VD.CODIGOAUXILIODETALLE,VD.CODIGOAUXILIO,'
+      'VD.CODIGOIMPUTACIONMANOOBRA,VD.VALORIMPUTACION,'
+      
+        'IMO.NUMEROIMPUTACION,IMO.AUXILIAR,IMO.DESCRIPCIONIMPUTACIONMANOO' +
+        'BRA'
+      'FROM ODTAUXILIODETALLE VD,IMPUTACIONMANOOBRA IMO,ODTAUXILIO V'
+      'WHERE VD.CODIGOIMPUTACIONMANOOBRA = IMO.CODIGOIMPUTACIONMANOOBRA'
+      'AND VD.CODIGOAUXILIO = :CODIGOAUXILIO'
+      'AND V.CODIGOAUXILIO=VD.CODIGOAUXILIO'
+      'AND IMO.VIGENCIADESDE<=V.FECHAINICIO'
+      'AND (IMO.VIGENCIAHASTA>=V.FECHAFIN OR IMO.VIGENCIAHASTA IS NULL)'
+      'AND IMO.CODIGOTIPOIMPUTACIONODT='#39'A'#39
+      'AND IMO.CODIGOSUBTIPOIMPUTACIONODT='#39'GAS'#39)
+    UpdateObject = updGasolina
+    Left = 513
+    Top = 555
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOAUXILIO'
+        ParamType = ptUnknown
+      end>
+    object qGasolinaCODIGOAUXILIODETALLE: TFloatField
+      FieldName = 'CODIGOAUXILIODETALLE'
+      Origin = 'ODTAUXILIODETALLE.CODIGOAUXILIODETALLE'
+    end
+    object qGasolinaCODIGOAUXILIO: TFloatField
+      FieldName = 'CODIGOAUXILIO'
+      Origin = 'ODTAUXILIODETALLE.CODIGOAUXILIO'
+    end
+    object qGasolinaCODIGOIMPUTACIONMANOOBRA: TFloatField
+      FieldName = 'CODIGOIMPUTACIONMANOOBRA'
+      Origin = 'ODTAUXILIODETALLE.CODIGOIMPUTACIONMANOOBRA'
+    end
+    object qGasolinaVALORIMPUTACION: TFloatField
+      FieldName = 'VALORIMPUTACION'
+      Origin = 'ODTAUXILIODETALLE.VALORIMPUTACION'
+      OnChange = qGasolinaVALORIMPUTACIONChange
+      OnValidate = qGasolinaVALORIMPUTACIONValidate
+      currency = True
+    end
+    object qGasolinaNUMEROIMPUTACION: TFloatField
+      FieldName = 'NUMEROIMPUTACION'
+      Origin = 'IMPUTACIONMANOOBRA.NUMEROIMPUTACION'
+    end
+    object qGasolinaAUXILIAR: TFloatField
+      FieldName = 'AUXILIAR'
+      Origin = 'IMPUTACIONMANOOBRA.AUXILIAR'
+    end
+    object qGasolinaDESCRIPCIONIMPUTACIONMANOOBRA: TStringField
+      FieldName = 'DESCRIPCIONIMPUTACIONMANOOBRA'
+      Origin = 'IMPUTACIONMANOOBRA.DESCRIPCIONIMPUTACIONMANOOBRA'
+      Size = 100
+    end
+  end
+  object qParqueo: TQuery
+    CachedUpdates = True
+    AfterInsert = qParqueoAfterInsert
+    AfterPost = qParqueoAfterPost
+    DatabaseName = 'BaseDato'
+    DataSource = dsAuxilio
+    SQL.Strings = (
+      'SELECT VD.CODIGOAUXILIODETALLE,VD.CODIGOAUXILIO,'
+      'VD.CODIGOIMPUTACIONMANOOBRA,VD.VALORIMPUTACION,'
+      
+        'IMO.NUMEROIMPUTACION,IMO.AUXILIAR,IMO.DESCRIPCIONIMPUTACIONMANOO' +
+        'BRA'
+      'FROM ODTAUXILIODETALLE VD,IMPUTACIONMANOOBRA IMO,ODTAUXILIO V'
+      'WHERE VD.CODIGOIMPUTACIONMANOOBRA = IMO.CODIGOIMPUTACIONMANOOBRA'
+      'AND VD.CODIGOAUXILIO = :CODIGOAUXILIO'
+      'AND V.CODIGOAUXILIO=VD.CODIGOAUXILIO'
+      'AND IMO.VIGENCIADESDE<=V.FECHAINICIO'
+      'AND (IMO.VIGENCIAHASTA>=V.FECHAFIN OR IMO.VIGENCIAHASTA IS NULL)'
+      'AND IMO.CODIGOTIPOIMPUTACIONODT='#39'A'#39
+      'AND IMO.CODIGOSUBTIPOIMPUTACIONODT='#39'PAR'#39
+      ''
+      '')
+    UpdateObject = updParqueo
+    Left = 513
+    Top = 610
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOAUXILIO'
+        ParamType = ptUnknown
+      end>
+    object qParqueoCODIGOAUXILIODETALLE: TFloatField
+      FieldName = 'CODIGOAUXILIODETALLE'
+      Origin = 'ODTAUXILIODETALLE.CODIGOAUXILIODETALLE'
+    end
+    object qParqueoCODIGOAUXILIO: TFloatField
+      FieldName = 'CODIGOAUXILIO'
+      Origin = 'ODTAUXILIODETALLE.CODIGOAUXILIO'
+    end
+    object qParqueoCODIGOIMPUTACIONMANOOBRA: TFloatField
+      FieldName = 'CODIGOIMPUTACIONMANOOBRA'
+      Origin = 'ODTAUXILIODETALLE.CODIGOIMPUTACIONMANOOBRA'
+    end
+    object qParqueoVALORIMPUTACION: TFloatField
+      FieldName = 'VALORIMPUTACION'
+      Origin = 'ODTAUXILIODETALLE.VALORIMPUTACION'
+      OnChange = qParqueoVALORIMPUTACIONChange
+      OnValidate = qParqueoVALORIMPUTACIONValidate
+      currency = True
+    end
+    object qParqueoNUMEROIMPUTACION: TFloatField
+      FieldName = 'NUMEROIMPUTACION'
+      Origin = 'IMPUTACIONMANOOBRA.NUMEROIMPUTACION'
+    end
+    object qParqueoAUXILIAR: TFloatField
+      FieldName = 'AUXILIAR'
+      Origin = 'IMPUTACIONMANOOBRA.AUXILIAR'
+    end
+    object qParqueoDESCRIPCIONIMPUTACIONMANOOBRA: TStringField
+      FieldName = 'DESCRIPCIONIMPUTACIONMANOOBRA'
+      Origin = 'IMPUTACIONMANOOBRA.DESCRIPCIONIMPUTACIONMANOOBRA'
+      Size = 100
+    end
+  end
+  object updParqueo: TUpdateSQL
+    ModifySQL.Strings = (
+      'update ODTAUXILIODETALLE'
+      'set'
+      '  CODIGOAUXILIODETALLE = :CODIGOAUXILIODETALLE,'
+      '  CODIGOAUXILIO = :CODIGOAUXILIO,'
+      '  CODIGOIMPUTACIONMANOOBRA = :CODIGOIMPUTACIONMANOOBRA,'
+      '  VALORIMPUTACION = :VALORIMPUTACION'
+      'where'
+      '  CODIGOAUXILIO = :OLD_CODIGOAUXILIO and'
+      '  CODIGOIMPUTACIONMANOOBRA = :OLD_CODIGOIMPUTACIONMANOOBRA')
+    InsertSQL.Strings = (
+      'insert into ODTAUXILIODETALLE'
+      
+        '  (CODIGOAUXILIODETALLE, CODIGOAUXILIO, CODIGOIMPUTACIONMANOOBRA' +
+        ', VALORIMPUTACION)'
+      'values'
+      
+        '  (:CODIGOAUXILIODETALLE, :CODIGOAUXILIO, :CODIGOIMPUTACIONMANOO' +
+        'BRA, :VALORIMPUTACION)')
+    DeleteSQL.Strings = (
+      'delete from ODTAUXILIODETALLE'
+      'where'
+      '  CODIGOAUXILIO = :OLD_CODIGOAUXILIO and'
+      '  CODIGOIMPUTACIONMANOOBRA = :OLD_CODIGOIMPUTACIONMANOOBRA')
+    Left = 661
+    Top = 609
+  end
+  object dsParqueo: TDataSource
+    DataSet = qParqueo
+    Left = 588
+    Top = 609
+  end
+  object dsGasolina: TDataSource
+    DataSet = qGasolina
+    Left = 588
+    Top = 555
+  end
+  object updGasolina: TUpdateSQL
+    ModifySQL.Strings = (
+      'update ODTAUXILIODETALLE'
+      'set'
+      '  CODIGOAUXILIODETALLE = :CODIGOAUXILIODETALLE,'
+      '  CODIGOAUXILIO = :CODIGOAUXILIO,'
+      '  CODIGOIMPUTACIONMANOOBRA = :CODIGOIMPUTACIONMANOOBRA,'
+      '  VALORIMPUTACION = :VALORIMPUTACION'
+      'where'
+      '  CODIGOAUXILIO = :OLD_CODIGOAUXILIO and'
+      '  CODIGOIMPUTACIONMANOOBRA = :OLD_CODIGOIMPUTACIONMANOOBRA')
+    InsertSQL.Strings = (
+      'insert into ODTAUXILIODETALLE'
+      
+        '  (CODIGOAUXILIODETALLE, CODIGOAUXILIO, CODIGOIMPUTACIONMANOOBRA' +
+        ', VALORIMPUTACION)'
+      'values'
+      
+        '  (:CODIGOAUXILIODETALLE, :CODIGOAUXILIO, :CODIGOIMPUTACIONMANOO' +
+        'BRA, :VALORIMPUTACION)')
+    DeleteSQL.Strings = (
+      'delete from ODTAUXILIODETALLE'
+      'where'
+      '  CODIGOAUXILIO = :OLD_CODIGOAUXILIO and'
+      '  CODIGOIMPUTACIONMANOOBRA = :OLD_CODIGOIMPUTACIONMANOOBRA')
+    Left = 661
+    Top = 556
+  end
+  object updPasaje: TUpdateSQL
+    ModifySQL.Strings = (
+      'update ODTAUXILIODETALLE'
+      'set'
+      '  CODIGOAUXILIODETALLE = :CODIGOAUXILIODETALLE,'
+      '  CODIGOAUXILIO = :CODIGOAUXILIO,'
+      '  CODIGOIMPUTACIONMANOOBRA = :CODIGOIMPUTACIONMANOOBRA,'
+      '  VALORIMPUTACION = :VALORIMPUTACION'
+      'where'
+      '  CODIGOAUXILIO = :OLD_CODIGOAUXILIO and'
+      '  CODIGOIMPUTACIONMANOOBRA = :OLD_CODIGOIMPUTACIONMANOOBRA')
+    InsertSQL.Strings = (
+      'insert into ODTAUXILIODETALLE'
+      
+        '  (CODIGOAUXILIODETALLE, CODIGOAUXILIO, CODIGOIMPUTACIONMANOOBRA' +
+        ', VALORIMPUTACION)'
+      'values'
+      
+        '  (:CODIGOAUXILIODETALLE, :CODIGOAUXILIO, :CODIGOIMPUTACIONMANOO' +
+        'BRA, :VALORIMPUTACION)')
+    DeleteSQL.Strings = (
+      'delete from ODTAUXILIODETALLE'
+      'where'
+      '  CODIGOAUXILIO = :OLD_CODIGOAUXILIO and'
+      '  CODIGOIMPUTACIONMANOOBRA = :OLD_CODIGOIMPUTACIONMANOOBRA')
+    Left = 661
+    Top = 502
+  end
+  object dsPasaje: TDataSource
+    DataSet = qPasaje
+    Left = 588
+    Top = 502
+  end
+  object dsPeaje: TDataSource
+    DataSet = qPeaje
+    Left = 588
+    Top = 452
+  end
+  object updValorDesayuno: TUpdateSQL
+    ModifySQL.Strings = (
+      'update ODTAUXILIODETALLE'
+      'set'
+      '  CODIGOAUXILIODETALLE = :CODIGOAUXILIODETALLE,'
+      '  CODIGOAUXILIO = :CODIGOAUXILIO,'
+      '  CODIGOIMPUTACIONMANOOBRA = :CODIGOIMPUTACIONMANOOBRA,'
+      '  VALORIMPUTACION = :VALORIMPUTACION'
+      'where'
+      '  CODIGOAUXILIO = :OLD_CODIGOAUXILIO and'
+      '  CODIGOIMPUTACIONMANOOBRA = :OLD_CODIGOIMPUTACIONMANOOBRA')
+    InsertSQL.Strings = (
+      'insert into ODTAUXILIODETALLE'
+      
+        '  (CODIGOAUXILIODETALLE, CODIGOAUXILIO, CODIGOIMPUTACIONMANOOBRA' +
+        ', VALORIMPUTACION)'
+      'values'
+      
+        '  (:CODIGOAUXILIODETALLE, :CODIGOAUXILIO, :CODIGOIMPUTACIONMANOO' +
+        'BRA, :VALORIMPUTACION)')
+    DeleteSQL.Strings = (
+      'delete from ODTAUXILIODETALLE'
+      'where'
+      '  CODIGOAUXILIO = :OLD_CODIGOAUXILIO and'
+      '  CODIGOIMPUTACIONMANOOBRA = :OLD_CODIGOIMPUTACIONMANOOBRA')
+    Left = 664
+    Top = 294
+  end
+  object dsValorDesayuno: TDataSource
+    DataSet = qValorDesayuno
+    Left = 589
+    Top = 294
+  end
+  object updPeaje: TUpdateSQL
+    ModifySQL.Strings = (
+      'update ODTAUXILIODETALLE'
+      'set'
+      '  CODIGOAUXILIODETALLE = :CODIGOAUXILIODETALLE,'
+      '  CODIGOAUXILIO = :CODIGOAUXILIO,'
+      '  CODIGOIMPUTACIONMANOOBRA = :CODIGOIMPUTACIONMANOOBRA,'
+      '  VALORIMPUTACION = :VALORIMPUTACION'
+      'where'
+      '  CODIGOAUXILIO = :OLD_CODIGOAUXILIO and'
+      '  CODIGOIMPUTACIONMANOOBRA = :OLD_CODIGOIMPUTACIONMANOOBRA')
+    InsertSQL.Strings = (
+      'insert into ODTAUXILIODETALLE'
+      
+        '  (CODIGOAUXILIODETALLE, CODIGOAUXILIO, CODIGOIMPUTACIONMANOOBRA' +
+        ', VALORIMPUTACION)'
+      'values'
+      
+        '  (:CODIGOAUXILIODETALLE, :CODIGOAUXILIO, :CODIGOIMPUTACIONMANOO' +
+        'BRA, :VALORIMPUTACION)')
+    DeleteSQL.Strings = (
+      'delete from ODTAUXILIODETALLE'
+      'where'
+      '  CODIGOAUXILIO = :OLD_CODIGOAUXILIO and'
+      '  CODIGOIMPUTACIONMANOOBRA = :OLD_CODIGOIMPUTACIONMANOOBRA')
+    Left = 661
+    Top = 453
+  end
+  object qValorAlmuerzo: TQuery
+    CachedUpdates = True
+    AfterInsert = qValorAlmuerzoAfterInsert
+    AfterPost = qValorAlmuerzoAfterPost
+    DatabaseName = 'BaseDato'
+    DataSource = dsAuxilio
+    SQL.Strings = (
+      'SELECT VD.CODIGOAUXILIODETALLE,VD.CODIGOAUXILIO,'
+      'VD.CODIGOIMPUTACIONMANOOBRA,VD.VALORIMPUTACION,'
+      
+        'IMO.NUMEROIMPUTACION,IMO.AUXILIAR,IMO.DESCRIPCIONIMPUTACIONMANOO' +
+        'BRA'
+      'FROM ODTAUXILIODETALLE VD,IMPUTACIONMANOOBRA IMO,ODTAUXILIO V'
+      'WHERE VD.CODIGOIMPUTACIONMANOOBRA = IMO.CODIGOIMPUTACIONMANOOBRA'
+      'AND VD.CODIGOAUXILIO = :CODIGOAUXILIO'
+      'AND V.CODIGOAUXILIO=VD.CODIGOAUXILIO'
+      'AND IMO.VIGENCIADESDE<=V.FECHAINICIO'
+      'AND (IMO.VIGENCIAHASTA>=V.FECHAFIN OR IMO.VIGENCIAHASTA IS NULL)'
+      'AND IMO.CODIGOTIPOIMPUTACIONODT='#39'A'#39
+      'AND IMO.CODIGOSUBTIPOIMPUTACIONODT='#39'ALM'#39
+      '')
+    UpdateObject = updValorAlmuerzo
+    Left = 513
+    Top = 344
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOAUXILIO'
+        ParamType = ptUnknown
+      end>
+    object qValorAlmuerzoCODIGOAUXILIODETALLE: TFloatField
+      FieldName = 'CODIGOAUXILIODETALLE'
+      Origin = 'ODTAUXILIODETALLE.CODIGOAUXILIODETALLE'
+    end
+    object qValorAlmuerzoCODIGOAUXILIO: TFloatField
+      FieldName = 'CODIGOAUXILIO'
+      Origin = 'ODTAUXILIODETALLE.CODIGOAUXILIO'
+    end
+    object qValorAlmuerzoCODIGOIMPUTACIONMANOOBRA: TFloatField
+      FieldName = 'CODIGOIMPUTACIONMANOOBRA'
+      Origin = 'ODTAUXILIODETALLE.CODIGOIMPUTACIONMANOOBRA'
+    end
+    object qValorAlmuerzoVALORIMPUTACION: TFloatField
+      FieldName = 'VALORIMPUTACION'
+      Origin = 'ODTAUXILIODETALLE.VALORIMPUTACION'
+      OnChange = qValorAlmuerzoVALORIMPUTACIONChange
+      currency = True
+    end
+    object qValorAlmuerzoNUMEROIMPUTACION: TFloatField
+      FieldName = 'NUMEROIMPUTACION'
+      Origin = 'IMPUTACIONMANOOBRA.NUMEROIMPUTACION'
+    end
+    object qValorAlmuerzoAUXILIAR: TFloatField
+      FieldName = 'AUXILIAR'
+      Origin = 'IMPUTACIONMANOOBRA.AUXILIAR'
+    end
+    object qValorAlmuerzoDESCRIPCIONIMPUTACIONMANOOBRA: TStringField
+      FieldName = 'DESCRIPCIONIMPUTACIONMANOOBRA'
+      Origin = 'IMPUTACIONMANOOBRA.DESCRIPCIONIMPUTACIONMANOOBRA'
+      Size = 100
+    end
+  end
+  object dsValorAlmuerzo: TDataSource
+    DataSet = qValorAlmuerzo
+    Left = 589
+    Top = 342
+  end
+  object updValorAlmuerzo: TUpdateSQL
+    ModifySQL.Strings = (
+      'update ODTAUXILIODETALLE'
+      'set'
+      '  CODIGOAUXILIODETALLE = :CODIGOAUXILIODETALLE,'
+      '  CODIGOAUXILIO = :CODIGOAUXILIO,'
+      '  CODIGOIMPUTACIONMANOOBRA = :CODIGOIMPUTACIONMANOOBRA,'
+      '  VALORIMPUTACION = :VALORIMPUTACION'
+      'where'
+      '  CODIGOAUXILIO = :OLD_CODIGOAUXILIO and'
+      '  CODIGOIMPUTACIONMANOOBRA = :OLD_CODIGOIMPUTACIONMANOOBRA')
+    InsertSQL.Strings = (
+      'insert into ODTAUXILIODETALLE'
+      
+        '  (CODIGOAUXILIODETALLE, CODIGOAUXILIO, CODIGOIMPUTACIONMANOOBRA' +
+        ', VALORIMPUTACION)'
+      'values'
+      
+        '  (:CODIGOAUXILIODETALLE, :CODIGOAUXILIO, :CODIGOIMPUTACIONMANOO' +
+        'BRA, :VALORIMPUTACION)')
+    DeleteSQL.Strings = (
+      'delete from ODTAUXILIODETALLE'
+      'where'
+      '  CODIGOAUXILIO = :OLD_CODIGOAUXILIO and'
+      '  CODIGOIMPUTACIONMANOOBRA = :OLD_CODIGOIMPUTACIONMANOOBRA')
+    Left = 664
+    Top = 342
+  end
+  object qValorComida: TQuery
+    CachedUpdates = True
+    AfterInsert = qValorComidaAfterInsert
+    AfterPost = qValorComidaAfterPost
+    DatabaseName = 'BaseDato'
+    DataSource = dsAuxilio
+    SQL.Strings = (
+      'SELECT VD.CODIGOAUXILIODETALLE,VD.CODIGOAUXILIO,'
+      'VD.CODIGOIMPUTACIONMANOOBRA,VD.VALORIMPUTACION,'
+      
+        'IMO.NUMEROIMPUTACION,IMO.AUXILIAR,IMO.DESCRIPCIONIMPUTACIONMANOO' +
+        'BRA'
+      'FROM ODTAUXILIODETALLE VD,IMPUTACIONMANOOBRA IMO,ODTAUXILIO V'
+      'WHERE VD.CODIGOIMPUTACIONMANOOBRA = IMO.CODIGOIMPUTACIONMANOOBRA'
+      'AND VD.CODIGOAUXILIO = :CODIGOAUXILIO'
+      'AND V.CODIGOAUXILIO=VD.CODIGOAUXILIO'
+      'AND IMO.VIGENCIADESDE<=V.FECHAINICIO'
+      'AND (IMO.VIGENCIAHASTA>=V.FECHAFIN OR IMO.VIGENCIAHASTA IS NULL)'
+      'AND IMO.CODIGOTIPOIMPUTACIONODT='#39'A'#39
+      'AND IMO.CODIGOSUBTIPOIMPUTACIONODT='#39'COM'#39
+      '')
+    UpdateObject = updValorComida
+    Left = 513
+    Top = 398
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOAUXILIO'
+        ParamType = ptUnknown
+      end>
+    object qValorComidaCODIGOAUXILIODETALLE: TFloatField
+      FieldName = 'CODIGOAUXILIODETALLE'
+      Origin = 'ODTAUXILIODETALLE.CODIGOAUXILIODETALLE'
+    end
+    object qValorComidaCODIGOAUXILIO: TFloatField
+      FieldName = 'CODIGOAUXILIO'
+      Origin = 'ODTAUXILIODETALLE.CODIGOAUXILIO'
+    end
+    object qValorComidaCODIGOIMPUTACIONMANOOBRA: TFloatField
+      FieldName = 'CODIGOIMPUTACIONMANOOBRA'
+      Origin = 'ODTAUXILIODETALLE.CODIGOIMPUTACIONMANOOBRA'
+    end
+    object qValorComidaVALORIMPUTACION: TFloatField
+      FieldName = 'VALORIMPUTACION'
+      Origin = 'ODTAUXILIODETALLE.VALORIMPUTACION'
+      OnChange = qValorComidaVALORIMPUTACIONChange
+      currency = True
+    end
+    object qValorComidaNUMEROIMPUTACION: TFloatField
+      FieldName = 'NUMEROIMPUTACION'
+      Origin = 'IMPUTACIONMANOOBRA.NUMEROIMPUTACION'
+    end
+    object qValorComidaAUXILIAR: TFloatField
+      FieldName = 'AUXILIAR'
+      Origin = 'IMPUTACIONMANOOBRA.AUXILIAR'
+    end
+    object qValorComidaDESCRIPCIONIMPUTACIONMANOOBRA: TStringField
+      FieldName = 'DESCRIPCIONIMPUTACIONMANOOBRA'
+      Origin = 'IMPUTACIONMANOOBRA.DESCRIPCIONIMPUTACIONMANOOBRA'
+      Size = 100
+    end
+  end
+  object dsValorComida: TDataSource
+    DataSet = qValorComida
+    Left = 589
+    Top = 398
+  end
+  object updValorComida: TUpdateSQL
+    ModifySQL.Strings = (
+      'update ODTAUXILIODETALLE'
+      'set'
+      '  CODIGOAUXILIODETALLE = :CODIGOAUXILIODETALLE,'
+      '  CODIGOAUXILIO = :CODIGOAUXILIO,'
+      '  CODIGOIMPUTACIONMANOOBRA = :CODIGOIMPUTACIONMANOOBRA,'
+      '  VALORIMPUTACION = :VALORIMPUTACION'
+      'where'
+      '  CODIGOAUXILIO = :OLD_CODIGOAUXILIO and'
+      '  CODIGOIMPUTACIONMANOOBRA = :OLD_CODIGOIMPUTACIONMANOOBRA')
+    InsertSQL.Strings = (
+      'insert into ODTAUXILIODETALLE'
+      
+        '  (CODIGOAUXILIODETALLE, CODIGOAUXILIO, CODIGOIMPUTACIONMANOOBRA' +
+        ', '
+      'VALORIMPUTACION)'
+      'values'
+      '  (:CODIGOAUXILIODETALLE, :CODIGOAUXILIO, '
+      ':CODIGOIMPUTACIONMANOOBRA, :VALORIMPUTACION)')
+    DeleteSQL.Strings = (
+      'delete from ODTAUXILIODETALLE'
+      'where'
+      '  CODIGOAUXILIO = :OLD_CODIGOAUXILIO and'
+      '  CODIGOIMPUTACIONMANOOBRA = :OLD_CODIGOIMPUTACIONMANOOBRA')
+    Left = 664
+    Top = 398
+  end
+  object qResponsableCobro: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsAuxilio
+    SQL.Strings = (
+      'SELECT COUNT(*) FROM ODTAUXILIO'
+      'WHERE RESPONSABLECOBRO='#39'S'#39
+      'AND CODIGOEMPLEADO<>:CODIGOEMPLEADO'
+      'AND CODIGOODT=:CODIGOODT')
+    Left = 39
+    Top = 370
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOEMPLEADO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end>
+  end
+  object qOdtVehiculo: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsAuxilio
+    SQL.Strings = (
+      'SELECT OV.*,P.* FROM ODTVEHICULO OV,VEHICULO V, PROPIETARIO P '
+      'WHERE CODIGOODT=:CODIGOODT'
+      'AND OV.CODIGOVEHICULO=V.CODIGOVEHICULO'
+      'AND P.CODIGOPROPIETARIO=V.CODIGOPROPIETARIO'
+      'ORDER BY CONSECUTIVO')
+    Left = 38
+    Top = 451
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end>
+    object qOdtVehiculoCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'ODTVEHICULO.CODIGOODT'
+    end
+    object qOdtVehiculoCONSECUTIVO: TFloatField
+      FieldName = 'CONSECUTIVO'
+      Origin = 'ODTVEHICULO.CONSECUTIVO'
+    end
+    object qOdtVehiculoCODIGOVEHICULO: TStringField
+      FieldName = 'CODIGOVEHICULO'
+      Origin = 'ODTVEHICULO.CODIGOVEHICULO'
+      Size = 10
+    end
+    object qOdtVehiculoCODIGOPROPIETARIO: TStringField
+      FieldName = 'CODIGOPROPIETARIO'
+      Origin = 'PROPIETARIO.CODIGOPROPIETARIO'
+      Size = 1
+    end
+    object qOdtVehiculoNOMBREPROPIETARIO: TStringField
+      FieldName = 'NOMBREPROPIETARIO'
+      Origin = 'PROPIETARIO.NOMBREPROPIETARIO'
+      Size = 30
+    end
+  end
+  object dsOdtVehiculo: TDataSource
+    DataSet = qOdtVehiculo
+    Left = 36
+    Top = 499
+  end
+  object qOdt: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsAuxilio
+    SQL.Strings = (
+      'SELECT * FROM ODT'
+      'WHERE CODIGOODT=:CODIGOODT')
+    Left = 794
+    Top = 16
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end>
+    object qOdtCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'ODT.CODIGOODT'
+    end
+    object qOdtFECHAEMISION: TDateTimeField
+      FieldName = 'FECHAEMISION'
+      Origin = 'ODT.FECHAEMISION'
+    end
+    object qOdtMOTIVOS: TMemoField
+      FieldName = 'MOTIVOS'
+      Origin = 'ODT.MOTIVOS'
+      BlobType = ftMemo
+      Size = 500
+    end
+    object qOdtCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'ODT.CODIGOADMINISTRATIVO'
+    end
+    object qOdtCODIGOPRIORIDAD: TStringField
+      FieldName = 'CODIGOPRIORIDAD'
+      Origin = 'ODT.CODIGOPRIORIDAD'
+      Size = 1
+    end
+    object qOdtCODIGOLABOR: TStringField
+      FieldName = 'CODIGOLABOR'
+      Origin = 'ODT.CODIGOLABOR'
+      Size = 3
+    end
+    object qOdtCODIGOTIPOTAREA: TFloatField
+      FieldName = 'CODIGOTIPOTAREA'
+      Origin = 'ODT.CODIGOTIPOTAREA'
+    end
+    object qOdtCODIGOAPROBADO: TFloatField
+      FieldName = 'CODIGOAPROBADO'
+      Origin = 'ODT.CODIGOAPROBADO'
+    end
+    object qOdtCODIGOREVISADO: TFloatField
+      FieldName = 'CODIGOREVISADO'
+      Origin = 'ODT.CODIGOREVISADO'
+    end
+    object qOdtCODIGOODTTIPOMANOOBRA: TFloatField
+      FieldName = 'CODIGOODTTIPOMANOOBRA'
+      Origin = 'ODT.CODIGOODTTIPOMANOOBRA'
+    end
+    object qOdtCODIGOEJECUTOR: TFloatField
+      FieldName = 'CODIGOEJECUTOR'
+      Origin = 'ODT.CODIGOEJECUTOR'
+    end
+    object qOdtCODIGOFIRMANTE: TFloatField
+      FieldName = 'CODIGOFIRMANTE'
+      Origin = 'ODT.CODIGOFIRMANTE'
+    end
+    object qOdtEQUIPOENERGIZADO: TStringField
+      FieldName = 'EQUIPOENERGIZADO'
+      Origin = 'ODT.EQUIPOENERGIZADO'
+      Size = 1
+    end
+    object qOdtFECHAAPROBACION: TDateTimeField
+      FieldName = 'FECHAAPROBACION'
+      Origin = 'ODT.FECHAAPROBACION'
+    end
+    object qOdtFECHAASIGNACION: TDateTimeField
+      FieldName = 'FECHAASIGNACION'
+      Origin = 'ODT.FECHAASIGNACION'
+    end
+    object qOdtIMPUTACIONMATERIAL: TStringField
+      FieldName = 'IMPUTACIONMATERIAL'
+      Origin = 'ODT.IMPUTACIONMATERIAL'
+    end
+    object qOdtCOSTOMATERIAL: TFloatField
+      FieldName = 'COSTOMATERIAL'
+      Origin = 'ODT.COSTOMATERIAL'
+    end
+    object qOdtCOSTOMANOOBRA: TFloatField
+      FieldName = 'COSTOMANOOBRA'
+      Origin = 'ODT.COSTOMANOOBRA'
+    end
+    object qOdtCOSTOTRANSPORTE: TFloatField
+      FieldName = 'COSTOTRANSPORTE'
+      Origin = 'ODT.COSTOTRANSPORTE'
+    end
+    object qOdtCOSTOEQUIPO: TFloatField
+      FieldName = 'COSTOEQUIPO'
+      Origin = 'ODT.COSTOEQUIPO'
+    end
+    object qOdtCODIGOALMACEN: TStringField
+      FieldName = 'CODIGOALMACEN'
+      Origin = 'ODT.CODIGOALMACEN'
+      Size = 3
+    end
+    object qOdtCODIGOESTADOODT: TStringField
+      FieldName = 'CODIGOESTADOODT'
+      Origin = 'ODT.CODIGOESTADOODT'
+      Size = 1
+    end
+    object qOdtHORARIONORMALDESDE: TDateTimeField
+      FieldName = 'HORARIONORMALDESDE'
+      Origin = 'ODT.HORARIONORMALDESDE'
+    end
+    object qOdtHORARIONORMALHASTA: TDateTimeField
+      FieldName = 'HORARIONORMALHASTA'
+      Origin = 'ODT.HORARIONORMALHASTA'
+    end
+    object qOdtCODIGOTURNOGRUPO: TFloatField
+      FieldName = 'CODIGOTURNOGRUPO'
+      Origin = 'ODT.CODIGOTURNOGRUPO'
+    end
+    object qOdtCODIGOZONATRABAJO: TFloatField
+      FieldName = 'CODIGOZONATRABAJO'
+      Origin = 'ODT.CODIGOZONATRABAJO'
+    end
+    object qOdtCODIGOIMPUTACIONMATERIAL: TFloatField
+      FieldName = 'CODIGOIMPUTACIONMATERIAL'
+      Origin = 'ODT.CODIGOIMPUTACIONMATERIAL'
+    end
+    object qOdtNOTAS: TMemoField
+      FieldName = 'NOTAS'
+      Origin = 'ODT.NOTAS'
+      BlobType = ftMemo
+      Size = 500
+    end
+    object qOdtSECUENCIA: TStringField
+      FieldName = 'SECUENCIA'
+      Origin = 'ODT.SECUENCIA'
+      Size = 200
+    end
+    object qOdtCODIGOMUNICIPIO: TFloatField
+      FieldName = 'CODIGOMUNICIPIO'
+      Origin = 'ODT.CODIGOMUNICIPIO'
+    end
+    object qOdtFECHAINICIO: TDateTimeField
+      FieldName = 'FECHAINICIO'
+      Origin = 'ODT.FECHAINICIO'
+    end
+    object qOdtCODIGOZONAORIGEN: TFloatField
+      FieldName = 'CODIGOZONAORIGEN'
+      Origin = 'ODT.CODIGOZONAORIGEN'
+    end
+    object qOdtCODIGOCONTRATISTA: TStringField
+      FieldName = 'CODIGOCONTRATISTA'
+      Origin = 'ODT.CODIGOCONTRATISTA'
+      Size = 14
+    end
+    object qOdtCODIGOAREAINFLUENCIA: TStringField
+      FieldName = 'CODIGOAREAINFLUENCIA'
+      Origin = 'ODT.CODIGOAREAINFLUENCIA'
+      Size = 1
+    end
+    object qOdtFECHAFINAL: TDateTimeField
+      FieldName = 'FECHAFINAL'
+      Origin = 'ODT.FECHAFINAL'
+    end
+  end
+  object dsOdt: TDataSource
+    DataSet = qOdt
+    Left = 883
+    Top = 17
+  end
+  object spF_ODTALIMENTACION: TStoredProc
+    DatabaseName = 'BaseDato'
+    StoredProcName = 'F_ODTALIMENTACION'
+    Left = 136
+    Top = 420
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'Result'
+        ParamType = ptResult
+      end
+      item
+        DataType = ftString
+        Name = 'VARCODIGO'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftDateTime
+        Name = 'VARDESDE'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftDateTime
+        Name = 'VARHASTA'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftFloat
+        Name = 'VARDESAYUNOS'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftFloat
+        Name = 'VARALMUERZOS'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftFloat
+        Name = 'VARCOMIDAS'
+        ParamType = ptInput
+      end>
+  end
+  object qReparacion: TQuery
+    CachedUpdates = True
+    AfterInsert = qReparacionAfterInsert
+    AfterPost = qReparacionAfterPost
+    DatabaseName = 'BaseDato'
+    DataSource = dsAuxilio
+    SQL.Strings = (
+      'SELECT VD.CODIGOAUXILIODETALLE,VD.CODIGOAUXILIO,'
+      'VD.CODIGOIMPUTACIONMANOOBRA,VD.VALORIMPUTACION,'
+      
+        'IMO.NUMEROIMPUTACION,IMO.AUXILIAR,IMO.DESCRIPCIONIMPUTACIONMANOO' +
+        'BRA'
+      'FROM ODTAUXILIODETALLE VD,IMPUTACIONMANOOBRA IMO,ODTAUXILIO V'
+      'WHERE VD.CODIGOIMPUTACIONMANOOBRA = IMO.CODIGOIMPUTACIONMANOOBRA'
+      'AND VD.CODIGOAUXILIO = :CODIGOAUXILIO'
+      'AND V.CODIGOAUXILIO=VD.CODIGOAUXILIO'
+      'AND IMO.VIGENCIADESDE<=V.FECHAINICIO'
+      'AND (IMO.VIGENCIAHASTA>=V.FECHAFIN OR IMO.VIGENCIAHASTA IS NULL)'
+      'AND IMO.CODIGOTIPOIMPUTACIONODT='#39'A'#39
+      'AND IMO.CODIGOSUBTIPOIMPUTACIONODT='#39'REP'#39
+      ''
+      '')
+    UpdateObject = updReparacion
+    Left = 513
+    Top = 659
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOAUXILIO'
+        ParamType = ptUnknown
+      end>
+    object qReparacionCODIGOAUXILIODETALLE: TFloatField
+      FieldName = 'CODIGOAUXILIODETALLE'
+      Origin = 'ODTAUXILIODETALLE.CODIGOAUXILIODETALLE'
+    end
+    object qReparacionCODIGOAUXILIO: TFloatField
+      FieldName = 'CODIGOAUXILIO'
+      Origin = 'ODTAUXILIODETALLE.CODIGOAUXILIO'
+    end
+    object qReparacionCODIGOIMPUTACIONMANOOBRA: TFloatField
+      FieldName = 'CODIGOIMPUTACIONMANOOBRA'
+      Origin = 'ODTAUXILIODETALLE.CODIGOIMPUTACIONMANOOBRA'
+    end
+    object qReparacionVALORIMPUTACION: TFloatField
+      FieldName = 'VALORIMPUTACION'
+      Origin = 'ODTAUXILIODETALLE.VALORIMPUTACION'
+      OnChange = qReparacionVALORIMPUTACIONChange
+      OnValidate = qReparacionVALORIMPUTACIONValidate
+      currency = True
+    end
+    object qReparacionNUMEROIMPUTACION: TFloatField
+      FieldName = 'NUMEROIMPUTACION'
+      Origin = 'IMPUTACIONMANOOBRA.NUMEROIMPUTACION'
+    end
+    object qReparacionAUXILIAR: TFloatField
+      FieldName = 'AUXILIAR'
+      Origin = 'IMPUTACIONMANOOBRA.AUXILIAR'
+    end
+    object qReparacionDESCRIPCIONIMPUTACIONMANOOBRA: TStringField
+      FieldName = 'DESCRIPCIONIMPUTACIONMANOOBRA'
+      Origin = 'IMPUTACIONMANOOBRA.DESCRIPCIONIMPUTACIONMANOOBRA'
+      Size = 100
+    end
+  end
+  object updReparacion: TUpdateSQL
+    ModifySQL.Strings = (
+      'update ODTAUXILIODETALLE'
+      'set'
+      '  CODIGOAUXILIODETALLE = :CODIGOAUXILIODETALLE,'
+      '  CODIGOAUXILIO = :CODIGOAUXILIO,'
+      '  CODIGOIMPUTACIONMANOOBRA = :CODIGOIMPUTACIONMANOOBRA,'
+      '  VALORIMPUTACION = :VALORIMPUTACION'
+      'where'
+      '  CODIGOAUXILIODETALLE = :OLD_CODIGOAUXILIODETALLE and'
+      '  CODIGOAUXILIO = :OLD_CODIGOAUXILIO and'
+      '  CODIGOIMPUTACIONMANOOBRA = :OLD_CODIGOIMPUTACIONMANOOBRA')
+    InsertSQL.Strings = (
+      'insert into ODTAUXILIODETALLE'
+      
+        '  (CODIGOAUXILIODETALLE, CODIGOAUXILIO, CODIGOIMPUTACIONMANOOBRA' +
+        ', VALORIMPUTACION)'
+      'values'
+      
+        '  (:CODIGOAUXILIODETALLE, :CODIGOAUXILIO, :CODIGOIMPUTACIONMANOO' +
+        'BRA, :VALORIMPUTACION)')
+    DeleteSQL.Strings = (
+      'delete from ODTAUXILIODETALLE'
+      'where'
+      '  CODIGOAUXILIODETALLE = :OLD_CODIGOAUXILIODETALLE and'
+      '  CODIGOAUXILIO = :OLD_CODIGOAUXILIO and'
+      '  CODIGOIMPUTACIONMANOOBRA = :OLD_CODIGOIMPUTACIONMANOOBRA')
+    Left = 661
+    Top = 658
+  end
+  object dsReparacion: TDataSource
+    DataSet = qReparacion
+    Left = 588
+    Top = 658
+  end
+  object qAuxilio: TQuery
+    CachedUpdates = True
+    AfterOpen = qAuxilioAfterOpen
+    AfterInsert = qAuxilioAfterInsert
+    BeforePost = qAuxilioBeforePost
+    AfterPost = qAuxilioAfterPost
+    OnCalcFields = qAuxilioCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM ODTAUXILIO'
+      'WHERE CODIGOODT=:CODIGOODT'
+      'AND CODIGOEMPLEADO=:CODIGOEMPLEADO'
+      'AND CODIGOAUXILIO=:CODIGOAUXILIO')
+    UpdateObject = updAuxilio
+    Left = 512
+    Top = 16
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOEMPLEADO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOAUXILIO'
+        ParamType = ptUnknown
+      end>
+    object qAuxilioTotalAlimentacion: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'TotalAlimentacion'
+      DisplayFormat = '###,###,###'
+      Calculated = True
+    end
+    object qAuxilioTotalOtrosGastos: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'TotalOtrosGastos'
+      DisplayFormat = '###,###,###'
+      Calculated = True
+    end
+    object qAuxilioTotalAuxilio: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'TotalAuxilio'
+      DisplayFormat = '###,###,###'
+      Calculated = True
+    end
+    object qAuxilioDias: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = 'Dias'
+      Calculated = True
+    end
+    object qAuxilioDiaInicio: TDateField
+      FieldKind = fkCalculated
+      FieldName = 'DiaInicio'
+      DisplayFormat = 'DD'
+      Calculated = True
+    end
+    object qAuxilioDiaFin: TDateField
+      FieldKind = fkCalculated
+      FieldName = 'DiaFin'
+      DisplayFormat = 'DD'
+      Calculated = True
+    end
+    object qAuxilioMesInicio: TDateField
+      FieldKind = fkCalculated
+      FieldName = 'MesInicio'
+      DisplayFormat = 'MMMM'
+      Calculated = True
+    end
+    object qAuxilioMesFin: TDateField
+      FieldKind = fkCalculated
+      FieldName = 'MesFin'
+      DisplayFormat = 'MMMM'
+      Calculated = True
+    end
+    object qAuxilioAnoInicio: TDateField
+      FieldKind = fkCalculated
+      FieldName = 'AnoInicio'
+      DisplayFormat = 'YYYY'
+      Calculated = True
+    end
+    object qAuxilioDiasDesayuno: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = 'DiasDesayuno'
+      Calculated = True
+    end
+    object qAuxilioDiasAlmuerzo: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = 'DiasAlmuerzo'
+      Calculated = True
+    end
+    object qAuxilioDiasComida: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = 'DiasComida'
+      Calculated = True
+    end
+    object qAuxilioAnoFin: TDateField
+      FieldKind = fkCalculated
+      FieldName = 'AnoFin'
+      DisplayFormat = 'YYYY'
+      Calculated = True
+    end
+    object qAuxilioCODIGOAUXILIO: TFloatField
+      FieldName = 'CODIGOAUXILIO'
+      Origin = 'ODTAUXILIO.CODIGOAUXILIO'
+      OnChange = qAuxilioMODIFICADOChange
+    end
+    object qAuxilioCODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'ODTAUXILIO.CODIGOEMPLEADO'
+      OnChange = qAuxilioMODIFICADOChange
+    end
+    object qAuxilioCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'ODTAUXILIO.CODIGOODT'
+      OnChange = qAuxilioMODIFICADOChange
+    end
+    object qAuxilioFECHAINICIO: TDateTimeField
+      FieldName = 'FECHAINICIO'
+      Origin = 'ODTAUXILIO.FECHAINICIO'
+      OnChange = qAuxilioFECHAINICIOChange
+      OnValidate = qAuxilioFECHAINICIOValidate
+    end
+    object qAuxilioFECHAFIN: TDateTimeField
+      FieldName = 'FECHAFIN'
+      Origin = 'ODTAUXILIO.FECHAFIN'
+      OnChange = qAuxilioMODIFICADOChange
+      OnValidate = qAuxilioFECHAFINValidate
+    end
+    object qAuxilioCANTIDADDESAYUNOS: TFloatField
+      FieldName = 'CANTIDADDESAYUNOS'
+      Origin = 'ODTAUXILIO.CANTIDADDESAYUNOS'
+      OnChange = qAuxilioCANTIDADDESAYUNOSChange
+      OnValidate = qAuxilioCANTIDADDESAYUNOSValidate
+    end
+    object qAuxilioCANTIDADALMUERZOS: TFloatField
+      FieldName = 'CANTIDADALMUERZOS'
+      Origin = 'ODTAUXILIO.CANTIDADALMUERZOS'
+      OnChange = qAuxilioCANTIDADALMUERZOSChange
+      OnValidate = qAuxilioCANTIDADALMUERZOSValidate
+    end
+    object qAuxilioCANTIDADCOMIDAS: TFloatField
+      FieldName = 'CANTIDADCOMIDAS'
+      Origin = 'ODTAUXILIO.CANTIDADCOMIDAS'
+      OnChange = qAuxilioCANTIDADCOMIDASChange
+      OnValidate = qAuxilioCANTIDADCOMIDASValidate
+    end
+    object qAuxilioRESPONSABLECOBRO: TStringField
+      FieldName = 'RESPONSABLECOBRO'
+      Origin = 'ODTAUXILIO.RESPONSABLECOBRO'
+      OnChange = qAuxilioMODIFICADOChange
+      OnValidate = qAuxilioRESPONSABLECOBROValidate
+      Size = 1
+    end
+    object qAuxilioCODIGOVEHICULO: TStringField
+      FieldName = 'CODIGOVEHICULO'
+      Origin = 'ODTAUXILIO.CODIGOVEHICULO'
+      OnChange = qAuxilioMODIFICADOChange
+      OnValidate = qAuxilioCODIGOVEHICULOValidate
+      Size = 10
+    end
+    object qAuxilioESTADO: TStringField
+      FieldName = 'ESTADO'
+      Origin = 'ODTAUXILIO.ESTADO'
+      Size = 3
+    end
+    object qAuxilioCOBROINDIVIDUAL: TStringField
+      FieldName = 'COBROINDIVIDUAL'
+      Origin = 'ODTAUXILIO.COBROINDIVIDUAL'
+      OnChange = qAuxilioMODIFICADOChange
+      OnValidate = qAuxilioCOBROINDIVIDUALValidate
+      Size = 1
+    end
+    object qAuxilioDEVOLUCION: TStringField
+      FieldName = 'DEVOLUCION'
+      Origin = 'ODTAUXILIO.DEVOLUCION'
+      Size = 1
+    end
+    object qAuxilioIMPRESO: TStringField
+      FieldName = 'IMPRESO'
+      Origin = 'ODTAUXILIO.IMPRESO'
+      Size = 1
+    end
+    object qAuxilioNUMEROIMPRESION: TFloatField
+      FieldName = 'NUMEROIMPRESION'
+      Origin = 'ODTAUXILIO.NUMEROIMPRESION'
+    end
+  end
+end

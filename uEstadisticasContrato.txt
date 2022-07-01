@@ -1,0 +1,320 @@
+inherited fEstadisticasContrato: TfEstadisticasContrato
+  Caption = 'fEstadisticasContrato'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited DecisionGraph1: TDecisionGraph
+    object Series1: TBarSeries
+      Active = False
+      Marks.ArrowLength = 20
+      Marks.Visible = False
+      Title = 'Template: Estado'
+      SeriesColor = clRed
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Bar'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      Identifier = 'Template: Estado'
+      Style = 61
+    end
+    object Series2: TBarSeries
+      Active = False
+      Marks.ArrowLength = 20
+      Marks.Visible = False
+      Title = 'Template: Tipo'
+      SeriesColor = clRed
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Bar'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      Identifier = 'Template: Tipo'
+      Style = 61
+    end
+    object Series3: TBarSeries
+      Active = False
+      Marks.ArrowLength = 20
+      Marks.Visible = False
+      Title = 'Template: División'
+      SeriesColor = clRed
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Bar'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      Identifier = 'Template: División'
+      Style = 61
+    end
+    object Series4: TBarSeries
+      Active = False
+      Marks.ArrowLength = 20
+      Marks.Visible = False
+      Title = 'Template: Sección'
+      SeriesColor = clRed
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Bar'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      Identifier = 'Template: Sección'
+      Style = 61
+    end
+    object Series5: TBarSeries
+      Active = False
+      Marks.ArrowLength = 20
+      Marks.Visible = False
+      Title = 'Template: NOMBRECONTRATISTA'
+      SeriesColor = clRed
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Bar'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      Identifier = 'Template: NOMBRECONTRATISTA'
+      Style = 61
+    end
+    object Series6: TBarSeries
+      Active = False
+      Marks.ArrowLength = 20
+      Marks.Visible = False
+      Title = 'Template: NOMBREPROGRAMA'
+      SeriesColor = clRed
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Bar'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      Identifier = 'Template: NOMBREPROGRAMA'
+      Style = 61
+    end
+  end
+  inherited DecisionPivot1: TDecisionPivot
+    inherited DecisionGrid1: TDecisionGrid
+      Dimensions = <
+        item
+          FieldName = 'Estado'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          FieldName = 'Tipo'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          FieldName = 'División'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          FieldName = 'Sección'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          FieldName = 'NOMBRECONTRATISTA'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          FieldName = 'NOMBREPROGRAMA'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          FieldName = 'REGISTRO'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end>
+    end
+  end
+  inherited DecisionCube1: TDecisionCube
+    DimensionMap = <
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftFloat
+        Fieldname = 'REGISTRO'
+        BaseName = 'C.CODIGOCONTRATO'
+        Name = 'REGISTRO'
+        DerivedFrom = -1
+        DimensionType = dimCount
+        BinType = binNone
+        ValueCount = -1
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftString
+        Fieldname = 'NOMBREESTADOCONTRATO'
+        BaseName = 'E.NOMBREESTADOCONTRATO'
+        Name = 'Estado'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = 0
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftString
+        Fieldname = 'NOMBRETIPOCONTRATO'
+        BaseName = 'T.NOMBRETIPOCONTRATO'
+        Name = 'Tipo'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = 0
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftString
+        Fieldname = 'NOMBREDIVISION'
+        BaseName = 'D.NOMBREDIVISION'
+        Name = 'División'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = 0
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftString
+        Fieldname = 'NOMBRESECCION'
+        BaseName = 'S.NOMBRESECCION'
+        Name = 'Sección'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = 0
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftString
+        Fieldname = 'NOMBRECONTRATISTA'
+        BaseName = 'C2.NOMBRECONTRATISTA'
+        Name = 'Contratista'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = 0
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftString
+        Fieldname = 'NOMBREPROGRAMA'
+        BaseName = 'P.NOMBREPROGRAMA'
+        Name = 'Programa'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = 0
+        Active = True
+      end>
+  end
+  inherited DecisionQuery1: TDecisionQuery
+    Active = True
+    SQL.Strings = (
+      'SELECT count (DISTINCT C.CODIGOCONTRATO) as Registro,'
+      
+        ' E.NOMBREESTADOCONTRATO, T.NOMBRETIPOCONTRATO, D.NOMBREDIVISION,' +
+        ' S.NOMBRESECCION, C2.NOMBRECONTRATISTA, P.NOMBREPROGRAMA'
+      'FROM CONTRATO C, CIUDAD C1, ZONA Z, DIVISION D, SECCION S,'
+      
+        ' CONTRATISTA C2, INTERVENTOR I, AUXILIAR A, PROGRAMA P,  ESTADOC' +
+        'ONTRATO E, TIPOCONTRATO T'
+      'WHERE'
+      
+        '(C1.CODIGOZONA = C.CODIGOZONA) AND (C.CODIGOORIGENCONTRATO = '#39'D'#39 +
+        ')'
+      ' AND (C1.CODIGOCIUDAD = C.CODIGOCIUDAD)'
+      ' AND (Z.CODIGOZONA = C1.CODIGOZONA)'
+      ' AND (D.CODIGODIVISION = C.CODIGODIVISION)'
+      ' AND (S.CODIGODIVISION = D.CODIGODIVISION)'
+      ' AND (S.CODIGOSECCION = C.CODIGOSECCION)'
+      ' AND (C2.CODIGOCONTRATISTA = C.CODIGOCONTRATISTA)'
+      ' AND (I.CODIGOINTERVENTOR = C.CODIGOINTERVENTOR)'
+      ' AND (A.CODIGODIVISION = C.CODIGODIVISION)'
+      ' AND (A.CODIGOSECCION = C.CODIGOSECCION)'
+      ' AND (A.CODIGOAUXILIAR = C.CODIGOAUXILIAR)'
+      ' AND (P.CODIGODIVISION = C.CODIGODIVISION)'
+      ' AND (P.CODIGOSECCION = C.CODIGOSECCION)'
+      ' AND (P.CODIGOPROGRAMA = C.CODIGOPROGRAMA)'
+      ' AND (E.CODIGOESTADOCONTRATO=C.CODIGOESTADOCONTRATO)'
+      ' AND (T.CODIGOTIPOCONTRATO=C.CODIGOTIPOCONTRATO)'
+      
+        'group by E.NOMBREESTADOCONTRATO, T.NOMBRETIPOCONTRATO, D.NOMBRED' +
+        'IVISION, S.NOMBRESECCION, C2.NOMBRECONTRATISTA, P.NOMBREPROGRAMA')
+  end
+  inherited DecisionSource1: TDecisionSource
+    DimensionCount = 6
+    SummaryCount = 2
+    CurrentSummary = 0
+    SparseRows = False
+    SparseCols = False
+    DimensionInfo = (
+      2
+      -1
+      2
+      0
+      -1
+      2
+      -1
+      2
+      1
+      0
+      1
+      -1
+      2
+      0
+      0
+      1
+      -1
+      2
+      1
+      0
+      1
+      -1
+      2
+      2
+      -1
+      1
+      -1
+      2
+      3
+      -1)
+  end
+end

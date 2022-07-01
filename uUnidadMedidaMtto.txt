@@ -1,0 +1,354 @@
+object FUnidadMedidaMtto: TFUnidadMedidaMtto
+  Left = 256
+  Top = 245
+  Width = 418
+  Height = 334
+  Caption = 'Unidad Medidad Mantenimiento'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 410
+    Height = 28
+    Align = alTop
+    TabOrder = 0
+    object sbCopiarViatico: TSpeedButton
+      Left = 269
+      Top = 4
+      Width = 23
+      Height = 22
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF003333330B7FFF
+        FFB0333333777F3333773333330B7FFFFFB0333333777F3333773333330B7FFF
+        FFB0333333777F3333773333330B7FFFFFB03FFFFF777FFFFF77000000000077
+        007077777777777777770FFFFFFFF00077B07F33333337FFFF770FFFFFFFF000
+        7BB07F3FF3FFF77FF7770F00F000F00090077F77377737777F770FFFFFFFF039
+        99337F3FFFF3F7F777FF0F0000F0F09999937F7777373777777F0FFFFFFFF999
+        99997F3FF3FFF77777770F00F000003999337F773777773777F30FFFF0FF0339
+        99337F3FF7F3733777F30F08F0F0337999337F7737F73F7777330FFFF0039999
+        93337FFFF7737777733300000033333333337777773333333333}
+      NumGlyphs = 2
+      OnClick = sbCopiarViaticoClick
+    end
+    object sbPegarViatico: TSpeedButton
+      Left = 296
+      Top = 4
+      Width = 23
+      Height = 22
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF003333330FFFFF
+        FFF03333337F3FFFF3F73333330F0000F0F03333337F777737373333330FFFFF
+        FFF033FFFF7FFF33FFF77000000007F00000377777777FF777770BBBBBBBB0F0
+        FF037777777777F7F3730B77777BB0F0F0337777777777F7F7330B7FFFFFB0F0
+        0333777F333377F77F330B7FFFFFB0009333777F333377777FF30B7FFFFFB039
+        9933777F333377F777FF0B7FFFFFB0999993777F33337777777F0B7FFFFFB999
+        9999777F3333777777770B7FFFFFB0399933777FFFFF77F777F3070077007039
+        99337777777777F777F30B770077B039993377FFFFFF77F777330BB7007BB999
+        93337777FF777777733370000000073333333777777773333333}
+      NumGlyphs = 2
+      OnClick = sbPegarViaticoClick
+    end
+    object dbNavigator1: TdNavigator
+      Left = 6
+      Top = 4
+      Width = 234
+      Height = 21
+      DataSource = dsUnidadMedidaMtto
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+      Flat = True
+      ConfirmDelete = False
+      TabOrder = 0
+    end
+    object Panel5: TPanel
+      Left = 248
+      Top = 1
+      Width = 161
+      Height = 26
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 1
+      object SBFiltrar: TSpeedButton
+        Left = 33
+        Top = 3
+        Width = 25
+        Height = 23
+        Hint = 'Filtro de Datos en Lista'
+        Flat = True
+        Glyph.Data = {
+          EE000000424DEE000000000000007600000028000000100000000F0000000100
+          0400000000007800000000000000000000001000000010000000000000000000
+          8000008000000080800080000000800080008080000080808000C0C0C0000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+          8888888888888888888888888800008888888888880660888888888888088088
+          8888888888088088888888888808808888888888806886088888888806688860
+          8888888066888866088888066FF8888660888066FFFF88866608800000000000
+          000888888888888888888888888888888888}
+      end
+      object SBOrdenar: TSpeedButton
+        Left = 2
+        Top = 2
+        Width = 23
+        Height = 23
+        Hint = 'Refrescar Lista'
+        Flat = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333333333FFFFF3333333333999993333333333F77777FFF333333999999999
+          3333333777333777FF33339993707399933333773337F3777FF3399933000339
+          9933377333777F3377F3399333707333993337733337333337FF993333333333
+          399377F33333F333377F993333303333399377F33337FF333373993333707333
+          333377F333777F333333993333101333333377F333777F3FFFFF993333000399
+          999377FF33777F77777F3993330003399993373FF3777F37777F399933000333
+          99933773FF777F3F777F339993707399999333773F373F77777F333999999999
+          3393333777333777337333333999993333333333377777333333}
+        NumGlyphs = 2
+        OnClick = SBOrdenarClick
+      end
+      object Bevel2: TBevel
+        Left = 99
+        Top = 1
+        Width = 3
+        Height = 24
+      end
+      object Bevel3: TBevel
+        Left = 66
+        Top = 1
+        Width = 3
+        Height = 24
+      end
+      object sbExportar: TSpeedButton
+        Left = 105
+        Top = 2
+        Width = 23
+        Height = 23
+        Hint = 'Exportación de la Lista'
+        Flat = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          8000008000000080800080000000800080008080000080808000C0C0C0000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333303
+          333333333333337FF3333333333333903333333333333377FF33333333333399
+          03333FFFFFFFFF777FF3000000999999903377777777777777FF0FFFF0999999
+          99037F3337777777777F0FFFF099999999907F3FF777777777770F00F0999999
+          99037F773777777777730FFFF099999990337F3FF777777777330F00FFFFF099
+          03337F773333377773330FFFFFFFF09033337F3FF3FFF77733330F00F0000003
+          33337F773777777333330FFFF0FF033333337F3FF7F3733333330F08F0F03333
+          33337F7737F7333333330FFFF003333333337FFFF77333333333000000333333
+          3333777777333333333333333333333333333333333333333333}
+        NumGlyphs = 2
+      end
+      object sbCerrar: TSpeedButton
+        Left = 131
+        Top = 4
+        Width = 23
+        Height = 22
+        Hint = 'Cierra esta ventana'
+        Flat = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00330000000000
+          03333377777777777F333301BBBBBBBB033333773F3333337F3333011BBBBBBB
+          0333337F73F333337F33330111BBBBBB0333337F373F33337F333301110BBBBB
+          0333337F337F33337F333301110BBBBB0333337F337F33337F333301110BBBBB
+          0333337F337F33337F333301110BBBBB0333337F337F33337F333301110BBBBB
+          0333337F337F33337F333301110BBBBB0333337F337FF3337F33330111B0BBBB
+          0333337F337733337F333301110BBBBB0333337F337F33337F333301110BBBBB
+          0333337F3F7F33337F333301E10BBBBB0333337F7F7F33337F333301EE0BBBBB
+          0333337F777FFFFF7F3333000000000003333377777777777333}
+        NumGlyphs = 2
+        OnClick = sbCerrarClick
+      end
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 284
+    Width = 410
+    Height = 18
+    Align = alBottom
+    Alignment = taLeftJustify
+    BevelOuter = bvLowered
+    TabOrder = 1
+  end
+  object dbgUnidad: TRxDBGrid
+    Left = 0
+    Top = 28
+    Width = 410
+    Height = 256
+    Align = alClient
+    DataSource = dsUnidadMedidaMtto
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'CODIGOUNIDADMEDIDAMTTO'
+        Title.Caption = 'Unidad'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clMaroon
+        Title.Font.Height = -11
+        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Style = [fsBold]
+        Width = 51
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOMBREUNIDADMEDIDAMTTO'
+        Title.Caption = 'Nombre'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clMaroon
+        Title.Font.Height = -11
+        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Style = [fsBold]
+        Width = 166
+        Visible = True
+      end>
+  end
+  object dsUnidadMedidaMtto: TDDataSource
+    AutoEdit = False
+    DataSet = qUnidadMedidaMtto
+    Left = 254
+    Top = 75
+  end
+  object qUnidadMedidaMtto: TQuery
+    CachedUpdates = True
+    AfterInsert = qUnidadMedidaMttoAfterInsert
+    AfterPost = qUnidadMedidaMttoAfterPost
+    AfterDelete = qUnidadMedidaMttoAfterDelete
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from hve_unidadmedidamtto'
+      'order by 2'
+      '')
+    UpdateObject = updUnidadMedidaMtto
+    Left = 248
+    Top = 30
+    object qUnidadMedidaMttoNOMBREUNIDADMEDIDAMTTO: TStringField
+      FieldName = 'NOMBREUNIDADMEDIDAMTTO'
+    end
+    object qUnidadMedidaMttoCODIGOUNIDADMEDIDAMTTO: TFloatField
+      FieldName = 'CODIGOUNIDADMEDIDAMTTO'
+    end
+  end
+  object updUnidadMedidaMtto: TUpdateSQL
+    ModifySQL.Strings = (
+      'update hve_unidadmedidamtto'
+      'set'
+      '  NOMBREUNIDADMEDIDAMTTO = :NOMBREUNIDADMEDIDAMTTO,'
+      '  CODIGOUNIDADMEDIDAMTTO = :CODIGOUNIDADMEDIDAMTTO'
+      'where'
+      '  CODIGOUNIDADMEDIDAMTTO = :OLD_CODIGOUNIDADMEDIDAMTTO')
+    InsertSQL.Strings = (
+      'insert into hve_unidadmedidamtto'
+      '  (NOMBREUNIDADMEDIDAMTTO, CODIGOUNIDADMEDIDAMTTO)'
+      'values'
+      '  (:NOMBREUNIDADMEDIDAMTTO, :CODIGOUNIDADMEDIDAMTTO)')
+    DeleteSQL.Strings = (
+      'delete from hve_unidadmedidamtto'
+      'where'
+      '  CODIGOUNIDADMEDIDAMTTO = :OLD_CODIGOUNIDADMEDIDAMTTO')
+    Left = 256
+    Top = 118
+  end
+  object qCopiar: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from hve_formatomtto'
+      'where codigoformatomtto=:codigoformatomtto'
+      '')
+    Left = 608
+    Top = 96
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'codigoformatomtto'
+        ParamType = ptUnknown
+      end>
+  end
+  object Query1: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from hve_formatomtto'
+      'where codigoformatomtto=:codigoformatomtto'
+      '')
+    Left = 608
+    Top = 96
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'codigoformatomtto'
+        ParamType = ptUnknown
+      end>
+  end
+  object Query2: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from hve_formatomtto'
+      'where codigoformatomtto=:codigoformatomtto'
+      '')
+    Left = 608
+    Top = 96
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'codigoformatomtto'
+        ParamType = ptUnknown
+      end>
+  end
+  object Query3: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from hve_formatomtto'
+      'where codigoformatomtto=:codigoformatomtto'
+      '')
+    Left = 608
+    Top = 96
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'codigoformatomtto'
+        ParamType = ptUnknown
+      end>
+  end
+  object Query4: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'select * from hve_formatomtto'
+      'where codigoformatomtto=:codigoformatomtto'
+      '')
+    Left = 608
+    Top = 96
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'codigoformatomtto'
+        ParamType = ptUnknown
+      end>
+  end
+end

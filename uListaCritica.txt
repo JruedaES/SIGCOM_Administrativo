@@ -1,0 +1,1865 @@
+inherited fListaCritica: TfListaCritica
+  Left = 27
+  Top = 240
+  Width = 1292
+  Height = 548
+  Caption = 'Listado Critica de Lectura'
+  WindowState = wsNormal
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel [0]
+    Left = 784
+    Top = 5
+    Width = 33
+    Height = 25
+    Caption = '100'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel [1]
+    Left = 680
+    Top = 11
+    Width = 98
+    Height = 13
+    Caption = 'Cuentas Resueltas  :'
+  end
+  inherited Panel1: TPanel
+    Top = 73
+    Width = 1276
+    Height = 32
+    object sbVistaPreliminarVL: TSpeedButton [0]
+      Left = 1091
+      Top = 0
+      Width = 23
+      Height = 25
+      Hint = 'Vista Preliminar del Apoyo'
+      GroupIndex = 2
+      Flat = True
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000000000000000000000000000000000000FF00FF00FF00
+        FF0000000000000000000000000000000000FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF0000000000C0C0C000C0C0C00000000000FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF0000000000C0C0C000C0C0C00000000000FF00FF0000000000000000000000
+        0000000000000000000000000000000000000000000000000000FF00FF00FF00
+        FF0000000000808080008080800000000000FF00FF0000000000FF00FF00FF00
+        FF00000000000000000000000000FF00FF00FF00FF0000000000FF00FF00FF00
+        FF0000000000808080008080800000000000FF00FF0000000000FF00FF000000
+        000000000000000000000000000000000000FF00FF0000000000FF00FF00FF00
+        FF0000000000808080008080800000000000FF00FF0000000000FF00FF000000
+        0000FF00FF0000000000FF00FF0000000000FFFF000000000000FF00FF000000
+        000000FFFF0000FFFF0000FFFF0000FFFF000000000000000000FFFF0000FFFF
+        0000FF00FF00FF00FF00FF00FF00FF00FF00FFFF0000000000000000000000FF
+        FF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000000000FFFF0000FFFF
+        0000FFFF0000FF00FF00FF00FF00FF00FF00FF00FF0000000000FF00FF000000
+        000000FFFF0000FFFF0000FFFF0000FFFF000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000FF00FF00FF00
+        FF0000000000000000000000000000000000FF00FF000000000000FFFF00FF00
+        FF0000FFFF00FF00FF0000FFFF00FF00FF00FF00FF0000000000FF00FF00FF00
+        FF0000000000C0C0C000C0C0C00000000000FF00FF0000000000FF00FF008080
+        80008080800080808000808080008080800000FFFF0000000000FF00FF00FF00
+        FF0000000000000000000000000000000000FF00FF0000000000000000000000
+        0000000000000000000000000000000000000000000000000000FF00FF000000
+        0000FF000000FF000000FF000000FF00000000000000FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF0000000000FF00
+        0000FF000000FF000000FF000000FF000000FF00000000000000FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF000000
+        0000FF000000FF000000FF000000FF00000000000000FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF0000000000000000000000000000000000FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
+      Visible = False
+      OnClick = sbVistaPreliminarVLClick
+    end
+    object Label5: TLabel [1]
+      Left = 288
+      Top = 11
+      Width = 104
+      Height = 13
+      Caption = 'Cuentas para Critica : '
+    end
+    object eCuentasCritica: TLabel [2]
+      Left = 400
+      Top = 5
+      Width = 33
+      Height = 25
+      Caption = '200'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -20
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label6: TLabel [3]
+      Left = 680
+      Top = 11
+      Width = 98
+      Height = 13
+      Caption = 'Cuentas Resueltas  :'
+    end
+    object eCuentasResueltas: TLabel [4]
+      Left = 784
+      Top = 5
+      Width = 33
+      Height = 25
+      Caption = '100'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -20
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label11: TLabel [5]
+      Left = 840
+      Top = 11
+      Width = 111
+      Height = 13
+      Caption = 'Porcentaje de avance :'
+    end
+    object lProcentajeAvance: TLabel [6]
+      Left = 976
+      Top = 5
+      Width = 40
+      Height = 25
+      Caption = '50%'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -20
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object lPendientes: TLabel [7]
+      Left = 504
+      Top = 11
+      Width = 104
+      Height = 13
+      Caption = 'Cuentas Pendientes  :'
+    end
+    object lnumpendientes: TLabel [8]
+      Left = 608
+      Top = 5
+      Width = 33
+      Height = 25
+      Caption = '100'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -20
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    inherited Panel2: TPanel
+      Left = 1030
+      Width = 245
+      Height = 30
+      inherited SBImprimir: TSpeedButton
+        Left = 51
+        Visible = False
+        OnClick = SBImprimirClick
+      end
+      inherited SBFiltrar: TSpeedButton
+        Left = 137
+      end
+      inherited SBBuscar: TSpeedButton
+        Left = 17
+        Visible = False
+      end
+      inherited SBOrdenar: TSpeedButton
+        Left = 161
+        Visible = False
+        OnClick = SBOrdenarClick
+      end
+      inherited SBEstadistica: TSpeedButton
+        Left = 36
+        Transparent = False
+        Visible = False
+      end
+      inherited SBBuscaElementoCartografia: TSpeedButton
+        Left = 103
+        OnClick = SBBuscaElementoCartografiaClick
+      end
+      inherited SBFiltroCarografico: TSpeedButton
+        Left = -8
+        Visible = False
+      end
+      object sbRefrescar: TSpeedButton
+        Left = 80
+        Top = 3
+        Width = 23
+        Height = 23
+        Hint = 'Refrescar Lista'
+        Flat = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333333333FFFFF3333333333999993333333333F77777FFF333333999999999
+          3333333777333777FF33339993707399933333773337F3777FF3399933000339
+          9933377333777F3377F3399333707333993337733337333337FF993333333333
+          399377F33333F333377F993333303333399377F33337FF333373993333707333
+          333377F333777F333333993333101333333377F333777F3FFFFF993333000399
+          999377FF33777F77777F3993330003399993373FF3777F37777F399933000333
+          99933773FF777F3F777F339993707399999333773F373F77777F333999999999
+          3393333777333777337333333999993333333333377777333333}
+        NumGlyphs = 2
+        OnClick = sbRefrescarClick
+      end
+    end
+    inherited dNavigator1: TdNavigator
+      Left = 1
+      Top = 1
+      Width = 80
+      Height = 30
+      Align = alLeft
+      Hints.Strings = ()
+      Visible = False
+    end
+    object Panel6: TPanel
+      Left = 81
+      Top = 1
+      Width = 224
+      Height = 30
+      Align = alLeft
+      BevelOuter = bvNone
+      TabOrder = 2
+      object sbAnalistas: TSpeedButton
+        Left = 8
+        Top = 0
+        Width = 209
+        Height = 32
+        Hint = 'Información y Asignación de Analistas'
+        AllowAllUp = True
+        GroupIndex = -1
+        Caption = 'Información y Asignacion de Cuentas'
+        Flat = True
+        Glyph.Data = {
+          42040000424D4204000000000000420000002800000010000000100000000100
+          20000300000000040000000000000000000000000000000000000000FF0000FF
+          0000FF0000000000000500000022000000270000002700000027000000270000
+          0027000000270000002700000027000000270000002700000027000000270000
+          002200000005000000310101127501011BAA02021DA502021F9D030321952F2F
+          2F6200157FCA00157FCA2F2F2F620303219602021F9D02021DA501011CAA0101
+          1275000000310000000A01011F9B9494A5FF9797A8FFA9A9BAFF9191A2FFDDDD
+          DDF43D5CAAFF3D5CAAFFDDDDDDF49090A1FFA8A8B9FF9797A8FF9595A6FF0101
+          1F9B0000000A000024000000247A8E8EA0F39898A9FFA9A9BAFF9696A7FFEAEA
+          EAFF6E87C7FF6E87C7FFEAEAEAFF9595A6FFA8A8B9FF9898A9FF8F8FA1F30000
+          247A0000240000002500000026321F1F4086585873B7AEAEBFFF9B9BACFFF3F3
+          F3FF9AAEE0FF9AAEE0FFF3F3F3FF9A9AABFFADADBEFF595974B71F1F41860000
+          26320000250000002500000026000000281B000029530000296C9F9FB0FFC9D6
+          E2FF959EB3FF959EB3FFC9D6E2FF9E9EAFFF0000296C000029530000281B0000
+          2600000025000000250000002600000028000000290000002A2700002A5B4D7A
+          A6E680B3E3FF80B3E3FF4D7AA6E600002A5B00002A2700002900000028000000
+          2600000025000000250000002600000028000000290000002A0000002A0C0143
+          85C64A7DB0FF4A7DB0FF014385C600002A0C00002A0000002900000028000000
+          2600000025000000250000002600011343000137760001488F0001488F463574
+          B1D480B3E3FF80B3E3FF3574B1D401488F4601488F0001377600011343000000
+          260000002500024B9400024B9400024B9400024B9400024B9400024A929E7FB4
+          E4F694A6B8FF94A6B8FF7FB4E4F6024A929E024B9400024B9400024B9400024B
+          9400024B9400024C9700024C9700024C9700024C9700024C9783215890C498CB
+          F5FF91C4F1FF91C4F1FF98CBF5FF215890C4024C9783024C9700024C9700024C
+          9700024C9700024C9800024C9800024C9800024C9800024D99814C4C4CC1A1D4
+          FAFF98CBF5FF98CBF5FFA1D4FAFF4C4C4CC1024D9981024C9800024C9800024C
+          9800024C9800153A6000153A6000153A6000153A6000153B61002424247C99C0
+          DFFF99CCF6FF99CCF6FF99C0DFFF2424247C153B6100153A6000153A6000153A
+          6000153A600036363600363636003636360036363600363636003636366AADAD
+          ADF1BCBCBCFFB4B4B4FFA0A0A0F13636366A3636360036363600363636003636
+          36003636360047474700474747004747470047474700474747004747473D8A8A
+          8A9CCFCFCFECC9C9C9EC8181819C4747473D4747470047474700474747004747
+          47004747470000000000252525004A4A4A004A4A4A004A4A4A004D4D4D065353
+          533B5353535E5353535E5353533B4D4D4D064A4A4A004A4A4A004A4A4A002525
+          250000000000}
+        Margin = 0
+        Transparent = False
+        Visible = False
+        OnClick = sbAnalistasClick
+      end
+    end
+  end
+  inherited Panel3: TPanel
+    Top = 105
+    Width = 1276
+    Height = 32
+    Align = alTop
+    Visible = False
+  end
+  inherited PFiltro: TPanel
+    Top = 0
+    Width = 1276
+    Height = 73
+    inherited sDatosFiltro: TShape
+      Top = 32
+      Width = 1129
+      Height = 27
+    end
+    inherited lFiltroDatos: TLabel
+      Width = 1274
+      Height = 16
+      Caption = 'Suministros Con Anomalias en la Autocritica'
+      Color = clBtnFace
+      Font.Color = clBlack
+    end
+    inherited mDatos1: TMemo
+      Top = 38
+    end
+    inherited mRotulos2: TMemo
+      Top = 38
+    end
+    inherited mDatos2: TMemo
+      Top = 38
+    end
+    inherited mRotulos1: TMemo
+      Left = -4
+      Top = 38
+    end
+    inherited mPuntos2: TMemo
+      Top = 38
+    end
+    inherited mPuntos1: TMemo
+      Top = 38
+    end
+  end
+  object PageControl1: TPageControl [5]
+    Left = 0
+    Top = 137
+    Width = 1276
+    Height = 372
+    ActivePage = TabSheet1
+    Align = alClient
+    Images = ImageList1
+    TabOrder = 3
+    object TabSheet1: TTabSheet
+      Caption = 'Asignados          '
+      ImageIndex = 2
+      object Panel5: TPanel
+        Left = 0
+        Top = 0
+        Width = 1268
+        Height = 343
+        Align = alClient
+        Caption = 'Panel5'
+        TabOrder = 0
+        object dbgListaHijas: TRxDBGrid
+          Left = 1
+          Top = 1
+          Width = 1259
+          Height = 341
+          Align = alClient
+          DataSource = dsListaLectura
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = []
+          Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+          ParentFont = False
+          PopupMenu = pmCambiarEstado
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+          OnDblClick = dbgListaHijasDblClick
+          OnTitleClick = dbgListaHijasTitleClick
+          MultiSelect = True
+          OnGetCellParams = dbgListaHijasGetCellParams
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'CODIGOLECTURA'
+              Title.Caption = 'Lectura'
+              Width = 45
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CLAVE'
+              Title.Caption = 'Clave'
+              Width = 90
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CONSUMOACTUAL'
+              Title.Caption = 'Consumo Actual'
+              Width = 85
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'DESVIACIONCONSUMO'
+              Title.Caption = 'Desviación Consumo'
+              Width = 110
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'ANOMALIACONSUMO'
+              Title.Caption = 'Anomalia Consumo'
+              Width = 100
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'DESCRIPCION'
+              Title.Caption = 'Anomalia  Lectura'
+              Width = 109
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'FECHALECTURA'
+              Title.Caption = 'Fecha Lectura'
+              Width = 120
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CODIGOITINERARIO'
+              Title.Caption = 'Itinerario'
+              Width = 50
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'ANALISTA'
+              Title.Caption = 'Analista'
+              Width = 200
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'ESTADOCRITICA'
+              Title.Caption = 'Estado'
+              Width = 80
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'FOTOS'
+              Title.Caption = 'Foto'
+              Width = 30
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'NOMBRECRITICA'
+              Title.Caption = 'Resultado Critica'
+              Width = 350
+              Visible = True
+            end>
+        end
+        object RxSplitter1: TRxSplitter
+          Left = 1260
+          Top = 1
+          Width = 3
+          Height = 341
+          Align = alRight
+        end
+        object Panel4: TPanel
+          Left = 1263
+          Top = 1
+          Width = 4
+          Height = 341
+          Align = alRight
+          Caption = 'Panel4'
+          TabOrder = 2
+          Visible = False
+        end
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Pendientes             '
+      object Panel7: TPanel
+        Left = 0
+        Top = 0
+        Width = 1268
+        Height = 343
+        Align = alClient
+        Caption = 'Panel5'
+        TabOrder = 0
+        object RxDBGrid1: TRxDBGrid
+          Left = 1
+          Top = 1
+          Width = 1259
+          Height = 341
+          Align = alClient
+          DataSource = dsListaPendientes
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = []
+          Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+          ParentFont = False
+          PopupMenu = pmActivar
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+          OnDblClick = RxDBGrid1DblClick
+          OnTitleClick = RxDBGrid1TitleClick
+          MultiSelect = True
+          OnGetCellParams = RxDBGrid1GetCellParams
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'CLAVE'
+              Title.Caption = 'Clave'
+              Width = 90
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CONSUMOACTUAL'
+              Title.Caption = 'Consumo Actual'
+              Width = 85
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'DESVIACIONCONSUMO'
+              Title.Caption = 'Desviación Consumo'
+              Width = 110
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'DESCRIPCION'
+              Title.Caption = 'Anomalia'
+              Width = 109
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'ANOMALIACONSUMO'
+              Title.Caption = 'Anomalia Consumo'
+              Width = 100
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'FECHALECTURA'
+              Title.Caption = 'Fecha Lectura'
+              Width = 120
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CODIGOITINERARIO'
+              Title.Caption = 'Itinerario'
+              Width = 50
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'ANALISTA'
+              Title.Caption = 'Analista'
+              Width = 150
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'NOMBRECRITICA'
+              PickList.Strings = (
+                'SI'
+                'NO')
+              Title.Caption = 'Resultado Critica'
+              Width = 150
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'ESTADOCRITICA'
+              Title.Caption = 'Estado'
+              Width = 80
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'NOMBREOBSERVACIONCRITICA'
+              Title.Caption = 'Observacion'
+              Width = 100
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'FOTOS'
+              Title.Caption = 'Foto'
+              Width = 60
+              Visible = True
+            end>
+        end
+        object RxSplitter2: TRxSplitter
+          Left = 1260
+          Top = 1
+          Width = 3
+          Height = 341
+          Align = alRight
+        end
+        object Panel8: TPanel
+          Left = 1263
+          Top = 1
+          Width = 4
+          Height = 341
+          Align = alRight
+          Caption = 'Panel4'
+          TabOrder = 2
+          Visible = False
+        end
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'Resueltos                '
+      ImageIndex = 1
+      object Panel9: TPanel
+        Left = 0
+        Top = 0
+        Width = 1268
+        Height = 343
+        Align = alClient
+        Caption = 'Panel5'
+        TabOrder = 0
+        object RxDBGrid2: TRxDBGrid
+          Left = 1
+          Top = 1
+          Width = 1259
+          Height = 341
+          Align = alClient
+          DataSource = dsListaResueltos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = []
+          Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+          ParentFont = False
+          PopupMenu = pmReiniciar
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+          OnDblClick = RxDBGrid2DblClick
+          OnTitleClick = RxDBGrid2TitleClick
+          MultiSelect = True
+          OnGetCellParams = RxDBGrid2GetCellParams
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'CODIGOLECTURA'
+              Title.Caption = 'Lectura'
+              Width = 45
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CLAVE'
+              Title.Caption = 'Clave'
+              Width = 66
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CONSUMOACTUAL'
+              Title.Caption = 'Consumo Actual'
+              Width = 85
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'DESVIACIONCONSUMO'
+              Title.Caption = 'Desviación Consumo'
+              Width = 110
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'DESCRIPCION'
+              Title.Caption = 'Anomalia'
+              Width = 109
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'ANOMALIACONSUMO'
+              Title.Caption = 'Anomalia Consumo'
+              Width = 100
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'FECHALECTURA'
+              Title.Caption = 'Fecha Lectura'
+              Width = 120
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'ANALISTA'
+              Title.Caption = 'Analista'
+              Width = 125
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'NOMBRECRITICA'
+              PickList.Strings = (
+                'SI'
+                'NO')
+              Title.Caption = 'Resultado Critica'
+              Width = 138
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'ESTADOCRITICA'
+              Title.Caption = 'Estado'
+              Width = 80
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'MARCA_CRITICA'
+              Title.Caption = 'Proceso'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'FECHA_CRITICA'
+              Title.Caption = 'Fecha Critica'
+              Width = 90
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'NOMBREOBSERVACIONCRITICA'
+              Title.Caption = 'Observación'
+              Width = 147
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'FOTOS'
+              Title.Caption = 'Fotos'
+              Width = 44
+              Visible = True
+            end>
+        end
+        object RxSplitter3: TRxSplitter
+          Left = 1260
+          Top = 1
+          Width = 3
+          Height = 341
+          Align = alRight
+        end
+        object Panel10: TPanel
+          Left = 1263
+          Top = 1
+          Width = 4
+          Height = 341
+          Align = alRight
+          Caption = 'Panel4'
+          TabOrder = 2
+          Visible = False
+        end
+      end
+    end
+  end
+  inherited dSegControl1: TdSegControl
+    Left = 256
+    Top = 436
+  end
+  inherited dsBase: TDDataSource
+    DataSet = nil
+    Left = 752
+    Top = 304
+  end
+  inherited dTblBase: TDTable
+    Left = 952
+    Top = 344
+  end
+  inherited qTotales: TQuery
+    Left = 293
+    Top = 336
+  end
+  inherited CVS1: TCVS
+    Left = 158
+    Top = 459
+  end
+  inherited SaveDialog1: TSaveDialog
+    Left = 504
+    Top = 320
+  end
+  object dsListaPadre: TDataSource
+    Left = 40
+    Top = 440
+  end
+  object qListaLectura: TQuery
+    AfterOpen = qListaLecturaAfterOpen
+    OnCalcFields = qListaLecturaCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT AN.NOMBREANALISTA AS ANALISTA,DECODE (S.ESTADOLECTURA, 4,' +
+        #39'SOLUCIONADO'#39',5,'#39'PENDIENTE'#39',2,'#39'SIN CRITICA'#39','#39#39') AS ESTADOCRITICA' +
+        ',CL2.DESCRIPCION AS ANOMALIACONSUMO,AC.DESCRIPCION AS NOMBRECRIT' +
+        'ICA,OC.NOMBREOBSERVACIONCRITICA,FECHA_PROGRAMADA,to_number(CLAVE' +
+        ') as CLAVE,to_number(CODIGOLECTURA) as CODIGOLECTURA,TO_NUMBER(C' +
+        'ONSUMOACTUAL) AS CONSUMOACTUAL,S.CODIGOANOMALIA AS CODIGOANOMALI' +
+        'A,S.FECHALECTURA AS FECHALECTURA,TO_NUMBER(DESVIACIONCONSUMO) as' +
+        ' DESVIACIONCONSUMO,I.CODIGOITINERARIO AS CODIGOITINERARIO,S.CODI' +
+        'GOANALISTA AS CODIGOANALISTA,VALIDO,ESTADOLECTURA,CL.DESCRIPCION' +
+        ' AS DESCRIPCION,CODIGOANOMALIACONSUMOACT FROM SIGCOM_LECTURA S,S' +
+        'GC_CLASES CL,SGC_ITINERARIO I,SGC_GRUPOITINERARIO G ,C_GRUPOAOL ' +
+        'C,SGC_OBSERVACIONCRITICA OC,SGC_ANOMALIACRITICA AC,SGC_ANALISTAS' +
+        ' AN,SGC_CLASES CL2'
+      'WHERE S.ESTADOLECTURA  =2 AND CRITICA_INCMS='#39'NO'#39
+      ''
+      ''
+      ''
+      ''
+      
+        ' AND AC.CODIGOANOMALIACRITICA=S.VALIDO AND S.CODIGOANOMALIA = CL' +
+        '.CODIGOCLASE  AND I.CODIGOITINERARIO=S.CODIGOITINERARIO AND S.CO' +
+        'DIGOITINERARIO=I.CODIGOITINERARIO AND G.CODIGOGRUPOITINERARIO=I.' +
+        'CODIGOGRUPOITINERARIO AND C.CODIGOGRUPOAOL=G.CODIGOGRUPOAOL AND ' +
+        'OC.CODIGOOBSERVACIONCRITICA(+)=S.CODIGOOBSERVACION AND S.CODIGOA' +
+        'NALISTA = AN.CODIGOANALISTA AND S.CODIGOANOMALIACONSUMOACT =CL2.' +
+        'CODIGOCLASE(+)'
+      'ORDER BY S.FECHALECTURA'
+      ''
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' ')
+    Left = 48
+    Top = 192
+    object qListaLecturaCODIGOANOMALIA: TStringField
+      FieldName = 'CODIGOANOMALIA'
+      Origin = 'SIGCOM_LECTURA.CODIGOANOMALIA'
+      Size = 50
+    end
+    object qListaLecturaFECHALECTURA: TDateTimeField
+      FieldName = 'FECHALECTURA'
+      Origin = 'SIGCOM_LECTURA.FECHALECTURA'
+    end
+    object qListaLecturaCODIGOITINERARIO: TFloatField
+      FieldName = 'CODIGOITINERARIO'
+      Origin = 'SGC_ITINERARIO.CODIGOITINERARIO'
+    end
+    object qListaLecturaCODIGOANALISTA: TFloatField
+      FieldName = 'CODIGOANALISTA'
+      Origin = 'SIGCOM_LECTURA.CODIGOANALISTA'
+    end
+    object qListaLecturaVALIDO: TStringField
+      FieldName = 'VALIDO'
+      Origin = 'SIGCOM_LECTURA.VALIDO'
+      Size = 3
+    end
+    object qListaLecturaESTADOLECTURA: TFloatField
+      FieldName = 'ESTADOLECTURA'
+      Origin = 'SIGCOM_LECTURA.ESTADOLECTURA'
+    end
+    object qListaLecturaDESCRIPCION: TStringField
+      FieldName = 'DESCRIPCION'
+      Origin = 'SGC_CLASES.DESCRIPCION'
+      Size = 100
+    end
+    object qListaLecturaCODIGOANOMALIACONSUMOACT: TStringField
+      FieldName = 'CODIGOANOMALIACONSUMOACT'
+      Origin = 'SIGCOM_LECTURA.CODIGOANOMALIACONSUMOACT'
+      Size = 50
+    end
+    object qListaLecturaFECHA_PROGRAMADA: TDateTimeField
+      FieldName = 'FECHA_PROGRAMADA'
+      Origin = 'SIGCOM_LECTURA.FECHA_PROGRAMADA'
+    end
+    object qListaLecturaNOMBREOBSERVACIONCRITICA: TStringField
+      FieldName = 'NOMBREOBSERVACIONCRITICA'
+      Size = 200
+    end
+    object qListaLecturaNOMBRECRITICA: TStringField
+      FieldName = 'NOMBRECRITICA'
+      Size = 200
+    end
+    object qListaLecturaCLAVE: TFloatField
+      FieldName = 'CLAVE'
+    end
+    object qListaLecturaCODIGOLECTURA: TFloatField
+      FieldName = 'CODIGOLECTURA'
+    end
+    object qListaLecturaCONSUMOACTUAL: TFloatField
+      FieldName = 'CONSUMOACTUAL'
+    end
+    object qListaLecturaDESVIACIONCONSUMO: TFloatField
+      FieldName = 'DESVIACIONCONSUMO'
+    end
+    object qListaLecturaFOTOS: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'FOTOS'
+      Size = 2
+      Calculated = True
+    end
+    object qListaLecturaANALISTA: TStringField
+      FieldName = 'ANALISTA'
+      Size = 60
+    end
+    object qListaLecturaESTADOCRITICA: TStringField
+      FieldName = 'ESTADOCRITICA'
+      Size = 11
+    end
+    object qListaLecturaANOMALIACONSUMO: TStringField
+      FieldName = 'ANOMALIACONSUMO'
+      Size = 100
+    end
+  end
+  object dsListaLectura: TDataSource
+    DataSet = qListaLectura
+    Left = 72
+    Top = 240
+  end
+  object qGrupoTrabajo: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOGRUPOTRABAJO,CODIGOADMINISTRATIVO,'
+      'NOMBREGRUPOTRABAJO'
+      'FROM GRUPOTRABAJO'
+      'WHERE CODIGOADMINISTRATIVO=:CODIGOADMINISTRATIVO'
+      'AND CODIGOGRUPOTRABAJO =:CODIGOGRUPOTRABAJO')
+    Left = 440
+    Top = 214
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'CODIGOGRUPOTRABAJO'
+        ParamType = ptUnknown
+      end>
+  end
+  object pmExportar: TPopupMenu
+    Left = 1120
+    Top = 184
+    object ExportarListaOdtPadres1: TMenuItem
+      Caption = 'Exportar Asignados'
+      OnClick = ExportarListaOdtPadres1Click
+    end
+    object ExportarPendientes1: TMenuItem
+      Caption = 'Exportar Pendientes'
+      OnClick = ExportarPendientes1Click
+    end
+    object ExportarResueltos1: TMenuItem
+      Caption = 'Exportar Resueltos'
+      OnClick = ExportarResueltos1Click
+    end
+  end
+  object qCamposCalculados: TQuery
+    OnCalcFields = qprincipalCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT S.NVLBATERIA,G.CODIGORUTA,G.CODIGOGRUPOAOL,COLOR,G.CODIGO' +
+        'GRUPOITINERARIO,CODIGOLECTURA,CLAVE,CONSUMOACTUAL,CODIGOANOMALIA' +
+        ',FECHALECTURA,I.CODIGOITINERARIO,AOLFINCA,CODIGOADMINISTRATIVO,C' +
+        'ODIGOGRUPOTRABAJO,'
+      
+        'NOMBRESUSCRIPTOR,DIRECCIONSUSCRIPTOR,CONSUMOPROMEDIO,C.CODIGOAPO' +
+        'YO,VALIDO FROM  SIGCOM_LECTURA S,SGC_ITINERARIO I,SGC_GRUPOITINE' +
+        'RARIO G,CLIENTESGD C,C_GRUPOAOL GA,SGC_RUTAAPOYO RA WHERE S.CODI' +
+        'GOITINERARIO IS NOT NULL'
+      'AND S.CODIGOITINERARIO=I.CODIGOITINERARIO'
+      'AND G.CODIGOGRUPOITINERARIO =I.CODIGOGRUPOITINERARIO'
+      'AND GA.CODIGOGRUPOAOL=G.CODIGOGRUPOAOL'
+      'AND G.CODIGORUTA = RA.CODIGORUTA'
+      'AND C.CODIGOAPOYO = RA.CODIGOAPOYO'
+      'AND S.CLAVE=C.CODIGOCLIENTECOM(+)'
+      'AND I.CODIGOITINERARIO=:CODIGOITINERARIO'
+      'ORDER BY FECHALECTURA DESC')
+    Left = 544
+    Top = 256
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOITINERARIO'
+        ParamType = ptUnknown
+      end>
+    object qCamposCalculadosNVLBATERIA: TStringField
+      FieldName = 'NVLBATERIA'
+      Size = 10
+    end
+    object qCamposCalculadosCODIGORUTA: TFloatField
+      FieldName = 'CODIGORUTA'
+    end
+    object qCamposCalculadosCODIGOGRUPOAOL: TFloatField
+      FieldName = 'CODIGOGRUPOAOL'
+    end
+    object qCamposCalculadosCOLOR: TFloatField
+      FieldName = 'COLOR'
+    end
+    object qCamposCalculadosCODIGOGRUPOITINERARIO: TFloatField
+      FieldName = 'CODIGOGRUPOITINERARIO'
+    end
+    object qCamposCalculadosCODIGOLECTURA: TFloatField
+      FieldName = 'CODIGOLECTURA'
+    end
+    object qCamposCalculadosCLAVE: TStringField
+      FieldName = 'CLAVE'
+      Size = 50
+    end
+    object qCamposCalculadosCONSUMOACTUAL: TStringField
+      FieldName = 'CONSUMOACTUAL'
+      Size = 50
+    end
+    object qCamposCalculadosCODIGOANOMALIA: TStringField
+      FieldName = 'CODIGOANOMALIA'
+      Size = 50
+    end
+    object qCamposCalculadosFECHALECTURA: TDateTimeField
+      FieldName = 'FECHALECTURA'
+    end
+    object qCamposCalculadosCODIGOITINERARIO: TFloatField
+      FieldName = 'CODIGOITINERARIO'
+    end
+    object qCamposCalculadosAOLFINCA: TFloatField
+      FieldName = 'AOLFINCA'
+    end
+    object qCamposCalculadosCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+    end
+    object qCamposCalculadosCODIGOGRUPOTRABAJO: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJO'
+    end
+    object qCamposCalculadosNOMBRESUSCRIPTOR: TStringField
+      FieldName = 'NOMBRESUSCRIPTOR'
+      Size = 24
+    end
+    object qCamposCalculadosDIRECCIONSUSCRIPTOR: TStringField
+      FieldName = 'DIRECCIONSUSCRIPTOR'
+      Size = 50
+    end
+    object qCamposCalculadosCONSUMOPROMEDIO: TFloatField
+      FieldName = 'CONSUMOPROMEDIO'
+    end
+    object qCamposCalculadosCODIGOAPOYO: TFloatField
+      FieldName = 'CODIGOAPOYO'
+    end
+    object qCamposCalculadosVALIDO: TStringField
+      FieldName = 'VALIDO'
+      Size = 3
+    end
+  end
+  object qClases: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM SGC_CLASES WHERE CODIGOCLASE=:CODIGOCLASE')
+    Left = 464
+    Top = 276
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'CODIGOCLASE'
+        ParamType = ptUnknown
+      end>
+    object qClasesCODIGOCLASE: TStringField
+      FieldName = 'CODIGOCLASE'
+      Origin = 'SGC_CLASES.CODIGOCLASE'
+      Size = 10
+    end
+    object qClasesCODIGOANOMALIA: TStringField
+      FieldName = 'CODIGOANOMALIA'
+      Origin = 'SGC_CLASES.CODIGOANOMALIA'
+      Size = 10
+    end
+    object qClasesDESCRIPCION: TStringField
+      FieldName = 'DESCRIPCION'
+      Origin = 'SGC_CLASES.DESCRIPCION'
+      Size = 100
+    end
+    object qClasesTIPO: TStringField
+      FieldName = 'TIPO'
+      Origin = 'SGC_CLASES.TIPO'
+    end
+    object qClasesREQUIERE_LECTURA: TStringField
+      FieldName = 'REQUIERE_LECTURA'
+      Origin = 'SGC_CLASES.REQUIERE_LECTURA'
+      Size = 3
+    end
+    object qClasesFACTURABLE: TStringField
+      FieldName = 'FACTURABLE'
+      Origin = 'SGC_CLASES.FACTURABLE'
+      Size = 3
+    end
+    object qClasesPROMEDIABLE: TStringField
+      FieldName = 'PROMEDIABLE'
+      Origin = 'SGC_CLASES.PROMEDIABLE'
+      Size = 3
+    end
+    object qClasesFOTOGRAFIA: TStringField
+      FieldName = 'FOTOGRAFIA'
+      Origin = 'SGC_CLASES.FOTOGRAFIA'
+      Size = 3
+    end
+    object qClasesOBSERVACION: TStringField
+      FieldName = 'OBSERVACION'
+      Origin = 'SGC_CLASES.OBSERVACION'
+      Size = 250
+    end
+    object qClasesMARCACION: TStringField
+      FieldName = 'MARCACION'
+      Origin = 'SGC_CLASES.MARCACION'
+    end
+    object qClasesUSUARIOCREACION: TFloatField
+      FieldName = 'USUARIOCREACION'
+      Origin = 'SGC_CLASES.USUARIOCREACION'
+    end
+    object qClasesFECHACREACION: TDateTimeField
+      FieldName = 'FECHACREACION'
+      Origin = 'SGC_CLASES.FECHACREACION'
+    end
+    object qClasesUSUARIOMODIFICACION: TFloatField
+      FieldName = 'USUARIOMODIFICACION'
+      Origin = 'SGC_CLASES.USUARIOMODIFICACION'
+    end
+    object qClasesFECHAMODIFICACION: TDateTimeField
+      FieldName = 'FECHAMODIFICACION'
+      Origin = 'SGC_CLASES.FECHAMODIFICACION'
+    end
+    object qClasesESTADO: TStringField
+      FieldName = 'ESTADO'
+      Origin = 'SGC_CLASES.ESTADO'
+      Size = 2
+    end
+    object qClasesPARAMETRIZACION: TStringField
+      FieldName = 'PARAMETRIZACION'
+      Origin = 'SGC_CLASES.PARAMETRIZACION'
+      Size = 50
+    end
+  end
+  object qUpdateLectura: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'UPDATE SIGCOM_LECTURA SET VALIDO =:VALIDO WHERE CODIGOLECTURA=:C' +
+        'ODIGOLECTURA')
+    Left = 768
+    Top = 212
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'VALIDO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'CODIGOLECTURA'
+        ParamType = ptUnknown
+      end>
+    object StringField1: TStringField
+      FieldName = 'CODIGOCLASE'
+      Origin = 'SGC_CLASES.CODIGOCLASE'
+      Size = 10
+    end
+    object StringField2: TStringField
+      FieldName = 'CODIGOANOMALIA'
+      Origin = 'SGC_CLASES.CODIGOANOMALIA'
+      Size = 10
+    end
+    object StringField3: TStringField
+      FieldName = 'DESCRIPCION'
+      Origin = 'SGC_CLASES.DESCRIPCION'
+      Size = 100
+    end
+    object StringField4: TStringField
+      FieldName = 'TIPO'
+      Origin = 'SGC_CLASES.TIPO'
+    end
+    object StringField5: TStringField
+      FieldName = 'REQUIERE_LECTURA'
+      Origin = 'SGC_CLASES.REQUIERE_LECTURA'
+      Size = 3
+    end
+    object StringField6: TStringField
+      FieldName = 'FACTURABLE'
+      Origin = 'SGC_CLASES.FACTURABLE'
+      Size = 3
+    end
+    object StringField7: TStringField
+      FieldName = 'PROMEDIABLE'
+      Origin = 'SGC_CLASES.PROMEDIABLE'
+      Size = 3
+    end
+    object StringField8: TStringField
+      FieldName = 'FOTOGRAFIA'
+      Origin = 'SGC_CLASES.FOTOGRAFIA'
+      Size = 3
+    end
+    object StringField9: TStringField
+      FieldName = 'OBSERVACION'
+      Origin = 'SGC_CLASES.OBSERVACION'
+      Size = 250
+    end
+    object StringField10: TStringField
+      FieldName = 'MARCACION'
+      Origin = 'SGC_CLASES.MARCACION'
+    end
+    object FloatField1: TFloatField
+      FieldName = 'USUARIOCREACION'
+      Origin = 'SGC_CLASES.USUARIOCREACION'
+    end
+    object DateTimeField1: TDateTimeField
+      FieldName = 'FECHACREACION'
+      Origin = 'SGC_CLASES.FECHACREACION'
+    end
+    object FloatField2: TFloatField
+      FieldName = 'USUARIOMODIFICACION'
+      Origin = 'SGC_CLASES.USUARIOMODIFICACION'
+    end
+    object DateTimeField2: TDateTimeField
+      FieldName = 'FECHAMODIFICACION'
+      Origin = 'SGC_CLASES.FECHAMODIFICACION'
+    end
+    object StringField11: TStringField
+      FieldName = 'ESTADO'
+      Origin = 'SGC_CLASES.ESTADO'
+      Size = 2
+    end
+    object StringField12: TStringField
+      FieldName = 'PARAMETRIZACION'
+      Origin = 'SGC_CLASES.PARAMETRIZACION'
+      Size = 50
+    end
+  end
+  object qAnalista: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT * FROM SGC_ANALISTAS WHERE  CODIGOANALISTA = :CODIGOANALI' +
+        'STA')
+    Left = 328
+    Top = 206
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'CODIGOANALISTA'
+        ParamType = ptUnknown
+      end>
+  end
+  object qValidarCritica: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT COUNT(*) AS CANTIDAD FROM'
+      ' SIGCOM_LECTURA '
+      'WHERE  CLAVE=:CLAVE'
+      ' AND FECHA_PROGRAMADA=TO_DATE(:FECHALECTURA,'#39'DD/MM/YYYY'#39')'
+      'AND ESTADOLECTURA=4')
+    Left = 696
+    Top = 220
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'CLAVE'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end>
+  end
+  object qResueltas: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT COUNT(*) AS CANTIDAD FROM SIGCOM_LECTURA S'
+      
+        'WHERE  S.ESTADOLECTURA ='#39'4'#39' AND S.VALIDO !='#39'SI'#39' AND CRITICA_INCM' +
+        'S!='#39'SI'#39' AND'
+      ' s.FECHA_PROGRAMADA=TO_DATE(:FECHALECTURA,'#39'DD/MM/YYYY'#39')'
+      
+        'AND S.CODIGOANALISTA=(SELECT CODIGOANALISTA FROM SGC_ANALISTAS W' +
+        'HERE CODIGOUSUARIO=(SELECT GETCODIGOUSUARIO FROM DUAL))')
+    Left = 372
+    Top = 312
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end>
+    object FloatField4: TFloatField
+      FieldName = 'CANTIDAD'
+    end
+  end
+  object pmCambiarEstado: TPopupMenu
+    Left = 776
+    Top = 376
+    object ColocarenestadoPendiente1: TMenuItem
+      Caption = 'Pasar a estado pendiente'
+      OnClick = ColocarenestadoPendiente1Click
+    end
+  end
+  object qlistaLecturaPendientes: TQuery
+    OnCalcFields = qlistaLecturaPendientesCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT AN.NOMBREANALISTA AS ANALISTA, DECODE (S.ESTADOLECTURA, 4' +
+        ','#39'SOLUCIONADO'#39',5,'#39'PENDIENTE'#39',2,'#39'SIN CRITICA'#39','#39#39') AS ESTADOCRITIC' +
+        'A,CL2.DESCRIPCION AS ANOMALIACONSUMO, AC.DESCRIPCION AS NOMBRECR' +
+        'ITICA,OC.NOMBREOBSERVACIONCRITICA,observacion_critica,FECHA_PROG' +
+        'RAMADA,to_number(CLAVE) as CLAVE,TO_NUMBER(CODIGOLECTURA) AS COD' +
+        'IGOLECTURA,TO_NUMBER(CONSUMOACTUAL) AS CONSUMOACTUAL,S.CODIGOANO' +
+        'MALIA AS CODIGOANOMALIA,S.FECHALECTURA AS FECHALECTURA,to_number' +
+        '(DESVIACIONCONSUMO) as DESVIACIONCONSUMO,I.CODIGOITINERARIO AS C' +
+        'ODIGOITINERARIO,S.CODIGOANALISTA AS CODIGOANALISTA,VALIDO,ESTADO' +
+        'LECTURA,CL.DESCRIPCION AS DESCRIPCION,CODIGOANOMALIACONSUMOACT F' +
+        'ROM SIGCOM_LECTURA S,SGC_CLASES CL,SGC_ITINERARIO I,SGC_GRUPOITI' +
+        'NERARIO G ,C_GRUPOAOL C,SGC_OBSERVACIONCRITICA OC,SGC_ANOMALIACR' +
+        'ITICA AC,SGC_ANALISTAS AN,SGC_CLASES CL2'
+      'WHERE S.ESTADOLECTURA  =5  AND CRITICA_INCMS='#39'NO'#39
+      ''
+      ''
+      ''
+      ''
+      
+        ' AND AC.CODIGOANOMALIACRITICA=S.VALIDO AND S.CODIGOANOMALIA = CL' +
+        '.CODIGOCLASE  AND I.CODIGOITINERARIO=S.CODIGOITINERARIO AND S.CO' +
+        'DIGOITINERARIO=I.CODIGOITINERARIO AND G.CODIGOGRUPOITINERARIO=I.' +
+        'CODIGOGRUPOITINERARIO AND C.CODIGOGRUPOAOL=G.CODIGOGRUPOAOL AND ' +
+        'OC.CODIGOOBSERVACIONCRITICA(+)=S.CODIGOOBSERVACION AND S.CODIGOA' +
+        'NALISTA = AN.CODIGOANALISTA AND S.CODIGOANOMALIACONSUMOACT = CL2' +
+        '.CODIGOCLASE(+)'
+      ''
+      ''
+      'ORDER BY S.FECHALECTURA'
+      ''
+      ' '
+      ' '
+      ' '
+      ' ')
+    Left = 160
+    Top = 192
+    object qlistaLecturaPendientesOBSERVACION_CRITICA: TMemoField
+      FieldName = 'OBSERVACION_CRITICA'
+      Origin = 'SIGCOM_LECTURA.OBSERVACION_CRITICA'
+      BlobType = ftMemo
+      Size = 400
+    end
+    object qlistaLecturaPendientesOBSERVACIONPENDIENTE: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'OBSERVACIONPENDIENTE'
+      Size = 400
+      Calculated = True
+    end
+    object qlistaLecturaPendientesFECHA_PROGRAMADA: TDateTimeField
+      FieldName = 'FECHA_PROGRAMADA'
+      Origin = 'SIGCOM_LECTURA.FECHA_PROGRAMADA'
+    end
+    object qlistaLecturaPendientesCODIGOANOMALIA: TStringField
+      FieldName = 'CODIGOANOMALIA'
+      Origin = 'SIGCOM_LECTURA.CODIGOANOMALIA'
+      Size = 50
+    end
+    object qlistaLecturaPendientesFECHALECTURA: TDateTimeField
+      FieldName = 'FECHALECTURA'
+      Origin = 'SIGCOM_LECTURA.FECHALECTURA'
+    end
+    object qlistaLecturaPendientesCODIGOITINERARIO: TFloatField
+      FieldName = 'CODIGOITINERARIO'
+      Origin = 'SGC_ITINERARIO.CODIGOITINERARIO'
+    end
+    object qlistaLecturaPendientesCODIGOANALISTA: TFloatField
+      FieldName = 'CODIGOANALISTA'
+      Origin = 'SIGCOM_LECTURA.CODIGOANALISTA'
+    end
+    object qlistaLecturaPendientesVALIDO: TStringField
+      FieldName = 'VALIDO'
+      Origin = 'SIGCOM_LECTURA.VALIDO'
+      Size = 3
+    end
+    object qlistaLecturaPendientesESTADOLECTURA: TFloatField
+      FieldName = 'ESTADOLECTURA'
+      Origin = 'SIGCOM_LECTURA.ESTADOLECTURA'
+    end
+    object qlistaLecturaPendientesDESCRIPCION: TStringField
+      FieldName = 'DESCRIPCION'
+      Origin = 'SGC_CLASES.DESCRIPCION'
+      Size = 100
+    end
+    object qlistaLecturaPendientesCODIGOANOMALIACONSUMOACT: TStringField
+      FieldName = 'CODIGOANOMALIACONSUMOACT'
+      Origin = 'SIGCOM_LECTURA.CODIGOANOMALIACONSUMOACT'
+      Size = 50
+    end
+    object qlistaLecturaPendientesNOMBREOBSERVACIONCRITICA: TStringField
+      FieldName = 'NOMBREOBSERVACIONCRITICA'
+      Size = 200
+    end
+    object qlistaLecturaPendientesCLAVE: TFloatField
+      FieldName = 'CLAVE'
+    end
+    object qlistaLecturaPendientesCODIGOLECTURA: TFloatField
+      FieldName = 'CODIGOLECTURA'
+    end
+    object qlistaLecturaPendientesCONSUMOACTUAL: TFloatField
+      FieldName = 'CONSUMOACTUAL'
+    end
+    object qlistaLecturaPendientesDESVIACIONCONSUMO: TFloatField
+      FieldName = 'DESVIACIONCONSUMO'
+    end
+    object qlistaLecturaPendientesNOMBRECRITICA: TStringField
+      FieldName = 'NOMBRECRITICA'
+      Size = 200
+    end
+    object qlistaLecturaPendientesFOTOS: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'FOTOS'
+      Size = 2
+      Calculated = True
+    end
+    object qlistaLecturaPendientesANALISTA: TStringField
+      FieldName = 'ANALISTA'
+      Size = 60
+    end
+    object qlistaLecturaPendientesESTADOCRITICA: TStringField
+      FieldName = 'ESTADOCRITICA'
+      Size = 11
+    end
+    object qlistaLecturaPendientesANOMALIACONSUMO: TStringField
+      FieldName = 'ANOMALIACONSUMO'
+      Size = 100
+    end
+  end
+  object dsListaPendientes: TDataSource
+    DataSet = qlistaLecturaPendientes
+    Left = 168
+    Top = 280
+  end
+  object dsListaResueltos: TDataSource
+    DataSet = qListaResueltos
+    Left = 280
+    Top = 224
+  end
+  object qListaResueltos: TQuery
+    OnCalcFields = qListaResueltosCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT AN.NOMBREANALISTA AS ANALISTA, DECODE (S.ESTADOLECTURA, 4' +
+        ','#39'SOLUCIONADO'#39',5,'#39'PENDIENTE'#39',2,'#39'SIN CRITICA'#39','#39#39') AS ESTADOCRITIC' +
+        'A,CL2.DESCRIPCION AS ANOMALIACONSUMO,AC.DESCRIPCION AS NOMBRECRI' +
+        'TICA,OC.NOMBREOBSERVACIONCRITICA,MARCA_CRITICA,FECHA_CRITICA,obs' +
+        'ervacion_critica,FECHA_PROGRAMADA,TO_NUMBER(CLAVE) AS CLAVE,TO_N' +
+        'UMBER(CODIGOLECTURA) AS CODIGOLECTURA,TO_NUMBER(CONSUMOACTUAL) A' +
+        'S CONSUMOACTUAL,S.CODIGOANOMALIA AS CODIGOANOMALIA,S.FECHALECTUR' +
+        'A AS FECHALECTURA,to_number(DESVIACIONCONSUMO) as DESVIACIONCONS' +
+        'UMO,I.CODIGOITINERARIO AS CODIGOITINERARIO,S.CODIGOANALISTA AS C' +
+        'ODIGOANALISTA,VALIDO,ESTADOLECTURA,CL.DESCRIPCION AS DESCRIPCION' +
+        ',CODIGOANOMALIACONSUMOACT FROM SIGCOM_LECTURA S,SGC_CLASES CL,SG' +
+        'C_ITINERARIO I,SGC_GRUPOITINERARIO G ,C_GRUPOAOL C,SGC_OBSERVACI' +
+        'ONCRITICA OC,SGC_ANOMALIACRITICA AC,SGC_ANALISTAS AN,SGC_CLASES ' +
+        'CL2'
+      'WHERE S.ESTADOLECTURA  =4 AND  VALIDO <>'#39'SI'#39
+      ''
+      ''
+      ''
+      ''
+      
+        ' AND AC.CODIGOANOMALIACRITICA=S.VALIDO  AND S.CODIGOANOMALIA = C' +
+        'L.CODIGOCLASE  AND I.CODIGOITINERARIO=S.CODIGOITINERARIO AND S.C' +
+        'ODIGOITINERARIO=I.CODIGOITINERARIO AND G.CODIGOGRUPOITINERARIO=I' +
+        '.CODIGOGRUPOITINERARIO AND C.CODIGOGRUPOAOL=G.CODIGOGRUPOAOL AND' +
+        '  OC.CODIGOOBSERVACIONCRITICA(+)=S.CODIGOOBSERVACION AND S.CODIG' +
+        'OANALISTA = AN.CODIGOANALISTA(+) AND S.CODIGOANOMALIACONSUMOACT ' +
+        '= CL2.CODIGOCLASE(+)'
+      ''
+      ''
+      'ORDER BY S.FECHALECTURA'
+      ''
+      ' '
+      ' '
+      ' '
+      ' '
+      ' ')
+    Left = 288
+    Top = 176
+    object qListaResueltosFECHA_CRITICA: TDateTimeField
+      FieldName = 'FECHA_CRITICA'
+      Origin = 'SIGCOM_LECTURA.FECHA_CRITICA'
+    end
+    object qListaResueltosOBSERVACION_CRITICA: TMemoField
+      FieldName = 'OBSERVACION_CRITICA'
+      Origin = 'SIGCOM_LECTURA.OBSERVACION_CRITICA'
+      BlobType = ftMemo
+      Size = 400
+    end
+    object qListaResueltosFECHA_PROGRAMADA: TDateTimeField
+      FieldName = 'FECHA_PROGRAMADA'
+      Origin = 'SIGCOM_LECTURA.FECHA_PROGRAMADA'
+    end
+    object qListaResueltosCODIGOANOMALIA: TStringField
+      FieldName = 'CODIGOANOMALIA'
+      Origin = 'SIGCOM_LECTURA.CODIGOANOMALIA'
+      Size = 50
+    end
+    object qListaResueltosFECHALECTURA: TDateTimeField
+      FieldName = 'FECHALECTURA'
+      Origin = 'SIGCOM_LECTURA.FECHALECTURA'
+    end
+    object qListaResueltosCODIGOITINERARIO: TFloatField
+      FieldName = 'CODIGOITINERARIO'
+      Origin = 'SGC_ITINERARIO.CODIGOITINERARIO'
+    end
+    object qListaResueltosCODIGOANALISTA: TFloatField
+      FieldName = 'CODIGOANALISTA'
+      Origin = 'SIGCOM_LECTURA.CODIGOANALISTA'
+    end
+    object qListaResueltosVALIDO: TStringField
+      FieldName = 'VALIDO'
+      Origin = 'SIGCOM_LECTURA.VALIDO'
+      Size = 3
+    end
+    object qListaResueltosESTADOLECTURA: TFloatField
+      FieldName = 'ESTADOLECTURA'
+      Origin = 'SIGCOM_LECTURA.ESTADOLECTURA'
+    end
+    object qListaResueltosDESCRIPCION: TStringField
+      FieldName = 'DESCRIPCION'
+      Origin = 'SGC_CLASES.DESCRIPCION'
+      Size = 100
+    end
+    object qListaResueltosCODIGOANOMALIACONSUMOACT: TStringField
+      FieldName = 'CODIGOANOMALIACONSUMOACT'
+      Origin = 'SIGCOM_LECTURA.CODIGOANOMALIACONSUMOACT'
+      Size = 50
+    end
+    object qListaResueltosOBSERVACIONPENDIENTE: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'OBSERVACIONPENDIENTE'
+      Size = 400
+      Calculated = True
+    end
+    object qListaResueltosMARCA_CRITICA: TStringField
+      FieldName = 'MARCA_CRITICA'
+      Origin = 'SIGCOM_LECTURA.MARCA_CRITICA'
+      Size = 4
+    end
+    object qListaResueltosNOMBREOBSERVACIONCRITICA: TStringField
+      FieldName = 'NOMBREOBSERVACIONCRITICA'
+      Size = 200
+    end
+    object qListaResueltosCLAVE: TFloatField
+      FieldName = 'CLAVE'
+    end
+    object qListaResueltosCODIGOLECTURA: TFloatField
+      FieldName = 'CODIGOLECTURA'
+    end
+    object qListaResueltosCONSUMOACTUAL: TFloatField
+      FieldName = 'CONSUMOACTUAL'
+    end
+    object qListaResueltosDESVIACIONCONSUMO: TFloatField
+      FieldName = 'DESVIACIONCONSUMO'
+    end
+    object qListaResueltosNOMBRECRITICA: TStringField
+      FieldName = 'NOMBRECRITICA'
+      Size = 200
+    end
+    object qListaResueltosFOTOS: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'FOTOS'
+      Size = 2
+      Calculated = True
+    end
+    object qListaResueltosANALISTA: TStringField
+      FieldName = 'ANALISTA'
+      Size = 60
+    end
+    object qListaResueltosESTADOCRITICA: TStringField
+      FieldName = 'ESTADOCRITICA'
+      Size = 11
+    end
+    object qListaResueltosANOMALIACONSUMO: TStringField
+      FieldName = 'ANOMALIACONSUMO'
+      Size = 100
+    end
+  end
+  object pmActivar: TPopupMenu
+    Left = 848
+    Top = 384
+    object MenuItem1: TMenuItem
+      Caption = 'Pasar a estado Asignado'
+      OnClick = MenuItem1Click
+    end
+  end
+  object ImageList1: TImageList
+    Left = 540
+    Top = 201
+    Bitmap = {
+      360C000003000000424D360C0000000000003600000028000000300000001000
+      00000100200000000000000C0000000000000000000000000000000000000000
+      00FF000000FF000000FF000000FFE2EBE8FF7EA697FF2E6E57FF0C573CFF0C57
+      3CFF2B6C55FF78A293FFDCE7E3FF000000FF000000FF000000FF000000FFD5E7
+      FFFF4697FFFF0D77FFFF0D77FFFF0D77FFFF0D77FFFFC8E0FFFF4395FFFF388F
+      FFFFD4E7FFFF0D77FFFF0D77FFFF4697FFFFD5E7FFFF000000FF000000FFF4F4
+      F4FFDDDDDDFFD2D2D2FFD2D2D2FFD2D2D2FFD2D2D2FFD2D2D2FFD2D2D2FFD2D2
+      D2FFD2D2D2FFD2D2D2FFD2D2D2FFD2D2D2FFD2D2D2FFDDDDDDFFF4F4F4FF0000
+      00FF000000FF000000FF86AC9DFF146043FF3A8567FF7CB49DFFA4CEBCFFA4CE
+      BCFF81B7A1FF3E886AFF146244FF86AC9DFF000000FF000000FF000000FF4697
+      FFFF0D77FFFF0D77FFFF0D77FFFF0D77FFFF6DADFFFFB5D5FFFF0D77FFFF0D77
+      FFFFCCE2FFFF3F93FFFF0D77FFFF0D77FFFF4697FFFF000000FF000000FF778E
+      9EFF2F5772FF2F5772FF2F5772FF2F5772FF2F5772FF2F5772FF2F5772FF2F57
+      72FF2F5772FF2F5772FF2F5772FF2F5772FF2F5772FF2F5772FF778E9EFF0000
+      00FF000000FF8DB2A4FF237454FF88BDA7FF679F89FF2E7459FF146043FF1460
+      43FF2A7156FF629B85FF8BBFAAFF257756FF93B6A8FF000000FF000000FF0D77
+      FFFF0D77FFFFFFFFFFFFFFFFFFFFFFFFFFFFFCFDFFFF3B91FFFF0D77FFFF0D77
+      FFFF68AAFFFFFFFFFFFFFFFFFFFF0D77FFFF0D77FFFF000000FF000000FF3158
+      74FF518EB2FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7E
+      A4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF518EB2FF315874FF0000
+      00FF87AFA0FF277859FF88BEA8FF33785EFF7DA898FFD6E4DFFFFFFFFFFFFFFF
+      FFFFDCE7E3FF85AD9EFF2D7459FF89BDA9FF297A5AFF87AFA0FF000000FF0D77
+      FFFF0D77FFFFFFFFFFFFFFFFFFFFFFFFFFFF8DBFFFFF0D77FFFF1079FFFF0D77
+      FFFF167CFFFFE5F1FFFFFFFFFFFF0D77FFFF0D77FFFF000000FF000000FF325A
+      76FF518EB2FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7E
+      A4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF518EB2FF325A76FFE7EF
+      ECFF287355FF68AF93FF387E62FF93B8A9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFF98BBADFF337A5EFF6EB296FF277355FFDAE6E1FF0D77
+      FFFF0D77FFFFFFFFFFFFFFFFFFFFBBD9FFFF1079FFFF1079FFFFAACFFFFF71AF
+      FFFF0D77FFFF71AFFFFFFFFFFFFF0D77FFFF0D77FFFF000000FF000000FF345D
+      79FF518EB2FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7E
+      A4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF518EB2FF345D79FF8EB6
+      A5FF439171FF69A68EFF7FAC9AFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFEAEAEAFFFFFFFFFFFFFFFFFF8CB4A4FF66A38AFF439273FF81AD9BFF0D77
+      FFFF0D77FFFFFFFFFFFFB8D7FFFF167CFFFF187DFFFFBBD9FFFFFFFFFFFFF6FA
+      FFFF3B91FFFF0D77FFFFBBD9FFFF86BBFFFF0D77FFFF000000FF000000FF3760
+      7CFF518EB2FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7E
+      A4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF518EB2FF37607CFF5291
+      77FF51A182FF4A8E72FFCDDFD8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBCBC
+      BCFF5F5F5FFFF9F9F9FFFFFFFFFFDAE7E2FF43896CFF51A383FF488B6FFF0D77
+      FFFF70AFFFFF9BC7FFFF1079FFFF4999FFFFDAEAFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFE3EFFFFF2182FFFF2182FFFFE5F1FFFF70AFFFFF000000FF000000FF3A63
+      7FFF518EB2FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7E
+      A4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF518EB2FF3A637FFF3A85
+      65FF5FAF91FF3C8667FFEEF4F2FFFFFFFFFFFFFFFFFFFFFFFFFFBCBCBCFF5D5D
+      5DFFE4E4E4FFFFFFFFFFFFFFFFFFFAFCFBFF348161FF60B092FF358261FF0D77
+      FFFF0D77FFFFFFFFFFFFFDFEFFFFD1E5FFFF85BAFFFF4697FFFF4697FFFF4697
+      FFFFA4CCFFFFC3DDFFFF167CFFFF388FFFFFF1F7FFFFFFFFFFFF000000FF3E67
+      83FF518EB2FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF244E6BFF244E
+      6BFF4B7BA1FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF518EB2FF3E6783FF3B88
+      67FF76BEA4FF408D6CFFEFF5F2FFFFFFFFFFFFFFFFFFFFFFFFFFC8C8C8FF5B5B
+      5BFFD7D7D7FFFFFFFFFFFFFFFFFFFAFCFBFF3A8866FF75BDA2FF3B8867FF0D77
+      FFFF0D77FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFC6DFFFFF167CFFFF4C9AFFFFF6FAFFFFFFFFFFFF254F
+      6CFF244E6BFF244E6BFF244E6BFF244E6BFF244E6BFF244E6BFF244E6BFF244E
+      6BFF244E6BFF244E6BFF244E6BFF244E6BFF244E6BFF244E6BFF254F6CFF61A1
+      85FF88C2ADFF529C7DFFCFE3DAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC8C8
+      C8FF5B5B5BFFD7D7D7FFFFFFFFFFDDEBE5FF4D9878FF8AC4AFFF5C9E81FF0D77
+      FFFF0D77FFFFFFFFFFFF4697FFFF4697FFFF4697FFFF4697FFFF4697FFFF4697
+      FFFF4697FFFF4697FFFFFFFFFFFFC6DFFFFF1B7FFFFF4C9AFFFFF6FAFFFF446C
+      8AFF518EB2FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7E
+      A4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF518EB2FF446C8AFF9DC7
+      B4FF84BCA5FF6AB398FF8ABCA5FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFC8C8C8FF5B5B5BFFF2F2F2FF99C5B1FF64AE92FF83BCA4FF9DC7B4FF0D77
+      FFFF0D77FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFF8CBEFFFFE5F1FFFF6BACFFFF73B1FFFF466F
+      8DFF518EB2FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7E
+      A4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF4D7EA4FF518EB2FF466F8DFFEBF4
+      F0FF529F7BFFACD8C9FF58A483FFA3CBB9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFEAEAEAFFA5CDBAFF55A280FFABD8CAFF57A17FFFEBF4F0FF0D77
+      FFFF0D77FFFFFFFFFFFF4697FFFF4697FFFF4697FFFF4697FFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFF0D77FFFF3C92FFFFFFFFFFFFFFFFFFFF4872
+      8FFF549ABDFF518EB2FF518EB2FF518EB2FF518EB2FF518EB2FF518EB2FF518E
+      B2FF518EB2FF518EB2FF518EB2FF518EB2FF518EB2FF549ABDFF48728FFF0000
+      00FFA5CDBBFF75B599FFB1DCCEFF63AE8EFF8CC0A8FFC3DED1FFE6F1ECFFE8F2
+      EEFFC5DFD3FF93C4ADFF60AC8CFFADDBCBFF79B89CFFA3CCB9FF000000FF0D77
+      FFFF0D77FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFF0D77FFFF0D77FFFF000000FF000000FF4A74
+      91FF5BB2D2FF5AAECFFF5AAECFFF5AAECFFF5AAECFFF5AAECFFF5AAECFFF5AAE
+      CFFF5AAECFFF5AAECFFF5AAECFFF5AAECFFF5AAECFFF5BB2D2FF4A7491FF0000
+      00FF000000FFA7D0BDFF76B89AFFC4E6DBFF90CAB5FF6EB698FF5CAA87FF5BA9
+      86FF6DB597FF8CC8B1FFC4E6DCFF7CBB9FFFA9D1BEFF000000FF000000FF0D77
+      FFFF0D77FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFF0D77FFFF0D77FFFF4697FFFF000000FF000000FF96AE
+      C0FF4C7693FF4C7693FF4C7693FF4C7693FF3C6583FF4C7693FF4C7693FF4C76
+      93FF4C7693FF3C6583FF4C7693FF4C7693FF4C7693FF4C7693FF96AEC0FF0000
+      00FF000000FF000000FFA5D0BBFF5FAC87FF90C8B0FFABD7C6FFC3E5DAFFC5E6
+      DBFFACD8C7FF93CAB2FF60AD88FFA3CFBAFF000000FF000000FF000000FF4697
+      FFFF0D77FFFF0D77FFFF0D77FFFF0D77FFFF0D77FFFF0D77FFFF0D77FFFF0D77
+      FFFF0D77FFFF0D77FFFF0D77FFFF4697FFFFD5E7FFFF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF244E6BFF000000FF000000FF0000
+      00FF000000FF244E6BFF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FFF3F9F6FFB0D7C4FF8DC5AAFF6CB491FF6AB3
+      90FF8BC4A8FFACD5C1FFF1F8F4FF000000FF000000FF000000FF000000FFD5E7
+      FFFF4697FFFF0D77FFFF0D77FFFF0D77FFFF0D77FFFF0D77FFFF0D77FFFF0D77
+      FFFF0D77FFFF0D77FFFF4697FFFFD5E7FFFF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF244E6BFF244E6BFF244E6BFF244E
+      6BFF244E6BFF244E6BFF000000FF000000FF000000FF000000FF000000FF424D
+      BE000000000000003E0000002800000030000000100000000100010000000000
+      800000000000000000000000020000000200000000000000FFFFFF00F00F0003
+      00000000E007000300000000C003000300000000800100030000000000000003
+      0000000000000003000000000000000300000000000000010000000000000000
+      0000000000000000000000000000000000000000000000000000000080010003
+      00000000C003000300000000E0070003FBDF0000F00F0007F81F0000}
+  end
+  object qPendientes: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT COUNT(*) AS CANTIDAD FROM SIGCOM_LECTURA S'
+      'WHERE  S.ESTADOLECTURA ='#39'5'#39' AND S.VALIDO !='#39'SI'#39' AND'
+      ' s.FECHA_PROGRAMADA=TO_DATE(:FECHALECTURA,'#39'DD/MM/YYYY'#39')'
+      
+        'AND S.CODIGOANALISTA=(SELECT CODIGOANALISTA FROM SGC_ANALISTAS W' +
+        'HERE CODIGOUSUARIO=(SELECT GETCODIGOUSUARIO FROM DUAL))')
+    Left = 364
+    Top = 256
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end>
+    object FloatField3: TFloatField
+      FieldName = 'CANTIDAD'
+    end
+  end
+  object pmReiniciar: TPopupMenu
+    Left = 968
+    Top = 392
+    object MenuItem2: TMenuItem
+      Caption = 'Reiniciar información de la Cuenta'
+      OnClick = MenuItem2Click
+    end
+  end
+  object qReporteGeneral1: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT DISTINCT CICLO,FECHA_PROGRAMADA,DECODE(VALIDO,'#39'SI'#39','#39'NO EN' +
+        'TRO A CRITICA'#39','#39'EN CRITICA'#39') AS "CRITICA",'
+      
+        'DECODE(CODIGOANOMALIA,'#39'AL0_1'#39','#39'SIN ANOMALIA DE LECTURA'#39','#39'CON ANO' +
+        'MALIA DE LECTURA'#39') AS "ANOMALIA DE LECTURA",'
+      'COUNT(*) AS "CANTIDAD CLIENTES" '
+      
+        'FROM SIGCOM_LECTURA S,(SELECT DISTINCT FECHALECTURA,CICLO FROM E' +
+        'EH_RUTACICLO) E'
+      
+        'WHERE FECHA_PROGRAMADA>=TO_DATE(:MES,'#39'MM'#39') AND FECHA_PROGRAMADA ' +
+        '<TO_DATE(:MES1,'#39'MM'#39')'
+      'AND E.FECHALECTURA=S.FECHA_PROGRAMADA'
+      
+        'GROUP BY CICLO,FECHA_PROGRAMADA,DECODE(VALIDO,'#39'SI'#39','#39'NO ENTRO A C' +
+        'RITICA'#39','#39'EN CRITICA'#39'),'
+      
+        'DECODE(CODIGOANOMALIA,'#39'AL0_1'#39','#39'SIN ANOMALIA DE LECTURA'#39','#39'CON ANO' +
+        'MALIA DE LECTURA'#39')'
+      'ORDER BY 1')
+    Left = 1040
+    Top = 260
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'MES'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'MES1'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsReporteGeneral1: TDDataSource
+    AutoEdit = False
+    DataSet = qReporteGeneral1
+    Left = 952
+    Top = 272
+  end
+  object QReporteGeneral2: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT NOMBRETIPOFACTURACION,DECODE(VALIDO,'#39'SI'#39','#39'NO'#39','#39'SI'#39') AS "C' +
+        'RITICA"'
+      
+        ',DECODE(CODIGOANOMALIA,'#39'AL0_1'#39','#39'NO'#39','#39'SI'#39') AS "ANOMALIA DE LECTUR' +
+        'A"'
+      ',COUNT(*) FROM SIGCOM_LECTURA S,SGC_TIPOFACTURACION F'
+      
+        'WHERE FECHA_PROGRAMADA>=TO_DATE(:MES,'#39'MM'#39') AND FECHA_PROGRAMADA ' +
+        '<TO_DATE(:MES1,'#39'MM'#39')'
+      'AND F.CODIGOTIPOFACTURACION=S.TIPO_FACTURA'
+      
+        'GROUP BY NOMBRETIPOFACTURACION,DECODE(VALIDO,'#39'SI'#39','#39'NO'#39','#39'SI'#39'),DEC' +
+        'ODE(CODIGOANOMALIA,'#39'AL0_1'#39','#39'NO'#39','#39'SI'#39')'
+      'ORDER BY 1')
+    Left = 1056
+    Top = 300
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'MES'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'MES1'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsReporteGeneral2: TDDataSource
+    AutoEdit = False
+    DataSet = QReporteGeneral2
+    Left = 1144
+    Top = 296
+  end
+  object qExistenciaFotos: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT COUNT(*) AS CANTIDAD FROM SIGCOM_FOTO WHERE TIPOFOTO=15 A' +
+        'ND CLAVE=:CLAVE AND FECHALECTURA=TO_DATE(:FECHALECTURA,'#39'DD/MM/YY' +
+        'YY'#39')')
+    Left = 656
+    Top = 292
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'CLAVE'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end>
+  end
+  object aParametroPromedio: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT VALOR FROM SGC_PARAMETROS where codigoparametRo=11')
+    Left = 648
+    Top = 436
+  end
+end

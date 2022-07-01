@@ -1,0 +1,610 @@
+object fAsignacionInspectorReparto: TfAsignacionInspectorReparto
+  Left = 206
+  Top = 181
+  Width = 1135
+  Height = 554
+  Caption = 'Asignación de Inspectores de Reparto'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel6: TPanel
+    Left = 0
+    Top = 0
+    Width = 1119
+    Height = 515
+    Align = alClient
+    TabOrder = 0
+    object Splitter2: TSplitter
+      Left = 795
+      Top = 91
+      Width = 3
+      Height = 401
+      Cursor = crHSplit
+      Align = alRight
+      Beveled = True
+    end
+    object Panel1: TPanel
+      Left = 1
+      Top = 1
+      Width = 1117
+      Height = 40
+      Align = alTop
+      TabOrder = 0
+      object Panel7: TPanel
+        Left = 862
+        Top = 1
+        Width = 254
+        Height = 38
+        Align = alRight
+        Anchors = [akTop, akRight]
+        BevelOuter = bvNone
+        TabOrder = 0
+        object BitBtn3: TBitBtn
+          Left = 136
+          Top = 0
+          Width = 112
+          Height = 34
+          Hint = 'Desasignar Lector a Itinerario'
+          Anchors = [akTop, akRight]
+          Caption = 'Desasignar'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 1
+          OnClick = BitBtn3Click
+          Kind = bkCancel
+        end
+        object BitBtn2: TBitBtn
+          Left = 16
+          Top = 2
+          Width = 102
+          Height = 31
+          Hint = 'Asignar Lector al Itinerario'
+          Caption = 'Asignar'
+          Default = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ModalResult = 1
+          ParentFont = False
+          TabOrder = 0
+          OnClick = BitBtn2Click
+          Glyph.Data = {
+            DE010000424DDE01000000000000760000002800000024000000120000000100
+            0400000000006801000000000000000000001000000010000000000000000000
+            80000080000000808000800000008000800080800000C0C0C000808080000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+            3333333333333333333333330000333333333333333333333333F33333333333
+            00003333344333333333333333388F3333333333000033334224333333333333
+            338338F3333333330000333422224333333333333833338F3333333300003342
+            222224333333333383333338F3333333000034222A22224333333338F338F333
+            8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+            33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+            0000333333333A222433333333333338F338F33300003333333333A222433333
+            333333338F338F33000033333333333A222433333333333338F338F300003333
+            33333333A222433333333333338F338F00003333333333333A22433333333333
+            3338F38F000033333333333333A223333333333333338F830000333333333333
+            333A333333333333333338330000333333333333333333333333333333333333
+            0000}
+          NumGlyphs = 2
+        end
+      end
+      object Panel3: TPanel
+        Left = 1
+        Top = 1
+        Width = 861
+        Height = 38
+        Align = alClient
+        BevelOuter = bvNone
+        TabOrder = 1
+        object Label1: TLabel
+          Left = 0
+          Top = 0
+          Width = 101
+          Height = 38
+          Align = alLeft
+          Alignment = taCenter
+          Caption = 'Sede Operativa  :'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+          Layout = tlCenter
+        end
+        object sbBuscarCodigo: TSpeedButton
+          Left = 161
+          Top = 8
+          Width = 20
+          Height = 18
+          Glyph.Data = {
+            36040000424D3604000000000000360000002800000010000000100000000100
+            2000000000000004000000000000000000000000000000000000FF00FF00FF00
+            FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+            FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+            FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+            FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+            FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+            FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+            FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF0084848400FF00
+            FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+            FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00848484000000
+            0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+            FF00848484008484840084848400848484008484840084848400848484000000
+            000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+            FF00848484000000000000000000000000000000000000000000000000000000
+            00000000000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+            FF00848484000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00
+            FF00848484000000000000000000000000000000000000000000000000000000
+            000000000000000000000000000000000000FF00FF00FF00FF00FF00FF00FF00
+            FF00848484000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00
+            FF00FF00FF000000000000000000000000000000000000000000000000000000
+            00000000000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+            FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF000000
+            000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+            FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF000000
+            0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+            FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+            FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+            FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+            FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+            FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+            FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
+          OnClick = sbBuscarCodigoClick
+        end
+        object SpeedButton5: TSpeedButton
+          Left = 536
+          Top = 6
+          Width = 18
+          Height = 20
+          Glyph.Data = {
+            4E010000424D4E01000000000000760000002800000012000000120000000100
+            040000000000D800000000000000000000001000000010000000000000000000
+            BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+            3333330000003333333333333333330000003338888888888888330000003304
+            0404404040483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+            000033FF000F0007FF483300000033FFF0FF7F70FF483300000033FFF0FFFFF0
+            FF483300000033FFF0FF0007FF483300000033FF00FF0FFFFF483300000033FF
+            F0FF0000FF483300000033FFFFFFFFFFFF483300000033FFFFFFFFFFFF483300
+            000033F7777777777F4833000000330000000000003333000000333333333333
+            333333000000333333333333333333000000}
+          OnClick = SpeedButton5Click
+        end
+        object Label3: TLabel
+          Left = 345
+          Top = 10
+          Width = 113
+          Height = 13
+          Caption = 'Fecha De Reparto :'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+          Layout = tlCenter
+        end
+        object sbConsultarListadoClientes: TSpeedButton
+          Left = 712
+          Top = 4
+          Width = 25
+          Height = 21
+          Hint = 'Filtrar Itinerarios para Reparto'
+          Glyph.Data = {
+            EE000000424DEE000000000000007600000028000000100000000F0000000100
+            0400000000007800000000000000000000001000000010000000000000000000
+            8000008000000080800080000000800080008080000080808000C0C0C0000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+            8888888888888888888888888800008888888888880660888888888888088088
+            8888888888088088888888888808808888888888806886088888888806688860
+            8888888066888866088888066FF8888660888066FFFF88866608800000000000
+            000888888888888888888888888888888888}
+          OnClick = sbConsultarListadoClientesClick
+        end
+        object eOficina: TEdit
+          Left = 105
+          Top = 6
+          Width = 52
+          Height = 21
+          TabOrder = 1
+          OnKeyPress = eOficinaKeyPress
+          OnKeyUp = eOficinaKeyUp
+        end
+        object DBLkpCmbBoxOficinas: TDBLookupComboBox
+          Left = 189
+          Top = 6
+          Width = 141
+          Height = 21
+          KeyField = 'CODIGOOFICINA'
+          ListField = 'NOMBREOFICINA'
+          ListSource = dsOficinas
+          TabOrder = 0
+          OnCloseUp = DBLkpCmbBoxOficinasCloseUp
+        end
+        object dbComboCiclosReparto: TDBLookupComboBox
+          Left = 563
+          Top = 6
+          Width = 141
+          Height = 21
+          KeyField = 'FECHA_PROGRAMADA_REPARTO'
+          ListField = 'FECHA_PROGRAMADA_REPARTO'
+          ListSource = dsCiclosReparto
+          TabOrder = 2
+          OnCloseUp = dbComboCiclosRepartoCloseUp
+        end
+        object eFechaReparto: TEdit
+          Left = 462
+          Top = 6
+          Width = 73
+          Height = 21
+          TabOrder = 3
+          OnKeyPress = eFechaRepartoKeyPress
+          OnKeyUp = eFechaRepartoKeyUp
+        end
+      end
+    end
+    object dbgGrupoTrabajo: TDBGrid
+      Left = 798
+      Top = 91
+      Width = 320
+      Height = 401
+      Align = alRight
+      DataSource = dsAdministrativo
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Alignment = taCenter
+          Expanded = False
+          FieldName = 'CODIGOGRUPOTRABAJO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Código '
+          Width = 50
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREGRUPOTRABAJO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Nombre del Inspector'
+          Width = 296
+          Visible = True
+        end>
+    end
+    object Panel2: TPanel
+      Left = 1
+      Top = 492
+      Width = 1117
+      Height = 22
+      Align = alBottom
+      TabOrder = 2
+    end
+    object dbgItinerarios: TDBGrid
+      Left = 1
+      Top = 91
+      Width = 794
+      Height = 401
+      Align = alClient
+      DataSource = dsItinerarios
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      OnTitleClick = dbgItinerariosTitleClick
+      Columns = <
+        item
+          Alignment = taCenter
+          Expanded = False
+          FieldName = 'CODIGOITINERARIO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Código Itinerario'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -7
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = []
+          Width = 87
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREGRUPOTRABAJO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Nombre del Inspector'
+          Width = 199
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CANTIDAD'
+          Title.Alignment = taCenter
+          Title.Caption = 'Clientes'
+          Width = 49
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREESTADOITINERARIO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Estado'
+          Width = 99
+          Visible = True
+        end>
+    end
+    object Panel4: TPanel
+      Left = 1
+      Top = 66
+      Width = 1117
+      Height = 25
+      Align = alTop
+      TabOrder = 4
+      object lFiltroDatosIti: TLabel
+        Left = 1
+        Top = 1
+        Width = 661
+        Height = 23
+        Align = alClient
+        Alignment = taCenter
+        AutoSize = False
+        Color = clBlue
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        Layout = tlCenter
+      end
+      object lFiltroDatosGrup: TLabel
+        Left = 662
+        Top = 1
+        Width = 454
+        Height = 23
+        Align = alRight
+        Alignment = taCenter
+        AutoSize = False
+        Color = clBlue
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        Layout = tlCenter
+      end
+    end
+    object Panel5: TPanel
+      Left = 1
+      Top = 41
+      Width = 1117
+      Height = 25
+      Align = alTop
+      TabOrder = 5
+      object TLabel
+        Left = 1
+        Top = 1
+        Width = 597
+        Height = 23
+        Align = alClient
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'Itinerarios '
+        Color = 10930928
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        Layout = tlCenter
+      end
+      object TLabel
+        Left = 598
+        Top = 1
+        Width = 518
+        Height = 23
+        Align = alRight
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'Inspectores de Reparto'
+        Color = 10930928
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        Layout = tlCenter
+      end
+    end
+  end
+  object qItinerarios: TQuery
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    Constrained = True
+    SQL.Strings = (
+      
+        'SELECT I.CODIGOITINERARIO,E.NOMBREESTADOITINERARIO,G.NOMBREGRUPO' +
+        'TRABAJO,I.CODIGOESTADOITINERARIO,COUNT(*) AS CANTIDAD'
+      
+        'FROM REP_ITINERARIO I , REP_ITINERARIO_GRUPOTRABAJO IG,ESTADOITI' +
+        'NERARIO E, GRUPOTRABAJO G , REP_RUTAITINERARIO RI, REP_CLIENTESR' +
+        'EPARTO RE'
+      'WHERE'
+      'I.CODIGOESTADOITINERARIO=E.CODIGOESTADOITINERARIO'
+      'AND IG.CODIGOITINERARIO(+) =I.CODIGOITINERARIO'
+      'AND IG.CODIGOADMINISTRATIVO =G.CODIGOADMINISTRATIVO(+)'
+      'AND IG.CODIGOGRUPOTRABAJO   =G.CODIGOGRUPOTRABAJO(+)'
+      'AND I.CODIGOSEDEOPERATIVA=:CODIGOSEDE'
+      'AND RI.CODIGOITINERARIO=I.CODIGOITINERARIO'
+      'AND TO_CHAR(I.FECHAPROGRAMADAREPARTO,'#39'DD/MM/YYYY'#39')=:FECHAREPARTO'
+      'AND RI.CODIGOAPOYO=RE.CODIGOAPOYO'
+      'AND RE.CODIGOSEDEOPERATIVA=I.CODIGOSEDEOPERATIVA'
+      
+        'AND TO_CHAR(RE.FECHA_PROGRAMADA_REPARTO,'#39'DD/MM/YYYY'#39') = TO_CHAR(' +
+        'I.FECHAPROGRAMADAREPARTO,'#39'DD/MM/YYYY'#39')'
+      ''
+      
+        'GROUP BY I.COLOR,I.CODIGOITINERARIO,E.NOMBREESTADOITINERARIO,G.N' +
+        'OMBREGRUPOTRABAJO,I.CODIGOESTADOITINERARIO'
+      'ORDER BY I.CODIGOITINERARIO ')
+    UpdateMode = upWhereChanged
+    Left = 160
+    Top = 264
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'CODIGOSEDE'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'FECHAREPARTO'
+        ParamType = ptUnknown
+      end>
+    object qItinerariosCODIGOITINERARIO: TFloatField
+      FieldName = 'CODIGOITINERARIO'
+    end
+    object qItinerariosNOMBREESTADOITINERARIO: TStringField
+      FieldName = 'NOMBREESTADOITINERARIO'
+      Size = 30
+    end
+    object qItinerariosNOMBREGRUPOTRABAJO: TStringField
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+    object qItinerariosCODIGOESTADOITINERARIO: TFloatField
+      FieldName = 'CODIGOESTADOITINERARIO'
+    end
+    object qItinerariosCANTIDAD: TFloatField
+      FieldName = 'CANTIDAD'
+    end
+  end
+  object dsItinerarios: TDataSource
+    DataSet = qItinerarios
+    Left = 232
+    Top = 264
+  end
+  object qOficinas: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT CODIGOSEDEOPERATIVA AS CODIGOOFICINA, NOMBRESEDEOPERATIVA' +
+        ' AS NOMBREOFICINA FROM SEDEOPERATIVA WHERE ACTIVO = '#39'S'#39)
+    Left = 164
+    Top = 144
+    object qOficinasCODIGOOFICINA: TFloatField
+      FieldName = 'CODIGOOFICINA'
+      Origin = 'SEDEOPERATIVA.CODIGOSEDEOPERATIVA'
+    end
+    object qOficinasNOMBREOFICINA: TStringField
+      FieldName = 'NOMBREOFICINA'
+      Origin = 'SEDEOPERATIVA.NOMBRESEDEOPERATIVA'
+      Size = 100
+    end
+  end
+  object dsOficinas: TDataSource
+    DataSet = qOficinas
+    Left = 236
+    Top = 145
+  end
+  object qCiclosReparto: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT TO_CHAR(FECHA_PROGRAMADA_REPARTO,'#39'DD/MM/YYYY'#39') AS FECHA_P' +
+        'ROGRAMADA_REPARTO, CODIGOESTADOCICLOREPARTO FROM REP_CICLOREPART' +
+        'O WHERE CODIGOESTADOCICLOREPARTO=2')
+    Left = 164
+    Top = 208
+    object qCiclosRepartoCODIGOESTADOCICLOREPARTO: TFloatField
+      FieldName = 'CODIGOESTADOCICLOREPARTO'
+      Origin = 'REP_CICLOREPARTO.CODIGOESTADOCICLOREPARTO'
+    end
+    object qCiclosRepartoFECHA_PROGRAMADA_REPARTO: TStringField
+      FieldName = 'FECHA_PROGRAMADA_REPARTO'
+      Size = 10
+    end
+  end
+  object dsCiclosReparto: TDataSource
+    DataSet = qCiclosReparto
+    Left = 236
+    Top = 209
+  end
+  object qAdministrativo: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT DISTINCT  GT.CODIGOGRUPOTRABAJO, GT.NOMBREGRUPOTRABAJO, G' +
+        'T.CODIGOADMINISTRATIVO'
+      
+        'FROM GRUPOTRABAJO GT, ADMINISTRATIVO AD, COORDINACIONGRUPOTRABAJ' +
+        'O G'
+      'WHERE GT.ACTIVO = '#39'S'#39
+      'AND GT.CODIGOADMINISTRATIVO = AD.CODIGOADMINISTRATIVO'
+      
+        'AND G.CODIGOCOORDINACIONGRUPOTRABAJO=GT.CODIGOCOORDINACIONGRUPOT' +
+        'RABAJO'
+      'AND G.CODIGOSEDEOPERATIVA=:CODIGOSEDEOPERATIVA ORDER BY 2,1')
+    Left = 161
+    Top = 320
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'CODIGOSEDEOPERATIVA'
+        ParamType = ptUnknown
+      end>
+    object qAdministrativoCODIGOGRUPOTRABAJO: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.CODIGOGRUPOTRABAJO'
+    end
+    object qAdministrativoNOMBREGRUPOTRABAJO: TStringField
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+    object qAdministrativoCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'GRUPOTRABAJO.CODIGOADMINISTRATIVO'
+    end
+  end
+  object dsAdministrativo: TDataSource
+    DataSet = qAdministrativo
+    Left = 232
+    Top = 320
+  end
+end

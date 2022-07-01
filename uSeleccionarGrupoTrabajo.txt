@@ -1,0 +1,99 @@
+inherited fSeleccionarGrupoTrabajo: TfSeleccionarGrupoTrabajo
+  Caption = 'Seleccionar Grupo Trabajo'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel2: TPanel
+    inherited dbgDatos: TRxDBGrid
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'CODIGOADMINISTRATIVO'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'CIA'
+          Title.Color = 15724527
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGOGRUPOTRABAJO'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Código'
+          Title.Color = 15724527
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREGRUPOTRABAJO'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Nombre'
+          Title.Color = 15724527
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 355
+          Visible = True
+        end>
+    end
+    inherited Panel3: TPanel
+      inherited SBFiltrar: TSpeedButton
+        OnClick = SBFiltrarClick
+      end
+      inherited Label1: TLabel
+        Width = 20
+        Caption = 'CIA:'
+      end
+      inherited Label2: TLabel
+        Left = 92
+        Width = 36
+        Caption = 'Código:'
+      end
+      inherited Label3: TLabel
+        Left = 213
+        Width = 40
+        Caption = 'Nombre:'
+      end
+      inherited EdCodigo: TEdit
+        Left = 31
+        Width = 37
+      end
+      inherited EdCodigo2: TEdit
+        Left = 130
+        Width = 45
+      end
+      inherited EdNombre: TEdit
+        Left = 261
+        Width = 188
+      end
+    end
+  end
+  inherited qDatos: TQuery
+    SQL.Strings = (
+      'select * from grupotrabajo'
+      'order by 1')
+    object qDatosCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+    end
+    object qDatosCODIGOGRUPOTRABAJO: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJO'
+    end
+    object qDatosNOMBREGRUPOTRABAJO: TStringField
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+  end
+end

@@ -1,0 +1,189 @@
+inherited fEstadisticaReporteEstado: TfEstadisticaReporteEstado
+  Left = -4
+  Top = -4
+  Width = 1032
+  Height = 746
+  Caption = 'Estadísticas de Estado de Reportes'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Splitter1: TSplitter
+    Height = 599
+  end
+  inherited ToolPanel1: TToolPanel
+    Width = 1024
+  end
+  inherited DecisionGraph1: TDecisionGraph
+    Width = 624
+    Height = 599
+  end
+  inherited PanelFiltro: TPanel
+    Width = 1024
+    inherited pDer: TPanel
+      Width = 682
+      inherited MemoDatos2: TMemo
+        Width = 517
+      end
+    end
+    inherited Panel4: TPanel
+      Width = 1022
+    end
+  end
+  inherited DecisionPivot1: TDecisionPivot
+    Height = 599
+    inherited DecisionGrid1: TDecisionGrid
+      Height = 564
+      Dimensions = <
+        item
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          DisplayName = 'Ave of ItemsTotal'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end>
+    end
+  end
+  inherited DecisionCube1: TDecisionCube
+    DimensionMap = <
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftFloat
+        Fieldname = 'REGISTROS'
+        Name = 'REGISTROS'
+        DerivedFrom = -1
+        DimensionType = dimSum
+        BinType = binNone
+        ValueCount = -1
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftString
+        Fieldname = 'NOMBREESTADOREPORTE'
+        Name = 'Estado'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = -1
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftString
+        Fieldname = 'NOMBRETIPOREPORTE'
+        Name = 'Tipo'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = -1
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftString
+        Fieldname = 'NOMBREINFORMANTE'
+        Name = 'Informante'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = -1
+        Active = True
+      end>
+  end
+  inherited DecisionQuery1: TDecisionQuery
+    Active = True
+    SQL.Strings = (
+      
+        'SELECT COUNT(*) AS Registros, ER.nombreestadoreporte, TR.nombret' +
+        'iporeporte, I.nombreinformante'
+      
+        'FROM REPORTE R, INFORMANTE I, ADMINISTRATIVO A, TIPOREPORTE TR, ' +
+        'CLASEREPORTE CR, ESTADOREPORTE ER, SUBESTACION S, CIRCUITO C, AD' +
+        'MINISTRATIVO AD, GRUPOTRABAJO GT'
+      
+        'WHERE (R.CODIGOINFORMANTE = I.CODIGOINFORMANTE) AND (A.CODIGOADM' +
+        'INISTRATIVO = R.CODIGOADMINISTRATIVO)'
+      
+        'AND (TR.CODIGOTIPOREPORTE = R.CODIGOTIPOREPORTE) AND (CR.CODIGOC' +
+        'LASEREPORTE = R.CODIGOCLASEREPORTE) AND (R.CODIGOADMINISTRATIVO=' +
+        #39'57'#39')'
+      
+        'AND (ER.CODIGOESTADOREPORTE = R.CODIGOESTADOREPORTE) AND (S.CODI' +
+        'GOSUBESTACION (+)= R.CODIGOSUBESTACION)'
+      
+        'AND (C.CODIGOCIRCUITO (+)= R.CODIGOCIRCUITO) AND (AD.CODIGOADMIN' +
+        'ISTRATIVO (+)= R.CIAINFORMANTE) AND (GT.CODIGOGRUPOTRABAJO (+) =' +
+        ' R.CODIGOGRUPOTRABAJO) AND (GT.CODIGOADMINISTRATIVO (+) = R.CODI' +
+        'GOADMINISTRATIVO)'
+      
+        'GROUP BY ER.nombreestadoreporte, TR.nombretiporeporte, I.nombrei' +
+        'nformante'
+      ' ')
+  end
+  inherited DecisionSource1: TDecisionSource
+    DimensionCount = 6
+    SummaryCount = 2
+    CurrentSummary = 0
+    SparseRows = False
+    SparseCols = False
+    DimensionInfo = (
+      2
+      -1
+      2
+      0
+      -1
+      2
+      -1
+      2
+      1
+      0
+      1
+      -1
+      2
+      0
+      0
+      1
+      -1
+      2
+      1
+      0
+      1
+      -1
+      2
+      2
+      -1
+      1
+      -1
+      2
+      3
+      -1)
+  end
+end

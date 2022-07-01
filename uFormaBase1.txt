@@ -1,0 +1,189 @@
+inherited FFormaBase1: TFFormaBase1
+  Left = 258
+  Top = 123
+  BorderStyle = bsDialog
+  Caption = '-'
+  ClientHeight = 254
+  ClientWidth = 304
+  FormStyle = fsNormal
+  Position = poScreenCenter
+  Visible = False
+  WindowState = wsNormal
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 304
+    Height = 28
+    Align = alTop
+    TabOrder = 0
+    object Panel2: TPanel
+      Left = 250
+      Top = 1
+      Width = 53
+      Height = 26
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 0
+    end
+    object dbNavigator1: TdNavigator
+      Left = 6
+      Top = 4
+      Width = 294
+      Height = 21
+      DataSource = dsBase
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel, nbRefresh, nbNone, nbDesign, nbActive, nbBusqueda]
+      Flat = True
+      ConfirmDelete = False
+      TabOrder = 1
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 236
+    Width = 304
+    Height = 18
+    Align = alBottom
+    Alignment = taLeftJustify
+    BevelOuter = bvLowered
+    TabOrder = 1
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 28
+    Width = 304
+    Height = 172
+    Align = alClient
+    DataSource = dsBase
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgCancelOnExit, dgMultiSelect]
+    ParentFont = False
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clMaroon
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = [fsBold]
+    OnDblClick = DBGrid1DblClick
+    Columns = <
+      item
+        Alignment = taCenter
+        Color = clAqua
+        Expanded = False
+        Title.Alignment = taCenter
+        Title.Caption = 'Código'
+        Width = 48
+        Visible = True
+      end
+      item
+        Expanded = False
+        Title.Alignment = taCenter
+        Title.Caption = 'Nombre'
+        Width = 211
+        Visible = True
+      end>
+  end
+  object Panel4: TPanel
+    Left = 0
+    Top = 200
+    Width = 304
+    Height = 36
+    Align = alBottom
+    TabOrder = 3
+    object lbTabla: TLabel
+      Left = 155
+      Top = 13
+      Width = 27
+      Height = 13
+      Caption = 'Tabla'
+      Visible = False
+    end
+    object lbOrden: TLabel
+      Left = 8
+      Top = 14
+      Width = 90
+      Height = 11
+      Caption = 'Ordenado por Código'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -9
+      Font.Name = 'Small Fonts'
+      Font.Style = []
+      ParentFont = False
+    end
+    object sbImprimir: TSpeedButton
+      Left = 238
+      Top = 8
+      Width = 23
+      Height = 22
+      Hint = 'Imprimir...'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+        0003377777777777777308888888888888807F33333333333337088888888888
+        88807FFFFFFFFFFFFFF7000000000000000077777777777777770F8F8F8F8F8F
+        8F807F333333333333F708F8F8F8F8F8F9F07F333333333337370F8F8F8F8F8F
+        8F807FFFFFFFFFFFFFF7000000000000000077777777777777773330FFFFFFFF
+        03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+        03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+        33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
+        33333337FFFF7733333333300000033333333337777773333333}
+      NumGlyphs = 2
+      OnClick = sbImprimirClick
+    end
+    object sbCerrar: TSpeedButton
+      Left = 261
+      Top = 8
+      Width = 23
+      Height = 22
+      Hint = 'Cierra esta ventana'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00330000000000
+        03333377777777777F333301BBBBBBBB033333773F3333337F3333011BBBBBBB
+        0333337F73F333337F33330111BBBBBB0333337F373F33337F333301110BBBBB
+        0333337F337F33337F333301110BBBBB0333337F337F33337F333301110BBBBB
+        0333337F337F33337F333301110BBBBB0333337F337F33337F333301110BBBBB
+        0333337F337F33337F333301110BBBBB0333337F337FF3337F33330111B0BBBB
+        0333337F337733337F333301110BBBBB0333337F337F33337F333301110BBBBB
+        0333337F3F7F33337F333301E10BBBBB0333337F7F7F33337F333301EE0BBBBB
+        0333337F777FFFFF7F3333000000000003333377777777777333}
+      NumGlyphs = 2
+      OnClick = sbCerrarClick
+    end
+  end
+  object dSegControl1: TdSegControl
+    Left = 232
+    Top = 52
+  end
+  object tTabla: TDTable
+    AfterInsert = tTablaAfterInsert
+    BeforeDelete = tTablaBeforeDelete
+    DatabaseName = 'BaseDato'
+    MoveOnLocate = False
+    SegControl = dSegControl1
+    QueryMode = qmNone
+    TableCat = drvSQLBASEDSERVER
+    ValDllActive = True
+    Left = 48
+    Top = 88
+  end
+  object dsBase: TDDataSource
+    AutoEdit = False
+    DataSet = tTabla
+    Left = 108
+    Top = 124
+  end
+end

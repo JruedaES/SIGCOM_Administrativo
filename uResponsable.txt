@@ -1,0 +1,153 @@
+object fResponsable: TfResponsable
+  Left = 238
+  Top = 142
+  Width = 631
+  Height = 385
+  BorderStyle = bsSizeToolWin
+  Caption = 'Responsables Administrativos'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 623
+    Height = 28
+    Align = alTop
+    TabOrder = 0
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 264
+    Width = 623
+    Height = 94
+    Align = alBottom
+    TabOrder = 1
+    object DBNavigator1: TDBNavigator
+      Left = 8
+      Top = 8
+      Width = 234
+      Height = 25
+      DataSource = dsResponsable
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+      TabOrder = 0
+    end
+  end
+  object RxDBGrid1: TRxDBGrid
+    Left = 0
+    Top = 28
+    Width = 623
+    Height = 236
+    Align = alClient
+    DataSource = dsResponsable
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'CODIGOTIPORESPONSABLE'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CODIGOADMINISTRATIVO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CODIGOEMPLEADO'
+        Visible = True
+      end>
+  end
+  object dsResponsable: TDataSource
+    DataSet = qResponsable
+    Left = 536
+    Top = 168
+  end
+  object qResponsable: TQuery
+    Active = True
+    CachedUpdates = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT R.CODIGOTIPORESPONSABLE, R.CODIGOADMINISTRATIVO,'
+      'R.CODIGOEMPLEADO, T.NOMBRETIPORESPONSABLE'
+      'FROM RESPONSABLE R, TIPORESPONSABLE T')
+    UpdateObject = UpSQLResponsable
+    Left = 432
+    Top = 192
+    object qResponsableCODIGOTIPORESPONSABLE: TFloatField
+      FieldName = 'CODIGOTIPORESPONSABLE'
+      Origin = 'RESPONSABLE.CODIGOTIPORESPONSABLE'
+    end
+    object qResponsableCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'RESPONSABLE.CODIGOADMINISTRATIVO'
+    end
+    object qResponsableCODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+      Origin = 'RESPONSABLE.CODIGOEMPLEADO'
+    end
+    object qResponsableNOMBRETIPORESPONSABLE: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NOMBRETIPORESPONSABLE'
+      LookupDataSet = qNombreTipoResponsable
+      LookupKeyFields = 'CODIGOTIPORESPONSABLE'
+      LookupResultField = 'NOMBRETIPORESPONSABLE'
+      KeyFields = 'CODIGOTIPORESPONSABLE'
+      Size = 30
+      Lookup = True
+    end
+  end
+  object qNombreTipoResponsable: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOTIPORESPONSABLE, NOMBRETIPORESPONSABLE'
+      'FROM TIPORESPONSABLE'
+      'WHERE CODIGOTIPORESPONSABLE=:CODIGOTIPORESPONSABLE')
+    Left = 432
+    Top = 136
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOTIPORESPONSABLE'
+        ParamType = ptUnknown
+      end>
+  end
+  object UpSQLResponsable: TUpdateSQL
+    ModifySQL.Strings = (
+      'update RESPONSABLE'
+      'set'
+      '  CODIGOTIPORESPONSABLE = :CODIGOTIPORESPONSABLE,'
+      '  CODIGOADMINISTRATIVO = :CODIGOADMINISTRATIVO,'
+      '  CODIGOEMPLEADO = :CODIGOEMPLEADO'
+      'where'
+      '  CODIGOTIPORESPONSABLE = :OLD_CODIGOTIPORESPONSABLE and'
+      '  CODIGOADMINISTRATIVO = :OLD_CODIGOADMINISTRATIVO and'
+      '  CODIGOEMPLEADO = :OLD_CODIGOEMPLEADO')
+    InsertSQL.Strings = (
+      'insert into RESPONSABLE'
+      '  (CODIGOTIPORESPONSABLE, CODIGOADMINISTRATIVO, CODIGOEMPLEADO)'
+      'values'
+      '  (:CODIGOTIPORESPONSABLE, :CODIGOADMINISTRATIVO, '
+      ':CODIGOEMPLEADO)')
+    DeleteSQL.Strings = (
+      'delete from RESPONSABLE'
+      'where'
+      '  CODIGOTIPORESPONSABLE = :OLD_CODIGOTIPORESPONSABLE and'
+      '  CODIGOADMINISTRATIVO = :OLD_CODIGOADMINISTRATIVO and'
+      '  CODIGOEMPLEADO = :OLD_CODIGOEMPLEADO')
+    Left = 536
+    Top = 112
+  end
+end

@@ -1,0 +1,2911 @@
+inherited FListaExportacionrReparto: TFListaExportacionrReparto
+  Left = 2
+  Top = 41
+  Width = 1330
+  Height = 666
+  Caption = 'Exportación de Itinerarios de  Reparto'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    Width = 1314
+    inherited Panel2: TPanel
+      Left = 1010
+      Width = 303
+      inherited SBSalir: TSpeedButton
+        Left = 276
+        Anchors = [akRight, akBottom]
+      end
+      inherited SBImprimir: TSpeedButton
+        Left = 105
+        Anchors = [akRight, akBottom]
+        Visible = False
+      end
+      inherited SBFiltrar: TSpeedButton
+        Left = 141
+        Anchors = [akRight, akBottom]
+        Visible = False
+      end
+      inherited SBBuscar: TSpeedButton
+        Left = 221
+        Anchors = [akRight, akBottom]
+        Visible = False
+      end
+      inherited SBOrdenar: TSpeedButton
+        Left = 245
+        Anchors = [akRight, akBottom]
+        Visible = False
+      end
+      inherited Bevel2: TBevel
+        Left = 133
+        Anchors = [akRight, akBottom]
+        Visible = False
+      end
+      inherited SBEstadistica: TSpeedButton
+        Left = 60
+        Anchors = [akRight, akBottom]
+        Visible = False
+      end
+      inherited Bevel3: TBevel
+        Left = 213
+        Anchors = [akRight, akBottom]
+        Visible = False
+      end
+      inherited Bevel1: TBevel
+        Left = 271
+        Anchors = [akRight, akBottom]
+      end
+      inherited SBBuscaElementoCartografia: TSpeedButton
+        Left = 187
+        Anchors = [akRight, akBottom]
+        Visible = False
+      end
+      inherited SBFiltroCarografico: TSpeedButton
+        Left = 164
+        Anchors = [akRight, akBottom]
+        Visible = False
+      end
+      inherited sbExportar: TSpeedButton
+        Left = 82
+        Anchors = [akRight, akBottom]
+        Visible = False
+      end
+      object sbRefrescar: TSpeedButton
+        Left = 32
+        Top = 3
+        Width = 23
+        Height = 23
+        Hint = 'Refrescar Lista'
+        Flat = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333333333FFFFF3333333333999993333333333F77777FFF333333999999999
+          3333333777333777FF33339993707399933333773337F3777FF3399933000339
+          9933377333777F3377F3399333707333993337733337333337FF993333333333
+          399377F33333F333377F993333303333399377F33337FF333373993333707333
+          333377F333777F333333993333101333333377F333777F3FFFFF993333000399
+          999377FF33777F77777F3993330003399993373FF3777F37777F399933000333
+          99933773FF777F3F777F339993707399999333773F373F77777F333999999999
+          3393333777333777337333333999993333333333377777333333}
+        NumGlyphs = 2
+        Visible = False
+        OnClick = sbRefrescarClick
+      end
+    end
+    inherited dNavigator1: TdNavigator
+      Hints.Strings = ()
+      Visible = False
+    end
+  end
+  inherited Panel3: TPanel
+    Top = 609
+    Width = 1314
+    Visible = False
+  end
+  inherited PFiltro: TPanel
+    Width = 1314
+    inherited lFiltroDatos: TLabel
+      Width = 1312
+      Caption = ''
+    end
+  end
+  object pBase: TPanel [3]
+    Left = 0
+    Top = 78
+    Width = 1314
+    Height = 531
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 3
+    object pSuperior: TPanel
+      Left = 0
+      Top = 0
+      Width = 1314
+      Height = 531
+      Align = alClient
+      BevelOuter = bvNone
+      TabOrder = 0
+      object pBarraGA: TPanel
+        Left = 0
+        Top = 0
+        Width = 1314
+        Height = 28
+        Align = alTop
+        BevelOuter = bvSpace
+        Caption = 'Itinerarios de Reparto'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 0
+      end
+      object Panel4: TPanel
+        Left = 0
+        Top = 28
+        Width = 1314
+        Height = 29
+        Align = alTop
+        BevelOuter = bvNone
+        TabOrder = 1
+        object Panel5: TPanel
+          Left = 1192
+          Top = 0
+          Width = 122
+          Height = 29
+          Align = alRight
+          Caption = 'Panel5'
+          TabOrder = 0
+          object ToolBar1: TToolBar
+            Left = 1
+            Top = 1
+            Width = 120
+            Height = 27
+            Align = alClient
+            ButtonHeight = 24
+            ButtonWidth = 24
+            Caption = 'ToolBar1'
+            EdgeInner = esNone
+            EdgeOuter = esNone
+            Images = ilMenuPrincipal
+            TabOrder = 0
+            object tbExportar: TToolButton
+              Left = 0
+              Top = 2
+              Hint = 'Exportar Itinerarios de Reparto'
+              Caption = 'tbExportar'
+              ImageIndex = 0
+              OnClick = tbExportarClick
+            end
+            object sbVerGIenCarto: TToolButton
+              Left = 24
+              Top = 2
+              Hint = 'Visualizar Itinrearios en Cartografia'
+              Caption = 'sbVerGIenCarto'
+              ImageIndex = 1
+              OnClick = sbVerGIenCartoClick
+            end
+            object sbBorrarExpo: TToolButton
+              Left = 48
+              Top = 2
+              Hint = 'Borrar Exportación'
+              Caption = 'sbBorrarExpo'
+              ImageIndex = 3
+              OnClick = sbBorrarExpoClick
+            end
+            object ToolButton1: TToolButton
+              Left = 72
+              Top = 2
+              Width = 8
+              Caption = 'ToolButton1'
+              ImageIndex = 3
+              Style = tbsSeparator
+            end
+            object tbDevolver: TToolButton
+              Left = 80
+              Top = 2
+              Hint = 
+                'Retornar las cuentas no exportadas al listado inicial, para repr' +
+                'ocesarlas.'
+              Caption = 'tbDevolver'
+              ImageIndex = 2
+              OnClick = tbDevolverClick
+            end
+          end
+        end
+      end
+      object DBGrid1: TDBGrid
+        Left = 0
+        Top = 57
+        Width = 1314
+        Height = 474
+        Align = alClient
+        DataSource = dsListadoItinerarios
+        TabOrder = 2
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+        OnDrawColumnCell = DBGrid1DrawColumnCell
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'COLOR'
+            ReadOnly = True
+            Title.Caption = 'Color'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NOMBRESEDEOPERATIVA'
+            ReadOnly = True
+            Title.Caption = 'Sede Operativa'
+            Width = 147
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CODIGOITINERARIO'
+            ReadOnly = True
+            Title.Caption = 'Codigo Itinerario'
+            Width = 119
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'LOGIN'
+            Title.Caption = 'Login Usuario'
+            Width = 111
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NOMBREGRUPOTRABAJO'
+            ReadOnly = True
+            Title.Caption = 'Inspector de Reparto'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NOMBREESTADOITINERARIO'
+            ReadOnly = True
+            Title.Caption = 'Estado Itinerario'
+            Width = 110
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CANTIDAD'
+            ReadOnly = True
+            Title.Caption = 'Cantidad de Clientes'
+            Width = 124
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'InfoComercial'
+            Title.Caption = 'Clientes info Comercial'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'Exportados'
+            Title.Caption = 'Clientes Exportados'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'ClientesNoExportados'
+            Title.Caption = 'Clientes No Exportados'
+            Width = 118
+            Visible = True
+          end>
+      end
+    end
+  end
+  inherited dSegControl1: TdSegControl
+    Left = 1088
+    Top = 60
+  end
+  inherited dsBase: TDDataSource
+    Left = 900
+    Top = 468
+  end
+  inherited dTblBase: TDTable
+    Left = 920
+    Top = 416
+  end
+  inherited qTotales: TQuery
+    Left = 29
+    Top = 250
+  end
+  inherited CVS1: TCVS
+    Left = 862
+    Top = 435
+  end
+  inherited SaveDialog1: TSaveDialog
+    Left = 945
+    Top = 489
+  end
+  object dsListadoItinerarios: TDataSource
+    DataSet = qListadoIinerarios
+    Left = 112
+    Top = 254
+  end
+  object dsItinerarios: TDataSource
+    DataSet = qItinerarios
+    Left = 768
+    Top = 482
+  end
+  object qListadoIinerarios: TQuery
+    OnCalcFields = qListadoIinerariosCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT G.LOGIN,S.NOMBRESEDEOPERATIVA,I.COLOR,I.CODIGOITINERARIO,' +
+        'E.NOMBREESTADOITINERARIO,G.NOMBREGRUPOTRABAJO,I.CODIGOESTADOITIN' +
+        'ERARIO,COUNT(*) AS CANTIDAD'
+      
+        'FROM REP_ITINERARIO I , REP_ITINERARIO_GRUPOTRABAJO IG,ESTADOITI' +
+        'NERARIO E,'
+      
+        'GRUPOTRABAJO G , REP_RUTAITINERARIO RI, REP_CLIENTESREPARTO RE, ' +
+        'SEDEOPERATIVA S '
+      'WHERE'
+      'I.CODIGOESTADOITINERARIO=E.CODIGOESTADOITINERARIO'
+      'AND IG.CODIGOITINERARIO(+) =I.CODIGOITINERARIO'
+      'AND IG.CODIGOADMINISTRATIVO =G.CODIGOADMINISTRATIVO(+)'
+      'AND IG.CODIGOGRUPOTRABAJO   =G.CODIGOGRUPOTRABAJO(+)'
+      'AND I.CODIGOSEDEOPERATIVA=:CODIGOSEDE'
+      'AND RI.CODIGOITINERARIO=I.CODIGOITINERARIO'
+      'AND TO_CHAR(I.FECHAPROGRAMADAREPARTO,'#39'DD/MM/YYYY'#39')=:FECHAREPARTO'
+      'AND RI.CODIGOAPOYO=RE.CODIGOAPOYO'
+      'AND RE.CODIGOSEDEOPERATIVA=I.CODIGOSEDEOPERATIVA'
+      
+        'AND TO_CHAR(RE.FECHA_PROGRAMADA_REPARTO,'#39'DD/MM/YYYY'#39') = TO_CHAR(' +
+        'I.FECHAPROGRAMADAREPARTO,'#39'DD/MM/YYYY'#39')'
+      'AND S.CODIGOSEDEOPERATIVA=RE.CODIGOSEDEOPERATIVA'
+      
+        'GROUP BY G.LOGIN,S.NOMBRESEDEOPERATIVA,I.COLOR,I.CODIGOITINERARI' +
+        'O,E.NOMBREESTADOITINERARIO,G.NOMBREGRUPOTRABAJO,I.CODIGOESTADOIT' +
+        'INERARIO'
+      'ORDER BY I.CODIGOITINERARIO'
+      ' ')
+    Left = 80
+    Top = 206
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'CODIGOSEDE'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'FECHAREPARTO'
+        ParamType = ptUnknown
+      end>
+    object qListadoIinerariosNOMBRESEDEOPERATIVA: TStringField
+      FieldName = 'NOMBRESEDEOPERATIVA'
+      Size = 100
+    end
+    object qListadoIinerariosCOLOR: TFloatField
+      FieldName = 'COLOR'
+    end
+    object qListadoIinerariosCODIGOITINERARIO: TFloatField
+      FieldName = 'CODIGOITINERARIO'
+    end
+    object qListadoIinerariosNOMBREESTADOITINERARIO: TStringField
+      FieldName = 'NOMBREESTADOITINERARIO'
+      Size = 30
+    end
+    object qListadoIinerariosNOMBREGRUPOTRABAJO: TStringField
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+    object qListadoIinerariosCODIGOESTADOITINERARIO: TFloatField
+      FieldName = 'CODIGOESTADOITINERARIO'
+    end
+    object qListadoIinerariosCANTIDAD: TFloatField
+      FieldName = 'CANTIDAD'
+    end
+    object qListadoIinerariosLOGIN: TStringField
+      FieldName = 'LOGIN'
+      Size = 30
+    end
+    object qListadoIinerariosExportados: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Exportados'
+      Calculated = True
+    end
+    object qListadoIinerariosInfoComercial: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'InfoComercial'
+      Calculated = True
+    end
+    object qListadoIinerariosClientesNoExportados: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'ClientesNoExportados'
+      Size = 10
+      Calculated = True
+    end
+  end
+  object qItinerarios: TQuery
+    OnCalcFields = qItinerariosCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsListadoItinerarios
+    SQL.Strings = (
+      
+        'SELECT ROW_NUMBER() OVER (ORDER BY I.CODIGOITINERARIO ASC) AS IT' +
+        'EM,'
+      
+        'I.CODIGOITINERARIO, GI.CODIGOGRUPOAOL, GI.CODIGORUTA, GI.CODIGOG' +
+        'RUPOITINERARIO,'
+      
+        #39'Itinerario '#39'||ROW_NUMBER() OVER (ORDER BY I.CODIGOITINERARIO AS' +
+        'C) AS NOMBREITINERARIO,'
+      
+        'I.COLOR, E.CODIGOESTADOITINERARIO, E.NOMBREESTADOITINERARIO, I.A' +
+        'OLFINCADESDE, I.AOLFINCAHASTA, I.CANTIDADPG, I.CANTIDADSUMINISTR' +
+        'OS,'
+      
+        'I.CODIGOGRUPOTRABAJO, GT.NOMBREGRUPOTRABAJO, I.CODIGOADMINISTRAT' +
+        'IVO, A.NOMBRECATEGORIA, I.IMPRIMIRPLANILLA, GT.LOGIN'
+      
+        'FROM SGC_ITINERARIO I,  SGC_GRUPOITINERARIO GI, ESTADOITINERARIO' +
+        ' E, GRUPOTRABAJO GT, ADMINISTRATIVO A'
+      'WHERE I.CODIGOGRUPOITINERARIO = GI.CODIGOGRUPOITINERARIO'
+      'AND I.CODIGOESTADOITINERARIO = E.CODIGOESTADOITINERARIO'
+      'AND I.CODIGOGRUPOTRABAJO = GT.CODIGOGRUPOTRABAJO(+)'
+      'AND I.CODIGOADMINISTRATIVO = GT.CODIGOADMINISTRATIVO(+)'
+      'AND I.CODIGOADMINISTRATIVO = A.CODIGOADMINISTRATIVO(+)'
+      'AND GI.CODIGOGRUPOAOL = :CODIGOGRUPOAOL'
+      'AND GI.CODIGORUTA = :CODIGORUTA'
+      'AND GI.CODIGOGRUPOITINERARIO= :CODIGOGRUPOITINERARIO')
+    Left = 760
+    Top = 426
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOGRUPOAOL'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGORUTA'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOGRUPOITINERARIO'
+        ParamType = ptInput
+      end>
+    object qItinerariosCODIGOITINERARIO: TFloatField
+      FieldName = 'CODIGOITINERARIO'
+    end
+    object qItinerariosCODIGOGRUPOAOL: TFloatField
+      FieldName = 'CODIGOGRUPOAOL'
+    end
+    object qItinerariosCODIGORUTA: TFloatField
+      FieldName = 'CODIGORUTA'
+    end
+    object qItinerariosCODIGOGRUPOITINERARIO: TFloatField
+      FieldName = 'CODIGOGRUPOITINERARIO'
+    end
+    object qItinerariosNOMBREITINERARIO: TStringField
+      FieldName = 'NOMBREITINERARIO'
+      Size = 51
+    end
+    object qItinerariosCOLOR: TFloatField
+      FieldName = 'COLOR'
+    end
+    object qItinerariosNOMBREESTADOITINERARIO: TStringField
+      FieldName = 'NOMBREESTADOITINERARIO'
+      Size = 30
+    end
+    object qItinerariosAOLFINCADESDE: TFloatField
+      FieldName = 'AOLFINCADESDE'
+    end
+    object qItinerariosAOLFINCAHASTA: TFloatField
+      FieldName = 'AOLFINCAHASTA'
+    end
+    object qItinerariosCANTIDADPG: TFloatField
+      FieldName = 'CANTIDADPG'
+    end
+    object qItinerariosCANTIDADSUMINISTROS: TFloatField
+      FieldName = 'CANTIDADSUMINISTROS'
+    end
+    object qItinerariosCODIGOGRUPOTRABAJO: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJO'
+    end
+    object qItinerariosNOMBREGRUPOTRABAJO: TStringField
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+    object qItinerariosCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+    end
+    object qItinerariosNOMBRECATEGORIA: TStringField
+      FieldName = 'NOMBRECATEGORIA'
+      Size = 80
+    end
+    object qItinerariosCODIGOESTADOITINERARIO: TFloatField
+      FieldName = 'CODIGOESTADOITINERARIO'
+    end
+    object qItinerariosITEM: TFloatField
+      FieldName = 'ITEM'
+    end
+    object qItinerariosIMPRIMIRPLANILLA: TStringField
+      FieldName = 'IMPRIMIRPLANILLA'
+      Size = 1
+    end
+    object qItinerariosLOGIN: TStringField
+      FieldName = 'LOGIN'
+      Size = 30
+    end
+    object qItinerariosCantClientesEnrutadosCruzados: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = 'CantClientesEnrutadosCruzados'
+      Calculated = True
+    end
+    object qItinerariosCantClientesSOLOComercial: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = 'CantClientesSOLOComercial'
+      Calculated = True
+    end
+    object qItinerariosCantClientesAExportar: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = 'CantClientesAExportar'
+      Calculated = True
+    end
+    object qItinerariosCantClientesEnRutaSinInfoCOM: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = 'CantClientesEnRutaSinInfoCOM'
+      Calculated = True
+    end
+    object qItinerariosCantClientesAliensDiaL: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = 'CantClientesAliensDiaL'
+      Calculated = True
+    end
+    object qItinerariosCantClientesItinerario: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = 'CantClientesItinerario'
+      Calculated = True
+    end
+  end
+  object qTotalItinerariosDiaL: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT COUNT(DISTINCT I.CODIGOITINERARIO) AS TOTALITINERARIOS'
+      
+        'FROM SEDEOPERATIVA SO, C_GRUPOAOL G, SCG_DIAL D, SGC_RUTA R, SGC' +
+        '_GRUPOITINERARIO GI,'
+      'ESTADOGRUPOITINERARIO E, SGC_ITINERARIO I'
+      'WHERE SO.CODIGOSEDEOPERATIVA = G.CODIGOSEDEOPERATIVA'
+      'AND G.CODIGODIAL = D.CODIGODIAL'
+      'AND R.CODIGOGRUPOAOL = G.CODIGOGRUPOAOL'
+      'AND GI.CODIGOGRUPOAOL = G.CODIGOGRUPOAOL'
+      'AND GI.CODIGORUTA = R.CODIGORUTA'
+      
+        'AND GI.CODIGOESTADOGRUPOITINERARIO= E.CODIGOESTADOGRUPOITINERARI' +
+        'O'
+      'AND GI.CODIGOGRUPOITINERARIO = I.CODIGOGRUPOITINERARIO'
+      'AND R.ACTIVO = '#39'S'#39
+      'AND GI.ACTIVO = '#39'S'#39
+      'AND G.CODIGOSEDEOPERATIVA = :CODIGOSEDEOPERATIVA'
+      'AND G.CODIGODIAL = :CODIGODIAL')
+    Left = 136
+    Top = 426
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'CODIGOSEDEOPERATIVA'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftInteger
+        Name = 'CODIGODIAL'
+        ParamType = ptInput
+      end>
+    object qTotalItinerariosDiaLTOTALITINERARIOS: TFloatField
+      FieldName = 'TOTALITINERARIOS'
+      Origin = 'SGC_ITINERARIO.CODIGOITINERARIO'
+    end
+  end
+  object qPMConcDiaL: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT COUNT(CODIGOAPOYO) AS PUNTOSMEDIDA FROM ('
+      'SELECT A.CODIGOAPOYO, COUNT(C.CODIGOCLIENTESGD) AS CLIENTES'
+      'FROM APOYO A, CLIENTESGD C, C_GRUPOAOL G'
+      'WHERE A.CODIGOAPOYO = C.CODIGOAPOYO'
+      'AND A.GRUPOAOL = G.CODIGOGRUPOAOL'
+      'AND A.CODIGOTIPOAPOYO = '#39'18'#39
+      'AND A.CODIGOESTADOINFRAESTRUCTURA = 1'
+      'AND G.CODIGODIAL = :CODIGODIAL'
+      'AND G.CODIGOSEDEOPERATIVA = :CODIGOSEDEOPERATIVA'
+      'GROUP BY A.CODIGOAPOYO'
+      'HAVING COUNT(C.CODIGOCLIENTESGD) > 1) ')
+    Left = 424
+    Top = 434
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'CODIGODIAL'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftInteger
+        Name = 'CODIGOSEDEOPERATIVA'
+        ParamType = ptInput
+      end>
+    object qPMConcDiaLPUNTOSMEDIDA: TFloatField
+      FieldName = 'PUNTOSMEDIDA'
+    end
+  end
+  object qPMPuntDiaL: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT COUNT(CODIGOAPOYO) AS PUNTOSMEDIDA FROM ('
+      'SELECT A.CODIGOAPOYO, COUNT(C.CODIGOCLIENTESGD) AS CLIENTES'
+      'FROM APOYO A, CLIENTESGD C, C_GRUPOAOL G'
+      'WHERE A.CODIGOAPOYO = C.CODIGOAPOYO'
+      'AND A.GRUPOAOL = G.CODIGOGRUPOAOL'
+      'AND A.CODIGOTIPOAPOYO = '#39'18'#39
+      'AND A.CODIGOESTADOINFRAESTRUCTURA = 1'
+      'AND G.CODIGODIAL = :CODIGODIAL'
+      'AND G.CODIGOSEDEOPERATIVA = :CODIGOSEDEOPERATIVA'
+      'GROUP BY A.CODIGOAPOYO'
+      'HAVING COUNT(C.CODIGOCLIENTESGD) = 1) ')
+    Left = 568
+    Top = 434
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'CODIGODIAL'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftInteger
+        Name = 'CODIGOSEDEOPERATIVA'
+        ParamType = ptInput
+      end>
+    object qPMPuntDiaLPUNTOSMEDIDA: TFloatField
+      FieldName = 'PUNTOSMEDIDA'
+    end
+  end
+  object qClientesDiaL: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT SUM(CLIENTESITINERARIO(I.CODIGOITINERARIO)) AS TOTALCLIEN' +
+        'TES'
+      
+        'FROM SEDEOPERATIVA SO, C_GRUPOAOL G, SCG_DIAL D, SGC_RUTA R, SGC' +
+        '_GRUPOITINERARIO GI,'
+      'ESTADOGRUPOITINERARIO E, SGC_ITINERARIO I'
+      'WHERE SO.CODIGOSEDEOPERATIVA = G.CODIGOSEDEOPERATIVA'
+      'AND G.CODIGODIAL = D.CODIGODIAL'
+      'AND R.CODIGOGRUPOAOL = G.CODIGOGRUPOAOL'
+      'AND GI.CODIGOGRUPOAOL = G.CODIGOGRUPOAOL'
+      'AND GI.CODIGORUTA = R.CODIGORUTA'
+      
+        'AND GI.CODIGOESTADOGRUPOITINERARIO= E.CODIGOESTADOGRUPOITINERARI' +
+        'O'
+      'AND GI.CODIGOGRUPOITINERARIO = I.CODIGOGRUPOITINERARIO'
+      'AND R.ACTIVO = '#39'S'#39
+      'AND GI.ACTIVO = '#39'S'#39
+      'AND G.CODIGOSEDEOPERATIVA = :CODIGOSEDEOPERATIVA'
+      'AND G.CODIGODIAL = :CODIGODIAL')
+    Left = 264
+    Top = 426
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOSEDEOPERATIVA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGODIAL'
+        ParamType = ptUnknown
+      end>
+    object qClientesDiaLTOTALCLIENTES: TFloatField
+      FieldName = 'TOTALCLIENTES'
+      Origin = 'CLIENTESGD.CODIGOCLIENTESGD'
+    end
+  end
+  object dsTotalItinerariosDiaL: TDataSource
+    DataSet = qTotalItinerariosDiaL
+    Left = 136
+    Top = 488
+  end
+  object dsClientesDiaL: TDataSource
+    DataSet = qClientesDiaL
+    Left = 264
+    Top = 490
+  end
+  object dsPMConcDiaL: TDataSource
+    DataSet = qPMConcDiaL
+    Left = 424
+    Top = 490
+  end
+  object dsPMPuntDiaL: TDataSource
+    DataSet = qPMPuntDiaL
+    Left = 576
+    Top = 490
+  end
+  object From_qInsert_Info: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      '    FROM APOYO A,'
+      '         FPLE180 CE,'
+      '         FPLE190 F9,'
+      '         NODOBT NB,'
+      '         CLIENTESGD C,'
+      '         MARCAMEDIDOR MM,'
+      '         SGC_AGRUPACION AG,'
+      '         (SELECT RA.CODIGOAPOYO, SGD.CODIGO_CUENTA,'
+      '                 I.CODIGOITINERARIO,'
+      
+        '                 (CASE WHEN (SGC_FUN_CONVERTIR_CLAVE(E.CLAVE) IS' +
+        ' NOT NULL) THEN '#39'NO'#39' ELSE '#39'SI'#39' END) AS AUTORIZADO,'
+      '                 RA.AOLFINCA,'
+      
+        '                 DECODE (NVL (TO_CHAR (RUTACICLO.LIBRO), '#39'NO'#39'),'#39 +
+        'NO'#39','#39'NO'#39','#39'SI'#39') AS INDUSTRIAL_AUTORIZA,'
+      '                 S.LIBRO'
+      '            FROM APOYO A,'
+      '                 SGC_RUTAAPOYO RA,'
+      '                 SGC_RUTA R,'
+      '                 SGC_GRUPOITINERARIO G,'
+      '                 SGC_ITINERARIO I,'
+      '                 CLIENTESGD SGD,'
+      '                 (SELECT F.IN_COD_UNICOM||F.IN_RUTA AS LIBRO,'
+      '                         F.M_CLAVE_PRIMARIA'
+      '                    FROM FPLE180 F'
+      
+        '                   WHERE F.FECHA_LECTURA_PROGRAMADA = :FECHALECT' +
+        'URA) S,'
+      '                 C_GRUPOAOL C,'
+      '                 (SELECT *'
+      '                    FROM EEH_RUTACICLO'
+      '                   WHERE PERIODO = :PERIODO'
+      
+        '                         AND UPPER (DESCRIPCION) LIKE '#39'%ALTOS CO' +
+        'N%'#39') RUTACICLO,'
+      '                 SGC_EXCLUIDO E'
+      '           WHERE     A.CODIGOAPOYO = RA.CODIGOAPOYO'
+      '                 AND RA.CODIGORUTA = R.CODIGORUTA'
+      '                 AND RA.CODIGOGRUPOAOL = R.CODIGOGRUPOAOL'
+      '                 AND R.CODIGORUTA = G.CODIGORUTA(+)'
+      '                 AND R.CODIGOGRUPOAOL = G.CODIGOGRUPOAOL(+)'
+      
+        '                 AND G.CODIGOGRUPOITINERARIO = I.CODIGOGRUPOITIN' +
+        'ERARIO(+)'
+      
+        '                 AND RA.AOLFINCA BETWEEN I.AOLFINCADESDE AND I.A' +
+        'OLFINCAHASTA'
+      
+        '                 AND I.CODIGOGRUPOITINERARIO = :CODIGOGRUPOITINE' +
+        'RARIO'
+      '                 AND I.CODIGOITINERARIO = :CODIGOITINERARIO'
+      '                 AND SGD.CODIGOAPOYO = A.CODIGOAPOYO'
+      
+        '                 AND SGC_FUN_CONVERTIR_CLAVE(SGD.CODIGO_CUENTA) ' +
+        '= S.M_CLAVE_PRIMARIA(+)'
+      '                 AND A.GRUPOAOL = C.CODIGOGRUPOAOL(+)'
+      '                 AND S.LIBRO = RUTACICLO.LIBRO(+)'
+      
+        '                 AND S.M_CLAVE_PRIMARIA = SGC_FUN_CONVERTIR_CLAV' +
+        'E(E.CLAVE(+)) ) I'
+      
+        '   WHERE SGC_FUN_CONVERTIR_CLAVE(C.CODIGO_CUENTA) = CE.M_CLAVE_P' +
+        'RIMARIA(+)'
+      '         AND MM.CODIGOMARCAMEDIDOR(+) = C.CODIGOFABRICANTE'
+      '         AND A.CODIGOAPOYO = C.CODIGOAPOYO'
+      '         AND C.CODIGOAPOYO = I.CODIGOAPOYO'
+      '         AND C.CODIGO_CUENTA = I.CODIGO_CUENTA'
+      '         AND C.CODIGOAPOYO = NB.CODIGOAPOYO'
+      '         AND C.CODIGONODOBT = NB.CODIGONODOBT'
+      '         AND AG.CODIGOAGRUPACION(+) = CE.M_CODIGO_AGRUPA'
+      '         AND CE.M_CLAVE_PRIMARIA = F9.S_CLAVE_PRIMARIA(+)'
+      
+        '         AND CE.FECHA_LECTURA_PROGRAMADA = F9.FECHA_LECTURA_PROG' +
+        'RAMADA(+)'
+      '         AND CE.FECHA_LECTURA_PROGRAMADA = :FECHALECTURA')
+    Left = 192
+    Top = 206
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'PERIODO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOGRUPOITINERARIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOITINERARIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end>
+  end
+  object SelectPrincipal_qInsert_Info: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT DISTINCT'
+      '         :CODIGOADMINISTRATIVO AS CODIGOADMINISTRATIVO,'
+      '         :CODIGOGRUPOTRABAJO AS CODIGOGRUPOTRABAJO,'
+      '         :CODIGODIAL AS CODIGODIAL,'
+      '         :PERIODO AS PERIODO,'
+      '         :FECHALECTURA AS FECHALECTURA,'
+      '         GET_CODIGOAPOYODIS(C.CODIGOAPOYO) AS CODIGOAPOYO,'
+      
+        '         TO_CHAR (CE.IN_COD_UNICOM||CE.IN_RUTA, '#39'0000000'#39') AS LI' +
+        'BRO,'
+      '         CE.M_CODIGO_ACOMET AS ACOMETIDA,'
+      '         CE.M_CLAVE_PRIMARIA AS CLAVE,'
+      '         C.CODIGOCLIENTESGD,'
+      '         CE.IN_CICLO AS CICLO,'
+      '         CE.IN_COD_UNICOM AS CODIGOUNICOM,'
+      
+        '         NVL(CE.COD_UBICACION, TRIM(TO_CHAR(CE.IN_COD_UNICOM||CE' +
+        '.IN_RUTA,'#39'0000000'#39'))||TRIM(TO_CHAR(CE.M_CODIGO_ACOMET,'#39'000'#39'))) A' +
+        'S CODUBICACION,'
+      '         I.AOLFINCA AS AOLPREDIO,'
+      '         10 AS AOLPUNTOCONSUMO,'
+      '         10 AS AOLMEDIDOR,'
+      
+        '         REPLACE (CE.M_NOMBRE_ABONADO, '#39'"'#39', '#39' '#39') AS NOMBRESUSCRI' +
+        'PTOR,'
+      
+        '         TRANFOR_M_DIRECC_ABONADO (CE.M_DIRECC_ABONADO) AS DIREC' +
+        'CIONSUCRIPTOR,'
+      
+        '         CASE WHEN ((NOT REGEXP_LIKE (CE.M_CONTADOR_ACTIVO, :CAD' +
+        'ENA_EXP_REG)) OR (CE.M_CONTADOR_ACTIVO IS NULL)) THEN '#39'0'#39' ELSE C' +
+        'E.M_CONTADOR_ACTIVO END AS NUMEROCONTADOR,'
+      '         NVL (C.CODIGOFABRICANTE, '#39'AAA'#39') AS CODIGOMARCAMEDIDOR,'
+      '         CE.M_MULTIP_ACTIVO AS FACTORMULTIPLICADOR,'
+      '         CE.M_NUMERO_AGUJAS AS NUMEROAGUJAS,'
+      '         CE.M_TARIFA_SERVICIO AS TARIFA,'
+      '         CE.M_SECTOR_CONSUMO AS SECTORCONSUMO,'
+      '         CE.M_FECHA_ACTUAL AS FECHAULTIMALECTURA,'
+      '         CE.M_LECTURA_ACTUAL AS ULTIMALECTURA,'
+      '         CE.M_CONSUMOS1 AS CONSUMO1,'
+      '         CE.M_CONSUMOS2 AS CONSUMO2,'
+      '         CE.M_CONSUMOS3 AS CONSUMO3,'
+      '         CE.M_CONSUMOS4 AS CONSUMO4,'
+      '         CE.M_CONSUMOS5 AS CONSUMO5,'
+      '         CE.M_CONSUMOS6 AS CONSUMO6,'
+      '         CE.M_CONSUMOS7 AS CONSUMO7,'
+      '         CE.M_CONSUMOS8 AS CONSUMO8,'
+      '         CE.M_CONSUMOS9 AS CONSUMO9,'
+      '         CE.M_CONSUMOS10 AS CONSUMO10,'
+      '         CE.M_CONSUMOS11 AS CONSUMO11,'
+      '         CE.M_CONSUMOS12 AS CONSUMO12,'
+      '         0 AS VALORAP,'
+      '         3.32 AS COSTOKWH,'
+      '         2.33 AS CARGOCOMERCIALIZACION,'
+      '         1.44 AS CARGOREGULACION,'
+      '         CE.M_SALDO_ANTERIOR AS SALDOANTERIOR,'
+      '         C.X,'
+      '         C.Y,'
+      '         NVL (C.CODIGOORIGENPROCESO, 0) AS CODIGOORIGENPROCESO,'
+      '         CE.IN_CO_MODELO AS CODIGOMODELOMEDIDOR,'
+      '         CE.M_CODIGO_ARCHIVO AS CODIGOTIPOMEDIDA,'
+      '         I.CODIGOITINERARIO,'
+      '         C.FILA,'
+      '         C.COLUMNA,'
+      '         NB.DIMENSIONMEDIDOR,'
+      '         C.COM_INF_ADICIONAL,'
+      '         C.CODIGOCONTADOR,'
+      '         MM.NOMBREMARCAMEDIDOR,'
+      '         I.AUTORIZADO,'
+      '         I.INDUSTRIAL_AUTORIZA,'
+      '         F9.S_CONTDOR_REACTIVO,'
+      '         F9.S_LECTUR_ACTUAL_R,'
+      '         F9.S_LECTUR_DEMANDA,'
+      '         F9.S_DEMANDA1,'
+      '         F9.S_DEMANDA2,'
+      '         F9.S_DEMANDA3,'
+      '         F9.S_DEMANDA4,'
+      '         F9.S_DEMANDA5,'
+      '         F9.S_DEMANDA6,'
+      '         F9.S_DEMANDA7,'
+      '         F9.S_DEMANDA8,'
+      '         F9.S_DEMANDA9,'
+      '         F9.S_DEMANDA10,'
+      '         F9.S_DEMANDA11,'
+      '         F9.S_DEMANDA12,'
+      '         F9.S_CONSUMO1,'
+      '         F9.S_CONSUMO2,'
+      '         F9.S_CONSUMO3,'
+      '         F9.S_CONSUMO4,'
+      '         F9.S_CONSUMO5,'
+      '         F9.S_CONSUMO6,'
+      '         F9.S_CONSUMO7,'
+      '         F9.S_CONSUMO8,'
+      '         F9.S_CONSUMO9,'
+      '         F9.S_CONSUMO10,'
+      '         F9.S_CONSUMO11,'
+      '         F9.S_CONSUMO12,'
+      '         F9.S_LECTUR_ANTERIOR_R,'
+      '         CE.M_CODIGO_3EDAD,'
+      '         CE.M_TARIFA_SERVICIO,'
+      '         CE.M_CODIGO_LECTURA,'
+      
+        '         SDO_CS.TRANSFORM(SDO_GEOMETRY (2001,32616,SDO_POINT_TYP' +
+        'E (C.X, C.Y, NULL),NULL,NULL),4326).SDO_POINT.Y AS LAT,'
+      
+        '         SDO_CS.TRANSFORM(SDO_GEOMETRY (2001,32616,SDO_POINT_TYP' +
+        'E (C.X, C.Y, NULL),NULL,NULL),4326).SDO_POINT.X AS LNG,'
+      '         CE.M_SECTOR_CONSUMO,'
+      '         CE.M_ESTADO_REGISTRO,'
+      
+        '         GET_CARGO_POR_FINANCIAMIENTO(CE.M_CLAVE_PRIMARIA, :FECH' +
+        'ALECTURA) AS CN_CUOTA_FINANCIAMIENTO,'
+      
+        '         GET_OTROSCARGOS(CE.M_CLAVE_PRIMARIA, :PERIODO, :FECHALE' +
+        'CTURA) AS CN_CUOTA_OTROSCARGOS,'
+      
+        '         GET_CUOTA_CONSUMO(CE.M_CLAVE_PRIMARIA, :FECHALECTURA) A' +
+        'S CN_CUOTA_CONSUMO,'
+      '         CE.M_BONO_GENERAL,'
+      '         F9.S_CARGO_DEMANDA,'
+      '         CE.M_MESES_MOROSOS,'
+      '         CE.M_FECHA_PAGO,'
+      '         CE.M_CODIGO_CONTRATO,'
+      
+        '         GET_VALOR_FINANCIADO (CE.M_CLAVE_PRIMARIA, :FECHALECTUR' +
+        'A) AS CN_MONTO,'
+      
+        '         GET_MESES_CONTRATO (CE.M_CLAVE_PRIMARIA, :FECHALECTURA)' +
+        ' AS CN_MESES_CONTRATO,'
+      
+        '         GET_MESES_APLICADOS (CE.M_CLAVE_PRIMARIA, :FECHALECTURA' +
+        ') AS CN_MESES_APLICADOS,'
+      '         CE.M_PAGOS_DEL_CICLO,'
+      
+        '         CE.M_SALDO_DEL_MES+CE.M_SALDO_30_DIAS+CE.M_SALDO_60_DIA' +
+        'S+CE.M_SALDO_90_DIAS+CE.M_SALDO_120_DIAS AS SALDO_PENDIENTE,'
+      '         CE.M_CONSUMO_ADICIONAL,'
+      '         CE.M_CONSUMO_ESTIMADO,'
+      '         NULL AS HL_CODIGO_LECTURA1,'
+      '         NULL AS HL_CODIGO_LECTURA2,'
+      '         NULL AS HL_CODIGO_LECTURA3,'
+      
+        '         CASE AG.ACTIVO WHEN '#39'S'#39' THEN '#39'S'#39' WHEN '#39'N'#39' THEN '#39'N'#39' ELSE' +
+        ' NULL END AS FACTURA_GOBIERNO,'
+      '         :VERSION_PGI,'
+      '         NULL AS PROMEDIOLIBRO,'
+      
+        '         GET_ANOMALIACONFLICTO(CE.M_CLAVE_PRIMARIA, :FECHALECTUR' +
+        'A) AS ANOMALIACONFLICTO,'
+      
+        '         TRIM(TO_CHAR(CE.IN_COD_UNICOM||CE.IN_RUTA,'#39'0000000'#39'))||' +
+        'TRIM(TO_CHAR(CE.M_CODIGO_ACOMET,'#39'000'#39')) AS CODUBICACION_NUEVO,'
+      '         CE.IN_RUTA,'
+      '         CE.IN_ITINERARIO,'
+      '         CE.IN_NISRAD,'
+      '         CE.IN_NIF,'
+      '         CE.IN_NUM_APA,'
+      '         CE.IN_CO_MARCA,'
+      '         CE.CGV_PM,'
+      '         CE.IN_PROM_IMPORTE,'
+      '         CE.CSMO_PROMEDIO,'
+      '         CE.MONTO_ACUERDO,'
+      '         CE.NRO_CUOTA_APLICADA,'
+      '         CE.FECHA_ULT_PAGO,'
+      '         CE.MONTO_ULTIMO_PAGO,'
+      '         CE.CIIU_ACTIVIDAD,'
+      '         CE.CO_ERROR,'
+      '         CE.IND_ANOM_PEND,'
+      '         CE.IND_CORTE,'
+      '         CE.LECT_CORTE_ACTIVA,'
+      '         CE.IND_RELIQUIDA,'
+      '         CE.CSMO_PROM_ACTIVA,'
+      '         CE.CSMO_PROM_REACTIVA,'
+      '         CE.CSMO_PROM_DEMANDA,'
+      
+        '         TO_DATE(TO_CHAR(CONVERTIR_FECHA(CE.M_FECHA_CORTE,'#39'YYMMD' +
+        'D'#39'),'#39'DD/MM/YYYY'#39'),'#39'DD/MM/YYYY'#39'),'
+      '         CE.LECT_CORTE_REACTIVA,'
+      '         CE.LECT_CORTE_DEMANDA,'
+      '         TO_CHAR(:FECHALECTURA,'#39'YYYY-MM-DD'#39')')
+    Left = 352
+    Top = 206
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOGRUPOTRABAJO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGODIAL'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'PERIODO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end>
+  end
+  object Select_EnRutaSinInfoComercial: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT DISTINCT'
+      '         :CODIGOADMINISTRATIVO AS CODIGOADMINISTRATIVO,'
+      '         :CODIGOGRUPOTRABAJO AS CODIGOGRUPOTRABAJO,'
+      '         :CODIGODIAL AS CODIGODIAL,'
+      '         :PERIODO AS PERIODO,'
+      
+        '         NVL(CE.FECHA_LECTURA_PROGRAMADA, :FECHALECTURA) AS FECH' +
+        'ALECTURA,'
+      '         GET_CODIGOAPOYODIS(C.CODIGOAPOYO) AS CODIGOAPOYO,'
+      '         C.COM_CODIGOSISTEMA||C.COM_CODIGORUTA AS LIBRO,'
+      '         C.COM_ACOMETIDA AS ACOMETIDA,'
+      '         SGC_FUN_CONVERTIR_CLAVE(C.CODIGO_CUENTA) AS CLAVE,'
+      '         C.CODIGOCLIENTESGD,'
+      '         1 CICLO,'
+      '         NULL AS CODIGOUNICOM,'
+      
+        '         C.COM_CODIGOSISTEMA||C.COM_CODIGORUTA||C.COM_ACOMETIDA ' +
+        'AS CODUBICACION,'
+      '         RA.AOLFINCA AS AOLPREDIO,'
+      '         10 AS AOLPUNTOCONSUMO,'
+      '         10 AS AOLMEDIDOR,'
+      '         C.NOMBRESUSCRIPTOR AS NOMBRESUSCRIPTOR,'
+      '         C.DIRECCIONSUSCRIPTOR AS DIRECCIONSUCRIPTOR,'
+      '         C.CODIGOCONTADOR AS NUMEROCONTADOR,'
+      '         NVL (C.CODIGOFABRICANTE, '#39'AAA'#39') AS CODIGOMARCAMEDIDOR,'
+      '         NULL AS FACTORMULTIPLICADOR,'
+      '         NULL AS NUMEROAGUJAS,'
+      '         NULL AS TARIFA,'
+      '         NULL AS SECTORCONSUMO,'
+      '         NULL AS FECHAULTIMALECTURA,'
+      '         NULL AS ULTIMALECTURA,'
+      '         NULL AS CONSUMO1,'
+      '         NULL AS CONSUMO2,'
+      '         NULL AS CONSUMO3,'
+      '         NULL AS CONSUMO4,'
+      '         NULL AS CONSUMO5,'
+      '         NULL AS CONSUMO6,'
+      '         NULL AS CONSUMO7,'
+      '         NULL AS CONSUMO8,'
+      '         NULL AS CONSUMO9,'
+      '         NULL AS CONSUMO10,'
+      '         NULL AS CONSUMO11,'
+      '         NULL AS CONSUMO12,'
+      '         0 AS VALORAP,'
+      '         3.32 AS COSTOKWH,'
+      '         2.33 AS CARGOCOMERCIALIZACION,'
+      '         1.44 AS CARGOREGULACION,'
+      '         NULL AS SALDOANTERIOR,'
+      '         C.X,'
+      '         C.Y,'
+      '         NVL (C.CODIGOORIGENPROCESO, 0) AS CODIGOORIGENPROCESO,'
+      '         0 AS CODIGOMODELOMEDIDOR,'
+      '         NULL AS CODIGOTIPOMEDIDA,'
+      '         I.CODIGOITINERARIO,'
+      '         C.FILA,'
+      '         C.COLUMNA,'
+      '         NB.DIMENSIONMEDIDOR,'
+      '         C.COM_INF_ADICIONAL,'
+      '         C.CODIGOCONTADOR,'
+      '         MM.NOMBREMARCAMEDIDOR,'
+      
+        '         (CASE WHEN (SGC_FUN_CONVERTIR_CLAVE(E.CLAVE) IS NOT NUL' +
+        'L) THEN '#39'NO'#39' ELSE '#39'SI'#39' END) AS AUTORIZADO,'
+      '         '#39'NO'#39' AS INDUSTRIAL_AUTORIZA,'
+      '         NULL AS S_CONTDOR_REACTIVO,'
+      '         NULL AS S_LECTUR_ACTUAL_R,'
+      '         NULL AS S_LECTUR_DEMANDA,'
+      '         NULL AS S_DEMANDA1,'
+      '         NULL AS S_DEMANDA2,'
+      '         NULL AS S_DEMANDA3,'
+      '         NULL AS S_DEMANDA4,'
+      '         NULL AS S_DEMANDA5,'
+      '         NULL AS S_DEMANDA6,'
+      '         NULL AS S_DEMANDA7,'
+      '         NULL AS S_DEMANDA8,'
+      '         NULL AS S_DEMANDA9,'
+      '         NULL AS S_DEMANDA10,'
+      '         NULL AS S_DEMANDA11,'
+      '         NULL AS S_DEMANDA12,'
+      '         NULL AS S_CONSUMO1,'
+      '         NULL AS S_CONSUMO2,'
+      '         NULL AS S_CONSUMO3,'
+      '         NULL AS S_CONSUMO4,'
+      '         NULL AS S_CONSUMO5,'
+      '         NULL AS S_CONSUMO6,'
+      '         NULL AS S_CONSUMO7,'
+      '         NULL AS S_CONSUMO8,'
+      '         NULL AS S_CONSUMO9,'
+      '         NULL AS S_CONSUMO10,'
+      '         NULL AS S_CONSUMO11,'
+      '         NULL AS S_CONSUMO12,'
+      '         NULL AS S_LECTUR_ANTERIOR_R,'
+      '         NULL AS M_CODIGO_3EDAD,'
+      '         NULL AS M_TARIFA_SERVICIO,'
+      '         NULL AS M_CODIGO_LECTURA,'
+      
+        '         SDO_CS.TRANSFORM(SDO_GEOMETRY (2001,32616,SDO_POINT_TYP' +
+        'E (C.X, C.Y, NULL),NULL,NULL),4326).SDO_POINT.Y AS LAT,'
+      
+        '         SDO_CS.TRANSFORM(SDO_GEOMETRY (2001,32616,SDO_POINT_TYP' +
+        'E (C.X, C.Y, NULL),NULL,NULL),4326).SDO_POINT.X AS LNG,'
+      '         NULL AS M_SECTOR_CONSUMO,'
+      '         NULL AS M_ESTADO_REGISTRO,'
+      '         NULL AS CN_CUOTA_FINANCIAMIENTO,'
+      '         NULL AS CN_CUOTA_OTROSCARGOS,'
+      '         NULL AS CN_CUOTA_CONSUMO,'
+      '         NULL AS M_BONO_GENERAL,'
+      '         NULL AS S_CARGO_DEMANDA,'
+      '         NULL AS M_MESES_MOROSOS,'
+      '         NULL AS M_FECHA_PAGO,'
+      '         NULL AS M_CODIGO_CONTRATO,'
+      '         NULL AS CN_MONTO,'
+      '         NULL AS CN_MESES_CONTRATO,'
+      '         NULL AS CN_MESES_APLICADOS,'
+      '         NULL AS M_PAGOS_DEL_CICLO,'
+      '         NULL AS CN_SALDO,'
+      '         NULL AS M_CONSUMO_ADICIONAL,'
+      '         NULL AS M_CONSUMO_ESTIMADO,'
+      
+        '         CASE AG.ACTIVO WHEN '#39'S'#39' THEN '#39'S'#39' WHEN '#39'N'#39' THEN '#39'N'#39' ELSE' +
+        ' NULL END AS FACTURA_GOBIERNO,'
+      '         :VERSION_PGI,'
+      '         TO_CHAR(:FECHALECTURA,'#39'YYYY-MM-DD'#39')')
+    Left = 632
+    Top = 158
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOGRUPOTRABAJO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGODIAL'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'PERIODO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'VERSION_PGI'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end>
+  end
+  object From_qInsert_Info_GC: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      '    FROM APOYO A,'
+      '         FPLE180 CE,'
+      '         FPLE190 F9,'
+      '         NODOBT NB,'
+      '         CLIENTESGD C,'
+      '         MARCAMEDIDOR MM,'
+      '         SGC_AGRUPACION AG,'
+      '         (SELECT RA.CODIGOAPOYO, SGD.CODIGO_CUENTA,'
+      '                 I.CODIGOITINERARIO,'
+      
+        '                 (CASE WHEN (SGC_FUN_CONVERTIR_CLAVE(E.CLAVE) IS' +
+        ' NOT NULL) THEN '#39'NO'#39' ELSE '#39'SI'#39' END) AS AUTORIZADO,'
+      '                 RA.AOLFINCA,'
+      
+        '                 DECODE (NVL (TO_CHAR (RUTACICLO.LIBRO), '#39'NO'#39'),'#39 +
+        'NO'#39','#39'NO'#39','#39'SI'#39') AS INDUSTRIAL_AUTORIZA,'
+      '                 S.LIBRO'
+      '            FROM APOYO A,'
+      '                 SGC_RUTAAPOYO RA,'
+      '                 SGC_RUTA R,'
+      '                 SGC_GRUPOITINERARIO G,'
+      '                 SGC_ITINERARIO I,'
+      '                 CLIENTESGD SGD,'
+      '                 (SELECT F.IN_COD_UNICOM||F.IN_RUTA AS LIBRO,'
+      '                         F.M_CLAVE_PRIMARIA'
+      '                    FROM FPLE180 F'
+      
+        '                   WHERE F.FECHA_LECTURA_PROGRAMADA = :FECHALECT' +
+        'URA) S,'
+      '                 C_GRUPOAOL C,'
+      '                 (SELECT *'
+      '                    FROM EEH_RUTACICLO'
+      '                   WHERE PERIODO = :PERIODO'
+      
+        '                         AND UPPER (DESCRIPCION) LIKE '#39'%ALTOS CO' +
+        'N%'#39') RUTACICLO,'
+      '                 SGC_EXCLUIDO E'
+      '           WHERE     A.CODIGOAPOYO = RA.CODIGOAPOYO'
+      '                 AND RA.CODIGORUTA = R.CODIGORUTA'
+      '                 AND RA.CODIGOGRUPOAOL = R.CODIGOGRUPOAOL'
+      '                 AND R.CODIGORUTA = G.CODIGORUTA(+)'
+      '                 AND R.CODIGOGRUPOAOL = G.CODIGOGRUPOAOL(+)'
+      
+        '                 AND G.CODIGOGRUPOITINERARIO = I.CODIGOGRUPOITIN' +
+        'ERARIO(+)'
+      
+        '                 AND RA.AOLFINCA BETWEEN I.AOLFINCADESDE AND I.A' +
+        'OLFINCAHASTA'
+      
+        '                 AND I.CODIGOGRUPOITINERARIO = :CODIGOGRUPOITINE' +
+        'RARIO'
+      '                 AND I.CODIGOITINERARIO = :CODIGOITINERARIO'
+      '                 AND SGD.CODIGOAPOYO = A.CODIGOAPOYO'
+      
+        '                 AND SGC_FUN_CONVERTIR_CLAVE(SGD.CODIGO_CUENTA) ' +
+        '= S.M_CLAVE_PRIMARIA(+)'
+      '                 AND A.CODIGOGRUPOAOL = C.CODIGOGRUPOAOL(+)'
+      '                 AND S.LIBRO = RUTACICLO.LIBRO(+)'
+      
+        '                 AND S.M_CLAVE_PRIMARIA = SGC_FUN_CONVERTIR_CLAV' +
+        'E(E.CLAVE(+)) ) I'
+      
+        '   WHERE SGC_FUN_CONVERTIR_CLAVE(C.CODIGO_CUENTA) = CE.M_CLAVE_P' +
+        'RIMARIA(+)'
+      '         AND MM.CODIGOMARCAMEDIDOR(+) = C.CODIGOFABRICANTE'
+      '         AND A.CODIGOAPOYO = C.CODIGOAPOYO'
+      '         AND C.CODIGOAPOYO = I.CODIGOAPOYO'
+      '         AND C.CODIGO_CUENTA = I.CODIGO_CUENTA'
+      '         AND C.CODIGOAPOYO = NB.CODIGOAPOYO'
+      '         AND C.CODIGONODOBT = NB.CODIGONODOBT'
+      '         AND AG.CODIGOAGRUPACION(+) = CE.M_CODIGO_AGRUPA'
+      '         AND CE.M_CLAVE_PRIMARIA = F9.S_CLAVE_PRIMARIA(+)'
+      
+        '         AND CE.FECHA_LECTURA_PROGRAMADA = F9.FECHA_LECTURA_PROG' +
+        'RAMADA(+)'
+      '         AND CE.FECHA_LECTURA_PROGRAMADA = :FECHALECTURA')
+    Left = 248
+    Top = 166
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'PERIODO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOGRUPOITINERARIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOITINERARIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end>
+  end
+  object Insert_SoloComercial: TQuery
+    SQL.Strings = (
+      'INSERT INTO SGC_INFOITINERARIO'
+      '('
+      'CODIGOADMINISTRATIVO,'
+      'CODIGOGRUPOTRABAJO,'
+      'CODIGODIAL,'
+      'PERIODO,'
+      'FECHALECTURA,'
+      'CODIGOAPOYO1,'
+      'LIBRO,'
+      'ACOMETIDA,'
+      'CLAVE,'
+      'CODIGOCLIENTESGD,'
+      'CICLO,'
+      'CODIGOUNICOM,'
+      'CODUBICACION,'
+      'AOLPREDIO,'
+      'AOLPUNTOCONSUMO,'
+      'AOLMEDIDOR,'
+      'NOMBRESUSCRIPTOR,'
+      'DIRECCIONSUCRIPTOR,'
+      'NUMEROCONTADOR,'
+      'CODIGOMARCAMEDIDOR,'
+      'FACTORMULTIPLICADOR,'
+      'NUMEROAGUJAS,'
+      'TARIFA,'
+      'SECTORCONSUMO,'
+      'FECHAULTIMALECTURA,'
+      'ULTIMALECTURA,'
+      'CONSUMO1,'
+      'CONSUMO2,'
+      'CONSUMO3,'
+      'CONSUMO4,'
+      'CONSUMO5,'
+      'CONSUMO6,'
+      'CONSUMO7,'
+      'CONSUMO8,'
+      'CONSUMO9,'
+      'CONSUMO10,'
+      'CONSUMO11,'
+      'CONSUMO12,'
+      'VALORAP,'
+      'COSTOKWH,'
+      'CARGOCOMERCIALIZACION,'
+      'CARGOREGULACION,'
+      'SALDOANTERIOR,'
+      'X,'
+      'Y,'
+      'CODIGOORIGENPROCESO,'
+      'CODIGOMODELOMEDIDOR,'
+      'CODIGOTIPOMEDIDA,'
+      'CODIGOITINERARIO,'
+      'FILA,'
+      'COLUMNA,'
+      'DIMENSIONMEDIDOR,'
+      'COM_INF_ADICIONAL,'
+      'CODIGOCONTADOR,'
+      'NOMBREMARCAMEDIDOR,'
+      'AUTORIZADO,'
+      'INDUSTRIAL_AUTORIZA,'
+      'S_CONTDOR_REACTIVO,'
+      'S_LECTUR_ACTUAL_R,'
+      'S_LECTUR_DEMANDA,'
+      'S_DEMANDA1,'
+      'S_DEMANDA2,'
+      'S_DEMANDA3,'
+      'S_DEMANDA4,'
+      'S_DEMANDA5,'
+      'S_DEMANDA6,'
+      'S_DEMANDA7,'
+      'S_DEMANDA8,'
+      'S_DEMANDA9,'
+      'S_DEMANDA10,'
+      'S_DEMANDA11,'
+      'S_DEMANDA12,'
+      'S_CONSUMO1,'
+      'S_CONSUMO2,'
+      'S_CONSUMO3,'
+      'S_CONSUMO4,'
+      'S_CONSUMO5,'
+      'S_CONSUMO6,'
+      'S_CONSUMO7,'
+      'S_CONSUMO8,'
+      'S_CONSUMO9,'
+      'S_CONSUMO10,'
+      'S_CONSUMO11,'
+      'S_CONSUMO12,'
+      'S_LECTUR_ANTERIOR_R,'
+      'M_CODIGO_3EDAD,'
+      'M_TARIFA_SERVICIO,'
+      'M_CODIGO_LECTURA,'
+      'LAT,'
+      'LNG,'
+      'M_SECTOR_CONSUMO,'
+      'M_ESTADO_REGISTRO,'
+      'CN_CUOTA_FINANCIAMIENTO,'
+      'CN_CUOTA_OTROSCARGOS,'
+      'CN_CUOTA_CONSUMO,'
+      'M_BONO_GENERAL,'
+      'S_CARGO_DEMANDA,'
+      'M_MESES_MOROSOS,'
+      'M_FECHA_PAGO,'
+      'M_CODIGO_CONTRATO,'
+      'CN_MONTO,'
+      'CN_MESES_CONTRATO,'
+      'CN_MESES_APLICADOS,'
+      'M_PAGOS_DEL_CICLO,'
+      'CN_SALDO,'
+      'M_CONSUMO_ADICIONAL,'
+      'M_CONSUMO_ESTIMADO,'
+      'HL_CODIGO_LECTURA1,'
+      'HL_CODIGO_LECTURA2,'
+      'HL_CODIGO_LECTURA3,'
+      'FACTURA_GOBIERNO,'
+      'VERSION_PGI,'
+      'PROMEDIOLIBRO,'
+      'ANOMALIACONFLICTO,'
+      'CODUBICACION_NUEVO,'
+      'IN_RUTA,'
+      'IN_ITINERARIO,'
+      'IN_NISRAD,'
+      'IN_NIF,'
+      'IN_NUM_APA,'
+      'IN_CO_MARCA,'
+      'CGV_PM,'
+      'IN_PROM_IMPORTE,'
+      'CSMO_PROMEDIO,'
+      'MONTO_ACUERDO,'
+      'NRO_CUOTA_APLICADA,'
+      'FECHA_ULT_PAGO,'
+      'MONTO_ULTIMO_PAGO,'
+      'CIIU_ACTIVIDAD,'
+      'CO_ERROR,'
+      'IND_ANOM_PEND,'
+      'IND_CORTE,'
+      'LECT_CORTE,'
+      'IND_RELIQUIDA,'
+      'PROMEDIOACTIVA,'
+      'PROMEDIOREACTIVA,'
+      'PROMEDIODEMANDA,'
+      'M_FECHA_CORTE,'
+      'LECT_CORTE_REACTIVA,'
+      'LECT_CORTE_DEMANDA,'
+      'FECHACALENDARIO'
+      ')')
+    Left = 848
+    Top = 214
+  end
+  object qClientesAlertantes: TQuery
+    SQL.Strings = (
+      'INSERT INTO CLIENTESALERTANTES'
+      
+        'SELECT DISTINCT CCH.CLAVEANTERIOR AS ALERTANTE_PREVIO, :CODIGOAD' +
+        'MINISTRATIVO AS CODIGOADMINISTRATIVO, :CODIGOGRUPOTRABAJO AS COD' +
+        'IGOGRUPOTRABAJO,'
+      
+        'CCH.CLAVEPOSTERIOR AS ALERTANTE_SIGUIENTE,RC.CICLO AS CODIGODIAL' +
+        ', :PERIODO AS PERIODO,TO_DATE(:FECHA,'#39'DD/MM/YYYY'#39') AS FECHALECTU' +
+        'RA,'
+      
+        'TO_CHAR (CE.M_CODIGO_CITY * 1000 + CE.M_CODIGO_RUTA, '#39'000000'#39') A' +
+        'S LIBRO,CE.M_CODIGO_ACOMET AS ACOMETIDA,'
+      
+        'CE.M_CLAVE_PRIMARIA AS CLAVE,1 CICLO,100 CODIGOUNICOM,TRIM (TO_C' +
+        'HAR (CE.M_CODIGO_CITY, '#39'000'#39'))'
+      
+        '|| TRIM (TO_CHAR (CE.M_CODIGO_RUTA, '#39'000'#39'))|| TRIM (TO_CHAR (CE.' +
+        'M_CODIGO_ACOMET, '#39'000'#39')) AS CODUBICACION,'
+      
+        '10 AS AOLPUNTOCONSUMO,10 AS AOLMEDIDOR,REPLACE (CE.M_NOMBRE_ABON' +
+        'ADO, '#39'"'#39', '#39' '#39') AS NOMBRESUSCRIPTOR,'
+      
+        'TRANFOR_M_DIRECC_ABONADO (CE.M_DIRECC_ABONADO) AS DIRECCIONSUCRI' +
+        'PTOR,CE.M_CONTADOR_ACTIVO AS NUMEROCONTADOR,'
+      
+        'CE.M_MULTIP_ACTIVO AS FACTORMULTIPLICADOR,CE.M_NUMERO_AGUJAS AS ' +
+        'NUMEROAGUJAS,CE.M_TARIFA_SERVICIO AS TARIFA,'
+      
+        'CE.M_SECTOR_CONSUMO AS SECTORCONSUMO,CE.M_FECHA_ACTUAL AS FECHAU' +
+        'LTIMALECTURA,CE.M_LECTURA_ACTUAL AS ULTIMALECTURA,CE.M_CONSUMOS1' +
+        ' AS CONSUMO1,'
+      
+        'CE.M_CONSUMOS2 AS CONSUMO2,CE.M_CONSUMOS3 AS CONSUMO3,CE.M_CONSU' +
+        'MOS4 AS CONSUMO4,CE.M_CONSUMOS5 AS CONSUMO5,CE.M_CONSUMOS6 AS CO' +
+        'NSUMO6,'
+      
+        'CE.M_CONSUMOS7 AS CONSUMO7,CE.M_CONSUMOS8 AS CONSUMO8,CE.M_CONSU' +
+        'MOS9 AS CONSUMO9,CE.M_CONSUMOS10 AS CONSUMO10,CE.M_CONSUMOS11 AS' +
+        ' CONSUMO11,'
+      
+        'CE.M_CONSUMOS12 AS CONSUMO12,0 AS VALORAP,3.32 AS COSTOKWH,2.33 ' +
+        'AS CARGOCOMERCIALIZACION,1.44 AS CARGOREGULACION,CE.M_SALDO_ANTE' +
+        'RIOR AS SALDOANTERIOR,'
+      
+        '0 AS CODIGOMODELOMEDIDOR,CE.M_CODIGO_ARCHIVO AS CODIGOTIPOMEDIDA' +
+        ','
+      #39'SI'#39' AS AUTORIZADO,'
+      
+        #39'NO'#39' INDUSTRIAL_AUTORIZA,F9.S_CONTDOR_REACTIVO,F9.S_LECTUR_ACTUA' +
+        'L_R,F9.S_LECTUR_DEMANDA,F9.S_DEMANDA1,F9.S_DEMANDA2,F9.S_DEMANDA' +
+        '3,F9.S_DEMANDA4,F9.S_DEMANDA5,'
+      
+        'F9.S_DEMANDA6,F9.S_DEMANDA7,F9.S_DEMANDA8,F9.S_DEMANDA9,F9.S_DEM' +
+        'ANDA10,F9.S_DEMANDA11,F9.S_DEMANDA12,F9.S_CONSUMO1,F9.S_CONSUMO2' +
+        ',F9.S_CONSUMO3,F9.S_CONSUMO4,'
+      
+        'F9.S_CONSUMO5,F9.S_CONSUMO6,F9.S_CONSUMO7,F9.S_CONSUMO8,F9.S_CON' +
+        'SUMO9,F9.S_CONSUMO10,F9.S_CONSUMO11,F9.S_CONSUMO12,F9.S_LECTUR_A' +
+        'NTERIOR_R,CE.M_CODIGO_3EDAD,'
+      
+        'CE.M_TARIFA_SERVICIO,CE.M_CODIGO_LECTURA,0 AS LAT,0 AS LNG,CE.M_' +
+        'SECTOR_CONSUMO,CE.M_ESTADO_REGISTRO,'
+      
+        'GET_CARGO_POR_FINANCIAMIENTO(CE.M_CLAVE_PRIMARIA, TO_DATE(:FECHA' +
+        ','#39'DD/MM/YYYY'#39')) AS CN_CUOTA_FINANCIAMIENTO,      '
+      
+        'GET_OTROSCARGOS(CE.M_CLAVE_PRIMARIA, :PERIODO,TO_DATE(:FECHA,'#39'DD' +
+        '/MM/YYYY'#39')) AS CN_CUOTA_OTROSCARGOS,GET_CUOTA_CONSUMO(CE.M_CLAVE' +
+        '_PRIMARIA, TO_DATE(:FECHA,'#39'DD/MM/YYYY'#39')) AS CN_CUOTA_CONSUMO,'
+      
+        'CE.M_BONO_GENERAL,F9.S_CARGO_DEMANDA,CE.M_MESES_MOROSOS,CE.M_FEC' +
+        'HA_PAGO,CE.M_CODIGO_CONTRATO,'
+      
+        '(SELECT F10.CN_MONTO FROM FPCN010 F10 WHERE F10.CN_CLAVE = CE.M_' +
+        'CLAVE_PRIMARIA AND F10.CN_TIPO  = 3 AND F10.FECHA_LECTURA_PROGRA' +
+        'MADA = TO_DATE(:FECHA,'#39'DD/MM/YYYY'#39')) AS CN_MONTO,'
+      
+        '(SELECT F10.CN_MESES_CONTRATO FROM FPCN010 F10 WHERE F10.CN_CLAV' +
+        'E = CE.M_CLAVE_PRIMARIA AND F10.CN_TIPO  = 3 AND F10.FECHA_LECTU' +
+        'RA_PROGRAMADA = TO_DATE(:FECHA,'#39'DD/MM/YYYY'#39')) AS CN_MESES_CONTRA' +
+        'TO,'
+      
+        '(SELECT F10.CN_MESES_APLICADOS FROM FPCN010 F10 WHERE F10.CN_CLA' +
+        'VE = CE.M_CLAVE_PRIMARIA AND F10.CN_TIPO  = 3 AND F10.FECHA_LECT' +
+        'URA_PROGRAMADA = TO_DATE(:FECHA,'#39'DD/MM/YYYY'#39')) AS CN_MESES_APLIC' +
+        'ADOS,'
+      'CE.M_PAGOS_DEL_CICLO,'
+      
+        'CE.M_SALDO_DEL_MES+CE.M_SALDO_30_DIAS+CE.M_SALDO_60_DIAS+CE.M_SA' +
+        'LDO_90_DIAS+CE.M_SALDO_120_DIAS AS CN_SALDO'
+      
+        'FROM CLIENTESOLOCOMERCIAL CCH ,FPLE180 CE, FPLE190 F9,EEH_RUTACI' +
+        'CLO RC,'
+      '( '
+      
+        'SELECT DISTINCT M_CODIGO_CITY AS SISTEMA, M_CODIGO_RUTA AS RUTA,' +
+        ' '
+      'M_CODIGO_CITY || M_CODIGO_RUTA AS SISTEMARUTA FROM APOYO A, '
+      'SGC_RUTAAPOYO RA , SGC_RUTA R , '
+      
+        'SGC_GRUPOITINERARIO G, SGC_ITINERARIO I, CLIENTESGD SGD, FPLE180' +
+        ' S'
+      'WHERE A.CODIGOAPOYO = RA.CODIGOAPOYO '
+      
+        'AND RA.CODIGORUTA = R.CODIGORUTA AND RA.CODIGOGRUPOAOL = R.CODIG' +
+        'OGRUPOAOL '
+      
+        'AND R.CODIGORUTA = G.CODIGORUTA AND R.CODIGOGRUPOAOL =G.CODIGOGR' +
+        'UPOAOL '
+      'AND G.CODIGOGRUPOITINERARIO = I.CODIGOGRUPOITINERARIO '
+      'AND RA.AOLFINCA BETWEEN I.AOLFINCADESDE AND I.AOLFINCAHASTA '
+      'AND I.CODIGOADMINISTRATIVO = :CODIGOADMINISTRATIVO'
+      'AND I.CODIGOGRUPOTRABAJO = :CODIGOGRUPOTRABAJO'
+      'AND SGD.CODIGOAPOYO = A.CODIGOAPOYO '
+      'AND SGD.CODIGO_CUENTA = S.M_CLAVE_PRIMARIA '
+      'AND S.FECHA_LECTURA_PROGRAMADA = TO_DATE(:FECHA,'#39'DD/MM/YYYY'#39')'
+      ') A '
+      'WHERE CCH.M_CLAVE_PRIMARIA = CE.M_CLAVE_PRIMARIA '
+      'AND TO_NUMBER(A.SISTEMA) = CE. M_CODIGO_CITY '
+      'AND TO_NUMBER(A.RUTA) = CE. M_CODIGO_RUTA '
+      'AND CE.FECHA_LECTURA_PROGRAMADA = TO_DATE(:FECHA,'#39'DD/MM/YYYY'#39')'
+      'AND CE.M_CLAVE_PRIMARIA = F9.S_CLAVE_PRIMARIA(+)'
+      
+        'AND F9.FECHA_LECTURA_PROGRAMADA(+) = TO_DATE(:FECHA,'#39'DD/MM/YYYY'#39 +
+        ')'
+      
+        'AND(LPAD(CE.M_CODIGO_CITY,3,'#39'0'#39')||LPAD(CE.M_CODIGO_RUTA,3,'#39'0'#39')) ' +
+        '= LPAD(RC.LIBRO, 6, '#39'0'#39')'
+      'AND RC.PERIODO = :PERIODO'
+      ' '
+      ' '
+      ' ')
+    Left = 656
+    Top = 418
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOGRUPOTRABAJO'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftFloat
+        Name = 'PERIODO'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftString
+        Name = 'FECHA'
+        ParamType = ptInput
+      end>
+  end
+  object qImprimirItinerario: TQuery
+    SQL.Strings = (
+      'SELECT A.CLAVE,'
+      '         A.DIRECCIONSUSCRIPTOR,'
+      '         A.AOLPREDIO,'
+      '         A.SISTEMA,'
+      '         A.RUTA,'
+      '         A.ACOMETIDA,'
+      '         A.FILA,'
+      '         A.COLUMNA,'
+      '         A.NUMEROCONTADOR,'
+      '         A.NOMBREMARCAMEDIDOR,'
+      '         C.ORDEN,'
+      '         A.CODIGOTIPOMEDIDA,'
+      '         A.CODIGOCLIENTESGD,'
+      '         A.X,'
+      '         A.Y,'
+      '         '#39'M'#39' AS MARCADO,'
+      '         '#39' '#39' AS TEXTO'
+      '    FROM (SELECT I.CLAVE,'
+      '                 I.DIRECCIONSUCRIPTOR AS DIRECCIONSUSCRIPTOR,'
+      '                 I.AOLPREDIO,'
+      '                 SUBSTR (I.LIBRO, 1, 4) AS SISTEMA,'
+      '                 SUBSTR (I.LIBRO, 5, 3) AS RUTA,'
+      '                 I.ACOMETIDA,'
+      '                 I.FILA + 1 AS FILA,'
+      '                 I.COLUMNA + 1 AS COLUMNA,'
+      '                 I.NUMEROCONTADOR,'
+      
+        '                 CASE WHEN (I.CODIGOMARCAMEDIDOR = '#39'SIN'#39' OR I.CO' +
+        'DIGOMARCAMEDIDOR = '#39'AAA'#39') THEN NULL ELSE MM.NOMBREMARCAMEDIDOR E' +
+        'ND AS NOMBREMARCAMEDIDOR,'
+      '                 I.CODIGOTIPOMEDIDA,'
+      '                 I.CODIGOCLIENTESGD,'
+      '                 I.X,'
+      '                 I.Y'
+      '            FROM SGC_INFOITINERARIO I, MARCAMEDIDOR MM'
+      
+        '           WHERE     I.CODIGOMARCAMEDIDOR = MM.CODIGOMARCAMEDIDO' +
+        'R(+)'
+      
+        '                 AND I.CODIGOADMINISTRATIVO = :CODIGOADMINISTRAT' +
+        'IVO'
+      '                 AND I.CODIGOGRUPOTRABAJO = :CODIGOGRUPOTRABAJO'
+      
+        '                 AND I.FECHALECTURA = TO_DATE (:FECHALECTURA, '#39'D' +
+        'D/MM/YYYY'#39')'
+      '                 AND I.CODIGOITINERARIO = :CODIGOITINERARIO) A,'
+      
+        '         (SELECT ROW_NUMBER () OVER (ORDER BY B.AOLPREDIO ASC) A' +
+        'S ORDEN, B.*'
+      '            FROM (SELECT DISTINCT I.AOLPREDIO'
+      '                    FROM SGC_INFOITINERARIO I, MARCAMEDIDOR MM'
+      
+        '                   WHERE     I.CODIGOMARCAMEDIDOR = MM.CODIGOMAR' +
+        'CAMEDIDOR(+)'
+      
+        '                         AND I.CODIGOADMINISTRATIVO = :CODIGOADM' +
+        'INISTRATIVO'
+      
+        '                         AND I.CODIGOGRUPOTRABAJO = :CODIGOGRUPO' +
+        'TRABAJO'
+      '                         AND I.FECHALECTURA ='
+      
+        '                                TO_DATE (:FECHALECTURA, '#39'DD/MM/Y' +
+        'YYY'#39')'
+      
+        '                         AND I.CODIGOITINERARIO = :CODIGOITINERA' +
+        'RIO) B) C'
+      '   WHERE A.AOLPREDIO = C.AOLPREDIO'
+      'ORDER BY A.AOLPREDIO')
+    Left = 1048
+    Top = 482
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOGRUPOTRABAJO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOITINERARIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOGRUPOTRABAJO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOITINERARIO'
+        ParamType = ptUnknown
+      end>
+  end
+  object pmSigComPapel: TPopupMenu
+    Left = 1024
+    Top = 416
+    object miExcelYMapas: TMenuItem
+      Caption = 'Generar archivos de Excel y mapas'
+      OnClick = miExcelYMapasClick
+    end
+    object miSoloMapas: TMenuItem
+      Caption = 'Generar solo mapas'
+      OnClick = miSoloMapasClick
+    end
+  end
+  object InsertInto_qInsert_Info: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'INSERT INTO SGC_INFOITINERARIO'
+      '('
+      'CODIGOADMINISTRATIVO,'
+      'CODIGOGRUPOTRABAJO,'
+      'CODIGODIAL,'
+      'PERIODO,'
+      'FECHALECTURA,'
+      'CODIGOAPOYO1,'
+      'LIBRO,'
+      'ACOMETIDA,'
+      'CLAVE,'
+      'CODIGOCLIENTESGD,'
+      'CICLO,'
+      'CODIGOUNICOM,'
+      'CODUBICACION,'
+      'AOLPREDIO,'
+      'AOLPUNTOCONSUMO,'
+      'AOLMEDIDOR,'
+      'NOMBRESUSCRIPTOR,'
+      'DIRECCIONSUCRIPTOR,'
+      'NUMEROCONTADOR,'
+      'CODIGOMARCAMEDIDOR,'
+      'FACTORMULTIPLICADOR,'
+      'NUMEROAGUJAS,'
+      'TARIFA,'
+      'SECTORCONSUMO,'
+      'FECHAULTIMALECTURA,'
+      'ULTIMALECTURA,'
+      'CONSUMO1,'
+      'CONSUMO2,'
+      'CONSUMO3,'
+      'CONSUMO4,'
+      'CONSUMO5,'
+      'CONSUMO6,'
+      'CONSUMO7,'
+      'CONSUMO8,'
+      'CONSUMO9,'
+      'CONSUMO10,'
+      'CONSUMO11,'
+      'CONSUMO12,'
+      'VALORAP,'
+      'COSTOKWH,'
+      'CARGOCOMERCIALIZACION,'
+      'CARGOREGULACION,'
+      'SALDOANTERIOR,'
+      'X,'
+      'Y,'
+      'CODIGOORIGENPROCESO,'
+      'CODIGOMODELOMEDIDOR,'
+      'CODIGOTIPOMEDIDA,'
+      'CODIGOITINERARIO,'
+      'FILA,'
+      'COLUMNA,'
+      'DIMENSIONMEDIDOR,'
+      'COM_INF_ADICIONAL,'
+      'CODIGOCONTADOR,'
+      'NOMBREMARCAMEDIDOR,'
+      'AUTORIZADO,'
+      'INDUSTRIAL_AUTORIZA,'
+      'S_CONTDOR_REACTIVO,'
+      'S_LECTUR_ACTUAL_R,'
+      'S_LECTUR_DEMANDA,'
+      'S_DEMANDA1,'
+      'S_DEMANDA2,'
+      'S_DEMANDA3,'
+      'S_DEMANDA4,'
+      'S_DEMANDA5,'
+      'S_DEMANDA6,'
+      'S_DEMANDA7,'
+      'S_DEMANDA8,'
+      'S_DEMANDA9,'
+      'S_DEMANDA10,'
+      'S_DEMANDA11,'
+      'S_DEMANDA12,'
+      'S_CONSUMO1,'
+      'S_CONSUMO2,'
+      'S_CONSUMO3,'
+      'S_CONSUMO4,'
+      'S_CONSUMO5,'
+      'S_CONSUMO6,'
+      'S_CONSUMO7,'
+      'S_CONSUMO8,'
+      'S_CONSUMO9,'
+      'S_CONSUMO10,'
+      'S_CONSUMO11,'
+      'S_CONSUMO12,'
+      'S_LECTUR_ANTERIOR_R,'
+      'M_CODIGO_3EDAD,'
+      'M_TARIFA_SERVICIO,'
+      'M_CODIGO_LECTURA,'
+      'LAT,'
+      'LNG,'
+      'M_SECTOR_CONSUMO,'
+      'M_ESTADO_REGISTRO,'
+      'CN_CUOTA_FINANCIAMIENTO,'
+      'CN_CUOTA_OTROSCARGOS,'
+      'CN_CUOTA_CONSUMO,'
+      'M_BONO_GENERAL,'
+      'S_CARGO_DEMANDA,'
+      'M_MESES_MOROSOS,'
+      'M_FECHA_PAGO,'
+      'M_CODIGO_CONTRATO,'
+      'CN_MONTO,'
+      'CN_MESES_CONTRATO,'
+      'CN_MESES_APLICADOS,'
+      'M_PAGOS_DEL_CICLO,'
+      'CN_SALDO,'
+      'M_CONSUMO_ADICIONAL,'
+      'M_CONSUMO_ESTIMADO,'
+      'HL_CODIGO_LECTURA1,'
+      'HL_CODIGO_LECTURA2,'
+      'HL_CODIGO_LECTURA3,'
+      'FACTURA_GOBIERNO,'
+      'VERSION_PGI,'
+      'PROMEDIOLIBRO,'
+      'ANOMALIACONFLICTO,'
+      'CODUBICACION_NUEVO,'
+      'IN_RUTA,'
+      'IN_ITINERARIO,'
+      'IN_NISRAD,'
+      'IN_NIF,'
+      'IN_NUM_APA,'
+      'IN_CO_MARCA,'
+      'CGV_PM,'
+      'IN_PROM_IMPORTE,'
+      'CSMO_PROMEDIO,'
+      'MONTO_ACUERDO,'
+      'NRO_CUOTA_APLICADA,'
+      'FECHA_ULT_PAGO,'
+      'MONTO_ULTIMO_PAGO,'
+      'CIIU_ACTIVIDAD,'
+      'CO_ERROR,'
+      'IND_ANOM_PEND,'
+      'IND_CORTE,'
+      'LECT_CORTE,'
+      'IND_RELIQUIDA,'
+      'PROMEDIOACTIVA,'
+      'PROMEDIOREACTIVA,'
+      'PROMEDIODEMANDA,'
+      'M_FECHA_CORTE,'
+      'LECT_CORTE_REACTIVA,'
+      'LECT_CORTE_DEMANDA,'
+      'FECHACALENDARIO'
+      ')')
+    Left = 480
+    Top = 182
+  end
+  object Select_SoloComercial: TQuery
+    SQL.Strings = (
+      'SELECT DISTINCT'
+      '       :CODIGOADMINISTRATIVO AS CODIGOADMINISTRATIVO,'
+      '       :CODIGOGRUPOTRABAJO AS CODIGOGRUPOTRABAJO,'
+      '       :CODIGODIAL AS CODIGODIAL,'
+      '       :PERIODO AS PERIODO,'
+      '       :FECHALECTURA AS FECHALECTURA,'
+      '       NULL AS CODIGOAPOYO1,'
+      '       TO_CHAR (CE.IN_COD_UNICOM||CE.IN_RUTA,'#39'0000000'#39') LIBRO,'
+      '       CE.M_CODIGO_ACOMET ACOMETIDA,'
+      '       CE.M_CLAVE_PRIMARIA CLAVE,'
+      '       80000000+CE.M_CLAVE_PRIMARIA AS CODIGOCLIENTESGD,'
+      '       1 CICLO,'
+      '       CE.IN_COD_UNICOM AS CODIGOUNICOM,'
+      
+        '       TRIM (TO_CHAR(CE.IN_COD_UNICOM,'#39'0000'#39'))||TRIM(TO_CHAR(CE.' +
+        'IN_RUTA,'#39'000'#39'))||TRIM(TO_CHAR(CE.M_CODIGO_ACOMET,'#39'000'#39')) CODUBIC' +
+        'ACION,'
+      '       NULL AS AOLPREDIO,'
+      '       10 AOLPUNTOCONSUMO,'
+      '       10 AOLMEDIDOR,'
+      '       REPLACE (CE.M_NOMBRE_ABONADO, '#39'"'#39', '#39' '#39') NOMBRESUSCRIPTOR,'
+      
+        '       TRANFOR_M_DIRECC_ABONADO (CE.M_DIRECC_ABONADO) DIRECCIONS' +
+        'UCRIPTOR,'
+      
+        '       CASE WHEN ((NOT REGEXP_LIKE (CE.M_CONTADOR_ACTIVO, :CADEN' +
+        'A_EXP_REG)) OR (CE.M_CONTADOR_ACTIVO IS NULL)) THEN '#39'0'#39' ELSE CE.' +
+        'M_CONTADOR_ACTIVO END AS NUMEROCONTADOR,'
+      '       NULL CODIGOMARCAMEDIDOR,'
+      '       CE.M_MULTIP_ACTIVO FACTORMULTIPLICADOR,'
+      '       CE.M_NUMERO_AGUJAS NUMEROAGUJAS,'
+      '       CE.M_TARIFA_SERVICIO TARIFA,'
+      '       CE.M_SECTOR_CONSUMO SECTORCONSUMO,'
+      '       CE.M_FECHA_ACTUAL FECHAULTIMALECTURA,'
+      '       CE.M_LECTURA_ACTUAL ULTIMALECTURA,'
+      '       CE.M_CONSUMOS1 CONSUMO1,'
+      '       CE.M_CONSUMOS2 CONSUMO2,'
+      '       CE.M_CONSUMOS3 CONSUMO3,'
+      '       CE.M_CONSUMOS4 CONSUMO4,'
+      '       CE.M_CONSUMOS5 CONSUMO5,'
+      '       CE.M_CONSUMOS6 CONSUMO6,'
+      '       CE.M_CONSUMOS7 CONSUMO7,'
+      '       CE.M_CONSUMOS8 CONSUMO8,'
+      '       CE.M_CONSUMOS9 CONSUMO9,'
+      '       CE.M_CONSUMOS10 CONSUMO10,'
+      '       CE.M_CONSUMOS11 CONSUMO11,'
+      '       CE.M_CONSUMOS12 CONSUMO12,'
+      '       0 VALORAP,'
+      '       3.32 COSTOKWH,'
+      '       2.33 CARGOCOMERCIALIZACION,'
+      '       1.44 CARGOREGULACION,'
+      '       CE.M_SALDO_ANTERIOR SALDOANTERIOR,'
+      '       NULL AS X,'
+      '       NULL AS Y,'
+      '       NULL AS CODIGOORIGENPROCESO,'
+      '       0 CODIGOMODELOMEDIDOR,'
+      '       CE.M_CODIGO_ARCHIVO CODIGOTIPOMEDIDA,'
+      '       :CODIGOITINERARIO AS CODIGOITINERARIO,'
+      '       NULL AS FILA,'
+      '       NULL AS COLUMNA,'
+      '       NULL AS DIMENSIONMEDIDOR,'
+      '       NULL AS COM_INF_ADICIONAL,'
+      '       NULL AS CODIGOCONTADOR,'
+      '       NULL AS NOMBREMARCAMEDIDOR,      '
+      
+        '       (CASE WHEN (SGC_FUN_CONVERTIR_CLAVE(E.CLAVE) IS NOT NULL)' +
+        ' THEN '#39'NO'#39' ELSE '#39'SI'#39' END) AS AUTORIZADO,'
+      '       '#39'NO'#39' INDUSTRIAL_AUTORIZA,'
+      '       F9.S_CONTDOR_REACTIVO,'
+      '       F9.S_LECTUR_ACTUAL_R,'
+      '       F9.S_LECTUR_DEMANDA,'
+      '       F9.S_DEMANDA1,'
+      '       F9.S_DEMANDA2,'
+      '       F9.S_DEMANDA3,'
+      '       F9.S_DEMANDA4,'
+      '       F9.S_DEMANDA5,'
+      '       F9.S_DEMANDA6,'
+      '       F9.S_DEMANDA7,'
+      '       F9.S_DEMANDA8,'
+      '       F9.S_DEMANDA9,'
+      '       F9.S_DEMANDA10,'
+      '       F9.S_DEMANDA11,'
+      '       F9.S_DEMANDA12,'
+      '       F9.S_CONSUMO1,'
+      '       F9.S_CONSUMO2,'
+      '       F9.S_CONSUMO3,'
+      '       F9.S_CONSUMO4,'
+      '       F9.S_CONSUMO5,'
+      '       F9.S_CONSUMO6,'
+      '       F9.S_CONSUMO7,'
+      '       F9.S_CONSUMO8,'
+      '       F9.S_CONSUMO9,'
+      '       F9.S_CONSUMO10,'
+      '       F9.S_CONSUMO11,'
+      '       F9.S_CONSUMO12,'
+      '       F9.S_LECTUR_ANTERIOR_R,'
+      '       CE.M_CODIGO_3EDAD,'
+      '       CE.M_TARIFA_SERVICIO,'
+      '       CE.M_CODIGO_LECTURA,'
+      '       NULL LAT,'
+      '       NULL LNG,'
+      '       CE.M_SECTOR_CONSUMO,'
+      '       CE.M_ESTADO_REGISTRO,'
+      
+        '       GET_CARGO_POR_FINANCIAMIENTO (CE.M_CLAVE_PRIMARIA, :FECHA' +
+        'LECTURA) AS CN_CUOTA_FINANCIAMIENTO,'
+      
+        '       GET_OTROSCARGOS (CE.M_CLAVE_PRIMARIA, :PERIODO, :FECHALEC' +
+        'TURA) AS CN_CUOTA_OTROSCARGOS,'
+      
+        '       GET_CUOTA_CONSUMO (CE.M_CLAVE_PRIMARIA, :FECHALECTURA) AS' +
+        ' CN_CUOTA_CONSUMO,'
+      '       CE.M_BONO_GENERAL,'
+      '       F9.S_CARGO_DEMANDA,'
+      '       CE.M_MESES_MOROSOS,'
+      '       CE.M_FECHA_PAGO,'
+      '       CE.M_CODIGO_CONTRATO,'
+      
+        '       GET_VALOR_FINANCIADO (CE.M_CLAVE_PRIMARIA, :FECHALECTURA)' +
+        ' AS CN_MONTO,'
+      
+        '       GET_MESES_CONTRATO (CE.M_CLAVE_PRIMARIA, :FECHALECTURA) A' +
+        'S CN_MESES_CONTRATO,'
+      
+        '       GET_MESES_APLICADOS (CE.M_CLAVE_PRIMARIA, :FECHALECTURA) ' +
+        'AS CN_MESES_APLICADOS,'
+      '       CE.M_PAGOS_DEL_CICLO,'
+      
+        '       CE.M_SALDO_DEL_MES+CE.M_SALDO_30_DIAS+CE.M_SALDO_60_DIAS+' +
+        'CE.M_SALDO_90_DIAS+CE.M_SALDO_120_DIAS AS SALDO_PENDIENTE,'
+      '       CE.M_CONSUMO_ADICIONAL,'
+      '       CE.M_CONSUMO_ESTIMADO,'
+      '       NULL AS HL_CODIGO_LECTURA1,'
+      '       NULL AS HL_CODIGO_LECTURA2,'
+      '       NULL AS HL_CODIGO_LECTURA3,'
+      
+        '       CASE AG.ACTIVO WHEN '#39'S'#39' THEN '#39'S'#39' WHEN '#39'N'#39' THEN '#39'N'#39' ELSE N' +
+        'ULL END AS FACTURA_GOBIERNO,'
+      '       :VERSION_PGI,'
+      
+        '       (SELECT PR.PROMEDIO FROM PROMEDIOPORLIBRO PR WHERE PR.LIB' +
+        'RO = LPAD (RC.LIBRO, 6, '#39'0'#39') AND PR.PERIODO = TO_NUMBER(TO_CHAR(' +
+        'ADD_MONTHS(TO_DATE(:PERIODO,'#39'YYYYMM'#39'),-1),'#39'YYYYMM'#39'))) AS PROMEDI' +
+        'OLIBRO,'
+      
+        '       GET_ANOMALIACONFLICTO(CE.M_CLAVE_PRIMARIA, :FECHALECTURA)' +
+        ' AS ANOMALIACONFLICTO,'
+      
+        '       TRIM(TO_CHAR(CE.IN_COD_UNICOM||CE.IN_RUTA,'#39'0000000'#39'))||TR' +
+        'IM(TO_CHAR(CE.M_CODIGO_ACOMET,'#39'000'#39')) AS CODUBICACION_NUEVO,'
+      '       CE.IN_RUTA,'
+      '       CE.IN_ITINERARIO,'
+      '       CE.IN_NISRAD,'
+      '       CE.IN_NIF,'
+      '       CE.IN_NUM_APA,'
+      '       CE.IN_CO_MARCA,'
+      '       CE.CGV_PM,'
+      '       CE.IN_PROM_IMPORTE,'
+      '       CE.CSMO_PROMEDIO,'
+      '       CE.MONTO_ACUERDO,'
+      '       CE.NRO_CUOTA_APLICADA,'
+      '       CE.FECHA_ULT_PAGO,'
+      '       CE.MONTO_ULTIMO_PAGO,'
+      '       CE.CIIU_ACTIVIDAD,'
+      '       CE.CO_ERROR,'
+      '       CE.IND_ANOM_PEND,'
+      '       CE.IND_CORTE,'
+      '       CE.LECT_CORTE_ACTIVA,'
+      '       CE.IND_RELIQUIDA,'
+      '       CE.CSMO_PROM_ACTIVA,'
+      '       CE.CSMO_PROM_REACTIVA,'
+      '       CE.CSMO_PROM_DEMANDA,'
+      
+        '       TO_DATE(TO_CHAR(CONVERTIR_FECHA(CE.M_FECHA_CORTE,'#39'YYMMDD'#39 +
+        '),'#39'DD/MM/YYYY'#39'),'#39'DD/MM/YYYY'#39'),'
+      '       CE.LECT_CORTE_REACTIVA,'
+      '       CE.LECT_CORTE_DEMANDA,'
+      '       TO_CHAR(:FECHALECTURA,'#39'YYYY-MM-DD'#39')')
+    Left = 976
+    Top = 182
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOGRUPOTRABAJO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGODIAL'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'PERIODO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end>
+  end
+  object From_SoloComercial: TQuery
+    SQL.Strings = (
+      
+        'FROM FPLE180 CE, FPLE190 F9, EEH_RUTACICLO RC, SGC_AGRUPACION AG' +
+        ', SGC_EXCLUIDO E'
+      '    WHERE CE.M_CLAVE_PRIMARIA = F9.S_CLAVE_PRIMARIA(+)'
+      '          AND AG.CODIGOAGRUPACION(+) = CE.M_CODIGO_AGRUPA'
+      '          AND CE.FECHA_LECTURA_PROGRAMADA = :FECHALECTURA'
+      '          AND F9.FECHA_LECTURA_PROGRAMADA(+) = :FECHALECTURA'
+      '          AND CE.IN_COD_UNICOM||CE.IN_RUTA = RC.LIBRO'
+      '          AND RC.FECHALECTURA = :FECHALECTURA'
+      '          AND EXISTS'
+      '                 (SELECT NULL'
+      
+        '                    FROM SGC_INFOITINERARIO A, CLIENTESOLOCOMERC' +
+        'IAL CC'
+      
+        '                   WHERE     A.CLAVE = SGC_FUN_CONVERTIR_CLAVE(C' +
+        'C.CLAVEANTERIOR)'
+      
+        '                         AND SGC_FUN_CONVERTIR_CLAVE(CC.M_CLAVE_' +
+        'PRIMARIA) = CE.M_CLAVE_PRIMARIA'
+      
+        '                         AND A.CODIGOADMINISTRATIVO = :CODIGOADM' +
+        'INISTRATIVO'
+      
+        '                         AND A.CODIGOGRUPOTRABAJO = :CODIGOGRUPO' +
+        'TRABAJO'
+      '                         AND A.CODIGODIAL = :CODIGODIAL'
+      '                         AND A.PERIODO = :PERIODO'
+      
+        '                         AND A.CODIGOITINERARIO = :CODIGOITINERA' +
+        'RIO)'
+      '          AND NOT EXISTS'
+      '                 (SELECT NULL'
+      '                    FROM CLIENTESGD C'
+      
+        '                   WHERE SGC_FUN_CONVERTIR_CLAVE(C.CODIGO_CUENTA' +
+        ') = CE.M_CLAVE_PRIMARIA)'
+      
+        '          AND CE.M_CLAVE_PRIMARIA = SGC_FUN_CONVERTIR_CLAVE(E.CL' +
+        'AVE(+))'
+      ' ')
+    Left = 864
+    Top = 238
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOGRUPOTRABAJO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGODIAL'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'PERIODO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOITINERARIO'
+        ParamType = ptUnknown
+      end>
+  end
+  object Insert_EnRutaSinInfoComercial: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'INSERT INTO SGC_INFOITINERARIO'
+      '('
+      'CODIGOADMINISTRATIVO,'
+      'CODIGOGRUPOTRABAJO,'
+      'CODIGODIAL,'
+      'PERIODO,'
+      'FECHALECTURA,'
+      'CODIGOAPOYO1,'
+      'LIBRO,'
+      'ACOMETIDA,'
+      'CLAVE,'
+      'CODIGOCLIENTESGD,'
+      'CICLO,'
+      'CODIGOUNICOM,'
+      'CODUBICACION,'
+      'AOLPREDIO,'
+      'AOLPUNTOCONSUMO,'
+      'AOLMEDIDOR,'
+      'NOMBRESUSCRIPTOR,'
+      'DIRECCIONSUCRIPTOR,'
+      'NUMEROCONTADOR,'
+      'CODIGOMARCAMEDIDOR,'
+      'FACTORMULTIPLICADOR,'
+      'NUMEROAGUJAS,'
+      'TARIFA,'
+      'SECTORCONSUMO,'
+      'FECHAULTIMALECTURA,'
+      'ULTIMALECTURA,'
+      'CONSUMO1,'
+      'CONSUMO2,'
+      'CONSUMO3,'
+      'CONSUMO4,'
+      'CONSUMO5,'
+      'CONSUMO6,'
+      'CONSUMO7,'
+      'CONSUMO8,'
+      'CONSUMO9,'
+      'CONSUMO10,'
+      'CONSUMO11,'
+      'CONSUMO12,'
+      'VALORAP,'
+      'COSTOKWH,'
+      'CARGOCOMERCIALIZACION,'
+      'CARGOREGULACION,'
+      'SALDOANTERIOR,'
+      'X,'
+      'Y,'
+      'CODIGOORIGENPROCESO,'
+      'CODIGOMODELOMEDIDOR,'
+      'CODIGOTIPOMEDIDA,'
+      'CODIGOITINERARIO,'
+      'FILA,'
+      'COLUMNA,'
+      'DIMENSIONMEDIDOR,'
+      'COM_INF_ADICIONAL,'
+      'CODIGOCONTADOR,'
+      'NOMBREMARCAMEDIDOR,'
+      'AUTORIZADO,'
+      'INDUSTRIAL_AUTORIZA,'
+      'S_CONTDOR_REACTIVO,'
+      'S_LECTUR_ACTUAL_R,'
+      'S_LECTUR_DEMANDA,'
+      'S_DEMANDA1,'
+      'S_DEMANDA2,'
+      'S_DEMANDA3,'
+      'S_DEMANDA4,'
+      'S_DEMANDA5,'
+      'S_DEMANDA6,'
+      'S_DEMANDA7,'
+      'S_DEMANDA8,'
+      'S_DEMANDA9,'
+      'S_DEMANDA10,'
+      'S_DEMANDA11,'
+      'S_DEMANDA12,'
+      'S_CONSUMO1,'
+      'S_CONSUMO2,'
+      'S_CONSUMO3,'
+      'S_CONSUMO4,'
+      'S_CONSUMO5,'
+      'S_CONSUMO6,'
+      'S_CONSUMO7,'
+      'S_CONSUMO8,'
+      'S_CONSUMO9,'
+      'S_CONSUMO10,'
+      'S_CONSUMO11,'
+      'S_CONSUMO12,'
+      'S_LECTUR_ANTERIOR_R,'
+      'M_CODIGO_3EDAD,'
+      'M_TARIFA_SERVICIO,'
+      'M_CODIGO_LECTURA,'
+      'LAT,'
+      'LNG,'
+      'M_SECTOR_CONSUMO,'
+      'M_ESTADO_REGISTRO,'
+      'CN_CUOTA_FINANCIAMIENTO,'
+      'CN_CUOTA_OTROSCARGOS,'
+      'CN_CUOTA_CONSUMO,'
+      'M_BONO_GENERAL,'
+      'S_CARGO_DEMANDA,'
+      'M_MESES_MOROSOS,'
+      'M_FECHA_PAGO,'
+      'M_CODIGO_CONTRATO,'
+      'CN_MONTO,'
+      'CN_MESES_CONTRATO,'
+      'CN_MESES_APLICADOS,'
+      'M_PAGOS_DEL_CICLO,'
+      'CN_SALDO,'
+      'M_CONSUMO_ADICIONAL,'
+      'M_CONSUMO_ESTIMADO,'
+      'FACTURA_GOBIERNO,'
+      'VERSION_PGI,'
+      'FECHACALENDARIO'
+      ')')
+    Left = 752
+    Top = 182
+  end
+  object From_EnRutaSinInfoComercial: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'FROM APOYO A, SGC_RUTAAPOYO RA, SGC_RUTA R, SGC_GRUPOITINERARIO ' +
+        'G,'
+      
+        'SGC_ITINERARIO I, CLIENTESGD C, MARCAMEDIDOR MM, NODOBT NB, FPLE' +
+        '180 CE, SGC_AGRUPACION AG, SGC_EXCLUIDO E'
+      'WHERE A.CODIGOAPOYO = RA.CODIGOAPOYO'
+      'AND A.CODIGOAPOYO = C.CODIGOAPOYO'
+      'AND RA.CODIGORUTA = R.CODIGORUTA'
+      'AND RA.CODIGOGRUPOAOL = R.CODIGOGRUPOAOL'
+      'AND R.CODIGORUTA = G.CODIGORUTA(+)'
+      'AND R.CODIGOGRUPOAOL = G.CODIGOGRUPOAOL(+)'
+      'AND G.CODIGOGRUPOITINERARIO = I.CODIGOGRUPOITINERARIO(+)'
+      'AND RA.AOLFINCA BETWEEN I.AOLFINCADESDE AND I.AOLFINCAHASTA'
+      'AND MM.CODIGOMARCAMEDIDOR(+) = C.CODIGOFABRICANTE'
+      'AND C.CODIGOAPOYO = NB.CODIGOAPOYO'
+      'AND C.CODIGONODOBT = NB.CODIGONODOBT'
+      'AND AG.CODIGOAGRUPACION(+) = CE.M_CODIGO_AGRUPA'
+      'AND R.CODIGOGRUPOAOL = :CODIGOGRUPOAOL'
+      'AND R.CODIGORUTA = :CODIGORUTA'
+      'AND G.CODIGOGRUPOITINERARIO = :CODIGOGRUPOITINERARIO'
+      'AND I.CODIGOITINERARIO=:CODIGOITINERARIO'
+      
+        'AND SGC_FUN_CONVERTIR_CLAVE(C.CODIGO_CUENTA) = CE.M_CLAVE_PRIMAR' +
+        'IA(+)'
+      'AND CE.M_CLAVE_PRIMARIA = SGC_FUN_CONVERTIR_CLAVE(E.CLAVE(+))'
+      'AND CE.FECHA_LECTURA_PROGRAMADA = :FECHALECTURA')
+    Left = 864
+    Top = 166
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOGRUPOAOL'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGORUTA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOGRUPOITINERARIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOITINERARIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end>
+  end
+  object qIndice: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT F.M_CONTADOR_ACTIVO,'
+      'F.M_CODIGO_RUTA,'
+      'LPAD(F.M_CODIGO_ACOMET, 3, '#39'0'#39'),'
+      'I.NUMEROPAGINA'
+      'FROM SGC_IMPRESIONITINERARIO I, FPLE180 F'
+      'WHERE     I.CLAVE = F.M_CLAVE_PRIMARIA'
+      'AND I.FECHALECTURA = F.FECHA_LECTURA_PROGRAMADA'
+      'AND I.CODIGOITINERARIO = :CODIGOITINERARIO'
+      'AND I.FECHALECTURA = :FECHALECTURA'
+      'ORDER BY 1')
+    Left = 1144
+    Top = 442
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOITINERARIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end>
+  end
+  object qLibrosSinPromedio: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT DISTINCT I.LIBRO'
+      '   FROM APOYO A,'
+      '         FPLE180 CE,'
+      '         FPLE190 F9,'
+      '         CLIENTESGD C,'
+      '         SGC_AGRUPACION AG,'
+      '         PROMEDIOPORLIBRO PR,'
+      '         (SELECT RA.CODIGOAPOYO, SGD.CODIGO_CUENTA,'
+      '                 I.CODIGOITINERARIO,'
+      '                 RA.AOLFINCA,'
+      '                 S.LIBRO'
+      '            FROM APOYO A,'
+      '                 SGC_RUTAAPOYO RA,'
+      '                 SGC_RUTA R,'
+      '                 SGC_GRUPOITINERARIO G,'
+      '                 SGC_ITINERARIO I,'
+      '                 CLIENTESGD SGD,'
+      '                 (SELECT F.IN_COD_UNICOM||IN_RUTA AS LIBRO,'
+      '                         F.M_CLAVE_PRIMARIA'
+      '                    FROM FPLE180 F'
+      
+        '                   WHERE F.FECHA_LECTURA_PROGRAMADA = :FECHALECT' +
+        'URA) S,'
+      '                 C_GRUPOAOL C,'
+      '                 (SELECT *'
+      '                    FROM EEH_RUTACICLO'
+      '                   WHERE PERIODO = :PERIODO'
+      
+        '                         AND UPPER (DESCRIPCION) LIKE '#39'%ALTOS CO' +
+        'N%'#39') RUTACICLO'
+      '           WHERE     A.CODIGOAPOYO = RA.CODIGOAPOYO'
+      '                 AND RA.CODIGORUTA = R.CODIGORUTA'
+      '                 AND RA.CODIGOGRUPOAOL = R.CODIGOGRUPOAOL'
+      '                 AND R.CODIGORUTA = G.CODIGORUTA(+)'
+      '                 AND R.CODIGOGRUPOAOL = G.CODIGOGRUPOAOL(+)'
+      
+        '                 AND G.CODIGOGRUPOITINERARIO = I.CODIGOGRUPOITIN' +
+        'ERARIO(+)'
+      
+        '                 AND RA.AOLFINCA BETWEEN I.AOLFINCADESDE AND I.A' +
+        'OLFINCAHASTA'
+      
+        '                 AND C.CODIGOSEDEOPERATIVA = :CODIGOSEDEOPERATIV' +
+        'A'
+      '                 AND C.CODIGODIAL = :CODIGODIAL'
+      
+        '                 AND I.CODIGOCOORDINACIONGRUPOTRABAJO = :CODCOOR' +
+        'GT'
+      '                 AND SGD.CODIGOAPOYO = A.CODIGOAPOYO'
+      
+        '                 AND SGC_FUN_CONVERTIR_CLAVE(SGD.CODIGO_CUENTA) ' +
+        '= S.M_CLAVE_PRIMARIA(+)'
+      '                 AND A.GRUPOAOL = C.CODIGOGRUPOAOL(+)'
+      '                 AND S.LIBRO = RUTACICLO.LIBRO(+)'
+      '                 AND R.ACTIVO = '#39'S'#39
+      '                 AND G.ACTIVO = '#39'S'#39') I'
+      
+        '   WHERE SGC_FUN_CONVERTIR_CLAVE(C.CODIGO_CUENTA) = CE.M_CLAVE_P' +
+        'RIMARIA(+)'
+      '         AND A.CODIGOAPOYO = C.CODIGOAPOYO'
+      '         AND C.CODIGOAPOYO = I.CODIGOAPOYO'
+      '         AND C.CODIGO_CUENTA = I.CODIGO_CUENTA'
+      '         AND AG.CODIGOAGRUPACION(+) = CE.M_CODIGO_AGRUPA'
+      '         AND CE.M_CLAVE_PRIMARIA = F9.S_CLAVE_PRIMARIA(+)'
+      
+        '         AND CE.FECHA_LECTURA_PROGRAMADA = F9.FECHA_LECTURA_PROG' +
+        'RAMADA(+)'
+      '         AND CE.FECHA_LECTURA_PROGRAMADA = :FECHALECTURA'
+      '         AND PR.LIBRO(+)  = LPAD(I.LIBRO,7,'#39'0'#39')'
+      
+        '         AND PR.PERIODO(+) = TO_NUMBER(TO_CHAR(ADD_MONTHS(TO_DAT' +
+        'E(:PERIODO,'#39'YYYYMM'#39'),-1),'#39'YYYYMM'#39'))'
+      '         AND PR.PROMEDIO IS NULL')
+    Left = 1056
+    Top = 266
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'PERIODO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGOSEDEOPERATIVA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODIGODIAL'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'CODCOORGT'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'PERIODO'
+        ParamType = ptUnknown
+      end>
+  end
+  object qTelemedidos: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'UPDATE SGC_INFOITINERARIO I'
+      
+        'SET (I.ACTIVA_TELEMEDIDO, I.REACTIVA_TELEMEDIDO, I.DEMANDA_TELEM' +
+        'EDIDO, I.AUTORIZADO, FECHALECTURA_TELEMEDIDO)='
+      '(SELECT CASE'
+      
+        '  WHEN LENGTH(TO_CHAR(ROUND(T.E_ACTIVA))) > 5 THEN TO_NUMBER(SUB' +
+        'STR(TO_CHAR(ROUND(T.E_ACTIVA)), -5, 5))'
+      '  ELSE ROUND(T.E_ACTIVA)'
+      'END,'
+      'CASE'
+      
+        '  WHEN LENGTH(TO_CHAR(ROUND(T.E_REACTIVA))) > 5 THEN TO_NUMBER(S' +
+        'UBSTR(TO_CHAR(ROUND(T.E_REACTIVA)), -5, 5))'
+      '  ELSE ROUND(T.E_REACTIVA)'
+      'END,'
+      'CASE'
+      
+        '  WHEN LENGTH(TO_CHAR(ROUND(T.D_MAXIMA))) > 5 THEN TO_NUMBER(SUB' +
+        'STR(TO_CHAR(ROUND(T.D_MAXIMA)), -5, 5))'
+      '  ELSE ROUND(T.D_MAXIMA)'
+      'END,'
+      
+        '(CASE WHEN ((T.CLAVE_PRIMARIA IS NOT NULL) AND (T.E_ACTIVA IS NU' +
+        'LL)) THEN '#39'NO'#39' ELSE '#39'SI'#39' END),'
+      'T.FECHALECTURA'
+      'FROM DATOS390.TELEMEDIDOS_CALENDARIO T'
+      'WHERE I.CLAVE= T.CLAVE_PRIMARIA'
+      'AND I.FECHACALENDARIO = T.FECHACALENDARIO'
+      'AND I.FECHALECTURA = :FECHALECTURA)'
+      'WHERE EXISTS ('
+      'SELECT NULL'
+      'FROM DATOS390.TELEMEDIDOS_CALENDARIO T'
+      'WHERE I.CLAVE= T.CLAVE_PRIMARIA'
+      'AND I.FECHACALENDARIO = T.FECHACALENDARIO'
+      'AND I.FECHALECTURA = :FECHALECTURA)')
+    Left = 920
+    Top = 234
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end>
+  end
+  object qMarcarRegistrosAuditables: TQuery
+    SQL.Strings = (
+      'UPDATE  SGC_INFOITINERARIO'
+      'SET AUDITAR='#39'SI'#39
+      'WHERE CLAVE IN ('
+      ' SELECT CLAVE'
+      '    FROM  SGC_INFOITINERARIO'
+      '    WHERE FECHALECTURA=:FECHALECTURA'
+      '    AND CODIGOITINERARIO=:CODIGOITINERARIO'
+      
+        '    ORDER BY DBMS_RANDOM.VALUE FETCH NEXT :REGISTROSAUDITABLES R' +
+        'OWS ONLY)'
+      'AND FECHALECTURA=:FECHALECTURA'
+      ' ')
+    Left = 576
+    Top = 230
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'CODIGOITINERARIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'REGISTROSAUDITABLES'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'FECHALECTURA'
+        ParamType = ptUnknown
+      end>
+  end
+  object spMarcarAuditables: TStoredProc
+    DatabaseName = 'BaseDato'
+    StoredProcName = 'SGC_MARCARAUDITABLES'
+    Left = 608
+    Top = 222
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'FECHALECTURA_VAR'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftString
+        Name = 'CODIGOITINERARIO_VAR'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftString
+        Name = 'REGISTROS'
+        ParamType = ptInput
+      end>
+  end
+  object ilMenuPrincipal: TImageList
+    Left = 1041
+    Top = 314
+    Bitmap = {
+      3610000004000000424D36100000000000003600000028000000400000001000
+      0000010020000000000000100000000000000000000000000000000000009F9F
+      9FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F
+      7FFF7F7F7FFF7F7F7FFF7F7F7FFF9F9F9FFF0000000000000000000000009797
+      97FF0000000000000000000000000000000000000000000000007C7C7CFF7C7C
+      7CFF000000000000000000000000000000000000000000000000F1F1F1FF0000
+      00004F5657FF295767FF295C6BFF295C6BFF285766FF28464EFF38606BFF3860
+      6BFF38606BFF38606BFF38606BFF3F6772FF547A84FFA0A5A6FF000000000000
+      0000000000000000000026434CFF3B4240FF060808FF0C1518FF152428FF1524
+      28FF152428FF16252AFF345963FF1C2E33FF4B6E77FF525455FF000000000000
+      00FF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F
+      7FFF7F7F7FFF7F7F7FFF7F7F7FFF000000FF000000000000000000000000272E
+      1AFF525E40FF6A6C6AFF0000000000000000757575FF52583FFF121D14FF1F46
+      43FF3C4F41FF757575FF0000000000000000D3D3D3FF5B6954FF0E1512FF0000
+      0000214D53FF2ECCFEFF2ECCFEFF2ECCFEFF2CC3F3FF3E8FA2FF60DDFEFF60DD
+      FEFF60DDFEFF60DDFEFF60DDFEFF60DDFEFF60DDFEFF305558FF000000000000
+      000000000000287B94FF757F7DFF746E63FF5D5243FF2D3431FF59CDECFF0000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00FF000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000FF0000000000000000000000008194
+      57FFF7E9A5FF989966FF657051FF6A7455FF7B7F46FFA4A35DFF134F62FF1C42
+      34FF58C342FF4E8542FF657961FF14290EFF4C8138FF21543FFF315E5EFF0000
+      00004C726EFF2ECCFEFF2ECCFEFF2ECCFEFF2DC6F7FF48A8C0FF60DDFEFF5ACF
+      EEFF60DCFDFF3F91A6FF55C5E2FF5DD5F5FF5DD7F7FF225054FF000000000000
+      0000384C49FF757F7DFF676258FFAC916FFFEFC896FFD1AF83FF314342FF54C0
+      DDFF000000000000000000000000000000000000000000000000000000000000
+      00FF000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000FF0000000000000000000000003743
+      25FFFCEEA8FFFCEEA8FFEDE09EFF7C8548FFEBDF7BFF2A5D59FF18555AFF4BA6
+      38FF66E14CFF66E14CFF48843AFF62BC40FF2E693EFF1A799CFF54695BFF0000
+      00004D746FFF2ECCFEFF2ECCFEFF2ECCFEFF2BBFEEFF338196FF60DDFEFF49A9
+      C2FF60DDFEFF56C6E4FF59CDECFF54C1DEFF55C5E2FF205A6CFF000000002E35
+      24FF787972FF676258FFAC916FFFEFC896FFEFC896FFEFC896FFD1AF83FF2D3A
+      37FF59CDECFF0000000000000000000000000000000000000000000000000000
+      00FF000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000FF0000000000000000000000001C25
+      15FFAAAB7AFFFCEEA8FFFBEDA7FF6A7641FF5A7350FF1B83ACFF265025FF4CA9
+      39FF66E14CFF66E14CFF457738FF3D803DFF197291FF3F563EFF8F9583FF1A22
+      14FF305353FF27ACD6FF27ACD6FF2BBDEBFF2BBFEEFF348196FF5ED9F9FF51BA
+      D6FF51BAD6FF51BAD6FF51BAD6FF51BAD6FF51BAD6FF224446FF858A7AFF3839
+      34FF746E63FFAC916FFFEFC896FFEFC896FFEFC896FFEFC896FFEFC896FFD1AF
+      83FF2E3D3BFF4BADC7FF00000000000000000000000000000000000000000000
+      00FF000000000000000000000000ADADADFFFEFEFEFF00000000000000000000
+      0000000000000000000000000000000000FF0000000000000000000000000101
+      01FF29656CFF456F5BFFC5C189FF3C472AFF1E748EFF235C49FF4E9633FF4CA9
+      39FF66E14CFF66E14CFF396536FF19667AFF375C4AFFA9A358FFC9C9C8FF1632
+      38FF3E95AAFF4097AEFF4097AEFF2A6B7EFF26AAD3FF348196FF24687DFF228D
+      AEFF228DAEFF228DAEFF228DAEFF228DAEFF228DAEFF238CABFF325660FF272D
+      2DFF5D5243FFEFC896FFEFC896FFEFC896FFEFC896FFEFC896FFEFC896FFEFC8
+      96FFAA8F6BFF0F1D26FF2083A2FF000000000000000000000000000000000000
+      00FF000000000000000000000000100E0DFF989696FF00000000000000000000
+      0000000000000000000000000000BFBFBFFF0000000000000000000000000000
+      00FF1D3724FF337F7FFF3A8E99FF163837FF1E98CDFF1C5855FF14484FFF1F4B
+      3EFF3D8940FF419240FF143635FF29574FFFE7DA78FFB9BD66FFF8F8F8FF132D
+      36FF60DDFEFF60DDFEFF60DDFEFF5BD1F0FF1C647BFF255B6AFF238CACFF2ECC
+      FEFF2ECCFEFF2ECCFEFF2ECCFEFF2ECCFEFF2ECCFEFF2ECCFEFF567984FF122A
+      32FF323F3EFFD1AF83FFEFC896FFEFC896FFEFC896FFEFC896FFEFC896FFC9A9
+      7EFF293346FF3244D3FF112E51FF2BBEECFF0000000000000000000000000000
+      00FF000000000000000000000000383229FF060403FFB0B0B0FF000000000000
+      00000000000000000000ACACACFFF7F7F7FF0000000000000000000000000000
+      00004F7347FF5AC744FF306E44FF113333FF1C646CFF1C544EFF1B2B4FFF1E26
+      5FFF398FA1FF45ADC4FF183A38FF81844DFFDED274FF717A48FF000000000308
+      0AFF49A7C1FF60DDFEFF60DDFEFF60DDFEFF236173FF0A1F25FF2DC9FAFF2ECC
+      FEFF2ECCFEFF2ECCFEFF2ECCFEFF2ECCFEFF2ECCFEFF269CC1FFB3B9BDFF0000
+      0000449BB3FF314342FFD1AF83FFEFC896FFEFC896FFEFC896FFC9A97EFF2933
+      46FF3A4EF3FF3D52FFFF3548DFFF112E51FF2BBEECFF00000000000000000000
+      00FF0000000000000000000000007B7775FF3C2609FF130F09FF9F9F9EFFFBFB
+      FBFF0000000000000000000000FF393530FFECECECFF00000000000000000000
+      0000B3BBB0FF4F7247FF58C043FF36622BFF64C041FF223244FF4747F5FF4440
+      EEFF141838FF296045FF164041FF176F96FF192C27FFB2B7A9FF000000000000
+      00FF2C535DFF30778AFF30798AFF2F7789FF22555FFF0C2931FF1F6F8FFF1F6F
+      8FFF1E6E8AFF1E708AFF1E6F8AFF2BA2C9FF217A96FF26505DFFFEFEFEFF0000
+      0000000000002D6F80FF28312DFFD1AF83FFEFC896FFC9A87DFF272C3DFF3A4E
+      F3FF3D52FFFF3D52FFFF3D52FFFF3548DFFF0F203EFF234A56FF000000000000
+      00FF000000000000000000000000D1D1D1FF221A0DFFD2811CFF362612FF0C0A
+      07FF4A443DFF7C7C7BFF000000FF714914FF25221CFFDDDDDDFF000000000000
+      000000000000FBFBFBFF8D9789FF263521FF0D1213FF4443E5FF4A4AFFFF4A4A
+      FFFF3F38DEFF151B27FF091307FF3F3715FF24211CFF00000000000000000000
+      0000FBFBFBFFF3F3F3FF899285FF253320FF0D1112FF4241DEFF4848F7FF4848
+      F7FF32349EFF192826FF091207FF3F3715FF23201BFFDADADAFF000000000000
+      000000000000000000007F887CFF27251BFFAA8E6AFF2A2843FF3A4EF3FF3D52
+      FFFF3D52FFFF3D52FFFF3D52FFFF3D52FFFF3548DFFF2F304AFFEDEDEDFF0000
+      00FF00000000000000000000000000000000524F4AFF6B4515FFF39621FFDE89
+      1EFFA76717FF7C4C11FF985E15FFF39621FF905915FF191410FFC8C8C8FF0000
+      0000000000000000000000000000000000002D2C72FF4A4AFEFF3F368FFF3C34
+      8DFF4847FBFF292380FF975E15FF000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000000000332F
+      74FF467668FF273846FF00000000000000000000000000000000000000000000
+      0000000000000000000000000000EDEDEDFF11111EFF3244D3FF3344D5FF3D52
+      FFFF3D52FFFF3D52FFFF3D52FFFF3D52FFFF3D52FFFF3548DFFF3E4159FF0000
+      00FF00000000000000000000000000000000F3F3F3FF292620FF603F14FFDF8A
+      1EFFF39621FFF39621FFF39621FFF39621FFF39621FF70450FFF282520FF0000
+      0000000000000000000000000000D4D4D4FF3E3EB5FF3333B0FF4C3215FFB46F
+      1CFF3D38A4FF312AAFFFBF761FFF000000000000000000000000000000000000
+      0000000000000000000000000000B6B8B7FF293C47FF212568FF34321AFF4C63
+      3CFF61A976FF26296FFF00000000000000000000000000000000000000000000
+      000000000000000000000000000000000000263842FF0F1136FF3446D9FF2B39
+      B2FF3B4FF6FF3D52FFFF3D52FFFF3D52FFFF3D52FFFF3D52FFFF141639FF0000
+      00FF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF9F9F9FFFF3F3F3FF767371FF120E
+      09FF432F15FF6E4613FF985E15FFF39621FF905915FF191410FFC8C8C8FF0000
+      00000000000000000000000000006D6D6DFF32327FFF4040D0FF55536AFF0F0D
+      1AFF3B39C7FF272181FF7E4E11FF000000000000000000000000000000000000
+      00000000000000000000636765FF3D6045FF7CD891FF549268FF74CA88FF67B4
+      79FF1F2B3CFF272180FF00000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000004E8861FF1D2E3CFF2C3B
+      B8FF151C58FF3B4FF7FF3D52FFFF3D52FFFF3D52FFFF1D2675FF757781FF9F9F
+      9FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF9F9F9FFF0000000000000000ECEC
+      ECFFBABABAFF8B8B8BFF000000FF714914FF25221CFFDDDDDDFF000000000000
+      0000000000000000000000000000000000002F2F48FF4848F7FF4848F5FF4343
+      E2FF443FEEFF22214DFF000000FF000000000000000000000000000000000000
+      00000000000000000000405546FF7BD690FF7EDC94FF7DD992FF55936BFF2637
+      5AFF423DE6FF0000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000000000004F8963FF1014
+      34FF2B3AB5FF151D59FF3D52FEFF3D52FFFF1E2876FF777984FF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000FF393530FFECECECFF00000000000000000000
+      000000000000000000000000000000000000E3E3E4FF4B4B5FFF3C3B7AFF3432
+      77FF3B385AFFDFDFE2FF00000000000000000000000000000000000000000000
+      00000000000000000000E5E6E6FF4F6656FF71C685FF25362EFF303462FF0000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000000000302E
+      6FFF131434FF2F40C7FF3D52FEFF1F2978FF7F818CFF00000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000ADADADFFF7F7F7FF0000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000F2F2F2FFF1F1
+      F1FF000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000F2F2F2FF6A776CFFC3C6C4FF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000EDEDEDFF4D5068FF292C50FF8F919BFF000000000000000000000000424D
+      BE000000000000003E0000002800000040000000100000000100010000000000
+      800000000000000000000000020000000200000000000000FFFFFF0000077E7E
+      8001E001000718188001C0FF7FF700008001807F7FF700008001003F7FF70000
+      0000001F73F700000000000F73F700000000000771E780010000800370638001
+      0000C0017001C0038001E0007800F80FFF1FF0007800F00FF01FF8000000F00F
+      E01FFC000301F80FE03FFE01FFE3F81FE0FFFF03FFE7FE7FF1FFFF87}
+  end
+  object qInsertReparto: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'INSERT INTO REP_EXPORTACION (CODIGOCUENTA, CODIGOITINERARIO, FEC' +
+        'HAPROGRAMADAREPARTO, CODUBICACION, NUMEROCONTADOR, FACTORMULTIPL' +
+        'ICADOR, NUMEROAGUJAS, CODIGOAPOYO, OLCLIENTE, CODIGOADMINISTRATI' +
+        'VO, CODIGOGRUPOTRABAJO, PERIODO, NOMBRESUSCRIPTOR, DIRECCIONSUSC' +
+        'RIPTOR, TARIFA, CONSUMO1, CONSUMO2, CONSUMO3, CONSUMO4, CONSUMO5' +
+        ', FECHAULTIMALECTURA, LAT, LNG, CODIGOTIPOMEDIDA, DIMENSIONMEDID' +
+        'OR, FILA, COLUMNA, FECHALECTURAREAL, FECHAVENCIMIENTO, PAGO_INME' +
+        'DIATO, CONSUMO_ACTUAL_ACTIVA, LECTURAANTERIORACTIVA, LECTURAACTU' +
+        'ALACTIVA, LECTURAACTUALREACTIVA,'
+      
+        'ULTIMALECTURAREACTIVA, CONSUMO_ACTUAL_REACTIVA, FACTOR_POTENCIA,' +
+        ' FECHA_ULTIMO_PAGO, MESES_MORA, TOTAL_A_PAGAR, TOTAL_MES, TOTAL_' +
+        'COSTO_ENERGIA, TOTAL_SALDO_PENDIENTE, TOTAL_ULTIMO_PAGO, VALOR_E' +
+        'NERGIA_50, VALOR_ENERGIA_M50, VALOR_ALUMBRADO, VALOR_COMERCIALIZ' +
+        'ACION, VALOR_REGULACION, VALOR_CARGO_FINANCIAMIENTO, VALOR_RECTI' +
+        'FICACION, VALOR_IMPUESTO_VENTAS, VALOR_DESCUENTO_3EDAD, VALOR_BO' +
+        'NO_ENERGIA_GOBIERNO, VALOR_RECARGO_MORA, VALOR_OTROS_CARGOS, VAL' +
+        'OR_FINANCIADO, M_PAGOS_DEL_CICLO, CUOTAAPLICADA, CUOTAPLICADATOT' +
+        'AL, CONTRATOVIGENTE, VALOR_TARIFA_50,'
+      
+        'VALOR_TARIFA_M50, AUDITAR, VERSION_PGI, USUARIOULTIMAEXPORTACION' +
+        ', FECHAHORAEXPORTACION,CODIGOSEDEOPERATIVA,CARGOSFACTURA,GENERAC' +
+        'ION, TRANSMISION, DISTRIBUCION, COMERCIAL)'
+      
+        'SELECT COM.CLAVE,I.CODIGOITINERARIO,TRUNC(TO_DATE(RE.FECHA_PROGR' +
+        'AMADA_REPARTO)),COM.CODIGOUBICACION,COM.NUMEROMEDIDOR,COM.MULTIP' +
+        'LICADOR,5,RE.CODIGOAPOYO,'
+      
+        'RI.OLCLIENTE,IG.CODIGOADMINISTRATIVO,IG.CODIGOGRUPOTRABAJO,TO_CH' +
+        'AR(RE.FECHA_PROGRAMADA_REPARTO,'#39'YYYYMM'#39'),COM.NOMBRESUSCRIPTOR,CO' +
+        'M.DIRECCIONSUSCRIPTOR,'
+      
+        'COM.CODIGO_TARIFA,COM.CONSUMO_MES1,COM.CONSUMO_MES2,COM.CONSUMO_' +
+        'MES3,COM.CONSUMO_MES4,COM.CONSUMO_MES5,TO_CHAR(COM.FECHA_LECTURA' +
+        '_ANTERIOR,'#39'YYMMDD'#39'), SDO_CS.TRANSFORM(SDO_GEOMETRY (2001,32616,S' +
+        'DO_POINT_TYPE (C.X, C.Y, NULL),NULL,NULL),4326).SDO_POINT.Y AS L' +
+        'AT,'
+      
+        'SDO_CS.TRANSFORM(SDO_GEOMETRY (2001,32616,SDO_POINT_TYPE (C.X, C' +
+        '.Y, NULL),NULL,NULL),4326).SDO_POINT.X AS LNG,0,'
+      
+        'N.DIMENSIONMEDIDOR,FILA,COLUMNA,COM.FECHA_LECTURA_PROGRAMADA,COM' +
+        '.FECHA_VENCIMIENTO,COM.PAGO_INMEDIATO,COM.CONSUMO_ACTUAL_ACTIVA,' +
+        'COM.LECTURA_ANTERIOR_ACTIVA,COM.LECTURA_ACTUAL_ACTIVA'
+      
+        ',COM.LECTURA_ACTUAL_REACTIVA,COM.LECTURA_ANTERIOR_REACTIVA,COM.C' +
+        'ONSUMO_ACTUAL_REACTIVA,COM.FACTOR_POTENCIA,COM.FECHA_ULTIMO_PAGO' +
+        ',COM.MESES_EN_MORA,COM.TOTAL_A_PAGAR,COM.TOTAL_MES,COM.COSTO_TOT' +
+        'AL_ENERGIA,'
+      
+        'COM.SALDO_PENDIENTE,COM.VALOR_ULTIMO_PAGO,COM.VALOR_LEMPIRAS_P_5' +
+        '0,COM.VALOR_LEMPIRAS_M_50,COM.ALUMBRADO_PUBLICO,COM.CARGO_DE_COM' +
+        'ERCIALIZACION,'
+      
+        'COM.CARGO_DE_REGULACION,COM.CARGOS_POR_FINANCIAMIENTO,COM.RECTIF' +
+        'ICACION_AJUSTES,COM.IMPUESTO_SOBRE_VENTAS,COM.DESCUENTO_TERCERA_' +
+        'EDAD,COM.BONO_GOBIERNO,COM.RECARGO_POR_MORA,COM.OTROS_CARGOS_CRE' +
+        'DITOS,'
+      
+        'COM.VALOR_FINANCIADO,0,COM.VALOR_CUOTA_APLICADA,COM.VALOR_CUOTA_' +
+        'APLICADA_TOTAL,COM.CONTRATO_VIGENTE,COM.VALOR_LEMPIRAS_P_50,COM.' +
+        'VALOR_TARIFA_M_50,'#39'NO'#39',:CODIGOPGI,GETCODIGOUSUARIO,SYSDATE,RE.CO' +
+        'DIGOSEDEOPERATIVA,COM.CARGOSFACTURA,COM.GENERACION,COM.TRANSMISI' +
+        'ON,COM.DISTRIBUCION,COM.COMERCIAL'
+      
+        'FROM REP_ITINERARIO I , REP_ITINERARIO_GRUPOTRABAJO IG,ESTADOITI' +
+        'NERARIO E,'
+      
+        'GRUPOTRABAJO G , REP_RUTAITINERARIO RI, REP_CLIENTESREPARTO RE, ' +
+        'SEDEOPERATIVA S , REP_INFORMACIONCOMERCIAL COM ,APOYO A , CLIENT' +
+        'ESGD C,NODOBT N'
+      'WHERE'
+      'I.CODIGOESTADOITINERARIO=E.CODIGOESTADOITINERARIO'
+      'AND IG.CODIGOITINERARIO(+) =I.CODIGOITINERARIO'
+      'AND IG.CODIGOADMINISTRATIVO =G.CODIGOADMINISTRATIVO(+)'
+      'AND IG.CODIGOGRUPOTRABAJO   =G.CODIGOGRUPOTRABAJO(+)'
+      'AND I.CODIGOSEDEOPERATIVA=:CODIGOSEDE'
+      'AND RI.CODIGOITINERARIO=I.CODIGOITINERARIO'
+      'AND TO_CHAR(I.FECHAPROGRAMADAREPARTO,'#39'DD/MM/YYYY'#39')=:FECHAREPARTO'
+      'AND RI.CODIGOAPOYO=RE.CODIGOAPOYO'
+      'AND RE.CODIGOSEDEOPERATIVA=I.CODIGOSEDEOPERATIVA'
+      
+        'AND TO_CHAR(RE.FECHA_PROGRAMADA_REPARTO,'#39'DD/MM/YYYY'#39') = TO_CHAR(' +
+        'I.FECHAPROGRAMADAREPARTO,'#39'DD/MM/YYYY'#39')'
+      'AND S.CODIGOSEDEOPERATIVA=RE.CODIGOSEDEOPERATIVA'
+      
+        'AND TO_CHAR(COM.FECHA_LECTURA_PROGRAMADA,'#39'YYYYMM'#39')=TO_CHAR(RE.FE' +
+        'CHA_PROGRAMADA,'#39'YYYYMM'#39')'
+      'AND COM.CLAVE=RE.CODIGOCUENTA'
+      'AND C.CODIGOAPOYO=RE.CODIGOAPOYO'
+      'AND A.CODIGOAPOYO = C.CODIGOAPOYO'
+      'AND A.CODIGOAPOYO = RE.CODIGOAPOYO'
+      'AND SGC_FUN_CONVERTIR_CLAVE(C.CODIGO_CUENTA)=RE.CODIGOCUENTA'
+      
+        'AND N.CODIGOAPOYO=C.CODIGOAPOYO AND N.CODIGONODOBT=C.CODIGONODOB' +
+        'T'
+      ''
+      ''
+      '')
+    Left = 248
+    Top = 222
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'CODIGOPGI'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'CODIGOSEDE'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'FECHAREPARTO'
+        ParamType = ptUnknown
+      end>
+  end
+end

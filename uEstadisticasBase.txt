@@ -1,0 +1,877 @@
+object fEstadisticasBase: TfEstadisticasBase
+  Left = 190
+  Top = 110
+  Width = 696
+  Height = 474
+  Caption = 'Estadisticas'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = True
+  Position = poScreenCenter
+  WindowState = wsMaximized
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnResize = FormResize
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Splitter1: TSplitter
+    Left = 449
+    Top = 120
+    Width = 2
+    Height = 327
+    Cursor = crHSplit
+  end
+  object ToolPanel1: TToolPanel
+    Left = 0
+    Top = 0
+    Width = 688
+    Height = 40
+    TabOrder = 0
+    AlignAt = alTop
+    Flat = True
+    alto = 30
+    MargenV = 5
+    MargenH = 5
+    AllowDrag = True
+    object sbSalir: TSpeedButton
+      Left = 253
+      Top = 5
+      Width = 68
+      Height = 30
+      Caption = 'Cerrar'
+      Flat = True
+      Glyph.Data = {
+        DE010000424DDE01000000000000760000002800000024000000120000000100
+        0400000000006801000000000000000000001000000010000000000000000000
+        80000080000000808000800000008000800080800000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00388888888877
+        F7F787F8888888888333333F00004444400888FFF444448888888888F333FF8F
+        000033334D5007FFF4333388888888883338888F0000333345D50FFFF4333333
+        338F888F3338F33F000033334D5D0FFFF43333333388788F3338F33F00003333
+        45D50FEFE4333333338F878F3338F33F000033334D5D0FFFF43333333388788F
+        3338F33F0000333345D50FEFE4333333338F878F3338F33F000033334D5D0FFF
+        F43333333388788F3338F33F0000333345D50FEFE4333333338F878F3338F33F
+        000033334D5D0EFEF43333333388788F3338F33F0000333345D50FEFE4333333
+        338F878F3338F33F000033334D5D0EFEF43333333388788F3338F33F00003333
+        4444444444333333338F8F8FFFF8F33F00003333333333333333333333888888
+        8888333F00003333330000003333333333333FFFFFF3333F00003333330AAAA0
+        333333333333888888F3333F00003333330000003333333333338FFFF8F3333F
+        0000}
+      NumGlyphs = 2
+      OnClick = sbSalirClick
+    end
+    object sbDatos: TSpeedButton
+      Tag = 5
+      Left = 5
+      Top = 5
+      Width = 32
+      Height = 30
+      Hint = 'Ver/Ocultar Datos'
+      AllowAllUp = True
+      GroupIndex = 991
+      Down = True
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        80000080000000808000800000008000800080800000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777770000077
+        77777777700000777777777770FF80777777777770FF80777777777770F78077
+        7777777770F780777777777770F780777777777770F780777777777770F78077
+        7777777770F780777777777770F780777777777770F780777777777770F78077
+        7777777770F780777777777770F780777777777770F780777777777770F78077
+        7777777770F780777777777770F780777777777770F780777777777770F78077
+        7777777770F780777777777770F780777777777770F780777777777770F78077
+        7777777770F780777777777770F780777777777770F780777777777770FF8077
+        7777777770FF8077777777777000007777777777700000777777}
+      NumGlyphs = 2
+      OnClick = sbDatosClick
+    end
+    object sbEditar: TSpeedButton
+      Left = 209
+      Top = 5
+      Width = 32
+      Height = 30
+      Hint = 'Edición Gráfica'
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333300030003
+        0003333377737773777333333333333333333FFFFFFFFFFFFFFF770000000000
+        0000777777777777777733039993BBB3CCC3337F737F737F737F37039993BBB3
+        CCC3377F737F737F737F33039993BBB3CCC33F7F737F737F737F77079997BBB7
+        CCC77777737773777377330399930003CCC3337F737F7773737F370399933333
+        CCC3377F737F3333737F330399933333CCC33F7F737FFFFF737F770700077777
+        CCC77777777777777377330333333333CCC3337F33333333737F370333333333
+        0003377F33333333777333033333333333333F7FFFFFFFFFFFFF770777777777
+        7777777777777777777733333333333333333333333333333333}
+      NumGlyphs = 2
+      OnClick = sbEditarClick
+    end
+    object Shape1: TShape
+      Left = 133
+      Top = 5
+      Width = 12
+      Height = 30
+      Brush.Style = bsClear
+      Pen.Style = psClear
+    end
+    object Shape2: TShape
+      Left = 241
+      Top = 5
+      Width = 12
+      Height = 30
+      Brush.Style = bsClear
+      Pen.Style = psClear
+    end
+    object sb3D: TSpeedButton
+      Tag = 6
+      Left = 37
+      Top = 5
+      Width = 32
+      Height = 30
+      Hint = 'Aspecto 3D'
+      AllowAllUp = True
+      GroupIndex = 4
+      Down = True
+      Flat = True
+      Glyph.Data = {
+        F6000000424DF600000000000000760000002800000010000000100000000100
+        0400000000008000000000000000000000001000000010000000000000000000
+        8000008000000080800080000000800080008080000080808000C0C0C0000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        333333333333333333333300003000000333300BBB00BBBBB03330BB0BB0BB00
+        BB0330000BB0BB00BB0733300BB0BB00BB073330BB00BB00BB0730000BB0BB00
+        BB0730BB0BB0BB00BB07F0BBBB00BBBBB077FFF00070000007733FF337773377
+        77333F3F333333333333F3F3F3333333333333F3333333333333}
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = sb3DClick
+    end
+    object sbLeyenda: TSpeedButton
+      Tag = 7
+      Left = 69
+      Top = 5
+      Width = 32
+      Height = 30
+      Hint = 'Leyenda'
+      AllowAllUp = True
+      GroupIndex = 5
+      Down = True
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        33333FFFFFFFFFFFFFFF000000000000000077777777777777770FF7FF7FF7FF
+        7FF07FF7FF7FF7F37F3709F79F79F7FF7FF077F77F77F7FF7FF7077777777777
+        777077777777777777770FF7FF7FF7FF7FF07FF7FF7FF7FF7FF709F79F79F79F
+        79F077F77F77F77F77F7077777777777777077777777777777770FF7FF7FF7FF
+        7FF07FF7FF7FF7FF7FF709F79F79F79F79F077F77F77F77F77F7077777777777
+        777077777777777777770FFFFF7FF7FF7FF07F33337FF7FF7FF70FFFFF79F79F
+        79F07FFFFF77F77F77F700000000000000007777777777777777CCCCCC8888CC
+        CCCC777777FFFF777777CCCCCCCCCCCCCCCC7777777777777777}
+      NumGlyphs = 2
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = sbLeyendaClick
+    end
+    object sbImprimir: TSpeedButton
+      Left = 145
+      Top = 5
+      Width = 32
+      Height = 30
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+        00033FFFFFFFFFFFFFFF0888888888888880777777777777777F088888888888
+        8880777777777777777F0000000000000000FFFFFFFFFFFFFFFF0F8F8F8F8F8F
+        8F80777777777777777F08F8F8F8F8F8F9F0777777777777777F0F8F8F8F8F8F
+        8F807777777777777F7F0000000000000000777777777777777F3330FFFFFFFF
+        03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+        03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+        33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
+        33333337FFFF7733333333300000033333333337777773333333}
+      NumGlyphs = 2
+      OnClick = sbImprimirClick
+    end
+    object sbExportar: TSpeedButton
+      Left = 177
+      Top = 5
+      Width = 32
+      Height = 30
+      Flat = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333303
+        333333333333337FF3333333333333903333333333333377FF33333333333399
+        03333FFFFFFFFF777FF3000000999999903377777777777777FF0FFFF0999999
+        99037F3337777777777F0FFFF099999999907F3FF777777777770F00F0999999
+        99037F773777777777730FFFF099999990337F3FF777777777330F00FFFFF099
+        03337F773333377773330FFFFFFFF09033337F3FF3FFF77733330F00F0000003
+        33337F773777777333330FFFF0FF033333337F3FF7F3733333330F08F0F03333
+        33337F7737F7333333330FFFF003333333337FFFF77333333333000000333333
+        3333777777333333333333333333333333333333333333333333}
+      NumGlyphs = 2
+      OnClick = sbExportarClick
+    end
+    object sbVerFiltro: TSpeedButton
+      Left = 101
+      Top = 5
+      Width = 32
+      Height = 30
+      AllowAllUp = True
+      GroupIndex = 6
+      Down = True
+      Flat = True
+      Glyph.Data = {
+        B6030000424DB603000000000000360000002800000012000000100000000100
+        1800000000008003000000000000000000000000000000000000C0C0C0C0C0C0
+        C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+        C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C00000C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+        C0C0C0C0000000000000000000000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+        C0C00000000000000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C000000080
+        8000808000000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000000000000000
+        0000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000808000808000000000
+        C0C0C0C0C0C0C0C0C0C0C0C0000000000000000000C0C0C00000C0C0C0C0C0C0
+        C0C0C0C0C0C0C0C0C0C0C0C0000000808000808000000000000000000000C0C0
+        C000FFFF000000000000C0C0C0C0C0C00000C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+        C0C0C0C0000000000000808080FFFFFF80808080808000000000000000FFFFC0
+        C0C0C0C0C0C0C0C00000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C000000000
+        0000FFFFFFC0C0C0FFFFFFFFFFFF808080000000C0C0C0C0C0C0C0C0C0C0C0C0
+        0000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000808080FFFFFFFFFFFF
+        C0C0C0FFFFFFC0C0C0808080808080C0C0C0C0C0C0C0C0C00000C0C0C0C0C0C0
+        C0C0C0C0C0C0C0C0C0C0C0C0000000FFFFFFC0C0C0FFFFFFFFFFFFC0C0C0FFFF
+        FF808080000000C0C0C0C0C0C0C0C0C00000C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+        C0000000000000808080FFFFFFC0C0C0FFFFFFFFFFFFFFFFFFC0C0C0000000C0
+        C0C0C0C0C0C0C0C00000C0C0C0C0C0C0C0C0C000000000000080800080808000
+        0000808080FFFFFFFFFFFFC0C0C0808080000000808080C0C0C0C0C0C0C0C0C0
+        0000C0C0C0C0C0C0000000808000808000808000C0C0C0000000000000808080
+        808080808080000000000000C0C0C0C0C0C0C0C0C0C0C0C00000C0C0C0000000
+        808000808000808000C0C0C0C0C0C0C0C0C08080800000000000000000008080
+        00808000000000C0C0C0C0C0C0C0C0C00000000000808000808000808000C0C0
+        C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C080800080800080800080800000
+        0000C0C0C0C0C0C00000000000808000808000808000C0C0C0C0C0C0C0C0C0C0
+        C0C0C0C0C0C0C0C0C0C0C0808000808000808000808000000000C0C0C0C0C0C0
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000C0C0C0C0C0C00000}
+      OnClick = sbVerFiltroClick
+    end
+  end
+  object DecisionGraph1: TDecisionGraph
+    Left = 451
+    Top = 120
+    Width = 237
+    Height = 327
+    DecisionSource = DecisionSource1
+    Title.Text.Strings = (
+      'TDecisionGraph')
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 1
+  end
+  object PanelFiltro: TPanel
+    Left = 0
+    Top = 40
+    Width = 688
+    Height = 80
+    Align = alTop
+    Caption = 'PanelFiltro'
+    TabOrder = 3
+    object Splitter2: TSplitter
+      Left = 338
+      Top = 22
+      Width = 3
+      Height = 57
+      Cursor = crHSplit
+    end
+    object pIzq: TPanel
+      Left = 1
+      Top = 22
+      Width = 337
+      Height = 57
+      Align = alLeft
+      BevelOuter = bvNone
+      Caption = 'pIzq'
+      TabOrder = 0
+      object MemoRotulos1: TMemo
+        Left = 0
+        Top = 0
+        Width = 150
+        Height = 57
+        TabStop = False
+        Align = alLeft
+        BorderStyle = bsNone
+        Color = clWhite
+        Ctl3D = True
+        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlue
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        Lines.Strings = (
+          'MemoRotulos1')
+        ParentCtl3D = False
+        ParentFont = False
+        TabOrder = 0
+        WantReturns = False
+        WordWrap = False
+      end
+      object MemoPuntos1: TMemo
+        Left = 150
+        Top = 0
+        Width = 15
+        Height = 57
+        TabStop = False
+        Align = alLeft
+        BorderStyle = bsNone
+        Color = clWhite
+        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlue
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        Lines.Strings = (
+          ':'
+          ':'
+          ':'
+          ':')
+        ParentFont = False
+        TabOrder = 1
+        WantReturns = False
+      end
+      object MemoDatos1: TMemo
+        Left = 165
+        Top = 0
+        Width = 172
+        Height = 57
+        TabStop = False
+        Align = alClient
+        BorderStyle = bsNone
+        Color = clWhite
+        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Lines.Strings = (
+          'MemoDatos1')
+        ParentFont = False
+        TabOrder = 2
+        WantReturns = False
+        WordWrap = False
+      end
+    end
+    object pDer: TPanel
+      Left = 341
+      Top = 22
+      Width = 346
+      Height = 57
+      Align = alClient
+      BevelOuter = bvNone
+      Caption = 'pDer'
+      TabOrder = 1
+      object MemoDatos2: TMemo
+        Left = 165
+        Top = 0
+        Width = 181
+        Height = 57
+        TabStop = False
+        Align = alClient
+        BorderStyle = bsNone
+        Color = clWhite
+        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Lines.Strings = (
+          'MemoDatos2')
+        ParentFont = False
+        TabOrder = 0
+        WantReturns = False
+        WordWrap = False
+      end
+      object MemoPuntos2: TMemo
+        Left = 150
+        Top = 0
+        Width = 15
+        Height = 57
+        TabStop = False
+        Align = alLeft
+        BorderStyle = bsNone
+        Color = clWhite
+        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlue
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        Lines.Strings = (
+          ':'
+          ':'
+          ':'
+          ':')
+        ParentFont = False
+        TabOrder = 1
+        WantReturns = False
+      end
+      object MemoRotulos2: TMemo
+        Left = 0
+        Top = 0
+        Width = 150
+        Height = 57
+        TabStop = False
+        Align = alLeft
+        BorderStyle = bsNone
+        Color = clWhite
+        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlue
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        Lines.Strings = (
+          'MemoRotulos2')
+        ParentFont = False
+        TabOrder = 2
+        WantReturns = False
+        WordWrap = False
+      end
+    end
+    object Panel4: TPanel
+      Left = 1
+      Top = 1
+      Width = 686
+      Height = 21
+      Align = alTop
+      Caption = 'Filtro de Datos'
+      Color = clAqua
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
+  object DecisionPivot1: TDecisionPivot
+    Left = 0
+    Top = 120
+    Width = 449
+    Height = 327
+    ButtonAutoSize = False
+    DecisionSource = DecisionSource1
+    GroupLayout = xtLeftTop
+    Groups = [xtRows, xtColumns, xtSummaries]
+    ButtonSpacing = 3
+    ButtonWidth = 110
+    ButtonHeight = 24
+    GroupSpacing = 10
+    BorderWidth = 3
+    BorderStyle = bsNone
+    Align = alLeft
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 4
+    object DecisionGrid1: TDecisionGrid
+      Left = 117
+      Top = 31
+      Width = 328
+      Height = 292
+      DefaultColWidth = 90
+      DefaultRowHeight = 20
+      CaptionColor = clActiveCaption
+      CaptionFont.Charset = DEFAULT_CHARSET
+      CaptionFont.Color = clCaptionText
+      CaptionFont.Height = -11
+      CaptionFont.Name = 'MS Sans Serif'
+      CaptionFont.Style = []
+      DataColor = clInfoBk
+      DataSumColor = clNone
+      DataFont.Charset = DEFAULT_CHARSET
+      DataFont.Color = clWindowText
+      DataFont.Height = -11
+      DataFont.Name = 'MS Sans Serif'
+      DataFont.Style = []
+      LabelFont.Charset = DEFAULT_CHARSET
+      LabelFont.Color = clWindowText
+      LabelFont.Height = -11
+      LabelFont.Name = 'MS Sans Serif'
+      LabelFont.Style = []
+      LabelColor = clBtnFace
+      LabelSumColor = clInactiveCaption
+      DecisionSource = DecisionSource1
+      Dimensions = <
+        item
+          FieldName = 'Country'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          FieldName = 'State'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          FieldName = 'SUM OF ItemsTotal'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          FieldName = 'COUNT OF ItemsTotal'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          FieldName = 'MAX OF ItemsTotal'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          FieldName = 'MIN OF ItemsTotal'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end
+        item
+          DisplayName = 'Ave of ItemsTotal'
+          FieldName = 'AVE of ItemsTotal'
+          Color = clNone
+          Alignment = taCenter
+          Subtotals = True
+        end>
+      Totals = True
+      ShowCubeEditor = True
+      Align = alClient
+      Color = clBtnFace
+      GridLineWidth = 1
+      GridLineColor = clWindowText
+      TabOrder = 0
+    end
+  end
+  object pOpcionesReporte: TPanel
+    Left = 145
+    Top = 34
+    Width = 205
+    Height = 126
+    TabOrder = 2
+    Visible = False
+    object Bevel1: TBevel
+      Left = 1
+      Top = 79
+      Width = 202
+      Height = 13
+      Shape = bsBottomLine
+    end
+    object Panel2: TPanel
+      Left = 41
+      Top = 36
+      Width = 31
+      Height = 17
+      BevelOuter = bvNone
+      TabOrder = 0
+    end
+    object RadioGroup1: TRadioGroup
+      Left = 10
+      Top = 6
+      Width = 188
+      Height = 78
+      Caption = 'Ancho de Columnas'
+      ItemIndex = 0
+      Items.Strings = (
+        'Ajustar Tamaño'
+        'Tamaño fijo                     ')
+      TabOrder = 1
+      OnClick = RadioGroup1Click
+    end
+    object SpinEdit1: TSpinEdit
+      Left = 104
+      Top = 53
+      Width = 83
+      Height = 22
+      Enabled = False
+      MaxValue = 200
+      MinValue = 0
+      TabOrder = 2
+      Value = 0
+    end
+    object BBAceptar: TBitBtn
+      Left = 141
+      Top = 97
+      Width = 29
+      Height = 24
+      Default = True
+      TabOrder = 3
+      OnClick = BBAceptarClick
+      Glyph.Data = {
+        DE010000424DDE01000000000000760000002800000024000000120000000100
+        0400000000006801000000000000000000001000000010000000000000000000
+        80000080000000808000800000008000800080800000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        3333333333333333333333330000333333333333333333333333F33333333333
+        00003333344333333333333333388F3333333333000033334224333333333333
+        338338F3333333330000333422224333333333333833338F3333333300003342
+        222224333333333383333338F3333333000034222A22224333333338F338F333
+        8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+        33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+        0000333333333A222433333333333338F338F33300003333333333A222433333
+        333333338F338F33000033333333333A222433333333333338F338F300003333
+        33333333A222433333333333338F338F00003333333333333A22433333333333
+        3338F38F000033333333333333A223333333333333338F830000333333333333
+        333A333333333333333338330000333333333333333333333333333333333333
+        0000}
+      NumGlyphs = 2
+    end
+    object BBCancelar: TBitBtn
+      Left = 171
+      Top = 97
+      Width = 29
+      Height = 24
+      Cancel = True
+      TabOrder = 4
+      OnClick = BBCancelarClick
+      Glyph.Data = {
+        DE010000424DDE01000000000000760000002800000024000000120000000100
+        0400000000006801000000000000000000001000000010000000000000000000
+        80000080000000808000800000008000800080800000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        333333333333333333333333000033338833333333333333333F333333333333
+        0000333911833333983333333388F333333F3333000033391118333911833333
+        38F38F333F88F33300003339111183911118333338F338F3F8338F3300003333
+        911118111118333338F3338F833338F3000033333911111111833333338F3338
+        3333F8330000333333911111183333333338F333333F83330000333333311111
+        8333333333338F3333383333000033333339111183333333333338F333833333
+        00003333339111118333333333333833338F3333000033333911181118333333
+        33338333338F333300003333911183911183333333383338F338F33300003333
+        9118333911183333338F33838F338F33000033333913333391113333338FF833
+        38F338F300003333333333333919333333388333338FFF830000333333333333
+        3333333333333333333888330000333333333333333333333333333333333333
+        0000}
+      NumGlyphs = 2
+    end
+  end
+  object DecisionCube1: TDecisionCube
+    DataSet = qEstadistica
+    DimensionMap = <
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftString
+        Fieldname = 'NOMBRETIPOACOMETIDA'
+        BaseName = 't4.nombretipoacometida'
+        Name = 'Tipo de Acometida'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = 3
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftString
+        Fieldname = 'NOMBRETIPOFASE'
+        BaseName = 't3.nombreTipoFase'
+        Name = 'Tipo de Fase'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = 2
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftString
+        Fieldname = 'NOMBRETIPOINSTALACION'
+        BaseName = 't2.NombreTipoInstalacion'
+        Name = 'Tipo de Instalación'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = 2
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftFloat
+        Fieldname = 'POTENCIA'
+        BaseName = 't1.Potencia'
+        Name = 'Potencia [KVA]'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = 17
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftString
+        Fieldname = 'NOMBREPROPIETARIO'
+        BaseName = 'p.nombrepropietario'
+        Name = 'Propietario'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = 2
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftString
+        Fieldname = 'NOMBREFABRICANTE'
+        BaseName = 'f.nombrefabricante'
+        Name = 'Fabricante'
+        DerivedFrom = -1
+        DimensionType = dimDimension
+        BinType = binNone
+        ValueCount = 14
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftInteger
+        Fieldname = 'COUNT'
+        BaseName = 't.CODIGOTRAFODIS'
+        Name = 'Nro. de Transformadores'
+        DerivedFrom = -1
+        DimensionType = dimCount
+        BinType = binNone
+        ValueCount = -1
+        Active = True
+      end
+      item
+        ActiveFlag = diAsNeeded
+        FieldType = ftFloat
+        Fieldname = 'SUM'
+        BaseName = 't1.Potencia'
+        Name = 'Potencia Instalada [KVA]'
+        DerivedFrom = -1
+        DimensionType = dimSum
+        BinType = binNone
+        ValueCount = -1
+        Active = True
+      end>
+    ShowProgressDialog = False
+    MaxDimensions = 6
+    MaxSummaries = 10
+    MaxCells = 0
+    Left = 792
+    Top = 28
+  end
+  object DecisionSource1: TDecisionSource
+    DecisionCube = DecisionCube1
+    ControlType = xtCheck
+    SparseRows = False
+    SparseCols = False
+    OnSummaryChange = DecisionSource1SummaryChange
+    Left = 700
+    Top = 24
+    DimensionCount = 6
+    SummaryCount = 2
+    CurrentSummary = 0
+    SparseRows = False
+    SparseCols = False
+    DimensionInfo = (
+      2
+      -1
+      2
+      0
+      -1
+      2
+      -1
+      2
+      1
+      0
+      1
+      -1
+      2
+      0
+      0
+      1
+      -1
+      2
+      1
+      0
+      1
+      -1
+      2
+      2
+      -1
+      1
+      -1
+      2
+      3
+      -1)
+  end
+  object pmImprimir: TPopupMenu
+    Left = 526
+    Top = 14
+    object ImprimirReporte1: TMenuItem
+      Caption = 'Imprimir &Reporte'
+      OnClick = ImprimirReporte1Click
+    end
+    object N1: TMenuItem
+      Caption = '-'
+    end
+    object ImprimirGrfico1: TMenuItem
+      Caption = 'Imprimir Gráfico'
+      OnClick = ImprimirGrfico1Click
+    end
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = 'txt'
+    Filter = 'Archivos de Texto|*.txt'
+    Left = 576
+    Top = 16
+  end
+  object pmExportar: TPopupMenu
+    Tag = 5
+    Left = 626
+    Top = 22
+    object Datos1: TMenuItem
+      Caption = 'Datos'
+      OnClick = Datos1Click
+    end
+    object Grfico1: TMenuItem
+      Caption = 'Gráfico'
+      OnClick = Grfico1Click
+    end
+  end
+  object qEstadistica: TQuery
+    DatabaseName = 'BaseDato'
+    Left = 448
+    Top = 20
+  end
+  object DecisionQuery1: TDecisionQuery
+    DatabaseName = 'Temp'
+    Left = 445
+    Top = 78
+  end
+end

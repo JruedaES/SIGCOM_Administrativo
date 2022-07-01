@@ -1,0 +1,270 @@
+object FdFiltrarEmpleado: TFdFiltrarEmpleado
+  Left = 512
+  Top = 221
+  BorderStyle = bsToolWindow
+  Caption = 'Filtar Empleados'
+  ClientHeight = 194
+  ClientWidth = 219
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyPress = FormKeyPress
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 219
+    Height = 164
+    Align = alClient
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 8
+      Top = 8
+      Width = 80
+      Height = 13
+      Caption = 'Nombre Empledo'
+    end
+    object Label2: TLabel
+      Left = 200
+      Top = 25
+      Width = 11
+      Height = 20
+      Caption = '&&'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 200
+      Top = 57
+      Width = 11
+      Height = 20
+      Caption = '&&'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 200
+      Top = 89
+      Width = 11
+      Height = 20
+      Caption = '&&'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 8
+      Top = 120
+      Width = 33
+      Height = 13
+      Caption = 'Cédula'
+      FocusControl = DBEdit4
+    end
+    object Label6: TLabel
+      Left = 128
+      Top = 120
+      Width = 18
+      Height = 13
+      Caption = 'CIA'
+      FocusControl = DBEdit5
+    end
+    object DBEdit1: TDBEdit
+      Left = 8
+      Top = 25
+      Width = 184
+      Height = 21
+      CharCase = ecUpperCase
+      DataField = 'NOMBRE1'
+      DataSource = DataSource1
+      TabOrder = 0
+      OnKeyPress = FormKeyPress
+    end
+    object DBEdit2: TDBEdit
+      Left = 8
+      Top = 56
+      Width = 184
+      Height = 21
+      CharCase = ecUpperCase
+      DataField = 'NOMBRE2'
+      DataSource = DataSource1
+      TabOrder = 1
+      OnKeyPress = FormKeyPress
+    end
+    object DBEdit3: TDBEdit
+      Left = 8
+      Top = 88
+      Width = 184
+      Height = 21
+      CharCase = ecUpperCase
+      DataField = 'NOMBRE3'
+      DataSource = DataSource1
+      TabOrder = 2
+      OnKeyPress = FormKeyPress
+    end
+    object DBEdit4: TDBEdit
+      Left = 8
+      Top = 136
+      Width = 64
+      Height = 21
+      DataField = 'CODIGOEMPLEADO'
+      DataSource = DataSource1
+      TabOrder = 3
+      OnKeyPress = FormKeyPress
+    end
+    object DBEdit5: TDBEdit
+      Left = 128
+      Top = 136
+      Width = 64
+      Height = 21
+      DataField = 'CODIGOADMINISTRATIVO'
+      DataSource = DataSource1
+      PopupMenu = dMenuArbol1
+      TabOrder = 4
+      OnKeyPress = FormKeyPress
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 164
+    Width = 219
+    Height = 30
+    Align = alBottom
+    TabOrder = 1
+    object Panel3: TPanel
+      Left = 33
+      Top = 1
+      Width = 185
+      Height = 28
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 0
+      object BitBtnAnularFiltro: TBitBtn
+        Left = 159
+        Top = 3
+        Width = 23
+        Height = 22
+        ModalResult = 2
+        TabOrder = 0
+        OnClick = BitBtnAnularFiltroClick
+        Glyph.Data = {
+          EE000000424DEE000000000000007600000028000000100000000F0000000100
+          0400000000007800000000000000000000001000000010000000000000000000
+          8000008000000080800080000000800080008080000080808000C0C0C0000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+          8889998888888888889999988800008089908899980660899988888999088099
+          9888888889988998888888888899998888888888806999088888888806999990
+          88888880699888990888880999F88889908880999FFF88869998899000000000
+          099999888888888888899888888888888889}
+      end
+      object BitBtnFiltrar: TBitBtn
+        Left = 139
+        Top = 3
+        Width = 23
+        Height = 22
+        ModalResult = 1
+        TabOrder = 1
+        OnClick = BitBtnFiltrarClick
+        Glyph.Data = {
+          EE000000424DEE000000000000007600000028000000100000000F0000000100
+          0400000000007800000000000000000000001000000010000000000000000000
+          8000008000000080800080000000800080008080000080808000C0C0C0000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+          8888888888888888888888888800008080808888880660888888888888088088
+          8888888888088088888888888808808888888888806886088888888806688860
+          8888888066888866088888066FF8888660888066FFFF88866608800000000000
+          000888888888888888888888888888888888}
+      end
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = tdFiltroEmpleado
+    Left = 496
+    Top = 344
+  end
+  object tdFiltroEmpleado: tdMemTable
+    Active = True
+    FieldDefs = <
+      item
+        Name = 'NOMBRE1'
+        DataType = ftString
+        Size = 30
+      end
+      item
+        Name = 'NOMBRE2'
+        DataType = ftString
+        Size = 30
+      end
+      item
+        Name = 'NOMBRE3'
+        DataType = ftString
+        Size = 30
+      end
+      item
+        Name = 'CODIGOEMPLEADO'
+        DataType = ftFloat
+      end
+      item
+        Name = 'CODIGOADMINISTRATIVO'
+        DataType = ftString
+        Size = 20
+      end>
+    StoreDefs = True
+    TableName = 'EmpleadoTemp'
+    Left = 216
+    Top = 232
+    object tdFiltroEmpleadoNOMBRE1: TStringField
+      FieldName = 'NOMBRE1'
+      Size = 30
+    end
+    object tdFiltroEmpleadoNOMBRE2: TStringField
+      FieldName = 'NOMBRE2'
+      Size = 30
+    end
+    object tdFiltroEmpleadoNOMBRE3: TStringField
+      FieldName = 'NOMBRE3'
+      Size = 30
+    end
+    object tdFiltroEmpleadoCODIGOEMPLEADO: TFloatField
+      FieldName = 'CODIGOEMPLEADO'
+    end
+    object tdFiltroEmpleadoCODIGOADMINISTRATIVO: TStringField
+      FieldName = 'CODIGOADMINISTRATIVO'
+    end
+  end
+  object dMenuArbol1: TdMenuArbol
+    OwnerDraw = True
+    DatabaseName = 'BaseDato'
+    TableName = 'Administrativo'
+    TableTitle = 'MetadataAdministrativo'
+    FiltroInicial = '(Nivel = 3)'
+    OnSelectID = dMenuArbol1SelectID
+    FieldsTableName = 
+      'CODIGO=CODIGOARBOL, ID=CODIGOADMINISTRATIVO, CODIGONIVEL=NOMBREC' +
+      'ATEGORIA, NOMBRE=NOMBREADMINISTRATIVO, NIVEL=NIVEL'
+    FieldsTableTitle = 
+      'IDNIVEL=CODIGONIVEL, NIVEL=NIVELADMINISTRATIVO, CAMPO=CAMPOADMIN' +
+      'ISTRATIVO, DESCRIPCION=DESCRIPCIONCAMPO'
+    Left = 341
+    Top = 144
+  end
+end

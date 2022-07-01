@@ -1,0 +1,1987 @@
+inherited fIndiceAreaMetropolitana: TfIndiceAreaMetropolitana
+  Left = 235
+  Top = 70
+  Width = 1017
+  Height = 654
+  Caption = 'Índice Área Metropolitana'
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1001
+    Height = 28
+    Align = alTop
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clRed
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+    object Panel2: TPanel
+      Left = 757
+      Top = 1
+      Width = 243
+      Height = 26
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 0
+      OnMouseDown = Panel2MouseDown
+      object SBSalir: TSpeedButton
+        Left = 216
+        Top = 2
+        Width = 23
+        Height = 23
+        Hint = 'Cierra esta ventana'
+        Flat = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00330000000000
+          03333377777777777F333301BBBBBBBB033333773F3333337F3333011BBBBBBB
+          0333337F73F333337F33330111BBBBBB0333337F373F33337F333301110BBBBB
+          0333337F337F33337F333301110BBBBB0333337F337F33337F333301110BBBBB
+          0333337F337F33337F333301110BBBBB0333337F337F33337F333301110BBBBB
+          0333337F337F33337F333301110BBBBB0333337F337FF3337F33330111B0BBBB
+          0333337F337733337F333301110BBBBB0333337F337F33337F333301110BBBBB
+          0333337F3F7F33337F333301E10BBBBB0333337F7F7F33337F333301EE0BBBBB
+          0333337F777FFFFF7F3333000000000003333377777777777333}
+        NumGlyphs = 2
+        OnClick = SBSalirClick
+      end
+      object SBImprimir: TSpeedButton
+        Left = 163
+        Top = 2
+        Width = 23
+        Height = 23
+        Hint = 'Imprimir...'
+        Flat = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+          0003377777777777777308888888888888807F33333333333337088888888888
+          88807FFFFFFFFFFFFFF7000000000000000077777777777777770F8F8F8F8F8F
+          8F807F333333333333F708F8F8F8F8F8F9F07F333333333337370F8F8F8F8F8F
+          8F807FFFFFFFFFFFFFF7000000000000000077777777777777773330FFFFFFFF
+          03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+          03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+          33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
+          33333337FFFF7733333333300000033333333337777773333333}
+        NumGlyphs = 2
+        OnClick = SBImprimirClick
+      end
+      object SBBuscar: TSpeedButton
+        Left = 81
+        Top = 2
+        Width = 23
+        Height = 23
+        Hint = 'Busca Dato en Lista'
+        Flat = True
+        Glyph.Data = {
+          EE000000424DEE000000000000007600000028000000100000000F0000000100
+          0400000000007800000000000000000000001000000010000000000000000000
+          8000008000000080800080000000800080008080000080808000C0C0C0000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+          888800000888880000080F000888880F00080F000888880F0008000000080000
+          000800F000000F00000800F000800F00000800F000800F000008800000000000
+          0088880F00080F000888880000080000088888800088800088888880F08880F0
+          888888800088800088888888888888888888}
+        OnClick = SBBuscarClick
+      end
+      object SBOrdenar: TSpeedButton
+        Left = 105
+        Top = 2
+        Width = 23
+        Height = 23
+        Hint = 'Reportes Repetidos'
+        Flat = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          333333333333333FF3FF3333333333CC30003333333333773777333333333C33
+          3000333FF33337F33777339933333C3333333377F33337F3333F339933333C33
+          33003377333337F33377333333333C333300333F333337F33377339333333C33
+          3333337FF3333733333F33993333C33333003377FF33733333773339933C3333
+          330033377FF73F33337733339933C33333333FF377F373F3333F993399333C33
+          330077F377F337F33377993399333C33330077FF773337F33377399993333C33
+          33333777733337F333FF333333333C33300033333333373FF7773333333333CC
+          3000333333333377377733333333333333333333333333333333}
+        NumGlyphs = 2
+      end
+      object Bevel2: TBevel
+        Left = 132
+        Top = 1
+        Width = 3
+        Height = 24
+      end
+      object SBEstadistica: TSpeedButton
+        Left = 140
+        Top = 2
+        Width = 23
+        Height = 23
+        Hint = 'Estadística de la Lista'
+        Flat = True
+        Glyph.Data = {
+          36010000424D3601000000000000760000002800000013000000100000000100
+          040000000000C000000000000000000000001000000010000000000000000000
+          8000008000000080800080000000800080008080000080808000C0C0C0000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+          8888888000008888888888888888888000008888888888888888888000008888
+          8000000000888880000088888800888880888880000088888880088888888880
+          0000888888880088888888800000888888888008888888800000888888880088
+          8888888000008888888008888888888000008888880088888088888000008888
+          8000000000888880000088888888888888888880000088888888888888888880
+          0000888888888888888888800000888888888888888888800000}
+      end
+      object Bevel3: TBevel
+        Left = 73
+        Top = 1
+        Width = 3
+        Height = 24
+      end
+      object Bevel1: TBevel
+        Left = 211
+        Top = 1
+        Width = 3
+        Height = 24
+      end
+      object sbExportar: TSpeedButton
+        Left = 186
+        Top = 2
+        Width = 23
+        Height = 23
+        Hint = 'Exportación de la Lista'
+        Flat = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          0400000000000001000000000000000000001000000010000000000000000000
+          8000008000000080800080000000800080008080000080808000C0C0C0000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333303
+          333333333333337FF3333333333333903333333333333377FF33333333333399
+          03333FFFFFFFFF777FF3000000999999903377777777777777FF0FFFF0999999
+          99037F3337777777777F0FFFF099999999907F3FF777777777770F00F0999999
+          99037F773777777777730FFFF099999990337F3FF777777777330F00FFFFF099
+          03337F773333377773330FFFFFFFF09033337F3FF3FFF77733330F00F0000003
+          33337F773777777333330FFFF0FF033333337F3FF7F3733333330F08F0F03333
+          33337F7737F7333333330FFFF003333333337FFFF77333333333000000333333
+          3333777777333333333333333333333333333333333333333333}
+        NumGlyphs = 2
+        OnClick = sbExportarClick
+      end
+    end
+    object dNavigator1: TdNavigator
+      Left = 6
+      Top = 4
+      Width = 120
+      Height = 21
+      DataSource = dsIndice
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbDelete]
+      Flat = True
+      ConfirmDelete = False
+      TabOrder = 1
+    end
+  end
+  object pSuperior: TPanel
+    Left = 0
+    Top = 28
+    Width = 1001
+    Height = 588
+    Align = alClient
+    TabOrder = 1
+    object PageControl1: TPageControl
+      Left = 1
+      Top = 1
+      Width = 999
+      Height = 586
+      ActivePage = tsListadoReportes
+      Align = alClient
+      TabOrder = 0
+      object tsListadoReportes: TTabSheet
+        Caption = 'Listado Completo Reportes'
+        OnShow = tsListadoReportesShow
+        object RxDBGrid1: TRxDBGrid
+          Left = 0
+          Top = 72
+          Width = 991
+          Height = 486
+          Align = alClient
+          DataSource = dsIndice
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+          OnDblClick = RxDBGrid1DblClick
+          OnTitleClick = RxDBGrid1TitleClick
+          OnGetCellParams = RxDBGrid1GetCellParams
+          OnMouseMove = RxDBGrid1MouseMove
+          Columns = <
+            item
+              Color = clLime
+              Expanded = False
+              FieldName = 'CODIGOREPORTE'
+              Title.Alignment = taCenter
+              Title.Caption = 'Reporte'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CODIGOODT'
+              Title.Caption = 'Código ODT'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CODIGOADMINISTRATIVO'
+              Title.Alignment = taCenter
+              Title.Caption = 'CIA'
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'NOMBREGRUPOTRABAJO'
+              Title.Alignment = taCenter
+              Title.Caption = 'Grupo de Trabajo'
+              Width = 100
+              Visible = True
+            end
+            item
+              Color = clInfoBk
+              Expanded = False
+              FieldName = 'TiempoDictado'
+              Title.Alignment = taCenter
+              Title.Caption = 'Tiempo Dictado'
+              Width = 150
+              Visible = True
+            end
+            item
+              Color = clBtnFace
+              Expanded = False
+              FieldName = 'TiempoLlegada'
+              Title.Alignment = taCenter
+              Title.Caption = 'Tiempo Llegada'
+              Width = 150
+              Visible = True
+            end
+            item
+              Color = clYellow
+              Expanded = False
+              FieldName = 'TiempoAtencion'
+              Title.Alignment = taCenter
+              Title.Caption = 'Tiempo Atencion'
+              Width = 150
+              Visible = True
+            end
+            item
+              Color = clAqua
+              Expanded = False
+              FieldName = 'TiempoTotal'
+              Title.Alignment = taCenter
+              Title.Caption = 'Tiempo Total'
+              Width = 150
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Color = clWhite
+              Expanded = False
+              FieldName = 'FECHAHORA'
+              Title.Alignment = taCenter
+              Title.Caption = 'Fecha Registro'
+              Width = 150
+              Visible = True
+            end
+            item
+              Color = clWhite
+              Expanded = False
+              FieldName = 'FECHAHORADICTADO'
+              Title.Alignment = taCenter
+              Title.Caption = 'Fecha Dictado'
+              Width = 150
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'FECHAHORALLEGADA'
+              Title.Caption = 'Fecha Llegada'
+              Width = 150
+              Visible = True
+            end
+            item
+              Alignment = taCenter
+              Expanded = False
+              FieldName = 'FECHAHORAATENCION'
+              Title.Alignment = taCenter
+              Title.Caption = 'Fecha Atención'
+              Width = 150
+              Visible = True
+            end>
+        end
+        object Panel4: TPanel
+          Left = 0
+          Top = 0
+          Width = 991
+          Height = 72
+          Align = alTop
+          TabOrder = 1
+          object GroupBox3: TGroupBox
+            Left = -1
+            Top = 4
+            Width = 698
+            Height = 61
+            Caption = 'Dependencia Responsable'
+            TabOrder = 0
+            object Label13: TLabel
+              Left = 8
+              Top = 18
+              Width = 48
+              Height = 13
+              Caption = 'CIA Resp.'
+            end
+            object Label14: TLabel
+              Left = 425
+              Top = 18
+              Width = 36
+              Height = 26
+              Caption = 'Grupo '#13#10'Trabajo'
+            end
+            object DBEdit14: TDBEdit
+              Left = 480
+              Top = 18
+              Width = 33
+              Height = 21
+              DataField = 'CodigoGrupoTrabajo'
+              DataSource = dstcia
+              TabOrder = 0
+            end
+            object DBLookupComboBox1: TDBLookupComboBox
+              Left = 109
+              Top = 18
+              Width = 289
+              Height = 21
+              DataField = 'CodigoAdministrativo'
+              DataSource = dstcia
+              KeyField = 'CODIGOADMINISTRATIVO'
+              ListField = 'NOMBRECATEGORIA'
+              ListSource = dsCIA
+              TabOrder = 1
+            end
+            object DBEdit13: TDBEdit
+              Left = 64
+              Top = 18
+              Width = 41
+              Height = 21
+              DataField = 'CodigoAdministrativo'
+              DataSource = dstcia
+              TabOrder = 2
+            end
+            object DBLookupComboBox2: TDBLookupComboBox
+              Left = 517
+              Top = 18
+              Width = 172
+              Height = 21
+              DataField = 'CodigoGrupoTrabajo'
+              DataSource = dstcia
+              KeyField = 'CODIGOGRUPOTRABAJO'
+              ListField = 'NOMBREGRUPOTRABAJO'
+              ListSource = dsGrupoTrabajo
+              TabOrder = 3
+            end
+          end
+          object BitBtnFiltrar: TBitBtn
+            Left = 712
+            Top = 16
+            Width = 40
+            Height = 40
+            ModalResult = 1
+            TabOrder = 1
+            OnClick = BitBtnFiltrarClick
+            Glyph.Data = {
+              EE000000424DEE000000000000007600000028000000100000000F0000000100
+              0400000000007800000000000000000000001000000010000000000000000000
+              8000008000000080800080000000800080008080000080808000C0C0C0000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+              8888888888888888888888888800008080808888880660888888888888088088
+              8888888888088088888888888808808888888888806886088888888806688860
+              8888888066888866088888066FF8888660888066FFFF88866608800000000000
+              000888888888888888888888888888888888}
+          end
+          object BitBtnAnularFiltro: TBitBtn
+            Left = 762
+            Top = 16
+            Width = 40
+            Height = 40
+            ModalResult = 2
+            TabOrder = 2
+            Glyph.Data = {
+              EE000000424DEE000000000000007600000028000000100000000F0000000100
+              0400000000007800000000000000000000001000000010000000000000000000
+              8000008000000080800080000000800080008080000080808000C0C0C0000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+              8889998888888888889999988800008089908899980660899988888999088099
+              9888888889988998888888888899998888888888806999088888888806999990
+              88888880699888990888880999F88889908880999FFF88869998899000000000
+              099999888888888888899888888888888889}
+          end
+        end
+      end
+      object tsResumenReportesAtendidos: TTabSheet
+        Caption = 'Resumen Tiempos de Atención'
+        ImageIndex = 3
+        object Panel3: TPanel
+          Left = 0
+          Top = 381
+          Width = 991
+          Height = 177
+          Align = alBottom
+          Caption = 'Panel3'
+          TabOrder = 0
+          object GroupBox1: TGroupBox
+            Left = 7
+            Top = 8
+            Width = 337
+            Height = 161
+            TabOrder = 0
+            object Label1: TLabel
+              Left = 11
+              Top = 17
+              Width = 139
+              Height = 13
+              Caption = 'Tiempo promedio de Dictado:'
+            end
+            object Label2: TLabel
+              Left = 11
+              Top = 56
+              Width = 140
+              Height = 13
+              Caption = 'Tiempo promedio de Llegada:'
+            end
+            object Label3: TLabel
+              Left = 11
+              Top = 96
+              Width = 144
+              Height = 13
+              Caption = 'Tiempo promedio de Atención:'
+            end
+            object Label4: TLabel
+              Left = 11
+              Top = 135
+              Width = 111
+              Height = 13
+              Caption = 'Tiempo promedio Total:'
+            end
+            object DBEdit1: TDBEdit
+              Left = 160
+              Top = 15
+              Width = 164
+              Height = 21
+              DataField = 'Promedio1'
+              DataSource = dsTotales
+              TabOrder = 0
+            end
+            object DBEdit2: TDBEdit
+              Left = 160
+              Top = 54
+              Width = 164
+              Height = 21
+              DataField = 'Promedio2'
+              DataSource = dsTotales
+              TabOrder = 1
+            end
+            object DBEdit3: TDBEdit
+              Left = 160
+              Top = 94
+              Width = 164
+              Height = 21
+              DataField = 'Promedio3'
+              DataSource = dsTotales
+              TabOrder = 2
+            end
+            object DBEdit4: TDBEdit
+              Left = 160
+              Top = 132
+              Width = 164
+              Height = 21
+              DataField = 'Promedio4'
+              DataSource = dsTotales
+              TabOrder = 3
+            end
+          end
+          object GroupBox2: TGroupBox
+            Left = 351
+            Top = 8
+            Width = 614
+            Height = 161
+            TabOrder = 1
+            object Label5: TLabel
+              Left = 11
+              Top = 17
+              Width = 113
+              Height = 13
+              Caption = 'Tiempo Min de Dictado:'
+            end
+            object Label6: TLabel
+              Left = 306
+              Top = 17
+              Width = 116
+              Height = 13
+              Caption = 'Tiempo Max de Dictado:'
+            end
+            object Label7: TLabel
+              Left = 11
+              Top = 56
+              Width = 114
+              Height = 13
+              Caption = 'Tiempo Min de Llegada:'
+            end
+            object Label8: TLabel
+              Left = 306
+              Top = 56
+              Width = 117
+              Height = 13
+              Caption = 'Tiempo Max de Llegada:'
+            end
+            object Label9: TLabel
+              Left = 11
+              Top = 96
+              Width = 118
+              Height = 13
+              Caption = 'Tiempo Min de Atención:'
+            end
+            object Label10: TLabel
+              Left = 306
+              Top = 96
+              Width = 121
+              Height = 13
+              Caption = 'Tiempo Max de Atención:'
+            end
+            object Label11: TLabel
+              Left = 11
+              Top = 135
+              Width = 85
+              Height = 13
+              Caption = 'Tiempo Min Total:'
+            end
+            object Label12: TLabel
+              Left = 306
+              Top = 135
+              Width = 88
+              Height = 13
+              Caption = 'Tiempo Max Total:'
+            end
+            object DBEdit5: TDBEdit
+              Left = 136
+              Top = 15
+              Width = 160
+              Height = 21
+              DataField = 'Min1'
+              DataSource = dsTotales
+              TabOrder = 0
+            end
+            object DBEdit6: TDBEdit
+              Left = 441
+              Top = 15
+              Width = 160
+              Height = 21
+              DataField = 'Max1'
+              DataSource = dsTotales
+              TabOrder = 1
+            end
+            object DBEdit7: TDBEdit
+              Left = 136
+              Top = 54
+              Width = 160
+              Height = 21
+              DataField = 'Min2'
+              DataSource = dsTotales
+              TabOrder = 2
+            end
+            object DBEdit8: TDBEdit
+              Left = 441
+              Top = 54
+              Width = 160
+              Height = 21
+              DataField = 'Max2'
+              DataSource = dsTotales
+              TabOrder = 3
+            end
+            object DBEdit9: TDBEdit
+              Left = 136
+              Top = 94
+              Width = 160
+              Height = 21
+              DataField = 'Min3'
+              DataSource = dsTotales
+              TabOrder = 4
+            end
+            object DBEdit10: TDBEdit
+              Left = 441
+              Top = 94
+              Width = 160
+              Height = 21
+              DataField = 'Max3'
+              DataSource = dsTotales
+              TabOrder = 5
+            end
+            object DBEdit11: TDBEdit
+              Left = 136
+              Top = 132
+              Width = 160
+              Height = 21
+              DataField = 'Min4'
+              DataSource = dsTotales
+              TabOrder = 6
+            end
+            object DBEdit12: TDBEdit
+              Left = 441
+              Top = 132
+              Width = 160
+              Height = 21
+              DataField = 'Max4'
+              DataSource = dsTotales
+              TabOrder = 7
+            end
+          end
+        end
+        object DBChartTiempos: TDBChart
+          Left = 0
+          Top = 0
+          Width = 991
+          Height = 381
+          BackWall.Color = clWhite
+          BottomWall.Color = 8454143
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clBlue
+          Title.Font.Height = -13
+          Title.Font.Name = 'Arial'
+          Title.Font.Style = []
+          Title.Text.Strings = (
+            'Gráfico de Tiempos')
+          BackColor = clWhite
+          LeftAxis.Title.Caption = 'Cantidad'
+          Align = alClient
+          TabOrder = 1
+          object Series1: TBarSeries
+            ColorEachPoint = True
+            Marks.ArrowLength = 20
+            Marks.Style = smsValue
+            Marks.Visible = True
+            SeriesColor = clRed
+            XValues.DateTime = False
+            XValues.Name = 'X'
+            XValues.Multiplier = 1.000000000000000000
+            XValues.Order = loAscending
+            YValues.DateTime = False
+            YValues.Name = 'Bar'
+            YValues.Multiplier = 1.000000000000000000
+            YValues.Order = loNone
+          end
+        end
+      end
+      object tsResumenMoviles: TTabSheet
+        Caption = 'Resumen de Atención por Equipos de Trabajo'
+        ImageIndex = 1
+        OnShow = tsResumenMovilesShow
+        object pSuperior2: TPanel
+          Left = 0
+          Top = 0
+          Width = 991
+          Height = 236
+          Align = alClient
+          TabOrder = 0
+          object pIzquierdoSuperior: TPanel
+            Left = 1
+            Top = 1
+            Width = 986
+            Height = 234
+            Align = alClient
+            TabOrder = 0
+            object DBChartOdts: TDBChart
+              Left = 505
+              Top = 1
+              Width = 480
+              Height = 232
+              BackWall.Color = clWhite
+              BottomWall.Color = 8454143
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clBlue
+              Title.Font.Height = -13
+              Title.Font.Name = 'Arial'
+              Title.Font.Style = []
+              Title.Text.Strings = (
+                'ODT'#39's Ejecutadas')
+              BackColor = clWhite
+              LeftAxis.Title.Caption = 'Cantidad'
+              Align = alClient
+              TabOrder = 0
+              object BarSeries1: TBarSeries
+                ColorEachPoint = True
+                Marks.ArrowLength = 20
+                Marks.Style = smsValue
+                Marks.Visible = True
+                DataSource = qGruposTrabajo
+                XLabelsSource = 'NOMBREGRUPOTRABAJO'
+                SeriesColor = clRed
+                XValues.DateTime = False
+                XValues.Name = 'X'
+                XValues.Multiplier = 1.000000000000000000
+                XValues.Order = loAscending
+                YValues.DateTime = False
+                YValues.Name = 'Bar'
+                YValues.Multiplier = 1.000000000000000000
+                YValues.Order = loNone
+                YValues.ValueSource = 'TOTALODTS'
+              end
+            end
+            object RxSplitter3: TRxSplitter
+              Left = 501
+              Top = 1
+              Width = 4
+              Height = 232
+              ControlFirst = DBChartOdts
+              Align = alLeft
+              BevelWidth = 2
+            end
+            object DBChartReportes: TDBChart
+              Left = 1
+              Top = 1
+              Width = 500
+              Height = 232
+              BackWall.Color = clWhite
+              BottomWall.Color = 8454143
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clBlue
+              Title.Font.Height = -13
+              Title.Font.Name = 'Arial'
+              Title.Font.Style = []
+              Title.Text.Strings = (
+                'Reportes Atendidos')
+              BackColor = clWhite
+              LeftAxis.Title.Caption = 'Cantidad'
+              Align = alLeft
+              TabOrder = 2
+              object BarSeries2: TBarSeries
+                ColorEachPoint = True
+                Marks.ArrowLength = 20
+                Marks.Style = smsValue
+                Marks.Visible = True
+                DataSource = qGruposTrabajo
+                XLabelsSource = 'NOMBREGRUPOTRABAJO'
+                SeriesColor = clRed
+                XValues.DateTime = False
+                XValues.Name = 'X'
+                XValues.Multiplier = 1.000000000000000000
+                XValues.Order = loAscending
+                YValues.DateTime = False
+                YValues.Name = 'Bar'
+                YValues.Multiplier = 1.000000000000000000
+                YValues.Order = loNone
+                YValues.ValueSource = 'TOTALREPORTES'
+              end
+            end
+          end
+          object RxSplitter2: TRxSplitter
+            Left = 987
+            Top = 1
+            Width = 3
+            Height = 234
+            ControlFirst = pIzquierdoSuperior
+            Align = alRight
+          end
+        end
+        object RxSplitter1: TRxSplitter
+          Left = 0
+          Top = 236
+          Width = 991
+          Height = 3
+          ControlFirst = pInferior2
+          Align = alBottom
+        end
+        object pInferior2: TPanel
+          Left = 0
+          Top = 239
+          Width = 991
+          Height = 319
+          Align = alBottom
+          TabOrder = 2
+          object DBGrid1: TDBGrid
+            Left = 1
+            Top = 1
+            Width = 989
+            Height = 317
+            Align = alClient
+            DataSource = dsTiemposGrupo
+            Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
+            TabOrder = 0
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'MS Sans Serif'
+            TitleFont.Style = []
+            Columns = <
+              item
+                Alignment = taCenter
+                Color = clWhite
+                Expanded = False
+                FieldName = 'NOMBREGRUPOTRABAJO'
+                Title.Alignment = taCenter
+                Title.Caption = 'Grupo Trabajo'
+                Width = 87
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Promedio1'
+                Title.Alignment = taCenter
+                Title.Caption = 'Promedio Dictado'
+                Width = 160
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Promedio2'
+                Title.Alignment = taCenter
+                Title.Caption = 'Promedio Llegada'
+                Width = 160
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Promedio3'
+                Title.Alignment = taCenter
+                Title.Caption = 'Promedio Atención'
+                Width = 160
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Promedio4'
+                Title.Alignment = taCenter
+                Title.Caption = 'Promedio Total'
+                Width = 160
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Min1'
+                Title.Alignment = taCenter
+                Title.Caption = 'Tiempo Mínimo Dictado'
+                Width = 160
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Max1'
+                Title.Alignment = taCenter
+                Title.Caption = 'Tiempo Máximo Dictado'
+                Width = 160
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Min2'
+                Title.Alignment = taCenter
+                Title.Caption = 'Tiempo Mínimo Llegada'
+                Width = 160
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Max2'
+                Title.Alignment = taCenter
+                Title.Caption = 'Tiempo Máximo Llegada'
+                Width = 160
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Min3'
+                Title.Alignment = taCenter
+                Title.Caption = 'Tiempo Mínimo Atención'
+                Width = 160
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Max3'
+                Title.Alignment = taCenter
+                Title.Caption = 'Tiempo Máximo Atención'
+                Width = 160
+                Visible = True
+              end>
+          end
+        end
+      end
+      object tsListadoMateriales: TTabSheet
+        Caption = 'Listado de Materiales Asociados'
+        ImageIndex = 2
+        TabVisible = False
+        object dbgridListaMateriales: TRxDBGrid
+          Left = 0
+          Top = 0
+          Width = 991
+          Height = 558
+          Align = alClient
+          DataSource = dsMaterialResumen
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+          Columns = <
+            item
+              Color = clAqua
+              Expanded = False
+              FieldName = 'CODIGOMATERIAL'
+              Title.Caption = 'Código Material'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'NombreMaterial'
+              Title.Alignment = taCenter
+              Title.Caption = 'Material'
+              Width = 386
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'SUM(CANTIDADSOLICITADA)'
+              Title.Alignment = taCenter
+              Title.Caption = 'Cantidad Solicitada'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'SUM(CANTIDADCONSUMIDA)'
+              Title.Alignment = taCenter
+              Title.Caption = 'Cantidad Consumida'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'SUM(CANTIDADENTREGADA)'
+              Title.Alignment = taCenter
+              Title.Caption = 'Cantidad Entregada'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'SUM(CANTIDADREINTEGRADABUENA)'
+              Title.Alignment = taCenter
+              Title.Caption = 'Cantidad Reintegrada B.'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'SUM(CANTIDADREINTEGRADAMALA)'
+              Title.Caption = 'Cantidad Reintegrada M.'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'SUM(CANTIDADRETIRADABUENA)'
+              Title.Caption = 'Cantidad Retirada B.'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'SUM(CANTIDADRETIRADAMALA)'
+              Title.Caption = 'Cantidad Retirada M.'
+              Visible = True
+            end>
+        end
+      end
+    end
+  end
+  object dsIndice: TDataSource
+    DataSet = qIndice
+    Left = 152
+    Top = 180
+  end
+  object qTotales: TQuery
+    OnCalcFields = qTotalesCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT AVG(FECHAHORADICTADO - FECHAHORA) AS PROMEDIODICTADO,'
+      'AVG(FECHAHORALLEGADA - FECHAHORADICTADO) AS PROMEDIOLLEGADA,'
+      'AVG(FECHAHORAATENCION - FECHAHORALLEGADA) AS PROMEDIOATENCION,'
+      'AVG(FECHAHORAATENCION - FECHAHORA) AS PROMEDIOTOTAL,'
+      'SUM(FECHAHORADICTADO - FECHAHORA) SUMADICTADO,'
+      'SUM(FECHAHORALLEGADA - FECHAHORADICTADO) SUMALLEGADA,'
+      'SUM(FECHAHORAATENCION - FECHAHORALLEGADA) SUMAATENCION,'
+      'SUM(FECHAHORAATENCION - FECHAHORA) SUMATOTAL,'
+      'MIN(FECHAHORADICTADO - FECHAHORA) AS MINDICTADO,'
+      'MAX(FECHAHORADICTADO - FECHAHORA) AS MAXDICTADO,'
+      'MIN(FECHAHORALLEGADA - FECHAHORADICTADO) AS MINLLEGADA,'
+      'MAX(FECHAHORALLEGADA - FECHAHORADICTADO) AS MAXLLEGADA,'
+      'MIN(FECHAHORAATENCION - FECHAHORALLEGADA) AS MINATENCION,'
+      'MAX(FECHAHORAATENCION - FECHAHORALLEGADA) AS MAXATENCION,'
+      'MIN(FECHAHORAATENCION - FECHAHORA) AS MINTOTAL,'
+      'MAX(FECHAHORAATENCION - FECHAHORA) AS MAXTOTAL'
+      'FROM ESTADISTICAREPORTE')
+    Left = 565
+    Top = 284
+    object qTotalesPROMEDIODICTADO: TFloatField
+      FieldName = 'PROMEDIODICTADO'
+    end
+    object qTotalesPROMEDIOLLEGADA: TFloatField
+      FieldName = 'PROMEDIOLLEGADA'
+    end
+    object qTotalesPROMEDIOATENCION: TFloatField
+      FieldName = 'PROMEDIOATENCION'
+    end
+    object qTotalesPROMEDIOTOTAL: TFloatField
+      FieldName = 'PROMEDIOTOTAL'
+    end
+    object qTotalesPromedio1: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Promedio1'
+      Size = 50
+      Calculated = True
+    end
+    object qTotalesPromedio2: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Promedio2'
+      Size = 50
+      Calculated = True
+    end
+    object qTotalesPromedio3: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Promedio3'
+      Size = 50
+      Calculated = True
+    end
+    object qTotalesPromedio4: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Promedio4'
+      Size = 50
+      Calculated = True
+    end
+    object qTotalesMINDICTADO: TFloatField
+      FieldName = 'MINDICTADO'
+    end
+    object qTotalesMAXDICTADO: TFloatField
+      FieldName = 'MAXDICTADO'
+    end
+    object qTotalesMINLLEGADA: TFloatField
+      FieldName = 'MINLLEGADA'
+    end
+    object qTotalesMAXLLEGADA: TFloatField
+      FieldName = 'MAXLLEGADA'
+    end
+    object qTotalesMINATENCION: TFloatField
+      FieldName = 'MINATENCION'
+    end
+    object qTotalesMAXATENCION: TFloatField
+      FieldName = 'MAXATENCION'
+    end
+    object qTotalesMINTOTAL: TFloatField
+      FieldName = 'MINTOTAL'
+    end
+    object qTotalesMAXTOTAL: TFloatField
+      FieldName = 'MAXTOTAL'
+    end
+    object qTotalesMin1: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Min1'
+      Size = 50
+      Calculated = True
+    end
+    object qTotalesMin2: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Min2'
+      Size = 50
+      Calculated = True
+    end
+    object qTotalesMin3: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Min3'
+      Size = 50
+      Calculated = True
+    end
+    object qTotalesMin4: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Min4'
+      Size = 50
+      Calculated = True
+    end
+    object qTotalesMax1: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Max1'
+      Size = 50
+      Calculated = True
+    end
+    object qTotalesMax2: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Max2'
+      Size = 50
+      Calculated = True
+    end
+    object qTotalesMax3: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Max3'
+      Size = 50
+      Calculated = True
+    end
+    object qTotalesMax4: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Max4'
+      Size = 50
+      Calculated = True
+    end
+    object qTotalesSUMADICTADO: TFloatField
+      FieldName = 'SUMADICTADO'
+    end
+    object qTotalesSUMALLEGADA: TFloatField
+      FieldName = 'SUMALLEGADA'
+    end
+    object qTotalesSUMAATENCION: TFloatField
+      FieldName = 'SUMAATENCION'
+    end
+    object qTotalesSUMATOTAL: TFloatField
+      FieldName = 'SUMATOTAL'
+    end
+    object qTotalesSuma1: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Suma1'
+      Size = 50
+      Calculated = True
+    end
+    object qTotalesSuma2: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Suma2'
+      Size = 50
+      Calculated = True
+    end
+    object qTotalesSuma3: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Suma3'
+      Size = 50
+      Calculated = True
+    end
+    object qTotalesSuma4: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Suma4'
+      Size = 50
+      Calculated = True
+    end
+  end
+  object dsTotales: TDataSource
+    DataSet = qTotales
+    Left = 557
+    Top = 332
+  end
+  object qIndice: TQuery
+    CachedUpdates = True
+    AfterDelete = qIndiceAfterDelete
+    OnCalcFields = qIndiceCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM  ESTADISTICAREPORTE'
+      'ORDER BY CODIGOODT')
+    UpdateObject = UpdIndice
+    Left = 232
+    Top = 180
+    object qIndiceCODIGOREPORTE: TFloatField
+      FieldName = 'CODIGOREPORTE'
+      Origin = 'TEMP_ODT1.CODIGOREPORTE'
+    end
+    object qIndiceCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'TEMP_ODT1.CODIGOADMINISTRATIVO'
+    end
+    object qIndiceCODIGOGRUPOTRABAJO: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJO'
+      Origin = 'TEMP_ODT1.CODIGOGRUPOTRABAJO'
+    end
+    object qIndiceFECHAHORA: TDateTimeField
+      FieldName = 'FECHAHORA'
+      Origin = 'TEMP_ODT1.FECHAHORA'
+    end
+    object qIndiceFECHAHORADICTADO: TDateTimeField
+      FieldName = 'FECHAHORADICTADO'
+      Origin = 'TEMP_ODT1.FECHAHORADICTADO'
+    end
+    object qIndiceFECHAHORALLEGADA: TDateTimeField
+      FieldName = 'FECHAHORALLEGADA'
+      Origin = 'TEMP_ODT1.FECHAHORALLEGADA'
+    end
+    object qIndiceFECHAHORAATENCION: TDateTimeField
+      FieldName = 'FECHAHORAATENCION'
+      Origin = 'TEMP_ODT1.FECHAHORAATENCION'
+    end
+    object qIndiceNOMBREGRUPOTRABAJO: TStringField
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Origin = 'TEMP_ODT1.NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+    object qIndiceTiempoDictado: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoDictado'
+      Size = 50
+      Calculated = True
+    end
+    object qIndiceTiempoLlegada: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoLlegada'
+      Size = 50
+      Calculated = True
+    end
+    object qIndiceTiempoAtencion: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoAtencion'
+      Size = 50
+      Calculated = True
+    end
+    object qIndiceTiempoTotal: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'TiempoTotal'
+      Size = 50
+      Calculated = True
+    end
+    object qIndiceCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'TEMP_ODT1.CODIGOODT'
+    end
+    object qIndiceCIGDANO: TFloatField
+      FieldName = 'CIGDANO'
+      Origin = 'TEMP_ODT1.CIGDANO'
+    end
+    object qIndiceCODIGOSUBESTACION: TStringField
+      FieldName = 'CODIGOSUBESTACION'
+      Origin = 'TEMP_ODT1.CODIGOSUBESTACION'
+      Size = 3
+    end
+    object qIndiceCODIGOCIRCUITO: TStringField
+      FieldName = 'CODIGOCIRCUITO'
+      Origin = 'TEMP_ODT1.CODIGOCIRCUITO'
+      Size = 6
+    end
+  end
+  object UpdIndice: TUpdateSQL
+    ModifySQL.Strings = (
+      'update  ESTADISTICAREPORTE'
+      'set'
+      '  CODIGOREPORTE = :CODIGOREPORTE,'
+      '  CODIGOADMINISTRATIVO = :CODIGOADMINISTRATIVO,'
+      '  CODIGOGRUPOTRABAJO = :CODIGOGRUPOTRABAJO,'
+      '  CIGDANO = :CIGDANO,'
+      '  CODIGOSUBESTACION = :CODIGOSUBESTACION,'
+      '  CODIGOCIRCUITO = :CODIGOCIRCUITO,'
+      '  FECHAHORA = :FECHAHORA,'
+      '  FECHAHORADICTADO = :FECHAHORADICTADO,'
+      '  FECHAHORALLEGADA = :FECHAHORALLEGADA,'
+      '  FECHAHORAATENCION = :FECHAHORAATENCION,'
+      '  NOMBREGRUPOTRABAJO = :NOMBREGRUPOTRABAJO,'
+      '  CODIGOODT = :CODIGOODT'
+      'where'
+      '  CODIGOREPORTE = :OLD_CODIGOREPORTE and'
+      '  CODIGOADMINISTRATIVO = :OLD_CODIGOADMINISTRATIVO and'
+      '  CODIGOGRUPOTRABAJO = :OLD_CODIGOGRUPOTRABAJO')
+    InsertSQL.Strings = (
+      'insert into  ESTADISTICAREPORTE'
+      
+        '  (CODIGOREPORTE, CODIGOADMINISTRATIVO, CODIGOGRUPOTRABAJO, CIGD' +
+        'ANO, CODIGOSUBESTACION, '
+      
+        '   CODIGOCIRCUITO, FECHAHORA, FECHAHORADICTADO, FECHAHORALLEGADA' +
+        ', FECHAHORAATENCION, '
+      '   NOMBREGRUPOTRABAJO, CODIGOODT)'
+      'values'
+      
+        '  (:CODIGOREPORTE, :CODIGOADMINISTRATIVO, :CODIGOGRUPOTRABAJO, :' +
+        'CIGDANO, '
+      
+        '   :CODIGOSUBESTACION, :CODIGOCIRCUITO, :FECHAHORA, :FECHAHORADI' +
+        'CTADO, '
+      
+        '   :FECHAHORALLEGADA, :FECHAHORAATENCION, :NOMBREGRUPOTRABAJO, :' +
+        'CODIGOODT)')
+    DeleteSQL.Strings = (
+      'delete from  ESTADISTICAREPORTE'
+      'where'
+      '  CODIGOREPORTE = :OLD_CODIGOREPORTE and'
+      '  CODIGOADMINISTRATIVO = :OLD_CODIGOADMINISTRATIVO and'
+      '  CODIGOGRUPOTRABAJO = :OLD_CODIGOGRUPOTRABAJO')
+    Left = 320
+    Top = 188
+  end
+  object qRegistros: TQuery
+    AfterOpen = qRegistrosAfterOpen
+    DatabaseName = 'BaseDato'
+    Left = 581
+    Top = 404
+  end
+  object qGruposTrabajo: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT NOMBREGRUPOTRABAJO, COUNT(*) AS TOTALREPORTES, COUNT(DIST' +
+        'INCT CODIGOODT) AS TOTALODTS'
+      'FROM  ESTADISTICAREPORTE'
+      'GROUP BY NOMBREGRUPOTRABAJO'
+      ' ')
+    Left = 461
+    Top = 301
+    object qGruposTrabajoNOMBREGRUPOTRABAJO: TStringField
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+    object qGruposTrabajoTOTALREPORTES: TFloatField
+      FieldName = 'TOTALREPORTES'
+    end
+    object qGruposTrabajoTOTALODTS: TFloatField
+      FieldName = 'TOTALODTS'
+    end
+  end
+  object qTiemposGrupo: TQuery
+    AutoCalcFields = False
+    OnCalcFields = qTiemposGrupoCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT NOMBREGRUPOTRABAJO,'
+      'AVG(  FECHAHORADICTADO - FECHAHORA  ) PROMEDIODICTADO,'
+      'AVG(  FECHAHORALLEGADA - FECHAHORADICTADO  ) PROMEDIOLLEGADA,'
+      'AVG(  FECHAHORAATENCION - FECHAHORALLEGADA  ) PROMEDIOATENCION,'
+      'AVG(  FECHAHORAATENCION - FECHAHORA) PROMEDIOTOTAL,'
+      'SUM(  FECHAHORADICTADO - FECHAHORA  ) SUMADICTADO,'
+      'SUM(  FECHAHORALLEGADA - FECHAHORADICTADO  ) SUMALLEGADA,'
+      'SUM(  FECHAHORAATENCION - FECHAHORALLEGADA  ) SUMAATENCION,'
+      'SUM(  FECHAHORAATENCION - FECHAHORA) SUMATOTAL,'
+      'MIN(  FECHAHORADICTADO - FECHAHORA  ) MINDICTADO,'
+      'MAX(  FECHAHORADICTADO - FECHAHORA  ) MAXDICTADO,'
+      'MIN(  FECHAHORALLEGADA - FECHAHORADICTADO  ) MINLLEGADA,'
+      'MAX(  FECHAHORALLEGADA - FECHAHORADICTADO  ) MAXLLEGADA,'
+      'MIN(  FECHAHORAATENCION - FECHAHORALLEGADA  ) MINATENCION,'
+      'MAX(  FECHAHORAATENCION - FECHAHORALLEGADA  ) MAXATENCION,'
+      'MIN(  FECHAHORAATENCION - FECHAHORADICTADO  ) MINTOTAL,'
+      'MAX(  FECHAHORAATENCION - FECHAHORADICTADO  ) MAXTOTAL'
+      'FROM  ESTADISTICAREPORTE'
+      'GROUP BY NOMBREGRUPOTRABAJO'
+      ' ')
+    Left = 744
+    Top = 284
+    object qTiemposGrupoNOMBREGRUPOTRABAJO: TStringField
+      DisplayWidth = 22
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+    object qTiemposGrupoPROMEDIODICTADO: TFloatField
+      DisplayWidth = 21
+      FieldName = 'PROMEDIODICTADO'
+    end
+    object qTiemposGrupoPROMEDIOLLEGADA: TFloatField
+      DisplayWidth = 22
+      FieldName = 'PROMEDIOLLEGADA'
+    end
+    object qTiemposGrupoPROMEDIOATENCION: TFloatField
+      DisplayWidth = 23
+      FieldName = 'PROMEDIOATENCION'
+    end
+    object qTiemposGrupoPROMEDIOTOTAL: TFloatField
+      DisplayWidth = 19
+      FieldName = 'PROMEDIOTOTAL'
+    end
+    object qTiemposGrupoMINDICTADO: TFloatField
+      DisplayWidth = 14
+      FieldName = 'MINDICTADO'
+    end
+    object qTiemposGrupoMAXDICTADO: TFloatField
+      DisplayWidth = 14
+      FieldName = 'MAXDICTADO'
+    end
+    object qTiemposGrupoMINLLEGADA: TFloatField
+      DisplayWidth = 14
+      FieldName = 'MINLLEGADA'
+    end
+    object qTiemposGrupoMAXLLEGADA: TFloatField
+      DisplayWidth = 15
+      FieldName = 'MAXLLEGADA'
+    end
+    object qTiemposGrupoMINATENCION: TFloatField
+      DisplayWidth = 15
+      FieldName = 'MINATENCION'
+    end
+    object qTiemposGrupoMAXATENCION: TFloatField
+      DisplayWidth = 16
+      FieldName = 'MAXATENCION'
+    end
+    object qTiemposGrupoMINTOTAL: TFloatField
+      DisplayWidth = 12
+      FieldName = 'MINTOTAL'
+    end
+    object qTiemposGrupoMAXTOTAL: TFloatField
+      DisplayWidth = 12
+      FieldName = 'MAXTOTAL'
+    end
+    object qTiemposGrupoPromedio1: TStringField
+      DisplayWidth = 60
+      FieldKind = fkCalculated
+      FieldName = 'Promedio1'
+      Size = 50
+      Calculated = True
+    end
+    object qTiemposGrupoPromedio2: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Promedio2'
+      Size = 50
+      Calculated = True
+    end
+    object qTiemposGrupoPromedio3: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Promedio3'
+      Size = 50
+      Calculated = True
+    end
+    object qTiemposGrupoPromedio4: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Promedio4'
+      Size = 50
+      Calculated = True
+    end
+    object qTiemposGrupoMin1: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Min1'
+      Size = 50
+      Calculated = True
+    end
+    object qTiemposGrupoMin2: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Min2'
+      Size = 50
+      Calculated = True
+    end
+    object qTiemposGrupoMin3: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Min3'
+      Size = 50
+      Calculated = True
+    end
+    object qTiemposGrupoMin4: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Min4'
+      Size = 50
+      Calculated = True
+    end
+    object qTiemposGrupoMax1: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Max1'
+      Size = 50
+      Calculated = True
+    end
+    object qTiemposGrupoMax2: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Max2'
+      Size = 50
+      Calculated = True
+    end
+    object qTiemposGrupoMax3: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Max3'
+      Size = 50
+      Calculated = True
+    end
+    object qTiemposGrupoMax4: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Max4'
+      Size = 50
+      Calculated = True
+    end
+    object qTiemposGrupoSUMADICTADO: TFloatField
+      FieldName = 'SUMADICTADO'
+    end
+    object qTiemposGrupoSUMALLEGADA: TFloatField
+      FieldName = 'SUMALLEGADA'
+    end
+    object qTiemposGrupoSUMAATENCION: TFloatField
+      FieldName = 'SUMAATENCION'
+    end
+    object qTiemposGrupoSUMATOTAL: TFloatField
+      FieldName = 'SUMATOTAL'
+    end
+    object qTiemposGruposuma1: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'suma1'
+      Size = 50
+      Calculated = True
+    end
+    object qTiemposGruposuma2: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'suma2'
+      Size = 50
+      Calculated = True
+    end
+    object qTiemposGruposuma3: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'suma3'
+      Size = 50
+      Calculated = True
+    end
+    object qTiemposGruposuma4: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'suma4'
+      Size = 50
+      Calculated = True
+    end
+  end
+  object dsTiemposGrupo: TDataSource
+    DataSet = qTiemposGrupo
+    Left = 831
+    Top = 284
+  end
+  object qReporte: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsIndice
+    SQL.Strings = (
+      
+        'SELECT R.TELEFONO, R.DESCRIPCION, R.NOMBREINFORMANTE FROM REPORT' +
+        'E R'
+      'WHERE CODIGOREPORTE = :CODIGOREPORTE'
+      ' ')
+    Left = 397
+    Top = 205
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOREPORTE'
+        ParamType = ptUnknown
+      end>
+    object qReporteDireccionCalculada: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'DireccionCalculada'
+      Size = 80
+      Calculated = True
+    end
+    object qReporteTELEFONO: TStringField
+      FieldName = 'TELEFONO'
+      Origin = 'REPORTE.TELEFONO'
+      Size = 10
+    end
+    object qReporteNOMBREINFORMANTE: TStringField
+      FieldName = 'NOMBREINFORMANTE'
+      Origin = 'REPORTE.NOMBREINFORMANTE'
+      Size = 40
+    end
+    object qReporteDESCRIPCION: TMemoField
+      FieldName = 'DESCRIPCION'
+      Origin = 'REPORTE.DESCRIPCION'
+      BlobType = ftMemo
+      Size = 400
+    end
+  end
+  object qODTDia: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsIndice
+    SQL.Strings = (
+      'SELECT OD.IMPRESOODT, OD.OBSERVACION1, OD.CONSECUTIVO,'
+      'OD.CODIGOODT'
+      'FROM ODTDIA OD, ODTREPORTE ODR'
+      'WHERE OD.CODIGOODT = ODR.CODIGOODT'
+      'AND OD.CONSECUTIVO = ODR.CONSECUTIVO'
+      'AND ODR.CODIGOODT = :CODIGOODT'
+      'AND ODR.CODIGOREPORTE = :CODIGOREPORTE')
+    Left = 637
+    Top = 205
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CODIGOREPORTE'
+        ParamType = ptUnknown
+      end>
+    object qODTDiaIMPRESOODT: TStringField
+      FieldName = 'IMPRESOODT'
+      Origin = 'ODTDIA.IMPRESOODT'
+      Size = 9
+    end
+    object qODTDiaOBSERVACION1: TStringField
+      FieldName = 'OBSERVACION1'
+      Origin = 'ODTDIA.OBSERVACION1'
+      Size = 250
+    end
+  end
+  object qTraslado: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsIndice
+    SQL.Strings = (
+      'SELECT R1.CODIGOADMINISTRATIVO, A.NOMBRECATEGORIA FROM'
+      'REPORTE R1, REPORTE R2, ADMINISTRATIVO A'
+      'WHERE R1.REPORTEPADRE IS NOT NULL'
+      'AND R2.CODIGOREPORTE = R1.REPORTEPADRE'
+      'AND R2.CODIGOADMINISTRATIVO <> R1.CODIGOADMINISTRATIVO'
+      'AND R1.REPORTEPADRE = :CODIGOREPORTE'
+      'AND A.CODIGOADMINISTRATIVO = R1.CODIGOADMINISTRATIVO'
+      ' ')
+    Left = 717
+    Top = 205
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOREPORTE'
+        ParamType = ptUnknown
+      end>
+    object qTrasladoCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'REPORTE.CODIGOADMINISTRATIVO'
+    end
+    object qTrasladoNOMBRECATEGORIA: TStringField
+      FieldName = 'NOMBRECATEGORIA'
+      Origin = 'ADMINISTRATIVO.NOMBRECATEGORIA'
+      Size = 80
+    end
+  end
+  object qCIG: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsIndice
+    SQL.Strings = (
+      'SELECT NIVEL, CIUDAD, BARRIO'
+      'FROM NOMBREBARRIO'
+      'WHERE CODIGOGEOGRAFICO = :CIGDANO'
+      'AND NIVEL > 4'
+      'UNION'
+      'SELECT NIVEL, BARRIO, '#39' '#39
+      'FROM NOMBREBARRIO'
+      'WHERE CODIGOGEOGRAFICO = :CIGDANO'
+      'AND NIVEL <= 4')
+    Left = 781
+    Top = 205
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CIGDANO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CIGDANO'
+        ParamType = ptUnknown
+      end>
+    object qCIGNIVEL: TFloatField
+      FieldName = 'NIVEL'
+    end
+    object qCIGCIUDAD: TStringField
+      FieldName = 'CIUDAD'
+      Size = 80
+    end
+    object qCIGBARRIO: TStringField
+      FieldName = 'BARRIO'
+      Size = 80
+    end
+  end
+  object qDir_Reporte: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsIndice
+    SQL.Strings = (
+      
+        'select substr(dir_reporte(:CODIGOREPORTE),1,100) AS DIRECCION fr' +
+        'om dual'
+      ' ')
+    Left = 461
+    Top = 357
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOREPORTE'
+        ParamType = ptUnknown
+      end>
+  end
+  object qMaterialResumen: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT PM.CODIGOMATERIAL, SUM(CANTIDADSOLICITADA), SUM(CANTIDADC' +
+        'ONSUMIDA),'
+      
+        'SUM(CANTIDADENTREGADA), SUM(CANTIDADREINTEGRADABUENA), SUM(CANTI' +
+        'DADREINTEGRADAMALA),'
+      'SUM(CANTIDADRETIRADABUENA), SUM(CANTIDADRETIRADAMALA)'
+      
+        'FROM ODTPRESMATE PM, ODTDIA OD, ODTREPORTE ODR,   ESTADISTICAREP' +
+        'ORTE T'
+      'WHERE PM.CODIGOODT = OD.CODIGOODT'
+      'AND PM.CONSECUTIVO = OD.CONSECUTIVO'
+      'AND OD.CODIGOODT = ODR.CODIGOODT'
+      'AND OD.CONSECUTIVO = ODR.CONSECUTIVO'
+      'AND ODR.CODIGOODT = T.CODIGOODT'
+      'AND ODR.CODIGOREPORTE = T.CODIGOREPORTE'
+      'GROUP BY PM.CODIGOMATERIAL'
+      '')
+    Left = 221
+    Top = 341
+    object qMaterialResumenCODIGOMATERIAL: TFloatField
+      FieldName = 'CODIGOMATERIAL'
+      Origin = 'ODTPRESMATE.CODIGOMATERIAL'
+    end
+    object qMaterialResumenSUMCANTIDADSOLICITADA: TFloatField
+      FieldName = 'SUM(CANTIDADSOLICITADA)'
+      Origin = 'ODTPRESMATE.CANTIDADSOLICITADA'
+    end
+    object qMaterialResumenSUMCANTIDADCONSUMIDA: TFloatField
+      FieldName = 'SUM(CANTIDADCONSUMIDA)'
+      Origin = 'ODTPRESMATE.CANTIDADCONSUMIDA'
+    end
+    object qMaterialResumenSUMCANTIDADENTREGADA: TFloatField
+      FieldName = 'SUM(CANTIDADENTREGADA)'
+      Origin = 'ODTPRESMATE.CANTIDADENTREGADA'
+    end
+    object qMaterialResumenSUMCANTIDADREINTEGRADABUENA: TFloatField
+      FieldName = 'SUM(CANTIDADREINTEGRADABUENA)'
+      Origin = 'ODTPRESMATE.CANTIDADREINTEGRADABUENA'
+    end
+    object qMaterialResumenSUMCANTIDADREINTEGRADAMALA: TFloatField
+      FieldName = 'SUM(CANTIDADREINTEGRADAMALA)'
+      Origin = 'ODTPRESMATE.CANTIDADREINTEGRADAMALA'
+    end
+    object qMaterialResumenSUMCANTIDADRETIRADABUENA: TFloatField
+      FieldName = 'SUM(CANTIDADRETIRADABUENA)'
+      Origin = 'ODTPRESMATE.CANTIDADRETIRADABUENA'
+    end
+    object qMaterialResumenSUMCANTIDADRETIRADAMALA: TFloatField
+      FieldName = 'SUM(CANTIDADRETIRADAMALA)'
+      Origin = 'ODTPRESMATE.CANTIDADRETIRADAMALA'
+    end
+    object qMaterialResumenNombreMaterial: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NombreMaterial'
+      LookupDataSet = qNombreMaterial
+      LookupKeyFields = 'CODIGOMATERIAL'
+      LookupResultField = 'NOMBREMATERIAL'
+      KeyFields = 'CODIGOMATERIAL'
+      Size = 100
+      Lookup = True
+    end
+    object qMaterialResumenNombreUnidad: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NombreUnidad'
+      LookupDataSet = qNombreMaterial
+      LookupKeyFields = 'CODIGOMATERIAL'
+      LookupResultField = 'CODIGOUNIDAD'
+      KeyFields = 'CODIGOMATERIAL'
+      Size = 3
+      Lookup = True
+    end
+  end
+  object dsMaterialResumen: TDataSource
+    DataSet = qMaterialResumen
+    Left = 221
+    Top = 397
+  end
+  object qNombreMaterial: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOMATERIAL, NOMBREMATERIAL,'
+      'CODIGOUNIDAD, VALORUNITARIO'
+      'FROM MATERIALESSA')
+    Left = 341
+    Top = 357
+    object qNombreMaterialCODIGOMATERIAL: TFloatField
+      FieldName = 'CODIGOMATERIAL'
+      Origin = 'MATERIALESSA.CODIGOMATERIAL'
+    end
+    object qNombreMaterialNOMBREMATERIAL: TStringField
+      FieldName = 'NOMBREMATERIAL'
+      Origin = 'MATERIALESSA.NOMBREMATERIAL'
+      Size = 100
+    end
+    object qNombreMaterialCODIGOUNIDAD: TStringField
+      FieldName = 'CODIGOUNIDAD'
+      Origin = 'MATERIALESSA.CODIGOUNIDAD'
+      Size = 2
+    end
+    object qNombreMaterialVALORUNITARIO: TFloatField
+      FieldName = 'VALORUNITARIO'
+      Origin = 'MATERIALESSA.VALORUNITARIO'
+    end
+  end
+  object qODTs: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT COUNT(DISTINCT CODIGOODT)  AS TOTALODTS'
+      'FROM  ESTADISTICAREPORTE')
+    Left = 661
+    Top = 405
+    object qODTsTOTALODTS: TFloatField
+      FieldName = 'TOTALODTS'
+      Origin = 'TEMP_ODT1.CODIGOODT'
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = '*.txt|*.txt'
+    Left = 909
+    Top = 133
+  end
+  object pmExportarListadoReportes: TPopupMenu
+    Left = 69
+    Top = 189
+    object MenuItem2: TMenuItem
+      Caption = 'Listado Completo Excel'
+      OnClick = ListadoCompletoExcel1Click
+    end
+  end
+  object pmExportarListadoMateriales: TPopupMenu
+    Left = 549
+    Top = 141
+    object ExportarArchivoTexto: TMenuItem
+      Caption = 'Exportar a Archivo de Texto'
+      OnClick = ExportarArchivoTextoClick
+    end
+  end
+  object CVS1: TCVS
+    FileFormat = ffCVS
+    Header = True
+    Left = 542
+    Top = 219
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = 'txt'
+    Filter = 'Archivo Texto|*.txt'
+    Title = 'Salvar Lista'
+    Left = 593
+    Top = 177
+  end
+  object pmExportarResumenMoviles: TPopupMenu
+    Left = 389
+    Top = 141
+    object ExportarResumenMovilesExcel: TMenuItem
+      Caption = 'Exportar Resumen  a Excel'
+      OnClick = ExportarResumenMovilesExcelClick
+    end
+    object ExportarImgenes1: TMenuItem
+      Caption = 'Exportar Imágenes'
+      OnClick = ExportarImgenes1Click
+    end
+  end
+  object pmExportarResumenTiempos: TPopupMenu
+    Left = 229
+    Top = 125
+    object ExportarResumenTiemposExcel: TMenuItem
+      Caption = 'Exportar Resumen  a Excel'
+      OnClick = ExportarResumenExcelClick
+    end
+    object ExportarImagenes: TMenuItem
+      Caption = 'Exportar Imágenes'
+      OnClick = ExportarImagenesClick
+    end
+  end
+  object dsGrupoTrabajo: TDataSource
+    DataSet = qGrupoTrabajo
+    Left = 488
+    Top = 528
+  end
+  object qGrupoTrabajo: TQuery
+    DatabaseName = 'BaseDato'
+    DataSource = dsCIA
+    SQL.Strings = (
+      'SELECT CODIGOADMINISTRATIVO, '
+      'CODIGOGRUPOTRABAJO, NOMBREGRUPOTRABAJO'
+      'FROM GRUPOTRABAJO'
+      'WHERE CODIGOADMINISTRATIVO =:CODIGOADMINISTRATIVO')
+    Left = 496
+    Top = 472
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end>
+    object qGrupoTrabajoCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'GRUPOTRABAJO.CODIGOADMINISTRATIVO'
+    end
+    object qGrupoTrabajoCODIGOGRUPOTRABAJO: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.CODIGOGRUPOTRABAJO'
+    end
+    object qGrupoTrabajoNOMBREGRUPOTRABAJO: TStringField
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+  end
+  object qCIA: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'select codigoadministrativo, nombrecategoria from administrativo' +
+        ' where codigoadministrativo >0'
+      'order by nombrecategoria')
+    Left = 48
+    Top = 296
+    object qCIACODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'ADMINISTRATIVO.CODIGOADMINISTRATIVO'
+    end
+    object qCIANOMBRECATEGORIA: TStringField
+      FieldName = 'NOMBRECATEGORIA'
+      Origin = 'ADMINISTRATIVO.NOMBRECATEGORIA'
+      Size = 80
+    end
+  end
+  object dsCIA: TDataSource
+    DataSet = qCIA
+    Left = 48
+    Top = 352
+  end
+  object Query1: TQuery
+    DatabaseName = 'basedato'
+    SQL.Strings = (
+      
+        'select codigoadministrativo, nombrecategoria from administrativo' +
+        ' where codigoadministrativo >0'
+      'and estado = '#39'A'#39
+      'order by nombrecategoria')
+    Left = 109
+    Top = 301
+  end
+  object DataSource1: TDataSource
+    DataSet = Query1
+    Left = 117
+    Top = 349
+  end
+  object tcia: tdMemTable
+    FieldDefs = <
+      item
+        Name = 'CodigoAdministrativo'
+        DataType = ftInteger
+      end
+      item
+        Name = 'CodigoGrupoTrabajo'
+        DataType = ftFloat
+      end>
+    StoreDefs = True
+    TableName = 'REPORTETemp'
+    Left = 200
+    Top = 488
+    object tciaCodigoAdministrativo: TIntegerField
+      FieldName = 'CodigoAdministrativo'
+    end
+    object tciaCodigoGrupoTrabajo: TFloatField
+      FieldName = 'CodigoGrupoTrabajo'
+    end
+  end
+  object dstcia: TDDataSource
+    AutoEdit = False
+    DataSet = tcia
+    Left = 263
+    Top = 518
+  end
+end

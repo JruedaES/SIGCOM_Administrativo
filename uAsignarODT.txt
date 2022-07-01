@@ -1,0 +1,349 @@
+object FAsignarODT: TFAsignarODT
+  Left = 453
+  Top = 177
+  BorderStyle = bsToolWindow
+  Caption = 'Asignar Reporte a ODT'
+  ClientHeight = 270
+  ClientWidth = 647
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 229
+    Width = 647
+    Height = 41
+    Align = alBottom
+    TabOrder = 0
+    object bbAceptar: TBitBtn
+      Left = 474
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'Aceptar'
+      TabOrder = 0
+      OnClick = bbAceptarClick
+      Kind = bkOK
+    end
+    object bbCancelar: TBitBtn
+      Left = 562
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'Cancelar'
+      TabOrder = 1
+      Kind = bkCancel
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 0
+    Width = 647
+    Height = 229
+    Align = alClient
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 5
+      Top = 18
+      Width = 63
+      Height = 13
+      Caption = 'Número ODT'
+    end
+    object SBBuscar: TSpeedButton
+      Left = 158
+      Top = 11
+      Width = 23
+      Height = 23
+      Hint = 'Busca Dato en Lista'
+      Flat = True
+      Glyph.Data = {
+        EE000000424DEE000000000000007600000028000000100000000F0000000100
+        0400000000007800000000000000000000001000000010000000000000000000
+        8000008000000080800080000000800080008080000080808000C0C0C0000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+        888800000888880000080F000888880F00080F000888880F0008000000080000
+        000800F000000F00000800F000800F00000800F000800F000008800000000000
+        0088880F00080F000888880000080000088888800088800088888880F08880F0
+        888888800088800088888888888888888888}
+      OnClick = SBBuscarClick
+    end
+    object lbGT: TLabel
+      Left = 194
+      Top = 18
+      Width = 83
+      Height = 13
+      Caption = 'Grupo de Trabajo'
+      Visible = False
+    end
+    object EdNumeroODT: TEdit
+      Left = 72
+      Top = 14
+      Width = 83
+      Height = 21
+      TabOrder = 0
+    end
+    object dbgListaOdtPadre: TRxDBGrid
+      Left = 1
+      Top = 42
+      Width = 645
+      Height = 186
+      Align = alBottom
+      DataSource = dsodt
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = []
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
+      ParentFont = False
+      TabOrder = 1
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      OnDblClick = dbgListaOdtPadreDblClick
+      Columns = <
+        item
+          Color = clAqua
+          Expanded = False
+          FieldName = 'CODIGOODT'
+          Title.Alignment = taCenter
+          Title.Caption = 'Código'
+          Width = 70
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREESTADOODT'
+          Title.Alignment = taCenter
+          Title.Caption = 'Estado ODT'
+          Width = 90
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGOADMINISTRATIVO'
+          Title.Alignment = taCenter
+          Title.Caption = 'CIA'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAEMISION'
+          Title.Alignment = taCenter
+          Title.Caption = 'Fecha Emisión'
+          Width = 94
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAAPROBACION'
+          Title.Alignment = taCenter
+          Title.Caption = 'Fecha de Aprobación'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAASIGNACION'
+          Title.Alignment = taCenter
+          Title.Caption = 'Fecha de Asignación'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRELABOR'
+          Title.Alignment = taCenter
+          Title.Caption = 'Labor'
+          Width = 161
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRETIPOTAREA'
+          Title.Alignment = taCenter
+          Title.Caption = 'Tipo Tarea'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGOAPROBADO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Aprobado'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGOEJECUTOR'
+          Title.Alignment = taCenter
+          Title.Caption = 'Ejecutado'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGOREVISADO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Revisado'
+          Visible = False
+        end>
+    end
+    object dblcbGrupoTrabajo: TDBLookupComboBox
+      Left = 280
+      Top = 14
+      Width = 179
+      Height = 21
+      DataField = 'CODIGOGRUPOTRABAJO'
+      KeyField = 'CODIGOGRUPOTRABAJO'
+      ListField = 'NOMBREGRUPOTRABAJO'
+      ListSource = dsGrupoTrabajo
+      TabOrder = 2
+      Visible = False
+    end
+  end
+  object qOdt: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT DISTINCT'
+      'O.CODIGOODT,'
+      'EO.NOMBREESTADOODT,'
+      'O.CODIGOADMINISTRATIVO,'
+      'O.FECHAEMISION,'
+      'O.FECHAAPROBACION,'
+      'O.FECHAASIGNACION,'
+      'L.NOMBRELABOR,'
+      'TT.NOMBRETIPOTAREA,'
+      'O.CODIGOAPROBADO, '
+      'O.CODIGOEJECUTOR,'
+      'O.CODIGOREVISADO,'
+      'O.ASOCIARREPORTESDANO,'
+      'O.CODIGOCOORDINACIONGRUPOTRABAJO'
+      'FROM ODT O, ESTADOODT EO, LABOR L , TIPOTAREA TT'
+      'WHERE O.CODIGOADMINISTRATIVO=:CODIGOADMINISTRATIVO'
+      'AND O.CODIGOESTADOODT=EO.CODIGOESTADOODT '
+      'AND O.CODIGOLABOR = L.CODIGOLABOR'
+      'AND O.CODIGOTIPOTAREA = TT.CODIGOTIPOTAREA'
+      'AND O.CODIGOESTADOODT<>6'
+      'AND CODIGOODT LIKE   :TEXTO'
+      'ORDER BY O.FECHAEMISION DESC')
+    Left = 112
+    Top = 88
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'codigoadministrativo'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'texto'
+        ParamType = ptUnknown
+      end>
+    object qOdtCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'ODT.CODIGOODT'
+    end
+    object qOdtNOMBREESTADOODT: TStringField
+      FieldName = 'NOMBREESTADOODT'
+      Origin = 'ESTADOODT.NOMBREESTADOODT'
+      Size = 30
+    end
+    object qOdtCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'ODT.CODIGOADMINISTRATIVO'
+    end
+    object qOdtFECHAEMISION: TDateTimeField
+      FieldName = 'FECHAEMISION'
+      Origin = 'ODT.FECHAEMISION'
+    end
+    object qOdtFECHAAPROBACION: TDateTimeField
+      FieldName = 'FECHAAPROBACION'
+      Origin = 'ODT.FECHAAPROBACION'
+    end
+    object qOdtFECHAASIGNACION: TDateTimeField
+      FieldName = 'FECHAASIGNACION'
+      Origin = 'ODT.FECHAASIGNACION'
+    end
+    object qOdtNOMBRELABOR: TStringField
+      FieldName = 'NOMBRELABOR'
+      Origin = 'LABOR.NOMBRELABOR'
+      Size = 80
+    end
+    object qOdtNOMBRETIPOTAREA: TStringField
+      FieldName = 'NOMBRETIPOTAREA'
+      Origin = 'TIPOTAREA.NOMBRETIPOTAREA'
+      Size = 30
+    end
+    object qOdtCODIGOAPROBADO: TFloatField
+      FieldName = 'CODIGOAPROBADO'
+      Origin = 'ODT.CODIGOAPROBADO'
+    end
+    object qOdtCODIGOEJECUTOR: TFloatField
+      FieldName = 'CODIGOEJECUTOR'
+      Origin = 'ODT.CODIGOEJECUTOR'
+    end
+    object qOdtCODIGOREVISADO: TFloatField
+      FieldName = 'CODIGOREVISADO'
+      Origin = 'ODT.CODIGOREVISADO'
+    end
+    object qOdtASOCIARREPORTESDANO: TStringField
+      FieldName = 'ASOCIARREPORTESDANO'
+      Origin = 'ODT.ASOCIARREPORTESDANO'
+      Size = 1
+    end
+    object qOdtCODIGOCOORDINACIONGRUPOTRABAJO: TFloatField
+      FieldName = 'CODIGOCOORDINACIONGRUPOTRABAJO'
+      Origin = 'ODT.CODIGOCOORDINACIONGRUPOTRABAJO'
+    end
+  end
+  object dsodt: TDataSource
+    DataSet = qOdt
+    Left = 112
+    Top = 152
+  end
+  object qGrupoTrabajo: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT CODIGOGRUPOTRABAJO, NOMBREGRUPOTRABAJO'
+      'FROM GRUPOTRABAJO'
+      'WHERE CODIGOADMINISTRATIVO=:CODIGOADMINISTRATIVO'
+      'AND ACTIVO = '#39'S'#39
+      'AND CODIGOSEDEOPERATIVA = :SEDEOPERATIVA'
+      ' ')
+    Left = 337
+    Top = 86
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'SEDEOPERATIVA'
+        ParamType = ptUnknown
+      end>
+    object qGrupoTrabajoCODIGOGRUPOTRABAJO: TFloatField
+      FieldName = 'CODIGOGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.CODIGOGRUPOTRABAJO'
+    end
+    object qGrupoTrabajoNOMBREGRUPOTRABAJO: TStringField
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Origin = 'GRUPOTRABAJO.NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+  end
+  object dsGrupoTrabajo: TDataSource
+    DataSet = qGrupoTrabajo
+    Left = 339
+    Top = 142
+  end
+end

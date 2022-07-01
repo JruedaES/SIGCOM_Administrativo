@@ -1,0 +1,295 @@
+object fListaReportesODT: TfListaReportesODT
+  Left = 185
+  Top = 160
+  Width = 856
+  Height = 358
+  Caption = 'Listado de Reportes sin Asociar a ODT'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 280
+    Width = 848
+    Height = 46
+    Align = alBottom
+    TabOrder = 0
+    object Panel4: TPanel
+      Left = 535
+      Top = 1
+      Width = 312
+      Height = 44
+      Align = alRight
+      BevelOuter = bvNone
+      Caption = 'Panel4'
+      TabOrder = 0
+      object bbCancelar: TBitBtn
+        Left = 224
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = '&Cancelar'
+        TabOrder = 0
+        Kind = bkCancel
+      end
+      object bbAceptar: TBitBtn
+        Left = 128
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = '&Aceptar'
+        ModalResult = 1
+        TabOrder = 1
+        Glyph.Data = {
+          DE010000424DDE01000000000000760000002800000024000000120000000100
+          0400000000006801000000000000000000001000000010000000000000000000
+          80000080000000808000800000008000800080800000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333333333333333333333330000333333333333333333333333F33333333333
+          00003333344333333333333333388F3333333333000033334224333333333333
+          338338F3333333330000333422224333333333333833338F3333333300003342
+          222224333333333383333338F3333333000034222A22224333333338F338F333
+          8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+          33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+          0000333333333A222433333333333338F338F33300003333333333A222433333
+          333333338F338F33000033333333333A222433333333333338F338F300003333
+          33333333A222433333333333338F338F00003333333333333A22433333333333
+          3338F38F000033333333333333A223333333333333338F830000333333333333
+          333A333333333333333338330000333333333333333333333333333333333333
+          0000}
+        NumGlyphs = 2
+      end
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 0
+    Width = 848
+    Height = 280
+    Align = alClient
+    TabOrder = 1
+    object DBGrid1: TRxDBGrid
+      Left = 1
+      Top = 1
+      Width = 846
+      Height = 188
+      Align = alClient
+      DataSource = DataSource1
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      OnDblClick = DBGrid1DblClick
+      OnTitleClick = DBGrid1TitleClick
+      MultiSelect = True
+      OnMouseMove = DBGrid1MouseMove
+      Columns = <
+        item
+          Color = clInfoBk
+          Expanded = False
+          FieldName = 'CODIGOREPORTE'
+          Title.Alignment = taCenter
+          Title.Caption = 'Código'
+          Visible = True
+        end
+        item
+          Color = clAqua
+          Expanded = False
+          FieldName = 'CODIGOADMINISTRATIVO'
+          Title.Alignment = taCenter
+          Title.Caption = 'CIA'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'TIPOINFORMANTE'
+          Title.Alignment = taCenter
+          Title.Caption = 'Tipo Informante'
+          Width = 167
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREGRUPOTRABAJO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Grupo de Trabajo'
+          Width = 147
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBREESTADOREPORTE'
+          Title.Alignment = taCenter
+          Title.Caption = 'Estado Reporte'
+          Width = 100
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DIRECCIONDANO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Dirección Daño'
+          Width = 200
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRECLASEREPORTE'
+          Title.Alignment = taCenter
+          Title.Caption = 'Clase Reporte'
+          Width = 100
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRETIPOREPORTE'
+          Title.Alignment = taCenter
+          Title.Caption = 'Tipo Reporte'
+          Width = 100
+          Visible = True
+        end>
+    end
+    object DBMemo1: TDBMemo
+      Left = 1
+      Top = 204
+      Width = 846
+      Height = 75
+      Align = alBottom
+      DataField = 'DESCRIPCION'
+      DataSource = DataSource1
+      TabOrder = 1
+    end
+    object Panel3: TPanel
+      Left = 1
+      Top = 189
+      Width = 846
+      Height = 15
+      Align = alBottom
+      BevelOuter = bvNone
+      Caption = 'Descripción'
+      Color = clSilver
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
+  object qListaReporte: TQuery
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT R.CODIGOREPORTE, TI.NOMBREINFORMANTE AS TIPOINFORMANTE,'
+      'R.CODIGOESTADOREPORTE, ER.NOMBREESTADOREPORTE,'
+      'R.DIRECCIONDANO, CR.NOMBRECLASEREPORTE, '
+      'TR.NOMBRETIPOREPORTE, R.NOMBREINFORMANTE, R.DESCRIPCION,'
+      
+        'R.FECHAHORADICTADO, R.FECHAHORALLEGADA, R.FECHAHORAATENCION, R.C' +
+        'ODIGOADMINISTRATIVO,'
+      'G.NOMBREGRUPOTRABAJO'
+      'FROM REPORTE R, INFORMANTE TI, ESTADOREPORTE ER,'
+      'CLASEREPORTE CR, TIPOREPORTE TR, GRUPOTRABAJO G'
+      'WHERE (R.CODIGOINFORMANTE = TI.CODIGOINFORMANTE) AND'
+      '(R.CODIGOESTADOREPORTE=ER.CODIGOESTADOREPORTE) AND'
+      '(CR.CODIGOCLASEREPORTE = R.CODIGOCLASEREPORTE) AND'
+      '(TR.CODIGOTIPOREPORTE = R.CODIGOTIPOREPORTE) AND'
+      
+        '(R.CODIGOREPORTE NOT IN (SELECT DISTINCT CODIGOREPORTE FROM ODTR' +
+        'EPORTE)) AND'
+      '(G.CODIGOGRUPOTRABAJO (+)= R.CODIGOGRUPOTRABAJO) AND'
+      '(G.CODIGOADMINISTRATIVO (+)= R.CODIGOADMINISTRATIVO) '
+      
+        'AND (R.CODIGOADMINISTRATIVO=:CODIGOADMINISTRATIVO) AND (R.CODIGO' +
+        'ESTADOREPORTE NOT IN('#39'4'#39','#39'5'#39','#39'8'#39','#39'9'#39'))'
+      'ORDER BY R.CODIGOREPORTE DESC')
+    Left = 40
+    Top = 272
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end>
+    object qListaReporteCODIGOREPORTE: TFloatField
+      FieldName = 'CODIGOREPORTE'
+      Origin = 'REPORTE.CODIGOREPORTE'
+    end
+    object qListaReporteTIPOINFORMANTE: TStringField
+      FieldName = 'TIPOINFORMANTE'
+      Origin = 'INFORMANTE.NOMBREINFORMANTE'
+      Size = 40
+    end
+    object qListaReporteCODIGOESTADOREPORTE: TStringField
+      FieldName = 'CODIGOESTADOREPORTE'
+      Origin = 'REPORTE.CODIGOESTADOREPORTE'
+      Size = 1
+    end
+    object qListaReporteNOMBREESTADOREPORTE: TStringField
+      FieldName = 'NOMBREESTADOREPORTE'
+      Origin = 'ESTADOREPORTE.NOMBREESTADOREPORTE'
+      Size = 30
+    end
+    object qListaReporteDIRECCIONDANO: TStringField
+      FieldName = 'DIRECCIONDANO'
+      Origin = 'REPORTE.DIRECCIONDANO'
+      Size = 40
+    end
+    object qListaReporteNOMBRECLASEREPORTE: TStringField
+      FieldName = 'NOMBRECLASEREPORTE'
+      Origin = 'CLASEREPORTE.NOMBRECLASEREPORTE'
+      Size = 60
+    end
+    object qListaReporteNOMBRETIPOREPORTE: TStringField
+      FieldName = 'NOMBRETIPOREPORTE'
+      Origin = 'TIPOREPORTE.NOMBRETIPOREPORTE'
+      Size = 30
+    end
+    object qListaReporteNOMBREINFORMANTE: TStringField
+      FieldName = 'NOMBREINFORMANTE'
+      Origin = 'REPORTE.NOMBREINFORMANTE'
+      Size = 40
+    end
+    object qListaReporteFECHAHORADICTADO: TDateTimeField
+      FieldName = 'FECHAHORADICTADO'
+      Origin = 'REPORTE.FECHAHORADICTADO'
+    end
+    object qListaReporteFECHAHORALLEGADA: TDateTimeField
+      FieldName = 'FECHAHORALLEGADA'
+      Origin = 'REPORTE.FECHAHORALLEGADA'
+    end
+    object qListaReporteFECHAHORAATENCION: TDateTimeField
+      FieldName = 'FECHAHORAATENCION'
+      Origin = 'REPORTE.FECHAHORAATENCION'
+    end
+    object qListaReporteCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'REPORTE.CODIGOADMINISTRATIVO'
+    end
+    object qListaReporteNOMBREGRUPOTRABAJO: TStringField
+      FieldName = 'NOMBREGRUPOTRABAJO'
+      Size = 30
+    end
+    object qListaReporteDESCRIPCION: TMemoField
+      FieldName = 'DESCRIPCION'
+      BlobType = ftMemo
+      Size = 400
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = qListaReporte
+    Left = 104
+    Top = 288
+  end
+end

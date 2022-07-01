@@ -1,0 +1,107 @@
+object fInformacionOdtHija: TfInformacionOdtHija
+  Left = 349
+  Top = 226
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsToolWindow
+  Caption = 'Informacion Odt'
+  ClientHeight = 116
+  ClientWidth = 245
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 10
+    Top = 12
+    Width = 35
+    Height = 13
+    Caption = 'ODT :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clTeal
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 7
+    Top = 34
+    Width = 71
+    Height = 13
+    Caption = 'Tipo Tarea :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clTeal
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object DBEdit1: TDBEdit
+    Left = 47
+    Top = 8
+    Width = 198
+    Height = 21
+    DataField = 'CODIGO'
+    DataSource = dsOdt
+    TabOrder = 0
+  end
+  object DBEdit2: TDBEdit
+    Left = 80
+    Top = 32
+    Width = 164
+    Height = 21
+    DataField = 'NOMBRETIPOTAREA'
+    DataSource = dsOdt
+    TabOrder = 1
+  end
+  object DBMemo1: TDBMemo
+    Left = 10
+    Top = 56
+    Width = 234
+    Height = 55
+    DataField = 'MOTIVOS'
+    DataSource = dsOdt
+    TabOrder = 2
+  end
+  object qOdt: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'select o.codigoodt || '#39'-'#39'|| od.consecutivo as codigo,t.descripci' +
+        'on,tt.nombretipotarea,'
+      'od.codigotipotrabajoodt,o.motivos,od.observacion1'
+      'from odt o,odtdia od,tipotrabajoodt t,tipotarea tt'
+      'where od.codigoodt=o.codigoodt'
+      'and t.codigotipotrabajoodt(+)=od.codigotipotrabajoodt'
+      'and tt.codigotipotarea(+)=o.codigotipotarea'
+      'and od.codigoodt=:codigoodt'
+      'and od.consecutivo=:consecutivo')
+    Left = 136
+    Top = 16
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'codigoodt'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'consecutivo'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsOdt: TDataSource
+    DataSet = qOdt
+    Left = 192
+    Top = 16
+  end
+end

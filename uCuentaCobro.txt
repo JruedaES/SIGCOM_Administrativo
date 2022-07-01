@@ -1,0 +1,1058 @@
+object fCuentaCobro: TfCuentaCobro
+  Left = 274
+  Top = 41
+  Width = 577
+  Height = 623
+  Hint = 'Cargar datos del cliente desde el Reporte'
+  BorderIcons = [biSystemMenu]
+  Caption = 'Cuenta de Cobro'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object GroupBox1: TGroupBox
+    Left = 8
+    Top = 226
+    Width = 545
+    Height = 149
+    Caption = 'Actividades'
+    TabOrder = 1
+    object DBGridActividad: TDBGrid
+      Left = 7
+      Top = 16
+      Width = 530
+      Height = 98
+      DataSource = dsDetalleActividad
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'CODIGOODTACTIVIDADCOBRO'
+          Title.Alignment = taCenter
+          Title.Caption = 'Código'
+          Width = 39
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NombreActividad'
+          Title.Alignment = taCenter
+          Title.Caption = 'Nombre Actividad'
+          Width = 340
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'ESNORMAL'
+          PickList.Strings = (
+            'S'
+            'N')
+          Title.Alignment = taCenter
+          Title.Caption = 'Normal'
+          Width = 40
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'ValorParcial'
+          Title.Alignment = taCenter
+          Title.Caption = 'Valor'
+          Width = 76
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'PROCESADO'
+          Title.Caption = 'Procesado'
+          Visible = True
+        end>
+    end
+    object DBNavigator2: TDBNavigator
+      Left = 6
+      Top = 117
+      Width = 531
+      Height = 18
+      DataSource = dsDetalleActividad
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+      Enabled = False
+      TabOrder = 1
+      TabStop = True
+    end
+  end
+  object GroupBox3: TGroupBox
+    Left = 7
+    Top = 385
+    Width = 545
+    Height = 161
+    Caption = 'Materiales'
+    TabOrder = 2
+    object DBGridMaterial: TDBGrid
+      Left = 6
+      Top = 21
+      Width = 528
+      Height = 109
+      DataSource = dsDetalleMaterial
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      OnEditButtonClick = DBGridMaterialEditButtonClick
+      Columns = <
+        item
+          ButtonStyle = cbsEllipsis
+          Expanded = False
+          FieldName = 'CODIGOMATERIAL'
+          Title.Alignment = taCenter
+          Title.Caption = 'Código'
+          Width = 45
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NombreMaterial'
+          Title.Alignment = taCenter
+          Title.Caption = 'Nombre'
+          Width = 187
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CANTIDAD'
+          Title.Alignment = taCenter
+          Title.Caption = 'Cantidad'
+          Width = 100
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'VALORMATERIAL'
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Valor'
+          Width = 84
+          Visible = True
+        end>
+    end
+    object DBNavigator3: TDBNavigator
+      Left = 8
+      Top = 134
+      Width = 522
+      Height = 18
+      DataSource = dsDetalleMaterial
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+      Enabled = False
+      TabOrder = 1
+    end
+  end
+  object bbAceptar: TBitBtn
+    Left = 472
+    Top = 554
+    Width = 75
+    Height = 25
+    Caption = '&Cerrar'
+    ModalResult = 1
+    TabOrder = 3
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      0400000000000001000000000000000000001000000010000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00330000000000
+      03333377777777777F333301BBBBBBBB033333773F3333337F3333011BBBBBBB
+      0333337F73F333337F33330111BBBBBB0333337F373F33337F333301110BBBBB
+      0333337F337F33337F333301110BBBBB0333337F337F33337F333301110BBBBB
+      0333337F337F33337F333301110BBBBB0333337F337F33337F333301110BBBBB
+      0333337F337F33337F333301110BBBBB0333337F337FF3337F33330111B0BBBB
+      0333337F337733337F333301110BBBBB0333337F337F33337F333301110BBBBB
+      0333337F3F7F33337F333301E10BBBBB0333337F7F7F33337F333301EE0BBBBB
+      0333337F777FFFFF7F3333000000000003333377777777777333}
+    NumGlyphs = 2
+  end
+  object bbCancelar: TBitBtn
+    Left = 149
+    Top = 556
+    Width = 75
+    Height = 25
+    Caption = '&Cancelar'
+    ModalResult = 2
+    TabOrder = 4
+    Visible = False
+    Glyph.Data = {
+      DE010000424DDE01000000000000760000002800000024000000120000000100
+      0400000000006801000000000000000000001000000010000000000000000000
+      80000080000000808000800000008000800080800000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      333333333333333333333333000033338833333333333333333F333333333333
+      0000333911833333983333333388F333333F3333000033391118333911833333
+      38F38F333F88F33300003339111183911118333338F338F3F8338F3300003333
+      911118111118333338F3338F833338F3000033333911111111833333338F3338
+      3333F8330000333333911111183333333338F333333F83330000333333311111
+      8333333333338F3333383333000033333339111183333333333338F333833333
+      00003333339111118333333333333833338F3333000033333911181118333333
+      33338333338F333300003333911183911183333333383338F338F33300003333
+      9118333911183333338F33838F338F33000033333913333391113333338FF833
+      38F338F300003333333333333919333333388333338FFF830000333333333333
+      3333333333333333333888330000333333333333333333333333333333333333
+      0000}
+    NumGlyphs = 2
+  end
+  object Panel1: TPanel
+    Left = 8
+    Top = 5
+    Width = 545
+    Height = 214
+    Caption = 'Panel1'
+    TabOrder = 0
+    object Bevel1: TBevel
+      Left = 8
+      Top = 11
+      Width = 148
+      Height = 87
+    end
+    object Label1: TLabel
+      Left = 16
+      Top = 20
+      Width = 23
+      Height = 13
+      Caption = 'ODT'
+    end
+    object Label2: TLabel
+      Left = 13
+      Top = 47
+      Width = 59
+      Height = 13
+      Caption = 'Consecutivo'
+    end
+    object Label3: TLabel
+      Left = 12
+      Top = 76
+      Width = 90
+      Height = 13
+      Caption = 'Consecutivo Cobro'
+    end
+    object Label7: TLabel
+      Left = 14
+      Top = 144
+      Width = 63
+      Height = 13
+      Caption = 'Observación:'
+    end
+    object DBEdit1: TDBEdit
+      Left = 106
+      Top = 17
+      Width = 45
+      Height = 21
+      DataField = 'CODIGOODT'
+      DataSource = dsODTCobro
+      Enabled = False
+      TabOrder = 0
+    end
+    object DBEdit2: TDBEdit
+      Left = 106
+      Top = 44
+      Width = 45
+      Height = 21
+      DataField = 'CONSECUTIVO'
+      DataSource = dsODTCobro
+      Enabled = False
+      TabOrder = 1
+    end
+    object DBEdit3: TDBEdit
+      Left = 106
+      Top = 72
+      Width = 45
+      Height = 21
+      DataField = 'CONSECUTIVOCOBRO'
+      DataSource = dsODTCobro
+      Enabled = False
+      TabOrder = 2
+    end
+    object btCargarDatosCliente: TBitBtn
+      Left = 10
+      Top = 108
+      Width = 147
+      Height = 28
+      Caption = 'Cargar datos del Cliente'
+      Enabled = False
+      TabOrder = 3
+      OnClick = btCargarDatosClienteClick
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        0400000000000001000000000000000000001000000010000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+        0000377777777777777707FFFFFFFFFFFF70773FF33333333F770F77FFFFFFFF
+        77F07F773FFFFFFF77F70FFF7700000000007F337777777777770FFFFF0BBBBB
+        BBB07F333F7F3FF33FF70FFF700B00BB00B07F3F777F77F377370F707F0BB0B0
+        0BB07F77337F37F77337007EEE0BB0B0BBB077FFFF7F37F7F3370777770EE000
+        EEE07777777F3777F3F7307EEE0E0E00E0E03773FF7F7377F73733707F0EE000
+        0EE03337737F377773373333700EEE00EEE03333377F3377FF373333330EEEE0
+        0EE03333337F33377F373333330EEEE00EE03333337F333773373333330EEEEE
+        EEE03333337FFFFFFFF733333300000000003333337777777777}
+      NumGlyphs = 2
+    end
+    object dbeObservacion: TDBEdit
+      Left = 13
+      Top = 163
+      Width = 524
+      Height = 21
+      DataField = 'OBSERVACION'
+      DataSource = dsODTCobro
+      TabOrder = 4
+    end
+    object DBNavigator1: TDBNavigator
+      Left = 14
+      Top = 187
+      Width = 522
+      Height = 22
+      DataSource = dsODTCobro
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+      TabOrder = 5
+    end
+    object GroupBox2: TGroupBox
+      Left = 162
+      Top = 5
+      Width = 378
+      Height = 145
+      Caption = 'Datos del Cliente'
+      TabOrder = 6
+      object Label10: TLabel
+        Left = 9
+        Top = 27
+        Width = 45
+        Height = 13
+        Caption = 'Dirección'
+      end
+      object SpeedButton1: TSpeedButton
+        Left = 346
+        Top = 23
+        Width = 23
+        Height = 21
+        Caption = '...'
+        OnClick = SpeedButton1Click
+      end
+      object Label4: TLabel
+        Left = 9
+        Top = 59
+        Width = 34
+        Height = 13
+        Caption = 'Cuenta'
+      end
+      object Label5: TLabel
+        Left = 201
+        Top = 59
+        Width = 38
+        Height = 13
+        Caption = 'Medidor'
+      end
+      object Label6: TLabel
+        Left = 9
+        Top = 90
+        Width = 36
+        Height = 13
+        Caption = 'Usuario'
+      end
+      object Label8: TLabel
+        Left = 9
+        Top = 122
+        Width = 58
+        Height = 13
+        Caption = 'Cedula o Nit'
+        OnClick = btCargarDatosClienteClick
+      end
+      object Label9: TLabel
+        Left = 198
+        Top = 123
+        Width = 46
+        Height = 13
+        Caption = '# Factura'
+        OnClick = btCargarDatosClienteClick
+      end
+      object dbeDireccion: TDBEdit
+        Left = 58
+        Top = 24
+        Width = 285
+        Height = 21
+        DataField = 'DireccionCalculada'
+        DataSource = dsODTCobro
+        TabOrder = 0
+      end
+      object dbeCuenta: TDBEdit
+        Left = 58
+        Top = 56
+        Width = 119
+        Height = 21
+        DataField = 'NUMEROCUENTA'
+        DataSource = dsODTCobro
+        TabOrder = 1
+      end
+      object dbeMedidor: TDBEdit
+        Left = 250
+        Top = 56
+        Width = 120
+        Height = 21
+        DataField = 'NUMEROMEDIDOR'
+        DataSource = dsODTCobro
+        TabOrder = 2
+      end
+      object dbeNombre: TDBEdit
+        Left = 58
+        Top = 87
+        Width = 312
+        Height = 21
+        CharCase = ecUpperCase
+        DataField = 'NOMBREUSUARIO'
+        DataSource = dsODTCobro
+        TabOrder = 3
+      end
+      object dbeCedula: TDBEdit
+        Left = 73
+        Top = 119
+        Width = 113
+        Height = 21
+        DataField = 'CEDULAUSUARIO'
+        DataSource = dsODTCobro
+        TabOrder = 4
+      end
+      object dbeFactura: TDBEdit
+        Left = 251
+        Top = 117
+        Width = 118
+        Height = 21
+        DataField = 'NUMEROVALE'
+        DataSource = dsODTCobro
+        TabOrder = 5
+      end
+    end
+  end
+  object qODTCobro: TQuery
+    Active = True
+    CachedUpdates = True
+    AfterInsert = qODTCobroAfterInsert
+    BeforeEdit = qODTCobroBeforeEdit
+    BeforePost = qODTCobroBeforePost
+    AfterPost = qODTCobroAfterPost
+    BeforeDelete = qODTCobroBeforeDelete
+    AfterDelete = qODTCobroAfterDelete
+    AfterScroll = qODTCobroAfterScroll
+    OnCalcFields = qODTCobroCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT * FROM ODTCOBRO'
+      'WHERE CODIGOODT=:CODIGOODT AND'
+      'CONSECUTIVO=:CONSECUTIVO')
+    UpdateObject = UpdODTCobro
+    Left = 816
+    Top = 70
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'CONSECUTIVO'
+        ParamType = ptUnknown
+      end>
+    object qODTCobroCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'ODTCOBRO.CODIGOODT'
+    end
+    object qODTCobroCONSECUTIVO: TFloatField
+      FieldName = 'CONSECUTIVO'
+      Origin = 'ODTCOBRO.CONSECUTIVO'
+    end
+    object qODTCobroCONSECUTIVOCOBRO: TFloatField
+      FieldName = 'CONSECUTIVOCOBRO'
+      Origin = 'ODTCOBRO.CONSECUTIVOCOBRO'
+    end
+    object qODTCobroNUMEROCUENTA: TFloatField
+      FieldName = 'NUMEROCUENTA'
+      Origin = 'ODTCOBRO.NUMEROCUENTA'
+      OnValidate = qODTCobroNUMEROCUENTAValidate
+    end
+    object qODTCobroNUMEROMEDIDOR: TFloatField
+      FieldName = 'NUMEROMEDIDOR'
+      Origin = 'ODTCOBRO.NUMEROMEDIDOR'
+      OnValidate = qODTCobroNUMEROMEDIDORValidate
+    end
+    object qODTCobroNOMBREUSUARIO: TStringField
+      FieldName = 'NOMBREUSUARIO'
+      Origin = 'ODTCOBRO.NOMBREUSUARIO'
+      Size = 30
+    end
+    object qODTCobroCODIGOTIPOVIA: TFloatField
+      FieldName = 'CODIGOTIPOVIA'
+      Origin = 'ODTCOBRO.CODIGOTIPOVIA'
+    end
+    object qODTCobroCODIGONOMBREVIA: TFloatField
+      FieldName = 'CODIGONOMBREVIA'
+      Origin = 'ODTCOBRO.CODIGONOMBREVIA'
+    end
+    object qODTCobroMODIFICADORVIA: TStringField
+      FieldName = 'MODIFICADORVIA'
+      Origin = 'ODTCOBRO.MODIFICADORVIA'
+      Size = 5
+    end
+    object qODTCobroDUPLICADOR: TFloatField
+      FieldName = 'DUPLICADOR'
+      Origin = 'ODTCOBRO.DUPLICADOR'
+    end
+    object qODTCobroMODIFICADORDUPLICADOR: TStringField
+      FieldName = 'MODIFICADORDUPLICADOR'
+      Origin = 'ODTCOBRO.MODIFICADORDUPLICADOR'
+      Size = 5
+    end
+    object qODTCobroNUMEROPUERTA: TFloatField
+      FieldName = 'NUMEROPUERTA'
+      Origin = 'ODTCOBRO.NUMEROPUERTA'
+    end
+    object qODTCobroCODIGOTIPOVERTICAL: TFloatField
+      FieldName = 'CODIGOTIPOVERTICAL'
+      Origin = 'ODTCOBRO.CODIGOTIPOVERTICAL'
+    end
+    object qODTCobroVERTICAL: TStringField
+      FieldName = 'VERTICAL'
+      Origin = 'ODTCOBRO.VERTICAL'
+      Size = 5
+    end
+    object qODTCobroCODIGOTIPOINTERIOR: TFloatField
+      FieldName = 'CODIGOTIPOINTERIOR'
+      Origin = 'ODTCOBRO.CODIGOTIPOINTERIOR'
+    end
+    object qODTCobroPISO: TStringField
+      FieldName = 'PISO'
+      Origin = 'ODTCOBRO.PISO'
+      Size = 5
+    end
+    object qODTCobroINTERIOR: TStringField
+      FieldName = 'INTERIOR'
+      Origin = 'ODTCOBRO.INTERIOR'
+      Size = 5
+    end
+    object qODTCobroCODIGOTIPOPREDIO: TStringField
+      FieldName = 'CODIGOTIPOPREDIO'
+      Origin = 'ODTCOBRO.CODIGOTIPOPREDIO'
+      Size = 3
+    end
+    object qODTCobroDESCRIPCIONTIPOPREDIO: TStringField
+      FieldName = 'DESCRIPCIONTIPOPREDIO'
+      Origin = 'ODTCOBRO.DESCRIPCIONTIPOPREDIO'
+      Size = 50
+    end
+    object qODTCobroDireccionCalculada: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'DireccionCalculada'
+      Size = 50
+      Calculated = True
+    end
+    object qODTCobroCODIGOGEOGRAFICO: TFloatField
+      FieldName = 'CODIGOGEOGRAFICO'
+      Origin = 'ODTCOBRO.CODIGOGEOGRAFICO'
+    end
+    object qODTCobroOBSERVACION: TStringField
+      FieldName = 'OBSERVACION'
+      Origin = 'ODTCOBRO.OBSERVACION'
+      Size = 200
+    end
+    object qODTCobroCEDULAUSUARIO: TStringField
+      FieldName = 'CEDULAUSUARIO'
+      Origin = 'ODTCOBRO.CEDULAUSUARIO'
+      OnValidate = qODTCobroCEDULAUSUARIOValidate
+      Size = 8
+    end
+    object qODTCobroNUMEROVALE: TStringField
+      FieldName = 'NUMEROVALE'
+      Origin = 'ODTCOBRO.NUMEROVALE'
+      Size = 10
+    end
+  end
+  object dsODTCobro: TDataSource
+    DataSet = qODTCobro
+    Left = 822
+    Top = 120
+  end
+  object qDetalleActividad: TQuery
+    Active = True
+    CachedUpdates = True
+    AfterInsert = qDetalleActividadAfterInsert
+    BeforeEdit = qDetalleActividadBeforeEdit
+    AfterEdit = qDetalleActividadAfterEdit
+    AfterPost = qDetalleActividadAfterPost
+    BeforeDelete = qDetalleActividadBeforeDelete
+    AfterDelete = qDetalleActividadAfterDelete
+    OnCalcFields = qDetalleActividadCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsODTCobro
+    SQL.Strings = (
+      'SELECT * '
+      'FROM ODTCOBRODETALLEACTIVIDAD'
+      'WHERE CODIGOODT = :CODIGOODT'
+      '  AND CONSECUTIVO = :CONSECUTIVO'
+      '  AND CONSECUTIVOCOBRO = :CONSECUTIVOCOBRO')
+    UpdateObject = UpdDetalleActividad
+    Left = 919
+    Top = 69
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CONSECUTIVO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CONSECUTIVOCOBRO'
+        ParamType = ptUnknown
+      end>
+    object qDetalleActividadCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'ODTCOBRODETALLEACTIVIDAD.CODIGOODT'
+    end
+    object qDetalleActividadCONSECUTIVO: TFloatField
+      FieldName = 'CONSECUTIVO'
+      Origin = 'ODTCOBRODETALLEACTIVIDAD.CONSECUTIVO'
+    end
+    object qDetalleActividadCONSECUTIVOCOBRO: TFloatField
+      FieldName = 'CONSECUTIVOCOBRO'
+      Origin = 'ODTCOBRODETALLEACTIVIDAD.CONSECUTIVOCOBRO'
+    end
+    object qDetalleActividadCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'ODTCOBRODETALLEACTIVIDAD.CODIGOADMINISTRATIVO'
+    end
+    object qDetalleActividadCODIGOODTACTIVIDADCOBRO: TFloatField
+      FieldName = 'CODIGOODTACTIVIDADCOBRO'
+      Origin = 'ODTCOBRODETALLEACTIVIDAD.CODIGOODTACTIVIDADCOBRO'
+      OnValidate = qDetalleActividadCODIGOODTACTIVIDADCOBROValidate
+    end
+    object qDetalleActividadESNORMAL: TStringField
+      FieldName = 'ESNORMAL'
+      Origin = 'ODTCOBRODETALLEACTIVIDAD.ESNORMAL'
+      Size = 1
+    end
+    object qDetalleActividadValorParcial: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ValorParcial'
+      Calculated = True
+    end
+    object qDetalleActividadNombreActividad: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NombreActividad'
+      LookupDataSet = qODTActividadCobro
+      LookupKeyFields = 'CODIGOODTACTIVIDADCOBRO'
+      LookupResultField = 'NOMBREODTACTIVIDADCOBRO'
+      KeyFields = 'CODIGOODTACTIVIDADCOBRO'
+      Size = 80
+      Lookup = True
+    end
+    object qDetalleActividadCODIGOLIQUIDACION: TFloatField
+      FieldKind = fkLookup
+      FieldName = 'CODIGOLIQUIDACION'
+      LookupDataSet = qODTActividadCobro
+      LookupKeyFields = 'CODIGOODTACTIVIDADCOBRO'
+      LookupResultField = 'CODIGOLIQUIDACION'
+      KeyFields = 'CODIGOODTACTIVIDADCOBRO'
+      Lookup = True
+    end
+    object qDetalleActividadPROCESADO: TStringField
+      FieldName = 'PROCESADO'
+      Origin = 'ODTCOBRODETALLEACTIVIDAD.PROCESADO'
+      Size = 1
+    end
+  end
+  object qDetalleMaterial: TQuery
+    Active = True
+    CachedUpdates = True
+    AfterInsert = qDetalleMaterialAfterInsert
+    AfterPost = qDetalleMaterialAfterPost
+    AfterDelete = qDetalleMaterialAfterDelete
+    DatabaseName = 'BaseDato'
+    DataSource = dsODTCobro
+    SQL.Strings = (
+      'SELECT * '
+      'FROM ODTCOBRODETALLEMATERIAL'
+      'WHERE CODIGOODT = :CODIGOODT'
+      '  AND CONSECUTIVO = :CONSECUTIVO'
+      '  AND CONSECUTIVOCOBRO = :CONSECUTIVOCOBRO')
+    UpdateObject = UpdDetalleMaterial
+    Left = 720
+    Top = 68
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CONSECUTIVO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CONSECUTIVOCOBRO'
+        ParamType = ptUnknown
+      end>
+    object qDetalleMaterialCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+      Origin = 'ODTCOBRODETALLEMATERIAL.CODIGOODT'
+    end
+    object qDetalleMaterialCONSECUTIVO: TFloatField
+      FieldName = 'CONSECUTIVO'
+      Origin = 'ODTCOBRODETALLEMATERIAL.CONSECUTIVO'
+    end
+    object qDetalleMaterialCONSECUTIVOCOBRO: TFloatField
+      FieldName = 'CONSECUTIVOCOBRO'
+      Origin = 'ODTCOBRODETALLEMATERIAL.CONSECUTIVOCOBRO'
+    end
+    object qDetalleMaterialCODIGOMATERIAL: TFloatField
+      FieldName = 'CODIGOMATERIAL'
+      Origin = 'ODTCOBRODETALLEMATERIAL.CODIGOMATERIAL'
+      OnValidate = qDetalleMaterialCODIGOMATERIALValidate
+    end
+    object qDetalleMaterialCANTIDAD: TFloatField
+      FieldName = 'CANTIDAD'
+      Origin = 'ODTCOBRODETALLEMATERIAL.CANTIDAD'
+      OnValidate = qDetalleMaterialCANTIDADValidate
+    end
+    object qDetalleMaterialVALORMATERIAL: TFloatField
+      FieldName = 'VALORMATERIAL'
+      Origin = 'ODTCOBRODETALLEMATERIAL.VALORMATERIAL'
+      DisplayFormat = '###.###,##'
+    end
+    object qDetalleMaterialNombreMaterial: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NombreMaterial'
+      LookupDataSet = qMaterialEssa
+      LookupKeyFields = 'CODIGOMATERIAL'
+      LookupResultField = 'NOMBREMATERIAL'
+      KeyFields = 'CODIGOMATERIAL'
+      Size = 100
+      Lookup = True
+    end
+    object qDetalleMaterialValorUnitario: TFloatField
+      FieldKind = fkLookup
+      FieldName = 'ValorUnitario'
+      LookupDataSet = qMaterialEssa
+      LookupKeyFields = 'CODIGOMATERIAL'
+      LookupResultField = 'VALORUNITARIO'
+      KeyFields = 'CODIGOMATERIAL'
+      Lookup = True
+    end
+  end
+  object dsDetalleActividad: TDataSource
+    DataSet = qDetalleActividad
+    Left = 920
+    Top = 125
+  end
+  object dsDetalleMaterial: TDataSource
+    DataSet = qDetalleMaterial
+    Left = 719
+    Top = 117
+  end
+  object UpdODTCobro: TUpdateSQL
+    ModifySQL.Strings = (
+      'update ODTCOBRO'
+      'set'
+      '  CODIGOODT = :CODIGOODT,'
+      '  CONSECUTIVO = :CONSECUTIVO,'
+      '  CONSECUTIVOCOBRO = :CONSECUTIVOCOBRO,'
+      '  NUMEROCUENTA = :NUMEROCUENTA,'
+      '  NUMEROMEDIDOR = :NUMEROMEDIDOR,'
+      '  NOMBREUSUARIO = :NOMBREUSUARIO,'
+      '  OBSERVACION = :OBSERVACION,'
+      '  CODIGOTIPOVIA = :CODIGOTIPOVIA,'
+      '  CODIGONOMBREVIA = :CODIGONOMBREVIA,'
+      '  MODIFICADORVIA = :MODIFICADORVIA,'
+      '  DUPLICADOR = :DUPLICADOR,'
+      '  MODIFICADORDUPLICADOR = :MODIFICADORDUPLICADOR,'
+      '  NUMEROPUERTA = :NUMEROPUERTA,'
+      '  CODIGOTIPOVERTICAL = :CODIGOTIPOVERTICAL,'
+      '  VERTICAL = :VERTICAL,'
+      '  CODIGOTIPOINTERIOR = :CODIGOTIPOINTERIOR,'
+      '  PISO = :PISO,'
+      '  INTERIOR = :INTERIOR,'
+      '  CODIGOTIPOPREDIO = :CODIGOTIPOPREDIO,'
+      '  DESCRIPCIONTIPOPREDIO = :DESCRIPCIONTIPOPREDIO,'
+      '  CODIGOGEOGRAFICO = :CODIGOGEOGRAFICO,'
+      '  CEDULAUSUARIO = :CEDULAUSUARIO,'
+      '  NUMEROVALE = :NUMEROVALE'
+      'where'
+      '  CODIGOODT = :OLD_CODIGOODT and'
+      '  CONSECUTIVO = :OLD_CONSECUTIVO and'
+      '  CONSECUTIVOCOBRO = :OLD_CONSECUTIVOCOBRO')
+    InsertSQL.Strings = (
+      'insert into ODTCOBRO'
+      
+        '  (CODIGOODT, CONSECUTIVO, CONSECUTIVOCOBRO, NUMEROCUENTA, NUMER' +
+        'OMEDIDOR, '
+      
+        '   NOMBREUSUARIO, OBSERVACION, CODIGOTIPOVIA, CODIGONOMBREVIA, M' +
+        'ODIFICADORVIA, '
+      
+        '   DUPLICADOR, MODIFICADORDUPLICADOR, NUMEROPUERTA, CODIGOTIPOVE' +
+        'RTICAL, '
+      
+        '   VERTICAL, CODIGOTIPOINTERIOR, PISO, INTERIOR, CODIGOTIPOPREDI' +
+        'O, DESCRIPCIONTIPOPREDIO, '
+      '   CODIGOGEOGRAFICO, CEDULAUSUARIO, NUMEROVALE)'
+      'values'
+      
+        '  (:CODIGOODT, :CONSECUTIVO, :CONSECUTIVOCOBRO, :NUMEROCUENTA, :' +
+        'NUMEROMEDIDOR, '
+      
+        '   :NOMBREUSUARIO, :OBSERVACION, :CODIGOTIPOVIA, :CODIGONOMBREVI' +
+        'A, :MODIFICADORVIA, '
+      
+        '   :DUPLICADOR, :MODIFICADORDUPLICADOR, :NUMEROPUERTA, :CODIGOTI' +
+        'POVERTICAL, '
+      
+        '   :VERTICAL, :CODIGOTIPOINTERIOR, :PISO, :INTERIOR, :CODIGOTIPO' +
+        'PREDIO, '
+      
+        '   :DESCRIPCIONTIPOPREDIO, :CODIGOGEOGRAFICO, :CEDULAUSUARIO, :N' +
+        'UMEROVALE)')
+    DeleteSQL.Strings = (
+      'delete from ODTCOBRO'
+      'where'
+      '  CODIGOODT = :OLD_CODIGOODT and'
+      '  CONSECUTIVO = :OLD_CONSECUTIVO and'
+      '  CONSECUTIVOCOBRO = :OLD_CONSECUTIVOCOBRO')
+    Left = 816
+    Top = 176
+  end
+  object UpdDetalleActividad: TUpdateSQL
+    ModifySQL.Strings = (
+      'update ODTCOBRODETALLEACTIVIDAD'
+      'set'
+      '  CODIGOODT = :CODIGOODT,'
+      '  CONSECUTIVO = :CONSECUTIVO,'
+      '  CONSECUTIVOCOBRO = :CONSECUTIVOCOBRO,'
+      '  CODIGOADMINISTRATIVO = :CODIGOADMINISTRATIVO,'
+      '  CODIGOODTACTIVIDADCOBRO = :CODIGOODTACTIVIDADCOBRO,'
+      '  ESNORMAL = :ESNORMAL'
+      'where'
+      '  CODIGOODT = :OLD_CODIGOODT and'
+      '  CONSECUTIVO = :OLD_CONSECUTIVO and'
+      '  CONSECUTIVOCOBRO = :OLD_CONSECUTIVOCOBRO and'
+      '  CODIGOADMINISTRATIVO = :OLD_CODIGOADMINISTRATIVO and'
+      '  CODIGOODTACTIVIDADCOBRO = :OLD_CODIGOODTACTIVIDADCOBRO')
+    InsertSQL.Strings = (
+      'insert into ODTCOBRODETALLEACTIVIDAD'
+      
+        '  (CODIGOODT, CONSECUTIVO, CONSECUTIVOCOBRO, CODIGOADMINISTRATIV' +
+        'O, CODIGOODTACTIVIDADCOBRO, '
+      '   ESNORMAL)'
+      'values'
+      
+        '  (:CODIGOODT, :CONSECUTIVO, :CONSECUTIVOCOBRO, :CODIGOADMINISTR' +
+        'ATIVO, '
+      '   :CODIGOODTACTIVIDADCOBRO, :ESNORMAL)')
+    DeleteSQL.Strings = (
+      'delete from ODTCOBRODETALLEACTIVIDAD'
+      'where'
+      '  CODIGOODT = :OLD_CODIGOODT and'
+      '  CONSECUTIVO = :OLD_CONSECUTIVO and'
+      '  CONSECUTIVOCOBRO = :OLD_CONSECUTIVOCOBRO and'
+      '  CODIGOADMINISTRATIVO = :OLD_CODIGOADMINISTRATIVO and'
+      '  CODIGOODTACTIVIDADCOBRO = :OLD_CODIGOODTACTIVIDADCOBRO')
+    Left = 920
+    Top = 181
+  end
+  object qODTActividadCobro: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT *'
+      'FROM ODTACTIVIDADCOBRO'
+      'WHERE CODIGOADMINISTRATIVO = :CODIGOADMINISTRATIVO'
+      'AND ACTIVO = '#39'S'#39
+      'AND codigoliquidacion IS NOT NULL')
+    Left = 775
+    Top = 363
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOADMINISTRATIVO'
+        ParamType = ptUnknown
+      end>
+    object qODTActividadCobroCODIGOADMINISTRATIVO: TFloatField
+      FieldName = 'CODIGOADMINISTRATIVO'
+      Origin = 'ODTACTIVIDADCOBRO.CODIGOADMINISTRATIVO'
+    end
+    object qODTActividadCobroCODIGOODTACTIVIDADCOBRO: TFloatField
+      FieldName = 'CODIGOODTACTIVIDADCOBRO'
+      Origin = 'ODTACTIVIDADCOBRO.CODIGOODTACTIVIDADCOBRO'
+    end
+    object qODTActividadCobroNOMBREODTACTIVIDADCOBRO: TStringField
+      FieldName = 'NOMBREODTACTIVIDADCOBRO'
+      Origin = 'ODTACTIVIDADCOBRO.NOMBREODTACTIVIDADCOBRO'
+      Size = 80
+    end
+    object qODTActividadCobroVALORNORMAL: TFloatField
+      FieldName = 'VALORNORMAL'
+      Origin = 'ODTACTIVIDADCOBRO.VALORNORMAL'
+    end
+    object qODTActividadCobroVALORFESTIVO: TFloatField
+      FieldName = 'VALORFESTIVO'
+      Origin = 'ODTACTIVIDADCOBRO.VALORFESTIVO'
+    end
+    object qODTActividadCobroCODIGOLIQUIDACION: TFloatField
+      FieldName = 'CODIGOLIQUIDACION'
+      Origin = 'ODTACTIVIDADCOBRO.CODIGOLIQUIDACION'
+    end
+  end
+  object UpdDetalleMaterial: TUpdateSQL
+    ModifySQL.Strings = (
+      'update ODTCOBRODETALLEMATERIAL'
+      'set'
+      '  CODIGOODT = :CODIGOODT,'
+      '  CONSECUTIVO = :CONSECUTIVO,'
+      '  CONSECUTIVOCOBRO = :CONSECUTIVOCOBRO,'
+      '  CODIGOMATERIAL = :CODIGOMATERIAL,'
+      '  CANTIDAD = :CANTIDAD,'
+      '  VALORMATERIAL = :VALORMATERIAL'
+      'where'
+      '  CODIGOODT = :OLD_CODIGOODT and'
+      '  CONSECUTIVO = :OLD_CONSECUTIVO and'
+      '  CONSECUTIVOCOBRO = :OLD_CONSECUTIVOCOBRO and'
+      '  CODIGOMATERIAL = :OLD_CODIGOMATERIAL')
+    InsertSQL.Strings = (
+      'insert into ODTCOBRODETALLEMATERIAL'
+      '  (CODIGOODT, CONSECUTIVO, CONSECUTIVOCOBRO, CODIGOMATERIAL, '
+      'CANTIDAD, '
+      '   VALORMATERIAL)'
+      'values'
+      
+        '  (:CODIGOODT, :CONSECUTIVO, :CONSECUTIVOCOBRO, :CODIGOMATERIAL,' +
+        ' '
+      ':CANTIDAD, '
+      '   :VALORMATERIAL)')
+    DeleteSQL.Strings = (
+      'delete from ODTCOBRODETALLEMATERIAL'
+      'where'
+      '  CODIGOODT = :OLD_CODIGOODT and'
+      '  CONSECUTIVO = :OLD_CONSECUTIVO and'
+      '  CONSECUTIVOCOBRO = :OLD_CONSECUTIVOCOBRO and'
+      '  CODIGOMATERIAL = :OLD_CODIGOMATERIAL')
+    Left = 712
+    Top = 172
+  end
+  object qMaterialEssa: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      'SELECT *'
+      'FROM MATERIALESSA'
+      'WHERE ACTIVO = '#39'S'#39)
+    Left = 607
+    Top = 267
+  end
+  object qReporte: TQuery
+    OnCalcFields = qReporteCalcFields
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT R.CIGDANO,R.CODIGOTIPOVIA,R.CODIGONOMBREVIA,R.MODIFICADOR' +
+        'VIA,R.DUPLICADOR,R.MODIFICADORDUPLICADOR,'
+      
+        '  R.NUMEROPUERTA,R.CODIGOTIPOPREDIO,R.DESCRIPCIONTIPOPREDIO,CODI' +
+        'GOCLIENTECOM,CODIGOCONTADOR,NOMBREINFORMANTE'
+      'FROM REPORTE R,ODTREPORTE O'
+      'WHERE R.CODIGOREPORTE=O.CODIGOREPORTE'
+      'AND O.CODIGOODT=:CODIGOODT'
+      'AND O.CONSECUTIVO=:CONSECUTIVO')
+    Left = 952
+    Top = 360
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODT'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'CONSECUTIVO'
+        ParamType = ptUnknown
+      end>
+    object qReporteCIGDANO: TFloatField
+      FieldName = 'CIGDANO'
+      Origin = 'REPORTE.CIGDANO'
+    end
+    object qReporteCODIGOTIPOVIA: TFloatField
+      FieldName = 'CODIGOTIPOVIA'
+      Origin = 'REPORTE.CODIGOTIPOVIA'
+    end
+    object qReporteCODIGONOMBREVIA: TFloatField
+      FieldName = 'CODIGONOMBREVIA'
+      Origin = 'REPORTE.CODIGONOMBREVIA'
+    end
+    object qReporteMODIFICADORVIA: TStringField
+      FieldName = 'MODIFICADORVIA'
+      Origin = 'REPORTE.MODIFICADORVIA'
+      Size = 5
+    end
+    object qReporteDUPLICADOR: TFloatField
+      FieldName = 'DUPLICADOR'
+      Origin = 'REPORTE.DUPLICADOR'
+    end
+    object qReporteMODIFICADORDUPLICADOR: TStringField
+      FieldName = 'MODIFICADORDUPLICADOR'
+      Origin = 'REPORTE.MODIFICADORDUPLICADOR'
+      Size = 5
+    end
+    object qReporteNUMEROPUERTA: TFloatField
+      FieldName = 'NUMEROPUERTA'
+      Origin = 'REPORTE.NUMEROPUERTA'
+    end
+    object qReporteCODIGOTIPOPREDIO: TStringField
+      FieldName = 'CODIGOTIPOPREDIO'
+      Origin = 'REPORTE.CODIGOTIPOPREDIO'
+      Size = 3
+    end
+    object qReporteDESCRIPCIONTIPOPREDIO: TStringField
+      FieldName = 'DESCRIPCIONTIPOPREDIO'
+      Origin = 'REPORTE.DESCRIPCIONTIPOPREDIO'
+      Size = 50
+    end
+    object qReporteDireccionCalculada: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'DireccionCalculada'
+      Size = 100
+      Calculated = True
+    end
+    object qReporteCODIGOCLIENTECOM: TFloatField
+      FieldName = 'CODIGOCLIENTECOM'
+      Origin = 'REPORTE.CODIGOCLIENTECOM'
+    end
+    object qReporteCODIGOCONTADOR: TStringField
+      FieldName = 'CODIGOCONTADOR'
+      Origin = 'REPORTE.CODIGOCONTADOR'
+      Size = 25
+    end
+    object qReporteNOMBREINFORMANTE: TStringField
+      FieldName = 'NOMBREINFORMANTE'
+      Origin = 'REPORTE.NOMBREINFORMANTE'
+      Size = 40
+    end
+  end
+end

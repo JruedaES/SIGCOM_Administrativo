@@ -1,0 +1,125 @@
+object fBuscarTrafoDis: TfBuscarTrafoDis
+  Left = 157
+  Top = 154
+  ActiveControl = OrderCombo
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Buscar Transformador'
+  ClientHeight = 54
+  ClientWidth = 287
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = True
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnKeyUp = FormKeyUp
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 4
+    Top = 7
+    Width = 82
+    Height = 13
+    AutoSize = False
+    Caption = 'Campo a buscar:'
+  end
+  object Label2: TLabel
+    Left = 4
+    Top = 32
+    Width = 78
+    Height = 13
+    AutoSize = False
+    Caption = 'Texto a buscar:'
+  end
+  object BuscarBtn: TSpeedButton
+    Left = 257
+    Top = 28
+    Width = 23
+    Height = 23
+    Hint = 'Buscar'
+    Enabled = False
+    Glyph.Data = {
+      CA010000424DCA01000000000000760000002800000022000000110000000100
+      0400000000005401000000000000000000001000000010000000000000000000
+      80000080000000808000800000008000800080800000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF003333333FBFFF
+      FFFFF3333333333333333300000033333333FBBFFFFBF3333333333333333300
+      00003333333FBFFFFBFFF333333333333333330000003333333FBFFFFBFBF333
+      3333333333333300000033333333FBBFFFFFF333333333333333330000003333
+      333444FBFFFBF3333333888333333300000033333344834FBFFFF33333388738
+      333333000000333334847F84BFFFF33333878737833333000000333334484F84
+      FBBFB333338878378333330000003333348F74483FF3F3333387338873333300
+      0000333344FFF743333333333883333833333300000033448F84443333333338
+      873388873333330000003448F74333333333338873387773333333000000348F
+      77333333333333873337333333333300000034F7743333333333338333873333
+      3333330000003444433333333333338888733333333333000000333333333333
+      3333333333333333333333000000}
+    NumGlyphs = 2
+    ParentShowHint = False
+    ShowHint = True
+    OnClick = BuscarBtnClick
+  end
+  object TextoBuscado: TEdit
+    Left = 88
+    Top = 28
+    Width = 166
+    Height = 21
+    TabOrder = 1
+    OnChange = TextoBuscadoChange
+    OnKeyPress = TextoBuscadoKeyPress
+    OnKeyUp = TextoBuscadoKeyUp
+  end
+  object OrderCombo: TComboBox
+    Left = 88
+    Top = 4
+    Width = 192
+    Height = 21
+    Style = csDropDownList
+    ItemHeight = 13
+    TabOrder = 0
+    OnChange = OrderComboChange
+  end
+  object dsTrafoDis: TDataSource
+    DataSet = qTrafodis
+    Left = 48
+    Top = 8
+  end
+  object qTrafodis: TQuery
+    Active = True
+    DatabaseName = 'BaseDato'
+    SQL.Strings = (
+      
+        'SELECT T.PINTADOTRAFODIS,T.CODIGOTRAFODIS,T.CODIGOAPOYO1,T.CODIG' +
+        'OAPOYO2,T.IDELEMENTOSERIE'
+      'FROM TRAFODIS T')
+    Left = 128
+    Top = 8
+    object qTrafodisPINTADOTRAFODIS: TStringField
+      FieldName = 'PINTADOTRAFODIS'
+      Origin = 'TRAFODIS.PINTADOTRAFODIS'
+      Size = 7
+    end
+    object qTrafodisCODIGOTRAFODIS: TFloatField
+      FieldName = 'CODIGOTRAFODIS'
+      Origin = 'TRAFODIS.CODIGOTRAFODIS'
+    end
+    object qTrafodisCODIGOAPOYO1: TFloatField
+      FieldName = 'CODIGOAPOYO1'
+      Origin = 'TRAFODIS.CODIGOAPOYO1'
+    end
+    object qTrafodisCODIGOAPOYO2: TFloatField
+      FieldName = 'CODIGOAPOYO2'
+      Origin = 'TRAFODIS.CODIGOAPOYO2'
+    end
+    object qTrafodisIDELEMENTOSERIE: TFloatField
+      FieldName = 'IDELEMENTOSERIE'
+      Origin = 'TRAFODIS.IDELEMENTOSERIE'
+    end
+  end
+end

@@ -1,0 +1,610 @@
+inherited fAuditoriaOdt: TfAuditoriaOdt
+  Left = 287
+  Top = 169
+  Caption = 'Reabrir Odts'
+  ClientHeight = 570
+  ClientWidth = 748
+  FormStyle = fsMDIChild
+  Visible = True
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel2: TPanel
+    Width = 748
+    Height = 529
+    inherited dbgDatos: TRxDBGrid
+      Top = 285
+      Width = 746
+      Height = 225
+      Align = alBottom
+      DataSource = dsCambios
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'CODIGOODTAUDITORIACAMBIO'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Id.'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 41
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Accion'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Tipo'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 67
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'TABLA'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Tabla'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 75
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'VALORLLAVE'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Valor Llave'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CAMPOCAMBIO'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Campo Cambio'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 84
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'VALORANTERIOR'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Valor anterior'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 78
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'VALORNUEVO'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Valor Nuevo'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 80
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NombreUsuario'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Usuario'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 130
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHA'
+          PickList.Strings = ()
+          Title.Alignment = taCenter
+          Title.Caption = 'Fecha'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 115
+          Visible = True
+        end>
+    end
+    inherited DBNavigator1: TDBNavigator
+      Top = 510
+      Width = 746
+      DataSource = dsCambios
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbEdit, nbPost]
+      Hints.Strings = ()
+      TabOrder = 4
+    end
+    object RxDBGrid1: TRxDBGrid [2]
+      Left = 1
+      Top = 55
+      Width = 746
+      Height = 104
+      Align = alClient
+      DataSource = dsDatos
+      Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+      TabOrder = 2
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      OnEditButtonClick = RxDBGrid1EditButtonClick
+      MultiSelect = True
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'CODIGOODTAUDITORIA'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Id.'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 51
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGOODT'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Código ODT'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHAABRE'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Fecha Apertura'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 92
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'UsuarioAbre'
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Usuario Abre'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 149
+          Visible = True
+        end
+        item
+          ButtonStyle = cbsEllipsis
+          Expanded = False
+          FieldName = 'UsuarioSolicita'
+          Title.Alignment = taCenter
+          Title.Caption = 'Usuario Solicita'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 130
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'MOTIVOS'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Motivo Reapertura'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'Estadoodt'
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Estado Odt'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'FECHACIERRA'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Fecha de Cierre'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'UsuarioCierra'
+          ReadOnly = True
+          Title.Alignment = taCenter
+          Title.Caption = 'Usuario que cierra'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clMaroon
+          Title.Font.Height = -11
+          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Style = [fsBold]
+          Width = 226
+          Visible = True
+        end>
+    end
+    object Panel4: TPanel [3]
+      Left = 1
+      Top = 263
+      Width = 746
+      Height = 22
+      Align = alBottom
+      Caption = 'Histórico de Modificaciones a registros de Odts reabiertas'
+      Color = clInfoBk
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 3
+    end
+    inherited Panel3: TPanel
+      Width = 746
+      inherited SBFiltrar: TSpeedButton
+        Left = 688
+        OnClick = SBFiltrarClick
+      end
+      inherited Label2: TLabel
+        Left = 187
+        Width = 23
+        Caption = 'CIA :'
+      end
+      inherited Label3: TLabel
+        Left = 358
+        Width = 78
+        Caption = 'Motivo Apertura:'
+      end
+      inherited EdCodigo: TEdit
+        Width = 93
+        OnKeyPress = EdCodigoKeyPress
+      end
+      inherited EdCodigo2: TEdit
+        Left = 216
+        Width = 89
+        OnKeyPress = EdCodigoKeyPress
+      end
+      inherited EdNombre: TEdit
+        Left = 439
+        Width = 242
+        CharCase = ecUpperCase
+      end
+    end
+    object DBNavigator2: TDBNavigator
+      Left = 1
+      Top = 159
+      Width = 746
+      Height = 18
+      DataSource = dsDatos
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbPost, nbCancel]
+      Align = alBottom
+      Hints.Strings = (
+        'Primer registro'
+        'Anterior registro'
+        'Siguiente registro'
+        'Último registro'
+        'Insertar registro'
+        'Borrar registro'
+        'Editar registro'
+        'Guardar registro'
+        'Cancelar'
+        'Refrescar')
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 5
+    end
+    object Panel5: TPanel
+      Left = 1
+      Top = 177
+      Width = 746
+      Height = 86
+      Align = alBottom
+      TabOrder = 6
+      object Label4: TLabel
+        Left = 1
+        Top = 1
+        Width = 744
+        Height = 13
+        Align = alTop
+        Caption = '  Motivos:'
+      end
+      object EdMotivos: TDBMemo
+        Left = 1
+        Top = 14
+        Width = 744
+        Height = 71
+        Align = alClient
+        DataField = 'MOTIVOS'
+        DataSource = dsDatos
+        Enabled = False
+        TabOrder = 0
+      end
+    end
+  end
+  inherited Panel1: TPanel
+    Top = 529
+    Width = 748
+    inherited bbAceptar: TBitBtn
+      Left = 543
+    end
+    inherited bbCancelar: TBitBtn
+      Left = 628
+    end
+  end
+  inherited dsDatos: TDataSource
+    DataSet = qDatos
+    Top = 112
+  end
+  inherited qDatos: TQuery
+    CachedUpdates = True
+    BeforeInsert = qDatosBeforeInsert
+    AfterInsert = qDatosAfterInsert
+    BeforePost = qDatosBeforePost
+    OnCalcFields = qDatosCalcFields
+    SQL.Strings = (
+      'select a.*,o.codigoadministrativo from odtauditoria a, odt o'
+      'where o.codigoodt=a.codigoodt'
+      'order by 1 desc')
+    UpdateObject = updDatos
+    Top = 64
+    object qDatosCODIGOODTAUDITORIA: TFloatField
+      FieldName = 'CODIGOODTAUDITORIA'
+    end
+    object qDatosCODIGOODT: TFloatField
+      FieldName = 'CODIGOODT'
+    end
+    object qDatosFECHAABRE: TDateTimeField
+      FieldName = 'FECHAABRE'
+    end
+    object qDatosCODIGOUSUARIOABRE: TFloatField
+      FieldName = 'CODIGOUSUARIOABRE'
+    end
+    object qDatosCODIGOUSUARIOSOLICITA: TFloatField
+      FieldName = 'CODIGOUSUARIOSOLICITA'
+    end
+    object qDatosMOTIVOS: TStringField
+      FieldName = 'MOTIVOS'
+      OnSetText = qDatosMOTIVOSSetText
+      Size = 250
+    end
+    object qDatosFECHACIERRA: TDateTimeField
+      FieldName = 'FECHACIERRA'
+    end
+    object qDatosCODIGOUSUARIOCIERRA: TFloatField
+      FieldName = 'CODIGOUSUARIOCIERRA'
+    end
+    object qDatosEstadoodt: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Estadoodt'
+      Size = 15
+      Calculated = True
+    end
+    object qDatosUsuarioAbre: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'UsuarioAbre'
+      Size = 80
+      Calculated = True
+    end
+    object qDatosUsuarioCierra: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'UsuarioCierra'
+      Size = 80
+      Calculated = True
+    end
+    object qDatosUsuarioSolicita: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'UsuarioSolicita'
+      Size = 80
+      Calculated = True
+    end
+    object qDatosCodigoAdministrativo: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'CodigoAdministrativo'
+      Calculated = True
+    end
+  end
+  inherited updDatos: TUpdateSQL
+    ModifySQL.Strings = (
+      'update odtauditoria'
+      'set'
+      '  CODIGOODTAUDITORIA = :CODIGOODTAUDITORIA,'
+      '  CODIGOODT = :CODIGOODT,'
+      '  FECHAABRE = :FECHAABRE,'
+      '  CODIGOUSUARIOABRE = :CODIGOUSUARIOABRE,'
+      '  CODIGOUSUARIOSOLICITA = :CODIGOUSUARIOSOLICITA,'
+      '  MOTIVOS = :MOTIVOS,'
+      '  FECHACIERRA = :FECHACIERRA,'
+      '  CODIGOUSUARIOCIERRA = :CODIGOUSUARIOCIERRA'
+      'where'
+      '  CODIGOODTAUDITORIA = :OLD_CODIGOODTAUDITORIA')
+    InsertSQL.Strings = (
+      'insert into odtauditoria'
+      
+        '  (CODIGOODTAUDITORIA, CODIGOODT, FECHAABRE, CODIGOUSUARIOABRE, ' +
+        'CODIGOUSUARIOSOLICITA, '
+      '   MOTIVOS, FECHACIERRA, CODIGOUSUARIOCIERRA)'
+      'values'
+      
+        '  (:CODIGOODTAUDITORIA, :CODIGOODT, :FECHAABRE, :CODIGOUSUARIOAB' +
+        'RE, :CODIGOUSUARIOSOLICITA, '
+      '   :MOTIVOS, :FECHACIERRA, :CODIGOUSUARIOCIERRA)')
+    DeleteSQL.Strings = (
+      'delete from odtauditoria'
+      'where'
+      '  CODIGOODTAUDITORIA = :OLD_CODIGOODTAUDITORIA')
+    Top = 160
+  end
+  object qCambios: TQuery
+    Active = True
+    OnCalcFields = qCambiosCalcFields
+    DatabaseName = 'BaseDato'
+    DataSource = dsDatos
+    SQL.Strings = (
+      'select * from odtauditoriacambio'
+      'where codigoodtauditoria=:codigoodtauditoria')
+    Left = 112
+    Top = 400
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'CODIGOODTAUDITORIA'
+        ParamType = ptUnknown
+      end>
+    object qCambiosCODIGOODTAUDITORIACAMBIO: TFloatField
+      FieldName = 'CODIGOODTAUDITORIACAMBIO'
+      Origin = 'ODTAUDITORIACAMBIO.CODIGOODTAUDITORIACAMBIO'
+    end
+    object qCambiosCODIGOODTAUDITORIA: TFloatField
+      FieldName = 'CODIGOODTAUDITORIA'
+      Origin = 'ODTAUDITORIACAMBIO.CODIGOODTAUDITORIA'
+    end
+    object qCambiosTIPO: TStringField
+      FieldName = 'TIPO'
+      Origin = 'ODTAUDITORIACAMBIO.TIPO'
+      Size = 1
+    end
+    object qCambiosTABLA: TStringField
+      FieldName = 'TABLA'
+      Origin = 'ODTAUDITORIACAMBIO.TABLA'
+    end
+    object qCambiosVALORLLAVE: TFloatField
+      FieldName = 'VALORLLAVE'
+      Origin = 'ODTAUDITORIACAMBIO.VALORLLAVE'
+    end
+    object qCambiosCAMPOCAMBIO: TStringField
+      FieldName = 'CAMPOCAMBIO'
+      Origin = 'ODTAUDITORIACAMBIO.CAMPOCAMBIO'
+    end
+    object qCambiosCODIGOUSUARIO: TFloatField
+      FieldName = 'CODIGOUSUARIO'
+      Origin = 'ODTAUDITORIACAMBIO.CODIGOUSUARIO'
+    end
+    object qCambiosIDSESIONBD: TFloatField
+      FieldName = 'IDSESIONBD'
+      Origin = 'ODTAUDITORIACAMBIO.IDSESIONBD'
+    end
+    object qCambiosFECHA: TDateTimeField
+      FieldName = 'FECHA'
+      Origin = 'ODTAUDITORIACAMBIO.FECHA'
+    end
+    object qCambiosNombreUsuario: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'NombreUsuario'
+      Size = 80
+      Calculated = True
+    end
+    object qCambiosAccion: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Accion'
+      Size = 80
+      Calculated = True
+    end
+    object qCambiosVALORANTERIOR: TStringField
+      FieldName = 'VALORANTERIOR'
+      Origin = 'ODTAUDITORIACAMBIO.VALORANTERIOR'
+    end
+    object qCambiosVALORNUEVO: TStringField
+      FieldName = 'VALORNUEVO'
+      Origin = 'ODTAUDITORIACAMBIO.VALORNUEVO'
+    end
+  end
+  object dsCambios: TDataSource
+    DataSet = qCambios
+    Left = 112
+    Top = 448
+  end
+end
